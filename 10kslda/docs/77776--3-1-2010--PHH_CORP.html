@@ -1,0 +1,201 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[5.7741823917, "../topics/{loss,_insurance,_financial}.html", "{loss,_insurance,_financial}"], [5.6793223302, "../topics/{investment,_property,_distribution}.html", "{investment,_property,_distribution}"], [5.5005887803, "../topics/{stock,_price,_share}.html", "{stock,_price,_share}"], [3.7470869382, "../topics/{financial,_litigation,_operation}.html", "{financial,_litigation,_operation}"], [3.4185790395, "../topics/{competitive,_industry,_competition}.html", "{competitive,_industry,_competition}"], [2.9783086399, "../topics/{condition,_economic,_financial}.html", "{condition,_economic,_financial}"], [2.7342761355, "../topics/{regulation,_change,_law}.html", "{regulation,_change,_law}"], [2.6733906977, "../topics/{regulation,_government,_change}.html", "{regulation,_government,_change}"], [2.4136339789, "../topics/{capital,_credit,_financial}.html", "{capital,_credit,_financial}"], [1.7520233904, "../topics/{provision,_law,_control}.html", "{provision,_law,_control}"], [1.7003664997, "../topics/{debt,_indebtedness,_cash}.html", "{debt,_indebtedness,_cash}"], [1.6969838894, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [1.6526916296, "../topics/{tax,_income,_asset}.html", "{tax,_income,_asset}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>77776--3/1/2010--PHH_CORP</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">77776--3/1/2010--PHH_CORP</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{loss,_insurance,_financial}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{loss,_insurance,_financial}.html'">{loss, insurance, financial}</td></tr>
+<tr class="list"><td id="{investment,_property,_distribution}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{investment,_property,_distribution}.html'">{investment, property, distribution}</td></tr>
+<tr class="list"><td id="{stock,_price,_share}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_share}.html'">{stock, price, share}</td></tr>
+<tr class="list"><td id="{financial,_litigation,_operation}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{financial,_litigation,_operation}.html'">{financial, litigation, operation}</td></tr>
+<tr class="list"><td id="{competitive,_industry,_competition}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{competitive,_industry,_competition}.html'">{competitive, industry, competition}</td></tr>
+<tr class="list"><td id="{condition,_economic,_financial}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{condition,_economic,_financial}.html'">{condition, economic, financial}</td></tr>
+<tr class="list"><td id="{regulation,_change,_law}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_change,_law}.html'">{regulation, change, law}</td></tr>
+<tr class="list"><td id="{regulation,_government,_change}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_government,_change}.html'">{regulation, government, change}</td></tr>
+<tr class="list"><td id="{capital,_credit,_financial}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{capital,_credit,_financial}.html'">{capital, credit, financial}</td></tr>
+<tr class="list"><td id="{provision,_law,_control}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{provision,_law,_control}.html'">{provision, law, control}</td></tr>
+<tr class="list"><td id="{debt,_indebtedness,_cash}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{debt,_indebtedness,_cash}.html'">{debt, indebtedness, cash}</td></tr>
+<tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(11)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{tax,_income,_asset}" onmouseover="highlight(12)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{tax,_income,_asset}.html'">{tax, income, asset}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    Adverse developments in the secondary mortgage market could have a material adverse effect on our business, financial position, results of operations or cash flows.
+We are highly dependent upon programs administered by GSEs such as Fannie Mae, Freddie Mac and Ginnie Mae to generate revenues through mortgage loan sales to institutional investors. Any changes in existing U.S. government-sponsored mortgage programs could materially and adversely affect our business, financial position, results of operations or cash flows.
+Continued or worsening conditions in the real estate market could adversely impact our business, financial position, results of operations or cash flows.
+Adverse developments in the asset-backed securities market may negatively affect the availability of funding and our costs of funds, which could have a material and adverse effect on our business, financial position, results of operations or cash flows.
+Certain hedging strategies that we may use to manage interest rate risk associated with our MSRs and other mortgage-related assets and commitments may not be effective in mitigating those risks.
+We are exposed to counterparty risk and there can be no assurances that we will manage or mitigate this risk effectively.
+Conditions in the North American automotive industry may adversely affect the business, financial condition, results of operations or cash flows of our Fleet Management Services Segment.
+Losses incurred in connection with actual or projected repurchases and indemnification payments may exceed our financial statement reserves and we may be required to increase such reserves in the future. Increases to our reserves and losses incurred in connection with actual loan repurchases and indemnification payments could have a material adverse effect on our business, financial position, results of operation or cash flows.
+Changes in interest rates could reduce the value of a substantial portion of our assets, including our MSRs, and could have a material adverse effect on our business, financial position, results of operations or cash flows.
+The values of a substantial portion of our assets, including our MSRs, are determined based upon significant estimates and assumptions made by our management that, if subsequently proven incorrect or inaccurate, could have a material adverse effect on our business, financial position, results of operations or cash flows.
+Our business relies on various sources of funding, including unsecured credit facilities and other unsecured debt, as well as secured funding arrangements, including asset-backed securities, mortgage repurchase facilities and other secured credit facilities. If any of our funding arrangements are terminated, not renewed or made unavailable to us, we may be unable to find replacement financing on commercially favorable terms, if at all, which could have a material adverse effect on our business, financial position, results of operations or cash flows.
+The industries in which we operate are highly competitive and, if we fail to meet the competitive challenges in our industries, it could have a material adverse effect on our business, financial position, results of operations or cash flows.
+The businesses in which we engage are complex and heavily regulated, and changes in the regulatory environment affecting our businesses could have a material adverse effect on our business, financial position, results of operations or cash flows.
+Our Fleet Management Services segment contracts with various government agencies, which may be subject to audit and potential reduction of costs and fees.
+If certain change in control transactions occur, some of our mortgage loan origination arrangements with financial institutions could be subject to termination at the election of such institutions.
+Unanticipated liabilities of our Fleet Management Services segment as a result of damages in connection with motor vehicle accidents under the theory of vicarious liability could have a material adverse effect on our business, financial position, results of operations or cash flows.
+Our failure to maintain our credit ratings could impact our ability to obtain financing on favorable terms and could negatively impact our business.
+Given the nature of the industries in which we operate, our businesses are, and in the future may become, involved in various legal proceedings the ultimate resolution of which is inherently unpredictable and could have a material adverse effect on our business, financial position, results of operations or cash flows.
+Our accounting policies and methods are fundamental to how we record and report our financial position and results of operations, and they require management to make assumptions and estimates about matters that are inherently uncertain.
+Changes in accounting standards issued by the Financial Accounting Standards Board (the FASB ) or other standard-setting bodies may adversely affect our reported revenues, profitability or financial position.
+We depend on the accuracy and completeness of information provided by or on behalf of our customers and counterparties.
+An interruption in or breach of our information systems may result in lost business, regulatory actions or litigation or may otherwise have an adverse effect on our reputation, business, business prospects, financial position, results of operations or cash flows.
+The success and growth of our business may be adversely affected if we do not adapt to and implement technological changes.
+Risks Related to the Spin-Off
+Our agreements with Cendant and Realogy may not reflect terms that would have resulted from arm s-length negotiations between unaffiliated parties.
+We may be required to satisfy certain indemnification obligations to Cendant or Realogy, or we may not be able to collect on indemnification rights from Cendant or Realogy.
+Certain arrangements and agreements that we have entered into with Cendant in connection with the Spin-Off could impact our tax and other assets and liabilities in the future, and our financial statements are subject to future adjustments as a result of our obligations under those arrangements and agreements.
+Risks Related to our Common Stock
+There may be a limited public market for our Common stock and our stock price may experience volatility.
+Future issuances of our Common stock or securities convertible into our Common stock and hedging activities may depress the trading price of our Common stock.
+The convertible note hedge and warrant transactions may negatively affect the value of our Common stock.
+The accounting for the Convertible Notes will result in our having to recognize interest expense significantly more than the stated interest rate of the Convertible Notes and may result in volatility to our accompanying Consolidated Statement of Operations.
+Provisions in our charter and bylaws, the Maryland General Corporation Law (the MGCL ), our stockholder rights plan and the indentures for the 2012 Convertible Notes and 2014 Convertible Notes may delay or prevent our acquisition by a third party.
+Certain provisions of the Mortgage Venture Operating Agreement and the Strategic Relationship Agreement that we have with Realogy and certain provisions in our other mortgage loan origination agreements could discourage third parties from seeking to acquire us or could reduce the amount of consideration they would be willing to pay our stockholders in an acquisition transaction.
+<p><a href="http://www.sec.gov/Archives/edgar/data/77776/0000950123-10-019305.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/77776--3-2-2009--PHH_CORP.html'">77776--3/2/2009--PHH_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1052752--3-16-2010--GETTY_REALTY_CORP_-MD-.html'">1052752--3/16/2010--GETTY_REALTY_CORP_/MD/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1102112--3-15-2010--PACWEST_BANCORP.html'">1102112--3/15/2010--PACWEST_BANCORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1026214--2-24-2010--FEDERAL_HOME_LOAN_MORTGAGE_CORP.html'">1026214--2/24/2010--FEDERAL_HOME_LOAN_MORTGAGE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/791963--3-5-2010--OPPENHEIMER_HOLDINGS_INC.html'">791963--3/5/2010--OPPENHEIMER_HOLDINGS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1042798--4-9-2010--PRIME_GROUP_REALTY_TRUST.html'">1042798--4/9/2010--PRIME_GROUP_REALTY_TRUST</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1026214--3-11-2009--FEDERAL_HOME_LOAN_MORTGAGE_CORP.html'">1026214--3/11/2009--FEDERAL_HOME_LOAN_MORTGAGE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/876437--3-2-2009--MGIC_INVESTMENT_CORP.html'">876437--3/2/2009--MGIC_INVESTMENT_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1297178--8-2-2007--Accredited_Mortgage_Loan_REIT_Trust.html'">1297178--8/2/2007--Accredited_Mortgage_Loan_REIT_Trust</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/313337--3-26-2010--TRI_CITY_BANKSHARES_CORP.html'">313337--3/26/2010--TRI_CITY_BANKSHARES_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1033012--3-15-2010--FLAGSTAR_BANCORP_INC.html'">1033012--3/15/2010--FLAGSTAR_BANCORP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1006424--4-15-2010--FIRST_FEDERAL_BANCSHARES_OF_ARKANSAS_INC.html'">1006424--4/15/2010--FIRST_FEDERAL_BANCSHARES_OF_ARKANSAS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1115055--2-26-2010--PINNACLE_FINANCIAL_PARTNERS_INC.html'">1115055--2/26/2010--PINNACLE_FINANCIAL_PARTNERS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1051379--3-31-2010--MIDWEST_BANC_HOLDINGS_INC.html'">1051379--3/31/2010--MIDWEST_BANC_HOLDINGS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/80661--3-1-2010--PROGRESSIVE_CORP-OH-.html'">80661--3/1/2010--PROGRESSIVE_CORP/OH/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1031223--3-23-2010--PHL_VARIABLE_INSURANCE_CO_-CT-.html'">1031223--3/23/2010--PHL_VARIABLE_INSURANCE_CO_/CT/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1349593--3-26-2010--FLORIDIAN_FINANCIAL_GROUP_INC.html'">1349593--3/26/2010--FLORIDIAN_FINANCIAL_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1383803--3-13-2008--JMP_Group_Inc..html'">1383803--3/13/2008--JMP_Group_Inc.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/948368--3-15-2010--PSB_HOLDINGS_INC_-WI-.html'">948368--3/15/2010--PSB_HOLDINGS_INC_/WI/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/764038--3-12-2010--SCBT_FINANCIAL_CORP.html'">764038--3/12/2010--SCBT_FINANCIAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1230245--2-26-2010--PIPER_JAFFRAY_COMPANIES.html'">1230245--2/26/2010--PIPER_JAFFRAY_COMPANIES</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1129633--3-2-2010--PHOENIX_COMPANIES_INC-DE.html'">1129633--3/2/2010--PHOENIX_COMPANIES_INC/DE</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1285224--3-15-2010--WILSHIRE_BANCORP_INC.html'">1285224--3/15/2010--WILSHIRE_BANCORP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/866368--2-26-2010--PS_BUSINESS_PARKS_INC-CA.html'">866368--2/26/2010--PS_BUSINESS_PARKS_INC/CA</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/101199--3-1-2010--UNITED_FIRE_&_CASUALTY_CO.html'">101199--3/1/2010--UNITED_FIRE_&_CASUALTY_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1393548--12-14-2010--Mine_Clearing_Corp..html'">1393548--12/14/2010--Mine_Clearing_Corp.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/837010--4-1-2010--ING_LIFE_INSURANCE_&_ANNUITY_CO.html'">837010--4/1/2010--ING_LIFE_INSURANCE_&_ANNUITY_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1005214--5-7-2010--AMERICAN_WAGERING_INC.html'">1005214--5/7/2010--AMERICAN_WAGERING_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/785968--7-28-2010--MILLER_PETROLEUM_INC.html'">785968--7/28/2010--MILLER_PETROLEUM_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/18349--3-1-2010--SYNOVUS_FINANCIAL_CORP.html'">18349--3/1/2010--SYNOVUS_FINANCIAL_CORP</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

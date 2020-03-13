@@ -1,0 +1,207 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[18.8138101243, "../topics/{gas,_price,_oil}.html", "{gas,_price,_oil}"], [8.5488892246, "../topics/{cost,_contract,_operation}.html", "{cost,_contract,_operation}"], [4.6973557829, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [2.7236619068, "../topics/{cost,_regulation,_environmental}.html", "{cost,_regulation,_environmental}"], [2.6963807831, "../topics/{financial,_litigation,_operation}.html", "{financial,_litigation,_operation}"], [1.7028002205, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"], [1.6980168311, "../topics/{loss,_insurance,_financial}.html", "{loss,_insurance,_financial}"], [1.6962822149, "../topics/{condition,_economic,_financial}.html", "{condition,_economic,_financial}"], [1.696264071, "../topics/{loan,_real,_estate}.html", "{loan,_real,_estate}"], [1.6959785334, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"], [1.6955370364, "../topics/{cost,_operation,_labor}.html", "{cost,_operation,_labor}"], [1.6888920291, "../topics/{tax,_income,_asset}.html", "{tax,_income,_asset}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>1070412--2/9/2010--CONSOL_Energy_Inc</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">1070412--2/9/2010--CONSOL_Energy_Inc</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{gas,_price,_oil}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{gas,_price,_oil}.html'">{gas, price, oil}</td></tr>
+<tr class="list"><td id="{cost,_contract,_operation}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_contract,_operation}.html'">{cost, contract, operation}</td></tr>
+<tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{cost,_regulation,_environmental}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_regulation,_environmental}.html'">{cost, regulation, environmental}</td></tr>
+<tr class="list"><td id="{financial,_litigation,_operation}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{financial,_litigation,_operation}.html'">{financial, litigation, operation}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+<tr class="list"><td id="{loss,_insurance,_financial}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{loss,_insurance,_financial}.html'">{loss, insurance, financial}</td></tr>
+<tr class="list"><td id="{condition,_economic,_financial}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{condition,_economic,_financial}.html'">{condition, economic, financial}</td></tr>
+<tr class="list"><td id="{loan,_real,_estate}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{loan,_real,_estate}.html'">{loan, real, estate}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+<tr class="list"><td id="{cost,_operation,_labor}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_operation,_labor}.html'">{cost, operation, labor}</td></tr>
+<tr class="list"><td id="{tax,_income,_asset}" onmouseover="highlight(11)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{tax,_income,_asset}.html'">{tax, income, asset}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    Continued weakness in global economic conditions or in any of the industries in which our customers operate, or sustained uncertainty in financial markets may have material adverse impacts on our business and financial condition that we currently cannot predict.
+A significant or extended decline in the prices CONSOL Energy receives for our coal and gas could adversely affect our operating results and cash flows.
+If customers do not extend existing contracts, do not honor existing contracts, or do not enter into new long-term contracts for coal, profitability of CONSOL Energy s operations could be affected.
+The loss of, or significant reduction in, purchases by our largest customers could adversely affect our revenues.
+Our ability to collect payments from our customers could be impaired if their creditworthiness declines or if they fail to honor their contracts with us.
+The availability and reliability of transportation facilities and fluctuations in transportation costs could affect the demand for our coal or impair our ability to supply coal to our customers.
+Competition within the coal and gas industries may adversely affect our ability to sell our products. A loss of our competitive position because of overcapacity in these industries could adversely affect pricing which could impair our profitability.
+We could be negatively affected if we fail to maintain satisfactory labor relations.
+The characteristics of coal may make it difficult for coal users to comply with various environmental standards. These standards are continually under review by international, federal and state agencies, related to coal combustion. As a result, coal users may switch to other alternative fuel or alternative energy sources, which would affect the volume of CONSOL Energy s coal sales.
+CONSOL Energy may not be able to produce sufficient amounts of coal to fulfill our customers requirements, which could harm our relationships with customers and could cause our inability to satisfy our contractual demands.
+Foreign currency fluctuations could adversely affect the competitiveness of our coal abroad.
+Coal mining is subject to conditions or events beyond CONSOL Energy s control, which could cause our financial results to deteriorate.
+A decrease in the availability or increase in the costs of key services, capital equipment or commodities such as steel, liquid fuels and rubber products could impact our cost of production and decrease our anticipated profitability.
+For mining and drilling operations, CONSOL Energy must obtain, maintain, and renew governmental permits and approvals which can be a costly and time consuming process and can result in restrictions on our operations.
+Proposals to regulate greenhouse gas emissions could impact the market for our fossil fuels, increase our costs and reduce the value of our coal and gas assets.
+Existing and future government laws, regulations and other legal requirements relating to protection of the environment, health and safety matters and others that govern our business increase our costs of doing business for both coal and gas, and may restrict our operations.
+Our mines are subject to stringent federal and state safety regulations that increase our cost of doing business at active operations and may place restrictions on our methods of operation. In addition, government inspectors under certain circumstances, have the ability to order our operations to be shut down based on safety considerations.
+CONSOL Energy has reclamation, mine closure and gas well plugging obligations. If the assumptions underlying our accruals are inaccurate, we could be required to expend greater amounts than anticipated.
+CONSOL Energy faces uncertainties in estimating our economically recoverable coal reserves, and inaccuracies in our estimates could result in lower than expected revenues, higher than expected costs and decreased profitability.
+Fairmont Supply Company, a subsidiary of CONSOL Energy, is a co-defendant in various asbestos litigation cases which could result in making payments in the future that are material.
+CONSOL and its subsidiaries are subject to various legal proceedings, which may have a material effect on our business.
+Changes in federal or state income tax regulations, particularly in the area of percentage depletion, could cause our financial position and profitability to deteriorate.
+CONSOL Energy has obligations for long-term employee benefits for which we accrue based upon assumptions which, if inaccurate, could result in CONSOL Energy being required to expense greater amounts than anticipated.
+Due to our participation in a multi-employer pension plan, we have exposure under that plan that extends beyond what our obligation would be with respect to our employees.
+The minimum funding level requirements of the Pension Protection Act of 2006 (Pension Act) applicable to single employer and multi-employer defined benefit pension plans, coupled with significant investment asset losses suffered by such pension plans during the recent decline in equity markets and the current volatile economic environment, have exposed CONSOL Energy to having to make additional cash contributions to fund the pension benefit plans which we sponsor and the multi-employer pension benefit plans in which we participate.
+If lump sum payments made to retiring salaried employees pursuant to CONSOL Energy s defined benefit pension plan exceed the total of the service cost and the interest cost in a plan year, CONSOL Energy would need to make an adjustment to operating results equaling the unrecognized actuarial gain or loss resulting from each individual who received a lump sum payment in that year, which may result in an adjustment that could materially reduce operating results.
+Various federal or state laws and regulations require CONSOL Energy to obtain surety bonds or to provide other assurance of payment for certain of our long-term liabilities including mine closure or reclamation costs, workers compensation, coal workers black lung and other postemployment benefits.
+Acquisitions that we have completed, acquisitions that we may undertake in the future, as well as expanding existing company mines involve a number of risks, any of which could cause us not to realize the anticipated benefits.
+CONSOL Energy s rights plan may have anti-takeover effects that could prevent a change of control.
+We face uncertainties in estimating proved recoverable gas reserves, and inaccuracies in our estimates could result in lower than expected reserve quantities and a lower present value of our reserves.
+Unless we replace our natural gas reserves, our reserves and production will decline, which would adversely affect our business, financial condition, results of operations and cash flows.
+Our exploration and development activities may not be commercially successful.
+Our focus on new development projects in our operating areas and other unexplored areas increases the risks inherent in our gas and oil activities.
+Our business depends on transportation facilities owned by others. Disruption of, capacity constraints in, or proximity to pipeline systems could limit sales of our gas.
+Increased industry activity may create shortages of field services, equipment and personnel, which may increase our costs and may limit our ability to drill and produce from our natural gas properties.
+We may incur additional costs and delays to produce gas because we have to acquire additional property rights to perfect our title to the gas estate.
+Our shale gas drilling and production operations require adequate sources of water to facilitate the fracturing process and the disposal of that water when it flows back to the well-bore, and our CBM gas drilling and production operations require the removal and disposal of water from the coal seams, from which we produce gas. If we are unable to dispose of the water we use or remove from the strata at a reasonable cost and within applicable environmental rules, our ability to produce gas commercially and in commercial quantities could be impaired.
+Coalbed methane and other gas that we produce often contains impurities that must be removed, and the gas must be processed before it can be sold, which can adversely affect our operations and financial performance.
+Enactment of a severance tax in several states where we have operations, including Pennsylvania, on natural gas could adversely impact our results of existing operations and the economic viability of exploiting new gas drilling and production opportunities in those states.
+Currently the majority of our producing properties are located in three counties in southwestern Virginia, making us vulnerable to risks associated with having our production concentrated in one area.
+Our hedging activities may prevent us from benefiting from price increases and may expose us to other risks.
+<p><a href="http://www.sec.gov/Archives/edgar/data/1070412/0001193125-10-025522.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/1368265--3-16-2009--Clean_Energy_Fuels_Corp..html'">1368265--3/16/2009--Clean_Energy_Fuels_Corp.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1368265--3-10-2010--Clean_Energy_Fuels_Corp..html'">1368265--3/10/2010--Clean_Energy_Fuels_Corp.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1161049--12-29-2006--WESTERN_PLAINS_ENERGY_LLC.html'">1161049--12/29/2006--WESTERN_PLAINS_ENERGY_LLC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1161049--12-29-2009--WESTERN_PLAINS_ENERGY_LLC.html'">1161049--12/29/2009--WESTERN_PLAINS_ENERGY_LLC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1161049--12-27-2010--WESTERN_PLAINS_ENERGY_LLC.html'">1161049--12/27/2010--WESTERN_PLAINS_ENERGY_LLC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/744187--4-16-2009--REX_STORES_CORP.html'">744187--4/16/2009--REX_STORES_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/203248--3-1-2007--SOUTHERN_UNION_CO.html'">203248--3/1/2007--SOUTHERN_UNION_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1288403--3-31-2006--W&T_OFFSHORE_INC.html'">1288403--3/31/2006--W&T_OFFSHORE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1368265--3-19-2008--Clean_Energy_Fuels_Corp..html'">1368265--3/19/2008--Clean_Energy_Fuels_Corp.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1169852--3-18-2008--UNITED_WISCONSIN_GRAIN_PRODUCERS_LLC.html'">1169852--3/18/2008--UNITED_WISCONSIN_GRAIN_PRODUCERS_LLC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1161049--12-24-2008--WESTERN_PLAINS_ENERGY_LLC.html'">1161049--12/24/2008--WESTERN_PLAINS_ENERGY_LLC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1335190--3-31-2010--MAGNUM_HUNTER_RESOURCES_CORP.html'">1335190--3/31/2010--MAGNUM_HUNTER_RESOURCES_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1177314--3-31-2010--NORTHERN_GROWERS_LLC.html'">1177314--3/31/2010--NORTHERN_GROWERS_LLC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1287900--6-29-2007--RANCHER_ENERGY_CORP..html'">1287900--6/29/2007--RANCHER_ENERGY_CORP.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1177314--3-2-2009--NORTHERN_GROWERS_LLC.html'">1177314--3/2/2009--NORTHERN_GROWERS_LLC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/64279--3-16-2007--MCMORAN_EXPLORATION_CO_-DE-.html'">64279--3/16/2007--MCMORAN_EXPLORATION_CO_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1358071--2-26-2010--CONCHO_RESOURCES_INC.html'">1358071--2/26/2010--CONCHO_RESOURCES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1288403--3-9-2007--W&T_OFFSHORE_INC.html'">1288403--3/9/2007--W&T_OFFSHORE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/744187--4-14-2008--REX_STORES_CORP.html'">744187--4/14/2008--REX_STORES_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/933157--3-7-2008--Aurora_Oil_&_Gas_CORP.html'">933157--3/7/2008--Aurora_Oil_&_Gas_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/732834--2-26-2010--CONTINENTAL_RESOURCES_INC.html'">732834--2/26/2010--CONTINENTAL_RESOURCES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/7332--2-25-2010--SOUTHWESTERN_ENERGY_CO.html'">7332--2/25/2010--SOUTHWESTERN_ENERGY_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/744187--4-16-2007--REX_STORES_CORP.html'">744187--4/16/2007--REX_STORES_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1022345--4-2-2007--MARINER_ENERGY_INC.html'">1022345--4/2/2007--MARINER_ENERGY_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/104819--12-14-2006--WGL_HOLDINGS_INC.html'">104819--12/14/2006--WGL_HOLDINGS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1103601--12-14-2006--WGL_HOLDINGS_INC.html'">1103601--12/14/2006--WGL_HOLDINGS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1441849--3-17-2010--CLOUD_PEAK_ENERGY_INC..html'">1441849--3/17/2010--CLOUD_PEAK_ENERGY_INC.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/744187--4-16-2010--REX_STORES_CORP.html'">744187--4/16/2010--REX_STORES_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/7332--2-28-2008--SOUTHWESTERN_ENERGY_CO.html'">7332--2/28/2008--SOUTHWESTERN_ENERGY_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/7332--2-26-2009--SOUTHWESTERN_ENERGY_CO.html'">7332--2/26/2009--SOUTHWESTERN_ENERGY_CO</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

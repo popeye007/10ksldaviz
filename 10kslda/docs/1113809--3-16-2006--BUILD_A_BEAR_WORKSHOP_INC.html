@@ -1,0 +1,188 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[3.7165777211, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [2.8834243813, "../topics/{system,_service,_information}.html", "{system,_service,_information}"], [2.7747078891, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [2.6920951554, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"], [2.6743951363, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [2.5701460317, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [2.0299436874, "../topics/{gas,_price,_oil}.html", "{gas,_price,_oil}"], [1.892603521, "../topics/{cost,_contract,_operation}.html", "{cost,_contract,_operation}"], [1.755913559, "../topics/{cost,_regulation,_environmental}.html", "{cost,_regulation,_environmental}"], [1.7297888072, "../topics/{investment,_property,_distribution}.html", "{investment,_property,_distribution}"], [1.7205772583, "../topics/{condition,_economic,_financial}.html", "{condition,_economic,_financial}"], [1.6989033684, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [1.5106034682, "../topics/{operation,_natural,_condition}.html", "{operation,_natural,_condition}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>1113809--3/16/2006--BUILD_A_BEAR_WORKSHOP_INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">1113809--3/16/2006--BUILD_A_BEAR_WORKSHOP_INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{system,_service,_information}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{system,_service,_information}.html'">{system, service, information}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+<tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{gas,_price,_oil}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{gas,_price,_oil}.html'">{gas, price, oil}</td></tr>
+<tr class="list"><td id="{cost,_contract,_operation}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_contract,_operation}.html'">{cost, contract, operation}</td></tr>
+<tr class="list"><td id="{cost,_regulation,_environmental}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_regulation,_environmental}.html'">{cost, regulation, environmental}</td></tr>
+<tr class="list"><td id="{investment,_property,_distribution}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{investment,_property,_distribution}.html'">{investment, property, distribution}</td></tr>
+<tr class="list"><td id="{condition,_economic,_financial}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{condition,_economic,_financial}.html'">{condition, economic, financial}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(11)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{operation,_natural,_condition}" onmouseover="highlight(12)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_natural,_condition}.html'">{operation, natural, condition}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    If we are not able to franchise new stores outside of the United States and Canada, if we are unable to effectively manage our international franchises or if the laws relating to our international franchises change, our growth and profitability could be adversely affected and we could be exposed to additional liability.
+We may not be able to successfully integrate The Bear Factory and Amsbra
+We may not be able to make the U.K businesses we are acquiring profitable.
+If we are unable to generate interest in and demand for our interactive retail experience, including being able to identify and respond to consumer preferences in a timely manner our financial condition and profitability could be adversely affected.
+A decrease in the customer traffic generated by the shopping malls in which we are located, which we depend upon to attract guests to our stores, could adversely affect our financial condition and profitability.
+A decline in general economic conditions could lead to reduced consumer demand for our products and have an adverse affect on our liquidity and profitability.
+Our market share may be adversely impacted at any time by a significant number of competitors.
+We may not be able to operate successfully if we lose key personnel, are unable to hire qualified additional personnel, or experience turnover of our management team.
+We rely on a few vendors to supply substantially all of our merchandise, and any disruption in their ability to deliver merchandise
+could harm our ability to source products and supply inventory to our stores.
+Our merchandise is manufactured by foreign manufacturers; therefore the availability and costs of our products may be negatively affected by risks associated with international manufacturing and trade.
+Our profitability could be adversely affected by high petroleum products prices.
+We are constructing our own warehouse and distribution center. If we are unable to run this facility effectively or efficiently, our business would be disrupted and our operating results would suffer.
+We currently rely on third parties to manage the warehousing and distribution aspects of our business. If these third parties do not adequately perform these functions, our business would be disrupted.
+Fluctuations in our quarterly results of operations could cause the price of our common stock to substantially decline.
+Our failure to renew, register or otherwise protect our trademarks could have a negative impact on the value of our brand names and our ability to use those names in certain geographical areas.
+We may have disputes with, or be sued by, third parties for infringement or misappropriation of their proprietary rights, which could have a negative impact on our business.
+If we are unable to renew or replace our store leases or enter into leases for new stores on favorable terms, or if we violate any of the terms of our current leases, our growth and profitability could be harmed.
+We may suffer negative publicity or be sued if the manufacturers of our merchandise violate labor laws or engage in practices that our guests believe are unethical, or if our products are recalled or cause injuries.
+Portions of our business are subject to privacy and security risks. If we improperly obtain, or are unable to protect, information from our guests, we could be subject to liability and damage to our reputation.
+Risks Related to Owning Our Common Stock
+<p><a href="http://www.sec.gov/Archives/edgar/data/1113809/0000950137-06-003138.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/889930--8-23-2007--OVERLAND_STORAGE_INC.html'">889930--8/23/2007--OVERLAND_STORAGE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1202273--3-30-2007--GOLFSMITH_INTERNATIONAL_HOLDINGS_INC.html'">1202273--3/30/2007--GOLFSMITH_INTERNATIONAL_HOLDINGS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/772406--5-25-2006--CIRRUS_LOGIC_INC.html'">772406--5/25/2006--CIRRUS_LOGIC_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/769397--3-30-2006--AUTODESK_INC.html'">769397--3/30/2006--AUTODESK_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/701985--4-3-2007--LIMITED_BRANDS_INC.html'">701985--4/3/2007--LIMITED_BRANDS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/851205--2-28-2007--COGNEX_CORP.html'">851205--2/28/2007--COGNEX_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1048695--11-21-2008--F5_NETWORKS_INC.html'">1048695--11/21/2008--F5_NETWORKS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/835910--3-16-2006--AMERICAN_POWER_CONVERSION_CORPORATION.html'">835910--3/16/2006--AMERICAN_POWER_CONVERSION_CORPORATION</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/931784--3-9-2006--CAPTARIS_INC.html'">931784--3/9/2006--CAPTARIS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/836106--2-29-2008--NOVELLUS_SYSTEMS_INC.html'">836106--2/29/2008--NOVELLUS_SYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1048695--11-20-2009--F5_NETWORKS_INC.html'">1048695--11/20/2009--F5_NETWORKS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/746782--4-27-2007--COGNOS_INC.html'">746782--4/27/2007--COGNOS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1032975--6-1-2009--LOGITECH_INTERNATIONAL_SA.html'">1032975--6/1/2009--LOGITECH_INTERNATIONAL_SA</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1003950--3-11-2010--PERFORMANCE_TECHNOLOGIES_INC_\DE\.html'">1003950--3/11/2010--PERFORMANCE_TECHNOLOGIES_INC_\DE\</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1048695--11-19-2007--F5_NETWORKS_INC.html'">1048695--11/19/2007--F5_NETWORKS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/96879--7-24-2007--TEKTRONIX_INC.html'">96879--7/24/2007--TEKTRONIX_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1006240--12-14-2006--LUCENT_TECHNOLOGIES_INC.html'">1006240--12/14/2006--LUCENT_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1048695--12-14-2006--F5_NETWORKS_INC.html'">1048695--12/14/2006--F5_NETWORKS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1022705--3-29-2007--TESCO_CORP.html'">1022705--3/29/2007--TESCO_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/75288--8-15-2006--OXFORD_INDUSTRIES_INC.html'">75288--8/15/2006--OXFORD_INDUSTRIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/22252--5-1-2009--COMARCO_INC.html'">22252--5/1/2009--COMARCO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1160858--5-1-2008--TRUE_RELIGION_APPAREL_INC.html'">1160858--5/1/2008--TRUE_RELIGION_APPAREL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/24741--2-15-2008--CORNING_INC_-NY.html'">24741--2/15/2008--CORNING_INC_/NY</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/732026--9-17-2007--TRIO_TECH_INTERNATIONAL.html'">732026--9/17/2007--TRIO_TECH_INTERNATIONAL</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/225263--3-14-2007--NEWPORT_CORP.html'">225263--3/14/2007--NEWPORT_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1160858--3-11-2009--TRUE_RELIGION_APPAREL_INC.html'">1160858--3/11/2009--TRUE_RELIGION_APPAREL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/924940--6-14-2006--DIAMONDCLUSTER_INTERNATIONAL_INC.html'">924940--6/14/2006--DIAMONDCLUSTER_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/797721--5-28-2009--VIASAT_INC.html'">797721--5/28/2009--VIASAT_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/851205--3-1-2006--COGNEX_CORP.html'">851205--3/1/2006--COGNEX_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/851205--2-17-2009--COGNEX_CORP.html'">851205--2/17/2009--COGNEX_CORP</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

@@ -1,0 +1,191 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[3.7223253675, "../topics/{operation,_natural,_condition}.html", "{operation,_natural,_condition}"], [3.6500375689, "../topics/{cost,_operation,_labor}.html", "{cost,_operation,_labor}"], [3.3650064739, "../topics/{stock,_price,_share}.html", "{stock,_price,_share}"], [2.7720404816, "../topics/{system,_service,_information}.html", "{system,_service,_information}"], [2.4145965736, "../topics/{cost,_regulation,_environmental}.html", "{cost,_regulation,_environmental}"], [1.7850757247, "../topics/{provision,_law,_control}.html", "{provision,_law,_control}"], [1.7429879287, "../topics/{control,_financial,_internal}.html", "{control,_financial,_internal}"], [1.7157438249, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [1.7024877575, "../topics/{loss,_insurance,_financial}.html", "{loss,_insurance,_financial}"], [1.7020598266, "../topics/{debt,_indebtedness,_cash}.html", "{debt,_indebtedness,_cash}"], [1.6988966097, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"], [1.6975641102, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [1.6936202743, "../topics/{financial,_litigation,_operation}.html", "{financial,_litigation,_operation}"], [1.6797284935, "../topics/{tax,_income,_asset}.html", "{tax,_income,_asset}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>100517--3/16/2007--UAL_CORP_/DE/</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">100517--3/16/2007--UAL_CORP_/DE/</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{operation,_natural,_condition}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_natural,_condition}.html'">{operation, natural, condition}</td></tr>
+<tr class="list"><td id="{cost,_operation,_labor}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_operation,_labor}.html'">{cost, operation, labor}</td></tr>
+<tr class="list"><td id="{stock,_price,_share}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_share}.html'">{stock, price, share}</td></tr>
+<tr class="list"><td id="{system,_service,_information}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{system,_service,_information}.html'">{system, service, information}</td></tr>
+<tr class="list"><td id="{cost,_regulation,_environmental}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_regulation,_environmental}.html'">{cost, regulation, environmental}</td></tr>
+<tr class="list"><td id="{provision,_law,_control}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{provision,_law,_control}.html'">{provision, law, control}</td></tr>
+<tr class="list"><td id="{control,_financial,_internal}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{control,_financial,_internal}.html'">{control, financial, internal}</td></tr>
+<tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{loss,_insurance,_financial}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{loss,_insurance,_financial}.html'">{loss, insurance, financial}</td></tr>
+<tr class="list"><td id="{debt,_indebtedness,_cash}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{debt,_indebtedness,_cash}.html'">{debt, indebtedness, cash}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(11)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{financial,_litigation,_operation}" onmouseover="highlight(12)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{financial,_litigation,_operation}.html'">{financial, litigation, operation}</td></tr>
+<tr class="list"><td id="{tax,_income,_asset}" onmouseover="highlight(13)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{tax,_income,_asset}.html'">{tax, income, asset}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    Risks Related to the Company s Business
+Continued periods of historically high fuel costs or significant disruptions in the supply of aircraft fuel could have a material adverse impact on the Company s operating results.
+Additional terrorist attacks or the fear of such attacks, even if not made directly on the airline industry, could negatively affect the Company and the airline industry.
+The airline industry is highly competitive and susceptible to price discounting.
+Additional security requirements may increase the Company s costs and decrease its traffic.
+Extensive government regulation could increase the Company s operating costs and restrict its ability to conduct its business.
+The Company s results of operations fluctuate due to seasonality and other factors associated with the airline industry.
+The Company s financial condition and results of operations may be further affected by the future resolution of bankruptcy-related contingencies.
+The Company s initiatives to improve the delivery of its products and services to its customers, reduce costs, and increase its revenues may not be adequate or successful.
+Union disputes, employee strikes and other labor-related disruptions may adversely affect the Company s operations.
+Increases in insurance costs or reductions in insurance coverage may adversely impact the Company s operations and financial results.
+The Company relies heavily on automated systems to operate its business and any significant failure of these systems could harm its business.
+The Company s business relies extensively on third-party providers. Failure of these parties to perform as expected, or unexpected interruptions in the Company s relationships with these providers or their provision of services to the Company, could have an adverse effect on its financial condition and results of operations.
+The Company s high level of fixed obligations could limit its ability to fund general corporate requirements and obtain additional financing, could limit its flexibility in responding to competitive developments and could increase its vulnerability to adverse economic and industry conditions.
+The Company s net operating loss carry forward may be limited.
+The Company has identified a material weakness in its internal control over financial reporting associated with tax accounting as of December 31, 2006 that, if not properly remediated, could result in material misstatements in its financial statements in future periods.
+The Company is subject to economic and political instability and other risks of doing business globally.
+The loss of skilled employees upon whom the Company depends to operate its business or the inability to attract additional qualified personnel could adversely affect its results of operations.
+The Company could be adversely affected by an outbreak of a disease that affects travel behavior.
+Certain provisions of the Company s governance documents could discourage or delay changes of control or changes to the board of directors of the Company.
+Risks Related to the Company s Common Stock
+The Company s common stock has a limited trading history and its market price may be volatile.
+The issuance of additional shares of the Company s common stock, including upon conversion of its convertible preferred stock and its convertible notes, could cause dilution to the interests of its existing stockholders.
+<p><a href="http://www.sec.gov/Archives/edgar/data/100517/0001104659-07-019919.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/100517--3-31-2006--UAL_CORP_-DE-.html'">100517--3/31/2006--UAL_CORP_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/101001--2-29-2008--UAL_CORP_-DE-.html'">101001--2/29/2008--UAL_CORP_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/101001--3-29-2007--UNITED_AIR_LINES_INC.html'">101001--3/29/2007--UNITED_AIR_LINES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/101001--3-31-2006--UNITED_AIR_LINES_INC.html'">101001--3/31/2006--UNITED_AIR_LINES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/101001--3-2-2009--UAL_CORP_-DE-.html'">101001--3/2/2009--UAL_CORP_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/6201--2-23-2007--AMR_CORP.html'">6201--2/23/2007--AMR_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/4515--2-23-2007--AMERICAN_AIRLINES_INC.html'">4515--2/23/2007--AMERICAN_AIRLINES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/877422--5-17-2010--SPARTAN_STORES_INC.html'">877422--5/17/2010--SPARTAN_STORES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/916540--3-16-2006--DARLING_INTERNATIONAL_INC.html'">916540--3/16/2006--DARLING_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/714560--2-21-2008--US_AIRWAYS_GROUP_INC.html'">714560--2/21/2008--US_AIRWAYS_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1158463--2-5-2010--JETBLUE_AIRWAYS_CORP.html'">1158463--2/5/2010--JETBLUE_AIRWAYS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1047040--6-27-2007--PERKINS_&_MARIE_CALLENDER_S_INC.html'">1047040--6/27/2007--PERKINS_&_MARIE_CALLENDER'S_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/949373--3-3-2008--EINSTEIN_NOAH_RESTAURANT_GROUP_INC.html'">949373--3/3/2008--EINSTEIN_NOAH_RESTAURANT_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/69671--3-12-2009--NASH_FINCH_CO.html'">69671--3/12/2009--NASH_FINCH_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/69671--3-3-2008--NASH_FINCH_CO.html'">69671--3/3/2008--NASH_FINCH_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/29534--3-24-2009--DOLLAR_GENERAL_CORP.html'">29534--3/24/2009--DOLLAR_GENERAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1062231--2-21-2007--AMERICAN_AXLE_&_MANUFACTURING_HOLDINGS_INC.html'">1062231--2/21/2007--AMERICAN_AXLE_&_MANUFACTURING_HOLDINGS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1038277--3-26-2009--INTERNATIONAL_ISOTOPES_INC.html'">1038277--3/26/2009--INTERNATIONAL_ISOTOPES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1158463--2-13-2009--JETBLUE_AIRWAYS_CORP.html'">1158463--2/13/2009--JETBLUE_AIRWAYS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1047040--3-27-2008--PERKINS_&_MARIE_CALLENDER_S_INC.html'">1047040--3/27/2008--PERKINS_&_MARIE_CALLENDER'S_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/6885--4-3-2007--STAGE_STORES_INC.html'">6885--4/3/2007--STAGE_STORES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1368457--11-25-2008--Alberto-Culver_CO.html'">1368457--11/25/2008--Alberto-Culver_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/34408--10-28-2008--FAMILY_DOLLAR_STORES_INC.html'">34408--10/28/2008--FAMILY_DOLLAR_STORES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/69733--6-22-2007--NATHANS_FAMOUS_INC.html'">69733--6/22/2007--NATHANS_FAMOUS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/95521--4-28-2009--SUPERVALU_INC.html'">95521--4/28/2009--SUPERVALU_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/69488--3-12-2010--MYERS_INDUSTRIES_INC.html'">69488--3/12/2010--MYERS_INDUSTRIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/723254--7-30-2007--CINTAS_CORP.html'">723254--7/30/2007--CINTAS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1009480--9-6-2006--TARGET_LOGISTICS_INC.html'">1009480--9/6/2006--TARGET_LOGISTICS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1383571--10-5-2009--GLOBE_SPECIALTY_METALS_INC.html'">1383571--10/5/2009--GLOBE_SPECIALTY_METALS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/949373--2-25-2010--EINSTEIN_NOAH_RESTAURANT_GROUP_INC.html'">949373--2/25/2010--EINSTEIN_NOAH_RESTAURANT_GROUP_INC</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

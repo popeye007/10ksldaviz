@@ -1,0 +1,200 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[7.6610599521, "../topics/{system,_service,_information}.html", "{system,_service,_information}"], [3.9187009266, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [3.7593541349, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [3.6943499846, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"], [3.6911696643, "../topics/{control,_financial,_internal}.html", "{control,_financial,_internal}"], [2.7273710682, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [2.6970970469, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [2.5896831769, "../topics/{financial,_litigation,_operation}.html", "{financial,_litigation,_operation}"], [1.7025242606, "../topics/{regulation,_change,_law}.html", "{regulation,_change,_law}"], [1.699694309, "../topics/{provision,_law,_control}.html", "{provision,_law,_control}"], [1.6956967335, "../topics/{regulation,_government,_change}.html", "{regulation,_government,_change}"], [1.6645574612, "../topics/{product,_candidate,_development}.html", "{product,_candidate,_development}"], [1.6544917159, "../topics/{product,_liability,_claim}.html", "{product,_liability,_claim}"], [1.4696579035, "../topics/{stock,_price,_share}.html", "{stock,_price,_share}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>1117119--3/18/2008--KINTERA_INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">1117119--3/18/2008--KINTERA_INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{system,_service,_information}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{system,_service,_information}.html'">{system, service, information}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+<tr class="list"><td id="{control,_financial,_internal}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{control,_financial,_internal}.html'">{control, financial, internal}</td></tr>
+<tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{financial,_litigation,_operation}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{financial,_litigation,_operation}.html'">{financial, litigation, operation}</td></tr>
+<tr class="list"><td id="{regulation,_change,_law}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_change,_law}.html'">{regulation, change, law}</td></tr>
+<tr class="list"><td id="{provision,_law,_control}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{provision,_law,_control}.html'">{provision, law, control}</td></tr>
+<tr class="list"><td id="{regulation,_government,_change}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_government,_change}.html'">{regulation, government, change}</td></tr>
+<tr class="list"><td id="{product,_candidate,_development}" onmouseover="highlight(11)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_candidate,_development}.html'">{product, candidate, development}</td></tr>
+<tr class="list"><td id="{product,_liability,_claim}" onmouseover="highlight(12)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_liability,_claim}.html'">{product, liability, claim}</td></tr>
+<tr class="list"><td id="{stock,_price,_share}" onmouseover="highlight(13)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_share}.html'">{stock, price, share}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    Risks Related to Our Business
+We have a history of losses, and we may not achieve or maintain profitability.
+Our operating results have fluctuated and may fluctuate significantly, and these fluctuations may cause our stock price to fall.
+Because we are an early stage company, it is difficult to evaluate our prospects.
+Nonprofit organizations have not traditionally used the Internet or online software solutions, and they may not adopt our solution.
+If our efforts to increase awareness of Kintera Sphere and expand sales to other sectors of the nonprofit industry do not succeed, our revenue may not increase as we expect.
+If we are not able to manage our anticipated growth effectively, we may not become profitable.
+Any failure to manage and accurately account for the large amounts of donations we process could diminish the use of Kintera Sphere, which may prevent or delay our becoming profitable.
+We may experience customer dissatisfaction and lose sales if our solution does not scale to accommodate a high volume of traffic and transactions.
+Our products may contain defects, which may result in liability and/or decreased sales.
+We may not be able to develop new enhancements to or support services for Kintera Sphere at a rate required to achieve customer acceptance in our rapidly changing market.
+Historical acquisitions and potential future acquisitions could prove difficult to integrate, disrupt our business, dilute stockholder value and strain our resources, which could prevent us from properly servicing and maintaining customer relationships.
+If we are unable to detect and prevent unauthorized use of credit cards and bank account numbers our reputation may be harmed and customers may be reluctant to use our service.
+If we are unable to safeguard confidential donor data, our reputation may be harmed and customers may be reluctant to use our service.
+If we were found subject to or in violation of any laws or regulations governing privacy or electronic fund transfers, we could be subject to liability or forced to change our business practices.
+System failure could harm our reputation and reduce the use of Kintera Sphere by nonprofit organizations, which could cause our revenue and operating results to decline.
+Sales cycles to major customers can be long, which makes it difficult to forecast our results.
+Because we recognize revenue from upfront payments ratably over the term of the contract, downturns in sales may not be immediately reflected in our revenue.
+Our ability to generate increased revenue depends in part on the efforts of our strategic partners, over whom we have little control.
+We are dependent on our management team, and the loss of any key member of this team may prevent us from achieving our business plan in a timely manner.
+Because competition for highly qualified sales and software development personnel is intense, we may not be able to attract and retain the employees we need to support our planned growth.
+Our failure to compete successfully against current or future competitors could cause our revenue or market share to decline.
+Any failure to protect our intellectual property rights could impair our ability to protect our proprietary technology and establish our Kintera Sphere brand.
+Litigation may harm our business or otherwise distract our management.
+Risks Related to the Securities Markets and Ownership of Our Common Stock
+Our common stock price may fluctuate substantially, and your investment could suffer a decline in value.
+Our publicly-filed reports are reviewed from time to time by the SEC, and any significant changes or amendments required as a result of any such review may result in material liability to us and may have a material adverse impact on the trading price of our common stock.
+If we fail to maintain an effective system of internal controls, we may not be able to accurately report our financial results. As a result, current and potential stockholders could lose confidence in our financial reporting, which would harm our business.
+Because of their significant stock ownership, some of our existing stockholders will be able to exert control over us and our significant corporate decisions.
+Our future capital needs are uncertain, and we may need to raise additional funds in the future which may not be available on acceptable terms or at all.
+Anti-takeover provisions under our charter documents and Delaware law could delay or prevent a change of control and could also limit the market price of our stock.
+Changes in, or interpretations of, accounting rules and regulations could result in unfavorable accounting charges or require us to change our compensation policies.
+<p><a href="http://www.sec.gov/Archives/edgar/data/1117119/0001193125-08-059266.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/1117119--3-30-2007--KINTERA_INC.html'">1117119--3/30/2007--KINTERA_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1117119--3-16-2006--KINTERA_INC.html'">1117119--3/16/2006--KINTERA_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1068875--2-23-2006--INFOSPACE_INC.html'">1068875--2/23/2006--INFOSPACE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1068875--2-25-2008--INFOSPACE_INC.html'">1068875--2/25/2008--INFOSPACE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1097338--3-17-2006--WITNESS_SYSTEMS_INC.html'">1097338--3/17/2006--WITNESS_SYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1097338--4-2-2007--WITNESS_SYSTEMS_INC.html'">1097338--4/2/2007--WITNESS_SYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1259550--3-30-2009--LOCAL.COM.html'">1259550--3/30/2009--LOCAL.COM</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1110507--3-17-2006--ESCHELON_TELECOM_INC.html'">1110507--3/17/2006--ESCHELON_TELECOM_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1062530--2-29-2008--DIGITAL_RIVER_INC_-DE.html'">1062530--2/29/2008--DIGITAL_RIVER_INC_/DE</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1259550--3-16-2007--LOCAL.COM.html'">1259550--3/16/2007--LOCAL.COM</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1110507--3-12-2007--ESCHELON_TELECOM_INC.html'">1110507--3/12/2007--ESCHELON_TELECOM_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1084750--11-9-2007--NAVISITE_INC.html'">1084750--11/9/2007--NAVISITE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1113668--4-2-2007--PRINCETON_REVIEW_INC.html'">1113668--4/2/2007--PRINCETON_REVIEW_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1056386--3-10-2006--INTERNAP_NETWORK_SERVICES_CORP.html'">1056386--3/10/2006--INTERNAP_NETWORK_SERVICES_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1084750--10-22-2010--NAVISITE_INC.html'">1084750--10/22/2010--NAVISITE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/749254--5-23-2007--TRM_CORP.html'">749254--5/23/2007--TRM_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1084750--10-27-2009--NAVISITE_INC.html'">1084750--10/27/2009--NAVISITE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1235468--12-8-2008--LIQUIDITY_SERVICES_INC.html'">1235468--12/8/2008--LIQUIDITY_SERVICES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1235468--12-10-2010--LIQUIDITY_SERVICES_INC.html'">1235468--12/10/2010--LIQUIDITY_SERVICES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/949341--9-8-2006--CHECKFREE_CORP_\GA\.html'">949341--9/8/2006--CHECKFREE_CORP_\GA\</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1009304--3-12-2009--I2_TECHNOLOGIES_INC.html'">1009304--3/12/2009--I2_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1272830--3-3-2009--VONAGE_HOLDINGS_CORP.html'">1272830--3/3/2009--VONAGE_HOLDINGS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1084750--11-6-2008--NAVISITE_INC.html'">1084750--11/6/2008--NAVISITE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1272830--2-26-2010--VONAGE_HOLDINGS_CORP.html'">1272830--2/26/2010--VONAGE_HOLDINGS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1089872--3-17-2008--GAIAM_INC.html'">1089872--3/17/2008--GAIAM_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1092458--2-17-2006--TRIZETTO_GROUP_INC.html'">1092458--2/17/2006--TRIZETTO_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/891178--3-12-2007--EPICOR_SOFTWARE_CORP.html'">891178--3/12/2007--EPICOR_SOFTWARE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1062530--3-16-2006--DIGITAL_RIVER_INC_-DE.html'">1062530--3/16/2006--DIGITAL_RIVER_INC_/DE</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1089872--3-14-2007--GAIAM_INC.html'">1089872--3/14/2007--GAIAM_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1008586--4-17-2009--STREAMLINE_HEALTH_SOLUTIONS_INC..html'">1008586--4/17/2009--STREAMLINE_HEALTH_SOLUTIONS_INC.</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

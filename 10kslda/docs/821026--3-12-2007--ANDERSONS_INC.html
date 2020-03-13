@@ -1,0 +1,195 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[5.6224226926, "../topics/{gas,_price,_oil}.html", "{gas,_price,_oil}"], [3.7085548808, "../topics/{operation,_natural,_condition}.html", "{operation,_natural,_condition}"], [3.6970814265, "../topics/{regulation,_government,_change}.html", "{regulation,_government,_change}"], [3.6964890924, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [3.4885384648, "../topics/{competitive,_industry,_competition}.html", "{competitive,_industry,_competition}"], [2.6879038697, "../topics/{investment,_property,_distribution}.html", "{investment,_property,_distribution}"], [2.6835859484, "../topics/{cost,_regulation,_environmental}.html", "{cost,_regulation,_environmental}"], [2.3964464711, "../topics/{loss,_insurance,_financial}.html", "{loss,_insurance,_financial}"], [1.8162607107, "../topics/{condition,_economic,_financial}.html", "{condition,_economic,_financial}"], [1.7004244149, "../topics/{regulation,_change,_law}.html", "{regulation,_change,_law}"], [1.6995868798, "../topics/{cost,_contract,_operation}.html", "{cost,_contract,_operation}"], [1.6957596433, "../topics/{system,_service,_information}.html", "{system,_service,_information}"], [1.6550792251, "../topics/{debt,_indebtedness,_cash}.html", "{debt,_indebtedness,_cash}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>821026--3/12/2007--ANDERSONS_INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">821026--3/12/2007--ANDERSONS_INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{gas,_price,_oil}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{gas,_price,_oil}.html'">{gas, price, oil}</td></tr>
+<tr class="list"><td id="{operation,_natural,_condition}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_natural,_condition}.html'">{operation, natural, condition}</td></tr>
+<tr class="list"><td id="{regulation,_government,_change}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_government,_change}.html'">{regulation, government, change}</td></tr>
+<tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{competitive,_industry,_competition}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{competitive,_industry,_competition}.html'">{competitive, industry, competition}</td></tr>
+<tr class="list"><td id="{investment,_property,_distribution}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{investment,_property,_distribution}.html'">{investment, property, distribution}</td></tr>
+<tr class="list"><td id="{cost,_regulation,_environmental}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_regulation,_environmental}.html'">{cost, regulation, environmental}</td></tr>
+<tr class="list"><td id="{loss,_insurance,_financial}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{loss,_insurance,_financial}.html'">{loss, insurance, financial}</td></tr>
+<tr class="list"><td id="{condition,_economic,_financial}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{condition,_economic,_financial}.html'">{condition, economic, financial}</td></tr>
+<tr class="list"><td id="{regulation,_change,_law}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_change,_law}.html'">{regulation, change, law}</td></tr>
+<tr class="list"><td id="{cost,_contract,_operation}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_contract,_operation}.html'">{cost, contract, operation}</td></tr>
+<tr class="list"><td id="{system,_service,_information}" onmouseover="highlight(11)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{system,_service,_information}.html'">{system, service, information}</td></tr>
+<tr class="list"><td id="{debt,_indebtedness,_cash}" onmouseover="highlight(12)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{debt,_indebtedness,_cash}.html'">{debt, indebtedness, cash}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    Disruption or difficulties with our information technology could impair our ability to operate our business.
+Changes in accounting rules can affect our financial position and results of operations.
+Our pension and postretirement benefit plans are subject to changes in assumptions which could have a significant impact on the necessary cash flows needed to fund these plans and introduce volatility into the annual expense for these plans.
+We may not be able to maintain sufficient insurance coverage.
+Our business may be adversely affected by numerous factors outside of our control, such as seasonality and weather conditions, national and international political developments, or other natural disasters or strikes.
+We face increasing competition and pricing pressure from other companies in our industries. If we are unable to compete effectively with these companies, our sales and profit margins would decrease, and our earnings and cash flows would be adversely affected.
+Certain of our business segments are affected by the supply and demand of commodities, and are sensitive to factors outside of our control. Adverse price movements could adversely affect our profitability and results of operations.
+Many of our business segments operate in highly regulated industries. Changes in government regulations or trade association policies could adversely affect our results of operations.
+We handle potentially hazardous materials in our businesses. If environmental requirements become more stringent or if we experience unanticipated environmental hazards, we could be subject to significant costs and liabilities.
+We rely on a limited number of suppliers for certain of our raw materials and other products and the loss of one or several of these suppliers could increase our costs and have a material adverse effect on our business.
+We are required to carry significant amounts of inventory across all of our businesses. If a substantial portion of our inventory becomes damaged or obsolete, its value would decrease and our profit margins would suffer.
+Our competitive position, financial position and results of operations may be adversely affected by technological advances.
+Our investments in joint ventures are subject to risks beyond our control.
+We have limited production and storage facilities for our products, and any adverse events or occurrences at these facilities could disrupt our business operations and decrease our revenues and profitability.
+Our competitive position, financial position and results of operations may be adversely affected by technological advances.
+Our investments in joint ventures are subject to risks beyond our control.
+We have limited production and storage facilities for our products, and any adverse events or occurrences at these facilities could disrupt our business operations and decrease our revenues and profitability.
+Our business involves significant safety risks. Significant unexpected costs and liabilities would have a material adverse effect on our profitability and overall financial position.
+Our substantial indebtedness could adversely affect our financial condition, decrease our liquidity and impair our ability to operate our business.
+Many of our sales to our customers are executed on credit. Failure on our part to properly investigate the credit history of our customers or a deterioration in economic conditions may adversely impact our ability to collect on our accounts.
+New ethanol plants under construction or decreases in the demand for ethanol may result in excess production capacity.
+The U.S. ethanol industry is highly dependent upon a myriad of federal and state legislation and regulation and any changes in such legislation or regulation could materially and adversely affect our future results of operations and financial position.
+Fluctuations in the selling price and production cost of gasoline as well as the spread between ethanol and corn prices may reduce future profit margins of our ethanol business.
+The market for natural gas is subject to market conditions that create uncertainty in the price and availability of the natural gas that we will use in our ethanol manufacturing process.
+Growth in the sale and distribution of ethanol is dependent on the changes to and expansion of related infrastructure that may not occur on a timely basis, if at all, and our future operations could be adversely affected by infrastructure disruptions.
+A significant portion of our business operates in the railroad industry, which is subject to unique, industry specific risks and uncertainties. Our failure in assessing these risks and uncertainties could be detrimental to our Rail Group business.
+Our Rail Group relies upon customers continuing to lease rather than purchase railcar assets. Our business could be adversely impacted if there were a large customer shift from leasing to purchasing railcars, or if railcar leases are not match funded.
+During economic downturns, the cyclical nature of the railroad business results in lower demand for railcars and reduced revenue.
+<p><a href="http://www.sec.gov/Archives/edgar/data/821026/0000950152-07-002024.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/821026--2-27-2009--ANDERSONS_INC.html'">821026--2/27/2009--ANDERSONS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/821026--2-28-2008--ANDERSONS_INC.html'">821026--2/28/2008--ANDERSONS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/46765--11-24-2010--HELMERICH_&_PAYNE_INC.html'">46765--11/24/2010--HELMERICH_&_PAYNE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1038357--2-21-2008--PIONEER_NATURAL_RESOURCES_CO.html'">1038357--2/21/2008--PIONEER_NATURAL_RESOURCES_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1096385--2-17-2006--VECTREN_CORP.html'">1096385--2/17/2006--VECTREN_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1103601--11-27-2007--WASHINGTON_GAS_LIGHT_CO.html'">1103601--11/27/2007--WASHINGTON_GAS_LIGHT_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/46765--11-25-2009--HELMERICH_&_PAYNE_INC.html'">46765--11/25/2009--HELMERICH_&_PAYNE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/880114--4-10-2009--BELDEN_&_BLAKE_CORP_-OH-.html'">880114--4/10/2009--BELDEN_&_BLAKE_CORP_/OH/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/904080--2-27-2008--STONE_ENERGY_CORP.html'">904080--2/27/2008--STONE_ENERGY_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1060990--2-28-2008--QUICKSILVER_RESOURCES_INC.html'">1060990--2/28/2008--QUICKSILVER_RESOURCES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/68589--3-20-2007--QUESTAR_GAS_CO.html'">68589--3/20/2007--QUESTAR_GAS_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/880114--3-28-2008--BELDEN_&_BLAKE_CORP_-OH-.html'">880114--3/28/2008--BELDEN_&_BLAKE_CORP_/OH/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1260349--3-15-2007--SOUTHERN_STAR_CENTRAL_CORP.html'">1260349--3/15/2007--SOUTHERN_STAR_CENTRAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1103601--12-1-2008--WASHINGTON_GAS_LIGHT_CO.html'">1103601--12/1/2008--WASHINGTON_GAS_LIGHT_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1202963--4-17-2007--ENERGYTEC_INC.html'">1202963--4/17/2007--ENERGYTEC_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/110430--2-28-2007--FRONTIER_OIL_CORP_-NEW-.html'">110430--2/28/2007--FRONTIER_OIL_CORP_/NEW/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/835011--9-11-2009--MGP_INGREDIENTS_INC.html'">835011--9/11/2009--MGP_INGREDIENTS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1373835--2-27-2009--Spectra_Energy_Corp..html'">1373835--2/27/2009--Spectra_Energy_Corp.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/921549--2-25-2008--TRICO_MARINE_SERVICES_INC.html'">921549--2/25/2008--TRICO_MARINE_SERVICES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/70145--11-24-2010--NATIONAL_FUEL_GAS_CO.html'">70145--11/24/2010--NATIONAL_FUEL_GAS_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/904080--2-28-2007--STONE_ENERGY_CORP.html'">904080--2/28/2007--STONE_ENERGY_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/68589--3-11-2009--QUESTAR_GAS_CO.html'">68589--3/11/2009--QUESTAR_GAS_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/68589--3-11-2010--QUESTAR_GAS_CO.html'">68589--3/11/2010--QUESTAR_GAS_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/764065--2-26-2009--CLIFFS_NATURAL_RESOURCES_INC..html'">764065--2/26/2009--CLIFFS_NATURAL_RESOURCES_INC.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/727538--2-26-2010--APACHE_OFFSHORE_INVESTMENT_PARTNERSHIP.html'">727538--2/26/2010--APACHE_OFFSHORE_INVESTMENT_PARTNERSHIP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1255895--3-28-2008--ARCH_WESTERN_RESOURCES_LLC.html'">1255895--3/28/2008--ARCH_WESTERN_RESOURCES_LLC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/6769--3-1-2007--APACHE_CORP.html'">6769--3/1/2007--APACHE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/82020--3-2-2010--UNITED_STATES_LIME_&_MINERALS_INC.html'">82020--3/2/2010--UNITED_STATES_LIME_&_MINERALS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/72207--2-26-2007--NOBLE_ENERGY_INC.html'">72207--2/26/2007--NOBLE_ENERGY_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/945764--3-2-2009--DENBURY_RESOURCES_INC.html'">945764--3/2/2009--DENBURY_RESOURCES_INC</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

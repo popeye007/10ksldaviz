@@ -1,0 +1,202 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[9.3095561275, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [7.5659346279, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [7.1432880639, "../topics/{system,_service,_information}.html", "{system,_service,_information}"], [4.7086879097, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"], [4.5365417758, "../topics/{financial,_litigation,_operation}.html", "{financial,_litigation,_operation}"], [3.8165808147, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [2.6987027841, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [1.7034374939, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [1.7027821627, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"], [1.7012951666, "../topics/{control,_financial,_internal}.html", "{control,_financial,_internal}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>1114925--9/12/2006--LANTRONIX_INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">1114925--9/12/2006--LANTRONIX_INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{system,_service,_information}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{system,_service,_information}.html'">{system, service, information}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+<tr class="list"><td id="{financial,_litigation,_operation}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{financial,_litigation,_operation}.html'">{financial, litigation, operation}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+<tr class="list"><td id="{control,_financial,_internal}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{control,_financial,_internal}.html'">{control, financial, internal}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    Our quarterly operating results may fluctuate, which could cause our stock to decline.
+Current or future litigation over intellectual property rights could adversely affect us.
+Our use of contract manufacturers in China, Malaysia and Taiwan involves risks that could adversely affect us.
+Delays in deliveries or quality problems with our component suppliers could damage our reputation and could cause our net revenues to decline and harm our results of operations.
+If we lose the services of any of our contract manufacturers or suppliers, we may not be able to obtain alternate sources in a timely manner, which could harm our customer relations and adversely affect our net revenues and harm our results of operations.
+If our research and development efforts are not successful, our net revenues could decline and our business could be harmed.
+If a major customer cancels, reduces or delays purchases, our net revenues might decline and our business could be adversely affected.
+If we fail to develop or enhance our products to respond to changing market conditions and government and industry standards, our competitive position will suffer and our business will be adversely affected.
+We expect the average selling prices of our products to decline, which could reduce our net revenues, gross margins and profitability.
+Current or future litigation could adversely affect us.
+If the SEC should levy fines against us, or if we have violated the rules regarding offering securities to the public, it could damage our reputation with customers and vendors and adversely affect our stock price.
+If software that we license or acquire from the open source software community and incorporate into our products were to become unavailable or no longer available on commercially reasonable terms, it could adversely affect sales of our products, which could disrupt our business and harm our financial results.
+Our products may contain undetected software or hardware errors or defects that could lead to an increase in our costs, reduce our net revenues or damage our reputation.
+If our contract manufacturers are unable or unwilling to manufacture our products at the quality and quantity we request, our business could be harmed.
+If we fail to develop or enhance our products to respond to changing market conditions and government and industry standards, our competitive position will suffer and our business will be adversely affected.
+We expect the average selling prices of our products to decline, which could reduce our net revenues, gross margins and profitability.
+Current or future litigation could adversely affect us.
+If the SEC should levy fines against us, or if we have violated the rules regarding offering securities to the public, it could damage our reputation with customers and vendors and adversely affect our stock price.
+If software that we license or acquire from the open source software community and incorporate into our products were to become unavailable or no longer available on commercially reasonable terms, it could adversely affect sales of our products, which could disrupt our business and harm our financial results.
+Our products may contain undetected software or hardware errors or defects that could lead to an increase in our costs, reduce our net revenues or damage our reputation.
+If our contract manufacturers are unable or unwilling to manufacture our products at the quality and quantity we request, our business could be harmed.
+Because we depend on international sales for a substantial amount of our net revenues, we are subject to international economic, regulatory, political and other risks that could harm our business, financial condition or results of operations.
+If we are unable to sell our inventory in a timely manner it could become obsolete, which could require us to increase our reserves and harm our operating results.
+If we are unable to attract, retain or motivate key senior management and technical personnel, it could seriously harm our business.
+If our OEM customers develop their own expertise in network-enabling products, it could result in reduced sales of our products and harm our operating results.
+New product introductions and pricing strategies by our competitors could reduce our market share or cause us to reduce the prices of our products, which would reduce our net revenues and gross margins.
+We are exposed to foreign currency exchange risks, which could harm our business and operating results.
+We may not be able to adequately protect or enforce our intellectual property rights, which could harm our competitive position.
+If we are unable to attract, retain or motivate key senior management and technical personnel, it could seriously harm our business.
+If our OEM customers develop their own expertise in network-enabling products, it could result in reduced sales of our products and harm our operating results.
+New product introductions and pricing strategies by our competitors could reduce our market share or cause us to reduce the prices of our products, which would reduce our net revenues and gross margins.
+We are exposed to foreign currency exchange risks, which could harm our business and operating results.
+We may not be able to adequately protect or enforce our intellectual property rights, which could harm our competitive position.
+Acquisitions, strategic partnerships, joint ventures or investments may impair our capital and equity resources, divert our management s attention or otherwise negatively impact our operating results.
+Business interruptions could adversely affect our business.
+If we fail to implement and maintain an effective system of disclosure controls and internal controls over financial reporting, we may not be able to report our financial results in an accurate or timely manner, prevent fraud or comply with Section 404 of the Sarbanes-Oxley Act of 2002, which may harm our business and adversely affect the trading price of our stock.
+We may experience difficulties in implementing or enhancing new information systems.
+We may experience difficulties in implementing or enhancing new information systems.
+<p><a href="http://www.sec.gov/Archives/edgar/data/1114925/0001019687-06-002147.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/1036188--4-14-2009--QAD_INC.html'">1036188--4/14/2009--QAD_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1035748--3-9-2010--CALLIDUS_SOFTWARE_INC.html'">1035748--3/9/2010--CALLIDUS_SOFTWARE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1035748--3-12-2009--CALLIDUS_SOFTWARE_INC.html'">1035748--3/12/2009--CALLIDUS_SOFTWARE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1105472--2-25-2010--SONUS_NETWORKS_INC.html'">1105472--2/25/2010--SONUS_NETWORKS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1036188--4-15-2008--QAD_INC.html'">1036188--4/15/2008--QAD_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1366246--3-31-2008--GLU_MOBILE_INC.html'">1366246--3/31/2008--GLU_MOBILE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1036188--4-15-2010--QAD_INC.html'">1036188--4/15/2010--QAD_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/918386--5-23-2008--QLOGIC_CORP.html'">918386--5/23/2008--QLOGIC_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/918386--5-21-2009--QLOGIC_CORP.html'">918386--5/21/2009--QLOGIC_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1042134--2-9-2007--CHORDIANT_SOFTWARE_INC.html'">1042134--2/9/2007--CHORDIANT_SOFTWARE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/937941--3-31-2006--PC_MALL_INC.html'">937941--3/31/2006--PC_MALL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1130258--3-16-2007--ACME_PACKET_INC.html'">1130258--3/16/2007--ACME_PACKET_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1130258--3-13-2008--ACME_PACKET_INC.html'">1130258--3/13/2008--ACME_PACKET_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1105542--3-16-2007--AIRSPAN_NETWORKS_INC.html'">1105542--3/16/2007--AIRSPAN_NETWORKS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1105542--3-12-2008--AIRSPAN_NETWORKS_INC.html'">1105542--3/12/2008--AIRSPAN_NETWORKS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1080667--7-14-2010--DITECH_NETWORKS_INC.html'">1080667--7/14/2010--DITECH_NETWORKS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1130258--3-13-2009--ACME_PACKET_INC.html'">1130258--3/13/2009--ACME_PACKET_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1130258--3-9-2010--ACME_PACKET_INC.html'">1130258--3/9/2010--ACME_PACKET_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1002531--3-13-2009--TOLLGRADE_COMMUNICATIONS_INC_\PA\.html'">1002531--3/13/2009--TOLLGRADE_COMMUNICATIONS_INC_\PA\</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/930803--12-28-2007--HAUPPAUGE_DIGITAL_INC.html'">930803--12/28/2007--HAUPPAUGE_DIGITAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1219210--3-7-2007--IKANOS_COMMUNICATIONS.html'">1219210--3/7/2007--IKANOS_COMMUNICATIONS</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1109935--2-27-2007--WEBEX_COMMUNICATIONS_INC.html'">1109935--2/27/2007--WEBEX_COMMUNICATIONS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1137789--8-27-2007--SEAGATE_TECHNOLOGY.html'">1137789--8/27/2007--SEAGATE_TECHNOLOGY</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/894743--9-12-2007--NEOWARE_INC.html'">894743--9/12/2007--NEOWARE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1111665--3-5-2008--TELECOMMUNICATION_SYSTEMS_INC_-FA-.html'">1111665--3/5/2008--TELECOMMUNICATION_SYSTEMS_INC_/FA/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/937941--3-17-2008--PC_MALL_INC.html'">937941--3/17/2008--PC_MALL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1105472--3-6-2008--SONUS_NETWORKS_INC.html'">1105472--3/6/2008--SONUS_NETWORKS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1140486--3-10-2006--ATHEROS_COMMUNICATIONS_INC.html'">1140486--3/10/2006--ATHEROS_COMMUNICATIONS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1046995--4-2-2007--EMAGIN_CORP.html'">1046995--4/2/2007--EMAGIN_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/946581--12-19-2008--TAKE_TWO_INTERACTIVE_SOFTWARE_INC.html'">946581--12/19/2008--TAKE_TWO_INTERACTIVE_SOFTWARE_INC</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

@@ -1,0 +1,200 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[5.1538558671, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [4.8170446589, "../topics/{cost,_operation,_labor}.html", "{cost,_operation,_labor}"], [4.4344598988, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"], [3.5045937182, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [3.1690409476, "../topics/{condition,_economic,_financial}.html", "{condition,_economic,_financial}"], [2.9442867919, "../topics/{system,_service,_information}.html", "{system,_service,_information}"], [2.5347328385, "../topics/{competitive,_industry,_competition}.html", "{competitive,_industry,_competition}"], [1.9247300277, "../topics/{interest,_director,_officer}.html", "{interest,_director,_officer}"], [1.878556093, "../topics/{regulation,_change,_law}.html", "{regulation,_change,_law}"], [1.825351182, "../topics/{product,_candidate,_development}.html", "{product,_candidate,_development}"], [1.7809038489, "../topics/{investment,_property,_distribution}.html", "{investment,_property,_distribution}"], [1.766446907, "../topics/{operation,_natural,_condition}.html", "{operation,_natural,_condition}"], [1.7286055171, "../topics/{cost,_contract,_operation}.html", "{cost,_contract,_operation}"], [1.7186595981, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [1.7008751354, "../topics/{tax,_income,_asset}.html", "{tax,_income,_asset}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>24545--2/22/2008--MOLSON_COORS_BREWING_CO</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">24545--2/22/2008--MOLSON_COORS_BREWING_CO</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{cost,_operation,_labor}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_operation,_labor}.html'">{cost, operation, labor}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+<tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{condition,_economic,_financial}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{condition,_economic,_financial}.html'">{condition, economic, financial}</td></tr>
+<tr class="list"><td id="{system,_service,_information}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{system,_service,_information}.html'">{system, service, information}</td></tr>
+<tr class="list"><td id="{competitive,_industry,_competition}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{competitive,_industry,_competition}.html'">{competitive, industry, competition}</td></tr>
+<tr class="list"><td id="{interest,_director,_officer}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{interest,_director,_officer}.html'">{interest, director, officer}</td></tr>
+<tr class="list"><td id="{regulation,_change,_law}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_change,_law}.html'">{regulation, change, law}</td></tr>
+<tr class="list"><td id="{product,_candidate,_development}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_candidate,_development}.html'">{product, candidate, development}</td></tr>
+<tr class="list"><td id="{investment,_property,_distribution}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{investment,_property,_distribution}.html'">{investment, property, distribution}</td></tr>
+<tr class="list"><td id="{operation,_natural,_condition}" onmouseover="highlight(11)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_natural,_condition}.html'">{operation, natural, condition}</td></tr>
+<tr class="list"><td id="{cost,_contract,_operation}" onmouseover="highlight(12)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_contract,_operation}.html'">{cost, contract, operation}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(13)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{tax,_income,_asset}" onmouseover="highlight(14)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{tax,_income,_asset}.html'">{tax, income, asset}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    Risks Specific to Our Company
+If Pentland and the Coors Trust do not agree on a matter submitted to stockholders, generally the matter will not be approved, even if beneficial to us or favored by other stockholders.
+Our success as an enterprise depends largely on the success of three primary products in three mature markets; the failure or weakening of one or more of these products or markets could materially adversely affect our financial results.
+Poor investment performance of pension plan holdings and other factors impacting pension plan costs could unfavorably impact liquidity and results of operations.
+We rely on a small number of suppliers to obtain the packaging we need to operate our business. The inability to obtain materials could unfavorably affect our ability to produce our products.
+Our United States and Europe production is concentrated among a small number of production facilities, so we could be more vulnerable than our competitors to transportation disruptions, fuel increases and natural disasters.
+Consolidation of brewers worldwide may lead to the termination of one or more manufacturer/distribution agreements, which could have a material adverse effect on our business.
+Because we will continue to face intense global competition, operating results may be unfavorably impacted.
+We may not properly execute, or realize the anticipated $250 million of cost savings or benefits from, our ongoing strategic initiatives.
+Changes in tax, environmental or other regulations or failure to comply with existing licensing, trade and other regulations could have a material adverse effect on our financial condition.
+Our consolidated financial statements are subject to fluctuations in foreign exchange rates, most significantly the British pound ("GBP") and the Canadian dollar ("CAD").
+Our operations face significant commodity price change exposure which could materially and adversely affect our operating results.
+We could be adversely affected by overall declines in the beer market.
+The success of our business relies heavily on brand image, reputation, and product quality. Deterioration to our brand equity may have a material effect to our operations and financial results.
+Due to a high concentration of unionized workers in the United Kingdom and Canada, we could be significantly affected by labor strikes, work stoppages, or other employee-related issues.
+Changes to the regulation of the distribution systems for our products could adversely impact our business.
+Because of our reliance on third-party service providers for certain administrative functions, we could experience a disruption to our business.
+Risks Specific to Our Discontinued Operations
+Indemnities provided to the purchaser of 83% of the Cervejarias Kaiser Brasil S.A. ("Kaiser") business in Brazil could result in future cash outflows and statement of operations charges.
+Risks Specific to the Canada Segment
+We may be required to provide funding to the entity that owns the Montr al Canadiens hockey club and certain related entertainment businesses pursuant to the guarantees given to the National Hockey League ("NHL").
+Risks Specific to the U.S. Segment
+The proposed MillerCoors joint venture transaction is subject to the receipt of consents and approvals from government entities that could delay or prevent completion of the venture transaction or impose conditions on the venture, which could result in a material adverse effect on the business or financial condition of the joint venture as well as on our business and financial results.
+We may not realize the cost savings and other benefits we currently anticipate from the MillerCoors joint venture transaction due to challenges associated with integrating operations, technologies, sales, and other aspects of the operations.
+We are highly dependent on independent distributors in the United States to sell our products, with no assurance that these distributors will effectively sell our products.
+A failure to successfully upgrade certain information technology systems in early 2008 could cause disruption in our business.
+Risks Specific to the Europe Segment
+Sales volume trends in the United Kingdom brewing industry reflect movement from on-premise channels to off-premise channels, a trend which unfavorably impacts our profitability.
+Consolidation of pubs and growth in the size of pub chains in the United Kingdom could unfavorably impact pricing.
+We depend exclusively on one logistics provider in England, Wales, and Scotland for distribution of our CBL products.
+We may incur impairments of the carrying value of our goodwill and other intangible assets that have indefinite useful lives.
+<p><a href="http://www.sec.gov/Archives/edgar/data/24545/0001047469-08-001563.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/1010552--2-19-2010--POLYCOM_INC.html'">1010552--2/19/2010--POLYCOM_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/866374--5-24-2010--FLEXTRONICS_INTERNATIONAL_LTD..html'">866374--5/24/2010--FLEXTRONICS_INTERNATIONAL_LTD.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/921365--8-14-2007--MERIX_CORP.html'">921365--8/14/2007--MERIX_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/801351--3-2-2009--WARNACO_GROUP_INC_-DE-.html'">801351--3/2/2009--WARNACO_GROUP_INC_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/801351--3-2-2010--WARNACO_GROUP_INC_-DE-.html'">801351--3/2/2010--WARNACO_GROUP_INC_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/800459--8-6-2010--HARMAN_INTERNATIONAL_INDUSTRIES_INC_-DE-.html'">800459--8/6/2010--HARMAN_INTERNATIONAL_INDUSTRIES_INC_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/96763--2-26-2008--TECHNITROL_INC.html'">96763--2/26/2008--TECHNITROL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1036960--2-25-2010--FAIRCHILD_SEMICONDUCTOR_INTERNATIONAL_INC.html'">1036960--2/25/2010--FAIRCHILD_SEMICONDUCTOR_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/866374--5-23-2008--FLEXTRONICS_INTERNATIONAL_LTD..html'">866374--5/23/2008--FLEXTRONICS_INTERNATIONAL_LTD.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/914712--10-14-2008--ModusLink_Global_Solutions_Inc.html'">914712--10/14/2008--ModusLink_Global_Solutions_Inc</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/923120--11-12-2009--GREENBRIER_COMPANIES_INC.html'">923120--11/12/2009--GREENBRIER_COMPANIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/923120--11-10-2010--GREENBRIER_COMPANIES_INC.html'">923120--11/10/2010--GREENBRIER_COMPANIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/108312--11-18-2010--WOODWARD_GOVERNOR_CO.html'">108312--11/18/2010--WOODWARD_GOVERNOR_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1018005--4-1-2009--COLDWATER_CREEK_INC.html'">1018005--4/1/2009--COLDWATER_CREEK_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/106040--8-14-2009--WESTERN_DIGITAL_CORP.html'">106040--8/14/2009--WESTERN_DIGITAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/55772--9-2-2008--KIMBALL_INTERNATIONAL_INC.html'">55772--9/2/2008--KIMBALL_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1047127--2-24-2010--AMKOR_TECHNOLOGY_INC.html'">1047127--2/24/2010--AMKOR_TECHNOLOGY_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/923120--11-8-2007--GREENBRIER_COMPANIES_INC.html'">923120--11/8/2007--GREENBRIER_COMPANIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/912463--4-1-2008--GUESS_INC.html'">912463--4/1/2008--GUESS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/793952--2-17-2009--HARLEY_DAVIDSON_INC.html'">793952--2/17/2009--HARLEY_DAVIDSON_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1113809--3-18-2010--BUILD_A_BEAR_WORKSHOP_INC.html'">1113809--3/18/2010--BUILD_A_BEAR_WORKSHOP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/30828--3-15-2010--COBRA_ELECTRONICS_CORP.html'">30828--3/15/2010--COBRA_ELECTRONICS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/927003--2-27-2009--ADVANCED_ENERGY_INDUSTRIES_INC.html'">927003--2/27/2009--ADVANCED_ENERGY_INDUSTRIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1262200--3-16-2009--DAYSTAR_TECHNOLOGIES_INC.html'">1262200--3/16/2009--DAYSTAR_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1271193--2-29-2008--SUPERIOR_ESSEX_INC.html'">1271193--2/29/2008--SUPERIOR_ESSEX_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/772406--5-29-2008--CIRRUS_LOGIC_INC.html'">772406--5/29/2008--CIRRUS_LOGIC_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/921365--8-24-2006--MERIX_CORP.html'">921365--8/24/2006--MERIX_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/743988--6-1-2009--XILINX_INC.html'">743988--6/1/2009--XILINX_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/914712--10-16-2006--CMGI_INC.html'">914712--10/16/2006--CMGI_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1037038--6-2-2010--POLO_RALPH_LAUREN_CORP.html'">1037038--6/2/2010--POLO_RALPH_LAUREN_CORP</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

@@ -1,0 +1,177 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[4.4471796159, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [2.597105653, "../topics/{operation,_natural,_condition}.html", "{operation,_natural,_condition}"], [1.8053006246, "../topics/{financial,_litigation,_operation}.html", "{financial,_litigation,_operation}"], [1.7608785677, "../topics/{cost,_operation,_labor}.html", "{cost,_operation,_labor}"], [1.6971754557, "../topics/{regulation,_change,_law}.html", "{regulation,_change,_law}"], [1.681390117, "../topics/{cost,_regulation,_environmental}.html", "{cost,_regulation,_environmental}"], [1.657420882, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"], [1.589062828, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [1.3921959428, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"], [1.0820544306, "../topics/{product,_market,_service}.html", "{product,_market,_service}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>897429--3/28/2008--CHICOS_FAS_INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">897429--3/28/2008--CHICOS_FAS_INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{operation,_natural,_condition}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_natural,_condition}.html'">{operation, natural, condition}</td></tr>
+<tr class="list"><td id="{financial,_litigation,_operation}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{financial,_litigation,_operation}.html'">{financial, litigation, operation}</td></tr>
+<tr class="list"><td id="{cost,_operation,_labor}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_operation,_labor}.html'">{cost, operation, labor}</td></tr>
+<tr class="list"><td id="{regulation,_change,_law}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_change,_law}.html'">{regulation, change, law}</td></tr>
+<tr class="list"><td id="{cost,_regulation,_environmental}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_regulation,_environmental}.html'">{cost, regulation, environmental}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+<tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    Fluctuations in Comparable Store Sales Results
+Gross Profit Margin Impact of Mix of Sales
+Impact on Selling, General and Administrative Expenses from the Opening of Larger Stores
+Risks Associated with Catalog and Internet Sales
+Dependence on Single Distribution Location
+Success and Location of Shopping Centers
+Changes in Accounting Principles, Interpretations and Practices
+Adverse Outcomes of Litigation Matters
+Effects of War, Terrorism or Other Catastrophes
+Price, Availability and Quality of its Offerings
+Reliance on Foreign Sources of Production
+Vendor s Compliance with Labor Practices Requirements
+Strategic Development of New Concepts
+<p><a href="http://www.sec.gov/Archives/edgar/data/897429/0000950144-08-002380.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/897429--3-27-2009--CHICOS_FAS_INC.html'">897429--3/27/2009--CHICOS_FAS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/897429--4-7-2006--CHICOS_FAS_INC.html'">897429--4/7/2006--CHICOS_FAS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/46080--2-25-2009--HASBRO_INC.html'">46080--2/25/2009--HASBRO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/355999--2-29-2008--UNITED_STATIONERS_INC.html'">355999--2/29/2008--UNITED_STATIONERS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/355999--2-27-2009--UNITED_STATIONERS_INC.html'">355999--2/27/2009--UNITED_STATIONERS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/811641--3-23-2006--IMMUCELL_CORP_-DE-.html'">811641--3/23/2006--IMMUCELL_CORP_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/56701--8-20-2007--KOSS_CORP.html'">56701--8/20/2007--KOSS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/46080--2-27-2008--HASBRO_INC.html'">46080--2/27/2008--HASBRO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1004608--3-30-2007--PINNACLE_DATA_SYSTEMS_INC.html'">1004608--3/30/2007--PINNACLE_DATA_SYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/842162--3-9-2006--LEAR_CORP.html'">842162--3/9/2006--LEAR_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/885245--4-16-2008--BUCKLE_INC.html'">885245--4/16/2008--BUCKLE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/355999--3-1-2007--UNITED_STATIONERS_INC.html'">355999--3/1/2007--UNITED_STATIONERS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/355999--3-6-2006--UNITED_STATIONERS_INC.html'">355999--3/6/2006--UNITED_STATIONERS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1144331--2-27-2006--EXPRESSJET_HOLDINGS_INC.html'">1144331--2/27/2006--EXPRESSJET_HOLDINGS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/856250--9-13-2006--CRAFTMADE_INTERNATIONAL_INC.html'">856250--9/13/2006--CRAFTMADE_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/862861--3-28-2008--APPLIANCE_RECYCLING_CENTERS_OF_AMERICA_INC_-MN.html'">862861--3/28/2008--APPLIANCE_RECYCLING_CENTERS_OF_AMERICA_INC_/MN</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/722313--3-9-2007--NORTECH_SYSTEMS_INC.html'">722313--3/9/2007--NORTECH_SYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/46080--2-24-2010--HASBRO_INC.html'">46080--2/24/2010--HASBRO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/874841--3-31-2010--PACIFIC_SUNWEAR_OF_CALIFORNIA_INC.html'">874841--3/31/2010--PACIFIC_SUNWEAR_OF_CALIFORNIA_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/93631--10-24-2008--FREDERICK_S_OF_HOLLYWOOD_GROUP_INC_-NY-.html'">93631--10/24/2008--FREDERICK'S_OF_HOLLYWOOD_GROUP_INC_/NY/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/902270--3-16-2006--LENOX_GROUP_INC.html'">902270--3/16/2006--LENOX_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/722313--3-19-2009--NORTECH_SYSTEMS_INC.html'">722313--3/19/2009--NORTECH_SYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/842162--3-17-2009--LEAR_CORP.html'">842162--3/17/2009--LEAR_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1077688--2-28-2007--HOOKER_FURNITURE_CORP.html'">1077688--2/28/2007--HOOKER_FURNITURE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1042351--3-15-2007--INDUSTRIAL_DISTRIBUTION_GROUP_INC.html'">1042351--3/15/2007--INDUSTRIAL_DISTRIBUTION_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/109156--10-13-2006--ZALE_CORP.html'">109156--10/13/2006--ZALE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1102750--3-31-2009--DAC_TECHNOLOGIES_GROUP_INTERNATIONAL_INC.html'">1102750--3/31/2009--DAC_TECHNOLOGIES_GROUP_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/918541--3-16-2006--NN_INC.html'">918541--3/16/2006--NN_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/918541--3-16-2007--NN_INC.html'">918541--3/16/2007--NN_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/918965--9-1-2006--SCANSOURCE_INC.html'">918965--9/1/2006--SCANSOURCE_INC</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

@@ -1,0 +1,174 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[1.9735771367, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [1.8995304126, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [1.7873845664, "../topics/{system,_service,_information}.html", "{system,_service,_information}"], [1.7429793306, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [1.6953041366, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"], [1.691342474, "../topics/{cost,_regulation,_environmental}.html", "{cost,_regulation,_environmental}"], [1.6894402232, "../topics/{regulation,_change,_law}.html", "{regulation,_change,_law}"], [1.5648849349, "../topics/{financial,_litigation,_operation}.html", "{financial,_litigation,_operation}"], [1.4202043875, "../topics/{competitive,_industry,_competition}.html", "{competitive,_industry,_competition}"], [1.2041853788, "../topics/{operation,_natural,_condition}.html", "{operation,_natural,_condition}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>77476--2/27/2006--PEPSICO_INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">77476--2/27/2006--PEPSICO_INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{system,_service,_information}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{system,_service,_information}.html'">{system, service, information}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+<tr class="list"><td id="{cost,_regulation,_environmental}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_regulation,_environmental}.html'">{cost, regulation, environmental}</td></tr>
+<tr class="list"><td id="{regulation,_change,_law}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_change,_law}.html'">{regulation, change, law}</td></tr>
+<tr class="list"><td id="{financial,_litigation,_operation}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{financial,_litigation,_operation}.html'">{financial, litigation, operation}</td></tr>
+<tr class="list"><td id="{competitive,_industry,_competition}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{competitive,_industry,_competition}.html'">{competitive, industry, competition}</td></tr>
+<tr class="list"><td id="{operation,_natural,_condition}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_natural,_condition}.html'">{operation, natural, condition}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    Demand for our products may be adversely affected by changes in consumer preferences and tastes.
+Any damage to our reputation could have an adverse effect on our business, financial condition and results of operations.
+If we are not able to build and sustain proper information technology infrastructure, our business could suffer.
+Disruption of our supply chain could have an adverse effect on our business, financial condition and results of operations.
+Trade consolidation or the loss of any key customer could adversely affect our financial performance.
+Our business may be adversely impacted by unfavorable economic or environmental conditions or political or other developments and risks in the countries in which we operate.
+Regulatory decisions and changes in the legal and regulatory environment could increase our costs and liabilities or limit our business activities.
+If we are unable to hire or retain key employees, it could have a negative impact on our business.
+Our operating results may be adversely affected by increased costs or shortages of raw materials.
+Our business could suffer if we are unable to compete effectively.
+<p><a href="http://www.sec.gov/Archives/edgar/data/77476/0001193125-06-039968.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/77476--2-20-2007--PEPSICO_INC.html'">77476--2/20/2007--PEPSICO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/77476--2-15-2008--PEPSICO_INC.html'">77476--2/15/2008--PEPSICO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/921503--4-12-2006--BLYTH_INC.html'">921503--4/12/2006--BLYTH_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/921503--4-13-2007--BLYTH_INC.html'">921503--4/13/2007--BLYTH_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/277509--2-22-2007--FEDERAL_SIGNAL_CORP_-DE-.html'">277509--2/22/2007--FEDERAL_SIGNAL_CORP_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/55529--7-18-2007--KEWAUNEE_SCIENTIFIC_CORP_-DE-.html'">55529--7/18/2007--KEWAUNEE_SCIENTIFIC_CORP_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/55785--2-24-2010--KIMBERLY_CLARK_CORP.html'">55785--2/24/2010--KIMBERLY_CLARK_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/96879--8-3-2006--TEKTRONIX_INC.html'">96879--8/3/2006--TEKTRONIX_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1026650--3-9-2007--ERESEARCHTECHNOLOGY_INC_-DE-.html'">1026650--3/9/2007--ERESEARCHTECHNOLOGY_INC_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/77476--2-19-2009--PEPSICO_INC.html'">77476--2/19/2009--PEPSICO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/920033--4-12-2006--BANK_JOS_A_CLOTHIERS_INC_-DE-.html'">920033--4/12/2006--BANK_JOS_A_CLOTHIERS_INC_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/7431--2-26-2009--ARMSTRONG_WORLD_INDUSTRIES_INC.html'">7431--2/26/2009--ARMSTRONG_WORLD_INDUSTRIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/69680--3-26-2007--NASHUA_CORP.html'">69680--3/26/2007--NASHUA_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/355622--3-13-2006--RYANS_RESTAURANT_GROUP_INC.html'">355622--3/13/2006--RYANS_RESTAURANT_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1050915--2-28-2007--QUANTA_SERVICES_INC.html'">1050915--2/28/2007--QUANTA_SERVICES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1065332--3-13-2009--NIC_INC.html'">1065332--3/13/2009--NIC_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1166126--3-30-2010--J_C_PENNEY_CO_INC.html'">1166126--3/30/2010--J_C_PENNEY_CO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1166126--3-31-2009--J_C_PENNEY_CO_INC.html'">1166126--3/31/2009--J_C_PENNEY_CO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/311505--6-6-2007--PRINTRONIX_INC.html'">311505--6/6/2007--PRINTRONIX_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/853547--3-31-2006--AMTROL_INC_-RI-.html'">853547--3/31/2006--AMTROL_INC_/RI/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/772263--12-14-2006--NITCHES_INC.html'">772263--12/14/2006--NITCHES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1144215--11-2-2006--ACUITY_BRANDS_INC.html'">1144215--11/2/2006--ACUITY_BRANDS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1009672--3-1-2007--CARBO_CERAMICS_INC.html'">1009672--3/1/2007--CARBO_CERAMICS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/825410--12-12-2007--LANDAUER_INC.html'">825410--12/12/2007--LANDAUER_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1014041--3-24-2006--SRI_SURGICAL_EXPRESS_INC.html'">1014041--3/24/2006--SRI_SURGICAL_EXPRESS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/20--3-23-2006--K_TRON_INTERNATIONAL_INC.html'">20--3/23/2006--K_TRON_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/830524--11-14-2007--CHASE_CORP.html'">830524--11/14/2007--CHASE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/55785--2-22-2008--KIMBERLY_CLARK_CORP.html'">55785--2/22/2008--KIMBERLY_CLARK_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/14177--2-1-2007--BRIDGFORD_FOODS_CORP.html'">14177--2/1/2007--BRIDGFORD_FOODS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/55785--2-22-2007--KIMBERLY_CLARK_CORP.html'">55785--2/22/2007--KIMBERLY_CLARK_CORP</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

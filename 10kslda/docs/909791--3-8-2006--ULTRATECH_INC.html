@@ -1,0 +1,183 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[4.6804754084, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [3.7120452037, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [2.6962625892, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"], [2.696250255, "../topics/{regulation,_change,_law}.html", "{regulation,_change,_law}"], [1.6962616406, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [1.6962616406, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [1.6962616405, "../topics/{operation,_natural,_condition}.html", "{operation,_natural,_condition}"], [1.6962616404, "../topics/{provision,_law,_control}.html", "{provision,_law,_control}"], [1.6962616404, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [1.6962616404, "../topics/{cost,_regulation,_environmental}.html", "{cost,_regulation,_environmental}"], [1.6962154553, "../topics/{condition,_economic,_financial}.html", "{condition,_economic,_financial}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>909791--3/8/2006--ULTRATECH_INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">909791--3/8/2006--ULTRATECH_INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+<tr class="list"><td id="{regulation,_change,_law}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_change,_law}.html'">{regulation, change, law}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{operation,_natural,_condition}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_natural,_condition}.html'">{operation, natural, condition}</td></tr>
+<tr class="list"><td id="{provision,_law,_control}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{provision,_law,_control}.html'">{provision, law, control}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{cost,_regulation,_environmental}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_regulation,_environmental}.html'">{cost, regulation, environmental}</td></tr>
+<tr class="list"><td id="{condition,_economic,_financial}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{condition,_economic,_financial}.html'">{condition, economic, financial}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    We currently spend, and expect to continue to spend, significant resources to develop, introduce and commercialize our laser processing systems and AP wafer stepper products, and we may not be successful in achieving or increasing sales of these products.
+Our sales cycle is typically lengthy and involves a significant commitment of capital by our customers, which has subjected us, and is likely to continue to subject us, to delays in customer acceptances of our products and other risks, any of which could adversely impact our results of operations by, among other things, delaying recognition of revenue with respect to those orders and resulting in increased installation, qualification and similar costs.
+We may not be successful in protecting our intellectual property rights or we could be found to have infringed the intellectual property rights of others, either of which could weaken our competitive position and adversely affect our results of operations.
+We operate in a highly competitive industry in which customers are required to invest substantial resources in each product, which makes it difficult to achieve significant sales to a particular customer once another vendor s equipment has been purchased by that customer.
+We sell our products primarily to a limited number of customers and to customers in a limited number of industries, which subjects us to increased risks related to the business performance of our customers, and therefore their need for our products, and the business cycles of the markets into which we sell.
+We rely on a limited number of outside suppliers and subcontractors to manufacture certain components and subassemblies, and on single or a limited group of outside suppliers for certain materials for our products, which could result in a potential inability to obtain an adequate supply of required components due to the suppliers failure or inability to provide such components in a timely manner, or at all, and reduced control over pricing and timely delivery of components and materials, any of which could adversely affect our results of operations.
+Our manufacturing activities consist of assembling and testing components and subassemblies, which are then integrated into finished systems. We rely on a limited number of outside suppliers and subcontractors to manufacture certain components and subassemblies. We order one of the most critical components of our technology, the glass for our 1X lenses, from external suppliers. We design the 1X lenses and provide the lens specifications and the glass to other suppliers, who then grind and polish the lens elements. We then assemble and test the optical 1X lenses.
+The semiconductor industry historically has been highly cyclical and has experienced periods of oversupply, which has in turn affected the market for semiconductor equipment such as ours and which can adversely affect our results of operations during such periods.
+Our industry is subject to rapid technological change and product innovation, which could result in our technologies and products being replaced by those of our competitors, which would adversely affect our business and results of operations.
+A substantial portion of our sales are outside of the United States, which subjects us to risks related to customer service, installation, foreign economic and political stability, uncertain regulatory and tax rules, and foreign exchange rate fluctuations, all of which make it more difficult to operate our business.
+International sales accounted for approximately 69%, 65% and 61% of total net sales for the years 2005, 2004 and 2003, respectively. We anticipate that international sales, which typically have lower gross margins than domestic sales, principally due to increased competition and higher field service and support costs, will continue to account for a significant portion of total net sales. As a result, a significant portion of our net sales will continue to be subject to certain risks, including unexpected changes in regulatory
+requirements; difficulty in satisfying existing regulatory requirements; exchange rate fluctuations; tariffs and other barriers; political and economic instability; difficulties in accounts receivable collections; natural disasters; difficulties in staffing and managing foreign subsidiary and branch operations; and potentially adverse tax consequences.
+We are dependent on our key personnel, especially Mr. Zafiropoulo our Chief Executive Officer, and our business and results of operations would be adversely affected if we were to lose our key employees.
+Changes in financial accounting standards or policies in the past have affected, and in the future may, affect, our reported results of operations.
+Changes in securities laws and listing standards, in particular those that have resulted from the passage of the Sarbanes-Oxley Act of 2002 and related rules and regulations, have increased our legal and financial costs, and we expect to continue to spend significant resources to comply with these requirements.
+Our shareholder rights plan, equity incentive plans, certain provisions of our Certificate of Incorporation and Bylaws, and Delaware law may discourage third parties from pursuing a change of control transaction with us.
+Our stock price has experienced significant volatility in the past and we expect this to continue in the future as a result of many factors, some of which could be unrelated to our operating performance, and such volatility can have a major impact on the number of shares subject to outstanding stock options that are included in calculating our earnings per share.
+Our results of operations and business could be adversely affected by wars and other military action, as well as terrorist attacks and threats and government responses thereto, especially if any such actions were directed at us or our facilities or customers.
+<p><a href="http://www.sec.gov/Archives/edgar/data/909791/0001104659-06-014717.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/833640--2-26-2010--POWER_INTEGRATIONS_INC.html'">833640--2/26/2010--POWER_INTEGRATIONS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/909791--3-1-2010--ULTRATECH_INC.html'">909791--3/1/2010--ULTRATECH_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/909791--3-7-2007--ULTRATECH_INC.html'">909791--3/7/2007--ULTRATECH_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/22252--5-3-2010--COMARCO_INC.html'">22252--5/3/2010--COMARCO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1113232--3-14-2006--AXCELIS_TECHNOLOGIES_INC.html'">1113232--3/14/2006--AXCELIS_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1022225--9-15-2006--OPLINK_COMMUNICATIONS_INC.html'">1022225--9/15/2006--OPLINK_COMMUNICATIONS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1034239--2-28-2007--RC2_CORP.html'">1034239--2/28/2007--RC2_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1042825--3-16-2007--POWER_ONE_INC.html'">1042825--3/16/2007--POWER_ONE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/909791--2-27-2009--ULTRATECH_INC.html'">909791--2/27/2009--ULTRATECH_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/23111--2-25-2010--COMPUTER_TASK_GROUP_INC.html'">23111--2/25/2010--COMPUTER_TASK_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/23111--2-26-2009--COMPUTER_TASK_GROUP_INC.html'">23111--2/26/2009--COMPUTER_TASK_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/797465--2-6-2006--STANLEY_FURNITURE_CO_INC-.html'">797465--2/6/2006--STANLEY_FURNITURE_CO_INC/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/926282--3-6-2006--ADTRAN_INC.html'">926282--3/6/2006--ADTRAN_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/855109--3-15-2006--EXABYTE_CORP_-DE-.html'">855109--3/15/2006--EXABYTE_CORP_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/790715--5-8-2006--SIGMA_DESIGNS_INC.html'">790715--5/8/2006--SIGMA_DESIGNS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/913590--2-12-2007--CELLSTAR_CORP.html'">913590--2/12/2007--CELLSTAR_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/913590--2-14-2006--CELLSTAR_CORP.html'">913590--2/14/2006--CELLSTAR_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/851205--2-17-2009--COGNEX_CORP.html'">851205--2/17/2009--COGNEX_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/833640--3-8-2007--POWER_INTEGRATIONS_INC.html'">833640--3/8/2007--POWER_INTEGRATIONS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/833640--3-10-2008--POWER_INTEGRATIONS_INC.html'">833640--3/10/2008--POWER_INTEGRATIONS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/772406--5-29-2008--CIRRUS_LOGIC_INC.html'">772406--5/29/2008--CIRRUS_LOGIC_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/23111--3-10-2008--COMPUTER_TASK_GROUP_INC.html'">23111--3/10/2008--COMPUTER_TASK_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/23111--3-7-2007--COMPUTER_TASK_GROUP_INC.html'">23111--3/7/2007--COMPUTER_TASK_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/23111--3-15-2006--COMPUTER_TASK_GROUP_INC.html'">23111--3/15/2006--COMPUTER_TASK_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/875359--4-3-2006--MICRO_LINEAR_CORP_-CA-.html'">875359--4/3/2006--MICRO_LINEAR_CORP_/CA/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/877212--2-28-2006--ZEBRA_TECHNOLOGIES_CORP-DE.html'">877212--2/28/2006--ZEBRA_TECHNOLOGIES_CORP/DE</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/851205--2-14-2008--COGNEX_CORP.html'">851205--2/14/2008--COGNEX_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/21535--2-25-2009--COHU_INC.html'">21535--2/25/2009--COHU_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1048695--11-21-2008--F5_NETWORKS_INC.html'">1048695--11/21/2008--F5_NETWORKS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1048695--11-20-2009--F5_NETWORKS_INC.html'">1048695--11/20/2009--F5_NETWORKS_INC</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

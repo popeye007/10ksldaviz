@@ -1,0 +1,177 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[3.4409341505, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [2.6990305089, "../topics/{stock,_price,_share}.html", "{stock,_price,_share}"], [1.7999571911, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [1.7593227603, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [1.7485107136, "../topics/{competitive,_industry,_competition}.html", "{competitive,_industry,_competition}"], [1.7044157537, "../topics/{debt,_indebtedness,_cash}.html", "{debt,_indebtedness,_cash}"], [1.7034629223, "../topics/{cost,_contract,_operation}.html", "{cost,_contract,_operation}"], [1.6965256159, "../topics/{control,_financial,_internal}.html", "{control,_financial,_internal}"], [1.5482671285, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"], [1.265736878, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>720671--7/16/2008--HALIFAX_CORP_OF_VIRGINIA</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">720671--7/16/2008--HALIFAX_CORP_OF_VIRGINIA</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{stock,_price,_share}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_share}.html'">{stock, price, share}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{competitive,_industry,_competition}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{competitive,_industry,_competition}.html'">{competitive, industry, competition}</td></tr>
+<tr class="list"><td id="{debt,_indebtedness,_cash}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{debt,_indebtedness,_cash}.html'">{debt, indebtedness, cash}</td></tr>
+<tr class="list"><td id="{cost,_contract,_operation}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_contract,_operation}.html'">{cost, contract, operation}</td></tr>
+<tr class="list"><td id="{control,_financial,_internal}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{control,_financial,_internal}.html'">{control, financial, internal}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    Our revenues are derived from a few major customers, the loss of any of which could cause our results of operations to be adversely affected.
+If we experience a decline in cash flow or are unable to maintain compliance with the covenants and representations contained in our loan agreement, our ability to operate could be adversely affected.
+We operate in a highly competitive market. If we are unable to offer competitive products and services, our business may be adversely affected.
+Our revenues and results of operations may vary period to period, which may cause the common stock price to fluctuate.
+If we are unable to generate sufficient revenues, we may have to further down size.
+If we are unable to retain and attract highly qualified personnel to fulfill our contract obligations, our business may be harmed.
+We are subject to risks related to fluctuations in interest rates.
+We incur significant costs in connection with the start-up of new contracts before receiving related revenues, which could result in cash shortfalls and fluctuations in quarterly results from period to period.
+Some of our contracts contain fixed-price provisions that could result in decreased profits if we fail to accurately estimate our costs.
+If we are unable to effectively and efficiently manage our costs, our results of operations may be adversely affected.
+If we fail to maintain an effective system of internal control over financial reporting, we may be unable to accurately report our financial results, comply with the reporting requirements under the Exchange Act or prevent fraud. As a result, current and potential stockholders may lose confidence in our financial reporting, which could harm our business, the trading price of our common stock, our ability to retain our current customers or obtain new customers and we could be subject to regulatory scrutiny.
+We have received a deficiency notice from the American Stock Exchange, or AMEX, and if we are unable to satisfy AMEX that we will regain compliance with its continued listing criteria, our common stock may be delisted from AMEX, which could adversely affect investor perception and may result in institutional and other investors refraining from purchasing our common stock which would adversely affect your ability and our ability to sell our common stock.
+We do not expect to pay dividends on our common stock.
+<p><a href="http://www.sec.gov/Archives/edgar/data/720671/0000950133-08-002404.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/720671--7-10-2007--HALIFAX_CORP.html'">720671--7/10/2007--HALIFAX_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1019787--4-13-2009--PURADYN_FILTER_TECHNOLOGIES_INC.html'">1019787--4/13/2009--PURADYN_FILTER_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/720671--6-23-2006--HALIFAX_CORP.html'">720671--6/23/2006--HALIFAX_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/351298--12-1-2006--HEI_INC.html'">351298--12/1/2006--HEI_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/885307--10-30-2007--JEWETT_CAMERON_TRADING_CO_LTD.html'">885307--10/30/2007--JEWETT_CAMERON_TRADING_CO_LTD</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/885307--11-3-2010--JEWETT_CAMERON_TRADING_CO_LTD.html'">885307--11/3/2010--JEWETT_CAMERON_TRADING_CO_LTD</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/862861--3-31-2006--APPLIANCE_RECYCLING_CENTERS_OF_AMERICA_INC_-MN.html'">862861--3/31/2006--APPLIANCE_RECYCLING_CENTERS_OF_AMERICA_INC_/MN</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1016504--10-14-2008--INTEGRATED_BIOPHARMA_INC.html'">1016504--10/14/2008--INTEGRATED_BIOPHARMA_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/103341--3-30-2007--QUAKER_FABRIC_CORP_-DE-.html'">103341--3/30/2007--QUAKER_FABRIC_CORP_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/833140--3-20-2006--ENPATH_MEDICAL_INC.html'">833140--3/20/2006--ENPATH_MEDICAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/885307--11-24-2006--JEWETT_CAMERON_TRADING_CO_LTD.html'">885307--11/24/2006--JEWETT_CAMERON_TRADING_CO_LTD</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/722313--3-9-2007--NORTECH_SYSTEMS_INC.html'">722313--3/9/2007--NORTECH_SYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/949491--3-30-2006--VODAVI_TECHNOLOGY_INC.html'">949491--3/30/2006--VODAVI_TECHNOLOGY_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1042351--3-15-2007--INDUSTRIAL_DISTRIBUTION_GROUP_INC.html'">1042351--3/15/2007--INDUSTRIAL_DISTRIBUTION_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/109156--10-13-2006--ZALE_CORP.html'">109156--10/13/2006--ZALE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1109189--3-23-2006--BASIC_ENERGY_SERVICES_INC.html'">1109189--3/23/2006--BASIC_ENERGY_SERVICES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/884269--3-10-2010--ALPHA_PRO_TECH_LTD.html'">884269--3/10/2010--ALPHA_PRO_TECH_LTD</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/75340--4-2-2007--P&F_INDUSTRIES_INC.html'">75340--4/2/2007--P&F_INDUSTRIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/99359--5-29-2009--BREEZE-EASTERN_CORP.html'">99359--5/29/2009--BREEZE-EASTERN_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1050825--4-28-2008--STEELCASE_INC.html'">1050825--4/28/2008--STEELCASE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/720671--6-30-2009--HALIFAX_CORP_OF_VIRGINIA.html'">720671--6/30/2009--HALIFAX_CORP_OF_VIRGINIA</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1090069--3-28-2008--CHEROKEE_INTERNATIONAL_CORP.html'">1090069--3/28/2008--CHEROKEE_INTERNATIONAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1090069--5-23-2007--CHEROKEE_INTERNATIONAL_CORP.html'">1090069--5/23/2007--CHEROKEE_INTERNATIONAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/6281--11-22-2010--ANALOG_DEVICES_INC.html'">6281--11/22/2010--ANALOG_DEVICES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/722313--3-19-2009--NORTECH_SYSTEMS_INC.html'">722313--3/19/2009--NORTECH_SYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/902270--3-16-2006--LENOX_GROUP_INC.html'">902270--3/16/2006--LENOX_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1000227--3-12-2007--TB_WOODS_CORP.html'">1000227--3/12/2007--TB_WOODS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1090069--4-18-2006--CHEROKEE_INTERNATIONAL_CORP.html'">1090069--4/18/2006--CHEROKEE_INTERNATIONAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/728249--3-20-2009--INTERPHASE_CORP.html'">728249--3/20/2009--INTERPHASE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/718332--9-21-2007--PIZZA_INN_INC_-MO-.html'">718332--9/21/2007--PIZZA_INN_INC_/MO/</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

@@ -1,0 +1,189 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[5.1375708259, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [3.8579536969, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [3.0681951993, "../topics/{system,_service,_information}.html", "{system,_service,_information}"], [3.0174247015, "../topics/{product,_liability,_claim}.html", "{product,_liability,_claim}"], [2.7082308593, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [2.6825226426, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"], [2.6510039797, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [1.7557604759, "../topics/{financial,_litigation,_operation}.html", "{financial,_litigation,_operation}"], [1.7455366192, "../topics/{stock,_price,_share}.html", "{stock,_price,_share}"], [1.7019001757, "../topics/{control,_financial,_internal}.html", "{control,_financial,_internal}"], [1.6965763599, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [1.1208509856, "../topics/{competitive,_industry,_competition}.html", "{competitive,_industry,_competition}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>1341768--4/1/2008--ACTIGA_CORP</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">1341768--4/1/2008--ACTIGA_CORP</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{system,_service,_information}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{system,_service,_information}.html'">{system, service, information}</td></tr>
+<tr class="list"><td id="{product,_liability,_claim}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_liability,_claim}.html'">{product, liability, claim}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{financial,_litigation,_operation}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{financial,_litigation,_operation}.html'">{financial, litigation, operation}</td></tr>
+<tr class="list"><td id="{stock,_price,_share}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_share}.html'">{stock, price, share}</td></tr>
+<tr class="list"><td id="{control,_financial,_internal}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{control,_financial,_internal}.html'">{control, financial, internal}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{competitive,_industry,_competition}" onmouseover="highlight(11)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{competitive,_industry,_competition}.html'">{competitive, industry, competition}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    We have a limited operating history and limited historical financial information upon which you may evaluate our performance.
+We will need substantial additional financing in the future to continue operations as a going concern.
+We rely on third-party suppliers and manufacturers to provide raw materials for and to produce our products, and we have limited control over these suppliers and manufacturers and may not be able to obtain quality products on a timely basis or in sufficient quantities.
+We depend on our management. If we fail to retain key personnel, our business could be adversely affected.
+We operate in a competitive industry and continue to be under the pressure of eroding gross profit margins, which could have a material adverse effect on our business.
+We are dependent on a few major customers which if lost will have a material adverse effect on the company.
+Products developed by us may be found to be defective and, as a result, warranty and/or product liability claims may be asserted against us, which may have a material adverse effect on the company.
+We may be unable to protect our proprietary rights. Unauthorized use of our technology may result in the development of products that compete with our products.
+Product quality issues could adversely affect our reputation and could impact our operating results.
+Infringement could lead to costly litigation and/or the need to enter into license agreements, which may result in increased operating expenses.
+Our business is highly dependent on the availability of video game hardware systems manufactured by third parties, as well as our ability to develop commercially viable products for these systems.
+Our industry is cyclical and products are cyclical and at the end of a life cycle of a product consumers may be slower to adopt new video game systems than we anticipate, and our operating results may suffer and become more difficult to predict.
+If we do not consistently meet our product development schedules, our operating results will be adversely affected.
+Our business is intensely competitive and hit driven. If we do not continue to deliver hit products and services or if consumers prefer our competitors products or services over our own, our operating results could suffer.
+Technology changes rapidly in our business and if we fail to anticipate or successfully implement new technologies or the manner in which people play our games, the quality, timeliness and competitiveness of our products and services will suffer.
+Our business depends in part on access to third-party platforms or technologies, and if the access is withdrawn, denied, or is not available on terms acceptable to us, or if the platforms or technologies change without notice to us, our business and operating results could be adversely affected.
+Our business is subject to risks generally associated with the entertainment industry, any of which could significantly harm our operating results.
+From time to time we may become involved in other legal proceedings which could adversely affect us.
+Acquisitions, investments and other strategic transactions could result in operating difficulties, dilution to our investors and other negative consequences.
+Fluctuations in quarterly operating results lead to unpredictability of revenue and earnings.
+Our products may be subject to governmental restrictions or rating systems.
+Our common stock may be affected by limited trading volume and stock price may fluctuate significantly.
+Our common stock is traded on the "Over-the-Counter Bulletin Board," which may make it more difficult for investors to resell their shares due to suitability requirements.
+<p><a href="http://www.sec.gov/Archives/edgar/data/1341768/0001144204-08-019680.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/1054374--2-3-2010--BROADCOM_CORP.html'">1054374--2/3/2010--BROADCOM_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/22252--5-1-2006--COMARCO_INC.html'">22252--5/1/2006--COMARCO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/866609--3-15-2007--INPUT_OUTPUT_INC.html'">866609--3/15/2007--INPUT_OUTPUT_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1054374--2-4-2009--BROADCOM_CORP.html'">1054374--2/4/2009--BROADCOM_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/850313--3-16-2006--SAFENET_INC.html'">850313--3/16/2006--SAFENET_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1063085--12-13-2007--CATAPULT_COMMUNICATIONS_CORP.html'">1063085--12/13/2007--CATAPULT_COMMUNICATIONS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1063085--12-29-2006--CATAPULT_COMMUNICATIONS_CORP.html'">1063085--12/29/2006--CATAPULT_COMMUNICATIONS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/225263--3-17-2009--NEWPORT_CORP.html'">225263--3/17/2009--NEWPORT_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1054374--2-20-2007--BROADCOM_CORP.html'">1054374--2/20/2007--BROADCOM_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1033905--3-16-2007--LUMINEX_CORP.html'">1033905--3/16/2007--LUMINEX_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/851737--3-15-2006--LASERSCOPE.html'">851737--3/15/2006--LASERSCOPE</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1054374--1-28-2008--BROADCOM_CORP.html'">1054374--1/28/2008--BROADCOM_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/22252--4-30-2007--COMARCO_INC.html'">22252--4/30/2007--COMARCO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/892482--3-14-2008--RIMAGE_CORP.html'">892482--3/14/2008--RIMAGE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/892482--3-16-2007--RIMAGE_CORP.html'">892482--3/16/2007--RIMAGE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1268671--3-16-2007--TNS_INC.html'">1268671--3/16/2007--TNS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/892482--3-16-2009--RIMAGE_CORP.html'">892482--3/16/2009--RIMAGE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1033905--2-26-2009--LUMINEX_CORP.html'">1033905--2/26/2009--LUMINEX_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1033905--2-25-2010--LUMINEX_CORP.html'">1033905--2/25/2010--LUMINEX_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1268671--3-17-2008--TNS_INC.html'">1268671--3/17/2008--TNS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1268671--3-16-2006--TNS_INC.html'">1268671--3/16/2006--TNS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1268671--3-16-2009--TNS_INC.html'">1268671--3/16/2009--TNS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1050446--3-10-2006--MICROSTRATEGY_INC.html'">1050446--3/10/2006--MICROSTRATEGY_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/892482--3-15-2006--RIMAGE_CORP.html'">892482--3/15/2006--RIMAGE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/892482--3-12-2010--RIMAGE_CORP.html'">892482--3/12/2010--RIMAGE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1070380--8-13-2007--SABA_SOFTWARE_INC.html'">1070380--8/13/2007--SABA_SOFTWARE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/836690--12-14-2009--INNOVATIVE_SOLUTIONS_&_SUPPORT_INC.html'">836690--12/14/2009--INNOVATIVE_SOLUTIONS_&_SUPPORT_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/836690--12-14-2010--INNOVATIVE_SOLUTIONS_&_SUPPORT_INC.html'">836690--12/14/2010--INNOVATIVE_SOLUTIONS_&_SUPPORT_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1050180--3-1-2007--PHASE_FORWARD_INC.html'">1050180--3/1/2007--PHASE_FORWARD_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1050180--2-26-2010--Phase_Forward_Inc.html'">1050180--2/26/2010--Phase_Forward_Inc</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

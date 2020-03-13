@@ -1,0 +1,183 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[4.9609520147, "../topics/{system,_service,_information}.html", "{system,_service,_information}"], [3.1120397164, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [2.7842901588, "../topics/{tax,_income,_asset}.html", "{tax,_income,_asset}"], [2.729340489, "../topics/{regulation,_change,_law}.html", "{regulation,_change,_law}"], [2.687928971, "../topics/{condition,_economic,_financial}.html", "{condition,_economic,_financial}"], [2.5074387267, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"], [2.2866652485, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [1.7453489708, "../topics/{capital,_credit,_financial}.html", "{capital,_credit,_financial}"], [1.6971585603, "../topics/{debt,_indebtedness,_cash}.html", "{debt,_indebtedness,_cash}"], [1.16709385, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>945114--3/18/2009--SYSTEMAX_INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">945114--3/18/2009--SYSTEMAX_INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{system,_service,_information}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{system,_service,_information}.html'">{system, service, information}</td></tr>
+<tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{tax,_income,_asset}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{tax,_income,_asset}.html'">{tax, income, asset}</td></tr>
+<tr class="list"><td id="{regulation,_change,_law}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_change,_law}.html'">{regulation, change, law}</td></tr>
+<tr class="list"><td id="{condition,_economic,_financial}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{condition,_economic,_financial}.html'">{condition, economic, financial}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+<tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{capital,_credit,_financial}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{capital,_credit,_financial}.html'">{capital, credit, financial}</td></tr>
+<tr class="list"><td id="{debt,_indebtedness,_cash}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{debt,_indebtedness,_cash}.html'">{debt, indebtedness, cash}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    Economic conditions have affected and could continue to adversely affect our revenues and profits.
+Competitive pressures could harm our revenue and gross margin.
+State and local sales tax collection may affect demand for our products.
+Business disruptions could adversely impact our revenue and financial condition.
+Changes in financial accounting standards may affect our results of operations.
+Our reliance on information and communications technology requires significant expenditures and entails risk.
+We are dependent on third-party suppliers.
+Goodwill and intangible assets may become impaired resulting in a charge to earnings.
+We have substantial international operations and we are exposed to fluctuations in currency exchange rates and political uncertainties.
+We are exposed to inventory risks.
+Restrictions and covenants in our credit facility may limit our ability to enter into certain transactions.
+We have experienced rapid growth in retail stores
+Gross profit margins in Technology Products are narrow and variable
+We may be liable for misuse, loss or theft of our customers personal information
+Increased costs associated with corporate governance compliance may impact our results of operations.
+Our success is dependent upon the availability of credit and financing.
+Sales to individual consumers exposes us to credit card fraud, which could adversely affect our business.
+Our income tax rate and the value of our deferred tax assets are subject to change.
+We may encounter risks in connection with sales of our web-hosted software application.
+<p><a href="http://www.sec.gov/Archives/edgar/data/945114/0001104659-09-018624.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/945114--3-13-2008--SYSTEMAX_INC.html'">945114--3/13/2008--SYSTEMAX_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1020265--3-8-2006--SABRE_HOLDINGS_CORP.html'">1020265--3/8/2006--SABRE_HOLDINGS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/927653--5-4-2010--MCKESSON_CORP.html'">927653--5/4/2010--MCKESSON_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1013237--10-30-2008--FACTSET_RESEARCH_SYSTEMS_INC.html'">1013237--10/30/2008--FACTSET_RESEARCH_SYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1020265--2-23-2007--SABRE_HOLDINGS_CORP.html'">1020265--2/23/2007--SABRE_HOLDINGS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1094238--9-12-2007--HARRIS_INTERACTIVE_INC.html'">1094238--9/12/2007--HARRIS_INTERACTIVE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/891919--4-17-2008--BOOKS_A_MILLION_INC.html'">891919--4/17/2008--BOOKS_A_MILLION_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/891919--4-16-2009--BOOKS_A_MILLION_INC.html'">891919--4/16/2009--BOOKS_A_MILLION_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1001250--8-19-2009--ESTEE_LAUDER_COMPANIES_INC.html'">1001250--8/19/2009--ESTEE_LAUDER_COMPANIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1066605--3-1-2010--HEIDRICK_&_STRUGGLES_INTERNATIONAL_INC.html'">1066605--3/1/2010--HEIDRICK_&_STRUGGLES_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/733269--5-30-2008--ACXIOM_CORP.html'">733269--5/30/2008--ACXIOM_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1001250--8-20-2010--ESTEE_LAUDER_COMPANIES_INC.html'">1001250--8/20/2010--ESTEE_LAUDER_COMPANIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/920033--4-10-2008--BANK_JOS_A_CLOTHIERS_INC_-DE-.html'">920033--4/10/2008--BANK_JOS_A_CLOTHIERS_INC_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1094561--3-8-2006--QUOVADX_INC.html'">1094561--3/8/2006--QUOVADX_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/733269--5-30-2007--ACXIOM_CORP.html'">733269--5/30/2007--ACXIOM_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1037016--2-25-2010--NII_HOLDINGS_INC.html'">1037016--2/25/2010--NII_HOLDINGS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1066605--3-15-2007--HEIDRICK_&_STRUGGLES_INTERNATIONAL_INC.html'">1066605--3/15/2007--HEIDRICK_&_STRUGGLES_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1066605--2-28-2008--HEIDRICK_&_STRUGGLES_INTERNATIONAL_INC.html'">1066605--2/28/2008--HEIDRICK_&_STRUGGLES_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1037016--2-26-2009--NII_HOLDINGS_INC.html'">1037016--2/26/2009--NII_HOLDINGS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/733269--5-29-2009--ACXIOM_CORP.html'">733269--5/29/2009--ACXIOM_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1066605--2-27-2009--HEIDRICK_&_STRUGGLES_INTERNATIONAL_INC.html'">1066605--2/27/2009--HEIDRICK_&_STRUGGLES_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1014052--10-29-2008--ATSI_COMMUNICATIONS_INC-DE.html'">1014052--10/29/2008--ATSI_COMMUNICATIONS_INC/DE</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1080056--3-16-2007--THESTREET_COM.html'">1080056--3/16/2007--THESTREET_COM</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1168652--3-11-2008--HIRERIGHT_INC.html'">1168652--3/11/2008--HIRERIGHT_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1080056--3-16-2006--THESTREET_COM.html'">1080056--3/16/2006--THESTREET_COM</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1027207--3-4-2008--EPIQ_SYSTEMS_INC.html'">1027207--3/4/2008--EPIQ_SYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1037016--2-27-2008--NII_HOLDINGS_INC.html'">1037016--2/27/2008--NII_HOLDINGS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/879573--8-9-2007--CENTENNIAL_COMMUNICATIONS_CORP_-DE.html'">879573--8/9/2007--CENTENNIAL_COMMUNICATIONS_CORP_/DE</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/849399--6-9-2006--SYMANTEC_CORP.html'">849399--6/9/2006--SYMANTEC_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/4962--3-1-2007--AMERICAN_EXPRESS_CO.html'">4962--3/1/2007--AMERICAN_EXPRESS_CO</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

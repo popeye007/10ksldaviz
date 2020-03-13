@@ -1,0 +1,205 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[12.6959859945, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [5.6001723842, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [4.4502693113, "../topics/{financial,_litigation,_operation}.html", "{financial,_litigation,_operation}"], [3.621338286, "../topics/{control,_financial,_internal}.html", "{control,_financial,_internal}"], [2.7052508205, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [2.6961462636, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [2.6612428204, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [1.8245551572, "../topics/{capital,_credit,_financial}.html", "{capital,_credit,_financial}"], [1.7085097943, "../topics/{system,_service,_information}.html", "{system,_service,_information}"], [1.6963268913, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"], [1.6963248434, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"], [1.6897300394, "../topics/{product,_candidate,_development}.html", "{product,_candidate,_development}"], [1.6891248472, "../topics/{gas,_price,_oil}.html", "{gas,_price,_oil}"], [1.6588246401, "../topics/{cost,_operation,_labor}.html", "{cost,_operation,_labor}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>946581--2/28/2007--TAKE_TWO_INTERACTIVE_SOFTWARE_INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">946581--2/28/2007--TAKE_TWO_INTERACTIVE_SOFTWARE_INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{financial,_litigation,_operation}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{financial,_litigation,_operation}.html'">{financial, litigation, operation}</td></tr>
+<tr class="list"><td id="{control,_financial,_internal}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{control,_financial,_internal}.html'">{control, financial, internal}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{capital,_credit,_financial}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{capital,_credit,_financial}.html'">{capital, credit, financial}</td></tr>
+<tr class="list"><td id="{system,_service,_information}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{system,_service,_information}.html'">{system, service, information}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+<tr class="list"><td id="{product,_candidate,_development}" onmouseover="highlight(11)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_candidate,_development}.html'">{product, candidate, development}</td></tr>
+<tr class="list"><td id="{gas,_price,_oil}" onmouseover="highlight(12)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{gas,_price,_oil}.html'">{gas, price, oil}</td></tr>
+<tr class="list"><td id="{cost,_operation,_labor}" onmouseover="highlight(13)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_operation,_labor}.html'">{cost, operation, labor}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    The matters relating to the investigation by the Special Committee of our Board of Directors and the restatement of our consolidated financial statements may result in additional SEC inquiries, litigation and governmental enforcement actions.
+We have incurred significant losses for the year ended October 31, 2006, and we may incur future losses.
+Our business is highly dependent on the success, timely release and availability of new video game platforms, on the continued availability of existing video game platforms, as well as our ability to develop commercially successful products for these platforms.
+We expect the average price of current generation software titles to continue to decline.
+The market for our titles is characterized by short product life cycles. Delays in product releases or disruptions following the commercial release of our products may have a material adverse effect on our operating results.
+We are dependent on the future success of our Grand Theft Auto products and we must continue to publish hit titles in order to successfully compete in our industry.
+Our software titles compete for the leisure and entertainment time of consumers, which has intensified in part due to advances in technology.
+If we fail to retain creative and product development personnel, our business could be seriously harmed.
+We depend on our key management personnel.
+Our ability to acquire licenses to intellectual property, especially for sports titles, impacts our revenue and profitability. Competition for these licenses may make them more expensive and increase our costs.
+Our business is dependent on our ability to enter into successful software development arrangements with third parties.
+We are subject to product development risks which could result in delays and additional costs, and we must adapt to changes in software technologies.
+The interactive entertainment software industry is highly competitive both for our publishing and distribution operations.
+Increased competition for limited shelf space and promotional support from retailers could affect the success of our business and require us to incur greater expenses to market our titles.
+A limited number of customers account for a significant portion of our sales. The loss of a principal customer could seriously hurt our business.
+Returns of our published titles by our customers and price concessions granted to our customers may adversely affect our operating results.
+Failure to collect our accounts receivable on a timely basis will negatively impact our cash flow.
+We are subject to the rating of our content by the Entertainment Software Rating Board. Failure to obtain a target rating for certain of our products could negatively impact our sales as could a game re-rating.
+We entered into a Consent Order with the Staff of the Federal Trade.
+We are currently in litigation that could negatively impact our financial results.
+We have received requests for information from certain state and federal regulatory authorities.
+Our business and products are subject to increasing potential legislation. The adoption of such proposed legislation could limit the retail market for our products.
+Content policies adopted by retailers, consumer opposition and litigation could negatively impact sales of our products
+We cannot publish our console titles without the approval of hardware licensors who are also our competitors.
+Our quarterly operating results are highly seasonal and may fluctuate significantly, which could cause our stock price to decline.
+Our expansion and acquisitions may strain our operations, and we may not have sufficient financial resources to continue to expand our operations at previous levels.
+Our business is subject to risks generally associated with the entertainment industry, and we may fail to properly assess consumer tastes and preferences.
+We cannot be certain of the future effectiveness of our internal controls over financial reporting or the impact of the same on our operations or the market price for our common stock.
+We may not be able to protect our proprietary rights or avoid claims that we infringe on the proprietary rights of others.
+Our software is susceptible to errors, which can harm our financial results and reputation.
+Gross margins relating to our distribution business have been historically narrow which increases the impact of variations in costs on our operating results.
+We may not be able to adequately adjust our cost structure in a timely fashion in response to a sudden decrease in demand.
+Our distribution business is dependent on suppliers to maintain an adequate supply of products to fulfill customer orders on a timely basis.
+We are subject to the risk that our inventory values may decline and protective terms under supplier arrangements may not adequately cover the decline in values.
+We are subject to risks and uncertainties of international trade, including fluctuations in the values of local foreign currencies against the dollar.
+The market price for our common stock may be highly volatile as a result of, among other things, factors affecting the industry.
+We seek to manage our business with a view to achieving long-term results, and this could have a negative effect on short-term trading.
+<p><a href="http://www.sec.gov/Archives/edgar/data/946581/0001104659-07-015029.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/1054721--2-16-2007--BSQUARE_CORP_-WA.html'">1054721--2/16/2007--BSQUARE_CORP_/WA</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1110903--12-14-2006--NETWORK_ENGINES_INC.html'">1110903--12/14/2006--NETWORK_ENGINES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/946581--12-18-2009--TAKE_TWO_INTERACTIVE_SOFTWARE_INC.html'">946581--12/18/2009--TAKE_TWO_INTERACTIVE_SOFTWARE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1054721--2-19-2008--BSQUARE_CORP_-WA.html'">1054721--2/19/2008--BSQUARE_CORP_/WA</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/890640--2-23-2007--COREL_CORP.html'">890640--2/23/2007--COREL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1110903--12-15-2008--NETWORK_ENGINES_INC.html'">1110903--12/15/2008--NETWORK_ENGINES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1089907--4-2-2007--KANA_SOFTWARE_INC.html'">1089907--4/2/2007--KANA_SOFTWARE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1089907--3-17-2008--KANA_SOFTWARE_INC.html'">1089907--3/17/2008--KANA_SOFTWARE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1110903--12-14-2009--NETWORK_ENGINES_INC.html'">1110903--12/14/2009--NETWORK_ENGINES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1104730--3-31-2006--VYYO_INC.html'">1104730--3/31/2006--VYYO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1104730--4-2-2007--VYYO_INC.html'">1104730--4/2/2007--VYYO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/890640--2-9-2009--COREL_CORP.html'">890640--2/9/2009--COREL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1086195--3-16-2006--ART_TECHNOLOGY_GROUP_INC.html'">1086195--3/16/2006--ART_TECHNOLOGY_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1097641--3-31-2006--724_SOLUTIONS_INC.html'">1097641--3/31/2006--724_SOLUTIONS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/718877--6-14-2007--ACTIVISION_INC_-NY.html'">718877--6/14/2007--ACTIVISION_INC_/NY</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1058811--3-10-2006--IMMERSION_CORP.html'">1058811--3/10/2006--IMMERSION_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1078271--6-28-2007--EXTREME_NETWORKS_INC.html'">1078271--6/28/2007--EXTREME_NETWORKS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1087277--4-2-2007--APTIMUS_INC.html'">1087277--4/2/2007--APTIMUS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1087277--3-16-2006--APTIMUS_INC.html'">1087277--3/16/2006--APTIMUS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/946581--12-20-2007--TAKE_TWO_INTERACTIVE_SOFTWARE_INC.html'">946581--12/20/2007--TAKE_TWO_INTERACTIVE_SOFTWARE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/948708--3-30-2007--SMITH_MICRO_SOFTWARE_INC.html'">948708--3/30/2007--SMITH_MICRO_SOFTWARE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/718877--5-30-2008--ACTIVISION_INC_-NY.html'">718877--5/30/2008--ACTIVISION_INC_/NY</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1139650--3-16-2007--ALTIRIS_INC.html'">1139650--3/16/2007--ALTIRIS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/794323--3-2-2006--LEVEL_3_COMMUNICATIONS_INC.html'">794323--3/2/2006--LEVEL_3_COMMUNICATIONS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/946581--12-19-2008--TAKE_TWO_INTERACTIVE_SOFTWARE_INC.html'">946581--12/19/2008--TAKE_TWO_INTERACTIVE_SOFTWARE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/68505--2-16-2010--MOTOROLA_INC.html'">68505--2/16/2010--MOTOROLA_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/890640--2-8-2008--COREL_CORP.html'">890640--2/8/2008--COREL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1166220--9-26-2007--JL_HALSEY_CORP.html'">1166220--9/26/2007--JL_HALSEY_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1058811--3-17-2008--IMMERSION_CORP.html'">1058811--3/17/2008--IMMERSION_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1096199--10-17-2006--VA_SOFTWARE_CORP.html'">1096199--10/17/2006--VA_SOFTWARE_CORP</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

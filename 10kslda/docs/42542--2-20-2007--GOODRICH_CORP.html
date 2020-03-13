@@ -1,0 +1,179 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[4.0078978025, "../topics/{competitive,_industry,_competition}.html", "{competitive,_industry,_competition}"], [2.6107126762, "../topics/{operation,_natural,_condition}.html", "{operation,_natural,_condition}"], [2.506029704, "../topics/{cost,_regulation,_environmental}.html", "{cost,_regulation,_environmental}"], [2.4042676836, "../topics/{condition,_economic,_financial}.html", "{condition,_economic,_financial}"], [1.7352480286, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [1.699211769, "../topics/{product,_liability,_claim}.html", "{product,_liability,_claim}"], [1.6763886284, "../topics/{cost,_contract,_operation}.html", "{cost,_contract,_operation}"], [1.6687290705, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"], [1.6574029704, "../topics/{regulation,_government,_change}.html", "{regulation,_government,_change}"], [1.6562592579, "../topics/{regulation,_change,_law}.html", "{regulation,_change,_law}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>42542--2/20/2007--GOODRICH_CORP</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">42542--2/20/2007--GOODRICH_CORP</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{competitive,_industry,_competition}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{competitive,_industry,_competition}.html'">{competitive, industry, competition}</td></tr>
+<tr class="list"><td id="{operation,_natural,_condition}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_natural,_condition}.html'">{operation, natural, condition}</td></tr>
+<tr class="list"><td id="{cost,_regulation,_environmental}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_regulation,_environmental}.html'">{cost, regulation, environmental}</td></tr>
+<tr class="list"><td id="{condition,_economic,_financial}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{condition,_economic,_financial}.html'">{condition, economic, financial}</td></tr>
+<tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{product,_liability,_claim}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_liability,_claim}.html'">{product, liability, claim}</td></tr>
+<tr class="list"><td id="{cost,_contract,_operation}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_contract,_operation}.html'">{cost, contract, operation}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+<tr class="list"><td id="{regulation,_government,_change}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_government,_change}.html'">{regulation, government, change}</td></tr>
+<tr class="list"><td id="{regulation,_change,_law}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_change,_law}.html'">{regulation, change, law}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    The market segments we serve are cyclical and sensitive to domestic and foreign economic considerations that could adversely affect our business and financial results.
+Current conditions in the airline industry could adversely affect our business and financial results.
+A significant decline in business with Airbus or Boeing could adversely affect our business and financial results.
+Demand for our defense and space-related products is dependent upon government spending.
+Our business could be adversely affected if we are unable to obtain the necessary raw materials and components.
+We use a number of estimates in accounting for some long-term contracts. Changes in our estimates could materially affect our future financial results.
+Competitive pressures may adversely affect our business and financial results.
+The significant consolidation occurring in the aerospace industry could adversely affect our business and financial results.
+Expenses related to employee and retiree medical and pension benefits may continue to rise.
+The aerospace industry is highly regulated.
+We may have liabilities relating to environmental laws and regulations that could adversely affect our financial results.
+Any material product liability or environmental claims in excess of insurance may adversely affect us.
+Any material product warranty obligations may adversely affect us.
+Our operations depend on our production facilities throughout the world. These production facilities are subject to physical and other risks that could disrupt production.
+We have significant international operations and assets and are therefore subject to additional financial and regulatory risks.
+<p><a href="http://www.sec.gov/Archives/edgar/data/42542/0000950144-07-001407.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/42542--2-22-2006--GOODRICH_CORP.html'">42542--2/22/2006--GOODRICH_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/42542--2-19-2008--GOODRICH_CORP.html'">42542--2/19/2008--GOODRICH_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/42542--2-17-2009--GOODRICH_CORP.html'">42542--2/17/2009--GOODRICH_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/42542--2-16-2010--GOODRICH_CORP.html'">42542--2/16/2010--GOODRICH_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/948845--2-28-2006--MIDWEST_AIR_GROUP_INC.html'">948845--2/28/2006--MIDWEST_AIR_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/948845--3-2-2007--MIDWEST_AIR_GROUP_INC.html'">948845--3/2/2007--MIDWEST_AIR_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1297735--3-6-2007--American_Casino_&_Entertainment_Properties_LLC.html'">1297735--3/6/2007--American_Casino_&_Entertainment_Properties_LLC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1035976--3-13-2009--FIRST_NATIONAL_COMMUNITY_BANCORP_INC.html'">1035976--3/13/2009--FIRST_NATIONAL_COMMUNITY_BANCORP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/39135--3-17-2006--FRIENDLY_ICE_CREAM_CORP.html'">39135--3/17/2006--FRIENDLY_ICE_CREAM_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1750--7-16-2010--AAR_CORP.html'">1750--7/16/2010--AAR_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/313337--3-28-2008--TRI_CITY_BANKSHARES_CORP.html'">313337--3/28/2008--TRI_CITY_BANKSHARES_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1269977--3-16-2006--ATLANTIC_COAST_ENTERTAINMENT_HOLDINGS_INC.html'">1269977--3/16/2006--ATLANTIC_COAST_ENTERTAINMENT_HOLDINGS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/740942--3-16-2009--TOWER_BANCORP_INC.html'">740942--3/16/2009--TOWER_BANCORP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/948846--3-9-2006--AIRTRAN_HOLDINGS_INC.html'">948846--3/9/2006--AIRTRAN_HOLDINGS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/864233--3-10-2006--O_CHARLEYS_INC.html'">864233--3/10/2006--O_CHARLEYS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1297735--3-27-2008--American_Casino_&_Entertainment_Properties_LLC.html'">1297735--3/27/2008--American_Casino_&_Entertainment_Properties_LLC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1750--7-11-2008--AAR_CORP.html'">1750--7/11/2008--AAR_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/351569--3-16-2009--Ameris_Bancorp.html'">351569--3/16/2009--Ameris_Bancorp</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1008579--3-31-2008--HIGHLANDS_BANKSHARES_INC_-VA-.html'">1008579--3/31/2008--HIGHLANDS_BANKSHARES_INC_/VA/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1263074--3-15-2007--PORTEC_RAIL_PRODUCTS_INC.html'">1263074--3/15/2007--PORTEC_RAIL_PRODUCTS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1005757--3-3-2009--CSG_SYSTEMS_INTERNATIONAL_INC.html'">1005757--3/3/2009--CSG_SYSTEMS_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/829224--11-29-2007--STARBUCKS_CORP.html'">829224--11/29/2007--STARBUCKS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1361658--3-7-2007--WYNDHAM_WORLDWIDE_CORP.html'">1361658--3/7/2007--WYNDHAM_WORLDWIDE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1113336--3-28-2008--CNB_FINANCIAL_SERVICES_INC.html'">1113336--3/28/2008--CNB_FINANCIAL_SERVICES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1113336--3-30-2007--CNB_FINANCIAL_SERVICES_INC.html'">1113336--3/30/2007--CNB_FINANCIAL_SERVICES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1113336--3-31-2006--CNB_FINANCIAL_SERVICES_INC.html'">1113336--3/31/2006--CNB_FINANCIAL_SERVICES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1750--7-16-2009--AAR_CORP.html'">1750--7/16/2009--AAR_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1144331--3-20-2008--EXPRESSJET_HOLDINGS_INC.html'">1144331--3/20/2008--EXPRESSJET_HOLDINGS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1008579--3-31-2009--HIGHLANDS_BANKSHARES_INC_-VA-.html'">1008579--3/31/2009--HIGHLANDS_BANKSHARES_INC_/VA/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1113336--3-18-2009--CNB_FINANCIAL_SERVICES_INC.html'">1113336--3/18/2009--CNB_FINANCIAL_SERVICES_INC</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

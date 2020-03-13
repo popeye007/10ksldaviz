@@ -1,0 +1,195 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[6.9579240497, "../topics/{capital,_credit,_financial}.html", "{capital,_credit,_financial}"], [4.479321585, "../topics/{tax,_income,_asset}.html", "{tax,_income,_asset}"], [3.8001246444, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"], [3.7368552859, "../topics/{debt,_indebtedness,_cash}.html", "{debt,_indebtedness,_cash}"], [2.6920140523, "../topics/{financial,_litigation,_operation}.html", "{financial,_litigation,_operation}"], [1.846682466, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [1.7255214707, "../topics/{interest,_director,_officer}.html", "{interest,_director,_officer}"], [1.7078786312, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [1.6995941262, "../topics/{system,_service,_information}.html", "{system,_service,_information}"], [1.6990541224, "../topics/{stock,_price,_share}.html", "{stock,_price,_share}"], [1.6974556378, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [1.6971414243, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [1.6915847229, "../topics/{regulation,_change,_law}.html", "{regulation,_change,_law}"], [1.1165273201, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>921582--3/13/2009--IMAX_CORP</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">921582--3/13/2009--IMAX_CORP</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{capital,_credit,_financial}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{capital,_credit,_financial}.html'">{capital, credit, financial}</td></tr>
+<tr class="list"><td id="{tax,_income,_asset}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{tax,_income,_asset}.html'">{tax, income, asset}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+<tr class="list"><td id="{debt,_indebtedness,_cash}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{debt,_indebtedness,_cash}.html'">{debt, indebtedness, cash}</td></tr>
+<tr class="list"><td id="{financial,_litigation,_operation}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{financial,_litigation,_operation}.html'">{financial, litigation, operation}</td></tr>
+<tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{interest,_director,_officer}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{interest,_director,_officer}.html'">{interest, director, officer}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{system,_service,_information}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{system,_service,_information}.html'">{system, service, information}</td></tr>
+<tr class="list"><td id="{stock,_price,_share}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_share}.html'">{stock, price, share}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(11)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{regulation,_change,_law}" onmouseover="highlight(12)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_change,_law}.html'">{regulation, change, law}</td></tr>
+<tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(13)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    The Company may not generate cash flow sufficient to service all of its obligations.
+The Company s stock price has historically been volatile and declines in market price, including as a result of the current market downturn, may negatively affect its ability to raise capital, issue debt, secure customer business and retain employees.
+Current economic conditions beyond the Company s control could materially affect the Company s business by reducing both revenue generated from existing IMAX theater systems and the demand for new IMAX theater systems.
+There is collection risk associated with payments to be received over the terms of the Company s theater system agreements.
+The Company may not convert all of its backlog into revenue and cash flows.
+The Company depends on commercial movie exhibitors to purchase or lease its IMAX theater systems, to supply revenue under joint revenue sharing arrangements as well as to provide additional revenues under its sales and sales-type lease agreements and to supply venues in which to exhibit its IMAX DMR films.
+The success of the IMAX theater network is directly related to the availability and success of IMAX DMR films.
+The Company s theater system revenue can vary significantly from its cash flows under theater system sales or lease agreements.
+There are several risks associated with the Company s transition to a digitally-based projector, including technical risks and business risks, such as the risk that movie studios may be unwilling to pay the higher costs of IMAX film prints, particularly for certain under-performing movie theaters outside the United States and Canada.
+The Company s operating results and cash flow can vary substantially from quarter to quarter and could increase the volatility of its share price.
+The Company may not be able to generate profits in the future.
+The Company s revenues from existing customers are derived in part from financial reporting provided by its customers, which may be inaccurate or incomplete, resulting in lost or delayed revenues.
+The agreements governing the Company s indebtedness contain significant restrictions that limit its operating and financial flexibility.
+The introduction of new products and technologies and changes in the way the Company s competitors operate could harm the Company s business.
+The Company conducts business internationally, which exposes it to uncertainties and risks that could negatively affect its operations and sales.
+The Company may still be able to incur more indebtedness, which could further exacerbate the risks associated with its existing indebtedness.
+The Company may experience adverse effects due to exchange rate fluctuations.
+The Company is subject to impairment losses on its film assets.
+The Company is subject to impairment losses on its inventories.
+If the Company s goodwill or long lived assets become impaired the Company may be required to record a significant charge to earnings.
+Changes in accounting and changes in management s estimates may affect the Company s reported earnings and operating income.
+The Company relies on its key personnel, and the loss of one or more of those personnel could harm its ability to carry out its business strategy.
+The Company s ability to adequately protect its intellectual property is limited, and competitors may misappropriate its technology, which could weaken its competitive position.
+The Company faces risks in connection with the continued expansion of its business in China and other parts of Asia.
+Because the Company is incorporated in Canada, it may be difficult for plaintiffs to enforce against the Company liabilities based solely upon U.S. federal securities laws.
+RISKS RELATED TO THE COMPANY S PRIOR RESTATEMENTS AND RELATED MATTERS
+The Company is subject to ongoing informal inquiries by regulatory authorities in the U.S. and Canada, and it cannot predict the timing of developments and outcomes in these matters.
+<p><a href="http://www.sec.gov/Archives/edgar/data/921582/0000909567-09-000242.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/921582--3-17-2008--IMAX_CORP.html'">921582--3/17/2008--IMAX_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/921582--3-11-2010--IMAX_CORP.html'">921582--3/11/2010--IMAX_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/43196--3-14-2008--GRAY_TELEVISION_INC.html'">43196--3/14/2008--GRAY_TELEVISION_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1084961--2-28-2007--ENCORE_CAPITAL_GROUP_INC.html'">1084961--2/28/2007--ENCORE_CAPITAL_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1318862--4-16-2009--Juniper_Content_Corp.html'">1318862--4/16/2009--Juniper_Content_Corp</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1103837--3-5-2009--CROWN_MEDIA_HOLDINGS_INC.html'">1103837--3/5/2009--CROWN_MEDIA_HOLDINGS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/834162--4-2-2007--MTR_GAMING_GROUP_INC.html'">834162--4/2/2007--MTR_GAMING_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/834162--4-3-2008--MTR_GAMING_GROUP_INC.html'">834162--4/3/2008--MTR_GAMING_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1084961--2-19-2008--ENCORE_CAPITAL_GROUP_INC.html'">1084961--2/19/2008--ENCORE_CAPITAL_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/912752--3-5-2010--SINCLAIR_BROADCAST_GROUP_INC.html'">912752--3/5/2010--SINCLAIR_BROADCAST_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/949536--2-27-2009--HEARST_ARGYLE_TELEVISION_INC.html'">949536--2/27/2009--HEARST_ARGYLE_TELEVISION_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1339947--2-11-2010--Viacom_Inc..html'">1339947--2/11/2010--Viacom_Inc.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1103837--3-8-2007--CROWN_MEDIA_HOLDINGS_INC.html'">1103837--3/8/2007--CROWN_MEDIA_HOLDINGS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/949536--2-27-2007--HEARST_ARGYLE_TELEVISION_INC.html'">949536--2/27/2007--HEARST_ARGYLE_TELEVISION_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/949536--2-28-2008--HEARST_ARGYLE_TELEVISION_INC.html'">949536--2/28/2008--HEARST_ARGYLE_TELEVISION_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1339947--3-1-2007--Viacom_Inc..html'">1339947--3/1/2007--Viacom_Inc.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1303276--6-15-2010--Marquee_Holdings_Inc..html'">1303276--6/15/2010--Marquee_Holdings_Inc.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/889156--12-15-2010--ALLBRITTON_COMMUNICATIONS_CO.html'">889156--12/15/2010--ALLBRITTON_COMMUNICATIONS_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/771950--3-31-2010--WESTWOOD_ONE_INC_-DE-.html'">771950--3/31/2010--WESTWOOD_ONE_INC_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/43196--4-7-2010--GRAY_TELEVISION_INC.html'">43196--4/7/2010--GRAY_TELEVISION_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/834162--3-16-2010--MTR_GAMING_GROUP_INC.html'">834162--3/16/2010--MTR_GAMING_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/43196--3-31-2009--GRAY_TELEVISION_INC.html'">43196--3/31/2009--GRAY_TELEVISION_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/923877--3-22-2006--PAXSON_COMMUNICATIONS_CORP.html'">923877--3/22/2006--PAXSON_COMMUNICATIONS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/944868--2-27-2009--DIRECTV_GROUP_INC.html'">944868--2/27/2009--DIRECTV_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1050606--3-12-2010--SALEM_COMMUNICATIONS_CORP_-DE-.html'">1050606--3/12/2010--SALEM_COMMUNICATIONS_CORP_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1192503--3-31-2006--LBI_MEDIA_INC.html'">1192503--3/31/2006--LBI_MEDIA_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1234308--2-27-2009--DIRECTV_FINANCING_CO_INC.html'">1234308--2/27/2009--DIRECTV_FINANCING_CO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1234307--2-27-2009--DIRECTV_FINANCING_CO_INC.html'">1234307--2/27/2009--DIRECTV_FINANCING_CO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1267023--3-31-2006--LBI_MEDIA_HOLDINGS_INC.html'">1267023--3/31/2006--LBI_MEDIA_HOLDINGS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/832428--3-5-2010--SCRIPPS_E_W_CO_-DE.html'">832428--3/5/2010--SCRIPPS_E_W_CO_/DE</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

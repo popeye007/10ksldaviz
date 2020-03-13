@@ -1,0 +1,231 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[16.5505133609, "../topics/{product,_candidate,_development}.html", "{product,_candidate,_development}"], [7.645650869, "../topics/{product,_liability,_claim}.html", "{product,_liability,_claim}"], [5.7589924275, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [4.9945709634, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [3.3978868425, "../topics/{stock,_price,_share}.html", "{stock,_price,_share}"], [2.9337360175, "../topics/{regulation,_government,_change}.html", "{regulation,_government,_change}"], [2.9130106392, "../topics/{operation,_natural,_condition}.html", "{operation,_natural,_condition}"], [2.9038184791, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"], [2.811895774, "../topics/{regulation,_change,_law}.html", "{regulation,_change,_law}"], [2.7481344787, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [2.6467485293, "../topics/{system,_service,_information}.html", "{system,_service,_information}"], [2.0268892892, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"], [1.8499701466, "../topics/{cost,_regulation,_environmental}.html", "{cost,_regulation,_environmental}"], [1.8175496001, "../topics/{competitive,_industry,_competition}.html", "{competitive,_industry,_competition}"], [1.7478192066, "../topics/{loan,_real,_estate}.html", "{loan,_real,_estate}"], [1.7252316285, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [1.7248546222, "../topics/{control,_financial,_internal}.html", "{control,_financial,_internal}"], [1.7213159681, "../topics/{tax,_income,_asset}.html", "{tax,_income,_asset}"], [1.7022579341, "../topics/{provision,_law,_control}.html", "{provision,_law,_control}"], [1.0352701414, "../topics/{capital,_credit,_financial}.html", "{capital,_credit,_financial}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>881524--3/7/2008--VIVUS_INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">881524--3/7/2008--VIVUS_INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{product,_candidate,_development}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_candidate,_development}.html'">{product, candidate, development}</td></tr>
+<tr class="list"><td id="{product,_liability,_claim}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_liability,_claim}.html'">{product, liability, claim}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{stock,_price,_share}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_share}.html'">{stock, price, share}</td></tr>
+<tr class="list"><td id="{regulation,_government,_change}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_government,_change}.html'">{regulation, government, change}</td></tr>
+<tr class="list"><td id="{operation,_natural,_condition}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_natural,_condition}.html'">{operation, natural, condition}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+<tr class="list"><td id="{regulation,_change,_law}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_change,_law}.html'">{regulation, change, law}</td></tr>
+<tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{system,_service,_information}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{system,_service,_information}.html'">{system, service, information}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(11)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+<tr class="list"><td id="{cost,_regulation,_environmental}" onmouseover="highlight(12)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_regulation,_environmental}.html'">{cost, regulation, environmental}</td></tr>
+<tr class="list"><td id="{competitive,_industry,_competition}" onmouseover="highlight(13)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{competitive,_industry,_competition}.html'">{competitive, industry, competition}</td></tr>
+<tr class="list"><td id="{loan,_real,_estate}" onmouseover="highlight(14)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{loan,_real,_estate}.html'">{loan, real, estate}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(15)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{control,_financial,_internal}" onmouseover="highlight(16)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{control,_financial,_internal}.html'">{control, financial, internal}</td></tr>
+<tr class="list"><td id="{tax,_income,_asset}" onmouseover="highlight(17)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{tax,_income,_asset}.html'">{tax, income, asset}</td></tr>
+<tr class="list"><td id="{provision,_law,_control}" onmouseover="highlight(18)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{provision,_law,_control}.html'">{provision, law, control}</td></tr>
+<tr class="list"><td id="{capital,_credit,_financial}" onmouseover="highlight(19)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{capital,_credit,_financial}.html'">{capital, credit, financial}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    Risks Relating to our Product Development Efforts
+We face significant risks in our product development efforts.
+The results of pre-clinical studies and completed clinical trials are not necessarily predictive of future results, and our current investigational product candidates may not have favorable results in later studies or trials.
+If the results of current or future pre-clinical studies, clinical testing and/or clinical trials indicate that our proposed products are not safe or effective for human use, our business will suffer.
+Our investigational product candidate, Qnexa, is a combination of drugs approved individually by the FDA that are commercially available and marketed by other companies. As a result, our product may be subject to substitution and competition.
+The FDA and other regulatory agencies will likely require more extensive or expensive trials for our combination investigational product candidate, Qnexa, than may be required for single agent pharmaceuticals.
+We are exposed to risks related to collaborative arrangements, licenses or strategic alliances.
+We face significant governmental regulation during our product development activities.
+Our applications for regulatory approval could be delayed or denied due to problems with studies conducted before we licensed some of our investigational product candidates from third parties.
+Following regulatory approval of any investigational product candidates, we would be subject to ongoing regulatory obligations and restrictions, which may result in significant expense and limit our ability to commercialize our potential drugs.
+We rely on third parties to conduct pre-clinical and clinical trials and studies for our investigational product candidates in development and those third parties may not perform satisfactorily.
+We rely on third parties to manufacture sufficient quantities of compounds for use in our pre-clinical and clinical trials and future commercial operations and an interruption to this service may harm our business.
+Risks Relating to our Operations
+If we, or our suppliers, fail to comply with FDA and other government regulations relating to our manufacturing operations, we may be prevented from manufacturing our products or may be required to undertake significant expenditures to become compliant with regulations.
+If we fail to comply with healthcare regulations, we could face substantial penalties and our business, operations and financial condition could be adversely affected.
+Our marketing activities for our products are subject to continued governmental regulation.
+We must continue to monitor the use of our approved products and may be required to complete post-approval studies mandated by the FDA.
+We depend exclusively on third party distributors outside of the United States and we have very limited control over their activities.
+Sales of our current and any future products are subject to continued governmental regulation, our ability to accurately forecast demand and our ability to produce sufficient quantities to meet demand.
+We have limited sales and marketing capabilities in the United States.
+We have little or no control over our wholesalers' buying patterns, which may impact future revenues, returns and excess inventory.
+The markets in which we operate are highly competitive and we may be unable to compete successfully against new entrants or established companies.
+If our raw material suppliers fail to supply us with the Active Pharmaceutical Ingredients for our products and investigational product candidates, for which availability is limited, we may experience delays in our product development and commercialization.
+We outsource several key parts of our operations, and any interruption in the services provided by third parties could harm our business.
+We currently depend on a single source for the supply of plastic applicator components for MUSE and an interruption to this supply sources could harm our business.
+All of our manufacturing operations are currently conducted at a single location, and a prolonged interruption to our manufacturing operations could harm our business.
+We are dependent upon a single approved therapeutic approach to treat erectile dysfunction.
+If we fail to retain our key personnel and hire, train and retain qualified employees, we may not be able to compete effectively, which could result in reduced revenues.
+We are subject to additional risks associated with our international operations.
+Any adverse changes in reimbursement procedures by government and other third party payors may limit our ability to market and sell our products or limit our product revenues and delay profitability.
+Federal legislation may increase the pressure to reduce prices of pharmaceutical products paid for by Medicare, which could adversely affect our revenues, if any.
+Recent federal legislation and actions by state and local governments may permit re-importation of drugs from foreign countries into the United States, including foreign countries where the drugs are sold at lower prices than in the United States, which could adversely affect our operating results and our overall financial condition.
+Defending against claims relating to improper handling, storage or disposal of hazardous materials could be time consuming and expensive.
+Our business and operations would suffer in the event of system failures.
+Natural disasters or resource shortages could disrupt our operations and adversely affect results.
+Risks Relating to our Intellectual Property
+We may be sued for infringing the intellectual property rights of others or others may infringe on our intellectual property rights.
+Our inability to adequately protect our proprietary technologies could harm our competitive position and have a material adverse effect on our business.
+We may be subject to claims that we, or our employees, have wrongfully used or disclosed alleged trade secrets of their former employers.
+We may not be able to develop or commercialize our investigational product candidates due to intellectual property rights held by third parties.
+We may be unable to in-license intellectual property rights or technology necessary to develop and commercialize our products.
+Risks Relating to our Financial Position and Need for Financing
+We require additional capital for our future operating plans, and we may not be able to secure the requisite additional funding on acceptable terms, or at all.
+We have an accumulated deficit of $169.8 million as of December 31, 2007 and we may continue to incur substantial operating losses for the future.
+Our ability to utilize our net operating loss carryforwards to offset future taxable income may be limited.
+We may be unable to collect on our claim for reimbursement of product and establishment and NDA application fees from the FDA.
+If we become subject to product liability claims, we may be required to pay damages that exceed our insurance coverage.
+Risks Relating to an Investment in our Common Stock
+Our stock price has been and may continue to be volatile.
+Volatility in the stock prices of other companies may contribute to volatility in our stock price.
+Our share ownership is concentrated, and our officers, directors and principal stockholders acting collectively can exert significant control over matters requiring stockholder approval.
+Our operating results may fluctuate from quarter to quarter and this fluctuation may cause our stock price to decline.
+There may not be an active, liquid trading market for our common stock.
+Our charter documents and Delaware law could make an acquisition of our company difficult, even if an acquisition may benefit our stockholders.
+Changes in financial accounting standards related to share-based payments are expected to continue to have a significant effect on our reported results.
+Compliance with changing regulation of corporate governance and public disclosure may result in additional expenses.
+The investment of our cash balance and our investments in marketable debt securities are subject to risks which may cause losses and affect the liquidity of these investments.
+<p><a href="http://www.sec.gov/Archives/edgar/data/881524/0001047469-08-002318.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/1260990--3-15-2010--GTX_INC_-DE-.html'">1260990--3/15/2010--GTX_INC_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/881524--3-14-2007--VIVUS_INC.html'">881524--3/14/2007--VIVUS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1203944--10-28-2009--RAPTOR_PHARMACEUTICALS_CORP..html'">1203944--10/28/2009--RAPTOR_PHARMACEUTICALS_CORP.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1347178--3-15-2010--Vanda_Pharmaceuticals_Inc..html'">1347178--3/15/2010--Vanda_Pharmaceuticals_Inc.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1061027--3-17-2008--SUNESIS_PHARMACEUTICALS_INC.html'">1061027--3/17/2008--SUNESIS_PHARMACEUTICALS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1285701--3-29-2006--FAVRILLE_INC.html'">1285701--3/29/2006--FAVRILLE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/882796--3-9-2006--BIOCRYST_PHARMACEUTICALS_INC.html'">882796--3/9/2006--BIOCRYST_PHARMACEUTICALS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1107601--3-10-2006--ATHEROGENICS_INC.html'">1107601--3/10/2006--ATHEROGENICS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1285701--3-28-2007--FAVRILLE_INC.html'">1285701--3/28/2007--FAVRILLE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1183765--3-13-2009--THRESHOLD_PHARMACEUTICALS_INC.html'">1183765--3/13/2009--THRESHOLD_PHARMACEUTICALS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1279695--3-30-2009--UNIVERSAL_BIOSENSORS_INC.html'">1279695--3/30/2009--UNIVERSAL_BIOSENSORS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1285701--2-29-2008--FAVRILLE_INC.html'">1285701--2/29/2008--FAVRILLE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/716646--6-14-2010--CLINICAL_DATA_INC.html'">716646--6/14/2010--CLINICAL_DATA_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1145404--3-4-2010--CORNERSTONE_THERAPEUTICS_INC.html'">1145404--3/4/2010--CORNERSTONE_THERAPEUTICS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1260990--3-3-2009--GTX_INC_-DE-.html'">1260990--3/3/2009--GTX_INC_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1061027--3-15-2007--SUNESIS_PHARMACEUTICALS_INC.html'">1061027--3/15/2007--SUNESIS_PHARMACEUTICALS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1235010--3-16-2006--MOMENTA_PHARMACEUTICALS_INC.html'">1235010--3/16/2006--MOMENTA_PHARMACEUTICALS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1087432--3-14-2008--INTERMUNE_INC.html'">1087432--3/14/2008--INTERMUNE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1053221--3-23-2006--METABASIS_THERAPEUTICS_INC.html'">1053221--3/23/2006--METABASIS_THERAPEUTICS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1129425--3-1-2007--ZYMOGENETICS_INC.html'">1129425--3/1/2007--ZYMOGENETICS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1128495--3-5-2008--ANADYS_PHARMACEUTICALS_INC.html'">1128495--3/5/2008--ANADYS_PHARMACEUTICALS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1158223--4-2-2007--AFFYMAX_INC.html'">1158223--4/2/2007--AFFYMAX_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1262175--3-16-2006--TERCICA_INC.html'">1262175--3/16/2006--TERCICA_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/899460--3-16-2006--MANNKIND_CORP.html'">899460--3/16/2006--MANNKIND_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1019695--3-17-2008--ARQULE_INC.html'">1019695--3/17/2008--ARQULE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1019695--3-6-2009--ARQULE_INC.html'">1019695--3/6/2009--ARQULE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/899460--3-14-2008--MANNKIND_CORP.html'">899460--3/14/2008--MANNKIND_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/899460--2-27-2009--MANNKIND_CORP.html'">899460--2/27/2009--MANNKIND_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/899460--3-16-2007--MANNKIND_CORP.html'">899460--3/16/2007--MANNKIND_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1040416--3-15-2010--INSPIRE_PHARMACEUTICALS_INC.html'">1040416--3/15/2010--INSPIRE_PHARMACEUTICALS_INC</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

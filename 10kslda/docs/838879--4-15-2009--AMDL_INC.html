@@ -1,0 +1,178 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[2.7583281292, "../topics/{product,_candidate,_development}.html", "{product,_candidate,_development}"], [2.6776764896, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [2.5383047626, "../topics/{stock,_price,_share}.html", "{stock,_price,_share}"], [1.702932401, "../topics/{control,_financial,_internal}.html", "{control,_financial,_internal}"], [1.6976074899, "../topics/{interest,_director,_officer}.html", "{interest,_director,_officer}"], [1.6966976194, "../topics/{tax,_income,_asset}.html", "{tax,_income,_asset}"], [1.6965152239, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [1.6964431768, "../topics/{financial,_litigation,_operation}.html", "{financial,_litigation,_operation}"], [1.6179130828, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"], [1.1857395129, "../topics/{capital,_credit,_financial}.html", "{capital,_credit,_financial}"], [1.1334493146, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>838879--4/15/2009--AMDL_INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">838879--4/15/2009--AMDL_INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{product,_candidate,_development}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_candidate,_development}.html'">{product, candidate, development}</td></tr>
+<tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{stock,_price,_share}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_share}.html'">{stock, price, share}</td></tr>
+<tr class="list"><td id="{control,_financial,_internal}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{control,_financial,_internal}.html'">{control, financial, internal}</td></tr>
+<tr class="list"><td id="{interest,_director,_officer}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{interest,_director,_officer}.html'">{interest, director, officer}</td></tr>
+<tr class="list"><td id="{tax,_income,_asset}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{tax,_income,_asset}.html'">{tax, income, asset}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{financial,_litigation,_operation}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{financial,_litigation,_operation}.html'">{financial, litigation, operation}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+<tr class="list"><td id="{capital,_credit,_financial}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{capital,_credit,_financial}.html'">{capital, credit, financial}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    We may not be able to continue to operate our business if we are unable to attract additional operating capital.
+Our independent registered public accounting firm has included a going concern paragraph in their report on our financial statements.
+Our current products cannot be sold in certain countries if we do not obtain and maintain regulatory approval.
+Our future prospects will be negatively impacted if we are unsuccessful in pending litigation over the CIT technology.
+The value of intangible assets may not be equal to their carrying values.
+If our intellectual property positions are challenged, invalidated or circumvented, or if we fail to prevail in future intellectual property litigation, our business could be adversely affected.
+We face substantial competition, and others may discover, develop, acquire or commercialize products before or more successfully than we do.
+We have limited sales of the DR-70 test kit and are reliant on our distributors for sales of our products.
+JPI is reliant on its distributors for sales of its products.
+We are subject to risks associated with our foreign distributors.
+We do not intend to pay dividends on our common stock in the foreseeable future.
+If we fail to comply with the rules under the Sarbanes-Oxley Act related to accounting controls and procedures or if the material weaknesses or other deficiencies in our internal accounting procedures are not remediated, our stock price could decline significantly.
+Our stock price is volatile, which could adversely affect your investment.
+<p><a href="http://www.sec.gov/Archives/edgar/data/838879/0000892569-09-000401.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/1016504--9-28-2007--INTEGRATED_BIOPHARMA_INC.html'">1016504--9/28/2007--INTEGRATED_BIOPHARMA_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1279695--3-28-2008--UNIVERSAL_BIOSENSORS_INC.html'">1279695--3/28/2008--UNIVERSAL_BIOSENSORS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1436083--7-20-2009--New_Millennium_Products.html'">1436083--7/20/2009--New_Millennium_Products</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/834365--3-31-2009--BIOLIFE_SOLUTIONS_INC.html'">834365--3/31/2009--BIOLIFE_SOLUTIONS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1101026--4-14-2010--HEALTH_ENHANCEMENT_PRODUCTS_INC.html'">1101026--4/14/2010--HEALTH_ENHANCEMENT_PRODUCTS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/780127--1-4-2008--SYNOVIS_LIFE_TECHNOLOGIES__INC.html'">780127--1/4/2008--SYNOVIS_LIFE_TECHNOLOGIES__INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/351298--12-1-2006--HEI_INC.html'">351298--12/1/2006--HEI_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1016504--10-14-2008--INTEGRATED_BIOPHARMA_INC.html'">1016504--10/14/2008--INTEGRATED_BIOPHARMA_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/875657--3-16-2010--ULTRALIFE_CORP.html'">875657--3/16/2010--ULTRALIFE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/949491--3-30-2006--VODAVI_TECHNOLOGY_INC.html'">949491--3/30/2006--VODAVI_TECHNOLOGY_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/844161--4-15-2010--CHEROKEE_INC.html'">844161--4/15/2010--CHEROKEE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/884269--3-10-2010--ALPHA_PRO_TECH_LTD.html'">884269--3/10/2010--ALPHA_PRO_TECH_LTD</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/99359--5-29-2009--BREEZE-EASTERN_CORP.html'">99359--5/29/2009--BREEZE-EASTERN_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/780127--1-7-2009--SYNOVIS_LIFE_TECHNOLOGIES__INC.html'">780127--1/7/2009--SYNOVIS_LIFE_TECHNOLOGIES__INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/6281--11-24-2009--ANALOG_DEVICES_INC.html'">6281--11/24/2009--ANALOG_DEVICES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/844161--4-13-2009--CHEROKEE_INC.html'">844161--4/13/2009--CHEROKEE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/357108--12-23-2009--IRVINE_SENSORS_CORP-DE-.html'">357108--12/23/2009--IRVINE_SENSORS_CORP/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1111816--4-14-2009--WORLDWIDE_ENERGY_&_MANUFACTURING_USA_INC.html'">1111816--4/14/2009--WORLDWIDE_ENERGY_&_MANUFACTURING_USA_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1123361--3-6-2007--VIASYS_HEALTHCARE_INC.html'">1123361--3/6/2007--VIASYS_HEALTHCARE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1123361--3-14-2006--VIASYS_HEALTHCARE_INC.html'">1123361--3/14/2006--VIASYS_HEALTHCARE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/886530--3-16-2009--DATATRAK_INTERNATIONAL_INC.html'">886530--3/16/2009--DATATRAK_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/853695--4-15-2010--DRI_CORP.html'">853695--4/15/2010--DRI_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/6281--11-22-2010--ANALOG_DEVICES_INC.html'">6281--11/22/2010--ANALOG_DEVICES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1101026--5-18-2009--HEALTH_ENHANCEMENT_PRODUCTS_INC.html'">1101026--5/18/2009--HEALTH_ENHANCEMENT_PRODUCTS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/821899--9-14-2010--TERRACE_VENTURES_INC.html'">821899--9/14/2010--TERRACE_VENTURES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1078723--3-31-2010--INTERNATIONAL_FUEL_TECHNOLOGY_INC.html'">1078723--3/31/2010--INTERNATIONAL_FUEL_TECHNOLOGY_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/67215--9-3-2009--DYCOM_INDUSTRIES_INC.html'">67215--9/3/2009--DYCOM_INDUSTRIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/109177--3-9-2010--HARBINGER_GROUP_INC..html'">109177--3/9/2010--HARBINGER_GROUP_INC.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1092791--7-28-2010--PACIFIC_LAND_&_COFFEE_CORP.html'">1092791--7/28/2010--PACIFIC_LAND_&_COFFEE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1019787--4-13-2009--PURADYN_FILTER_TECHNOLOGIES_INC.html'">1019787--4/13/2009--PURADYN_FILTER_TECHNOLOGIES_INC</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

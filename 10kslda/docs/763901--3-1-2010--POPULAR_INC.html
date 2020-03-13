@@ -1,0 +1,214 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[6.3548059245, "../topics/{loan,_real,_estate}.html", "{loan,_real,_estate}"], [5.9851434637, "../topics/{condition,_economic,_financial}.html", "{condition,_economic,_financial}"], [5.5101599862, "../topics/{capital,_credit,_financial}.html", "{capital,_credit,_financial}"], [5.219935433, "../topics/{stock,_price,_share}.html", "{stock,_price,_share}"], [5.0449979846, "../topics/{loss,_insurance,_financial}.html", "{loss,_insurance,_financial}"], [2.7722971947, "../topics/{financial,_litigation,_operation}.html", "{financial,_litigation,_operation}"], [2.7488876732, "../topics/{debt,_indebtedness,_cash}.html", "{debt,_indebtedness,_cash}"], [2.7147522139, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"], [2.7069683237, "../topics/{regulation,_change,_law}.html", "{regulation,_change,_law}"], [2.6852998568, "../topics/{competitive,_industry,_competition}.html", "{competitive,_industry,_competition}"], [2.5221272326, "../topics/{regulation,_government,_change}.html", "{regulation,_government,_change}"], [1.6973598699, "../topics/{control,_financial,_internal}.html", "{control,_financial,_internal}"], [1.697302082, "../topics/{provision,_law,_control}.html", "{provision,_law,_control}"], [1.6964096064, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [1.6453125415, "../topics/{system,_service,_information}.html", "{system,_service,_information}"], [1.4173424273, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [1.3835212696, "../topics/{tax,_income,_asset}.html", "{tax,_income,_asset}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>763901--3/1/2010--POPULAR_INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">763901--3/1/2010--POPULAR_INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{loan,_real,_estate}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{loan,_real,_estate}.html'">{loan, real, estate}</td></tr>
+<tr class="list"><td id="{condition,_economic,_financial}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{condition,_economic,_financial}.html'">{condition, economic, financial}</td></tr>
+<tr class="list"><td id="{capital,_credit,_financial}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{capital,_credit,_financial}.html'">{capital, credit, financial}</td></tr>
+<tr class="list"><td id="{stock,_price,_share}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_share}.html'">{stock, price, share}</td></tr>
+<tr class="list"><td id="{loss,_insurance,_financial}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{loss,_insurance,_financial}.html'">{loss, insurance, financial}</td></tr>
+<tr class="list"><td id="{financial,_litigation,_operation}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{financial,_litigation,_operation}.html'">{financial, litigation, operation}</td></tr>
+<tr class="list"><td id="{debt,_indebtedness,_cash}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{debt,_indebtedness,_cash}.html'">{debt, indebtedness, cash}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+<tr class="list"><td id="{regulation,_change,_law}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_change,_law}.html'">{regulation, change, law}</td></tr>
+<tr class="list"><td id="{competitive,_industry,_competition}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{competitive,_industry,_competition}.html'">{competitive, industry, competition}</td></tr>
+<tr class="list"><td id="{regulation,_government,_change}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_government,_change}.html'">{regulation, government, change}</td></tr>
+<tr class="list"><td id="{control,_financial,_internal}" onmouseover="highlight(11)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{control,_financial,_internal}.html'">{control, financial, internal}</td></tr>
+<tr class="list"><td id="{provision,_law,_control}" onmouseover="highlight(12)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{provision,_law,_control}.html'">{provision, law, control}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(13)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{system,_service,_information}" onmouseover="highlight(14)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{system,_service,_information}.html'">{system, service, information}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(15)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{tax,_income,_asset}" onmouseover="highlight(16)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{tax,_income,_asset}.html'">{tax, income, asset}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    Difficult market conditions have adversely affected the financial industry and our results of operations and financial condition.
+Legislative and regulatory actions taken now or in the future to address market conditions in the financial industry may significantly affect our financial condition, results of operations, liquidity or stock price.
+The imposition of additional property tax payments in Puerto Rico may further deteriorate our commercial, consumer and mortgage loan portfolios.
+Financial results are constantly exposed to market risk.
+The hedging transactions that we enter into may not be effective in managing the exposure to market risk, including interest rate risk.
+RISKS RELATING TO OUR BUSINESS
+The soundness of other financial institutions could adversely affect us.
+Prolonged economic weakness, a continuing decline in the real estate market in the U.S. mainland, and disruptions in the capital markets have harmed and could continue to harm the results of operations of Popular.
+Popular operates in a highly regulated environment and may be adversely affected by changes in federal and local laws and regulations.
+Competition with other financial institutions could adversely affect our profitability.
+We may engage in FDIC-assisted transactions, which could present additional risks to our business.
+We are subject to default risk in our loan portfolio.
+We may have more credit risk and higher credit losses due to our construction and commercial loans portfolios.
+We depend on the accuracy and completeness of information about customers and counterparties, and inaccurate or incomplete information could negatively impact our financial condition and results of operations.
+Rating downgrades on the Government of Puerto Rico s debt obligations could affect the value of our loans to the Government and our portfolio of Puerto Rico Government securities.
+We are exposed to credit risk from mortgage loans that have been sold subject to recourse arrangements.
+Defective and repurchased loans may harm our business and financial condition.
+The economic recession could reduce demand for our products and services and lead to lower revenue and lower earnings.
+Increases in FDIC insurance premiums may have a material adverse effect on our earnings.
+Popular income tax provision and other tax liabilities may be insufficient if taxing authorities are successful in asserting tax positions that are contrary to our position.
+Goodwill impairment could have a material adverse effect on our financial condition and future results of operations
+Popular may face significant operational risk.
+Failure to maintain effective internal controls over financial reporting in the future could impair our ability to accurately and timely report our financial results or prevent fraud, resulting in loss of investor confidence and adversely affecting our business and stock price.
+Popular uses insurance to manage a number of risks, however not all risks might be insured or insurance may be inadequate to cover all losses.
+We rely on our systems, employees and certain counterparties, and certain failures could materially adversely affect our operations.
+Our risk management policies and procedures may leave us exposed to unidentified or unanticipated risk, which could negatively affect us.
+Our business could suffer if we are unable to attract, retain and motivate skilled senior leaders
+Our compensation practices are subject to oversight by the Federal Reserve Board. Any deficiencies in our compensation practices may be incorporated into our supervisory ratings, which can affect our ability to make acquisitions or perform other actions.
+Adverse credit market conditions may continue to affect our ability to meet our liquidity needs. We may need additional capital resources in the future and these capital resources may not be available when needed or at all.
+Our funding sources may prove insufficient to replace deposits and support future growth.
+As a holding company, we depend on dividends and distributions from our subsidiaries for liquidity.
+Unforeseen disruptions in the brokered deposits market could compromise our liquidity position.
+We have a substantial amount of indebtedness, which could limit financing and other options
+Actions by the rating agencies or having capital levels below well-capitalized could raise the cost of our obligations, which could affect our ability to borrow or to enter into hedging agreements in the future and may have other adverse effects on our business.
+We are subject to regulatory capital adequacy guidelines, and if we fail to meet these guidelines our business and financial condition will be adversely affected.
+We may not have enough authorized shares of common stock if we are required to raise additional equity capital in the future to satisfy liquidity and regulatory needs.
+Certain of the provisions contained in our Certificate of Incorporation have the effect of making it more difficult to change the Board of Directors, and may make the Board of Directors less responsive to stockholder control.
+The resolution of significant pending litigation, if unfavorable, could have material adverse financial effects or cause significant reputational harm to us, which in turn could seriously harm our business prospects.
+RISKS RELATING TO AN INVESTMENT IN OUR SECURITIES
+Our share price may continue to fluctuate.
+Additional assistance from the U.S. Government may further dilute existing holders of our common stock.
+Dividends on our common stock and preferred stock have been suspended and stockholders may not receive funds in connection with their investment in our common stock or preferred stock without selling their shares.
+Offerings of debt, which would be senior to our common stock in the event of liquidation, and/or preferred equity securities, which may be senior to our common stock for purposes of dividend distributions or in the event of liquidation, may adversely affect the market price of our common stock.
+<p><a href="http://www.sec.gov/Archives/edgar/data/763901/0000950123-10-019250.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/840889--2-26-2010--DORAL_FINANCIAL_CORP.html'">840889--2/26/2010--DORAL_FINANCIAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/730708--3-23-2010--SEACOAST_BANKING_CORP_OF_FLORIDA.html'">730708--3/23/2010--SEACOAST_BANKING_CORP_OF_FLORIDA</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1234383--4-15-2010--BANK_HOLDINGS.html'">1234383--4/15/2010--BANK_HOLDINGS</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1042521--3-30-2009--Sun_American_Bancorp.html'">1042521--3/30/2009--Sun_American_Bancorp</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1093897--3-17-2009--COASTAL_BANKING_CO_INC.html'">1093897--3/17/2009--COASTAL_BANKING_CO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1355607--3-26-2010--Santa_Lucia_Bancorp.html'">1355607--3/26/2010--Santa_Lucia_Bancorp</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1051379--3-31-2010--MIDWEST_BANC_HOLDINGS_INC.html'">1051379--3/31/2010--MIDWEST_BANC_HOLDINGS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/52617--3-31-2009--IRWIN_FINANCIAL_CORP.html'">52617--3/31/2009--IRWIN_FINANCIAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1366367--3-5-2010--YADKIN_VALLEY_FINANCIAL_CORP.html'">1366367--3/5/2010--YADKIN_VALLEY_FINANCIAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1380712--3-31-2009--1st_Pacific_Bancorp.html'">1380712--3/31/2009--1st_Pacific_Bancorp</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1026214--3-11-2009--FEDERAL_HOME_LOAN_MORTGAGE_CORP.html'">1026214--3/11/2009--FEDERAL_HOME_LOAN_MORTGAGE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/310522--2-26-2009--FEDERAL_NATIONAL_MORTGAGE_ASSOCIATION_FANNIE_MAE.html'">310522--2/26/2009--FEDERAL_NATIONAL_MORTGAGE_ASSOCIATION_FANNIE_MAE</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1079577--2-25-2010--STANCORP_FINANCIAL_GROUP_INC.html'">1079577--2/25/2010--STANCORP_FINANCIAL_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/946090--3-24-2010--FIRST_MARINER_BANCORP.html'">946090--3/24/2010--FIRST_MARINER_BANCORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/764038--3-12-2010--SCBT_FINANCIAL_CORP.html'">764038--3/12/2010--SCBT_FINANCIAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1349593--3-26-2010--FLORIDIAN_FINANCIAL_GROUP_INC.html'">1349593--3/26/2010--FLORIDIAN_FINANCIAL_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1356628--3-4-2010--ViewPoint_Financial_Group.html'">1356628--3/4/2010--ViewPoint_Financial_Group</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1143155--4-23-2010--HAMPTON_ROADS_BANKSHARES_INC.html'">1143155--4/23/2010--HAMPTON_ROADS_BANKSHARES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1052752--3-3-2009--GETTY_REALTY_CORP_-MD-.html'">1052752--3/3/2009--GETTY_REALTY_CORP_/MD/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1109242--3-16-2009--HANMI_FINANCIAL_CORP.html'">1109242--3/16/2009--HANMI_FINANCIAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/805080--3-12-2010--WEST_SUBURBAN_BANCORP_INC.html'">805080--3/12/2010--WEST_SUBURBAN_BANCORP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/747345--3-12-2010--SMITHTOWN_BANCORP_INC.html'">747345--3/12/2010--SMITHTOWN_BANCORP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/714530--3-18-2010--NEWBRIDGE_BANCORP.html'">714530--3/18/2010--NEWBRIDGE_BANCORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1038205--3-11-2010--BANK_OF_THE_OZARKS_INC.html'">1038205--3/11/2010--BANK_OF_THE_OZARKS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/102212--3-5-2010--UNIVEST_CORP_OF_PENNSYLVANIA.html'">102212--3/5/2010--UNIVEST_CORP_OF_PENNSYLVANIA</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1011109--3-2-2010--ROBERTS_REALTY_INVESTORS_INC.html'">1011109--3/2/2010--ROBERTS_REALTY_INVESTORS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1285224--3-15-2010--WILSHIRE_BANCORP_INC.html'">1285224--3/15/2010--WILSHIRE_BANCORP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/93451--2-25-2010--STERLING_BANCORP.html'">93451--2/25/2010--STERLING_BANCORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/908311--3-16-2010--PMC_COMMERCIAL_TRUST_-TX.html'">908311--3/16/2010--PMC_COMMERCIAL_TRUST_/TX</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/310826--3-30-2009--PROTECTIVE_LIFE_INSURANCE_CO.html'">310826--3/30/2009--PROTECTIVE_LIFE_INSURANCE_CO</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

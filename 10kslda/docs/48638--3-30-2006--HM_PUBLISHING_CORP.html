@@ -1,0 +1,178 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[3.5336725043, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [2.6936800068, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"], [2.6934408825, "../topics/{competitive,_industry,_competition}.html", "{competitive,_industry,_competition}"], [2.0075742395, "../topics/{cost,_contract,_operation}.html", "{cost,_contract,_operation}"], [1.8067692879, "../topics/{regulation,_government,_change}.html", "{regulation,_government,_change}"], [1.6970085018, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [1.696277331, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [1.6962625932, "../topics/{control,_financial,_internal}.html", "{control,_financial,_internal}"], [1.4434580841, "../topics/{investment,_property,_distribution}.html", "{investment,_property,_distribution}"], [1.3632620793, "../topics/{debt,_indebtedness,_cash}.html", "{debt,_indebtedness,_cash}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>48638--3/30/2006--HM_PUBLISHING_CORP</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">48638--3/30/2006--HM_PUBLISHING_CORP</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+<tr class="list"><td id="{competitive,_industry,_competition}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{competitive,_industry,_competition}.html'">{competitive, industry, competition}</td></tr>
+<tr class="list"><td id="{cost,_contract,_operation}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_contract,_operation}.html'">{cost, contract, operation}</td></tr>
+<tr class="list"><td id="{regulation,_government,_change}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_government,_change}.html'">{regulation, government, change}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{control,_financial,_internal}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{control,_financial,_internal}.html'">{control, financial, internal}</td></tr>
+<tr class="list"><td id="{investment,_property,_distribution}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{investment,_property,_distribution}.html'">{investment, property, distribution}</td></tr>
+<tr class="list"><td id="{debt,_indebtedness,_cash}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{debt,_indebtedness,_cash}.html'">{debt, indebtedness, cash}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    A significant portion of net sales is derived from sales of K-12 instructional materials pursuant to cyclical adoption schedules, and if the Company is unable to maintain residual sales and continue to generate new business net sales could be materially and adversely affected.
+A significant portion of net sales is derived from sales of K-12 instructional materials to school districts that are dependent on government funding. If the funding available for the Company s products and services declines or does not continue to grow, net sales could be materially and adversely affected.
+The Company s operating results fluctuate on a seasonal and quarterly basis and in the event it does not generate sufficient net sales in the third quarter, it may not be able to meet the debt service and other obligations.
+The Company is a party to at-will contracts with significant customers and the termination of these contracts could harm its business.
+The Company is subject to contingent liabilities that may affect liquidity and its ability to meet its obligations.
+If the Company cannot successfully implement its business strategy, then its business, results of operations, and growth potential could be materially and adversely affected.
+The Company operates in a highly competitive environment that is subject to rapid change and increasing costs of development, and if it is unable to compete effectively, profitability could be harmed.
+Failure to achieve and maintain effective internal controls in accordance with Section 404 of the Sarbanes-Oxley Act could result in a loss of investor confidence regarding the Company s financial reports or may have a material adverse effect on the business.
+Consolidation in the markets in which the Company operates could place it at a competitive disadvantage.
+The Company s reliance on intellectual property and proprietary rights that may not be adequately protected under current laws may harm its competitive position and materially and adversely affect its business and results of operations.
+The Company may not be able to identify successful business models for generating sales of technology-based programs. Furthermore, customers expectations for the number and sophistication of technology-based programs that are given to them at no additional charge may increase, as may development costs.
+The Company may not be able to complete, or achieve the expected benefits from, any future acquisitions, which could materially and adversely affect its growth.
+The Company may not be able to retain or attract the key management, creative, editorial, and sales personnel that it needs to remain competitive and grow.
+The Sponsors control the Company and their interests as equity holders may conflict with those of the Company s creditors.
+<p><a href="http://www.sec.gov/Archives/edgar/data/48638/0001193125-06-068199.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/1055454--6-25-2008--SCHOOL_SPECIALTY_INC.html'">1055454--6/25/2008--SCHOOL_SPECIALTY_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1055454--6-26-2007--SCHOOL_SPECIALTY_INC.html'">1055454--6/26/2007--SCHOOL_SPECIALTY_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1055454--7-12-2006--SCHOOL_SPECIALTY_INC.html'">1055454--7/12/2006--SCHOOL_SPECIALTY_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/720671--7-10-2007--HALIFAX_CORP.html'">720671--7/10/2007--HALIFAX_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/918541--3-16-2007--NN_INC.html'">918541--3/16/2007--NN_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/728249--3-20-2009--INTERPHASE_CORP.html'">728249--3/20/2009--INTERPHASE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1050825--4-28-2008--STEELCASE_INC.html'">1050825--4/28/2008--STEELCASE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/902281--8-10-2007--ELECTROGLAS_INC.html'">902281--8/10/2007--ELECTROGLAS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/722313--3-9-2007--NORTECH_SYSTEMS_INC.html'">722313--3/9/2007--NORTECH_SYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1057693--3-15-2006--NATCO_GROUP_INC.html'">1057693--3/15/2006--NATCO_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/949491--3-30-2006--VODAVI_TECHNOLOGY_INC.html'">949491--3/30/2006--VODAVI_TECHNOLOGY_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/720671--7-16-2008--HALIFAX_CORP_OF_VIRGINIA.html'">720671--7/16/2008--HALIFAX_CORP_OF_VIRGINIA</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1090069--4-18-2006--CHEROKEE_INTERNATIONAL_CORP.html'">1090069--4/18/2006--CHEROKEE_INTERNATIONAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/109156--10-13-2006--ZALE_CORP.html'">109156--10/13/2006--ZALE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/874716--3-10-2006--IDEXX_LABORATORIES_INC_-DE.html'">874716--3/10/2006--IDEXX_LABORATORIES_INC_/DE</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/810136--1-13-2006--PHOTRONICS_INC.html'">810136--1/13/2006--PHOTRONICS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1057083--3-21-2008--PC_TEL_INC.html'">1057083--3/21/2008--PC_TEL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/913142--2-26-2010--BELDEN_INC..html'">913142--2/26/2010--BELDEN_INC.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/722313--3-19-2009--NORTECH_SYSTEMS_INC.html'">722313--3/19/2009--NORTECH_SYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/6281--11-22-2010--ANALOG_DEVICES_INC.html'">6281--11/22/2010--ANALOG_DEVICES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1019787--4-13-2009--PURADYN_FILTER_TECHNOLOGIES_INC.html'">1019787--4/13/2009--PURADYN_FILTER_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/875657--3-19-2008--ULTRALIFE_BATTERIES_INC.html'">875657--3/19/2008--ULTRALIFE_BATTERIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/833140--3-20-2006--ENPATH_MEDICAL_INC.html'">833140--3/20/2006--ENPATH_MEDICAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/949874--3-14-2006--YOUNG_INNOVATIONS_INC.html'">949874--3/14/2006--YOUNG_INNOVATIONS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/842162--2-27-2007--LEAR_CORP.html'">842162--2/27/2007--LEAR_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/949874--3-15-2007--YOUNG_INNOVATIONS_INC.html'">949874--3/15/2007--YOUNG_INNOVATIONS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/949874--3-14-2008--YOUNG_INNOVATIONS_INC.html'">949874--3/14/2008--YOUNG_INNOVATIONS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/949874--3-12-2009--YOUNG_INNOVATIONS_INC.html'">949874--3/12/2009--YOUNG_INNOVATIONS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1045014--2-14-2006--GAMETECH_INTERNATIONAL_INC.html'">1045014--2/14/2006--GAMETECH_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1102750--3-31-2010--DAC_TECHNOLOGIES_GROUP_INTERNATIONAL_INC.html'">1102750--3/31/2010--DAC_TECHNOLOGIES_GROUP_INTERNATIONAL_INC</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

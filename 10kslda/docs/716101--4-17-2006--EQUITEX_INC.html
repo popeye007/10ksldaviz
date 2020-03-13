@@ -1,0 +1,200 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[10.4107750464, "../topics/{stock,_price,_share}.html", "{stock,_price,_share}"], [5.5398582032, "../topics/{gas,_price,_oil}.html", "{gas,_price,_oil}"], [4.2169765341, "../topics/{control,_financial,_internal}.html", "{control,_financial,_internal}"], [3.785262378, "../topics/{debt,_indebtedness,_cash}.html", "{debt,_indebtedness,_cash}"], [3.6654556588, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [2.7019562688, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [2.4525111727, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [1.8775358494, "../topics/{product,_candidate,_development}.html", "{product,_candidate,_development}"], [1.7393070561, "../topics/{regulation,_change,_law}.html", "{regulation,_change,_law}"], [1.7175270455, "../topics/{cost,_regulation,_environmental}.html", "{cost,_regulation,_environmental}"], [1.711822996, "../topics/{capital,_credit,_financial}.html", "{capital,_credit,_financial}"], [1.696853789, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>716101--4/17/2006--EQUITEX_INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">716101--4/17/2006--EQUITEX_INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{stock,_price,_share}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_share}.html'">{stock, price, share}</td></tr>
+<tr class="list"><td id="{gas,_price,_oil}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{gas,_price,_oil}.html'">{gas, price, oil}</td></tr>
+<tr class="list"><td id="{control,_financial,_internal}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{control,_financial,_internal}.html'">{control, financial, internal}</td></tr>
+<tr class="list"><td id="{debt,_indebtedness,_cash}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{debt,_indebtedness,_cash}.html'">{debt, indebtedness, cash}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{product,_candidate,_development}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_candidate,_development}.html'">{product, candidate, development}</td></tr>
+<tr class="list"><td id="{regulation,_change,_law}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_change,_law}.html'">{regulation, change, law}</td></tr>
+<tr class="list"><td id="{cost,_regulation,_environmental}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_regulation,_environmental}.html'">{cost, regulation, environmental}</td></tr>
+<tr class="list"><td id="{capital,_credit,_financial}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{capital,_credit,_financial}.html'">{capital, credit, financial}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(11)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    RISKS ASSOCIATED WITH OUR COMPANY AND HISTORY:
+We had a net loss in 2003, 2004 and 2005, and we do not anticipate we will be profitable in 2006 as we continue to develop our hydrogen technology.
+We presently have no operating business and therefore no significant sources of income unless and until Hydrogen Power, Inc. develops commercially viable products or we provide for other capital sources the nature of which could be detrimental to our current shareholders.
+We are subject to Sarbanes-Oxley and the reporting requirements of federal securities laws, which can be expensive.
+RISKS ASSOCIATED WITH OUR SECURITIES:
+We have received a Staff Determination letter from the Nasdaq Stock Market informing us that our securities are subject to delisting as a result of the HPI acquisition. As a result, we may be unable to maintain our listing on The Nasdaq Capital Market, which failure could limit the ability of our stockholders to sell our common stock at prices and at times they believe appropriate.
+The conversion of outstanding preferred stock and the exercise of options and warrants, at prices below the market price of our common stock could cause a decrease in the market price of our common stock.
+Our stockholders may experience significant dilution upon the conversion of our outstanding preferred stock.
+The securityholders of Hydrogen Power generally, and its former majority stockholder specifically, will be able to exert significant control over our Company.
+A substantial number of shares will be eligible for future sale by the Hydrogen Power shareholders and the sale of those shares could adversely affect our stock price.
+RISKS RELATED TO THE BUSINESS OF OUR MAJORITY-OWNED SUBSIDIARY FASTFUNDS FINANCIAL CORPORATION:
+FastFunds has no significant operating business.
+FastFunds balance sheet contains certain notes payable, which are subject to repayment on 90 days demand.
+Chex is a guarantor of certain debt of Equitex, and the Company s entire investment in Chex (i.e., its ownership of all outstanding Chex Services, Inc. stock) is subject to a security interest securing such obligation. Furthermore, all of the assets of Chex are subject to a security interest for the same debt.
+FastFunds balance sheet contains certain promissory notes receivable and advances, which we cannot assure to be collectible.
+Anti-dilution protections in favor of pre-merger stockholders of FastFunds and certain lenders who received convertible promissory notes in connection with the FastFunds merger may further substantially dilute Equitex s percentage ownership in the FastFunds equity.
+There are currently outstanding securities convertible into or exchangeable for an aggregate of 4,807,064 shares of FastFunds Common Stock which, if converted or exchanged, will substantially dilute FastFunds existing stockholders.
+Equitex, Inc. is a controlling stockholder of FastFunds and is able to effectively control FastFunds management and operations.
+FastFunds Common Stock trades only in an illiquid trading market, which generally results in lower prices for FastFunds Common Stock.
+FastFunds has not paid dividends to date, and has no intention of paying dividends to stockholders.
+RISKS RELATED TO THE BUSINESS OF OUR MAJORITY-OWNED SUBSIDIARY HYDROGEN POWER, INC.
+Hydrogen Power has a limited operating history on which to evaluate its business and currently possesses unproven hydrogen generation technology.
+Hydrogen Power may not be able to achieve commercialization of its products on the timetable it anticipates, or at all.
+Hydrogen Power has no operating revenue to date and a history of losses. It may be unable to generate sufficient net revenue in the future to achieve or sustain profitability.
+We cannot assure you that Hydrogen Power will be able to successfully execute its business plan.
+Hydrogen Power s failure to obtain necessary additional financing would have a material adverse effect on its business plan and hinder or delay product development.
+Potential fluctuations in our financial and business results makes forecasting difficult and may restrict our access to funding for our commercialization plan.
+A mass market for our products may never develop or may take longer to develop than we anticipate.
+Regulatory changes could hurt the market for our products.
+If Hydrogen Power fails to protect its intellectual property rights, competitors may be able to use its technology, which could weaken its competitive position, eliminate the potential for future revenue and increase costs.
+Hydrogen Power may be involved in intellectual property litigation that causes them to incur significant expenses or prevents them from selling any developed products.
+Hydrogen Power currently faces and will continue to face significant competition.
+The loss of the services of HPI s Chairman, Chief Executive Officer, President or other key employees, or the failure to attract additional key individuals, would materially adversely affect our business.
+Hydrogen products use inherently dangerous, flammable fuels, which could subject Hydrogen Power s business to product liability claims.
+<p><a href="http://www.sec.gov/Archives/edgar/data/716101/0001049107-06-000049.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/1090967--3-31-2008--GLOBAL_ENERGY_INC.html'">1090967--3/31/2008--GLOBAL_ENERGY_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/732412--3-31-2006--MULTIBAND_CORP.html'">732412--3/31/2006--MULTIBAND_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/889423--3-12-2010--SATCON_TECHNOLOGY_CORP.html'">889423--3/12/2010--SATCON_TECHNOLOGY_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1084000--6-13-2008--BIOPHAN_TECHNOLOGIES_INC.html'">1084000--6/13/2008--BIOPHAN_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/799097--4-17-2007--SAN_HOLDINGS_INC.html'">799097--4/17/2007--SAN_HOLDINGS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/277058--7-31-2006--NEVADA_GOLD_&_CASINOS_INC.html'">277058--7/31/2006--NEVADA_GOLD_&_CASINOS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/702513--3-5-2010--Bank_of_Commerce_Holdings.html'">702513--3/5/2010--Bank_of_Commerce_Holdings</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/894536--5-4-2007--POWERLINX_INC.html'">894536--5/4/2007--POWERLINX_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/217209--4-15-2009--TEXOLA_ENERGY_CORP.html'">217209--4/15/2009--TEXOLA_ENERGY_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1164554--3-16-2006--EUROBANCSHARES_INC.html'">1164554--3/16/2006--EUROBANCSHARES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1164554--3-13-2008--EUROBANCSHARES_INC.html'">1164554--3/13/2008--EUROBANCSHARES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1311318--4-1-2008--Lightspace_Corp.html'">1311318--4/1/2008--Lightspace_Corp</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1311318--3-26-2007--Lightspace_Corp.html'">1311318--3/26/2007--Lightspace_Corp</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1164554--3-16-2007--EUROBANCSHARES_INC.html'">1164554--3/16/2007--EUROBANCSHARES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1418475--10-14-2008--T.O.D._TASTE_ON_DEMAND_INC.html'">1418475--10/14/2008--T.O.D._TASTE_ON_DEMAND_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1019034--3-26-2010--BIO_KEY_INTERNATIONAL_INC.html'">1019034--3/26/2010--BIO_KEY_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/797167--4-15-2008--NATURADE_INC.html'">797167--4/15/2008--NATURADE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1312069--2-13-2009--FOUR_RIVERS_BIOENERGY_INC..html'">1312069--2/13/2009--FOUR_RIVERS_BIOENERGY_INC.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/902600--4-14-2006--AKSYS_LTD.html'">902600--4/14/2006--AKSYS_LTD</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/719413--3-2-2009--HECLA_MINING_CO-DE-.html'">719413--3/2/2009--HECLA_MINING_CO/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1373683--10-6-2010--PHOENIX_ENERGY_RESOURCE_CORP.html'">1373683--10/6/2010--PHOENIX_ENERGY_RESOURCE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1159427--3-15-2006--SOUTHERN_COMMUNITY_FINANCIAL_CORP.html'">1159427--3/15/2006--SOUTHERN_COMMUNITY_FINANCIAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1068084--3-17-2008--PRIVATE_MEDIA_GROUP_INC.html'">1068084--3/17/2008--PRIVATE_MEDIA_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1418730--3-17-2010--Industry_Concept_Holdings_Inc.html'">1418730--3/17/2010--Industry_Concept_Holdings_Inc</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1063197--4-5-2007--TORVEC_INC.html'">1063197--4/5/2007--TORVEC_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1068084--4-2-2007--PRIVATE_MEDIA_GROUP_INC.html'">1068084--4/2/2007--PRIVATE_MEDIA_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1084557--3-31-2008--TASKER_PRODUCTS_CORP.html'">1084557--3/31/2008--TASKER_PRODUCTS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1174820--3-12-2010--CENTER_FINANCIAL_CORP.html'">1174820--3/12/2010--CENTER_FINANCIAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1271073--3-15-2010--MODENA_I_INC.html'">1271073--3/15/2010--MODENA_I_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1281922--4-29-2008--Triangle_Petroleum_Corp.html'">1281922--4/29/2008--Triangle_Petroleum_Corp</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

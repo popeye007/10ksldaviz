@@ -1,0 +1,182 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[3.8731794719, "../topics/{investment,_property,_distribution}.html", "{investment,_property,_distribution}"], [3.7137902586, "../topics/{loan,_real,_estate}.html", "{loan,_real,_estate}"], [3.7051389251, "../topics/{regulation,_government,_change}.html", "{regulation,_government,_change}"], [2.9577270913, "../topics/{tax,_income,_asset}.html", "{tax,_income,_asset}"], [2.7246883976, "../topics/{cost,_contract,_operation}.html", "{cost,_contract,_operation}"], [1.7266483733, "../topics/{stock,_price,_share}.html", "{stock,_price,_share}"], [1.5041184675, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [1.4534307167, "../topics/{debt,_indebtedness,_cash}.html", "{debt,_indebtedness,_cash}"], [1.4470020539, "../topics/{regulation,_change,_law}.html", "{regulation,_change,_law}"], [1.4436244605, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>887905--2/23/2006--LTC_PROPERTIES_INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">887905--2/23/2006--LTC_PROPERTIES_INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{investment,_property,_distribution}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{investment,_property,_distribution}.html'">{investment, property, distribution}</td></tr>
+<tr class="list"><td id="{loan,_real,_estate}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{loan,_real,_estate}.html'">{loan, real, estate}</td></tr>
+<tr class="list"><td id="{regulation,_government,_change}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_government,_change}.html'">{regulation, government, change}</td></tr>
+<tr class="list"><td id="{tax,_income,_asset}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{tax,_income,_asset}.html'">{tax, income, asset}</td></tr>
+<tr class="list"><td id="{cost,_contract,_operation}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_contract,_operation}.html'">{cost, contract, operation}</td></tr>
+<tr class="list"><td id="{stock,_price,_share}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_share}.html'">{stock, price, share}</td></tr>
+<tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{debt,_indebtedness,_cash}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{debt,_indebtedness,_cash}.html'">{debt, indebtedness, cash}</td></tr>
+<tr class="list"><td id="{regulation,_change,_law}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_change,_law}.html'">{regulation, change, law}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    We undertake no obligation to publicly update or revise any forward-looking statements, whether as a result of new information, future events or otherwise. Stockholders and investors are cautioned not to unduly rely on such forward-looking statements when evaluating the information presented in our filings and reports.
+Recently Enacted Tax Legislation Could have an Adverse Effect on the Market Price of our Equity Securities.
+A Failure to Maintain or Increase our Dividend Could Reduce the Market Price of Our Stock.
+At Times, We May Have Limited Access to Capital Which Will Slow Our Growth.
+Income and Returns from Health Care Facilities Can be Volatile.
+We Depend on Lease Income and Mortgage Payments from Real Property.
+We Rely on a Few Major Operators.
+Our Borrowers and Lessees Face Competition in the Health Care Industry.
+The Health Care Industry is Heavily Regulated by the Government.
+Our Borrowers and Lessees Rely on Government and Third Party Reimbursement.
+We Could Incur More Debt.
+We Could Fail to Collect Amounts Due Under Our Straight-line Rent Receivable Asset.
+Our Assets May be Subject to Impairment Charges.
+A Failure to Reinvest Cash Available to Us Could Adversely Affect Our Future Revenues and Our Ability to Increase Dividends to Stockholders; There is Considerable Competition in Our Market for Attractive Investments.
+Our Failure to Qualify as a REIT Would Have Serious Adverse Consequences to Our Stockholders.
+Our real estate investments are relatively illiquid.
+Our Remedies May Be Limited When Mortgage Loans Default.
+We are Subject to Risks and Liabilities in Connection with Properties Owned Through Limited Liability Companies and Partnerships.
+<p><a href="http://www.sec.gov/Archives/edgar/data/887905/0001047469-06-002341.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/887905--2-22-2007--LTC_PROPERTIES_INC.html'">887905--2/22/2007--LTC_PROPERTIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/887905--3-13-2008--LTC_PROPERTIES_INC.html'">887905--3/13/2008--LTC_PROPERTIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/887905--2-24-2010--LTC_PROPERTIES_INC.html'">887905--2/24/2010--LTC_PROPERTIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/765880--2-14-2006--HEALTH_CARE_PROPERTY_INVESTORS_INC.html'">765880--2/14/2006--HEALTH_CARE_PROPERTY_INVESTORS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/828916--3-1-2007--WEINGARTEN_REALTY_INVESTORS_-TX-.html'">828916--3/1/2007--WEINGARTEN_REALTY_INVESTORS_/TX/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1141299--3-3-2006--MCG_CAPITAL_CORP.html'">1141299--3/3/2006--MCG_CAPITAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/102588--9-27-2006--SONOMAWEST_HOLDINGS_INC.html'">102588--9/27/2006--SONOMAWEST_HOLDINGS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1234006--2-24-2010--GLADSTONE_COMMERCIAL_CORP.html'">1234006--2/24/2010--GLADSTONE_COMMERCIAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/877860--2-22-2010--NATIONAL_HEALTH_INVESTORS_INC.html'">877860--2/22/2010--NATIONAL_HEALTH_INVESTORS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/737296--4-2-2007--PRUDENTIAL_BACHE_WATSON_&_TAYLOR_LTD_2.html'">737296--4/2/2007--PRUDENTIAL_BACHE_WATSON_&_TAYLOR_LTD_2</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/761648--3-13-2006--CEDAR_SHOPPING_CENTERS_INC.html'">761648--3/13/2006--CEDAR_SHOPPING_CENTERS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/761648--3-15-2010--CEDAR_SHOPPING_CENTERS_INC.html'">761648--3/15/2010--CEDAR_SHOPPING_CENTERS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/761648--3-16-2009--CEDAR_SHOPPING_CENTERS_INC.html'">761648--3/16/2009--CEDAR_SHOPPING_CENTERS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/761648--3-14-2007--CEDAR_SHOPPING_CENTERS_INC.html'">761648--3/14/2007--CEDAR_SHOPPING_CENTERS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/729237--3-5-2010--PARKWAY_PROPERTIES_INC.html'">729237--3/5/2010--PARKWAY_PROPERTIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/20639--3-29-2010--AMBASE_CORP.html'">20639--3/29/2010--AMBASE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/102588--10-15-2007--SONOMAWEST_HOLDINGS_INC.html'">102588--10/15/2007--SONOMAWEST_HOLDINGS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1169083--3-30-2007--LEASE_EQUITY_APPRECIATION_FUND_I_LP.html'">1169083--3/30/2007--LEASE_EQUITY_APPRECIATION_FUND_I_LP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1140472--4-2-2007--ALLIANCE_BANCSHARES_CALIFORNIA.html'">1140472--4/2/2007--ALLIANCE_BANCSHARES_CALIFORNIA</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/729237--2-29-2008--PARKWAY_PROPERTIES_INC.html'">729237--2/29/2008--PARKWAY_PROPERTIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/729237--3-16-2007--PARKWAY_PROPERTIES_INC.html'">729237--3/16/2007--PARKWAY_PROPERTIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/892535--3-7-2006--THORNBURG_MORTGAGE_INC.html'">892535--3/7/2006--THORNBURG_MORTGAGE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/892535--3-1-2007--THORNBURG_MORTGAGE_INC.html'">892535--3/1/2007--THORNBURG_MORTGAGE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/761648--3-14-2008--CEDAR_SHOPPING_CENTERS_INC.html'">761648--3/14/2008--CEDAR_SHOPPING_CENTERS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1141299--3-1-2007--MCG_CAPITAL_CORP.html'">1141299--3/1/2007--MCG_CAPITAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1045425--3-7-2006--RAIT_INVESTMENT_TRUST.html'">1045425--3/7/2006--RAIT_INVESTMENT_TRUST</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/714603--2-25-2009--DST_SYSTEMS_INC.html'">714603--2/25/2009--DST_SYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/921557--3-15-2007--REPUBLIC_BANCORP_INC_-KY-.html'">921557--3/15/2007--REPUBLIC_BANCORP_INC_/KY/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/798783--3-15-2006--UNIVERSAL_HEALTH_REALTY_INCOME_TRUST.html'">798783--3/15/2006--UNIVERSAL_HEALTH_REALTY_INCOME_TRUST</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1059341--3-17-2008--INTERSTATE_HOTELS_&_RESORTS_INC.html'">1059341--3/17/2008--INTERSTATE_HOTELS_&_RESORTS_INC</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

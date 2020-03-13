@@ -1,0 +1,192 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[2.9095227391, "../topics/{gas,_price,_oil}.html", "{gas,_price,_oil}"], [2.6518936354, "../topics/{cost,_contract,_operation}.html", "{cost,_contract,_operation}"], [2.443211795, "../topics/{stock,_price,_share}.html", "{stock,_price,_share}"], [2.1680300791, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"], [1.9532273463, "../topics/{regulation,_government,_change}.html", "{regulation,_government,_change}"], [1.9115093535, "../topics/{debt,_indebtedness,_cash}.html", "{debt,_indebtedness,_cash}"], [1.8496610731, "../topics/{competitive,_industry,_competition}.html", "{competitive,_industry,_competition}"], [1.8023086431, "../topics/{product,_liability,_claim}.html", "{product,_liability,_claim}"], [1.7715734857, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [1.7524869614, "../topics/{financial,_litigation,_operation}.html", "{financial,_litigation,_operation}"], [1.7281077502, "../topics/{cost,_regulation,_environmental}.html", "{cost,_regulation,_environmental}"], [1.7140068417, "../topics/{cost,_operation,_labor}.html", "{cost,_operation,_labor}"], [1.7047929683, "../topics/{provision,_law,_control}.html", "{provision,_law,_control}"], [1.6985935702, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [1.6190488917, "../topics/{operation,_natural,_condition}.html", "{operation,_natural,_condition}"], [1.38640304, "../topics/{system,_service,_information}.html", "{system,_service,_information}"], [1.0714492271, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>350403--3/11/2008--PHI_INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">350403--3/11/2008--PHI_INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{gas,_price,_oil}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{gas,_price,_oil}.html'">{gas, price, oil}</td></tr>
+<tr class="list"><td id="{cost,_contract,_operation}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_contract,_operation}.html'">{cost, contract, operation}</td></tr>
+<tr class="list"><td id="{stock,_price,_share}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_share}.html'">{stock, price, share}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+<tr class="list"><td id="{regulation,_government,_change}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_government,_change}.html'">{regulation, government, change}</td></tr>
+<tr class="list"><td id="{debt,_indebtedness,_cash}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{debt,_indebtedness,_cash}.html'">{debt, indebtedness, cash}</td></tr>
+<tr class="list"><td id="{competitive,_industry,_competition}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{competitive,_industry,_competition}.html'">{competitive, industry, competition}</td></tr>
+<tr class="list"><td id="{product,_liability,_claim}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_liability,_claim}.html'">{product, liability, claim}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{financial,_litigation,_operation}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{financial,_litigation,_operation}.html'">{financial, litigation, operation}</td></tr>
+<tr class="list"><td id="{cost,_regulation,_environmental}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_regulation,_environmental}.html'">{cost, regulation, environmental}</td></tr>
+<tr class="list"><td id="{cost,_operation,_labor}" onmouseover="highlight(11)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_operation,_labor}.html'">{cost, operation, labor}</td></tr>
+<tr class="list"><td id="{provision,_law,_control}" onmouseover="highlight(12)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{provision,_law,_control}.html'">{provision, law, control}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(13)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{operation,_natural,_condition}" onmouseover="highlight(14)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_natural,_condition}.html'">{operation, natural, condition}</td></tr>
+<tr class="list"><td id="{system,_service,_information}" onmouseover="highlight(15)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{system,_service,_information}.html'">{system, service, information}</td></tr>
+<tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(16)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    RISKS INHERENT IN OUR BUSINESS
+Our operations are affected by adverse weather conditions and seasonal factors.
+We may not be able to obtain acceptable customer contracts covering some of our new helicopters, and there will be a delay between the time that a helicopter is delivered to us and the time that it can begin generating revenues.
+Our contracts generally can be terminated or downsized by our customers without penalty.
+Increased governmental regulations could increase our costs or reduce our ability to operate successfully.
+The helicopter services business is highly competitive.
+The failure to maintain our safety record would seriously harm our ability to attract new customers and maintain our existing customers.
+Helicopter operations involve risks that may not be covered by our insurance or may increase the cost of our insurance.
+Our air medical operations expose us to numerous special risks, including collection risks, high start-up costs and potential medical malpractice claims.
+Our international operations are subject to political, economic and regulatory uncertainty.
+Our failure to attract and retain qualified personnel could adversely affect us.
+RISKS SPECIFIC TO OUR COMPANY
+We are highly dependent on the offshore oil and gas industry.
+Our pilot workforce is represented by the Office and Professional Employees International Union, with which the Company is engaged in strike-related litigation.
+We depend on a small number of large oil and gas industry customers for a significant portion of our revenues, and our credit exposure within this industry is significant.
+Our Chairman of the Board and Chief Executive Officer is also our principal stockholder and has voting control of the Company.
+Our substantial indebtedness could adversely affect our financial condition and impair our ability to operate our business.
+The United States Department of Justice ( DOJ ) investigation could result in criminal proceedings and the imposition of fines and penalties.
+Our stock has a low trading volume.
+We do not pay dividends.
+Provisions in our articles of incorporation and by-laws and Louisiana law make it more difficult to effect a change in control of us, which could discourage a takeover of our company and adversely affect the price of our common stock.
+<p><a href="http://www.sec.gov/Archives/edgar/data/350403/0000950129-08-001632.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/1163739--2-26-2010--NABORS_INDUSTRIES_LTD.html'">1163739--2/26/2010--NABORS_INDUSTRIES_LTD</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/92232--3-5-2008--SOUTHERN_NATURAL_GAS_CO.html'">92232--3/5/2008--SOUTHERN_NATURAL_GAS_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/200155--3-5-2008--COLORADO_INTERSTATE_GAS_CO.html'">200155--3/5/2008--COLORADO_INTERSTATE_GAS_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/31986--3-5-2008--EL_PASO_NATURAL_GAS_CO.html'">31986--3/5/2008--EL_PASO_NATURAL_GAS_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1112706--9-28-2010--CANYON_COPPER_CORP..html'">1112706--9/28/2010--CANYON_COPPER_CORP.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1424404--10-9-2009--Wolverine_Exploration_Inc..html'">1424404--10/9/2009--Wolverine_Exploration_Inc.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/92232--2-28-2007--SOUTHERN_NATURAL_GAS_CO.html'">92232--2/28/2007--SOUTHERN_NATURAL_GAS_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/31986--2-28-2007--EL_PASO_NATURAL_GAS_CO.html'">31986--2/28/2007--EL_PASO_NATURAL_GAS_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/200155--2-28-2007--COLORADO_INTERSTATE_GAS_CO.html'">200155--2/28/2007--COLORADO_INTERSTATE_GAS_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/97142--2-28-2007--TENNESSEE_GAS_PIPELINE_CO.html'">97142--2/28/2007--TENNESSEE_GAS_PIPELINE_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1112706--9-28-2009--CANYON_COPPER_CORP..html'">1112706--9/28/2009--CANYON_COPPER_CORP.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/97142--3-5-2008--TENNESSEE_GAS_PIPELINE_CO.html'">97142--3/5/2008--TENNESSEE_GAS_PIPELINE_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1424404--8-31-2010--Wolverine_Exploration_Inc..html'">1424404--8/31/2010--Wolverine_Exploration_Inc.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/822416--3-10-2006--PULTE_HOMES_INC-MI-.html'">822416--3/10/2006--PULTE_HOMES_INC/MI/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/92232--3-16-2006--SOUTHERN_NATURAL_GAS_CO.html'">92232--3/16/2006--SOUTHERN_NATURAL_GAS_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/31986--3-7-2006--EL_PASO_NATURAL_GAS_CO.html'">31986--3/7/2006--EL_PASO_NATURAL_GAS_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/92521--2-28-2006--SOUTHWESTERN_PUBLIC_SERVICE_CO.html'">92521--2/28/2006--SOUTHWESTERN_PUBLIC_SERVICE_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/92232--3-2-2009--SOUTHERN_NATURAL_GAS_CO.html'">92232--3/2/2009--SOUTHERN_NATURAL_GAS_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1373690--11-29-2010--American_Paramount_Gold_Corp..html'">1373690--11/29/2010--American_Paramount_Gold_Corp.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1415332--4-15-2010--Lithium_Corp.html'">1415332--4/15/2010--Lithium_Corp</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1440821--8-12-2009--QUARTZ_VENTURES_INC..html'">1440821--8/12/2009--QUARTZ_VENTURES_INC.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/889900--2-19-2009--PATTERSON_UTI_ENERGY_INC.html'">889900--2/19/2009--PATTERSON_UTI_ENERGY_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/66649--3-29-2006--MINES_MANAGEMENT_INC.html'">66649--3/29/2006--MINES_MANAGEMENT_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/879933--3-13-2006--IPSCO_INC.html'">879933--3/13/2006--IPSCO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/926423--4-14-2008--MITCHAM_INDUSTRIES_INC.html'">926423--4/14/2008--MITCHAM_INDUSTRIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/13372--2-9-2009--NSTAR_ELECTRIC_CO.html'">13372--2/9/2009--NSTAR_ELECTRIC_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1090012--2-25-2010--DEVON_ENERGY_CORP-DE.html'">1090012--2/25/2010--DEVON_ENERGY_CORP/DE</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/25232--2-27-2009--COUSINS_PROPERTIES_INC.html'">25232--2/27/2009--COUSINS_PROPERTIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/85535--8-20-2008--ROYAL_GOLD_INC.html'">85535--8/20/2008--ROYAL_GOLD_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/800286--9-22-2010--SED_INTERNATIONAL_HOLDINGS_INC.html'">800286--9/22/2010--SED_INTERNATIONAL_HOLDINGS_INC</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

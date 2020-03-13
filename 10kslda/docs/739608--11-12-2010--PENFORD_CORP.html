@@ -1,0 +1,176 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[2.6482209216, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [2.5725977497, "../topics/{condition,_economic,_financial}.html", "{condition,_economic,_financial}"], [1.9383021032, "../topics/{cost,_operation,_labor}.html", "{cost,_operation,_labor}"], [1.813489688, "../topics/{tax,_income,_asset}.html", "{tax,_income,_asset}"], [1.7023342294, "../topics/{debt,_indebtedness,_cash}.html", "{debt,_indebtedness,_cash}"], [1.698237671, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [1.6966946057, "../topics/{cost,_regulation,_environmental}.html", "{cost,_regulation,_environmental}"], [1.6962659593, "../topics/{cost,_contract,_operation}.html", "{cost,_contract,_operation}"], [1.6851810311, "../topics/{capital,_credit,_financial}.html", "{capital,_credit,_financial}"], [1.4621123131, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>739608--11/12/2010--PENFORD_CORP</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">739608--11/12/2010--PENFORD_CORP</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{condition,_economic,_financial}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{condition,_economic,_financial}.html'">{condition, economic, financial}</td></tr>
+<tr class="list"><td id="{cost,_operation,_labor}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_operation,_labor}.html'">{cost, operation, labor}</td></tr>
+<tr class="list"><td id="{tax,_income,_asset}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{tax,_income,_asset}.html'">{tax, income, asset}</td></tr>
+<tr class="list"><td id="{debt,_indebtedness,_cash}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{debt,_indebtedness,_cash}.html'">{debt, indebtedness, cash}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{cost,_regulation,_environmental}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_regulation,_environmental}.html'">{cost, regulation, environmental}</td></tr>
+<tr class="list"><td id="{cost,_contract,_operation}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_contract,_operation}.html'">{cost, contract, operation}</td></tr>
+<tr class="list"><td id="{capital,_credit,_financial}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{capital,_credit,_financial}.html'">{capital, credit, financial}</td></tr>
+<tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    The Company is substantially dependent on its manufacturing facilities; any operational disruption could result in a reduction of the Company s sales volumes and could cause it to incur substantial losses.
+The agreements governing the Company s debt contain various covenants that limit its ability to take certain actions and also require the Company to meet financial maintenance tests, and Penford s failure to comply with any of the debt covenants could have a material adverse effect on the Company s business, financial condition and results of operations.
+Changes in interest rates may affect Penford s profitability.
+Unanticipated changes in tax rates or exposure to additional income tax liabilities could affect Penford s profitability.
+Pension expense and the funding of pension obligations are affected by factors outside the Company s control, including the performance of plan assets, interest rates, actuarial data and experience, and changes in laws and regulations.
+The current capital and credit market conditions may adversely affect the Company s access to capital, cost of capital and business operations.
+Economic conditions may impair the businesses of the Company s customers and end user markets, which could adversely affect the Company s business operations.
+Penford depends on its senior management team; the loss of any member could adversely affect its operations.
+Penford is subject to stringent environmental and health and safety laws, which may require it to incur substantial compliance and remediation costs, thereby reducing profits.
+Penford s unionized workforce could cause interruptions in the Company s provision of services.
+Risk Factors Relating to Penford s Common Stock
+Penford s stock price has fluctuated significantly; the trading price of its common stock may fluctuate significantly in the future.
+<p><a href="http://www.sec.gov/Archives/edgar/data/739608/0000950123-10-104720.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/715787--3-16-2007--INTERFACE_INC.html'">715787--3/16/2007--INTERFACE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/85961--2-12-2010--RYDER_SYSTEM_INC.html'">85961--2/12/2010--RYDER_SYSTEM_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1043432--10-30-2006--AMERICAN_SKIING_CO_-ME.html'">1043432--10/30/2006--AMERICAN_SKIING_CO_/ME</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/70684--3-16-2007--NATIONAL_WESTERN_LIFE_INSURANCE_CO.html'">70684--3/16/2007--NATIONAL_WESTERN_LIFE_INSURANCE_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/898173--3-15-2006--O_REILLY_AUTOMOTIVE_INC.html'">898173--3/15/2006--O_REILLY_AUTOMOTIVE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/862668--9-28-2007--ESCALON_MEDICAL_CORP.html'">862668--9/28/2007--ESCALON_MEDICAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1037417--12-24-2008--IFTH_ACQUISITION_CORP.html'">1037417--12/24/2008--IFTH_ACQUISITION_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/883902--1-12-2006--NCI_BUILDING_SYSTEMS_INC.html'">883902--1/12/2006--NCI_BUILDING_SYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/54381--2-28-2008--KAMAN_CORP.html'">54381--2/28/2008--KAMAN_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/89270--4-15-2009--SL_INDUSTRIES_INC.html'">89270--4/15/2009--SL_INDUSTRIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/89270--3-26-2007--SL_INDUSTRIES_INC.html'">89270--3/26/2007--SL_INDUSTRIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/89270--3-24-2006--SL_INDUSTRIES_INC.html'">89270--3/24/2006--SL_INDUSTRIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1009244--3-30-2006--MEXICAN_RESTAURANTS_INC.html'">1009244--3/30/2006--MEXICAN_RESTAURANTS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/55604--3-28-2007--KEYSTONE_CONSOLIDATED_INDUSTRIES_INC.html'">55604--3/28/2007--KEYSTONE_CONSOLIDATED_INDUSTRIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1042173--3-8-2007--SCIENTIFIC_LEARNING_CORP.html'">1042173--3/8/2007--SCIENTIFIC_LEARNING_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/708850--8-29-2008--DIONEX_CORP_-DE.html'">708850--8/29/2008--DIONEX_CORP_/DE</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/876427--6-10-2010--MONRO_MUFFLER_BRAKE_INC.html'">876427--6/10/2010--MONRO_MUFFLER_BRAKE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/84581--3-31-2009--ROCK_OF_AGES_CORP.html'">84581--3/31/2009--ROCK_OF_AGES_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/771950--3-30-2009--WESTWOOD_ONE_INC_-DE-.html'">771950--3/30/2009--WESTWOOD_ONE_INC_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1320482--2-15-2008--Discovery_Holding_CO.html'">1320482--2/15/2008--Discovery_Holding_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/739608--11-14-2008--PENFORD_CORP.html'">739608--11/14/2008--PENFORD_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/62737--6-30-2006--MARSH_SUPERMARKETS_INC.html'">62737--6/30/2006--MARSH_SUPERMARKETS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/732412--3-31-2008--MULTIBAND_CORP.html'">732412--3/31/2008--MULTIBAND_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/863015--6-25-2009--ISLE_OF_CAPRI_CASINOS_INC.html'">863015--6/25/2009--ISLE_OF_CAPRI_CASINOS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/706688--3-2-2009--AARON_RENTS_INC.html'">706688--3/2/2009--AARON_RENTS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/912767--2-23-2010--UNIVERSAL_FOREST_PRODUCTS_INC.html'">912767--2/23/2010--UNIVERSAL_FOREST_PRODUCTS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/48898--2-19-2010--HUBBELL_INC.html'">48898--2/19/2010--HUBBELL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/899045--2-26-2010--LAMAR_MEDIA_CORP-DE.html'">899045--2/26/2010--LAMAR_MEDIA_CORP/DE</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1090425--2-26-2010--LAMAR_MEDIA_CORP-DE.html'">1090425--2/26/2010--LAMAR_MEDIA_CORP/DE</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/895417--3-1-2007--EQUITY_LIFESTYLE_PROPERTIES_INC.html'">895417--3/1/2007--EQUITY_LIFESTYLE_PROPERTIES_INC</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

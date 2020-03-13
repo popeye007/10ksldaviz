@@ -1,0 +1,187 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[10.2618250124, "../topics/{regulation,_government,_change}.html", "{regulation,_government,_change}"], [3.8166267921, "../topics/{system,_service,_information}.html", "{system,_service,_information}"], [2.7098345179, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [2.6070427255, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"], [1.9565714035, "../topics/{capital,_credit,_financial}.html", "{capital,_credit,_financial}"], [1.7018713047, "../topics/{provision,_law,_control}.html", "{provision,_law,_control}"], [1.696273807, "../topics/{control,_financial,_internal}.html", "{control,_financial,_internal}"], [1.6958351126, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [1.6014437568, "../topics/{financial,_litigation,_operation}.html", "{financial,_litigation,_operation}"], [1.5264113327, "../topics/{tax,_income,_asset}.html", "{tax,_income,_asset}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>930420--3/3/2006--KFORCE__INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">930420--3/3/2006--KFORCE__INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{regulation,_government,_change}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_government,_change}.html'">{regulation, government, change}</td></tr>
+<tr class="list"><td id="{system,_service,_information}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{system,_service,_information}.html'">{system, service, information}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+<tr class="list"><td id="{capital,_credit,_financial}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{capital,_credit,_financial}.html'">{capital, credit, financial}</td></tr>
+<tr class="list"><td id="{provision,_law,_control}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{provision,_law,_control}.html'">{provision, law, control}</td></tr>
+<tr class="list"><td id="{control,_financial,_internal}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{control,_financial,_internal}.html'">{control, financial, internal}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{financial,_litigation,_operation}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{financial,_litigation,_operation}.html'">{financial, litigation, operation}</td></tr>
+<tr class="list"><td id="{tax,_income,_asset}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{tax,_income,_asset}.html'">{tax, income, asset}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    Kforce may not be able to recruit and retain qualified personnel.
+Kforce s current market share may decrease as a result of limited barriers to entry for new competitors and discontinuation of clients outsourcing of their staffing needs.
+We rely on short-term contracts with most of our clients.
+Our offshore outsourcing solutions are limited.
+We do not provide a Vendor Management System ( VMS ) solution.
+Currently, Kforce is unable to recruit enough nurses to meet our clients demands for nurse staffing services, limiting the potential growth of our healthcare staffing business.
+Decreases in patient occupancy at healthcare clients facilities may adversely affect the profitability of Kforce s business.
+Significant legal actions, particularly relating to our healthcare staffing services, could subject Kforce to substantial uninsured liabilities.
+The addition of offices and entry into new geographic markets may not occur on a timely basis or achieve anticipated financial results.
+Competition for acquisition opportunities may restrict Kforce s future growth by limiting our ability to make acquisitions at reasonable valuations.
+Kforce faces significant employment liability risk.
+Kforce may be adversely affected by government regulation of the staffing business.
+Kforce may be adversely affected by government regulation of the workplace.
+If Kforce becomes subject to material liabilities under our self-insured programs, our financial results may be adversely affected.
+Future changes in reimbursement trends could hamper our clients ability to pay Kforce.
+Significant increases in payroll-related costs could adversely affect Kforce s business.
+Kforce depends on the proper functioning of our information systems.
+Due to inherent limitations, there can be no assurance that our system of disclosure and internal controls and procedures will be successful in preventing all errors and fraud, or in making all material information known in a timely manner to management.
+Kforce may not be able to maintain sufficient cash flow or borrowing capacity to support operations.
+Adverse results in tax audits could result in significant cash expenditures or exposure to unforeseen liabilities.
+Kforce s success depends upon retaining the services of its management team.
+Kforce s stock price may be volatile.
+Provisions in Kforce s articles and bylaws and under Florida law may have certain anti-takeover effects.
+<p><a href="http://www.sec.gov/Archives/edgar/data/930420/0001193125-06-045134.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/892537--3-10-2006--MANTECH_INTERNATIONAL_CORP.html'">892537--3/10/2006--MANTECH_INTERNATIONAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/893949--8-7-2007--PEDIATRIX_MEDICAL_GROUP_INC.html'">893949--8/7/2007--PEDIATRIX_MEDICAL_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/813562--9-13-2007--NATIONAL_MEDICAL_HEALTH_CARD_SYSTEMS_INC.html'">813562--9/13/2007--NATIONAL_MEDICAL_HEALTH_CARD_SYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/893949--2-28-2008--PEDIATRIX_MEDICAL_GROUP_INC.html'">893949--2/28/2008--PEDIATRIX_MEDICAL_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/882289--3-16-2006--APRIA_HEALTHCARE_GROUP_INC.html'">882289--3/16/2006--APRIA_HEALTHCARE_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/831641--12-28-2006--TETRA_TECH_INC.html'">831641--12/28/2006--TETRA_TECH_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1129623--3-9-2007--ODYSSEY_HEALTHCARE_INC.html'">1129623--3/9/2007--ODYSSEY_HEALTHCARE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/847935--3-16-2006--ALLION_HEALTHCARE_INC.html'">847935--3/16/2006--ALLION_HEALTHCARE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1260996--4-15-2009--AMERICAN_DEFENSE_SYSTEMS_INC.html'">1260996--4/15/2009--AMERICAN_DEFENSE_SYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/867963--9-4-2008--UNITED_AMERICAN_HEALTHCARE_CORP.html'">867963--9/4/2008--UNITED_AMERICAN_HEALTHCARE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1163958--3-6-2006--MEDICAL_STAFFING_NETWORK_HOLDINGS_INC.html'">1163958--3/6/2006--MEDICAL_STAFFING_NETWORK_HOLDINGS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/867963--8-30-2007--UNITED_AMERICAN_HEALTHCARE_CORP.html'">867963--8/30/2007--UNITED_AMERICAN_HEALTHCARE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/882235--2-27-2008--LINCARE_HOLDINGS_INC.html'">882235--2/27/2008--LINCARE_HOLDINGS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/882235--2-25-2009--LINCARE_HOLDINGS_INC.html'">882235--2/25/2009--LINCARE_HOLDINGS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/882235--2-25-2010--LINCARE_HOLDINGS_INC.html'">882235--2/25/2010--LINCARE_HOLDINGS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1101723--2-28-2006--UNITED_SURGICAL_PARTNERS_INTERNATIONAL_INC.html'">1101723--2/28/2006--UNITED_SURGICAL_PARTNERS_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/927066--2-29-2008--DAVITA_INC.html'">927066--2/29/2008--DAVITA_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/927066--2-25-2010--DAVITA_INC.html'">927066--2/25/2010--DAVITA_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/831967--2-23-2007--KINETIC_CONCEPTS_INC_-TX-.html'">831967--2/23/2007--KINETIC_CONCEPTS_INC_/TX/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/927066--2-27-2009--DAVITA_INC.html'">927066--2/27/2009--DAVITA_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/44800--3-8-2006--ANALEX_CORP.html'">44800--3/8/2006--ANALEX_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/847935--3-9-2009--ALLION_HEALTHCARE_INC.html'">847935--3/9/2009--ALLION_HEALTHCARE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/776325--3-12-2008--RES_CARE_INC_-KY-.html'">776325--3/12/2008--RES_CARE_INC_/KY/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1179929--3-16-2009--MOLINA_HEALTHCARE_INC.html'">1179929--3/16/2009--MOLINA_HEALTHCARE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1139463--12-14-2010--MEDCATH_CORP.html'">1139463--12/14/2010--MEDCATH_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/847935--3-16-2007--ALLION_HEALTHCARE_INC.html'">847935--3/16/2007--ALLION_HEALTHCARE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1163958--3-13-2009--MEDICAL_STAFFING_NETWORK_HOLDINGS_INC.html'">1163958--3/13/2009--MEDICAL_STAFFING_NETWORK_HOLDINGS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/920052--3-15-2006--RENAL_CARE_GROUP_INC.html'">920052--3/15/2006--RENAL_CARE_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1064863--3-1-2006--AMERIGROUP_CORP.html'">1064863--3/1/2006--AMERIGROUP_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1361579--3-18-2008--Virtual_Radiologic_CORP.html'">1361579--3/18/2008--Virtual_Radiologic_CORP</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

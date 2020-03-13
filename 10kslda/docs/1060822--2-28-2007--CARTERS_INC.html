@@ -1,0 +1,178 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[3.6967466499, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [2.7013963575, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [2.1350885109, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"], [1.8400862327, "../topics/{product,_liability,_claim}.html", "{product,_liability,_claim}"], [1.7287119929, "../topics/{condition,_economic,_financial}.html", "{condition,_economic,_financial}"], [1.6962844875, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [1.6962818403, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"], [1.647289906, "../topics/{debt,_indebtedness,_cash}.html", "{debt,_indebtedness,_cash}"], [1.5029467788, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [1.2775476759, "../topics/{tax,_income,_asset}.html", "{tax,_income,_asset}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>1060822--2/28/2007--CARTERS_INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">1060822--2/28/2007--CARTERS_INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+<tr class="list"><td id="{product,_liability,_claim}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_liability,_claim}.html'">{product, liability, claim}</td></tr>
+<tr class="list"><td id="{condition,_economic,_financial}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{condition,_economic,_financial}.html'">{condition, economic, financial}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+<tr class="list"><td id="{debt,_indebtedness,_cash}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{debt,_indebtedness,_cash}.html'">{debt, indebtedness, cash}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{tax,_income,_asset}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{tax,_income,_asset}.html'">{tax, income, asset}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    Risks Relating to Our Business
+The loss of one or more of our major customers could result in a material loss of revenues.
+The acceptance of our products in the marketplace is affected by consumers tastes and preferences, along with fashion trends.
+The value of our brand, and our sales, could be diminished if we are associated with negative publicity.
+The Company s royalty income is greatly impacted by the Company s brand reputation.
+There are deflationary pressures on the selling price of apparel products.
+Our business is sensitive to overall levels of consumer spending, particularly in the apparel segment.
+We source substantially all of our products through foreign production arrangements. Our dependence on foreign supply sources could result in disruptions to our operations in the event of political instability, international events, or new foreign regulations and such disruptions may increase our cost of goods sold and decrease gross profit.
+We operate in a highly-competitive market and the size and resources of some of our competitors may allow them to compete more effectively than we can, resulting in a loss of market share and, as a result, a decrease in revenues and gross profit.
+The Company s retail success and future growth is dependent upon identifying locations and negotiating appropriate lease terms for retail stores.
+Our substantial leverage could adversely affect our financial condition.
+Profitability could be negatively impacted if we do not adequately forecast the demand for our products and, as a result, create significant levels of excess inventory or insufficient levels of inventory.
+We may not achieve sales growth plans, cost savings, and other assumptions that support the carrying value of our intangible assets.
+The Company s success is dependent upon retaining key individuals within the organization to execute the Company s strategic plan.
+<p><a href="http://www.sec.gov/Archives/edgar/data/1060822/0001104659-07-014975.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/1060822--3-15-2006--CARTERS_INC.html'">1060822--3/15/2006--CARTERS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1014111--2-22-2007--IMATION_CORP.html'">1014111--2/22/2007--IMATION_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1289863--3-24-2009--SmartPros_Ltd..html'">1289863--3/24/2009--SmartPros_Ltd.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/866787--10-27-2008--AUTOZONE_INC.html'">866787--10/27/2008--AUTOZONE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/352789--3-15-2006--IOMEGA_CORP.html'">352789--3/15/2006--IOMEGA_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/37472--9-7-2006--FLEXSTEEL_INDUSTRIES_INC.html'">37472--9/7/2006--FLEXSTEEL_INDUSTRIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1047127--3-16-2006--AMKOR_TECHNOLOGY_INC.html'">1047127--3/16/2006--AMKOR_TECHNOLOGY_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1046832--3-10-2006--RAINDANCE_COMMUNICATIONS_INC.html'">1046832--3/10/2006--RAINDANCE_COMMUNICATIONS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/922612--8-14-2008--SCHMITT_INDUSTRIES_INC.html'">922612--8/14/2008--SCHMITT_INDUSTRIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/354950--3-29-2007--HOME_DEPOT_INC.html'">354950--3/29/2007--HOME_DEPOT_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/2098--3-15-2007--ACME_UNITED_CORP.html'">2098--3/15/2007--ACME_UNITED_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/2098--3-12-2008--ACME_UNITED_CORP.html'">2098--3/12/2008--ACME_UNITED_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/354950--3-29-2006--HOME_DEPOT_INC.html'">354950--3/29/2006--HOME_DEPOT_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/37472--8-26-2010--FLEXSTEEL_INDUSTRIES_INC.html'">37472--8/26/2010--FLEXSTEEL_INDUSTRIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/108772--2-16-2007--XEROX_CORP.html'">108772--2/16/2007--XEROX_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/790818--3-18-2010--X_RITE_INC.html'">790818--3/18/2010--X_RITE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/25895--6-20-2007--CROWN_CRAFTS_INC.html'">25895--6/20/2007--CROWN_CRAFTS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/216085--3-13-2008--HAVERTY_FURNITURE_COMPANIES_INC.html'">216085--3/13/2008--HAVERTY_FURNITURE_COMPANIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/851310--3-14-2006--HARMONIC_INC.html'">851310--3/14/2006--HARMONIC_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/854398--12-13-2010--XATA_CORP_-MN-.html'">854398--12/13/2010--XATA_CORP_/MN/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1017526--9-26-2006--ACE_COMM_CORP.html'">1017526--9/26/2006--ACE_COMM_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/216085--3-13-2007--HAVERTY_FURNITURE_COMPANIES_INC.html'">216085--3/13/2007--HAVERTY_FURNITURE_COMPANIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/913616--3-12-2008--NATIONAL_DENTEX_CORP_-MA-.html'">913616--3/12/2008--NATIONAL_DENTEX_CORP_/MA/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/881665--2-26-2009--DA-LITE_SCREEN_CO_INC.html'">881665--2/26/2009--DA-LITE_SCREEN_CO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/25895--6-15-2006--CROWN_CRAFTS_INC.html'">25895--6/15/2006--CROWN_CRAFTS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/881665--2-23-2006--DA-LITE_SCREEN_CO_INC.html'">881665--2/23/2006--DA-LITE_SCREEN_CO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/354950--4-3-2008--HOME_DEPOT_INC.html'">354950--4/3/2008--HOME_DEPOT_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1270597--3-23-2007--MERISANT_CO.html'">1270597--3/23/2007--MERISANT_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/216085--3-16-2006--HAVERTY_FURNITURE_COMPANIES_INC.html'">216085--3/16/2006--HAVERTY_FURNITURE_COMPANIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/873044--3-3-2006--RADISYS_CORP.html'">873044--3/3/2006--RADISYS_CORP</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

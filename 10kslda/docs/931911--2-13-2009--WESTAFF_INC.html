@@ -1,0 +1,196 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[4.0488680839, "../topics/{financial,_litigation,_operation}.html", "{financial,_litigation,_operation}"], [3.2490537719, "../topics/{loss,_insurance,_financial}.html", "{loss,_insurance,_financial}"], [2.6962290899, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [2.6501923809, "../topics/{system,_service,_information}.html", "{system,_service,_information}"], [2.4890337845, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [2.4773615646, "../topics/{cost,_operation,_labor}.html", "{cost,_operation,_labor}"], [2.1547515807, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [1.9035253498, "../topics/{stock,_price,_share}.html", "{stock,_price,_share}"], [1.842627895, "../topics/{cost,_regulation,_environmental}.html", "{cost,_regulation,_environmental}"], [1.7402671745, "../topics/{regulation,_change,_law}.html", "{regulation,_change,_law}"], [1.7094619469, "../topics/{debt,_indebtedness,_cash}.html", "{debt,_indebtedness,_cash}"], [1.7003285085, "../topics/{capital,_credit,_financial}.html", "{capital,_credit,_financial}"], [1.6980801772, "../topics/{condition,_economic,_financial}.html", "{condition,_economic,_financial}"], [1.6964047063, "../topics/{control,_financial,_internal}.html", "{control,_financial,_internal}"], [1.6962987682, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [1.6811427122, "../topics/{tax,_income,_asset}.html", "{tax,_income,_asset}"], [1.2387585372, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>931911--2/13/2009--WESTAFF_INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">931911--2/13/2009--WESTAFF_INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{financial,_litigation,_operation}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{financial,_litigation,_operation}.html'">{financial, litigation, operation}</td></tr>
+<tr class="list"><td id="{loss,_insurance,_financial}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{loss,_insurance,_financial}.html'">{loss, insurance, financial}</td></tr>
+<tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{system,_service,_information}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{system,_service,_information}.html'">{system, service, information}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{cost,_operation,_labor}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_operation,_labor}.html'">{cost, operation, labor}</td></tr>
+<tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{stock,_price,_share}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_share}.html'">{stock, price, share}</td></tr>
+<tr class="list"><td id="{cost,_regulation,_environmental}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_regulation,_environmental}.html'">{cost, regulation, environmental}</td></tr>
+<tr class="list"><td id="{regulation,_change,_law}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_change,_law}.html'">{regulation, change, law}</td></tr>
+<tr class="list"><td id="{debt,_indebtedness,_cash}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{debt,_indebtedness,_cash}.html'">{debt, indebtedness, cash}</td></tr>
+<tr class="list"><td id="{capital,_credit,_financial}" onmouseover="highlight(11)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{capital,_credit,_financial}.html'">{capital, credit, financial}</td></tr>
+<tr class="list"><td id="{condition,_economic,_financial}" onmouseover="highlight(12)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{condition,_economic,_financial}.html'">{condition, economic, financial}</td></tr>
+<tr class="list"><td id="{control,_financial,_internal}" onmouseover="highlight(13)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{control,_financial,_internal}.html'">{control, financial, internal}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(14)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{tax,_income,_asset}" onmouseover="highlight(15)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{tax,_income,_asset}.html'">{tax, income, asset}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(16)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    The recent economic downturn and recession has materially and adversely affected our business and a continuation of current economic conditions could cause further harm to our business, financial condition, results of operations and cash flows.
+The process and uncertainties relating to the proposed Merger could adversely affect our business.
+We are currently in default under the primary credit facility that we use to finance our operations. If we are unable to obtain a waiver or continued forbearance with respect to this default, we may be unable to satisfy our liquidity requirements and continue our operations as a going concern.
+We have significant working capital requirements and are heavily dependent upon our ability to borrow money to meet these working capital requirements.
+We may be unable to adequately collateralize our workers' compensation obligations at their current levels or at all.
+We are exposed to credit risks on collections from our customers due to, among other things, our assumption of the obligation to make wage, tax, and regulatory payments to our temporary employees.
+Price competition in the staffing industry continues to be intense, and pricing pressures from both competitors and customers could adversely impact our financial decisions.
+The market for our stock may be limited, and the stock price may continue to be extremely volatile.
+Recently our common shares traded at prices below $1.00. If this continues in the future, our common shares could be subject to delisting by NASDAQ Stock Market.
+If we fail to maintain effective internal control over our financial reporting, we may cause investors to lose confidence in our reported financial information, which could have an adverse effect on our stock price.
+Our principal stockholder, together with its affiliates, controls a significant amount of our outstanding common stock thus allowing them to exert significant influence on our management and affairs.
+We derive a significant portion of our revenue from franchise agent operations.
+Our service agreements may be terminated on short notice, leaving us vulnerable to loss of a significant amount of customers in a short period of time.
+Our reserves for workers' compensation claims may be inadequate to cover our ultimate liability, and we may incur additional charges if the actual amounts exceed the reserved amounts.
+Workers' compensation costs for temporary employees may continue to rise and reduce margins and require more liquidity.
+Our success is impacted by our ability to attract and retain qualified temporary and permanent candidates.
+The staffing industry is highly competitive with limited barriers to entry which could limit our ability to maintain or increase market share.
+The cost of unemployment insurance for temporary employees may rise and reduce our margins.
+Our information technology systems are critical to the operations of our business.
+Our business is subject to extensive government regulation, which may restrict the types of employment services that we are permitted to offer or result in additional tax or other costs that adversely affect our revenues and earnings.
+We may be exposed to employment-related claims and costs that could materially adversely affect our business.
+We are involved in an action taken by the California Employment Development Department.
+We are a defendant in a variety of litigation and other actions from time to time, which may have a material adverse effect on our business, financial condition and results of operations.
+We have assets on our balance sheet for which their realization is dependent on our future cash flows.
+Improper disclosure of employee and customer data could result in liability and harm to our reputation.
+<p><a href="http://www.sec.gov/Archives/edgar/data/931911/0001047469-09-001241.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/931911--1-26-2007--WESTAFF_INC.html'">931911--1/26/2007--WESTAFF_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1012887--3-13-2006--BOSTON_COMMUNICATIONS_GROUP_INC.html'">1012887--3/13/2006--BOSTON_COMMUNICATIONS_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/931911--2-1-2008--WESTAFF_INC.html'">931911--2/1/2008--WESTAFF_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/86312--2-23-2007--ST_PAUL_TRAVELERS_COMPANIES_INC.html'">86312--2/23/2007--ST_PAUL_TRAVELERS_COMPANIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/86312--2-27-2006--ST_PAUL_TRAVELERS_COMPANIES_INC.html'">86312--2/27/2006--ST_PAUL_TRAVELERS_COMPANIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/313616--3-15-2006--DANAHER_CORP_-DE-.html'">313616--3/15/2006--DANAHER_CORP_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/949373--2-25-2010--EINSTEIN_NOAH_RESTAURANT_GROUP_INC.html'">949373--2/25/2010--EINSTEIN_NOAH_RESTAURANT_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/720672--2-27-2009--STIFEL_FINANCIAL_CORP.html'">720672--2/27/2009--STIFEL_FINANCIAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/806085--1-29-2008--LEHMAN_BROTHERS_HOLDINGS_INC.html'">806085--1/29/2008--LEHMAN_BROTHERS_HOLDINGS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1102643--3-14-2006--USI_HOLDINGS_CORP.html'">1102643--3/14/2006--USI_HOLDINGS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/354964--3-1-2010--HSBC_Finance_Corp.html'">354964--3/1/2010--HSBC_Finance_Corp</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/12659--6-30-2008--H&R_BLOCK_INC.html'">12659--6/30/2008--H&R_BLOCK_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1173431--11-26-2008--TD_AMERITRADE_HOLDING_CORP.html'">1173431--11/26/2008--TD_AMERITRADE_HOLDING_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1012393--6-14-2006--KEYSTONE_AUTOMOTIVE_INDUSTRIES_INC.html'">1012393--6/14/2006--KEYSTONE_AUTOMOTIVE_INDUSTRIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/813920--2-20-2009--CEC_ENTERTAINMENT_INC.html'">813920--2/20/2009--CEC_ENTERTAINMENT_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/30625--2-24-2010--FLOWSERVE_CORP.html'">30625--2/24/2010--FLOWSERVE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1039889--2-17-2010--P_F_CHANGS_CHINA_BISTRO_INC.html'">1039889--2/17/2010--P_F_CHANGS_CHINA_BISTRO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/79282--3-1-2007--BROWN_&_BROWN_INC.html'">79282--3/1/2007--BROWN_&_BROWN_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1018003--3-2-2010--INGRAM_MICRO_INC.html'">1018003--3/2/2010--INGRAM_MICRO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/83246--3-1-2010--HSBC_USA_INC_-MD-.html'">83246--3/1/2010--HSBC_USA_INC_/MD/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/109261--2-13-2009--ZENITH_NATIONAL_INSURANCE_CORP.html'">109261--2/13/2009--ZENITH_NATIONAL_INSURANCE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/109261--2-10-2010--ZENITH_NATIONAL_INSURANCE_CORP.html'">109261--2/10/2010--ZENITH_NATIONAL_INSURANCE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1047202--6-13-2007--GETTY_IMAGES_INC.html'">1047202--6/13/2007--GETTY_IMAGES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/805676--2-29-2008--PARK_NATIONAL_CORP_-OH-.html'">805676--2/29/2008--PARK_NATIONAL_CORP_/OH/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/782842--3-14-2007--FIRST_ALBANY_COMPANIES_INC.html'">782842--3/14/2007--FIRST_ALBANY_COMPANIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/891103--2-26-2010--IAC-INTERACTIVECORP.html'">891103--2/26/2010--IAC/INTERACTIVECORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1183186--2-22-2007--NATIONAL_FINANCIAL_PARTNERS_CORP.html'">1183186--2/22/2007--NATIONAL_FINANCIAL_PARTNERS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1271625--9-18-2007--DOLLAR_FINANCIAL_CORP.html'">1271625--9/18/2007--DOLLAR_FINANCIAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/310354--8-27-2010--STANDEX_INTERNATIONAL_CORP-DE-.html'">310354--8/27/2010--STANDEX_INTERNATIONAL_CORP/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/354950--4-2-2009--HOME_DEPOT_INC.html'">354950--4/2/2009--HOME_DEPOT_INC</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

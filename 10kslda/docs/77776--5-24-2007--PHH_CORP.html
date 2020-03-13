@@ -1,0 +1,208 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[5.6997872352, "../topics/{investment,_property,_distribution}.html", "{investment,_property,_distribution}"], [3.8046653412, "../topics/{control,_financial,_internal}.html", "{control,_financial,_internal}"], [3.749674973, "../topics/{financial,_litigation,_operation}.html", "{financial,_litigation,_operation}"], [3.6601651627, "../topics/{loan,_real,_estate}.html", "{loan,_real,_estate}"], [3.3064467977, "../topics/{stock,_price,_share}.html", "{stock,_price,_share}"], [2.7399153965, "../topics/{regulation,_change,_law}.html", "{regulation,_change,_law}"], [2.7161702258, "../topics/{interest,_director,_officer}.html", "{interest,_director,_officer}"], [2.700912422, "../topics/{competitive,_industry,_competition}.html", "{competitive,_industry,_competition}"], [2.671783744, "../topics/{regulation,_government,_change}.html", "{regulation,_government,_change}"], [1.9469630289, "../topics/{condition,_economic,_financial}.html", "{condition,_economic,_financial}"], [1.7749981646, "../topics/{provision,_law,_control}.html", "{provision,_law,_control}"], [1.706920425, "../topics/{loss,_insurance,_financial}.html", "{loss,_insurance,_financial}"], [1.7014243062, "../topics/{debt,_indebtedness,_cash}.html", "{debt,_indebtedness,_cash}"], [1.6976999557, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [1.6974351406, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [1.6971267436, "../topics/{capital,_credit,_financial}.html", "{capital,_credit,_financial}"], [1.6591782126, "../topics/{system,_service,_information}.html", "{system,_service,_information}"], [1.5017406458, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>77776--5/24/2007--PHH_CORP</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">77776--5/24/2007--PHH_CORP</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{investment,_property,_distribution}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{investment,_property,_distribution}.html'">{investment, property, distribution}</td></tr>
+<tr class="list"><td id="{control,_financial,_internal}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{control,_financial,_internal}.html'">{control, financial, internal}</td></tr>
+<tr class="list"><td id="{financial,_litigation,_operation}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{financial,_litigation,_operation}.html'">{financial, litigation, operation}</td></tr>
+<tr class="list"><td id="{loan,_real,_estate}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{loan,_real,_estate}.html'">{loan, real, estate}</td></tr>
+<tr class="list"><td id="{stock,_price,_share}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_share}.html'">{stock, price, share}</td></tr>
+<tr class="list"><td id="{regulation,_change,_law}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_change,_law}.html'">{regulation, change, law}</td></tr>
+<tr class="list"><td id="{interest,_director,_officer}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{interest,_director,_officer}.html'">{interest, director, officer}</td></tr>
+<tr class="list"><td id="{competitive,_industry,_competition}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{competitive,_industry,_competition}.html'">{competitive, industry, competition}</td></tr>
+<tr class="list"><td id="{regulation,_government,_change}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_government,_change}.html'">{regulation, government, change}</td></tr>
+<tr class="list"><td id="{condition,_economic,_financial}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{condition,_economic,_financial}.html'">{condition, economic, financial}</td></tr>
+<tr class="list"><td id="{provision,_law,_control}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{provision,_law,_control}.html'">{provision, law, control}</td></tr>
+<tr class="list"><td id="{loss,_insurance,_financial}" onmouseover="highlight(11)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{loss,_insurance,_financial}.html'">{loss, insurance, financial}</td></tr>
+<tr class="list"><td id="{debt,_indebtedness,_cash}" onmouseover="highlight(12)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{debt,_indebtedness,_cash}.html'">{debt, indebtedness, cash}</td></tr>
+<tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(13)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(14)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{capital,_credit,_financial}" onmouseover="highlight(15)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{capital,_credit,_financial}.html'">{capital, credit, financial}</td></tr>
+<tr class="list"><td id="{system,_service,_information}" onmouseover="highlight(16)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{system,_service,_information}.html'">{system, service, information}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(17)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    Risks Related to our Internal Control Deficiencies, the Restatement of our Financial Statements and the Delay in Filing our Periodic Reports
+We have identified material weaknesses in our internal control over financial reporting.
+We expect to continue to incur significant expenses related to our internal control over financial reporting and the preparation of our financial statements.
+We have delayed the filing of our Quarterly Report on Form 10-Q for the quarter ended March 31, 2007. As a result, we do not have current financial information available and are not able to register our securities for offer and sale until we are deemed a current filer with the SEC.
+The delays in filing our periodic reports with the SEC could cause the NYSE to commence suspension or delisting procedures with respect to our Common stock.
+Pending securities litigation and potential indemnification obligations and limitations of our directors and officers liability insurance in connection with such securities litigation could have a material adverse effect on our business, financial position, results of operations or cash flows.
+Continuing negative publicity may adversely affect our business, financial position, results of operations or cash flows.
+Risks Related to our Business
+The termination of our status as the exclusive recommended provider of mortgage products and services promoted by the residential and commercial real estate brokerage business owned and operated by Realogy s affiliate, NRT, the title and settlement services business owned and operated by Realogy s affiliate, TRG and the relocation business owned and operated by Realogy s affiliate, Cartus, could have a material adverse effect on our business, financial position, results of operations and cash flows.
+Adverse developments in general business, economic, environmental and political conditions could have a material adverse effect on our business, financial position, results of operations or cash flows.
+Recent developments in the subprime mortgage market may negatively affect the mortgage loan origination volumes and profitability of mortgage loan products that we offer in our Mortgage Production segment.
+Downward trends in the real estate market could adversely impact our business, profitability or results of operations.
+Our business is affected by fluctuations in interest rates, and if we fail to manage our exposure to changes in interest rates effectively, our business, financial position, results of operations or cash flows could be adversely affected.
+Certain hedging strategies that we use to manage interest rate risk associated with our MSRs and other mortgage-related assets and commitments may not be effective in mitigating those risks.
+Our business relies, in part, on warehouse, repurchase and other credit facilities to fund mortgage loans and vehicle purchases. If any of our warehouse, repurchase and other credit facilities are terminated as a result of our breach of the agreement or are not renewed, we may be unable to find replacement financing on commercially favorable terms, if at all, which could have a material adverse effect on our business, financial position, results of operations or cash flows.
+The industries in which we operate are highly competitive and, if we fail to meet the competitive challenges in our industries, it could have a material adverse effect on our business, financial position, results of operations or cash flows.
+Changes in existing U.S. government-sponsored mortgage programs, or disruptions in the secondary markets for mortgage loans could adversely affect our business, financial position, results of operations or cash flows.
+The businesses in which we engage are complex and heavily regulated, and changes in the regulatory environment affecting our businesses could have a material adverse effect on our financial position, results of operations or cash flows.
+Our Fleet Management Services business contracts with various government agencies, which may be subject to audit and potential reduction of costs and fees.
+If certain change in control transactions occur, some of our mortgage loan origination arrangements with financial institutions could be subject to termination at the election of such institutions.
+Unanticipated liabilities of our Fleet Management Services segment as a result of damages in connection with motor vehicle accidents under the theory of vicarious liability could have a material adverse effect on our business, financial position, results of operations or cash flows.
+A failure to maintain our investment grade ratings could impact our ability to obtain financing on favorable terms and could negatively impact our business.
+Our accounting policies and methods are fundamental to how we record and report our financial position and results of operations, and they may require management to make assumptions and estimates about matters that are inherently uncertain.
+Changes in accounting standards issued by the Financial Accounting Standards Board (the FASB ) or other standard-setting bodies may adversely affect our reported revenues, profitability or financial position.
+We depend on the accuracy and completeness of information provided by or on behalf of our customers and counterparties.
+An interruption in or breach of our information systems may result in lost business, regulatory actions or litigation or may otherwise have an adverse effect on our reputation, revenues, profitability and business prospects.
+The success and growth of our business may be adversely affected if we do not adapt to and implement technological changes.
+Risks Related to the Spin-Off
+Our agreements with Cendant and Realogy may not reflect terms that would have resulted from arm s-length negotiations between unaffiliated parties.
+We may be required to satisfy certain indemnification obligations to Cendant or Realogy, or we may not be able to collect on indemnification rights from Cendant or Realogy.
+Certain arrangements and agreements that we have entered into with Cendant in connection with the Spin-Off could impact our tax and other assets and liabilities in the future, and our financial statements are subject to future adjustments as a result of our obligations under those arrangements and agreements.
+Our historical financial information may not be representative of results we would have achieved as an independent company or will achieve in the future.
+Risks Related to our Common Stock
+There may be a limited public market for our Common stock and our stock price may experience volatility.
+Provisions in our charter documents, the Maryland General Corporation Law (the MGCL ) and our stockholder rights plan may delay or prevent our acquisition by a third party.
+Certain provisions of the Mortgage Venture Operating Agreement that we have with Realogy could discourage third parties from seeking to acquire us or could reduce the amount of consideration they would be willing to pay our stockholders in an acquisition transaction.
+<p><a href="http://www.sec.gov/Archives/edgar/data/77776/0000950123-07-007894.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/77776--11-22-2006--PHH_CORP.html'">77776--11/22/2006--PHH_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/899749--2-25-2008--HEALTHCARE_REALTY_TRUST_INC.html'">899749--2/25/2008--HEALTHCARE_REALTY_TRUST_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/899749--2-22-2010--HEALTHCARE_REALTY_TRUST_INC.html'">899749--2/22/2010--HEALTHCARE_REALTY_TRUST_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1042798--3-31-2009--PRIME_GROUP_REALTY_TRUST.html'">1042798--3/31/2009--PRIME_GROUP_REALTY_TRUST</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/910108--3-1-2007--LEXINGTON_REALTY_TRUST.html'">910108--3/1/2007--LEXINGTON_REALTY_TRUST</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/921112--2-27-2009--LIBERTY_PROPERTY_TRUST.html'">921112--2/27/2009--LIBERTY_PROPERTY_TRUST</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/868512--3-31-2006--HOLLINGER_INTERNATIONAL_INC.html'">868512--3/31/2006--HOLLINGER_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/85388--4-18-2006--ROUSE_COMPANY.html'">85388--4/18/2006--ROUSE_COMPANY</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1253986--3-15-2006--ARBOR_REALTY_TRUST_INC.html'">1253986--3/15/2006--ARBOR_REALTY_TRUST_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1052752--3-17-2008--GETTY_REALTY_CORP_-MD-.html'">1052752--3/17/2008--GETTY_REALTY_CORP_/MD/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/921112--2-26-2010--LIBERTY_PROPERTY_TRUST.html'">921112--2/26/2010--LIBERTY_PROPERTY_TRUST</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1294345--3-31-2008--BLACKHAWK_CAPITAL_GROUP_BDC_INC.html'">1294345--3/31/2008--BLACKHAWK_CAPITAL_GROUP_BDC_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/826675--4-2-2007--DYNEX_CAPITAL_INC.html'">826675--4/2/2007--DYNEX_CAPITAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1230358--3-15-2007--ARC_CORPORATE_REALTY_TRUST_INC.html'">1230358--3/15/2007--ARC_CORPORATE_REALTY_TRUST_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/77776--2-29-2008--PHH_CORP.html'">77776--2/29/2008--PHH_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/102588--10-15-2007--SONOMAWEST_HOLDINGS_INC.html'">102588--10/15/2007--SONOMAWEST_HOLDINGS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/921112--2-29-2008--LIBERTY_PROPERTY_LIMITED_PARTNERSHIP.html'">921112--2/29/2008--LIBERTY_PROPERTY_LIMITED_PARTNERSHIP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/945489--4-14-2008--BELL_INDUSTRIES_INC_-NEW-.html'">945489--4/14/2008--BELL_INDUSTRIES_INC_/NEW/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1279740--12-26-2007--DEVELOCAP_INC.html'">1279740--12/26/2007--DEVELOCAP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1281845--9-10-2007--INNOCAP_INC.html'">1281845--9/10/2007--INNOCAP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/923284--2-29-2008--INLAND_REAL_ESTATE_CORP.html'">923284--2/29/2008--INLAND_REAL_ESTATE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/729237--2-29-2008--PARKWAY_PROPERTIES_INC.html'">729237--2/29/2008--PARKWAY_PROPERTIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1113247--6-5-2009--BEARINGPOINT_INC.html'">1113247--6/5/2009--BEARINGPOINT_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1042798--4-9-2010--PRIME_GROUP_REALTY_TRUST.html'">1042798--4/9/2010--PRIME_GROUP_REALTY_TRUST</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/926660--2-26-2010--AIMCO_PROPERTIES_LP.html'">926660--2/26/2010--AIMCO_PROPERTIES_LP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1331757--3-28-2008--Federal_Home_Loan_Bank_of_Dallas.html'">1331757--3/28/2008--Federal_Home_Loan_Bank_of_Dallas</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1004434--2-29-2008--AFFILIATED_MANAGERS_GROUP_INC.html'">1004434--2/29/2008--AFFILIATED_MANAGERS_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/926660--2-27-2009--AIMCO_PROPERTIES_LP.html'">926660--2/27/2009--AIMCO_PROPERTIES_LP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/899629--2-29-2008--ACADIA_REALTY_TRUST.html'">899629--2/29/2008--ACADIA_REALTY_TRUST</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/868512--3-12-2008--SUN-TIMES_MEDIA_GROUP_INC.html'">868512--3/12/2008--SUN-TIMES_MEDIA_GROUP_INC</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

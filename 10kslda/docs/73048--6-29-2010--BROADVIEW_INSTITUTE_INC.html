@@ -1,0 +1,188 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[12.1454789108, "../topics/{regulation,_government,_change}.html", "{regulation,_government,_change}"], [3.390929388, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [2.2023904645, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [1.7810009671, "../topics/{system,_service,_information}.html", "{system,_service,_information}"], [1.7105089746, "../topics/{financial,_litigation,_operation}.html", "{financial,_litigation,_operation}"], [1.7026144338, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"], [1.6990730026, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [1.6971838588, "../topics/{competitive,_industry,_competition}.html", "{competitive,_industry,_competition}"], [1.5919760281, "../topics/{condition,_economic,_financial}.html", "{condition,_economic,_financial}"], [1.5536130338, "../topics/{loan,_real,_estate}.html", "{loan,_real,_estate}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>73048--6/29/2010--BROADVIEW_INSTITUTE_INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">73048--6/29/2010--BROADVIEW_INSTITUTE_INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{regulation,_government,_change}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_government,_change}.html'">{regulation, government, change}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{system,_service,_information}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{system,_service,_information}.html'">{system, service, information}</td></tr>
+<tr class="list"><td id="{financial,_litigation,_operation}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{financial,_litigation,_operation}.html'">{financial, litigation, operation}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+<tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{competitive,_industry,_competition}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{competitive,_industry,_competition}.html'">{competitive, industry, competition}</td></tr>
+<tr class="list"><td id="{condition,_economic,_financial}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{condition,_economic,_financial}.html'">{condition, economic, financial}</td></tr>
+<tr class="list"><td id="{loan,_real,_estate}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{loan,_real,_estate}.html'">{loan, real, estate}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    Loss of Broadview University s accreditation by the Accrediting Council for Independent Colleges and Schools (ACICS) would leave us unable to offer approved educational programs, and students would be unable to participate in Title IV programs.
+Loss of Broadview University s state authorizations could prevent us from offering certain programs, operating our campuses, or affect our ability to participate in Title IV programs in the state we currently operate or state we may operate in the future.
+Any action by Congress that significantly reduces Title IV program funding or the ability of Broadview University or its students to participate in Title IV programs could have a material adverse effect on our student population, financial condition, results of operations and cash flows.
+Broadview University may lose its eligibility to participate in Title IV programs if its student loan default rates are greater than the standards set by the USDE.
+Failure to demonstrate administrative capability or financial responsibility as defined by the USDE may result in the loss of eligibility to participate in Title IV programs.
+We cannot open new schools or branch campuses of our existing school and we cannot offer new programs if these new locations and program offerings are not timely approved by the USDE and state and accrediting regulators, as applicable.
+We could lose our eligibility to participate in Title IV programs or be provisionally certified with respect to our participation in such programs if the percentage of our revenues derived from those programs were too high.
+Failure to comply with USDE incentive compensation rules could result in sanctions against Broadview University.
+Investigations, claims, and actions against the Company and other companies in our industry could adversely affect our business and stock price.
+General credit market conditions related to the student loan industry may result in fewer lenders and loan products and increased regulatory costs.
+Pending rulemaking by the USDE may result in regulatory changes that could materially and adversely affect our business.
+Our current transition from the Federal Family Education Loan Program to the William D. Ford Federal Direct Lending Program may restrict or limit our learners access to federal student loans, thereby materially impacting our enrollment and revenue.
+Risks Related to Our Business:
+Our financial performance depends, in part, on our ability to update and expand our academic programs and keep pace with changing market needs and technology.
+If we fail to effectively identify, establish, and operate new branch campuses of our existing school, our growth may be slowed and our profitability may be adversely affected.
+We operate in a highly competitive industry.
+Our success depends in part on our ability to market Broadview University to prospective students.
+The loss of our key personnel could harm our business.
+We operate pursuant to a Service Level Agreement with GU/MSB and are substantially dependent upon GU/MSB for support services, the loss of which could have a significant negative impact on our operations.
+Our business may be adversely affected by general economic conditions in the U.S. or abroad.
+The Company s computer networks may be vulnerable to system disruptions, unauthorized access, computer viruses, and other security threats
+Risk Related to Our Common Stock:
+The trading price of the Company s common stock may fluctuate substantially as a result of a number of factors, many of which are not in our control.
+Our largest shareholder, who holds a significant portion of our outstanding equity, may have substantial influence over the Company and his interests may not be aligned with the interests of our other shareholders.
+<p><a href="http://www.sec.gov/Archives/edgar/data/73048/0000950123-10-062096.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/201653--3-16-2007--DIALYSIS_CORP_OF_AMERICA.html'">201653--3/16/2007--DIALYSIS_CORP_OF_AMERICA</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/201653--3-31-2006--DIALYSIS_CORP_OF_AMERICA.html'">201653--3/31/2006--DIALYSIS_CORP_OF_AMERICA</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/892537--3-9-2007--MANTECH_INTERNATIONAL_CORP.html'">892537--3/9/2007--MANTECH_INTERNATIONAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1143363--3-15-2006--SI_INTERNATIONAL_INC.html'">1143363--3/15/2006--SI_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1143363--3-12-2008--SI_INTERNATIONAL_INC.html'">1143363--3/12/2008--SI_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/792985--2-27-2007--HEALTH_MANAGEMENT_ASSOCIATES_INC.html'">792985--2/27/2007--HEALTH_MANAGEMENT_ASSOCIATES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/929887--5-22-2007--APOLLO_GROUP_INC.html'">929887--5/22/2007--APOLLO_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/776325--3-9-2010--RES_CARE_INC_-KY-.html'">776325--3/9/2010--RES_CARE_INC_/KY/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1143363--3-13-2007--SI_INTERNATIONAL_INC.html'">1143363--3/13/2007--SI_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1013934--2-17-2009--STRAYER_EDUCATION_INC.html'">1013934--2/17/2009--STRAYER_EDUCATION_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/896262--2-27-2008--AMEDISYS_INC.html'">896262--2/27/2008--AMEDISYS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/832483--3-13-2006--CONCORDE_CAREER_COLLEGES_INC.html'">832483--3/13/2006--CONCORDE_CAREER_COLLEGES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1361579--2-19-2010--Virtual_Radiologic_CORP.html'">1361579--2/19/2010--Virtual_Radiologic_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1101723--2-26-2009--UNITED_SURGICAL_PARTNERS_INTERNATIONAL_INC.html'">1101723--2/26/2009--UNITED_SURGICAL_PARTNERS_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1013934--2-26-2010--STRAYER_EDUCATION_INC.html'">1013934--2/26/2010--STRAYER_EDUCATION_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1091312--3-31-2010--SYMBION_INC-TN.html'">1091312--3/31/2010--SYMBION_INC/TN</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1091312--3-31-2009--SYMBION_INC-TN.html'">1091312--3/31/2009--SYMBION_INC/TN</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/16058--8-29-2007--CACI_INTERNATIONAL_INC_-DE-.html'">16058--8/29/2007--CACI_INTERNATIONAL_INC_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/16058--8-27-2008--CACI_INTERNATIONAL_INC_-DE-.html'">16058--8/27/2008--CACI_INTERNATIONAL_INC_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/16058--8-26-2009--CACI_INTERNATIONAL_INC_-DE-.html'">16058--8/26/2009--CACI_INTERNATIONAL_INC_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1064863--2-27-2007--AMERIGROUP_CORP.html'">1064863--2/27/2007--AMERIGROUP_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1171662--3-20-2007--TRIPLE-S_MANAGEMENT_CORP.html'">1171662--3/20/2007--TRIPLE-S_MANAGEMENT_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/922475--2-23-2007--ITT_EDUCATIONAL_SERVICES_INC.html'">922475--2/23/2007--ITT_EDUCATIONAL_SERVICES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1163958--3-13-2009--MEDICAL_STAFFING_NETWORK_HOLDINGS_INC.html'">1163958--3/13/2009--MEDICAL_STAFFING_NETWORK_HOLDINGS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/922475--2-24-2006--ITT_EDUCATIONAL_SERVICES_INC.html'">922475--2/24/2006--ITT_EDUCATIONAL_SERVICES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1091312--3-14-2006--SYMBION_INC-TN.html'">1091312--3/14/2006--SYMBION_INC/TN</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1361579--2-20-2009--Virtual_Radiologic_CORP.html'">1361579--2/20/2009--Virtual_Radiologic_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1163958--3-6-2006--MEDICAL_STAFFING_NETWORK_HOLDINGS_INC.html'">1163958--3/6/2006--MEDICAL_STAFFING_NETWORK_HOLDINGS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/785557--1-19-2010--TEAMSTAFF_INC.html'">785557--1/19/2010--TEAMSTAFF_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1171662--3-5-2010--TRIPLE-S_MANAGEMENT_CORP.html'">1171662--3/5/2010--TRIPLE-S_MANAGEMENT_CORP</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

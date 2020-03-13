@@ -1,0 +1,194 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[4.1842753236, "../topics/{stock,_price,_share}.html", "{stock,_price,_share}"], [3.8727459427, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [3.7414104797, "../topics/{condition,_economic,_financial}.html", "{condition,_economic,_financial}"], [3.725679926, "../topics/{debt,_indebtedness,_cash}.html", "{debt,_indebtedness,_cash}"], [2.7636125597, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"], [2.7616890035, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [2.6404641301, "../topics/{cost,_regulation,_environmental}.html", "{cost,_regulation,_environmental}"], [1.8317567904, "../topics/{control,_financial,_internal}.html", "{control,_financial,_internal}"], [1.7737896693, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [1.7707917746, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [1.7468355275, "../topics/{capital,_credit,_financial}.html", "{capital,_credit,_financial}"], [1.7377577731, "../topics/{product,_liability,_claim}.html", "{product,_liability,_claim}"], [1.696507874, "../topics/{provision,_law,_control}.html", "{provision,_law,_control}"], [1.2306187327, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>878280--10/16/2006--SALTON_INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">878280--10/16/2006--SALTON_INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{stock,_price,_share}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_share}.html'">{stock, price, share}</td></tr>
+<tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{condition,_economic,_financial}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{condition,_economic,_financial}.html'">{condition, economic, financial}</td></tr>
+<tr class="list"><td id="{debt,_indebtedness,_cash}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{debt,_indebtedness,_cash}.html'">{debt, indebtedness, cash}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{cost,_regulation,_environmental}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_regulation,_environmental}.html'">{cost, regulation, environmental}</td></tr>
+<tr class="list"><td id="{control,_financial,_internal}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{control,_financial,_internal}.html'">{control, financial, internal}</td></tr>
+<tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{capital,_credit,_financial}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{capital,_credit,_financial}.html'">{capital, credit, financial}</td></tr>
+<tr class="list"><td id="{product,_liability,_claim}" onmouseover="highlight(11)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_liability,_claim}.html'">{product, liability, claim}</td></tr>
+<tr class="list"><td id="{provision,_law,_control}" onmouseover="highlight(12)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{provision,_law,_control}.html'">{provision, law, control}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(13)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    OUR SUBSTANTIAL INDEBTEDNESS COULD ADVERSELY AFFECT OUR FINANCIAL HEALTH AND PREVENT US FROM FULFILLING OUR PAYMENT OBLIGATIONS.
+OUR DEBT INSTRUMENTS CONTAIN RESTRICTIVE COVENANTS THAT COULD ADVERSELY AFFECT OUR BUSINESS BY LIMITING OUR FLEXIBILITY.
+WE MUST EITHER REPAY OR REFINANCE OUR DEBT MATURING IN DECEMBER 2007 AND THEREAFTER.
+WE HAVE EXPERIENCED A DECLINE IN DOMESTIC MARKET SALES AND CONTINUE TO IMPLEMENT A DOMESTIC RESTRUCTURING PLAN.
+OUR INTERNATIONAL OPERATIONS, AND EXPANSION OF THESE OPERATIONS, SUBJECTS US TO ADDITIONAL BUSINESS RISKS AND MAY CAUSE OUR PROFITABILITY TO DECLINE DUE TO INCREASED COSTS.
+OUR MARGINS HAVE BEEN ADVERSELY IMPACTED BY INCREASES IN RAW MATERIAL PRICES.
+OUR ABILITY TO OBTAIN PRODUCTS MAY BE ADVERSELY IMPACTED BY WORLDWIDE DEMAND ON RAW MATERIAL.
+IF WE WERE TO LOSE ONE OR MORE OF OUR MAJOR CUSTOMERS, OR SUFFER A MAJOR REDUCTION OF ORDERS FROM THEM, OUR FINANCIAL RESULTS WOULD SUFFER.
+OUR DEPENDENCE ON FOREIGN SUPPLIERS SUBJECTS US TO THE RISKS OF DOING BUSINESS ABROAD.
+THE SMALL HOUSEHOLD APPLIANCE INDUSTRY IS HIGHLY COMPETITIVE AND WE MAY NOT BE ABLE TO COMPETE EFFECTIVELY.
+IF THE HOUSEWARES SECTOR OF THE RETAIL INDUSTRY CONTINUES TO EXPERIENCE AN ECONOMIC SLOWDOWN, OUR FINANCIAL RESULTS WILL BE ADVERSELY AFFECTED.
+LONG LEAD TIMES, POTENTIAL MATERIAL PRICE INCREASES AND CUSTOMER DEMANDS MAY CAUSE US TO PURCHASE MORE INVENTORY THAN NECESSARY.
+IF WE DO NOT ATTRACT AND RETAIN SKILLED PERSONNEL, OUR ABILITY TO GROW AND DEVELOP OUR BUSINESS WILL SUFFER.
+OUR OUTSTANDING CONVERTIBLE PREFERRED STOCK CONTAINS REDEMPTION AND OTHER PROVISIONS WHICH COULD HAVE A MATERIAL ADVERSE EFFECT ON, AND SIGNIFICANTLY DILUTE, THE INTERESTS OF HOLDERS OF OUR COMMON STOCK.
+OUR CREDIT RATINGS HAVE BEEN DOWNGRADED AND COULD BE DOWNGRADED FURTHER.
+OUR FINANCIAL RESULTS WILL SUFFER.
+THE SEASONAL NATURE OF OUR BUSINESS COULD ADVERSELY IMPACT OUR OPERATIONS.
+PRODUCT RECALLS OR LAWSUITS RELATING TO DEFECTIVE PRODUCTS COULD ADVERSELY IMPACT OUR FINANCIAL RESULTS.
+THE INFRINGEMENT OR LOSS OF OUR PROPRIETARY RIGHTS COULD HAVE AN ADVERSE EFFECT ON OUR BUSINESS.
+WE MAY BE SUBJECT TO LITIGATION AND INFRINGEMENT CLAIMS, WHICH COULD CAUSE US TO INCUR SIGNIFICANT EXPENSES OR PREVENT US FROM SELLING OUR PRODUCTS.
+COMPLIANCE WITH GOVERNMENTAL REGULATIONS COULD SIGNIFICANTLY INCREASE OUR OPERATING COSTS OR PREVENT US FROM SELLING OUR PRODUCTS.
+THE REQUIREMENTS OF COMPLYING WITH THE SARBANES-OXLEY ACT MAY STRAIN OUR RESOURCES, AND OUR INTERNAL CONTROL OVER FINANCIAL REPORTING MAY NOT BE SUFFICIENT TO ENSURE TIMELY AND RELIABLE EXTERNAL FINANCIAL REPORTS.
+OUR STOCK PRICE MAY CONTINUE TO BE VOLATILE.
+OUR COMMON STOCK COULD BE DELISTED BY THE NEW YORK STOCK EXCHANGE IF WE DO NOT COMPLY WITH ITS CONTINUED LISTING STANDARDS.
+TAKEOVER DEFENSE PROVISIONS WHICH WE HAVE IMPLEMENTED MAY ADVERSELY AFFECT THE MARKET PRICE OF OUR COMMON STOCK.
+WE DO NOT ANTICIPATE PAYING DIVIDENDS.
+<p><a href="http://www.sec.gov/Archives/edgar/data/878280/0000950137-06-011060.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/791907--8-24-2007--LINEAR_TECHNOLOGY_CORP_-CA-.html'">791907--8/24/2007--LINEAR_TECHNOLOGY_CORP_/CA/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/878280--10-9-2007--SALTON_INC.html'">878280--10/9/2007--SALTON_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/947429--3-12-2009--INTERNATIONAL_WIRE_GROUP_INC.html'">947429--3/12/2009--INTERNATIONAL_WIRE_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1001606--3-12-2007--BLOUNT_INTERNATIONAL_INC.html'">1001606--3/12/2007--BLOUNT_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/887226--9-25-2009--PERCEPTRON_INC-MI.html'">887226--9/25/2009--PERCEPTRON_INC/MI</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/879526--4-14-2009--WABASH_NATIONAL_CORP_-DE.html'">879526--4/14/2009--WABASH_NATIONAL_CORP_/DE</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/887226--9-27-2010--PERCEPTRON_INC-MI.html'">887226--9/27/2010--PERCEPTRON_INC/MI</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/887733--11-26-2008--CENTRAL_GARDEN_&_PET_CO.html'">887733--11/26/2008--CENTRAL_GARDEN_&_PET_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1078203--4-2-2007--NET_PERCEPTIONS_INC.html'">1078203--4/2/2007--NET_PERCEPTIONS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/912263--4-16-2009--TALBOTS_INC.html'">912263--4/16/2009--TALBOTS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/867840--9-28-2009--PRECISION_OPTICS_CORPORATION_INC.html'">867840--9/28/2009--PRECISION_OPTICS_CORPORATION_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/867840--9-21-2010--PRECISION_OPTICS_CORPORATION_INC.html'">867840--9/21/2010--PRECISION_OPTICS_CORPORATION_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/849667--11-24-2009--AMERICAN_ITALIAN_PASTA_CO.html'">849667--11/24/2009--AMERICAN_ITALIAN_PASTA_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/929008--2-27-2009--WESCO_INTERNATIONAL_INC.html'">929008--2/27/2009--WESCO_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1349532--2-16-2010--Panglobal_Brands_Inc..html'">1349532--2/16/2010--Panglobal_Brands_Inc.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1001606--3-11-2009--BLOUNT_INTERNATIONAL_INC.html'">1001606--3/11/2009--BLOUNT_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/862861--3-31-2006--APPLIANCE_RECYCLING_CENTERS_OF_AMERICA_INC_-MN.html'">862861--3/31/2006--APPLIANCE_RECYCLING_CENTERS_OF_AMERICA_INC_/MN</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1373768--12-7-2007--American_Achievement_Group_Holding_Corp..html'">1373768--12/7/2007--American_Achievement_Group_Holding_Corp.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/50725--12-15-2008--GRIFFON_CORP.html'">50725--12/15/2008--GRIFFON_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/814068--2-19-2009--CHAMPION_ENTERPRISES_INC.html'">814068--2/19/2009--CHAMPION_ENTERPRISES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/927417--3-23-2010--POLYMER_GROUP_INC.html'">927417--3/23/2010--POLYMER_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/927417--3-19-2009--POLYMER_GROUP_INC.html'">927417--3/19/2009--POLYMER_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1157564--4-11-2007--SMALL_WORLD_KIDS_INC.html'">1157564--4/11/2007--SMALL_WORLD_KIDS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/896985--12-14-2009--Destination_Maternity_Corp.html'">896985--12/14/2009--Destination_Maternity_Corp</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/712034--3-2-2009--ACCO_BRANDS_CORP.html'">712034--3/2/2009--ACCO_BRANDS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/50725--12-14-2006--GRIFFON_CORP.html'">50725--12/14/2006--GRIFFON_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/352998--3-31-2010--IGI_INC.html'">352998--3/31/2010--IGI_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/896985--12-15-2008--Destination_Maternity_Corp.html'">896985--12/15/2008--Destination_Maternity_Corp</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/853273--3-6-2009--BORLAND_SOFTWARE_CORP.html'">853273--3/6/2009--BORLAND_SOFTWARE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/50725--11-29-2007--GRIFFON_CORP.html'">50725--11/29/2007--GRIFFON_CORP</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

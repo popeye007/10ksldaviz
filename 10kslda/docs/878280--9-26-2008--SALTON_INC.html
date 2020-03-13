@@ -1,0 +1,204 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[7.256799813, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [6.1177064761, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"], [4.8069188537, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [3.7042839045, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [3.6904231368, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [3.6448319865, "../topics/{condition,_economic,_financial}.html", "{condition,_economic,_financial}"], [2.7156706714, "../topics/{cost,_regulation,_environmental}.html", "{cost,_regulation,_environmental}"], [2.6954905296, "../topics/{debt,_indebtedness,_cash}.html", "{debt,_indebtedness,_cash}"], [1.7523376743, "../topics/{stock,_price,_share}.html", "{stock,_price,_share}"], [1.6977808138, "../topics/{control,_financial,_internal}.html", "{control,_financial,_internal}"], [1.6973031776, "../topics/{product,_liability,_claim}.html", "{product,_liability,_claim}"], [1.6964558216, "../topics/{tax,_income,_asset}.html", "{tax,_income,_asset}"], [1.3979390626, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"], [1.3631032788, "../topics/{cost,_operation,_labor}.html", "{cost,_operation,_labor}"], [1.0634215473, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>878280--9/26/2008--SALTON_INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">878280--9/26/2008--SALTON_INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{condition,_economic,_financial}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{condition,_economic,_financial}.html'">{condition, economic, financial}</td></tr>
+<tr class="list"><td id="{cost,_regulation,_environmental}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_regulation,_environmental}.html'">{cost, regulation, environmental}</td></tr>
+<tr class="list"><td id="{debt,_indebtedness,_cash}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{debt,_indebtedness,_cash}.html'">{debt, indebtedness, cash}</td></tr>
+<tr class="list"><td id="{stock,_price,_share}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_share}.html'">{stock, price, share}</td></tr>
+<tr class="list"><td id="{control,_financial,_internal}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{control,_financial,_internal}.html'">{control, financial, internal}</td></tr>
+<tr class="list"><td id="{product,_liability,_claim}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_liability,_claim}.html'">{product, liability, claim}</td></tr>
+<tr class="list"><td id="{tax,_income,_asset}" onmouseover="highlight(11)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{tax,_income,_asset}.html'">{tax, income, asset}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(12)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+<tr class="list"><td id="{cost,_operation,_labor}" onmouseover="highlight(13)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_operation,_labor}.html'">{cost, operation, labor}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(14)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    The costs of the products purchased by us could increase as a result of fluctuations in the Chinese currency.
+The bankruptcy or financial difficulty of any major customer or fluctuations in the financial condition of the retail industry in general could adversely affect our results of operations.
+We purchase a large number of products from two suppliers. Production-related risks with these suppliers could jeopardize our ability to realize anticipated sales and profits until alternative supply arrangements are secured.
+The failure of our business strategy could seriously hurt our financial condition and results of operations.
+Our international operations subject us to additional business risks and may cause our profitability to decline due to increased costs.
+Harbinger Capital Partners has effective control over the outcome of actions requiring the approval of our stockholders.
+We depend on consumer spending, which fluctuates for a variety of reasons, including seasonality, which may cause our results of operations to fluctuate.
+Our net operating loss carryforwards are limited as a result of the merger and are dependant upon us achieving profitable results.
+If the household appliance sector of the retail industry experiences an economic slowdown, our results of operations will suffer.
+Our ability to obtain products may be adversely impacted by changes in worldwide supply of or demand for raw materials.
+We depend on third party suppliers for the manufacturing of substantially all of our products and if we fail to develop and maintain relationships with a sufficient number of qualified suppliers, our ability to timely and efficiently source products that meet our standards for quality could be adversely affected.
+We are subject to significant international business risks that could hurt our business and cause our results of operations to fluctuate.
+A deterioration in trade relations with China could lead to a substantial increase in tariffs imposed on goods of Chinese origin, which potentially could reduce demand for and sales of our products.
+Significant fluctuations in the exchange rate between the U.S. dollar and the currencies in which our costs are denominated may reduce our sales or profits.
+We may not be able to realize expected benefits and synergies from future acquisitions of businesses or product lines.
+If we were to lose one or more of our major customers, or suffer a major reduction of orders from them, our financial results would suffer.
+Any reduction in trade credit from our suppliers could seriously harm our operations and financial condition.
+The small household appliance industry is consolidating, which could reduce our ability to successfully secure product placements at key customers and limit our ability to sustain a cost competitive position in the industry.
+The small household appliance industry is highly competitive and we may not be able to compete effectively, causing us to lose market share and sales.
+Our future success requires us to develop new and innovative products on a consistent basis in order to increase revenues and we may not be able to do so.
+Long lead times, potential material price increases and customer demands may cause us to purchase more inventory than necessary, which may lead to increased obsolescence and adversely affect our results of operations.
+Our financing arrangements could subject us to various restrictions that could limit our operating flexibility.
+Our leverage is substantial, which may have an adverse effect on our available cash flow, our ability to obtain additional financing if necessary in the future, our flexibility in reacting to competitive and technological changes and our operations.
+Sales of our common stock by Harbinger Capital Partners could cause the trading price of our common stock to decline.
+The market price of our common stock could decline if we fail to achieve the expected benefits of the merger with APN Holdco.
+If we are unable to renew the Black Decker
+trademark license agreement, our business could suffer.
+Our actual liabilities relating to environmental matters may exceed our expectations.
+Product recalls or lawsuits relating to defective products could adversely impact our results of operations.
+The infringement or loss of our proprietary rights could harm our business.
+We may be subject to litigation and infringement claims, which could cause us to incur significant expenses or prevent us from selling our products.
+Compliance with governmental regulations could significantly increase our operating costs or prevent us from selling our products.
+The requirements of complying with the Sarbanes-Oxley Act may strain our resources, and our internal control over financial reporting may not be sufficient to ensure timely and reliable external financial reports.
+Our stock price may continue to be volatile.
+Our common stock was delisted from the New York Stock Exchange and now is an over-the-counter security quoted on The Pink Sheets Electronic Quotation Service.
+<p><a href="http://www.sec.gov/Archives/edgar/data/878280/0000950144-08-007284.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/820774--1-16-2007--ASHWORTH_INC.html'">820774--1/16/2007--ASHWORTH_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/882508--3-11-2009--QUICKLOGIC_CORPORATION.html'">882508--3/11/2009--QUICKLOGIC_CORPORATION</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/828064--4-15-2009--ROCKFORD_CORP.html'">828064--4/15/2009--ROCKFORD_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/851310--3-1-2010--HARMONIC_INC.html'">851310--3/1/2010--HARMONIC_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1088162--6-26-2009--MAD_CATZ_INTERACTIVE_INC.html'">1088162--6/26/2009--MAD_CATZ_INTERACTIVE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/851310--3-2-2009--HARMONIC_INC.html'">851310--3/2/2009--HARMONIC_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1088162--6-11-2010--MAD_CATZ_INTERACTIVE_INC.html'">1088162--6/11/2010--MAD_CATZ_INTERACTIVE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/856250--9-26-2008--CRAFTMADE_INTERNATIONAL_INC.html'">856250--9/26/2008--CRAFTMADE_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1408710--9-8-2010--Fabrinet.html'">1408710--9/8/2010--Fabrinet</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/61478--12-22-2008--ADC_TELECOMMUNICATIONS_INC.html'">61478--12/22/2008--ADC_TELECOMMUNICATIONS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1111928--3-12-2009--IPG_PHOTONICS_CORP.html'">1111928--3/12/2009--IPG_PHOTONICS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/61478--11-23-2010--ADC_TELECOMMUNICATIONS_INC.html'">61478--11/23/2010--ADC_TELECOMMUNICATIONS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/910521--3-2-2009--DECKERS_OUTDOOR_CORP.html'">910521--3/2/2009--DECKERS_OUTDOOR_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/927003--2-26-2010--ADVANCED_ENERGY_INDUSTRIES_INC.html'">927003--2/26/2010--ADVANCED_ENERGY_INDUSTRIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1111928--3-15-2010--IPG_PHOTONICS_CORP.html'">1111928--3/15/2010--IPG_PHOTONICS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1138639--3-1-2010--INFINERA_CORP.html'">1138639--3/1/2010--INFINERA_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1022225--9-11-2009--OPLINK_COMMUNICATIONS_INC.html'">1022225--9/11/2009--OPLINK_COMMUNICATIONS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/910521--3-16-2007--DECKERS_OUTDOOR_CORP.html'">910521--3/16/2007--DECKERS_OUTDOOR_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1003022--3-1-2010--ZORAN_CORP_\DE\.html'">1003022--3/1/2010--ZORAN_CORP_\DE\</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1094739--7-9-2009--FINISAR_CORP.html'">1094739--7/9/2009--FINISAR_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1003022--2-26-2009--ZORAN_CORP_\DE\.html'">1003022--2/26/2009--ZORAN_CORP_\DE\</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1117171--12-8-2006--CHINA_BAK_BATTERY_INC.html'">1117171--12/8/2006--CHINA_BAK_BATTERY_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1003607--12-28-2009--ALTIGEN_COMMUNICATIONS_INC.html'">1003607--12/28/2009--ALTIGEN_COMMUNICATIONS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/801351--3-2-2010--WARNACO_GROUP_INC_-DE-.html'">801351--3/2/2010--WARNACO_GROUP_INC_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1157780--6-15-2009--OPNEXT_INC.html'">1157780--6/15/2009--OPNEXT_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/910521--3-9-2006--DECKERS_OUTDOOR_CORP.html'">910521--3/9/2006--DECKERS_OUTDOOR_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1108185--2-24-2010--OCCAM_NETWORKS_INC-DE.html'">1108185--2/24/2010--OCCAM_NETWORKS_INC/DE</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/822708--3-12-2009--ZOOM_TECHNOLOGIES_INC.html'">822708--3/12/2009--ZOOM_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/70530--7-29-2009--NATIONAL_SEMICONDUCTOR_CORP.html'">70530--7/29/2009--NATIONAL_SEMICONDUCTOR_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/103145--2-24-2010--VEECO_INSTRUMENTS_INC.html'">103145--2/24/2010--VEECO_INSTRUMENTS_INC</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

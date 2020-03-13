@@ -1,0 +1,214 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[10.4402524172, "../topics/{loan,_real,_estate}.html", "{loan,_real,_estate}"], [5.4842380801, "../topics/{loss,_insurance,_financial}.html", "{loss,_insurance,_financial}"], [4.5439810092, "../topics/{competitive,_industry,_competition}.html", "{competitive,_industry,_competition}"], [4.3446097685, "../topics/{stock,_price,_share}.html", "{stock,_price,_share}"], [4.0045384959, "../topics/{financial,_litigation,_operation}.html", "{financial,_litigation,_operation}"], [3.8285624249, "../topics/{debt,_indebtedness,_cash}.html", "{debt,_indebtedness,_cash}"], [2.9394772531, "../topics/{investment,_property,_distribution}.html", "{investment,_property,_distribution}"], [2.6355049455, "../topics/{cost,_operation,_labor}.html", "{cost,_operation,_labor}"], [2.2715508993, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [2.1900788523, "../topics/{system,_service,_information}.html", "{system,_service,_information}"], [1.8430132252, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [1.7557770739, "../topics/{provision,_law,_control}.html", "{provision,_law,_control}"], [1.7355797329, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [1.7304310634, "../topics/{control,_financial,_internal}.html", "{control,_financial,_internal}"], [1.7072996991, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"], [1.6454288919, "../topics/{tax,_income,_asset}.html", "{tax,_income,_asset}"], [1.4961305962, "../topics/{regulation,_government,_change}.html", "{regulation,_government,_change}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>834408--3/17/2008--BROOKE_CORP</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">834408--3/17/2008--BROOKE_CORP</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{loan,_real,_estate}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{loan,_real,_estate}.html'">{loan, real, estate}</td></tr>
+<tr class="list"><td id="{loss,_insurance,_financial}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{loss,_insurance,_financial}.html'">{loss, insurance, financial}</td></tr>
+<tr class="list"><td id="{competitive,_industry,_competition}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{competitive,_industry,_competition}.html'">{competitive, industry, competition}</td></tr>
+<tr class="list"><td id="{stock,_price,_share}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_share}.html'">{stock, price, share}</td></tr>
+<tr class="list"><td id="{financial,_litigation,_operation}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{financial,_litigation,_operation}.html'">{financial, litigation, operation}</td></tr>
+<tr class="list"><td id="{debt,_indebtedness,_cash}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{debt,_indebtedness,_cash}.html'">{debt, indebtedness, cash}</td></tr>
+<tr class="list"><td id="{investment,_property,_distribution}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{investment,_property,_distribution}.html'">{investment, property, distribution}</td></tr>
+<tr class="list"><td id="{cost,_operation,_labor}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_operation,_labor}.html'">{cost, operation, labor}</td></tr>
+<tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{system,_service,_information}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{system,_service,_information}.html'">{system, service, information}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{provision,_law,_control}" onmouseover="highlight(11)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{provision,_law,_control}.html'">{provision, law, control}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(12)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{control,_financial,_internal}" onmouseover="highlight(13)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{control,_financial,_internal}.html'">{control, financial, internal}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(14)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+<tr class="list"><td id="{tax,_income,_asset}" onmouseover="highlight(15)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{tax,_income,_asset}.html'">{tax, income, asset}</td></tr>
+<tr class="list"><td id="{regulation,_government,_change}" onmouseover="highlight(16)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_government,_change}.html'">{regulation, government, change}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    Borrowers financial performance may adversely affect their ability to repay amounts due to us.
+The ability of borrowers to repay loans made to them by Aleritas may be adversely affected by an increase in market interest rates.
+Our financial condition could be adversely affected if we are unable to fund our loans through sales to third parties.
+We make certain assumptions regarding the profitability of our securitizations, participations, warehouse lines and other funding vehicles which may not prove to be accurate.
+The value of the collateral securing our loans to borrowers may be adversely affected by our borrowers actions.
+Carrier override and contingent or profit sharing commissions are difficult to predict, and any decrease in our receipt of such payments will adversely affect us.
+Potential litigation and regulatory proceedings regarding commissions, fees, contingency payments, profit sharing and other compensation paid to brokers or agents could materially adversely affect our financial condition.
+Our business is dependent on the cyclical pricing of property and casualty insurance, which may adversely affect our franchisees performance and, thus, our financial performance.
+We may not be able to successfully convert new franchises.
+We may be required to repurchase loans sold with recourse or make payments on guarantees.
+We will be adversely affected if we do not have alternative sources of funds to repay our obligations as they mature.
+We are dependent on key personnel.
+With our method of funding our loans, our leverage may increase.
+Our business, results of operations, financial condition or liquidity may be materially adversely affected by errors and omissions.
+Termination of our professional liability insurance policy would adversely impact our financial prospects and our ability to continue our relationships with insurance companies.
+Insufficient internal controls may negatively impact our financial integrity, operations, financial reporting and, ultimately, have a material adverse effect on our stock price.
+Our dependence on initial franchise fees creates an incentive for us to extend credit to borrowers that may not meet our stringent underwriting guidelines.
+Some of the initiatives we have undertaken to improve franchisee quality and to reduce the time allowed for franchisees to demonstrate their success may reduce initial franchise fees, cash flow and profitability.
+Because a significant part of our insurance-related revenues and loans derive from operations located in five states, our business may be adversely affected by conditions in these states.
+A significant part of Aleritas business strategy involves the success of its affiliate, Brooke Capital Advisors, Inc. ( Capital Advisors ), in sourcing managing general agency ( MGA ) and funeral home loans for us, and its failure to generate adequate lending opportunities may adversely affect our business, prospects, results of operations and financial condition.
+If we fail to effectively manage our growth, our financial results could be adversely affected.
+We may not achieve the same levels of growth in revenues and profits in the future as we have in the past.
+Our debt instruments contain restrictive covenants and other requirements that may limit our business flexibility by imposing operating and financial restrictions on our operations.
+The cash flows we receive from the interests we retain in our securitizations could be delayed or reduced due to the requirements of the agreements we have signed, which could impair our ability to operate.
+When we sell loans classified as a true sale pursuant to the criteria established by SFAS 140, Accounting for Transfers and Servicing of Financial Assets and Extinguishment of Liabilities, we record a retained interest and/or servicing asset on our balance sheet. The amount we record is determined based upon certain assumptions made by management. If these assumptions are materially inaccurate, we may be required to write down these assets.
+Most of the loans we make are to privately-owned small- and medium-sized companies, which present a greater risk of loss than loans to larger companies.
+The collateral securing a loan may not be sufficient to protect us from a partial or complete loss if the loan becomes non-performing, and we are required to foreclose.
+We may incur lender liability as a result of our lending activities.
+Aleritas loans to foreign borrowers may involve significant risks in addition to the risks inherent in loans to U.S. borrowers.
+Many of Aleritas borrowers are captive insurance agents, and, therefore, are dependent on the continued success, competitiveness, credit quality and financial condition of the captive carrier they represent.
+Losses sustained by our Bermuda captive insurance companies may adversely affect us.
+Our reliance on the Internet could have a material adverse effect on our operations and our ability to meet customer expectations.
+Our network may be vulnerable to security breaches and inappropriate use by Internet users, which could disrupt or deter future use of our services.
+We are in highly competitive markets, which could result in reduced profitability.
+Our management, facilities and labor force may be insufficient to accommodate expected growth.
+We compete in highly regulated industries, which may result in increased expenses or restrictions in our operations.
+We are subject to franchise law and regulations that govern our status as a franchisor and regulate some aspects of our franchise relationships. Our ability to develop new franchise locations and to enforce contractual rights against franchisees may be adversely affected by these laws and regulations, which could cause our franchise revenues to decline and adversely affect our growth strategy.
+Risks Related to Our Common Stock
+Our Chairman of the Board, Robert D. Orr, is able to exert significant control over us and may act in a manner that is adverse to our other shareholders interests.
+As we are no longer a controlled company, we must comply with the corporate governance requirements of the NASDAQ Global Market.
+Our relatively low trading volume may limit shareholders ability to sell their shares.
+The price of our common stock may fluctuate significantly, which may make it difficult for shareholders to resell common stock when they want or at a price they find attractive.
+Kansas law and our articles of incorporation and bylaws contain anti-takeover provisions that could delay or discourage takeover attempts that shareholders may consider favorable.
+<p><a href="http://www.sec.gov/Archives/edgar/data/834408/0000950137-08-003794.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/1174735--3-16-2006--ACCREDITED_HOME_LENDERS_HOLDING_CO.html'">1174735--3/16/2006--ACCREDITED_HOME_LENDERS_HOLDING_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/835955--3-28-2007--INTERVEST_MORTGAGE_CORP.html'">835955--3/28/2007--INTERVEST_MORTGAGE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/20199--6-26-2007--CHURCH_LOANS_&_INVESTMENTS_TRUST.html'">20199--6/26/2007--CHURCH_LOANS_&_INVESTMENTS_TRUST</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1284077--3-31-2008--ATLANTIC_COAST_FEDERAL_CORP.html'">1284077--3/31/2008--ATLANTIC_COAST_FEDERAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/835955--3-6-2006--INTERVEST_MORTGAGE_CORP.html'">835955--3/6/2006--INTERVEST_MORTGAGE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1284077--3-30-2007--ATLANTIC_COAST_FEDERAL_CORP.html'">1284077--3/30/2007--ATLANTIC_COAST_FEDERAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1037976--2-28-2007--JONES_LANG_LASALLE_INC.html'">1037976--2/28/2007--JONES_LANG_LASALLE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/944725--3-15-2010--UNITED_WESTERN_BANCORP_INC.html'">944725--3/15/2010--UNITED_WESTERN_BANCORP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/840889--4-30-2007--DORAL_FINANCIAL_CORP.html'">840889--4/30/2007--DORAL_FINANCIAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/944725--3-16-2007--UNITED_WESTERN_BANCORP_INC.html'">944725--3/16/2007--UNITED_WESTERN_BANCORP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/314741--3-31-2008--REEVES_TELECOM_LTD_PARTNERSHIP.html'">314741--3/31/2008--REEVES_TELECOM_LTD_PARTNERSHIP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/946155--3-18-2010--TIAA_REAL_ESTATE_ACCOUNT.html'">946155--3/18/2010--TIAA_REAL_ESTATE_ACCOUNT</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1045450--2-28-2007--ENTERTAINMENT_PROPERTIES_TRUST.html'">1045450--2/28/2007--ENTERTAINMENT_PROPERTIES_TRUST</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1218320--3-19-2009--Woodbridge_Holdings_Corp_(Formerly_Levitt_Corp).html'">1218320--3/19/2009--Woodbridge_Holdings_Corp_(Formerly_Levitt_Corp)</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/745308--2-25-2008--ST_JOE_CO.html'">745308--2/25/2008--ST_JOE_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1045450--2-26-2008--ENTERTAINMENT_PROPERTIES_TRUST.html'">1045450--2/26/2008--ENTERTAINMENT_PROPERTIES_TRUST</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1059142--3-13-2008--AMERICA_FIRST_TAX_EXEMPT_INVESTORS_LP.html'">1059142--3/13/2008--AMERICA_FIRST_TAX_EXEMPT_INVESTORS_LP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/894490--11-29-2007--BANKUNITED_FINANCIAL_CORP.html'">894490--11/29/2007--BANKUNITED_FINANCIAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/835955--2-29-2008--INTERVEST_MORTGAGE_CORP.html'">835955--2/29/2008--INTERVEST_MORTGAGE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1207070--3-14-2006--FRANKLIN_BANK_CORP.html'">1207070--3/14/2006--FRANKLIN_BANK_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/946090--3-31-2009--FIRST_MARINER_BANCORP.html'">946090--3/31/2009--FIRST_MARINER_BANCORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1033012--3-13-2008--FLAGSTAR_BANCORP_INC.html'">1033012--3/13/2008--FLAGSTAR_BANCORP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1331463--4-10-2009--Federal_Home_Loan_Bank_of_Boston.html'">1331463--4/10/2009--Federal_Home_Loan_Bank_of_Boston</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1000298--3-13-2009--IMPAC_MORTGAGE_HOLDINGS_INC.html'">1000298--3/13/2009--IMPAC_MORTGAGE_HOLDINGS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/861955--4-1-2008--CIB_MARINE_BANCSHARES_INC.html'">861955--4/1/2008--CIB_MARINE_BANCSHARES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/51939--4-7-2009--CORUS_BANKSHARES_INC.html'">51939--4/7/2009--CORUS_BANKSHARES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1037976--2-27-2009--JONES_LANG_LASALLE_INC.html'">1037976--2/27/2009--JONES_LANG_LASALLE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1331463--3-22-2010--Federal_Home_Loan_Bank_of_Boston.html'">1331463--3/22/2010--Federal_Home_Loan_Bank_of_Boston</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1277406--3-1-2007--SPIRIT_FINANCE_CORP.html'">1277406--3/1/2007--SPIRIT_FINANCE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/30697--4-3-2006--TRIARC_COMPANIES_INC.html'">30697--4/3/2006--TRIARC_COMPANIES_INC</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

@@ -1,0 +1,182 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[4.6887810078, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [4.4324619138, "../topics/{regulation,_government,_change}.html", "{regulation,_government,_change}"], [2.6962852582, "../topics/{interest,_director,_officer}.html", "{interest,_director,_officer}"], [2.6879648952, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [1.7126418159, "../topics/{cost,_regulation,_environmental}.html", "{cost,_regulation,_environmental}"], [1.6974897437, "../topics/{system,_service,_information}.html", "{system,_service,_information}"], [1.6966990706, "../topics/{financial,_litigation,_operation}.html", "{financial,_litigation,_operation}"], [1.6962827783, "../topics/{tax,_income,_asset}.html", "{tax,_income,_asset}"], [1.6962519282, "../topics/{stock,_price,_share}.html", "{stock,_price,_share}"], [1.679922764, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>1017440--3/31/2006--PRECIS_INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">1017440--3/31/2006--PRECIS_INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{regulation,_government,_change}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_government,_change}.html'">{regulation, government, change}</td></tr>
+<tr class="list"><td id="{interest,_director,_officer}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{interest,_director,_officer}.html'">{interest, director, officer}</td></tr>
+<tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{cost,_regulation,_environmental}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_regulation,_environmental}.html'">{cost, regulation, environmental}</td></tr>
+<tr class="list"><td id="{system,_service,_information}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{system,_service,_information}.html'">{system, service, information}</td></tr>
+<tr class="list"><td id="{financial,_litigation,_operation}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{financial,_litigation,_operation}.html'">{financial, litigation, operation}</td></tr>
+<tr class="list"><td id="{tax,_income,_asset}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{tax,_income,_asset}.html'">{tax, income, asset}</td></tr>
+<tr class="list"><td id="{stock,_price,_share}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_share}.html'">{stock, price, share}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    THIS REPORT CONTAINS CAUTIONARY STATEMENTS RELATING TO FORWARD LOOKING INFORMATION.
+OUR REVENUES ARE LARGELY DEPENDENT ON THE INDEPENDENT MARKETING REPRESENTATIVES, WHOSE REDUCED SALES EFFORTS OR TERMINATION MAY RESULT IN SIGNIFICANT LOSS OF REVENUES.
+A LARGE PART OF OUR REVENUES ARE DEPENDENT ON KEY RELATIONSHIPS WITH A FEW PRIVATE LABEL RESELLERS AND WE MAY BECOME MORE DEPENDENT ON SALES BY A FEW PRIVATE LABEL RESELLERS.
+DEVELOPMENT AND MAINTENANCE OF RELATIONSHIPS WITH PREFERRED PROVIDER ORGANIZATIONS ARE CRITICAL AND THE LOSS OF SUCH RELATIONSHIPS COULD HAVE A MATERIAL ADVERSE EFFECT ON OUR BUSINESS.
+WE CURRENTLY RELY HEAVILY ON ONE KEY PREFFERED PROVIDER ORGANIZATION AND THE LOSS OF OR A CHANGE IN OUR RELATIONSHIP WITH THIS PROVIDER COULD HAVE A MATERIAL ADVERSE EFFECT ON OUR BUSINESS.
+WE FACE COMPETITION FOR MARKETING REPRESENTATIVES AS WELL AS COMPETITIVE OFFERINGS OF HEALTHCARE PRODUCTS AND SERVICES.
+WE MAY BECOME SUBJECT TO GOVERNMENT REGULATION MUCH LIKE AN INSURANCE COMPANY AND THIS REGULATORY OVERSIGHT MAY ADVERSELY AFFECT OR LIMIT OUR OPERATIONS.
+WE HAVE A FIDUCIARY RESPONSIBILTY TO OUR MEMBERS THROUGH OUR TOTAL CARE AND ESSENTIAL CARE PROGRAM OFFERINGS. IN THIS CAPACITY, WE COULD BE LIABLE FOR THE LOSS OF MEMBERS' FUNDS DEPOSITED WITH US IN ESCROW.
+AS A RESULT OF THE INTRODUCTION OF MEDICAL ESCROW ACCOUNTS, OUR FINANCIAL POSITION AND RESULTS OF OPERATIONS MAY CONTINUE TO BE ADVERSELY IMPACTED BY A DECREASE IN THE NUMBER OF HEALTHCARE SAVINGS PROGRAM MEMBERSHIPS THAT WE CAN SELL AND MAINTAIN.
+THE FAILURE OF OUR NETWORK MARKETING ORGANIZATION TO COMPLY WITH FEDERAL AND STATE REGULATION COULD RESULT IN ENFORCEMENT ACTION AND IMPOSITION OF PENALTIES, MODIFICATION OF OUR NETWORK MARKETING SYSTEM, AND NEGATIVE PUBLICITY.
+THE LEGALITY OF OUR NETWORK MARKETING ORGANIZATION IS SUBJECT TO CHALLENGE BY OUR MARKETING REPRESENTATIVES, WHICH COULD RESULT IN SIGNIFICANT DEFENSE COSTS, SETTLEMENT PAYMENTS OR JUDGMENTS, AND COULD HAVE A MATERIAL ADVERSE EFFECT ON OUR RESULTS OF OPERATIONS AND FINANCIAL CONDITION.
+WE MAY HAVE EXPOSURE AND LIABILITY RELATING TO NON-COMPLIANCE WITH THE HEALTH INSURANCE PORTABILITY AND ACCOUNTABILITY ACT OF 1996 AND THE COST OF COMPLIANCE COULD BE MATERIAL.
+DISRUPTION IN OUR OPERATIONS DUE TO IMPLEMENTATION OF OUR NEW MANAGEMENT INFORMATION SYSTEM MAY OCCUR AND COULD AFFECT OUR CLIENT RELATIONSHIPS.
+WE HAVE MANY COMPETITORS AND MAY NOT BE ABLE TO COMPETE EFFECTIVELY WHICH MAY LEAD TO A LACK OF REVENUES AND DISCONTINUANCE OF OUR OPERATIONS.
+THE GOODWILL ACQUIRED PURSUANT TO OUR ACQUISITIONS OF THE CAPELLA GROUP AND ACCESS MAY BECOME IMPAIRED AND REQUIRE A WRITE-DOWN AND THE RECOGNITION OF AN IMPAIRMENT EXPENSE WHICH MAY BE SUBSTANTIAL.
+WE MAY FAIL TO REALIZE SOME OR ALL OF THE ANTICIPATED BENEFITS OF OUR ACQUISITION OF ACCESS AND THAT FAILURE COULD HAVE A MATERIAL ADVERSE EFFECT ON OUR FINANCIAL CONDITION.
+IF WE ISSUE SUBSTANTIAL SHARES OF OUR COMMON STOCK UPON ACCESS MEETING CERTAIN EARNINGS TARGETS, OUR STOCKHOLDERS COULD SUFFER DILUTION OF THEIR INVESTMENT AND OUR STOCK PRICE COULD DECLINE.
+OUR SUBSIDIARY, ACCESS, DERIVES A LARGE PERCENTAGE OF ITS INCOME FROM A FEW KEY CLIENTS AND THE LOSS OF ANY OF THOSE CLIENTS COULD HAVE A MATERIAL ADVERSE EFFECT ON OUR RESULTS OF OPERATIONS AND FINANCIAL CONDITION.
+<p><a href="http://www.sec.gov/Archives/edgar/data/1017440/0001047469-06-004390.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/913165--3-16-2007--EXACTECH_INC.html'">913165--3/16/2007--EXACTECH_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/947425--10-28-2008--PROFESSIONAL_VETERINARY_PRODUCTS_LTD_-NE-.html'">947425--10/28/2008--PROFESSIONAL_VETERINARY_PRODUCTS_LTD_/NE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/99359--6-28-2010--BREEZE-EASTERN_CORP.html'">99359--6/28/2010--BREEZE-EASTERN_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/947425--10-29-2009--PROFESSIONAL_VETERINARY_PRODUCTS_LTD_-NE-.html'">947425--10/29/2009--PROFESSIONAL_VETERINARY_PRODUCTS_LTD_/NE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/821026--2-26-2010--ANDERSONS_INC.html'">821026--2/26/2010--ANDERSONS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/33113--5-27-2010--ENVIRONMENTAL_TECTONICS_CORP.html'">33113--5/27/2010--ENVIRONMENTAL_TECTONICS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/822663--3-16-2007--INTER_PARFUMS_INC.html'">822663--3/16/2007--INTER_PARFUMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/883984--3-1-2007--ICU_MEDICAL_INC-DE.html'">883984--3/1/2007--ICU_MEDICAL_INC/DE</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/861050--4-1-2008--CASH_SYSTEMS_INC.html'">861050--4/1/2008--CASH_SYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1260221--11-21-2007--TransDigm_Group_INC.html'">1260221--11/21/2007--TransDigm_Group_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1260221--11-25-2008--TransDigm_Group_INC.html'">1260221--11/25/2008--TransDigm_Group_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/64670--6-29-2010--MEDTRONIC_INC.html'">64670--6/29/2010--MEDTRONIC_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/861050--3-16-2006--CASH_SYSTEMS_INC.html'">861050--3/16/2006--CASH_SYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/33113--5-12-2009--ENVIRONMENTAL_TECTONICS_CORP.html'">33113--5/12/2009--ENVIRONMENTAL_TECTONICS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1260221--11-24-2009--TransDigm_Group_INC.html'">1260221--11/24/2009--TransDigm_Group_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/2186--3-4-2010--RELM_WIRELESS_CORP.html'">2186--3/4/2010--RELM_WIRELESS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/352079--3-14-2006--TVI_CORP.html'">352079--3/14/2006--TVI_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/822663--3-11-2008--INTER_PARFUMS_INC.html'">822663--3/11/2008--INTER_PARFUMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/33113--5-29-2008--ENVIRONMENTAL_TECTONICS_CORP.html'">33113--5/29/2008--ENVIRONMENTAL_TECTONICS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/947425--10-25-2007--PROFESSIONAL_VETERINARY_PRODUCTS_LTD_-NE-.html'">947425--10/25/2007--PROFESSIONAL_VETERINARY_PRODUCTS_LTD_/NE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1087216--12-29-2009--ALLIANCE_HEALTHCARD_INC.html'">1087216--12/29/2009--ALLIANCE_HEALTHCARD_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1136869--3-2-2006--ZIMMER_HOLDINGS_INC.html'">1136869--3/2/2006--ZIMMER_HOLDINGS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/33113--5-24-2007--ENVIRONMENTAL_TECTONICS_CORP.html'">33113--5/24/2007--ENVIRONMENTAL_TECTONICS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/355999--3-6-2006--UNITED_STATIONERS_INC.html'">355999--3/6/2006--UNITED_STATIONERS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/355999--3-1-2007--UNITED_STATIONERS_INC.html'">355999--3/1/2007--UNITED_STATIONERS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/864240--3-10-2008--SYPRIS_SOLUTIONS_INC.html'">864240--3/10/2008--SYPRIS_SOLUTIONS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/861050--3-16-2007--CASH_SYSTEMS_INC.html'">861050--3/16/2007--CASH_SYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/900017--4-6-2007--THOMAS_GROUP_INC.html'">900017--4/6/2007--THOMAS_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/820736--2-22-2008--ORBITAL_SCIENCES_CORP_-DE-.html'">820736--2/22/2008--ORBITAL_SCIENCES_CORP_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/320121--5-23-2006--TELOS_CORP.html'">320121--5/23/2006--TELOS_CORP</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

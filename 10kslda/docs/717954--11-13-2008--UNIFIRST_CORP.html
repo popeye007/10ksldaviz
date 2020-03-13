@@ -1,0 +1,184 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[4.7134464443, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [4.0705920917, "../topics/{condition,_economic,_financial}.html", "{condition,_economic,_financial}"], [3.6180433346, "../topics/{cost,_regulation,_environmental}.html", "{cost,_regulation,_environmental}"], [2.6804749428, "../topics/{cost,_operation,_labor}.html", "{cost,_operation,_labor}"], [2.6495752917, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [2.0487746289, "../topics/{competitive,_industry,_competition}.html", "{competitive,_industry,_competition}"], [1.8858358812, "../topics/{regulation,_government,_change}.html", "{regulation,_government,_change}"], [1.7427032152, "../topics/{regulation,_change,_law}.html", "{regulation,_change,_law}"], [1.7085288316, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [1.6993844867, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>717954--11/13/2008--UNIFIRST_CORP</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">717954--11/13/2008--UNIFIRST_CORP</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{condition,_economic,_financial}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{condition,_economic,_financial}.html'">{condition, economic, financial}</td></tr>
+<tr class="list"><td id="{cost,_regulation,_environmental}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_regulation,_environmental}.html'">{cost, regulation, environmental}</td></tr>
+<tr class="list"><td id="{cost,_operation,_labor}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_operation,_labor}.html'">{cost, operation, labor}</td></tr>
+<tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{competitive,_industry,_competition}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{competitive,_industry,_competition}.html'">{competitive, industry, competition}</td></tr>
+<tr class="list"><td id="{regulation,_government,_change}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_government,_change}.html'">{regulation, government, change}</td></tr>
+<tr class="list"><td id="{regulation,_change,_law}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_change,_law}.html'">{regulation, change, law}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    SAFE HARBOR FOR FORWARD LOOKING STATEMENTS
+RISKS RELATING TO OUR BUSINESS AND INDUSTRY
+We face intense competition within our industry, which may adversely affect our results of operations and financial condition.
+Implementation of our growth strategy may not be successful, which could adversely affect our ability to increase our revenues or our profitability.
+The expenses we incur to comply with environmental regulations, including costs associated with potential environmental remediation, may prove to be significant and could have a material adverse affect on our results of operations and financial condition.
+If we are unable to preserve positive labor relationships or become the target of corporate labor unionization campaigns, the resulting labor unrest could disrupt our business by impairing our ability to produce and deliver our products.
+Recent economic trends could adversely affect our financial performance
+Our business may be adversely affected by global, national, regional or industry specific economic slowdowns.
+Economic and business conditions affecting our customer base could negatively impact our sales and operating results.
+Failure to comply with the other state and federal regulations to which we are subject may result in penalties or costs that could have a material adverse effect on our business.
+Our business may be subject to seasonal and quarterly fluctuations.
+Loss of our key management or other personnel could adversely impact our business.
+We depend on third parties to supply us with raw materials and ship a large portion of our products, and our results of operations could be adversely affected if we are unable to obtain adequate raw materials and ship our products in a timely manner.
+Our failure to retain our current customers and renew our existing customer contracts could adversely affect our results of operations and financial condition.
+Increases in fuel and energy costs could adversely affect our results of operations and financial condition.
+Quarterly fluctuations in our nuclear specialty garment business could disproportionately impact our revenue and net income and create volatility in the price of our Common Stock.
+Our international business results are influenced by currency fluctuations and other risks that could have an adverse effect on our results of operations and financial condition.
+Changes in or new interpretations of the governmental regulatory framework may affect our contract terms and may reduce our sales or profits.
+The price of our Common Stock may be highly volatile, which could result in significant price declines.
+We are controlled by our principal shareholders, and our other shareholders may be unable to affect the outcome of shareholder voting.
+<p><a href="http://www.sec.gov/Archives/edgar/data/717954/0001284084-08-000043.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/717954--11-9-2006--UNIFIRST_CORP.html'">717954--11/9/2006--UNIFIRST_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/717954--11-8-2007--UNIFIRST_CORP.html'">717954--11/8/2007--UNIFIRST_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/717954--11-12-2009--UNIFIRST_CORP.html'">717954--11/12/2009--UNIFIRST_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1011290--4-2-2007--99_CENTS_ONLY_STORES.html'">1011290--4/2/2007--99_CENTS_ONLY_STORES</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1011290--6-29-2007--99_CENTS_ONLY_STORES.html'">1011290--6/29/2007--99_CENTS_ONLY_STORES</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/878726--8-28-2009--TUESDAY_MORNING_CORP-DE.html'">878726--8/28/2009--TUESDAY_MORNING_CORP/DE</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/34563--9-13-2010--FARMER_BROTHERS_CO.html'">34563--9/13/2010--FARMER_BROTHERS_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/799165--3-16-2010--TGC_INDUSTRIES_INC.html'">799165--3/16/2010--TGC_INDUSTRIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/743238--3-16-2010--SPARTAN_MOTORS_INC.html'">743238--3/16/2010--SPARTAN_MOTORS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/72205--2-1-2006--NOBILITY_HOMES_INC.html'">72205--2/1/2006--NOBILITY_HOMES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/878726--8-29-2008--TUESDAY_MORNING_CORP-DE.html'">878726--8/29/2008--TUESDAY_MORNING_CORP/DE</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1324189--3-29-2006--Orchids_Paper_Products_CO_-DE.html'">1324189--3/29/2006--Orchids_Paper_Products_CO_/DE</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/33769--6-23-2009--EVANS_BOB_FARMS_INC.html'">33769--6/23/2009--EVANS_BOB_FARMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1003078--10-28-2008--MSC_INDUSTRIAL_DIRECT_CO_INC.html'">1003078--10/28/2008--MSC_INDUSTRIAL_DIRECT_CO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1310067--3-15-2006--SEARS_HOLDINGS_CORP.html'">1310067--3/15/2006--SEARS_HOLDINGS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/879884--3-16-2007--T-3_ENERGY_SERVICES_INC.html'">879884--3/16/2007--T-3_ENERGY_SERVICES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/84581--3-31-2009--ROCK_OF_AGES_CORP.html'">84581--3/31/2009--ROCK_OF_AGES_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1474735--3-30-2010--GENERAC_HOLDINGS_INC..html'">1474735--3/30/2010--GENERAC_HOLDINGS_INC.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/912833--3-16-2009--WEST_MARINE_INC.html'">912833--3/16/2009--WEST_MARINE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/89270--4-15-2009--SL_INDUSTRIES_INC.html'">89270--4/15/2009--SL_INDUSTRIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/750004--2-29-2008--SCIENTIFIC_GAMES_CORP.html'">750004--2/29/2008--SCIENTIFIC_GAMES_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1016607--4-14-2008--WILSONS_THE_LEATHER_EXPERTS_INC.html'">1016607--4/14/2008--WILSONS_THE_LEATHER_EXPERTS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/743238--3-13-2009--SPARTAN_MOTORS_INC.html'">743238--3/13/2009--SPARTAN_MOTORS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1318484--4-14-2010--Citi_Trends_Inc.html'">1318484--4/14/2010--Citi_Trends_Inc</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/737602--9-17-2008--CUISINE_SOLUTIONS_INC.html'">737602--9/17/2008--CUISINE_SOLUTIONS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/750004--3-1-2007--SCIENTIFIC_GAMES_CORP.html'">750004--3/1/2007--SCIENTIFIC_GAMES_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1009244--4-2-2007--MEXICAN_RESTAURANTS_INC.html'">1009244--4/2/2007--MEXICAN_RESTAURANTS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1068148--3-26-2007--PARK_OHIO_INDUSTRIES_INC-OH.html'">1068148--3/26/2007--PARK_OHIO_INDUSTRIES_INC/OH</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1318484--4-15-2009--Citi_Trends_Inc.html'">1318484--4/15/2009--Citi_Trends_Inc</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1109525--3-10-2008--BANCORP_RHODE_ISLAND_INC.html'">1109525--3/10/2008--BANCORP_RHODE_ISLAND_INC</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

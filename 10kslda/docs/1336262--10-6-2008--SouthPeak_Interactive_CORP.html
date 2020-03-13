@@ -1,0 +1,203 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[10.6718563866, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [5.7915787814, "../topics/{product,_liability,_claim}.html", "{product,_liability,_claim}"], [4.7771190064, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"], [4.69745589, "../topics/{stock,_price,_share}.html", "{stock,_price,_share}"], [3.8235598345, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [2.8177581595, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [2.7242012615, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [2.535628642, "../topics/{interest,_director,_officer}.html", "{interest,_director,_officer}"], [1.8438608992, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"], [1.7116400898, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [1.6978019541, "../topics/{provision,_law,_control}.html", "{provision,_law,_control}"], [1.4328466066, "../topics/{control,_financial,_internal}.html", "{control,_financial,_internal}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>1336262--10/6/2008--SouthPeak_Interactive_CORP</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">1336262--10/6/2008--SouthPeak_Interactive_CORP</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{product,_liability,_claim}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_liability,_claim}.html'">{product, liability, claim}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+<tr class="list"><td id="{stock,_price,_share}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_share}.html'">{stock, price, share}</td></tr>
+<tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{interest,_director,_officer}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{interest,_director,_officer}.html'">{interest, director, officer}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{provision,_law,_control}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{provision,_law,_control}.html'">{provision, law, control}</td></tr>
+<tr class="list"><td id="{control,_financial,_internal}" onmouseover="highlight(11)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{control,_financial,_internal}.html'">{control, financial, internal}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    Risks Related to our Business and Operations
+Stiff competition within the videogame publishing industry, in particular, can significantly reduce our market share, curtail potential revenue, and negatively impact our long-term viability.
+Our business model can limit our growth prospects and long-term viability.
+If we are unable to anticipate and adapt to rapidly changing technology, our results of operations and competitive position could be adversely affected.
+If we are unable to enter into attractive publishing arrangements with developers of highly innovative and commercially appealing videogames, our competitiveness and prospects for growth could be severely impacted.
+If we fail to satisfy our obligations under agreements with third-party developers and licensors, our operating results could be materially adversely affected.
+If we are unable to sell any of the works we have committed to fund, our operating margins could be adversely affected.
+If we are unable to secure approval from hardware manufacturers to publish new videogames for their respective platforms, our business could suffer significantly or, alternatively, if we fail to satisfy our obligations under agreements with first-party platform manufacturers such as Microsoft, Sony, and Nintendo, our operating results could be materially adversely affected.
+If our inventory of next-generation videogames is not fully sold and we have paid upfront significant license fees and manufacturing costs, our operating results and net worth may be materially adversely affected.
+We are dependent upon a limited number of customers and the loss of any of four key customers could materially adversely affect our business.
+We are dependent on the success of a few videogames, and unless we are able to gain and maintain market acceptance for newly published videogames in the future, our growth and earnings prospects could be severely compromised.
+If our contracted videogame developers fail to deliver their finished videogames on time, or at all, we stand to incur significant losses that could severely adversely affect our financial performance.
+If delays or disruptions occur in the delivery to our customers of newly published videogames following their commercial release, our operating results could be materially adversely affected.
+If we incur substantial costs for market testing and sales activities after our new videogames are published, and fail to anticipate market demand or secure customer contracts, our profitability and liquidity could be materially adversely affected.
+If we incur unanticipated levels of returns of our videogames from customers, or price concessions granted to them, our operating results could significantly suffer.
+If our published videogames suffer from grave defects, market acceptance of our product may be adversely affected, our results of operations adversely affected, and our reputation seriously harmed
+If our licensed intellectual property is not adequately protected from unauthorized use or access by others, our competitiveness could be significantly undermined and our viability adversely affected.
+If we infringe on the proprietary rights of others, unknowingly or not, we could sustain major damages to our business.
+We are subject to the risks and uncertainties associated with international trade, which could adversely affect our business.
+If we are unable to effectively manage and fund our expansion initiatives, we could incur huge charges, which in turn could undermine our growth plans.
+We may not be able to adequately adjust our cost structure in a timely fashion in response to a sudden decrease in demand.
+Failure to collect our accounts receivable on a timely basis will negatively impact our cash flow.
+Our quarterly operating results may fluctuate significantly due to various factors related to our operations, which could cause our stock price to decline and could result in substantial losses to investors.
+If we fail to retain the services of senior management, our business and prospects could be materially adversely affected.
+If we fail to hire and retain qualified personnel, in an industry where competition for qualified personnel is intense, our business could be seriously harmed.
+Growth of our business will result in increased demands on our management and limited human capital resources, which we may not be able to meet.
+The Company is still in the process of making significant compensation decisions.
+Potential increased regulation of videogame content and distribution can stifle growth and profitability and seriously hurt our business.
+Failure to obtain a target rating for certain of our products, as well as videogame re-rating, could negatively impact our sales.
+New legislation, content policies adopted by retailers, and litigation could inhibit sales of our products.
+Our Chairman is subject to an SEC cease and desist order.
+Because we do not currently intend to pay dividends on our common stock, stockholders will benefit from an investment in our common stock only if it appreciates in value.
+The concentration of our capital stock ownership will likely limit a stockholder s ability to influence corporate matters, and could discourage a takeover that stockholders may consider favorable and make it more difficult for a stockholder to elect directors of its choosing.
+It may be difficult for you to resell shares of our common stock if an active market
+for our common stock does not develop.
+We seek to manage our business with a view to achieving long-term results, and this could have a negative effect on short-term trading.
+Our warrants may have an adverse effect on the market price of our common stock.
+<p><a href="http://www.sec.gov/Archives/edgar/data/1336262/0001144204-08-056316.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/1141240--4-15-2009--LIQUIDMETAL_TECHNOLOGIES_INC.html'">1141240--4/15/2009--LIQUIDMETAL_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1052303--12-29-2006--TERAYON_COMMUNICATION_SYSTEMS.html'">1052303--12/29/2006--TERAYON_COMMUNICATION_SYSTEMS</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1141240--8-20-2010--LIQUIDMETAL_TECHNOLOGIES_INC.html'">1141240--8/20/2010--LIQUIDMETAL_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1052303--4-2-2007--TERAYON_COMMUNICATION_SYSTEMS.html'">1052303--4/2/2007--TERAYON_COMMUNICATION_SYSTEMS</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/66479--3-15-2006--MILLIPORE_CORP_-MA.html'">66479--3/15/2006--MILLIPORE_CORP_/MA</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1075656--3-16-2007--MOBILITY_ELECTRONICS_INC.html'">1075656--3/16/2007--MOBILITY_ELECTRONICS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/923601--7-14-2006--SINGING_MACHINE_CO_INC.html'">923601--7/14/2006--SINGING_MACHINE_CO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/771266--3-31-2008--KOPIN_CORP.html'">771266--3/31/2008--KOPIN_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/771266--3-10-2009--KOPIN_CORP.html'">771266--3/10/2009--KOPIN_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/709283--6-30-2009--QUANTUM_CORP_-DE-.html'">709283--6/30/2009--QUANTUM_CORP_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1118941--3-14-2007--ENDWAVE_CORP.html'">1118941--3/14/2007--ENDWAVE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/38264--11-29-2007--FORWARD_INDUSTRIES_INC.html'">38264--11/29/2007--FORWARD_INDUSTRIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/768251--2-17-2010--ALTERA_CORP.html'">768251--2/17/2010--ALTERA_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1126741--6-20-2007--GSI_TECHNOLOGY_INC.html'">1126741--6/20/2007--GSI_TECHNOLOGY_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/887969--3-16-2010--MRV_COMMUNICATIONS_INC.html'">887969--3/16/2010--MRV_COMMUNICATIONS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/752431--6-9-2010--NETWORK_EQUIPMENT_TECHNOLOGIES_INC.html'">752431--6/9/2010--NETWORK_EQUIPMENT_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1116755--4-14-2006--DESIGN_WITHIN_REACH_INC.html'">1116755--4/14/2006--DESIGN_WITHIN_REACH_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1116755--5-8-2007--DESIGN_WITHIN_REACH_INC.html'">1116755--5/8/2007--DESIGN_WITHIN_REACH_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1135185--2-25-2010--ATLAS_AIR_WORLDWIDE_HOLDINGS_INC.html'">1135185--2/25/2010--ATLAS_AIR_WORLDWIDE_HOLDINGS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/38264--12-16-2008--FORWARD_INDUSTRIES_INC.html'">38264--12/16/2008--FORWARD_INDUSTRIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1157780--6-14-2010--OPNEXT_INC.html'">1157780--6/14/2010--OPNEXT_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1135711--2-28-2006--NETLOGIC_MICROSYSTEMS_INC.html'">1135711--2/28/2006--NETLOGIC_MICROSYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/910521--2-29-2008--DECKERS_OUTDOOR_CORP.html'">910521--2/29/2008--DECKERS_OUTDOOR_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/855658--3-10-2010--LATTICE_SEMICONDUCTOR_CORP.html'">855658--3/10/2010--LATTICE_SEMICONDUCTOR_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/813619--4-2-2007--SOUTHWALL_TECHNOLOGIES_INC_-DE-.html'">813619--4/2/2007--SOUTHWALL_TECHNOLOGIES_INC_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/813619--3-29-2006--SOUTHWALL_TECHNOLOGIES_INC_-DE-.html'">813619--3/29/2006--SOUTHWALL_TECHNOLOGIES_INC_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1092492--3-25-2010--AXESSTEL_INC.html'">1092492--3/25/2010--AXESSTEL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/724910--5-22-2006--NVE_CORP_-NEW-.html'">724910--5/22/2006--NVE_CORP_/NEW/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/887969--10-8-2009--MRV_COMMUNICATIONS_INC.html'">887969--10/8/2009--MRV_COMMUNICATIONS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1081078--8-10-2010--API_Technologies_Corp..html'">1081078--8/10/2010--API_Technologies_Corp.</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

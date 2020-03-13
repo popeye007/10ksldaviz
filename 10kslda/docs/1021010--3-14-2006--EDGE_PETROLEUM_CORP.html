@@ -1,0 +1,185 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[8.8503947753, "../topics/{gas,_price,_oil}.html", "{gas,_price,_oil}"], [3.5110030559, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"], [2.2496893463, "../topics/{debt,_indebtedness,_cash}.html", "{debt,_indebtedness,_cash}"], [1.8865735319, "../topics/{cost,_regulation,_environmental}.html", "{cost,_regulation,_environmental}"], [1.7573601098, "../topics/{operation,_natural,_condition}.html", "{operation,_natural,_condition}"], [1.7090399429, "../topics/{interest,_director,_officer}.html", "{interest,_director,_officer}"], [1.6974878762, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [1.6964370222, "../topics/{provision,_law,_control}.html", "{provision,_law,_control}"], [1.6957122615, "../topics/{stock,_price,_share}.html", "{stock,_price,_share}"], [1.6531057042, "../topics/{loss,_insurance,_financial}.html", "{loss,_insurance,_financial}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>1021010--3/14/2006--EDGE_PETROLEUM_CORP</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">1021010--3/14/2006--EDGE_PETROLEUM_CORP</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{gas,_price,_oil}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{gas,_price,_oil}.html'">{gas, price, oil}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+<tr class="list"><td id="{debt,_indebtedness,_cash}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{debt,_indebtedness,_cash}.html'">{debt, indebtedness, cash}</td></tr>
+<tr class="list"><td id="{cost,_regulation,_environmental}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_regulation,_environmental}.html'">{cost, regulation, environmental}</td></tr>
+<tr class="list"><td id="{operation,_natural,_condition}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_natural,_condition}.html'">{operation, natural, condition}</td></tr>
+<tr class="list"><td id="{interest,_director,_officer}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{interest,_director,_officer}.html'">{interest, director, officer}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{provision,_law,_control}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{provision,_law,_control}.html'">{provision, law, control}</td></tr>
+<tr class="list"><td id="{stock,_price,_share}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_share}.html'">{stock, price, share}</td></tr>
+<tr class="list"><td id="{loss,_insurance,_financial}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{loss,_insurance,_financial}.html'">{loss, insurance, financial}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    Oil and gas drilling is a speculative activity and involves numerous risks and substantial and uncertain costs
+which could adversely affect us.
+Oil and natural gas prices are highly volatile in general and low prices negatively affect our financial results.
+We have hedged and may continue to hedge a portion of our production, which may result in our making cash payments or prevent us from receiving the full benefit of increases in prices for oil and gas.
+We depend on successful exploration, development and acquisitions to maintain reserves and revenue in the future.
+We are subject to substantial operating risks that may adversely affect the results of our operations.
+We cannot control the activities on properties we do not operate and are unable to ensure their proper operation and profitability.
+The loss of key personnel could adversely affect us.
+Our operations have significant capital requirements which, if not met, will hinder operations.
+High demand for field services and equipment and the ability of suppliers to meet that demand may limit our ability to drill and produce our oil and natural gas properties.
+Government regulation and liability for environmental matters may adversely affect our business and results of operations.
+We may have difficulty managing any future growth and the related demands on our resources and may have difficulty in achieving future growth.
+We face strong competition from larger oil and natural gas companies.
+The oil and natural gas reserve data included in or incorporated by reference in this document are estimates based on assumptions that may be inaccurate and existing economic and operating conditions that may differ from future economic and operating conditions.
+Our credit facility has substantial operating restrictions and financial covenants and we may have difficulty obtaining additional credit, which could adversely affect operations.
+We may not have enough insurance to cover all of the risks we face.
+Our acquisition program may be unsuccessful.
+We do not intend to pay dividends and our ability to pay dividends is restricted.
+Our reliance on third parties for gathering and distributing could curtail future exploration and production activities.
+Provisions of Delaware law and our charter and bylaws may delay or prevent transactions that would benefit stockholders.
+Miller s former use of Arthur Andersen LLP as its independent public accountants may limit your ability to seek potential recoveries from them related to their work.
+<p><a href="http://www.sec.gov/Archives/edgar/data/1021010/0001104659-06-016466.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/315852--2-27-2008--RANGE_RESOURCES_CORP.html'">315852--2/27/2008--RANGE_RESOURCES_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/38079--3-2-2009--FOREST_OIL_CORP.html'">38079--3/2/2009--FOREST_OIL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/38079--2-28-2008--FOREST_OIL_CORP.html'">38079--2/28/2008--FOREST_OIL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/315852--2-27-2007--RANGE_RESOURCES_CORP.html'">315852--2/27/2007--RANGE_RESOURCES_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1125057--2-24-2009--ENCORE_ACQUISITION_CO.html'">1125057--2/24/2009--ENCORE_ACQUISITION_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/23194--2-25-2009--COMSTOCK_RESOURCES_INC.html'">23194--2/25/2009--COMSTOCK_RESOURCES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/23194--3-16-2006--COMSTOCK_RESOURCES_INC.html'">23194--3/16/2006--COMSTOCK_RESOURCES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/891456--3-10-2006--PLAINS_EXPLORATION_&_PRODUCTION_CO.html'">891456--3/10/2006--PLAINS_EXPLORATION_&_PRODUCTION_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/943861--3-15-2006--GOODRICH_PETROLEUM_CORP.html'">943861--3/15/2006--GOODRICH_PETROLEUM_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/870732--3-31-2010--American_Natural_Energy_Corp.html'">870732--3/31/2010--American_Natural_Energy_Corp</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/912750--2-26-2010--NEWFIELD_EXPLORATION_CO_-DE-.html'">912750--2/26/2010--NEWFIELD_EXPLORATION_CO_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/277924--1-14-2009--CREDO_PETROLEUM_CORP.html'">277924--1/14/2009--CREDO_PETROLEUM_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/277924--1-7-2010--CREDO_PETROLEUM_CORP.html'">277924--1/7/2010--CREDO_PETROLEUM_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/355356--11-15-2006--IMPERIAL_PETROLEUM_INC.html'">355356--11/15/2006--IMPERIAL_PETROLEUM_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/904080--2-25-2010--STONE_ENERGY_CORP.html'">904080--2/25/2010--STONE_ENERGY_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1019756--3-21-2006--MARKWEST_HYDROCARBON_INC.html'">1019756--3/21/2006--MARKWEST_HYDROCARBON_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1080399--8-13-2008--ROYALITE_PETROLEUM_CO_INC..html'">1080399--8/13/2008--ROYALITE_PETROLEUM_CO_INC.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/894627--3-16-2010--VAALCO_ENERGY_INC_-DE-.html'">894627--3/16/2010--VAALCO_ENERGY_INC_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/870756--3-16-2006--NATIONAL_ENERGY_GROUP_INC.html'">870756--3/16/2006--NATIONAL_ENERGY_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/870732--4-28-2009--American_Natural_Energy_Corp.html'">870732--4/28/2009--American_Natural_Energy_Corp</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1112412--3-13-2006--ENDEAVOUR_INTERNATIONAL_CORP.html'">1112412--3/13/2006--ENDEAVOUR_INTERNATIONAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1405073--3-28-2008--Approach_Resources_Inc.html'">1405073--3/28/2008--Approach_Resources_Inc</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/61398--9-25-2008--MAGELLAN_PETROLEUM_CORP_-DE-.html'">61398--9/25/2008--MAGELLAN_PETROLEUM_CORP_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/945764--3-1-2010--DENBURY_RESOURCES_INC.html'">945764--3/1/2010--DENBURY_RESOURCES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1096339--4-15-2009--SARATOGA_RESOURCES_INC_-TX.html'">1096339--4/15/2009--SARATOGA_RESOURCES_INC_/TX</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/750199--3-3-2008--ENERGY_PARTNERS_LTD.html'">750199--3/3/2008--ENERGY_PARTNERS_LTD</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/351817--3-2-2006--SWIFT_ENERGY_CO.html'">351817--3/2/2006--SWIFT_ENERGY_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1021010--3-12-2007--EDGE_PETROLEUM_CORP.html'">1021010--3/12/2007--EDGE_PETROLEUM_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/912750--2-27-2009--NEWFIELD_EXPLORATION_CO_-DE-.html'">912750--2/27/2009--NEWFIELD_EXPLORATION_CO_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1120916--3-15-2010--AMERICAN_OIL_&_GAS_INC.html'">1120916--3/15/2010--AMERICAN_OIL_&_GAS_INC</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

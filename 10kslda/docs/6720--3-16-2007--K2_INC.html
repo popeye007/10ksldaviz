@@ -1,0 +1,185 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[3.5806527678, "../topics/{cost,_regulation,_environmental}.html", "{cost,_regulation,_environmental}"], [3.1538859082, "../topics/{condition,_economic,_financial}.html", "{condition,_economic,_financial}"], [2.6993949263, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [2.692629577, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"], [2.6486158298, "../topics/{debt,_indebtedness,_cash}.html", "{debt,_indebtedness,_cash}"], [2.1520830442, "../topics/{competitive,_industry,_competition}.html", "{competitive,_industry,_competition}"], [1.7704002704, "../topics/{operation,_natural,_condition}.html", "{operation,_natural,_condition}"], [1.7355512488, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"], [1.7254171232, "../topics/{tax,_income,_asset}.html", "{tax,_income,_asset}"], [1.7048274225, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [1.6991112154, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [1.698158144, "../topics/{loan,_real,_estate}.html", "{loan,_real,_estate}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>6720--3/16/2007--K2_INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">6720--3/16/2007--K2_INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{cost,_regulation,_environmental}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_regulation,_environmental}.html'">{cost, regulation, environmental}</td></tr>
+<tr class="list"><td id="{condition,_economic,_financial}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{condition,_economic,_financial}.html'">{condition, economic, financial}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+<tr class="list"><td id="{debt,_indebtedness,_cash}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{debt,_indebtedness,_cash}.html'">{debt, indebtedness, cash}</td></tr>
+<tr class="list"><td id="{competitive,_industry,_competition}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{competitive,_industry,_competition}.html'">{competitive, industry, competition}</td></tr>
+<tr class="list"><td id="{operation,_natural,_condition}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_natural,_condition}.html'">{operation, natural, condition}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+<tr class="list"><td id="{tax,_income,_asset}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{tax,_income,_asset}.html'">{tax, income, asset}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{loan,_real,_estate}" onmouseover="highlight(11)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{loan,_real,_estate}.html'">{loan, real, estate}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    K2 s strategic plan, involving growth through the acquisition of other companies, may not succeed.
+Current and future financings may place a significant debt burden on K2.
+K2 s variable rate indebtedness subjects it to interest rate risk, which could cause K2 s debt service obligations to increase significantly.
+K2 faces intense competition and potential competition from companies with greater resources, and, if it is unable to compete effectively with these companies, its business could be harmed.
+Certain K2 businesses are highly seasonal and subject to the conditions of the sporting goods industry.
+Purchasing decisions made by a small number of large format sporting goods retailers can have a significant impact on K2 s results.
+Changing consumer tastes and styles as well as adverse economic developments could harm K2 s business.
+K2 s financial results vary from quarter to quarter, which could hurt K2 s business and the market price of its stock.
+K2 may not be able to attract or retain the management employees necessary to remain competitive in its industry; the loss of one or more of K2 s key personnel, including Mr. Richard J. Heckmann, Executive Chairman of the Board of Directors of K2, and J. Wayne Merck, President and Chief Executive Officer, could have a material adverse effect on K2 s business, financial condition, results of operations and prospects.
+International operations, unfavorable political developments, natural disasters and weak foreign economies may seriously harm K2 s financial condition.
+Significant price volatility or interruptions in supply of K2 s raw materials may result in increased costs that it may be unable to pass on to customers, which could reduce profitability.
+K2 may be required to recognize future intangible impairment charges.
+Changes in currency exchange rates could affect K2 s revenues.
+Acts of war or terrorism may have an adverse effect on K2 s business.
+K2 is subject to and may incur liabilities under various environmental laws.
+K2 s success is dependent on its ability to protect its worldwide intellectual property rights, and K2 s inability to enforce these rights could harm its business.
+K2 s products may infringe the intellectual property rights of others, which may cause K2 to incur unexpected costs or prevent K2 from selling its products.
+Unfavorable weather can adversely affect K2 s sales.
+K2 is subject to and may incur liabilities under various tax laws.
+<p><a href="http://www.sec.gov/Archives/edgar/data/6720/0001193125-07-056201.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/6720--3-16-2006--K2_INC.html'">6720--3/16/2006--K2_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1328910--3-14-2008--TRONOX_INC.html'">1328910--3/14/2008--TRONOX_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/6955--10-29-2008--ACTUANT_CORP.html'">6955--10/29/2008--ACTUANT_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1328910--3-16-2007--TRONOX_INC.html'">1328910--3/16/2007--TRONOX_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/102729--2-23-2010--VALMONT_INDUSTRIES_INC.html'">102729--2/23/2010--VALMONT_INDUSTRIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/9389--2-22-2007--BALL_CORP.html'">9389--2/22/2007--BALL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/9389--2-22-2006--BALL_CORP.html'">9389--2/22/2006--BALL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/6955--10-28-2009--ACTUANT_CORP.html'">6955--10/28/2009--ACTUANT_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/102741--12-21-2010--VALSPAR_CORP.html'">102741--12/21/2010--VALSPAR_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/799167--3-15-2010--MARTEN_TRANSPORT_LTD.html'">799167--3/15/2010--MARTEN_TRANSPORT_LTD</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/18169--3-11-2008--DOLE_FOOD_CO_INC.html'">18169--3/11/2008--DOLE_FOOD_CO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1093082--3-16-2007--HUTTIG_BUILDING_PRODUCTS_INC.html'">1093082--3/16/2007--HUTTIG_BUILDING_PRODUCTS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/912513--2-26-2009--CYTEC_INDUSTRIES_INC-DE-.html'">912513--2/26/2009--CYTEC_INDUSTRIES_INC/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1043382--2-19-2009--SOLUTIA_INC.html'">1043382--2/19/2009--SOLUTIA_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/6955--10-28-2010--ACTUANT_CORP.html'">6955--10/28/2010--ACTUANT_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1093082--3-4-2009--HUTTIG_BUILDING_PRODUCTS_INC.html'">1093082--3/4/2009--HUTTIG_BUILDING_PRODUCTS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1316656--2-26-2008--Dresser-Rand_Group_Inc..html'">1316656--2/26/2008--Dresser-Rand_Group_Inc.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/850660--3-13-2008--THERMADYNE_HOLDINGS_CORP_-DE.html'">850660--3/13/2008--THERMADYNE_HOLDINGS_CORP_/DE</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/102741--12-23-2008--VALSPAR_CORP.html'">102741--12/23/2008--VALSPAR_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/92103--2-28-2007--SOUTHERN_CALIFORNIA_EDISON_CO.html'">92103--2/28/2007--SOUTHERN_CALIFORNIA_EDISON_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/102741--12-18-2009--VALSPAR_CORP.html'">102741--12/18/2009--VALSPAR_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/868611--10-29-2010--SONIC_CORP.html'">868611--10/29/2010--SONIC_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/799167--3-13-2009--MARTEN_TRANSPORT_LTD.html'">799167--3/13/2009--MARTEN_TRANSPORT_LTD</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/757011--2-12-2010--USG_CORP.html'">757011--2/12/2010--USG_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/916459--3-15-2006--GARDNER_DENVER_INC.html'">916459--3/15/2006--GARDNER_DENVER_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/102729--2-26-2008--VALMONT_INDUSTRIES_INC.html'">102729--2/26/2008--VALMONT_INDUSTRIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/60519--3-1-2010--LOUISIANA-PACIFIC_CORP.html'">60519--3/1/2010--LOUISIANA-PACIFIC_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/60519--2-27-2009--LOUISIANA-PACIFIC_CORP.html'">60519--2/27/2009--LOUISIANA-PACIFIC_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/24491--3-2-2010--COOPER_TIRE_&_RUBBER_CO.html'">24491--3/2/2010--COOPER_TIRE_&_RUBBER_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1022671--2-26-2007--STEEL_DYNAMICS_INC.html'">1022671--2/26/2007--STEEL_DYNAMICS_INC</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

@@ -1,0 +1,174 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[1.7092043131, "../topics/{stock,_price,_share}.html", "{stock,_price,_share}"], [1.6965066594, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [1.6962772333, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"], [1.6962726369, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [1.6962622892, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [1.6949650755, "../topics/{condition,_economic,_financial}.html", "{condition,_economic,_financial}"], [1.6869481114, "../topics/{competitive,_industry,_competition}.html", "{competitive,_industry,_competition}"], [1.6806424315, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"], [1.6756768001, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [1.6695818441, "../topics/{product,_liability,_claim}.html", "{product,_liability,_claim}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>768408--6/28/2006--CYANOTECH_CORP</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">768408--6/28/2006--CYANOTECH_CORP</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{stock,_price,_share}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_share}.html'">{stock, price, share}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{condition,_economic,_financial}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{condition,_economic,_financial}.html'">{condition, economic, financial}</td></tr>
+<tr class="list"><td id="{competitive,_industry,_competition}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{competitive,_industry,_competition}.html'">{competitive, industry, competition}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+<tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{product,_liability,_claim}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_liability,_claim}.html'">{product, liability, claim}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    A Significant or Prolonged Economic Downturn Could Have a Material Adverse Effect on Our Results of Operations
+Our Quarterly Operating Results May Vary From Quarter to Quarter, Which May Result in Increased Volatility of Our Share Price
+Market Price for Our Common Stock Has Been Unpredictable; Potential Delisting.
+Our Global Operations Expose Us to Complex Management, Foreign Currency, Legal, Tax and Economic Risks, Which We May Not Be Able to Address Adequately
+Competition in Our Industry is Intense
+Our Revenues Could Be Adversely Affected By the Loss of a Significant Customer or the Failure to Collect a Large Accounts Receivable
+If We Are Unable to Protect Our Intellectual Property Rights or if We Infringe Upon the Intellectual Property Rights of Others Our Business May Be Harmed
+We May Need to Raise Additional Capital in the Future Which May Not Be Available
+Our Insurance Liability Coverage is Limited
+Our Ability to Develop and Market New Products or Modify Existing Products and Production Methods May be Adversely Affected If we Lose the Services of or Cannot Replace Certain Employees Knowledgeable in Advanced Scientific and Other Fields
+<p><a href="http://www.sec.gov/Archives/edgar/data/768408/0001104659-06-044151.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/818813--3-28-2008--BITSTREAM_INC.html'">818813--3/28/2008--BITSTREAM_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/818813--3-30-2007--BITSTREAM_INC.html'">818813--3/30/2007--BITSTREAM_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/818813--3-30-2006--BITSTREAM_INC.html'">818813--3/30/2006--BITSTREAM_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/918946--2-23-2007--BRIGHTPOINT_INC.html'">918946--2/23/2007--BRIGHTPOINT_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/55242--8-16-2007--KENNAMETAL_INC.html'">55242--8/16/2007--KENNAMETAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/898173--3-3-2008--O_REILLY_AUTOMOTIVE_INC.html'">898173--3/3/2008--O_REILLY_AUTOMOTIVE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1028461--3-9-2007--COVANSYS_CORP.html'">1028461--3/9/2007--COVANSYS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/68709--11-28-2007--MTS_SYSTEMS_CORP.html'">68709--11/28/2007--MTS_SYSTEMS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/874734--3-16-2009--OSTEOTECH_INC.html'">874734--3/16/2009--OSTEOTECH_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/818813--3-31-2010--BITSTREAM_INC.html'">818813--3/31/2010--BITSTREAM_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/818813--3-31-2009--BITSTREAM_INC.html'">818813--3/31/2009--BITSTREAM_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/899866--2-23-2007--ALEXION_PHARMACEUTICALS_INC.html'">899866--2/23/2007--ALEXION_PHARMACEUTICALS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/768408--6-25-2009--CYANOTECH_CORP.html'">768408--6/25/2009--CYANOTECH_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/883107--3-14-2007--NANOPHASE_TECHNOLOGIES_CORPORATION.html'">883107--3/14/2007--NANOPHASE_TECHNOLOGIES_CORPORATION</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/844161--4-17-2008--CHEROKEE_INC.html'">844161--4/17/2008--CHEROKEE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/844161--4-13-2006--CHEROKEE_INC.html'">844161--4/13/2006--CHEROKEE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/875657--3-21-2007--ULTRALIFE_BATTERIES_INC.html'">875657--3/21/2007--ULTRALIFE_BATTERIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/902281--8-25-2006--ELECTROGLAS_INC.html'">902281--8/25/2006--ELECTROGLAS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1116463--3-10-2009--ORASURE_TECHNOLOGIES_INC.html'">1116463--3/10/2009--ORASURE_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/805305--1-17-2006--QUIKSILVER_INC.html'">805305--1/17/2006--QUIKSILVER_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/67472--8-5-2009--MOLEX_INC.html'">67472--8/5/2009--MOLEX_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/946356--3-9-2007--OAKLEY_INC.html'">946356--3/9/2007--OAKLEY_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/23795--3-14-2007--CONSOLIDATED_TOMOKA_LAND_CO.html'">23795--3/14/2007--CONSOLIDATED_TOMOKA_LAND_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1075348--9-13-2006--FIRST_FEDERAL_BANKSHARES_INC.html'">1075348--9/13/2006--FIRST_FEDERAL_BANKSHARES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1471302--1-26-2010--Ecochild_Inc..html'">1471302--1/26/2010--Ecochild_Inc.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/911002--3-13-2009--LODGENET_INTERACTIVE_CORP.html'">911002--3/13/2009--LODGENET_INTERACTIVE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/768408--8-16-2007--CYANOTECH_CORP.html'">768408--8/16/2007--CYANOTECH_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1386926--3-2-2009--KKR_Financial_Holdings_LLC.html'">1386926--3/2/2009--KKR_Financial_Holdings_LLC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/919012--3-30-2009--AMERICAN_EAGLE_OUTFITTERS_INC.html'">919012--3/30/2009--AMERICAN_EAGLE_OUTFITTERS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/225628--1-29-2008--MEGADATA_CORP.html'">225628--1/29/2008--MEGADATA_CORP</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

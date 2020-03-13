@@ -1,0 +1,178 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[2.7694497352, "../topics/{system,_service,_information}.html", "{system,_service,_information}"], [2.6778717073, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"], [1.7577748162, "../topics/{financial,_litigation,_operation}.html", "{financial,_litigation,_operation}"], [1.7072270721, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [1.7037746514, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"], [1.6981947664, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [1.6950358602, "../topics/{investment,_property,_distribution}.html", "{investment,_property,_distribution}"], [1.6766252097, "../topics/{cost,_regulation,_environmental}.html", "{cost,_regulation,_environmental}"], [1.641036279, "../topics/{competitive,_industry,_competition}.html", "{competitive,_industry,_competition}"], [1.6311653374, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [1.5709191182, "../topics/{regulation,_government,_change}.html", "{regulation,_government,_change}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>825410--12/11/2009--LANDAUER_INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">825410--12/11/2009--LANDAUER_INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{system,_service,_information}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{system,_service,_information}.html'">{system, service, information}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+<tr class="list"><td id="{financial,_litigation,_operation}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{financial,_litigation,_operation}.html'">{financial, litigation, operation}</td></tr>
+<tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{investment,_property,_distribution}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{investment,_property,_distribution}.html'">{investment, property, distribution}</td></tr>
+<tr class="list"><td id="{cost,_regulation,_environmental}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_regulation,_environmental}.html'">{cost, regulation, environmental}</td></tr>
+<tr class="list"><td id="{competitive,_industry,_competition}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{competitive,_industry,_competition}.html'">{competitive, industry, competition}</td></tr>
+<tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{regulation,_government,_change}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_government,_change}.html'">{regulation, government, change}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    WE RELY ON A SINGLE FACILITY FOR THE PRIMARY MANUFACTURING AND PROCESSING OF OUR DOSIMETRY PRODUCTS AND SERVICES.
+WE RELY ON A SINGLE FACILITY FOR THE MANUFACTURING OF CRYSTAL MATERIAL, A KEY COMPONENT IN OUR OSL TECHNOLOGY, AND A SINGLE VENDOR FOR THE MANUFACTURING OF INLIGHT PRODUCTS.
+IF WE ARE NOT SUCCESSFUL IN THE DEVELOPMENT OR INTRODUCTION OF NEW TECHNOLOGIES, OUR FINANCIAL CONDITION AND RESULTS OF OPERATIONS COULD BE MATERIALLY AND ADVERSELY AFFECTED.
+IF WE ARE UNABLE TO SUCCESSFULLY EXECUTE BUSINESS DEVELOPMENT ACTIVITIES SUCH AS THE ACQUISITION AND INTEGRATION OF STRATEGIC BUSINESSES, OUR ON-GOING BUSINESS AND RESULTS OF OPERATIONS MAY BE ADVERSELY AFFECTED.
+CERTAIN OF OUR INTERNATIONAL OPERATIONS ARE CONDUCTED THROUGH JOINT VENTURES IN WHICH WE RELY SIGNIFICANTLY ON OUR JOINT VENTURE PARTNERS.
+ADVERSE INTERNATIONAL DEVELOPMENTS COULD NEGATIVELY IMPACT OUR BUSINESS AND RESULTS OF OPERATIONS.
+OUR BUSINESS IS SUBJECT TO EXTENSIVE DOMESTIC AND FOREIGN GOVERNMENT REGULATIONS, WHICH COULD INCREASE OUR COSTS, CAUSE US TO INCUR LIABILITIES AND ADVERSELY AFFECT OUR RESULTS OF OPERATIONS.
+FLUCTUATIONS IN CURRENCY EXCHANGE RATES COULD ADVERSELY AFFECT OUR RESULTS.
+SEVERAL OF OUR CURRENT AND POTENTIAL COMPETITORS HAVE SIGNIFICANTLY GREATER RESOURCES, AND INCREASED COMPETITION COULD IMPAIR SALES OF OUR PRODUCTS.
+UNFORESEEN PROBLEMS WITH THE IMPLEMENTATION AND MAINTENANCE OF OUR INFORMATION SYSTEMS COULD INTERFERE WITH OUR OPERATIONS.
+OUR FAILURE TO ATTRACT, MOTIVATE AND RETAIN QUALIFIED AND KEY PERSONNEL TO SUPPORT OUR BUSINESS MAY HAVE A MATERIAL ADVERSE EFFECT ON OUR BUSINESS PLANS, PROSPECTS, RESULTS OF OPERATIONS AND FINANCIAL CONDITION.
+THE CURRENT UNITED STATES AND STATE HEALTH REFORM LEGISLATIVE INITIATIVES COULD ADVERSELY AFFECT OUR OPERATIONS AND BUSINESS CONDITION.
+WE COULD BE SUBJECT TO PROFESSIONAL LIABILITY LAWSUITS, SOME OF WHICH WE MAY NOT BE FULLY INSURED AGAINST OR RESERVED FOR, WHICH COULD ADVERSELY AFFECT OUR FINANCIAL CONDITION AND RESULTS OF OPERATIONS.
+<p><a href="http://www.sec.gov/Archives/edgar/data/825410/0000892626-09-000138.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/825410--12-13-2010--LANDAUER_INC.html'">825410--12/13/2010--LANDAUER_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1010612--3-10-2009--SYKES_ENTERPRISES_INC.html'">1010612--3/10/2009--SYKES_ENTERPRISES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1010612--3-14-2006--SYKES_ENTERPRISES_INC.html'">1010612--3/14/2006--SYKES_ENTERPRISES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/825410--12-12-2007--LANDAUER_INC.html'">825410--12/12/2007--LANDAUER_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/825410--12-12-2008--LANDAUER_INC.html'">825410--12/12/2008--LANDAUER_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/746598--10-6-2006--BRADY_CORP.html'">746598--10/6/2006--BRADY_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/723531--7-16-2010--PAYCHEX_INC.html'">723531--7/16/2010--PAYCHEX_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/29644--9-24-2010--DONALDSON_CO_INC.html'">29644--9/24/2010--DONALDSON_CO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1033864--10-11-2006--DOCUCORP_INTERNATIONAL_INC.html'">1033864--10/11/2006--DOCUCORP_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1026650--3-2-2009--ERESEARCHTECHNOLOGY_INC_-DE-.html'">1026650--3/2/2009--ERESEARCHTECHNOLOGY_INC_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/8670--8-30-2006--AUTOMATIC_DATA_PROCESSING_INC.html'">8670--8/30/2006--AUTOMATIC_DATA_PROCESSING_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/34782--3-3-2006--1ST_SOURCE_CORP.html'">34782--3/3/2006--1ST_SOURCE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1029831--3-30-2007--HILLMAN_COMPANIES_INC.html'">1029831--3/30/2007--HILLMAN_COMPANIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/932696--7-26-2007--INSIGHT_ENTERPRISES_INC.html'">932696--7/26/2007--INSIGHT_ENTERPRISES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1122976--2-18-2010--POLYONE_CORP.html'">1122976--2/18/2010--POLYONE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/96879--8-3-2006--TEKTRONIX_INC.html'">96879--8/3/2006--TEKTRONIX_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/315213--2-19-2010--HALF_ROBERT_INTERNATIONAL_INC_-DE-.html'">315213--2/19/2010--HALF_ROBERT_INTERNATIONAL_INC_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/919012--3-26-2010--AMERICAN_EAGLE_OUTFITTERS_INC.html'">919012--3/26/2010--AMERICAN_EAGLE_OUTFITTERS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1001250--8-28-2007--ESTEE_LAUDER_COMPANIES_INC.html'">1001250--8/28/2007--ESTEE_LAUDER_COMPANIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1001250--8-21-2008--ESTEE_LAUDER_COMPANIES_INC.html'">1001250--8/21/2008--ESTEE_LAUDER_COMPANIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/791519--3-2-2010--STAPLES_INC.html'">791519--3/2/2010--STAPLES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/216228--3-1-2010--ITT_CORP.html'">216228--3/1/2010--ITT_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1140536--3-1-2010--WILLIS_GROUP_HOLDINGS_PLC.html'">1140536--3/1/2010--WILLIS_GROUP_HOLDINGS_PLC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1008586--4-10-2006--LANVISION_SYSTEMS_INC.html'">1008586--4/10/2006--LANVISION_SYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1057352--2-28-2007--COSTAR_GROUP_INC.html'">1057352--2/28/2007--COSTAR_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/315213--2-19-2009--HALF_ROBERT_INTERNATIONAL_INC_-DE-.html'">315213--2/19/2009--HALF_ROBERT_INTERNATIONAL_INC_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1013462--3-9-2006--ANSYS_INC.html'">1013462--3/9/2006--ANSYS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/25475--3-5-2010--CRAWFORD_&_CO.html'">25475--3/5/2010--CRAWFORD_&_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/110471--3-3-2010--WOLVERINE_WORLD_WIDE_INC_-DE-.html'">110471--3/3/2010--WOLVERINE_WORLD_WIDE_INC_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/67472--8-5-2009--MOLEX_INC.html'">67472--8/5/2009--MOLEX_INC</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

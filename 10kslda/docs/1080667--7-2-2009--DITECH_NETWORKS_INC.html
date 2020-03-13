@@ -1,0 +1,199 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[8.4041756553, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [4.9349341713, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [4.5177323931, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [3.6977699612, "../topics/{product,_candidate,_development}.html", "{product,_candidate,_development}"], [2.6964586009, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [2.6135409252, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"], [1.8706794612, "../topics/{tax,_income,_asset}.html", "{tax,_income,_asset}"], [1.7164376611, "../topics/{loss,_insurance,_financial}.html", "{loss,_insurance,_financial}"], [1.7121570269, "../topics/{cost,_contract,_operation}.html", "{cost,_contract,_operation}"], [1.6997291965, "../topics/{condition,_economic,_financial}.html", "{condition,_economic,_financial}"], [1.6978067557, "../topics/{system,_service,_information}.html", "{system,_service,_information}"], [1.6970545181, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [1.6961729094, "../topics/{investment,_property,_distribution}.html", "{investment,_property,_distribution}"], [1.6952402049, "../topics/{financial,_litigation,_operation}.html", "{financial,_litigation,_operation}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>1080667--7/2/2009--DITECH_NETWORKS_INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">1080667--7/2/2009--DITECH_NETWORKS_INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{product,_candidate,_development}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_candidate,_development}.html'">{product, candidate, development}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+<tr class="list"><td id="{tax,_income,_asset}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{tax,_income,_asset}.html'">{tax, income, asset}</td></tr>
+<tr class="list"><td id="{loss,_insurance,_financial}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{loss,_insurance,_financial}.html'">{loss, insurance, financial}</td></tr>
+<tr class="list"><td id="{cost,_contract,_operation}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_contract,_operation}.html'">{cost, contract, operation}</td></tr>
+<tr class="list"><td id="{condition,_economic,_financial}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{condition,_economic,_financial}.html'">{condition, economic, financial}</td></tr>
+<tr class="list"><td id="{system,_service,_information}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{system,_service,_information}.html'">{system, service, information}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(11)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{investment,_property,_distribution}" onmouseover="highlight(12)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{investment,_property,_distribution}.html'">{investment, property, distribution}</td></tr>
+<tr class="list"><td id="{financial,_litigation,_operation}" onmouseover="highlight(13)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{financial,_litigation,_operation}.html'">{financial, litigation, operation}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    WE DEPEND ON A LIMITED NUMBER OF CUSTOMERS, THE LOSS OF ANY ONE OF WHICH COULD CAUSE OUR REVENUE TO DECREASE.
+RECENT WORLDWIDE MARKET TURMOIL MAY ADVERSELY AFFECT OUR CUSTOMERS WHICH DIRECTLY IMPACTS OUR BUSINESS AND RESULTS OF OPERATIONS.
+IN PERIODS OF WORSENING ECONOMIC CONDITIONS, OUR EXPOSURE TO CREDIT RISK AND PAYMENT DELINQUENCIES ON OUR ACCOUNTS RECEIVABLE SIGNIFICANTLY INCREASES.
+OUR CASH AND CASH EQUIVALENTS AND OUR SHORT AND LONG-TERM INVESTMENTS COULD BE ADVERSELY AFFECTED IF THE FINANCIAL INSTITUTIONS IN WHICH WE HOLD THESE FUNDS FAIL.
+WE ARE RELIANT PRIMARILY ON OUR VOICE QUALITY BUSINESS TO GENERATE REVENUE GROWTH AND PROFITABILITY, WHICH COULD LIMIT OUR RATE OF FUTURE REVENUE GROWTH.
+IF WE DO NOT SUCCESSFULLY DEVELOP AND INTRODUCE NEW PRODUCTS, OUR PRODUCTS MAY BECOME OBSOLETE WHICH COULD CAUSE OUR SALES TO DECLINE.
+AS WE MODIFY OUR CORE ALGORITHMS FOR USE IN OTHER ELEMENTS OF COMMUNICATIONS NETWORKS, THERE IS NO GUARANTEE THAT WE WILL BE SUCCESSFUL IN CAPTURING MARKET SHARE OR THAT IT WILL NOT ADVERSELY IMPACT THE SALE OF OUR EXISTING PRODUCTS.
+THERE IS NO GUARANTEE THAT OUR DEVELOPMENT EFFORTS ON OUR NEW MSTAGE PRODUCT WILL BE COMPLETED IN THE DESIRED TIME FRAME OR THAT WE WILL EXPERIENCE THE DESIRED CUSTOMER DEMAND AND DIVERSIFICATION.
+OUR OPERATING RESULTS HAVE FLUCTUATED SIGNIFICANTLY IN THE PAST, AND WE ANTICIPATE THAT THEY MAY CONTINUE TO DO SO IN THE FUTURE, WHICH COULD ADVERSELY AFFECT OUR STOCK PRICE.
+OUR REVENUE MAY VARY FROM PERIOD TO PERIOD.
+OUR EXPENSES MAY VARY FROM PERIOD TO PERIOD.
+WE OPERATE IN AN INDUSTRY EXPERIENCING RAPID TECHNOLOGICAL CHANGE, WHICH MAY MAKE OUR PRODUCTS OBSOLETE.
+ACQUISITIONS AND INVESTMENTS MAY ADVERSELY AFFECT OUR BUSINESS.
+WE ANTICIPATE THAT AVERAGE SELLING PRICES FOR OUR PRODUCTS WILL DECLINE IN THE FUTURE, WHICH COULD ADVERSELY AFFECT OUR ABILITY TO BE PROFITABLE.
+WE USE PRIMARILY TWO CONTRACT MANUFACTURERS TO MANUFACTURE OUR PRODUCTS, AND IF WE LOSE THE SERVICES OF THESE MANUFACTURERS THEN WE COULD EXPERIENCE INCREASED MANUFACTURING COSTS AND PRODUCTION DELAYS
+IF WE LOSE THE SERVICES OF ANY OF OUR KEY MANAGEMENT OR KEY TECHNICAL PERSONNEL, OR ARE UNABLE TO RETAIN OR ATTRACT ADDITIONAL TECHNICAL PERSONNEL, OUR ABILITY TO CONDUCT AND EXPAND OUR BUSINESS COULD BE IMPAIRED.
+WE FACE INTENSE COMPETITION, WHICH COULD ADVERSELY AFFECT OUR ABILITY TO MAINTAIN OR INCREASE SALES OF OUR PRODUCTS.
+WE DO NOT HAVE THE RESOURCES TO ACT AS A SYSTEMS INTEGRATOR, WHICH MAY BE REQUIRED TO WIN DEALS WITH SOME LARGE U.S. AND INTERNATIONAL TELECOMMUNICATIONS SERVICES COMPANIES.
+IF INCUMBENT AND EMERGING COMPETITIVE SERVICE PROVIDERS AND THE TELECOMMUNICATIONS INDUSTRY AS A WHOLE EXPERIENCE A DOWNTURN OR REDUCTION IN GROWTH RATE, THE DEMAND FOR OUR PRODUCTS WILL DECREASE, WHICH WILL ADVERSELY AFFECT OUR BUSINESS.
+WE MAY EXPERIENCE UNFORESEEN PROBLEMS AS WE DIVERSIFY OUR INTERNATIONAL CUSTOMER BASE, WHICH WOULD IMPAIR OUR ABILITY TO GROW OUR BUSINESS.
+SOME OF THE KEY COMPONENTS USED IN OUR PRODUCTS ARE CURRENTLY AVAILABLE ONLY FROM SOLE SOURCES, THE LOSS OF WHICH COULD DELAY PRODUCT SHIPMENTS.
+WE NOW LICENSE OUR ECHO CANCELLATION SOFTWARE FROM TEXAS INSTRUMENTS, AND IF WE DO NOT RECEIVE THE LEVEL OF SUPPORT WE EXPECT FROM TEXAS INSTRUMENTS, IT COULD ADVERSELY AFFECT OUR ECHO CANCELLATION SYSTEMS BUSINESS.
+IF TEXAS INSTRUMENTS LICENSES ITS ECHO CANCELLATION SOFTWARE TO OTHER ECHO CANCELLATION SYSTEMS COMPANIES, THIS COULD INCREASE THE COMPETITIVE PRESSURES ON OUR ECHO CANCELLATION SYSTEMS BUSINESS.
+SOME SUPPLIERS OF KEY COMPONENTS MAY REDUCE THEIR INVENTORY LEVELS WHICH COULD RESULT IN LONGER LEAD TIMES FOR FUTURE COMPONENT PURCHASES AND ANY DELAYS IN FILLING OUR DEMAND MAY REDUCE OR DELAY OUR EXPECTED PRODUCT SHIPMENTS AND REVENUES.
+IF WE ARE UNSUCCESSFUL IN MANUFACTURING PRODUCTS THAT COMPLY WITH ENVIRONMENTAL REQUIREMENTS, IT MAY LIMIT OUR ABILITY TO SELL IN REGIONS ADOPTING THESE REQUIREMENTS.
+OUR ABILITY TO COMPETE SUCCESSFULLY WILL DEPEND, IN PART, ON OUR ABILITY TO PROTECT OUR INTELLECTUAL PROPERTY RIGHTS, WHICH WE MAY NOT BE ABLE TO PROTECT.
+WE CURRENTLY ARE, AND IN THE FUTURE MAY BE, SUBJECT TO SECURITIES CLASS ACTION LAWSUITS DUE TO DECREASES IN OUR STOCK PRICE.
+WE CURRENTLY ARE, AND IN THE FUTURE MAY BE, SUBJECT TO ADDITIONAL SECURITIES LAWSUITS.
+OUR STOCK REPURCHASE SIGNIFICANTLY DECREASED OUR CASH RESOURCES AND MAY IMPAIR OUR ABILITY TO ACQUIRE OR DEVELOP ADDITIONAL TECHNOLOGIES.
+OUR PRODUCTS EMPLOY TECHNOLOGY THAT MAY INFRINGE ON THE PROPRIETARY RIGHTS OF THIRD PARTIES, WHICH MAY EXPOSE US TO LITIGATION.
+THERE IS RISK THAT OUR AUCTION RATE SECURTIES WILL NOT SETTLE AT AUCTION AND WE MAY EXPERIENCE ADDITIONAL OTHER THAN TEMPORARY DECLINES IN VALUE, WHICH WOULD CAUSE ADDITIONAL CHARGES TO BE REALIZED ON OUR STATEMENT OF OPERATIONS.
+<p><a href="http://www.sec.gov/Archives/edgar/data/1080667/0001047469-09-006615.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/1080667--7-10-2008--DITECH_NETWORKS_INC.html'">1080667--7/10/2008--DITECH_NETWORKS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1080667--7-7-2006--DITECH_NETWORKS_INC.html'">1080667--7/7/2006--DITECH_NETWORKS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1080667--7-16-2007--DITECH_NETWORKS_INC.html'">1080667--7/16/2007--DITECH_NETWORKS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1094392--3-5-2010--RUDOLPH_TECHNOLOGIES_INC.html'">1094392--3/5/2010--RUDOLPH_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1094392--3-6-2009--RUDOLPH_TECHNOLOGIES_INC.html'">1094392--3/6/2009--RUDOLPH_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1080667--7-14-2010--DITECH_NETWORKS_INC.html'">1080667--7/14/2010--DITECH_NETWORKS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1278021--2-26-2010--MARKETAXESS_HOLDINGS_INC.html'">1278021--2/26/2010--MARKETAXESS_HOLDINGS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/948708--3-17-2008--SMITH_MICRO_SOFTWARE_INC.html'">948708--3/17/2008--SMITH_MICRO_SOFTWARE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/857005--11-29-2007--PARAMETRIC_TECHNOLOGY_CORP.html'">857005--11/29/2007--PARAMETRIC_TECHNOLOGY_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1032761--12-15-2008--KEYNOTE_SYSTEMS_INC.html'">1032761--12/15/2008--KEYNOTE_SYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1050808--3-31-2006--VITRIA_TECHNOLOGY_INC.html'">1050808--3/31/2006--VITRIA_TECHNOLOGY_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1105472--3-14-2006--SONUS_NETWORKS_INC.html'">1105472--3/14/2006--SONUS_NETWORKS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1043769--2-26-2008--COVAD_COMMUNICATIONS_GROUP_INC.html'">1043769--2/26/2008--COVAD_COMMUNICATIONS_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1097149--2-26-2010--ALIGN_TECHNOLOGY_INC.html'">1097149--2/26/2010--ALIGN_TECHNOLOGY_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1043769--2-28-2007--COVAD_COMMUNICATIONS_GROUP_INC.html'">1043769--2/28/2007--COVAD_COMMUNICATIONS_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1042821--9-8-2008--PERVASIVE_SOFTWARE_INC.html'">1042821--9/8/2008--PERVASIVE_SOFTWARE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/918386--5-21-2009--QLOGIC_CORP.html'">918386--5/21/2009--QLOGIC_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/918386--5-23-2008--QLOGIC_CORP.html'">918386--5/23/2008--QLOGIC_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1098277--3-3-2006--WEBSENSE_INC.html'">1098277--3/3/2006--WEBSENSE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/350917--8-20-2008--EMULEX_CORP_-DE-.html'">350917--8/20/2008--EMULEX_CORP_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1096958--3-31-2006--OPENTV_CORP.html'">1096958--3/31/2006--OPENTV_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1111247--3-15-2006--RIGHTNOW_TECHNOLOGIES_INC.html'">1111247--3/15/2006--RIGHTNOW_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1001916--3-16-2007--SECURE_COMPUTING_CORP.html'">1001916--3/16/2007--SECURE_COMPUTING_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1012482--12-14-2006--NETOPIA_INC.html'">1012482--12/14/2006--NETOPIA_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1058811--3-9-2009--IMMERSION_CORP.html'">1058811--3/9/2009--IMMERSION_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1070380--8-12-2010--SABA_SOFTWARE_INC.html'">1070380--8/12/2010--SABA_SOFTWARE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1098277--2-28-2008--WEBSENSE_INC.html'">1098277--2/28/2008--WEBSENSE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1032761--12-10-2010--KEYNOTE_SYSTEMS_INC.html'">1032761--12/10/2010--KEYNOTE_SYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1042821--9-13-2007--PERVASIVE_SOFTWARE_INC.html'">1042821--9/13/2007--PERVASIVE_SOFTWARE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/867374--3-2-2010--ELECTRONICS_FOR_IMAGING_INC.html'">867374--3/2/2010--ELECTRONICS_FOR_IMAGING_INC</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

@@ -1,0 +1,182 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[2.7153951179, "../topics/{system,_service,_information}.html", "{system,_service,_information}"], [2.6949129809, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [1.7542916358, "../topics/{tax,_income,_asset}.html", "{tax,_income,_asset}"], [1.6962696087, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"], [1.6962667999, "../topics/{operation,_natural,_condition}.html", "{operation,_natural,_condition}"], [1.6962619488, "../topics/{product,_liability,_claim}.html", "{product,_liability,_claim}"], [1.6962616404, "../topics/{product,_candidate,_development}.html", "{product,_candidate,_development}"], [1.69626164, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [1.6962602334, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [1.690361268, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [1.6817675793, "../topics/{regulation,_government,_change}.html", "{regulation,_government,_change}"], [1.6349270749, "../topics/{loan,_real,_estate}.html", "{loan,_real,_estate}"], [1.5298746804, "../topics/{provision,_law,_control}.html", "{provision,_law,_control}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>1040130--6/1/2009--PETMED_EXPRESS_INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">1040130--6/1/2009--PETMED_EXPRESS_INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{system,_service,_information}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{system,_service,_information}.html'">{system, service, information}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{tax,_income,_asset}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{tax,_income,_asset}.html'">{tax, income, asset}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+<tr class="list"><td id="{operation,_natural,_condition}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_natural,_condition}.html'">{operation, natural, condition}</td></tr>
+<tr class="list"><td id="{product,_liability,_claim}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_liability,_claim}.html'">{product, liability, claim}</td></tr>
+<tr class="list"><td id="{product,_candidate,_development}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_candidate,_development}.html'">{product, candidate, development}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{regulation,_government,_change}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_government,_change}.html'">{regulation, government, change}</td></tr>
+<tr class="list"><td id="{loan,_real,_estate}" onmouseover="highlight(11)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{loan,_real,_estate}.html'">{loan, real, estate}</td></tr>
+<tr class="list"><td id="{provision,_law,_control}" onmouseover="highlight(12)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{provision,_law,_control}.html'">{provision, law, control}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    We may inadvertently fail to comply with various state regulations covering the dispensing of prescription pet medications which may subject us to reprimands, sanctions, probations, fines, suspensions, or the loss of one or more of our pharmacy licenses
+We currently purchase a portion of our prescription and non-prescription medications from third party distributors and we are not an authorized distributor of these products. We do not have any guaranteed supply of medications at any pre-established prices.
+Our failure to properly manage our inventory may result in excessive inventory carrying costs, or inadequate supply of products, which could materially adversely affect our financial condition and results of operations.
+Resistance from veterinarians to authorize prescriptions, or attempts/efforts on their part to discourage pet owners to purchase from internet mail-order pharmacies could cause our sales to decrease and could materially adversely affect our financial condition and results of operations.
+Significant portions of our sales are made to residents of nine states. If we should lose our pharmacy license in one or more of these states, our financial condition and results of operations would be materially adversely affected.
+We face significant competition from veterinarians and online and traditional retailers and may not be able to compete profitably with them.
+The content of our website could expose us to various kinds of liability, which, if prosecuted successfully, could negatively impact our business.
+We may not be able to protect our intellectual property rights, and/or we may be found to infringe on the proprietary rights of others.
+If we are unable to protect our Internet addresses or to prevent others from using Internet addresses that are confusingly similar, our business may be adversely impacted.
+Since all of our operations are housed in a single location, we are more susceptible to business interruption in the event of damage to or disruptions in our facility
+A portion of our sales are seasonal and our operating results are difficult to predict and may fluctuate.
+Our stock price fluctuates from time to time and may fall below expectations of securities analysts and investors, and could subject us to litigation, which may result in you suffering a loss on your investment.
+We may issue additional shares of preferred stock that could defer a change of control or dilute the interests of our common stockholders
+Our investments in auction rate securities are subject to risks which may adversely affect our liquidity.
+The United States Environmental Protection Agency ( EPA ) has issued an advisory regarding increased scrutiny of flea and tick control products for pets. The Company s sales and profits in future periods could be adversely impacted if sales for these products decline.
+<p><a href="http://www.sec.gov/Archives/edgar/data/1040130/0000943440-09-000359.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/1040130--6-1-2010--PETMED_EXPRESS_INC.html'">1040130--6/1/2010--PETMED_EXPRESS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1040130--6-3-2008--PETMED_EXPRESS_INC.html'">1040130--6/3/2008--PETMED_EXPRESS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/70487--3-31-2009--NATIONAL_RESEARCH_CORP.html'">70487--3/31/2009--NATIONAL_RESEARCH_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1047202--3-9-2006--GETTY_IMAGES_INC.html'">1047202--3/9/2006--GETTY_IMAGES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1008586--4-10-2006--LANVISION_SYSTEMS_INC.html'">1008586--4/10/2006--LANVISION_SYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/768408--6-25-2009--CYANOTECH_CORP.html'">768408--6/25/2009--CYANOTECH_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1085653--4-2-2007--ECOLLEGE_COM.html'">1085653--4/2/2007--ECOLLEGE_COM</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1042173--3-8-2007--SCIENTIFIC_LEARNING_CORP.html'">1042173--3/8/2007--SCIENTIFIC_LEARNING_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1316360--1-24-2006--IHS_Inc..html'">1316360--1/24/2006--IHS_Inc.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1026650--3-2-2009--ERESEARCHTECHNOLOGY_INC_-DE-.html'">1026650--3/2/2009--ERESEARCHTECHNOLOGY_INC_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1042173--3-5-2009--SCIENTIFIC_LEARNING_CORP.html'">1042173--3/5/2009--SCIENTIFIC_LEARNING_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1316360--1-24-2008--IHS_Inc..html'">1316360--1/24/2008--IHS_Inc.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/39911--3-28-2006--GAP_INC.html'">39911--3/28/2006--GAP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1123316--1-30-2006--VERMONT_PURE_HOLDINGS_LTD-DE.html'">1123316--1/30/2006--VERMONT_PURE_HOLDINGS_LTD/DE</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/850483--3-14-2008--GTSI_CORP.html'">850483--3/14/2008--GTSI_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1290719--3-31-2006--CBD_Media_Holdings_LLC.html'">1290719--3/31/2006--CBD_Media_Holdings_LLC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1253808--3-31-2006--CBD_MEDIA_LLC.html'">1253808--3/31/2006--CBD_MEDIA_LLC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1042173--3-11-2008--SCIENTIFIC_LEARNING_CORP.html'">1042173--3/11/2008--SCIENTIFIC_LEARNING_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/768408--6-24-2010--CYANOTECH_CORP.html'">768408--6/24/2010--CYANOTECH_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/768408--6-26-2008--CYANOTECH_CORP.html'">768408--6/26/2008--CYANOTECH_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1001288--2-26-2010--LEXMARK_INTERNATIONAL_INC_-KY-.html'">1001288--2/26/2010--LEXMARK_INTERNATIONAL_INC_/KY/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/758743--5-29-2009--VIDEO_DISPLAY_CORP.html'">758743--5/29/2009--VIDEO_DISPLAY_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1012019--3-12-2010--RUSH_ENTERPRISES_INC_\TX\.html'">1012019--3/12/2010--RUSH_ENTERPRISES_INC_\TX\</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/65596--3-31-2010--SIEBERT_FINANCIAL_CORP.html'">65596--3/31/2010--SIEBERT_FINANCIAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/65596--3-31-2009--SIEBERT_FINANCIAL_CORP.html'">65596--3/31/2009--SIEBERT_FINANCIAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1462418--3-17-2010--Altisource_Portfolio_Solutions_S.A..html'">1462418--3/17/2010--Altisource_Portfolio_Solutions_S.A.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/864559--3-16-2007--CASCADE_MICROTECH_INC.html'">864559--3/16/2007--CASCADE_MICROTECH_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/723531--7-16-2010--PAYCHEX_INC.html'">723531--7/16/2010--PAYCHEX_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/949589--3-2-2006--INVESTORS_FINANCIAL_SERVICES_CORP.html'">949589--3/2/2006--INVESTORS_FINANCIAL_SERVICES_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1053148--3-6-2006--INTERNET_SECURITY_SYSTEMS_INC-GA.html'">1053148--3/6/2006--INTERNET_SECURITY_SYSTEMS_INC/GA</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

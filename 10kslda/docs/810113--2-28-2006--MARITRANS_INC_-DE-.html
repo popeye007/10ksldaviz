@@ -1,0 +1,175 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[2.6028556211, "../topics/{cost,_regulation,_environmental}.html", "{cost,_regulation,_environmental}"], [1.7083961402, "../topics/{cost,_operation,_labor}.html", "{cost,_operation,_labor}"], [1.699394383, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [1.6975041615, "../topics/{condition,_economic,_financial}.html", "{condition,_economic,_financial}"], [1.6962823007, "../topics/{regulation,_change,_law}.html", "{regulation,_change,_law}"], [1.6962674245, "../topics/{debt,_indebtedness,_cash}.html", "{debt,_indebtedness,_cash}"], [1.6962352805, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [1.6958452584, "../topics/{financial,_litigation,_operation}.html", "{financial,_litigation,_operation}"], [1.6926285679, "../topics/{loss,_insurance,_financial}.html", "{loss,_insurance,_financial}"], [1.6852042482, "../topics/{competitive,_industry,_competition}.html", "{competitive,_industry,_competition}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>810113--2/28/2006--MARITRANS_INC_/DE/</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">810113--2/28/2006--MARITRANS_INC_/DE/</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{cost,_regulation,_environmental}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_regulation,_environmental}.html'">{cost, regulation, environmental}</td></tr>
+<tr class="list"><td id="{cost,_operation,_labor}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_operation,_labor}.html'">{cost, operation, labor}</td></tr>
+<tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{condition,_economic,_financial}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{condition,_economic,_financial}.html'">{condition, economic, financial}</td></tr>
+<tr class="list"><td id="{regulation,_change,_law}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_change,_law}.html'">{regulation, change, law}</td></tr>
+<tr class="list"><td id="{debt,_indebtedness,_cash}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{debt,_indebtedness,_cash}.html'">{debt, indebtedness, cash}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{financial,_litigation,_operation}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{financial,_litigation,_operation}.html'">{financial, litigation, operation}</td></tr>
+<tr class="list"><td id="{loss,_insurance,_financial}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{loss,_insurance,_financial}.html'">{loss, insurance, financial}</td></tr>
+<tr class="list"><td id="{competitive,_industry,_competition}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{competitive,_industry,_competition}.html'">{competitive, industry, competition}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    If spot market rates were to decline substantially, our revenue and results of operations could be adversely affected.
+We depend on attracting and retaining experienced, qualified and skilled crewmembers to operate our vessels.
+Increased competition in the markets we serve could result in reduced profitability and loss of market share for us.
+Marine transportation has inherent operating risks, and our insurance may not be adequate to cover our losses.
+Delays or cost overruns in building new vessels, the double-hulling of our remaining single-hulled barges or in the scheduled shipyard maintenance of our other barges could adversely affect our results of operations.
+A decrease in the demand for our lightering services resulting from the deepening of the Delaware River or conditions affecting the Delaware Bay refineries could adversely affect our business and results of operations.
+We are subject to complex laws and regulations, including environmental regulations that can adversely affect the cost, manner or feasibility of doing business.
+We rely on a limited number of customers for a significant portion of our revenues. The loss of any of these customers could adversely affect our business and operating results.
+Our business would be adversely affected if we failed to comply with the US Jones Act provisions on coastwise trade, or if these provisions were repealed and if changes in international trade agreements were to occur.
+We are a defendant in numerous asbestos-related lawsuits.
+An increase in the price of fuel may adversely affect our business and results of operations.
+<p><a href="http://www.sec.gov/Archives/edgar/data/810113/0000893220-06-000402.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/798287--3-15-2007--PAM_TRANSPORTATION_SERVICES_INC.html'">798287--3/15/2007--PAM_TRANSPORTATION_SERVICES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/77449--4-12-2006--PEP_BOYS_MANNY_MOE_&_JACK.html'">77449--4/12/2006--PEP_BOYS_MANNY_MOE_&_JACK</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/77449--4-18-2007--PEP_BOYS_MANNY_MOE_&_JACK.html'">77449--4/18/2007--PEP_BOYS_MANNY_MOE_&_JACK</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/883945--3-3-2008--USA_TRUCK_INC.html'">883945--3/3/2008--USA_TRUCK_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/12570--4-16-2007--LEXINGTON_PRECISION_CORP.html'">12570--4/16/2007--LEXINGTON_PRECISION_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/77449--5-1-2008--PEP_BOYS_MANNY_MOE_&_JACK.html'">77449--5/1/2008--PEP_BOYS_MANNY_MOE_&_JACK</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/31277--2-26-2010--EATON_CORP.html'">31277--2/26/2010--EATON_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/737874--11-9-2006--LAIDLAW_INTERNATIONAL_INC.html'">737874--11/9/2006--LAIDLAW_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/876427--6-10-2010--MONRO_MUFFLER_BRAKE_INC.html'">876427--6/10/2010--MONRO_MUFFLER_BRAKE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1113256--11-20-2006--ARVINMERITOR_INC.html'">1113256--11/20/2006--ARVINMERITOR_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/910655--4-2-2007--NATIONAL_RV_HOLDINGS_INC.html'">910655--4/2/2007--NATIONAL_RV_HOLDINGS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/928373--4-2-2007--ADUDDELL_INDUSTRIES_INC.html'">928373--4/2/2007--ADUDDELL_INDUSTRIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/825542--11-24-2009--SCOTTS_MIRACLE-GRO_CO.html'">825542--11/24/2009--SCOTTS_MIRACLE-GRO_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/77476--2-19-2009--PEPSICO_INC.html'">77476--2/19/2009--PEPSICO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/92472--3-15-2010--SOUTHWEST_WATER_CO.html'">92472--3/15/2010--SOUTHWEST_WATER_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/92472--7-9-2009--SOUTHWEST_WATER_CO.html'">92472--7/9/2009--SOUTHWEST_WATER_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/943823--5-14-2007--DAVE_&_BUSTERS_INC.html'">943823--5/14/2007--DAVE_&_BUSTERS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/318833--8-14-2006--TEAM_INC.html'">318833--8/14/2006--TEAM_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1177702--2-17-2006--SCS_TRANSPORTATION_INC.html'">1177702--2/17/2006--SCS_TRANSPORTATION_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/812906--1-5-2007--HANCOCK_FABRICS_INC.html'">812906--1/5/2007--HANCOCK_FABRICS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1223550--4-15-2009--BEKEM_METALS_INC.html'">1223550--4/15/2009--BEKEM_METALS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1043337--3-17-2008--STONERIDGE_INC.html'">1043337--3/17/2008--STONERIDGE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1084230--2-28-2007--PEPSIAMERICAS_INC-IL-.html'">1084230--2/28/2007--PEPSIAMERICAS_INC/IL/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/887730--6-14-2006--KEMET_CORP.html'">887730--6/14/2006--KEMET_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1113256--11-19-2007--ARVINMERITOR_INC.html'">1113256--11/19/2007--ARVINMERITOR_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/93676--9-18-2007--STARRETT_L_S_CO.html'">93676--9/18/2007--STARRETT_L_S_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/876427--6-11-2009--MONRO_MUFFLER_BRAKE_INC.html'">876427--6/11/2009--MONRO_MUFFLER_BRAKE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/866048--12-21-2006--LESLIES_POOLMART_INC.html'">866048--12/21/2006--LESLIES_POOLMART_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/60519--3-7-2008--LOUISIANA-PACIFIC_CORP.html'">60519--3/7/2008--LOUISIANA-PACIFIC_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/60519--3-1-2007--LOUISIANA-PACIFIC_CORP.html'">60519--3/1/2007--LOUISIANA-PACIFIC_CORP</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

@@ -1,0 +1,205 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[7.724927509, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [6.4797667152, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [5.2812151791, "../topics/{stock,_price,_share}.html", "{stock,_price,_share}"], [5.1656556491, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [2.8420269009, "../topics/{financial,_litigation,_operation}.html", "{financial,_litigation,_operation}"], [2.7810423744, "../topics/{gas,_price,_oil}.html", "{gas,_price,_oil}"], [2.0170805154, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"], [1.8720082424, "../topics/{system,_service,_information}.html", "{system,_service,_information}"], [1.7857266202, "../topics/{interest,_director,_officer}.html", "{interest,_director,_officer}"], [1.7634578902, "../topics/{operation,_natural,_condition}.html", "{operation,_natural,_condition}"], [1.7074063873, "../topics/{loss,_insurance,_financial}.html", "{loss,_insurance,_financial}"], [1.7065423379, "../topics/{control,_financial,_internal}.html", "{control,_financial,_internal}"], [1.696867242, "../topics/{provision,_law,_control}.html", "{provision,_law,_control}"], [1.6015214839, "../topics/{regulation,_change,_law}.html", "{regulation,_change,_law}"], [1.5887815475, "../topics/{debt,_indebtedness,_cash}.html", "{debt,_indebtedness,_cash}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>1292026--3/31/2006--Odimo_INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">1292026--3/31/2006--Odimo_INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{stock,_price,_share}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_share}.html'">{stock, price, share}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{financial,_litigation,_operation}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{financial,_litigation,_operation}.html'">{financial, litigation, operation}</td></tr>
+<tr class="list"><td id="{gas,_price,_oil}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{gas,_price,_oil}.html'">{gas, price, oil}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+<tr class="list"><td id="{system,_service,_information}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{system,_service,_information}.html'">{system, service, information}</td></tr>
+<tr class="list"><td id="{interest,_director,_officer}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{interest,_director,_officer}.html'">{interest, director, officer}</td></tr>
+<tr class="list"><td id="{operation,_natural,_condition}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_natural,_condition}.html'">{operation, natural, condition}</td></tr>
+<tr class="list"><td id="{loss,_insurance,_financial}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{loss,_insurance,_financial}.html'">{loss, insurance, financial}</td></tr>
+<tr class="list"><td id="{control,_financial,_internal}" onmouseover="highlight(11)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{control,_financial,_internal}.html'">{control, financial, internal}</td></tr>
+<tr class="list"><td id="{provision,_law,_control}" onmouseover="highlight(12)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{provision,_law,_control}.html'">{provision, law, control}</td></tr>
+<tr class="list"><td id="{regulation,_change,_law}" onmouseover="highlight(13)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_change,_law}.html'">{regulation, change, law}</td></tr>
+<tr class="list"><td id="{debt,_indebtedness,_cash}" onmouseover="highlight(14)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{debt,_indebtedness,_cash}.html'">{debt, indebtedness, cash}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    Risks Related to Our Business and Industry
+There is substantial doubt about our ability to continue as a going concern due to our cash requirements which means that we may not be able to continue operations unless we obtain additional funding.
+We have incurred operating losses since our inception and anticipate incurring operating losses at least through 2006. We need additional capital to meet our future cash requirements and execute our business strategy.
+In order to decrease our losses, we must attract customers in a cost-effective manner.
+Because we do not have a predictable or guaranteed supply of merchandise, we may lose customers and sales if we are unable to meet our customers demand for particular products.
+We acquire most of the brand name watches and luxury goods we sell through the parallel market, or grey market as it is also called, which increases the risk that we may inadvertently sell counterfeit or stolen goods or merchandise which is physically materially different from merchandise acquired from channels authorized by the brand owners, which could expose us to liability for intellectual property infringement claims and damage our reputation.
+If brand owners take action to limit or prevent us from acquiring their products in the parallel market, we may not be able to find alternative sources of supply for such products at satisfactory prices or at all, which would result in reduced sales.
+If it is determined that our sales of decoded watches violate state laws, we would be subject to claims for damages, fines or other penalties or be unable to sell decoded watches in such states.
+If we fail to identify and rapidly respond to fashion trends, we may be forced to absorb excess inventory or lower the sales prices for our goods.
+Our net sales and operating results are volatile and difficult to predict, which may adversely affect the trading price of our common stock.
+Competition from traditional and online retail companies with greater brand recognition and resources may adversely affect our sales.
+If our advertising relationships with Internet portals and other websites fail to create consumer awareness of our websites and product offerings, our sales may suffer.
+If online advertising rates continue to rise, we may purchase less advertising and our sales could decrease.
+Because we carry almost all of our brand name watches, jewelry and luxury goods in inventory, if we are unable to accurately predict and plan for changes in consumer demand, our net sales and gross margins may decrease.
+Our operating results are subject to seasonal fluctuations, and adverse results in our fourth quarter will have a disproportionate impact on our results of operations for the year.
+We are dependent on Alan Lipton, our Chief Executive Officer and President, and other members of our management team. The loss of any of them could harm our business.
+We may not be able to increase capacity or respond to rapid technological changes in a timely manner or without service interruptions, which may cause customer dissatisfaction.
+Our costs have increased because we are a public company.
+All of our operations are located at our Sunrise, Florida facility, and disruptions at this facility could prevent us from receiving orders or fulfilling orders for our customers in a timely manner.
+The availability and price of diamonds are significantly influenced by a small number of diamond mining firms as well as the political situation in diamond-producing countries. A decrease in the availability or an increase in the price of diamonds may make it difficult for us to procure enough diamonds at competitive prices to supply our customers.
+Increases in the cost of precious metals and precious and semi-precious stones would increase the cost of our jewelry products, which could result in reduced margins or increased prices and reduced sales of such products.
+Increased product returns and the failure to accurately predict product returns could reduce our gross margins and result in excess inventory.
+If we attain specified levels of financial performance, we are obligated to make earn-out payments to one of our stockholders.
+Other online retailers may use domain names that are similar to ours. If customers associate these websites with us, our brands may be harmed and we may lose sales.
+We do not intend to pay dividends on our common stock, and, consequently, your only opportunity to achieve a return on your investment is if the price of our common stock appreciates.
+Legal claims against us could be costly and result in substantial liabilities or the loss of significant rights.
+Risks Relating to Doing Business on the Internet
+If we are required to collect sales and use taxes on the products we sell in jurisdictions outside of Florida, we may be subject to liability for past sales and our future sales may decrease.
+Various legal rules and regulations related to privacy and the collection, dissemination and security of personal information may adversely affect our marketing efforts.
+Consumers may prefer to purchase brand name watches and luxury goods, diamonds and fine jewelry from traditional retailers, which would adversely affect our sales.
+If the Internet infrastructure fails to grow or deteriorates, our ability to grow our business will be impaired.
+Risks Related to the Securities Markets and Ownership of Our Common Stock
+Our stock price has been and may continue to be volatile.
+Future sales of our common stock may cause our stock price to decline.
+Our common stock has been publicly traded for a short time and an active trading market may not be sustained.
+Anti-takeover provisions in our organizational documents and Delaware law may discourage or prevent a change in control, even if an acquisition would be beneficial to our stockholders, which could affect our stock price adversely and prevent attempts by our stockholders to replace or remove our current management.
+<p><a href="http://www.sec.gov/Archives/edgar/data/1292026/0000950144-06-002957.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/105006--3-31-2006--WJ_COMMUNICATIONS_INC.html'">105006--3/31/2006--WJ_COMMUNICATIONS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1002663--1-24-2008--PHOTON_DYNAMICS_INC.html'">1002663--1/24/2008--PHOTON_DYNAMICS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1002135--6-14-2006--WESTELL_TECHNOLOGIES_INC.html'">1002135--6/14/2006--WESTELL_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/105006--3-28-2007--WJ_COMMUNICATIONS_INC.html'">105006--3/28/2007--WJ_COMMUNICATIONS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1171529--3-12-2008--TECHWELL_INC.html'">1171529--3/12/2008--TECHWELL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1171529--3-16-2007--TECHWELL_INC.html'">1171529--3/16/2007--TECHWELL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1130258--3-13-2009--ACME_PACKET_INC.html'">1130258--3/13/2009--ACME_PACKET_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1130258--3-9-2010--ACME_PACKET_INC.html'">1130258--3/9/2010--ACME_PACKET_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1023364--3-15-2007--AUTOBYTEL__INC.html'">1023364--3/15/2007--AUTOBYTEL__INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1040853--6-26-2006--PHARSIGHT_CORP.html'">1040853--6/26/2006--PHARSIGHT_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/711065--1-10-2007--APPLIED_MICRO_CIRCUITS_CORP.html'">711065--1/10/2007--APPLIED_MICRO_CIRCUITS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1040853--6-27-2007--PHARSIGHT_CORP.html'">1040853--6/27/2007--PHARSIGHT_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/947397--3-9-2010--EVERGREEN_SOLAR_INC.html'">947397--3/9/2010--EVERGREEN_SOLAR_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1106851--7-1-2009--OMNIVISION_TECHNOLOGIES_INC.html'">1106851--7/1/2009--OMNIVISION_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/930803--12-28-2007--HAUPPAUGE_DIGITAL_INC.html'">930803--12/28/2007--HAUPPAUGE_DIGITAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1080667--7-10-2008--DITECH_NETWORKS_INC.html'">1080667--7/10/2008--DITECH_NETWORKS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1076682--1-29-2009--MAJESCO_ENTERTAINMENT_CO.html'">1076682--1/29/2009--MAJESCO_ENTERTAINMENT_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/947397--3-2-2009--EVERGREEN_SOLAR_INC.html'">947397--3/2/2009--EVERGREEN_SOLAR_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1002531--3-17-2008--TOLLGRADE_COMMUNICATIONS_INC_\PA\.html'">1002531--3/17/2008--TOLLGRADE_COMMUNICATIONS_INC_\PA\</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1046995--4-2-2007--EMAGIN_CORP.html'">1046995--4/2/2007--EMAGIN_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1137789--8-27-2007--SEAGATE_TECHNOLOGY.html'">1137789--8/27/2007--SEAGATE_TECHNOLOGY</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1080667--7-2-2009--DITECH_NETWORKS_INC.html'">1080667--7/2/2009--DITECH_NETWORKS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1171529--3-11-2009--TECHWELL_INC.html'">1171529--3/11/2009--TECHWELL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1116435--3-11-2010--AIRVANA_INC.html'">1116435--3/11/2010--AIRVANA_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/711065--5-12-2010--APPLIED_MICRO_CIRCUITS_CORP.html'">711065--5/12/2010--APPLIED_MICRO_CIRCUITS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1002135--6-14-2007--WESTELL_TECHNOLOGIES_INC.html'">1002135--6/14/2007--WESTELL_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1083522--3-31-2010--JONES_SODA_CO.html'">1083522--3/31/2010--JONES_SODA_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/918386--5-20-2010--QLOGIC_CORP.html'">918386--5/20/2010--QLOGIC_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1001426--9-11-2008--PERICOM_SEMICONDUCTOR_CORP.html'">1001426--9/11/2008--PERICOM_SEMICONDUCTOR_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/918386--5-21-2009--QLOGIC_CORP.html'">918386--5/21/2009--QLOGIC_CORP</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

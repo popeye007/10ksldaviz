@@ -1,0 +1,184 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[3.0897329548, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [2.8138546912, "../topics/{system,_service,_information}.html", "{system,_service,_information}"], [2.7126829802, "../topics/{tax,_income,_asset}.html", "{tax,_income,_asset}"], [2.7026646112, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [2.6962625874, "../topics/{regulation,_change,_law}.html", "{regulation,_change,_law}"], [1.8768157904, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"], [1.8076572207, "../topics/{condition,_economic,_financial}.html", "{condition,_economic,_financial}"], [1.7394799334, "../topics/{operation,_natural,_condition}.html", "{operation,_natural,_condition}"], [1.6997266273, "../topics/{capital,_credit,_financial}.html", "{capital,_credit,_financial}"], [1.6977507251, "../topics/{cost,_operation,_labor}.html", "{cost,_operation,_labor}"], [1.697046319, "../topics/{debt,_indebtedness,_cash}.html", "{debt,_indebtedness,_cash}"], [1.6962616405, "../topics/{financial,_litigation,_operation}.html", "{financial,_litigation,_operation}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>945114--3/18/2010--SYSTEMAX_INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">945114--3/18/2010--SYSTEMAX_INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{system,_service,_information}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{system,_service,_information}.html'">{system, service, information}</td></tr>
+<tr class="list"><td id="{tax,_income,_asset}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{tax,_income,_asset}.html'">{tax, income, asset}</td></tr>
+<tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{regulation,_change,_law}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_change,_law}.html'">{regulation, change, law}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+<tr class="list"><td id="{condition,_economic,_financial}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{condition,_economic,_financial}.html'">{condition, economic, financial}</td></tr>
+<tr class="list"><td id="{operation,_natural,_condition}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_natural,_condition}.html'">{operation, natural, condition}</td></tr>
+<tr class="list"><td id="{capital,_credit,_financial}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{capital,_credit,_financial}.html'">{capital, credit, financial}</td></tr>
+<tr class="list"><td id="{cost,_operation,_labor}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_operation,_labor}.html'">{cost, operation, labor}</td></tr>
+<tr class="list"><td id="{debt,_indebtedness,_cash}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{debt,_indebtedness,_cash}.html'">{debt, indebtedness, cash}</td></tr>
+<tr class="list"><td id="{financial,_litigation,_operation}" onmouseover="highlight(11)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{financial,_litigation,_operation}.html'">{financial, litigation, operation}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    General economic conditions, such as decreased consumer confidence and spending, reductions in manufacturing capacity, and inflation could result in our failure to achieve our historical sales growth rates and profit levels.
+The markets for our products and services are extremely competitive and if we are unable to successfully respond to our competitors strategies our sales and gross margins will be adversely affected.
+State sales tax laws may be changed which could result in ecommerce and direct mail retailers having to collect sales taxes in states where the current laws do not require us to do so. This could reduce demand for our products in such states and could result in us having substantial tax liabilities for past sales.
+Events such as acts of war or terrorism, natural disasters, changes in law, or large losses could adversely affect our insurance coverage and insurance expense, resulting in an adverse affect on our profitability and financial condition.
+Changes in accounting standards or practices, as well as new accounting pronouncements or interpretations, may require us to account for and report our financial results in a different manner in the future, which may be less favorable than the manner used historically.
+We rely to a great extent on our information and telecommunications systems, and significant system failures or outages, or our failure to properly evaluate, upgrade or replace our systems, or the failure of our security/safety measures to protect our systems and websites, could have an adverse affect on our results of operations.
+We rely on third party suppliers for most of our products and services. The loss or interruption of these relationships could impact our sales volumes, the levels of inventory we must carry, and/or result in sales delays and/or higher inventory costs from new suppliers. Coop advertising and other sales incentives provided by our suppliers could decrease in the future thereby increasing our expenses and adversely affecting our results of operations and cash flows.
+Goodwill and intangible assets may become impaired resulting in a charge to earnings.
+Our substantial international operations are subject to risks such as fluctuations in currency rates (which can adversely impact foreign revenues and profits when translated to US Dollars), foreign regulatory requirements, political uncertainty and the management of our growing international operations
+We are exposed to various inventory risks, such
+If we fail to observe certain restrictions and covenants under our credit facilities the lenders could refuse to waive such default, terminate the credit facility and demand immediate repayment, which would adversely affect our cash position and materially adversely affect our operations.
+We have experienced rapid growth in retail stores in North America and to maintain their profitability we must effectively manage our growth and cost structure, such as inventory needs, point of sales systems, personnel and lease expense.
+The failure to timely and satisfactorily process manufacturers and our own rebate programs could negatively impact our customer satisfaction levels
+We may be unable to reduce prices in reaction to competitive pressures, or implement cost reductions or new product line expansion to address gross profit and operating margin pressures; failure to mitigate these pressures could adversely affect our operating results and financial condition
+We depend on bank credit facilities to address our working capital and cash flow needs from time to time, and if we are unable to renew or replace these facilities, or borrowing capacity were to be reduced our liquidity and capital resources may be adversely affected.
+We would be exposed to liability, including substantial fines and penalties and, in extreme cases, loss of our ability to accept credit cards, in the event our privacy and data security policies and procedures are inadequate to prevent security breaches of our consumer personal information and credit card information records.
+Sales to individual customers expose us to credit card fraud, which impacts our operations. If we fail to adequately protect ourselves from credit card fraud, our operations could be adversely impacted.
+Our profitability can be adversely affected by increases in our income tax exposure due to, among other things, changes in the mix of U.S. and non-U.S. revenues and earnings, changes in tax rates or laws, changes in our effective tax rate due to changes in the mix of earnings among different countries and changes in valuation of our deferred tax assets and liabilities.
+<p><a href="http://www.sec.gov/Archives/edgar/data/945114/0001104659-10-015231.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/1018003--3-4-2009--INGRAM_MICRO_INC.html'">1018003--3/4/2009--INGRAM_MICRO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1018003--2-26-2007--INGRAM_MICRO_INC.html'">1018003--2/26/2007--INGRAM_MICRO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1018003--3-2-2010--INGRAM_MICRO_INC.html'">1018003--3/2/2010--INGRAM_MICRO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1018003--2-27-2008--INGRAM_MICRO_INC.html'">1018003--2/27/2008--INGRAM_MICRO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/783412--12-28-2006--DAILY_JOURNAL_CORP.html'">783412--12/28/2006--DAILY_JOURNAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/96879--7-24-2007--TEKTRONIX_INC.html'">96879--7/24/2007--TEKTRONIX_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/911583--3-16-2009--STEINWAY_MUSICAL_INSTRUMENTS_INC.html'">911583--3/16/2009--STEINWAY_MUSICAL_INSTRUMENTS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/783412--12-27-2007--DAILY_JOURNAL_CORP.html'">783412--12/27/2007--DAILY_JOURNAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/751978--3-13-2009--VICOR_CORP.html'">751978--3/13/2009--VICOR_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/716643--8-29-2008--REGIS_CORP.html'">716643--8/29/2008--REGIS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/724742--5-13-2010--SYMS_CORP.html'">724742--5/13/2010--SYMS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/724742--5-1-2009--SYMS_CORP.html'">724742--5/1/2009--SYMS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/909791--3-3-2008--ULTRATECH_INC.html'">909791--3/3/2008--ULTRATECH_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/911583--3-10-2010--STEINWAY_MUSICAL_INSTRUMENTS_INC.html'">911583--3/10/2010--STEINWAY_MUSICAL_INSTRUMENTS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/746598--9-28-2009--BRADY_CORP.html'">746598--9/28/2009--BRADY_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/215419--2-26-2009--CHECKPOINT_SYSTEMS_INC.html'">215419--2/26/2009--CHECKPOINT_SYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1001288--2-27-2008--LEXMARK_INTERNATIONAL_INC_-KY-.html'">1001288--2/27/2008--LEXMARK_INTERNATIONAL_INC_/KY/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/23111--2-26-2009--COMPUTER_TASK_GROUP_INC.html'">23111--2/26/2009--COMPUTER_TASK_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/23111--2-25-2010--COMPUTER_TASK_GROUP_INC.html'">23111--2/25/2010--COMPUTER_TASK_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/24741--2-15-2008--CORNING_INC_-NY.html'">24741--2/15/2008--CORNING_INC_/NY</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/108772--2-26-2010--XEROX_CORP.html'">108772--2/26/2010--XEROX_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/30625--2-27-2008--FLOWSERVE_CORP.html'">30625--2/27/2008--FLOWSERVE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/932696--5-12-2009--INSIGHT_ENTERPRISES_INC.html'">932696--5/12/2009--INSIGHT_ENTERPRISES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/850483--3-14-2008--GTSI_CORP.html'">850483--3/14/2008--GTSI_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1124887--3-31-2009--CERIDIAN_CORP_-DE-.html'">1124887--3/31/2009--CERIDIAN_CORP_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/911583--3-31-2006--STEINWAY_MUSICAL_INSTRUMENTS_INC.html'">911583--3/31/2006--STEINWAY_MUSICAL_INSTRUMENTS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/96879--8-3-2006--TEKTRONIX_INC.html'">96879--8/3/2006--TEKTRONIX_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/945114--3-13-2008--SYSTEMAX_INC.html'">945114--3/13/2008--SYSTEMAX_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1050825--4-26-2010--STEELCASE_INC.html'">1050825--4/26/2010--STEELCASE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/720896--9-21-2007--MEMRY_CORP.html'">720896--9/21/2007--MEMRY_CORP</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

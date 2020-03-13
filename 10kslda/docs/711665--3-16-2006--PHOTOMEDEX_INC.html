@@ -1,0 +1,197 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[10.4387286516, "../topics/{product,_liability,_claim}.html", "{product,_liability,_claim}"], [3.6962333084, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [3.2576875338, "../topics/{cost,_operation,_labor}.html", "{cost,_operation,_labor}"], [3.0804085701, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"], [2.722407928, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [2.5946485617, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [1.8298912216, "../topics/{product,_candidate,_development}.html", "{product,_candidate,_development}"], [1.7966967317, "../topics/{stock,_price,_share}.html", "{stock,_price,_share}"], [1.7023839109, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [1.6967181909, "../topics/{interest,_director,_officer}.html", "{interest,_director,_officer}"], [1.6962758585, "../topics/{provision,_law,_control}.html", "{provision,_law,_control}"], [1.6962749372, "../topics/{control,_financial,_internal}.html", "{control,_financial,_internal}"], [1.6962634601, "../topics/{cost,_regulation,_environmental}.html", "{cost,_regulation,_environmental}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>711665--3/16/2006--PHOTOMEDEX_INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">711665--3/16/2006--PHOTOMEDEX_INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{product,_liability,_claim}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_liability,_claim}.html'">{product, liability, claim}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{cost,_operation,_labor}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_operation,_labor}.html'">{cost, operation, labor}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+<tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{product,_candidate,_development}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_candidate,_development}.html'">{product, candidate, development}</td></tr>
+<tr class="list"><td id="{stock,_price,_share}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_share}.html'">{stock, price, share}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{interest,_director,_officer}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{interest,_director,_officer}.html'">{interest, director, officer}</td></tr>
+<tr class="list"><td id="{provision,_law,_control}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{provision,_law,_control}.html'">{provision, law, control}</td></tr>
+<tr class="list"><td id="{control,_financial,_internal}" onmouseover="highlight(11)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{control,_financial,_internal}.html'">{control, financial, internal}</td></tr>
+<tr class="list"><td id="{cost,_regulation,_environmental}" onmouseover="highlight(12)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_regulation,_environmental}.html'">{cost, regulation, environmental}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    Risks Related to Our Business
+We have a history of losses, expect future losses and cannot assure you that we will become or remain profitable.
+We may need additional financing to maintain and expand our business, and such financing may not be available on favorable terms, if at all.
+If we need additional financing, we cannot assure you that such financing will be available on favorable terms, if at all. In addition, any future issuance may result in substantial dilution to existing stockholders. If we need funds and cannot raise them on acceptable terms, we may not be able to:
+Our laser treatments of psoriasis, vitiligo, atopic dermatitis and leukoderma, our skincare products and our surgical laser products and any of our future products or services may fail to gain market acceptance, which could adversely affect our competitive position.
+Our success is dependent on intellectual property rights held by us, and our business will be adversely affected by direct competition if we are unable to protect these rights.
+Defending against intellectual property infringement claims could be time-consuming and expensive, and if we are not successful, could cause substantial expenses and disrupt our business.
+Our success depends on third-party reimbursement of patients' costs for our XTRAC system, which could result in potentially reduced prices or reduced demand.
+Cost containment measures and any general healthcare reform could adversely affect our ability to market our products.
+The XTRAC system will continue to be the most promising product that is currently marketed. If physicians do not adopt the XTRAC system, we will not achieve anticipated revenue growth.
+If the effectiveness and safety of our products are not supported by long-term data, our revenues could decline.
+Any failure in our physician education efforts could significantly reduce product marketing.
+If revenue from a significant customer continues to decline, we may have difficulty replacing the lost revenue.
+We may not be able to protect our intellectual property rights outside the United States.
+Our failure to obtain or maintain necessary FDA clearances or approvals could hurt our ability to distribute and market our products in the United States.
+Even if we obtain the necessary regulatory approvals for our phototherapy products from foreign governments, market acceptance in international markets may depend on third party reimbursement of participants costs.
+We have limited marketing experience, and our failure to build and manage our marketing force or to market and distribute our products effectively will hurt our revenues and profits.
+We have limited experience manufacturing our products in commercial quantities, which could adversely impact the rate at which we grow.
+We may have difficulty managing our growth.
+The XTRAC system and other laser systems we manufacture for surgery require specific component parts that may not be readily available or cost effective, which may adversely affect our competitive position or profitability. Our skin care products may require compounds that can be efficiently produced by a limited number of suppliers.
+Our failure to respond to rapid changes in technology and its applications and intense competition in the medical devices industry or the development of a cure for skin conditions treated by our products could make our treatment system obsolete.
+Our products may be found defective or physicians and technicians may misuse our products and damages may exceed our insurance coverage.
+If we use hazardous materials in a manner that causes injury or violates laws, our business and operations may suffer.
+We depend on our executive officers and key personnel to implement our business strategy and could be harmed by the loss of their services.
+We may be unsuccessful in integrating the operations of ProCyte with our other business segments.
+Delaware law and our charter documents have anti-takeover provisions that could delay or prevent actual and potential changes in control, even if they would benefit stockholders.
+Potential fluctuations in our operating results could lead to fluctuations in the market price for our common stock.
+Our stock price has been and continues to be volatile.
+Our ability to pay dividends on our common stock may be limited.
+Limitations on director liability may discourage stockholders from bringing suit against a director.
+<p><a href="http://www.sec.gov/Archives/edgar/data/711665/0001144204-06-010238.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/711665--3-16-2007--PHOTOMEDEX_INC.html'">711665--3/16/2007--PHOTOMEDEX_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1114365--3-30-2006--CURON_MEDICAL_INC.html'">1114365--3/30/2006--CURON_MEDICAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1142596--3-15-2006--NUVASIVE_INC.html'">1142596--3/15/2006--NUVASIVE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1275187--8-11-2006--ANGIODYNAMICS_INC.html'">1275187--8/11/2006--ANGIODYNAMICS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1275187--8-14-2007--ANGIODYNAMICS_INC.html'">1275187--8/14/2007--ANGIODYNAMICS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1275283--2-27-2007--REYNOLDS_AMERICAN_INC.html'">1275283--2/27/2007--REYNOLDS_AMERICAN_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1127393--12-27-2006--HEMOSENSE_INC.html'">1127393--12/27/2006--HEMOSENSE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/885306--3-12-2007--CYNOSURE_INC.html'">885306--3/12/2007--CYNOSURE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/704328--2-3-2010--SOMANETICS_CORP.html'">704328--2/3/2010--SOMANETICS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1137861--3-1-2006--WRIGHT_MEDICAL_GROUP_INC.html'">1137861--3/1/2006--WRIGHT_MEDICAL_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/949876--1-16-2007--NORTH_AMERICAN_SCIENTIFIC_INC.html'">949876--1/16/2007--NORTH_AMERICAN_SCIENTIFIC_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1180145--9-29-2009--Cardiovascular_Systems_Inc.html'">1180145--9/29/2009--Cardiovascular_Systems_Inc</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/907562--3-12-2010--DYAX_CORP.html'">907562--3/12/2010--DYAX_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1351197--3-14-2008--ARTES_MEDICAL_INC.html'">1351197--3/14/2008--ARTES_MEDICAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/885306--3-27-2006--CYNOSURE_INC.html'">885306--3/27/2006--CYNOSURE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1142596--3-15-2007--NUVASIVE_INC.html'">1142596--3/15/2007--NUVASIVE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/919015--3-26-2008--BIOSPHERE_MEDICAL_INC.html'">919015--3/26/2008--BIOSPHERE_MEDICAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/919015--3-20-2009--BIOSPHERE_MEDICAL_INC.html'">919015--3/20/2009--BIOSPHERE_MEDICAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1351197--3-30-2007--ARTES_MEDICAL_INC.html'">1351197--3/30/2007--ARTES_MEDICAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1097136--3-21-2008--SENORX_INC.html'">1097136--3/21/2008--SENORX_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1048477--2-27-2009--BIOMARIN_PHARMACEUTICAL_INC.html'">1048477--2/27/2009--BIOMARIN_PHARMACEUTICAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/883697--3-28-2006--REGEN_BIOLOGICS_INC.html'">883697--3/28/2006--REGEN_BIOLOGICS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1048477--2-28-2008--BIOMARIN_PHARMACEUTICAL_INC.html'">1048477--2/28/2008--BIOMARIN_PHARMACEUTICAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1100962--3-1-2007--ENDO_PHARMACEUTICALS_HOLDINGS_INC.html'">1100962--3/1/2007--ENDO_PHARMACEUTICALS_HOLDINGS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1040666--3-14-2008--VNUS_MEDICAL_TECHNOLOGIES_INC.html'">1040666--3/14/2008--VNUS_MEDICAL_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1276591--2-28-2008--HANSEN_MEDICAL_INC.html'">1276591--2/28/2008--HANSEN_MEDICAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/892025--12-29-2009--MARTEK_BIOSCIENCES_CORP.html'">892025--12/29/2009--MARTEK_BIOSCIENCES_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1040666--3-30-2007--VNUS_MEDICAL_TECHNOLOGIES_INC.html'">1040666--3/30/2007--VNUS_MEDICAL_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/881464--2-26-2010--AMYLIN_PHARMACEUTICALS_INC.html'">881464--2/26/2010--AMYLIN_PHARMACEUTICALS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/704328--2-11-2009--SOMANETICS_CORP.html'">704328--2/11/2009--SOMANETICS_CORP</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

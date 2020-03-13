@@ -1,0 +1,282 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+    <script type="text/JavaScript">
+    <!--
+    function init() {
+        browser_adjust();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>Summarization of Textual Risk Factor Disclosures Topics</title>
+<link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+  <body onload="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+<div id="top"></div>
+<div id="header">
+<h1>Summarization of Textual Risk Factor Disclosures Topics</h1>
+<h2>List of Terms Per Topic</h2>
+<hr noshade>
+</div>
+<div id="topics">
+<table>
+<tr class="titles">
+<td onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td>
+<td onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td>
+<td onclick="window.location.href='../topics/{stock,_price,_share}.html'">{stock, price, share}</td>
+</tr>
+<tr><td onclick="window.location.href='../terms/customer.html'">customer</td>
+<td onclick="window.location.href='../terms/product.html'">product</td>
+<td onclick="window.location.href='../terms/stock.html'">stock</td>
+</tr><tr><td onclick="window.location.href='../terms/product.html'">product</td>
+<td onclick="window.location.href='../terms/market.html'">market</td>
+<td onclick="window.location.href='../terms/price.html'">price</td>
+</tr><tr><td onclick="window.location.href='../terms/revenue.html'">revenue</td>
+<td onclick="window.location.href='../terms/service.html'">service</td>
+<td onclick="window.location.href='../terms/share.html'">share</td>
+</tr><tr><td onclick="window.location.href='../terms/sale.html'">sale</td>
+<td onclick="window.location.href='../terms/revenue.html'">revenue</td>
+<td onclick="window.location.href='../terms/market.html'">market</td>
+</tr><tr><td onclick="window.location.href='../terms/supplier.html'">supplier</td>
+<td onclick="window.location.href='../terms/change.html'">change</td>
+<td onclick="window.location.href='../terms/future.html'">future</td>
+</tr><tr class="spacer"><td></td><td></td><td></td><tr>
+<tr class="titles">
+<td onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td>
+<td onclick="window.location.href='../topics/{debt,_indebtedness,_cash}.html'">{debt, indebtedness, cash}</td>
+<td onclick="window.location.href='../topics/{condition,_economic,_financial}.html'">{condition, economic, financial}</td>
+</tr>
+<tr><td onclick="window.location.href='../terms/acquisition.html'">acquisition</td>
+<td onclick="window.location.href='../terms/debt.html'">debt</td>
+<td onclick="window.location.href='../terms/condition.html'">condition</td>
+</tr><tr><td onclick="window.location.href='../terms/growth.html'">growth</td>
+<td onclick="window.location.href='../terms/indebtedness.html'">indebtedness</td>
+<td onclick="window.location.href='../terms/economic.html'">economic</td>
+</tr><tr><td onclick="window.location.href='../terms/future.html'">future</td>
+<td onclick="window.location.href='../terms/cash.html'">cash</td>
+<td onclick="window.location.href='../terms/financial.html'">financial</td>
+</tr><tr><td onclick="window.location.href='../terms/operation.html'">operation</td>
+<td onclick="window.location.href='../terms/obligation.html'">obligation</td>
+<td onclick="window.location.href='../terms/market.html'">market</td>
+</tr><tr><td onclick="window.location.href='../terms/additional.html'">additional</td>
+<td onclick="window.location.href='../terms/financial.html'">financial</td>
+<td onclick="window.location.href='../terms/operation.html'">operation</td>
+</tr><tr class="spacer"><td></td><td></td><td></td><tr>
+<tr class="titles">
+<td onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td>
+<td onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td>
+<td onclick="window.location.href='../topics/{product,_candidate,_development}.html'">{product, candidate, development}</td>
+</tr>
+<tr><td onclick="window.location.href='../terms/personnel.html'">personnel</td>
+<td onclick="window.location.href='../terms/stock.html'">stock</td>
+<td onclick="window.location.href='../terms/product.html'">product</td>
+</tr><tr><td onclick="window.location.href='../terms/key.html'">key</td>
+<td onclick="window.location.href='../terms/price.html'">price</td>
+<td onclick="window.location.href='../terms/candidate.html'">candidate</td>
+</tr><tr><td onclick="window.location.href='../terms/retain.html'">retain</td>
+<td onclick="window.location.href='../terms/operating.html'">operating</td>
+<td onclick="window.location.href='../terms/development.html'">development</td>
+</tr><tr><td onclick="window.location.href='../terms/attract.html'">attract</td>
+<td onclick="window.location.href='../terms/stockholder.html'">stockholder</td>
+<td onclick="window.location.href='../terms/approval.html'">approval</td>
+</tr><tr><td onclick="window.location.href='../terms/management.html'">management</td>
+<td onclick="window.location.href='../terms/fluctuate.html'">fluctuate</td>
+<td onclick="window.location.href='../terms/clinical.html'">clinical</td>
+</tr><tr class="spacer"><td></td><td></td><td></td><tr>
+<tr class="titles">
+<td onclick="window.location.href='../topics/{cost,_regulation,_environmental}.html'">{cost, regulation, environmental}</td>
+<td onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td>
+<td onclick="window.location.href='../topics/{system,_service,_information}.html'">{system, service, information}</td>
+</tr>
+<tr><td onclick="window.location.href='../terms/cost.html'">cost</td>
+<td onclick="window.location.href='../terms/property.html'">property</td>
+<td onclick="window.location.href='../terms/system.html'">system</td>
+</tr><tr><td onclick="window.location.href='../terms/regulation.html'">regulation</td>
+<td onclick="window.location.href='../terms/intellectual.html'">intellectual</td>
+<td onclick="window.location.href='../terms/service.html'">service</td>
+</tr><tr><td onclick="window.location.href='../terms/environmental.html'">environmental</td>
+<td onclick="window.location.href='../terms/protect.html'">protect</td>
+<td onclick="window.location.href='../terms/information.html'">information</td>
+</tr><tr><td onclick="window.location.href='../terms/law.html'">law</td>
+<td onclick="window.location.href='../terms/product.html'">product</td>
+<td onclick="window.location.href='../terms/failure.html'">failure</td>
+</tr><tr><td onclick="window.location.href='../terms/operation.html'">operation</td>
+<td onclick="window.location.href='../terms/proprietary.html'">proprietary</td>
+<td onclick="window.location.href='../terms/product.html'">product</td>
+</tr><tr class="spacer"><td></td><td></td><td></td><tr>
+<tr class="titles">
+<td onclick="window.location.href='../topics/{tax,_income,_asset}.html'">{tax, income, asset}</td>
+<td onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td>
+<td onclick="window.location.href='../topics/{regulation,_government,_change}.html'">{regulation, government, change}</td>
+</tr>
+<tr><td onclick="window.location.href='../terms/tax.html'">tax</td>
+<td onclick="window.location.href='../terms/operation.html'">operation</td>
+<td onclick="window.location.href='../terms/regulation.html'">regulation</td>
+</tr><tr><td onclick="window.location.href='../terms/income.html'">income</td>
+<td onclick="window.location.href='../terms/international.html'">international</td>
+<td onclick="window.location.href='../terms/government.html'">government</td>
+</tr><tr><td onclick="window.location.href='../terms/asset.html'">asset</td>
+<td onclick="window.location.href='../terms/foreign.html'">foreign</td>
+<td onclick="window.location.href='../terms/change.html'">change</td>
+</tr><tr><td onclick="window.location.href='../terms/net.html'">net</td>
+<td onclick="window.location.href='../terms/currency.html'">currency</td>
+<td onclick="window.location.href='../terms/revenue.html'">revenue</td>
+</tr><tr><td onclick="window.location.href='../terms/goodwill.html'">goodwill</td>
+<td onclick="window.location.href='../terms/rate.html'">rate</td>
+<td onclick="window.location.href='../terms/contract.html'">contract</td>
+</tr><tr class="spacer"><td></td><td></td><td></td><tr>
+<tr class="titles">
+<td onclick="window.location.href='../topics/{investment,_property,_distribution}.html'">{investment, property, distribution}</td>
+<td onclick="window.location.href='../topics/{loan,_real,_estate}.html'">{loan, real, estate}</td>
+<td onclick="window.location.href='../topics/{regulation,_change,_law}.html'">{regulation, change, law}</td>
+</tr>
+<tr><td onclick="window.location.href='../terms/investment.html'">investment</td>
+<td onclick="window.location.href='../terms/loan.html'">loan</td>
+<td onclick="window.location.href='../terms/regulation.html'">regulation</td>
+</tr><tr><td onclick="window.location.href='../terms/property.html'">property</td>
+<td onclick="window.location.href='../terms/real.html'">real</td>
+<td onclick="window.location.href='../terms/change.html'">change</td>
+</tr><tr><td onclick="window.location.href='../terms/distribution.html'">distribution</td>
+<td onclick="window.location.href='../terms/estate.html'">estate</td>
+<td onclick="window.location.href='../terms/law.html'">law</td>
+</tr><tr><td onclick="window.location.href='../terms/interest.html'">interest</td>
+<td onclick="window.location.href='../terms/investment.html'">investment</td>
+<td onclick="window.location.href='../terms/financial.html'">financial</td>
+</tr><tr><td onclick="window.location.href='../terms/agreement.html'">agreement</td>
+<td onclick="window.location.href='../terms/property.html'">property</td>
+<td onclick="window.location.href='../terms/operation.html'">operation</td>
+</tr><tr class="spacer"><td></td><td></td><td></td><tr>
+<tr class="titles">
+<td onclick="window.location.href='../topics/{gas,_price,_oil}.html'">{gas, price, oil}</td>
+<td onclick="window.location.href='../topics/{competitive,_industry,_competition}.html'">{competitive, industry, competition}</td>
+<td onclick="window.location.href='../topics/{loss,_insurance,_financial}.html'">{loss, insurance, financial}</td>
+</tr>
+<tr><td onclick="window.location.href='../terms/gas.html'">gas</td>
+<td onclick="window.location.href='../terms/competitive.html'">competitive</td>
+<td onclick="window.location.href='../terms/loss.html'">loss</td>
+</tr><tr><td onclick="window.location.href='../terms/price.html'">price</td>
+<td onclick="window.location.href='../terms/industry.html'">industry</td>
+<td onclick="window.location.href='../terms/insurance.html'">insurance</td>
+</tr><tr><td onclick="window.location.href='../terms/oil.html'">oil</td>
+<td onclick="window.location.href='../terms/competition.html'">competition</td>
+<td onclick="window.location.href='../terms/financial.html'">financial</td>
+</tr><tr><td onclick="window.location.href='../terms/natural.html'">natural</td>
+<td onclick="window.location.href='../terms/highly.html'">highly</td>
+<td onclick="window.location.href='../terms/loan.html'">loan</td>
+</tr><tr><td onclick="window.location.href='../terms/operation.html'">operation</td>
+<td onclick="window.location.href='../terms/market.html'">market</td>
+<td onclick="window.location.href='../terms/reserve.html'">reserve</td>
+</tr><tr class="spacer"><td></td><td></td><td></td><tr>
+<tr class="titles">
+<td onclick="window.location.href='../topics/{product,_liability,_claim}.html'">{product, liability, claim}</td>
+<td onclick="window.location.href='../topics/{operation,_natural,_condition}.html'">{operation, natural, condition}</td>
+<td onclick="window.location.href='../topics/{financial,_litigation,_operation}.html'">{financial, litigation, operation}</td>
+</tr>
+<tr><td onclick="window.location.href='../terms/product.html'">product</td>
+<td onclick="window.location.href='../terms/operation.html'">operation</td>
+<td onclick="window.location.href='../terms/financial.html'">financial</td>
+</tr><tr><td onclick="window.location.href='../terms/liability.html'">liability</td>
+<td onclick="window.location.href='../terms/natural.html'">natural</td>
+<td onclick="window.location.href='../terms/litigation.html'">litigation</td>
+</tr><tr><td onclick="window.location.href='../terms/claim.html'">claim</td>
+<td onclick="window.location.href='../terms/condition.html'">condition</td>
+<td onclick="window.location.href='../terms/operation.html'">operation</td>
+</tr><tr><td onclick="window.location.href='../terms/market.html'">market</td>
+<td onclick="window.location.href='../terms/financial.html'">financial</td>
+<td onclick="window.location.href='../terms/condition.html'">condition</td>
+</tr><tr><td onclick="window.location.href='../terms/insurance.html'">insurance</td>
+<td onclick="window.location.href='../terms/facility.html'">facility</td>
+<td onclick="window.location.href='../terms/action.html'">action</td>
+</tr><tr class="spacer"><td></td><td></td><td></td><tr>
+<tr class="titles">
+<td onclick="window.location.href='../topics/{interest,_director,_officer}.html'">{interest, director, officer}</td>
+<td onclick="window.location.href='../topics/{capital,_credit,_financial}.html'">{capital, credit, financial}</td>
+<td onclick="window.location.href='../topics/{cost,_operation,_labor}.html'">{cost, operation, labor}</td>
+</tr>
+<tr><td onclick="window.location.href='../terms/interest.html'">interest</td>
+<td onclick="window.location.href='../terms/capital.html'">capital</td>
+<td onclick="window.location.href='../terms/cost.html'">cost</td>
+</tr><tr><td onclick="window.location.href='../terms/director.html'">director</td>
+<td onclick="window.location.href='../terms/credit.html'">credit</td>
+<td onclick="window.location.href='../terms/operation.html'">operation</td>
+</tr><tr><td onclick="window.location.href='../terms/officer.html'">officer</td>
+<td onclick="window.location.href='../terms/financial.html'">financial</td>
+<td onclick="window.location.href='../terms/labor.html'">labor</td>
+</tr><tr><td onclick="window.location.href='../terms/trust.html'">trust</td>
+<td onclick="window.location.href='../terms/market.html'">market</td>
+<td onclick="window.location.href='../terms/operating.html'">operating</td>
+</tr><tr><td onclick="window.location.href='../terms/combination.html'">combination</td>
+<td onclick="window.location.href='../terms/cost.html'">cost</td>
+<td onclick="window.location.href='../terms/employee.html'">employee</td>
+</tr><tr class="spacer"><td></td><td></td><td></td><tr>
+<tr class="titles">
+<td onclick="window.location.href='../topics/{control,_financial,_internal}.html'">{control, financial, internal}</td>
+<td onclick="window.location.href='../topics/{cost,_contract,_operation}.html'">{cost, contract, operation}</td>
+<td onclick="window.location.href='../topics/{provision,_law,_control}.html'">{provision, law, control}</td>
+</tr>
+<tr><td onclick="window.location.href='../terms/control.html'">control</td>
+<td onclick="window.location.href='../terms/cost.html'">cost</td>
+<td onclick="window.location.href='../terms/provision.html'">provision</td>
+</tr><tr><td onclick="window.location.href='../terms/financial.html'">financial</td>
+<td onclick="window.location.href='../terms/contract.html'">contract</td>
+<td onclick="window.location.href='../terms/law.html'">law</td>
+</tr><tr><td onclick="window.location.href='../terms/internal.html'">internal</td>
+<td onclick="window.location.href='../terms/operation.html'">operation</td>
+<td onclick="window.location.href='../terms/control.html'">control</td>
+</tr><tr><td onclick="window.location.href='../terms/loss.html'">loss</td>
+<td onclick="window.location.href='../terms/plan.html'">plan</td>
+<td onclick="window.location.href='../terms/change.html'">change</td>
+</tr><tr><td onclick="window.location.href='../terms/reporting.html'">reporting</td>
+<td onclick="window.location.href='../terms/increase.html'">increase</td>
+<td onclick="window.location.href='../terms/stock.html'">stock</td>
+</tr><tr class="spacer"><td></td><td></td><td></td><tr>
+</table>
+
+</div>
+<div id="footer">
+<br>
+<hr noshade>
+</div>
+  </body>
+</html>

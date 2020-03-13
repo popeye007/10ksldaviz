@@ -1,0 +1,194 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[4.3426836073, "../topics/{capital,_credit,_financial}.html", "{capital,_credit,_financial}"], [4.3276893316, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"], [4.0566419762, "../topics/{condition,_economic,_financial}.html", "{condition,_economic,_financial}"], [2.875994928, "../topics/{debt,_indebtedness,_cash}.html", "{debt,_indebtedness,_cash}"], [2.7810121551, "../topics/{operation,_natural,_condition}.html", "{operation,_natural,_condition}"], [2.3938551965, "../topics/{cost,_operation,_labor}.html", "{cost,_operation,_labor}"], [2.3568333441, "../topics/{regulation,_government,_change}.html", "{regulation,_government,_change}"], [1.9583497833, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [1.7269364702, "../topics/{regulation,_change,_law}.html", "{regulation,_change,_law}"], [1.7131142408, "../topics/{gas,_price,_oil}.html", "{gas,_price,_oil}"], [1.7103061318, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"], [1.7041878445, "../topics/{loan,_real,_estate}.html", "{loan,_real,_estate}"], [1.7035233365, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [1.7003572, "../topics/{tax,_income,_asset}.html", "{tax,_income,_asset}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>1267130--2/26/2009--CABELAS_INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">1267130--2/26/2009--CABELAS_INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{capital,_credit,_financial}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{capital,_credit,_financial}.html'">{capital, credit, financial}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+<tr class="list"><td id="{condition,_economic,_financial}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{condition,_economic,_financial}.html'">{condition, economic, financial}</td></tr>
+<tr class="list"><td id="{debt,_indebtedness,_cash}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{debt,_indebtedness,_cash}.html'">{debt, indebtedness, cash}</td></tr>
+<tr class="list"><td id="{operation,_natural,_condition}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_natural,_condition}.html'">{operation, natural, condition}</td></tr>
+<tr class="list"><td id="{cost,_operation,_labor}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_operation,_labor}.html'">{cost, operation, labor}</td></tr>
+<tr class="list"><td id="{regulation,_government,_change}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_government,_change}.html'">{regulation, government, change}</td></tr>
+<tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{regulation,_change,_law}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_change,_law}.html'">{regulation, change, law}</td></tr>
+<tr class="list"><td id="{gas,_price,_oil}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{gas,_price,_oil}.html'">{gas, price, oil}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+<tr class="list"><td id="{loan,_real,_estate}" onmouseover="highlight(11)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{loan,_real,_estate}.html'">{loan, real, estate}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(12)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{tax,_income,_asset}" onmouseover="highlight(13)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{tax,_income,_asset}.html'">{tax, income, asset}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    Risks Related to Our Merchandising Business
+Difficult conditions in the economy generally may materially adversely affect our business and results of operations.
+Competition in the outdoor recreation and casual apparel and footwear markets could reduce our revenue and profitability.
+If we are unable to comply with the terms of our credit arrangements, especially the financial covenants, our unsecured revolving credit facility could be terminated and our unsecured senior notes could become due and payable. Additionally, we are subject to counterparty risk on our unsecured revolving credit facility.
+If we cannot successfully implement our retail store expansion strategy, our growth and profitability would be adversely impacted.
+Retail store expansion could adversely affect the operating results of our Retail business and reduce the revenue of our Direct business.
+Our failure to successfully manage our Direct business could have a material adverse effect on our operating results and cash flows.
+Political and economic uncertainty and unrest in foreign countries where our merchandise vendors are located and trade restrictions upon imports from these foreign countries could adversely affect our ability to source merchandise and operating results.
+Our historic sales tax collection policy for our Direct business may subject us to liabilities for unpaid sales taxes on past Direct business sales.
+We must successfully order and manage our inventory to reflect customer demand and anticipate changing consumer preferences and buying trends or our revenue and profitability will be adversely affected.
+A natural disaster or other disruption at our distribution centers or return facility could cause us to lose merchandise and be unable to effectively deliver to our direct customers and retail stores.
+Our failure to obtain or negotiate economic development packages with local and state governments could cause us to significantly alter our retail store strategy or format and/or delay the construction of one or more of our retail stores and could adversely affect our revenue, cash flows, and profitability.
+The failure of properties to generate sufficient taxes to amortize economic development bonds owned by us that relate to the development of such properties would have an adverse impact on our cash flows and profitability.
+Our failure to comply with the terms of current economic development agreements could result in our repayment of grant money or other adverse consequences that would affect our cash flows and profitability.
+We may incur costs from litigation or increased regulation relating to products that we sell, particularly tree stands and firearms, which could adversely affect our revenue and profitability.
+Current and future government regulation may negatively impact demand for our products and our ability to conduct our business.
+Our inability or failure to protect our intellectual property could have a negative impact on our operating results.
+Risks Related to Our Financial Services Business
+We may experience limited availability of financing or variation in funding costs for our Financial Services business, which could limit growth of the business and decrease our profitability.
+We may have to reallocate capital from our Retail and Direct businesses to meet the capital needs of our Financial Services business, which could alter our retail store expansion program.
+The volatility and disruption of the capital and credit markets as well as downgrades of the ratings on the outstanding notes issued by our Financial Services business' securitization trust may negatively impact our ability to access financing.
+Proposed amendments to accounting standards could require us to consolidate previous and future securitization transactions, which could materially adversely affect our financial condition and cause us to reallocate capital from our Retail and Direct businesses to meet the capital needs of our Financial Services business.
+It may be difficult to sustain the historical growth and profitability of our Financial Services business, and we will be subject to various risks as we attempt to grow the business.
+Economic downturns and social and other factors could cause our credit card charge-offs and delinquencies to increase, or credit card balances to decrease, which would decrease our profitability.
+The performance of our Financial Services business may be negatively affected by the performance of our merchandising businesses.
+Credit card industry litigation could adversely impact the amount of revenue generated by our Financial Services business.
+<p><a href="http://www.sec.gov/Archives/edgar/data/1267130/0001206774-09-000336.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/739708--3-16-2010--CLEAR_CHANNEL_COMMUNICATIONS_INC.html'">739708--3/16/2010--CLEAR_CHANNEL_COMMUNICATIONS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1020347--3-30-2009--COMMUNITYCORP.html'">1020347--3/30/2009--COMMUNITYCORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/724606--3-1-2010--PANERA_BREAD_CO.html'">724606--3/1/2010--PANERA_BREAD_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/795266--1-29-2010--KB_HOME.html'">795266--1/29/2010--KB_HOME</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/739708--2-14-2008--CLEAR_CHANNEL_COMMUNICATIONS_INC.html'">739708--2/14/2008--CLEAR_CHANNEL_COMMUNICATIONS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1052595--3-11-2010--Red_Lion_Hotels_CORP.html'">1052595--3/11/2010--Red_Lion_Hotels_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1052595--3-16-2007--Red_Lion_Hotels_CORP.html'">1052595--3/16/2007--Red_Lion_Hotels_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1058623--3-16-2009--CUMULUS_MEDIA_INC.html'">1058623--3/16/2009--CUMULUS_MEDIA_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/62234--8-10-2010--MARCUS_CORP.html'">62234--8/10/2010--MARCUS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/927628--3-2-2006--CAPITAL_ONE_FINANCIAL_CORP.html'">927628--3/2/2006--CAPITAL_ONE_FINANCIAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1166789--3-16-2006--LIN_TELEVISION_CORP.html'">1166789--3/16/2006--LIN_TELEVISION_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/723612--3-1-2006--CENDANT_CORP.html'">723612--3/1/2006--CENDANT_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/840256--3-7-2007--VINEYARD_NATIONAL_BANCORP.html'">840256--3/7/2007--VINEYARD_NATIONAL_BANCORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/36047--3-2-2009--FIRST_AMERICAN_CORP.html'">36047--3/2/2009--FIRST_AMERICAN_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/720002--3-17-2008--MAINSOURCE_FINANCIAL_GROUP.html'">720002--3/17/2008--MAINSOURCE_FINANCIAL_GROUP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/720002--3-13-2006--MAINSOURCE_FINANCIAL_GROUP.html'">720002--3/13/2006--MAINSOURCE_FINANCIAL_GROUP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/882184--11-27-2007--HORTON_D_R_INC_-DE-.html'">882184--11/27/2007--HORTON_D_R_INC_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1052595--3-13-2008--Red_Lion_Hotels_CORP.html'">1052595--3/13/2008--Red_Lion_Hotels_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/932781--3-15-2006--FIRST_COMMUNITY_CORP_-SC-.html'">932781--3/15/2006--FIRST_COMMUNITY_CORP_/SC/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/882184--11-20-2009--HORTON_D_R_INC_-DE-.html'">882184--11/20/2009--HORTON_D_R_INC_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1072342--3-3-2009--DELPHI_CORP.html'">1072342--3/3/2009--DELPHI_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/911177--6-22-2006--CASELLA_WASTE_SYSTEMS_INC.html'">911177--6/22/2006--CASELLA_WASTE_SYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/814068--2-27-2008--CHAMPION_ENTERPRISES_INC.html'">814068--2/27/2008--CHAMPION_ENTERPRISES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/799850--7-3-2008--AMERICAS_CARMART_INC.html'">799850--7/3/2008--AMERICAS_CARMART_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/882184--11-17-2010--HORTON_D_R_INC_-DE-.html'">882184--11/17/2010--HORTON_D_R_INC_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/847383--6-11-2010--NEW_FRONTIER_MEDIA_INC.html'">847383--6/11/2010--NEW_FRONTIER_MEDIA_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/799088--8-4-2006--CARMIKE_CINEMAS_INC.html'">799088--8/4/2006--CARMIKE_CINEMAS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1166003--3-30-2009--EXPRESS-1_EXPEDITED_SOLUTIONS_INC.html'">1166003--3/30/2009--EXPRESS-1_EXPEDITED_SOLUTIONS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1093897--3-19-2008--COASTAL_BANKING_CO_INC.html'">1093897--3/19/2008--COASTAL_BANKING_CO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1166789--3-15-2007--LIN_TV_CORP.html'">1166789--3/15/2007--LIN_TV_CORP</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

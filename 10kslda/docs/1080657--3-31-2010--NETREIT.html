@@ -1,0 +1,236 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[23.1350795946, "../topics/{investment,_property,_distribution}.html", "{investment,_property,_distribution}"], [16.5569894168, "../topics/{loan,_real,_estate}.html", "{loan,_real,_estate}"], [8.6337290615, "../topics/{tax,_income,_asset}.html", "{tax,_income,_asset}"], [7.2371320399, "../topics/{debt,_indebtedness,_cash}.html", "{debt,_indebtedness,_cash}"], [3.1499986207, "../topics/{cost,_contract,_operation}.html", "{cost,_contract,_operation}"], [3.1095891355, "../topics/{stock,_price,_share}.html", "{stock,_price,_share}"], [2.7065518323, "../topics/{provision,_law,_control}.html", "{provision,_law,_control}"], [2.2532604423, "../topics/{interest,_director,_officer}.html", "{interest,_director,_officer}"], [1.9470125811, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [1.7965458962, "../topics/{regulation,_change,_law}.html", "{regulation,_change,_law}"], [1.7502677624, "../topics/{condition,_economic,_financial}.html", "{condition,_economic,_financial}"], [1.7165249393, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"], [1.6964579425, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [1.5174211223, "../topics/{product,_liability,_claim}.html", "{product,_liability,_claim}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>1080657--3/31/2010--NETREIT</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">1080657--3/31/2010--NETREIT</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{investment,_property,_distribution}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{investment,_property,_distribution}.html'">{investment, property, distribution}</td></tr>
+<tr class="list"><td id="{loan,_real,_estate}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{loan,_real,_estate}.html'">{loan, real, estate}</td></tr>
+<tr class="list"><td id="{tax,_income,_asset}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{tax,_income,_asset}.html'">{tax, income, asset}</td></tr>
+<tr class="list"><td id="{debt,_indebtedness,_cash}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{debt,_indebtedness,_cash}.html'">{debt, indebtedness, cash}</td></tr>
+<tr class="list"><td id="{cost,_contract,_operation}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_contract,_operation}.html'">{cost, contract, operation}</td></tr>
+<tr class="list"><td id="{stock,_price,_share}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_share}.html'">{stock, price, share}</td></tr>
+<tr class="list"><td id="{provision,_law,_control}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{provision,_law,_control}.html'">{provision, law, control}</td></tr>
+<tr class="list"><td id="{interest,_director,_officer}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{interest,_director,_officer}.html'">{interest, director, officer}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{regulation,_change,_law}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_change,_law}.html'">{regulation, change, law}</td></tr>
+<tr class="list"><td id="{condition,_economic,_financial}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{condition,_economic,_financial}.html'">{condition, economic, financial}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(11)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(12)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{product,_liability,_claim}" onmouseover="highlight(13)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_liability,_claim}.html'">{product, liability, claim}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    We may change one or more of our investment policies.
+Our shareholders have a very limited right to influence our business or affairs.
+We depend on key personnel and the loss of such personnel could impair our ability to achieve our business objectives.
+The availability and timing of cash dividends is uncertain.
+Our bylaws may prevent our participation in certain business combinations which could prevent us from entering into a transaction that would be beneficial to our business and shareholders.
+The limitation on the number of shares a person may own may discourage a takeover.
+Our common stock is subordinate to our Preferred Stock in rights to distributions.
+Possible acquisition of our affiliated property manager s business could result in significant dilution to our shareholders.
+Possible future transactions with our executive management or their affiliates could create a conflict of interest for our executive management.
+Our return to our shareholders could be reduced if we are required to register as an investment company.
+Risks Relating to Private Offering Exemption and Lack of Liquidity
+If we failed to comply with applicable exemption requirements in connection with our private placement offerings we may be forced to offer rescission rights to certain of our shareholders.
+It will be difficult for our shareholders to sell their common stock because there is currently no public market for the shares and we do not intend to list the shares on a stock exchange. If our shareholders are able to sell their shares, they will likely have to sell them at a substantial discount due to the lack of a public market for our shares.
+Risks Relating to Real Estate Investments
+Unsettled conditions in the financial and equity markets could negatively affect the U.S. and world economies and could adversely affect our business and operations.
+Current commercial mortgage market trends may affect the terms and conditions of our mortgage financing and make it more difficult for us to obtain mortgage financing and have an adverse effect on our ability to make suitable investments..
+A decrease in real estate values will negatively affect our ability to refinance our properties and possibly our existing mortgage obligations.
+We are not required to set aside and maintain specific levels of cash reserves and may have difficulty in the event of increases in existing expenses or unanticipated expenses.
+We may be unable to sell a property at any particular time which would limit our ability to realize a gain on our investments and decrease the value of our shares.
+Some of our properties may depend upon a single tenant for all of their rental income and the loss of such tenants could have an adverse effect on our operations.
+We may incur substantial costs in improving some of our properties which are suitable for only one use if such use is no longer possible.
+We may obtain only limited warranties when we purchase a property and could suffer losses resulting from significant defects in such properties which are not covered by such warranties.
+Our ability to operate a property may be limited by contract which could prevent us from obtaining the maximum value from such properties.
+Shorter lease terms tend to increase our maintenance costs.
+A property that incurs a vacancy could be difficult to sell or re-lease and could have a material adverse effect on our operations and our ability to pay dividends.
+We may have to extend credit to buyers of our properties and a default by such buyers could have a material adverse effect on our operations and our ability to pay dividends.
+We may not have funding for future tenant improvements which would make it difficult for us to lease such properties to new tenants.
+Uninsured losses may adversely affect returns to our shareholders.
+Our compliance with various legal requirements of real estate ownership may involve significant costs.
+Competition for properties could negatively impact our profitability.
+The bankruptcy or insolvency of one of our major tenants would adversely impact our operations and our ability to pay dividends.
+Discovery of previously undetected environmentally hazardous conditions may adversely affect our operating results.
+Recent unavailability of certain types of credit financing and stagnation of real estate prices have lead to economic slowdown and a recession.
+Compliance with the Americans with Disabilities Act of 1990 and fire, safety, and other regulations may require us to make unintended expenditures that could adversely impact our results of operations.
+We may acquire properties in joint ventures, partnerships or through limited liability companies which could limit our ability to control or liquidate such holdings.
+If we invest in a DOWNREIT partnership as a general partner we would be responsible for all liabilities of such partnership.
+In a sale-leaseback transaction, we are at risk that our seller/lessee will default if its tenants default which could impair our operations and limit our ability to pay dividends.
+Uncertain market conditions and the broad discretion of management relating to the future disposition of properties could adversely affect the return on our
+Regulatory changes may adversely affect our specific properties and may have adverse results on our operations and returns on our shares.
+Changes in local conditions may adversely affect one or more of our properties.
+Each of our properties will be subject to local supply and demand for similar or competing properties which may have an adverse effect on the amount of rent we can charge or the price we would obtain in a liquidation.
+Risks Relating to Debt Financing
+The more leverage we use, the higher our operational risks will be.
+If we fail to make our debt payments, we could lose our investment in a property.
+Lenders may require us to enter into restrictive covenants relating to our operations which could impair our ability to pay dividends.
+If we enter into financing arrangements involving balloon payment obligations, it may adversely affect our ability to pay dividends.
+Our risks of losing property through a mortgage loan default will be greater where the property is cross-collateralized.
+Due-on-sale clauses in our mortgages may prevent us from taking advantage of interest rate changes.
+Risks Associated with Making or Investing in Mortgage Loans
+We do not have experienced loan underwriting personnel which may put us at a disadvantage in analyzing and negotiating mortgage loans and could have an adverse effect on our ability to pay dividends.
+Mortgage loans may be impacted by unfavorable real estate market conditions, which could decrease the value of our mortgage investments and impair our ability to pay dividends.
+Mortgage loans may be subject to interest rate fluctuations that could reduce our returns as compared to market interest rates.
+Returns on mortgage loans may be limited by regulations.
+Delays in liquidating a defaulted mortgage loan could reduce our investment returns.
+Foreclosures create additional ownership risks that could adversely impact our returns on mortgage investments.
+Risks Relating to Our Management s Conflicts of Interest
+We face certain conflicts of interest with respect to our operations.
+There is competition for the time and services of our senior management, and our property manager and its affiliates may not dedicate all of the time necessary to manage our business.
+The amounts of compensation to be paid to our management, our property manager and possibly their affiliates cannot be predicted and significant changes in such compensation could adversely affect our operations and ability to pay dividends.
+Our rights, and the rights of our shareholders, to recover claims against our officers and directors are limited.
+Risks Relating to Federal Income Taxes
+Because of recently enacted tax legislation, REIT investments are comparatively less attractive than investments in other corporations.
+Failure to qualify as a REIT could adversely affect our operations and our ability to pay dividends.
+In order to maintain our REIT status, we may be forced to borrow funds during unfavorable market conditions which could impair our long term operations.
+Qualified plans investing in our shares will be taxed on our distributions to the extent that they are unrelated business taxable income.
+Even if we qualify and maintain our REIT status, we still may be required to pay federal, state, or local taxes which could have an adverse effect on our operations.
+Non-U.S. shareholders selling their Securities may be subject to withholding or other tax.
+There are special considerations that apply to qualified plans and IRAs investing in our shares.
+<p><a href="http://www.sec.gov/Archives/edgar/data/1080657/0000950123-10-030213.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/1294017--3-22-2006--JER_Investors_Trust_Inc.html'">1294017--3/22/2006--JER_Investors_Trust_Inc</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1390213--3-26-2010--Corporate_Property_Associates_17_-_Global_INC.html'">1390213--3/26/2010--Corporate_Property_Associates_17_-_Global_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1294017--3-16-2007--JER_Investors_Trust_Inc.html'">1294017--3/16/2007--JER_Investors_Trust_Inc</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1261159--3-20-2009--CNL_LIFESTYLE_PROPERTIES_INC.html'">1261159--3/20/2009--CNL_LIFESTYLE_PROPERTIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1393726--3-16-2010--Care_Investment_Trust_Inc..html'">1393726--3/16/2010--Care_Investment_Trust_Inc.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1261159--3-18-2008--CNL_INCOME_PROPERTIES_INC.html'">1261159--3/18/2008--CNL_INCOME_PROPERTIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1273801--2-25-2009--NORTHSTAR_REALTY.html'">1273801--2/25/2009--NORTHSTAR_REALTY</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1393726--3-16-2009--Care_Investment_Trust_Inc..html'">1393726--3/16/2009--Care_Investment_Trust_Inc.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1287701--2-28-2007--GRAMERCY_CAPITAL_CORP.html'">1287701--2/28/2007--GRAMERCY_CAPITAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1287701--3-13-2006--GRAMERCY_CAPITAL_CORP.html'">1287701--3/13/2006--GRAMERCY_CAPITAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/37008--3-16-2007--Winthrop_Realty_Trust.html'">37008--3/16/2007--Winthrop_Realty_Trust</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1175483--3-16-2009--NEWCASTLE_INVESTMENT_CORP.html'">1175483--3/16/2009--NEWCASTLE_INVESTMENT_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1274055--4-2-2007--DESERT_CAPITAL_REIT_INC.html'">1274055--4/2/2007--DESERT_CAPITAL_REIT_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1273801--3-15-2007--NORTHSTAR_REALTY.html'">1273801--3/15/2007--NORTHSTAR_REALTY</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1414932--12-2-2010--Fifth_Street_Finance_Corp.html'">1414932--12/2/2010--Fifth_Street_Finance_Corp</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1170991--3-14-2007--DCT_Industrial_Trust_Inc..html'">1170991--3/14/2007--DCT_Industrial_Trust_Inc.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/37008--3-17-2008--Winthrop_Realty_Trust.html'">37008--3/17/2008--Winthrop_Realty_Trust</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1164246--3-17-2006--G_REIT_INC.html'">1164246--3/17/2006--G_REIT_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1294017--12-20-2010--JER_Investors_Trust_Inc.html'">1294017--12/20/2010--JER_Investors_Trust_Inc</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1363890--2-13-2008--KAYNE_ANDERSON_ENERGY_DEVELOPMENT_CO.html'">1363890--2/13/2008--KAYNE_ANDERSON_ENERGY_DEVELOPMENT_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1232582--3-2-2010--ASHFORD_HOSPITALITY_TRUST_INC.html'">1232582--3/2/2010--ASHFORD_HOSPITALITY_TRUST_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1363890--2-16-2007--KAYNE_ANDERSON_ENERGY_DEVELOPMENT_CO.html'">1363890--2/16/2007--KAYNE_ANDERSON_ENERGY_DEVELOPMENT_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1175483--2-19-2010--NEWCASTLE_INVESTMENT_CORP.html'">1175483--2/19/2010--NEWCASTLE_INVESTMENT_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1253986--3-9-2009--ARBOR_REALTY_TRUST_INC.html'">1253986--3/9/2009--ARBOR_REALTY_TRUST_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1164246--4-15-2009--G_REIT_Liquidating_Trust.html'">1164246--4/15/2009--G_REIT_Liquidating_Trust</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1297704--3-13-2008--NGP_Capital_Resources_CO.html'">1297704--3/13/2008--NGP_Capital_Resources_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1253986--3-9-2010--ARBOR_REALTY_TRUST_INC.html'">1253986--3/9/2010--ARBOR_REALTY_TRUST_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1164246--3-24-2008--G_REIT_Liquidating_Trust.html'">1164246--3/24/2008--G_REIT_Liquidating_Trust</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1018215--3-29-2006--WELLS_REAL_ESTATE_FUND_X_L_P.html'">1018215--3/29/2006--WELLS_REAL_ESTATE_FUND_X_L_P</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1474098--3-24-2010--Pebblebrook_Hotel_Trust.html'">1474098--3/24/2010--Pebblebrook_Hotel_Trust</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

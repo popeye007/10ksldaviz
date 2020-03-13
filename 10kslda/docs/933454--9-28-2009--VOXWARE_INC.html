@@ -1,0 +1,186 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[6.6248846331, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [4.2222488865, "../topics/{stock,_price,_share}.html", "{stock,_price,_share}"], [3.9503718596, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [2.7089314795, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [1.8632697287, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [1.8447894357, "../topics/{regulation,_change,_law}.html", "{regulation,_change,_law}"], [1.7679911396, "../topics/{regulation,_government,_change}.html", "{regulation,_government,_change}"], [1.7395491616, "../topics/{product,_candidate,_development}.html", "{product,_candidate,_development}"], [1.7231529606, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [1.7042118105, "../topics/{control,_financial,_internal}.html", "{control,_financial,_internal}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>933454--9/28/2009--VOXWARE_INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">933454--9/28/2009--VOXWARE_INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{stock,_price,_share}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_share}.html'">{stock, price, share}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{regulation,_change,_law}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_change,_law}.html'">{regulation, change, law}</td></tr>
+<tr class="list"><td id="{regulation,_government,_change}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_government,_change}.html'">{regulation, government, change}</td></tr>
+<tr class="list"><td id="{product,_candidate,_development}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_candidate,_development}.html'">{product, candidate, development}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{control,_financial,_internal}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{control,_financial,_internal}.html'">{control, financial, internal}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    Risks Relating to Our Business and Operations
+If we incur operating losses, we may be unable to continue our operations.
+If we cannot raise adequate capital in the future, we may be unable to continue our product development, marketing and business, generally.
+We rely substantially on key customers.
+If our VoiceLogistics family of products is not successful in the market, we will not be able to generate substantial revenues or achieve sustained profitability.
+We have a sole source vendor for our primary hardware products
+We are relying on third-party hardware manufacturers to develop and bring to market portable voice-compatible computer equipment on which to run our software.
+If we do not develop or acquire and introduce new and enhanced products on a timely basis, our products may be rendered obsolete.
+If our competitors introduce better or less expensive products, our products may not be profitable to sell or to continue to develop.
+If we cannot integrate our speech recognition products with other components of customer systems, we may not be able to sell our products.
+There are a number of factors which may cause substantial variability in our quarterly operating results.
+If our third-party partners do not effectively market and service our products, we may not generate significant revenues or profits from sales of our products.
+If we cannot attract and retain management and other personnel with experience in the areas of our business focus, we will not be able to manage and grow our business.
+If the export of our technology is deemed a violation of the regulations of the United States Department of Commerce, Bureau of Industry and Security, our business will be substantially harmed.
+If we cannot protect our proprietary rights and trade secrets, or if we are found to be infringing on the patents and proprietary rights of others, our business would be substantially harmed.
+Risks Relating to Our Securities
+The price of our Common Stock has been highly volatile due to factors that will continue to affect the price of our stock.
+A significant portion of our total outstanding shares of Common Stock may be sold in the market in the near future. This could cause the market price of our Common Stock to drop significantly, even if our business is doing well.
+Future sales of our Common Stock in the public market could adversely affect the price of our Common Stock.
+Our management and other affiliates have significant control of our Common Stock and could control our actions in a manner that conflicts with our interests and the interests of other stockholders.
+If we are unable to maintain our listing on the NASDAQ Capital Market, the marketability of our Common Stock could be adversely affected.
+Risks Relating to Accounting Rules and Internal Controls Changes in, or interpretations of, accounting rules and regulations, such as expensing of stock options, could result in unfavorable accounting charges.
+<p><a href="http://www.sec.gov/Archives/edgar/data/933454/0001206774-09-001854.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/1403997--11-20-2009--SITESEARCH_CORP.html'">1403997--11/20/2009--SITESEARCH_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1112920--3-9-2006--GLOBALSCAPE_INC.html'">1112920--3/9/2006--GLOBALSCAPE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/918709--3-30-2007--ACT_TELECONFERENCING_INC.html'">918709--3/30/2007--ACT_TELECONFERENCING_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1075736--3-9-2006--IMERGENT_INC.html'">1075736--3/9/2006--IMERGENT_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1062195--3-16-2007--24-7_REAL_MEDIA_INC.html'">1062195--3/16/2007--24/7_REAL_MEDIA_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/836690--12-11-2008--INNOVATIVE_SOLUTIONS_&_SUPPORT_INC.html'">836690--12/11/2008--INNOVATIVE_SOLUTIONS_&_SUPPORT_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/892482--3-12-2010--RIMAGE_CORP.html'">892482--3/12/2010--RIMAGE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/768710--3-15-2007--RELIV_INTERNATIONAL_INC.html'">768710--3/15/2007--RELIV_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/948708--3-2-2010--SMITH_MICRO_SOFTWARE_INC.html'">948708--3/2/2010--SMITH_MICRO_SOFTWARE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/944075--3-7-2008--SOCKET_COMMUNICATIONS_INC.html'">944075--3/7/2008--SOCKET_COMMUNICATIONS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1278021--2-26-2010--MARKETAXESS_HOLDINGS_INC.html'">1278021--2/26/2010--MARKETAXESS_HOLDINGS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1099944--3-31-2006--INFORTE_CORP.html'">1099944--3/31/2006--INFORTE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/919013--3-16-2010--WAVE_SYSTEMS_CORP.html'">919013--3/16/2010--WAVE_SYSTEMS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/868689--6-29-2010--T_BAY_HOLDINGS_INC.html'">868689--6/29/2010--T_BAY_HOLDINGS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/739878--4-19-2006--RUSS_BERRIE_&_CO_INC.html'">739878--4/19/2006--RUSS_BERRIE_&_CO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1080034--3-2-2009--VALUECLICK_INC-CA.html'">1080034--3/2/2009--VALUECLICK_INC/CA</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1096958--3-31-2006--OPENTV_CORP.html'">1096958--3/31/2006--OPENTV_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/948708--3-17-2008--SMITH_MICRO_SOFTWARE_INC.html'">948708--3/17/2008--SMITH_MICRO_SOFTWARE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1133311--3-17-2008--TRAVELZOO_INC.html'">1133311--3/17/2008--TRAVELZOO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1133311--3-15-2007--TRAVELZOO_INC.html'">1133311--3/15/2007--TRAVELZOO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/868689--7-15-2008--T_BAY_HOLDINGS_INC.html'">868689--7/15/2008--T_BAY_HOLDINGS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1099944--3-30-2007--INFORTE_CORP.html'">1099944--3/30/2007--INFORTE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1095079--4-15-2009--ARTISTDIRECT_INC.html'">1095079--4/15/2009--ARTISTDIRECT_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1107280--3-31-2010--USA_VIDEO_INTERACTIVE_CORP.html'">1107280--3/31/2010--USA_VIDEO_INTERACTIVE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/739878--4-1-2008--RUSS_BERRIE_&_CO_INC.html'">739878--4/1/2008--RUSS_BERRIE_&_CO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/106040--8-13-2010--WESTERN_DIGITAL_CORP.html'">106040--8/13/2010--WESTERN_DIGITAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/22252--5-1-2006--COMARCO_INC.html'">22252--5/1/2006--COMARCO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1089525--3-30-2007--SMART_VIDEO_TECHNOLOGIES_INC.html'">1089525--3/30/2007--SMART_VIDEO_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/310433--3-1-2007--COMMONWEALTH_TELEPHONE_ENTERPRISES_INC_-NEW-.html'">310433--3/1/2007--COMMONWEALTH_TELEPHONE_ENTERPRISES_INC_/NEW/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1062195--3-15-2006--24-7_REAL_MEDIA_INC.html'">1062195--3/15/2006--24/7_REAL_MEDIA_INC</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

@@ -1,0 +1,179 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[4.7169329049, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [2.7066226782, "../topics/{condition,_economic,_financial}.html", "{condition,_economic,_financial}"], [2.6737329108, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [1.705871807, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [1.6968389738, "../topics/{system,_service,_information}.html", "{system,_service,_information}"], [1.6962616406, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [1.6962616404, "../topics/{provision,_law,_control}.html", "{provision,_law,_control}"], [1.6917631297, "../topics/{debt,_indebtedness,_cash}.html", "{debt,_indebtedness,_cash}"], [1.6865741546, "../topics/{competitive,_industry,_competition}.html", "{competitive,_industry,_competition}"], [1.6850386477, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>1056285--5/2/2007--KIRKLANDS_INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">1056285--5/2/2007--KIRKLANDS_INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{condition,_economic,_financial}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{condition,_economic,_financial}.html'">{condition, economic, financial}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{system,_service,_information}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{system,_service,_information}.html'">{system, service, information}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{provision,_law,_control}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{provision,_law,_control}.html'">{provision, law, control}</td></tr>
+<tr class="list"><td id="{debt,_indebtedness,_cash}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{debt,_indebtedness,_cash}.html'">{debt, indebtedness, cash}</td></tr>
+<tr class="list"><td id="{competitive,_industry,_competition}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{competitive,_industry,_competition}.html'">{competitive, industry, competition}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    A Prolonged Economic Downturn Could Result in Reduced Net Sales and Profitability.
+Reduced Consumer Spending in the Southeastern Part of the United States Where a Majority of Our Stores Are Concentrated Could Reduce Our Net Sales.
+We May Not Be Able to Successfully Anticipate Consumer Trends and Our Failure to Do So May Lead to Loss of Consumer Acceptance of Our Products Resulting in Reduced Net Sales.
+We Depend on a Number of Vendors to Supply Our Merchandise, and Any Delay in Merchandise Deliveries from Certain Vendors May Lead to a Decline in Inventory Which Could Result in a Loss of Net Sales.
+We Are Dependent on Foreign Imports for a Significant Portion of Our Merchandise, and Any Changes in the Trading Relations and Conditions Between the United States and the Relevant Foreign Countries May Lead to a Decline in Inventory Resulting in a Decline in Net Sales, or an Increase in the Cost of Sales Resulting in Reduced Gross Profit.
+Our Success Is Highly Dependent on Our Planning and Control Processes and Our Supply Chain, and Any Disruption in or Failure to Continue to Improve These Processes May Result in a Loss of Net Sales and Net Income.
+We Face an Extremely Competitive Specialty Retail Business Market, and Such Competition Could Result in a Reduction of Our Prices and a Loss of Our Market Share.
+Our Business Is Highly Seasonal and Our Fourth Quarter Contributes a Disproportionate Amount of Our Net Sales, Net Income and Cash Flow, and Any Factors Negatively Impacting Us During Our Fourth Quarter Could Reduce Our Net Sales, Net Income and Cash Flow, Leaving Us with Excess Inventory and Making It More Difficult for Us to Finance Our Capital Requirements.
+We May Experience Significant Variations in Our Quarterly Results.
+The Agreement Governing Our Debt Places Certain Reporting and Consent Requirements on Us Which May Affect Our Ability to Operate Our Business in Accordance with Our Business and Growth Strategy.
+Our Comparable Store Net Sales Fluctuate Due to a Variety of Factors and May Not Be a Meaningful Indicator of Future Performance.
+We Are Highly Dependent on Customer Traffic in Malls and Shopping Centers, and Any Reduction in the Overall Level of Traffic Could Reduce Our Net Sales and Increase Our Sales and Marketing Expenses.
+Our Hardware and Software Systems Are Vulnerable to Damage that Could Harm Our Business.
+We Depend on Key Personnel, and if We Lose the Services of Any Member of Our Senior Management Team, We May Not Be Able to Run Our Business Effectively.
+Our Charter and Bylaw Provisions and Certain Provisions of Tennessee Law May Make It Difficult in Some Respects to Cause a Change in Control of Kirkland s and Replace Incumbent Management.
+<p><a href="http://www.sec.gov/Archives/edgar/data/1056285/0000950144-07-004136.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/863436--2-28-2008--BENCHMARK_ELECTRONICS_INC.html'">863436--2/28/2008--BENCHMARK_ELECTRONICS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/21828--3-23-2007--COLONIAL_COMMERCIAL_CORP.html'">21828--3/23/2007--COLONIAL_COMMERCIAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/856250--9-13-2006--CRAFTMADE_INTERNATIONAL_INC.html'">856250--9/13/2006--CRAFTMADE_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/825542--11-24-2010--SCOTTS_MIRACLE-GRO_CO.html'">825542--11/24/2010--SCOTTS_MIRACLE-GRO_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/862861--3-28-2008--APPLIANCE_RECYCLING_CENTERS_OF_AMERICA_INC_-MN.html'">862861--3/28/2008--APPLIANCE_RECYCLING_CENTERS_OF_AMERICA_INC_/MN</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1069353--11-21-2007--CONEXANT_SYSTEMS_INC.html'">1069353--11/21/2007--CONEXANT_SYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/355999--2-29-2008--UNITED_STATIONERS_INC.html'">355999--2/29/2008--UNITED_STATIONERS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/355999--2-27-2009--UNITED_STATIONERS_INC.html'">355999--2/27/2009--UNITED_STATIONERS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/918965--9-1-2006--SCANSOURCE_INC.html'">918965--9/1/2006--SCANSOURCE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/862861--3-20-2009--APPLIANCE_RECYCLING_CENTERS_OF_AMERICA_INC_-MN.html'">862861--3/20/2009--APPLIANCE_RECYCLING_CENTERS_OF_AMERICA_INC_/MN</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/884940--4-6-2006--STEIN_MART_INC.html'">884940--4/6/2006--STEIN_MART_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1356949--3-14-2007--Houston_Wire_&_Cable_CO.html'">1356949--3/14/2007--Houston_Wire_&_Cable_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/30828--3-31-2006--COBRA_ELECTRONICS_CORP.html'">30828--3/31/2006--COBRA_ELECTRONICS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/46080--2-25-2009--HASBRO_INC.html'">46080--2/25/2009--HASBRO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1003950--3-17-2008--PERFORMANCE_TECHNOLOGIES_INC_\DE\.html'">1003950--3/17/2008--PERFORMANCE_TECHNOLOGIES_INC_\DE\</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1004608--3-30-2007--PINNACLE_DATA_SYSTEMS_INC.html'">1004608--3/30/2007--PINNACLE_DATA_SYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/703360--2-26-2010--LSI_CORP.html'">703360--2/26/2010--LSI_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/46080--2-27-2008--HASBRO_INC.html'">46080--2/27/2008--HASBRO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/909326--6-12-2007--ASYST_TECHNOLOGIES_INC.html'">909326--6/12/2007--ASYST_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/885245--4-16-2008--BUCKLE_INC.html'">885245--4/16/2008--BUCKLE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/797721--5-28-2009--VIASAT_INC.html'">797721--5/28/2009--VIASAT_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/56701--8-20-2007--KOSS_CORP.html'">56701--8/20/2007--KOSS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/811641--3-23-2006--IMMUCELL_CORP_-DE-.html'">811641--3/23/2006--IMMUCELL_CORP_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/355999--3-6-2006--UNITED_STATIONERS_INC.html'">355999--3/6/2006--UNITED_STATIONERS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/355999--3-1-2007--UNITED_STATIONERS_INC.html'">355999--3/1/2007--UNITED_STATIONERS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/791915--2-26-2009--CYPRESS_SEMICONDUCTOR_CORP_-DE-.html'">791915--2/26/2009--CYPRESS_SEMICONDUCTOR_CORP_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1001902--2-26-2010--INTEVAC_INC.html'">1001902--2/26/2010--INTEVAC_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/875359--4-3-2006--MICRO_LINEAR_CORP_-CA-.html'">875359--4/3/2006--MICRO_LINEAR_CORP_/CA/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1001902--3-4-2009--INTEVAC_INC.html'">1001902--3/4/2009--INTEVAC_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/822663--3-15-2006--INTER_PARFUMS_INC.html'">822663--3/15/2006--INTER_PARFUMS_INC</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

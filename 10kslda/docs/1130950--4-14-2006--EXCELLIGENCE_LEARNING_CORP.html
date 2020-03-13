@@ -1,0 +1,175 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[2.295109364, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [2.1848355361, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [1.6963834335, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [1.696365962, "../topics/{regulation,_government,_change}.html", "{regulation,_government,_change}"], [1.6963246249, "../topics/{financial,_litigation,_operation}.html", "{financial,_litigation,_operation}"], [1.6962616857, "../topics/{control,_financial,_internal}.html", "{control,_financial,_internal}"], [1.6962616839, "../topics/{stock,_price,_share}.html", "{stock,_price,_share}"], [1.696260515, "../topics/{debt,_indebtedness,_cash}.html", "{debt,_indebtedness,_cash}"], [1.6962559913, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [1.5880025599, "../topics/{cost,_regulation,_environmental}.html", "{cost,_regulation,_environmental}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>1130950--4/14/2006--EXCELLIGENCE_LEARNING_CORP</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">1130950--4/14/2006--EXCELLIGENCE_LEARNING_CORP</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{regulation,_government,_change}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_government,_change}.html'">{regulation, government, change}</td></tr>
+<tr class="list"><td id="{financial,_litigation,_operation}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{financial,_litigation,_operation}.html'">{financial, litigation, operation}</td></tr>
+<tr class="list"><td id="{control,_financial,_internal}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{control,_financial,_internal}.html'">{control, financial, internal}</td></tr>
+<tr class="list"><td id="{stock,_price,_share}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_share}.html'">{stock, price, share}</td></tr>
+<tr class="list"><td id="{debt,_indebtedness,_cash}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{debt,_indebtedness,_cash}.html'">{debt, indebtedness, cash}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{cost,_regulation,_environmental}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_regulation,_environmental}.html'">{cost, regulation, environmental}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    The recent restatement of our previously issued financial statements has had a material adverse impact on us, including increased costs, the increased possibility of legal or administrative proceedings, and the delisting of our common stock from The Nasdaq Capital Market.
+Material weaknesses or deficiencies in our internal control over financial reporting could harm stockholder and business confidence in our financial reporting.
+Our common stock was delisted from The Nasdaq Capital Market, which may reduce the price of our common stock and the levels of liquidity available to our stockholders and cause confusion among investors.
+We are dependent upon the size of the preschool and elementary school-age populations, levels of enrollment and expenditures per child in child care programs and elementary schools.
+Our business is highly seasonal and our annual results are highly dependent on the success of our third quarter results.
+We are subject to intense competition which may impede or prevent us from attaining greater market share and could impair the growth of our revenues.
+Restrictive loan covenants may limit our ability to draw on our credit facility, which could adversely affect our results of operations and our financial condition.
+If a shipment of products that we import is interrupted or delayed, our inventory levels and sales could decline.
+We may be unable to protect our intellectual property, which could impair brand and reputation.
+The cost of materials used to manufacture our products is subject to volatility, which could reduce our profitability.
+Certain of our affiliates have significant influence over us, which could limit our other stockholders ability to influence corporate decisions.
+<p><a href="http://www.sec.gov/Archives/edgar/data/1130950/0001193125-06-079958.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/833140--3-20-2006--ENPATH_MEDICAL_INC.html'">833140--3/20/2006--ENPATH_MEDICAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1317577--9-5-2008--Pike_Electric_CORP.html'">1317577--9/5/2008--Pike_Electric_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/4458--6-7-2007--U_HAUL_INTERNATIONAL_INC.html'">4458--6/7/2007--U_HAUL_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1260968--3-9-2007--MARLIN_BUSINESS_SERVICES_CORP.html'">1260968--3/9/2007--MARLIN_BUSINESS_SERVICES_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/703360--3-16-2006--LSI_LOGIC_CORP.html'">703360--3/16/2006--LSI_LOGIC_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/764244--4-24-2008--INTERVOICE_INC.html'">764244--4/24/2008--INTERVOICE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/878079--4-16-2008--BON_TON_STORES_INC.html'">878079--4/16/2008--BON_TON_STORES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1462418--3-17-2010--Altisource_Portfolio_Solutions_S.A..html'">1462418--3/17/2010--Altisource_Portfolio_Solutions_S.A.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/16104--6-16-2010--CAGLES_INC.html'">16104--6/16/2010--CAGLES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/875657--3-13-2009--ULTRALIFE_CORP.html'">875657--3/13/2009--ULTRALIFE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/708850--8-29-2007--DIONEX_CORP_-DE.html'">708850--8/29/2007--DIONEX_CORP_/DE</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1288407--3-28-2008--MRS_FIELDS_FAMOUS_BRANDS_LLC.html'">1288407--3/28/2008--MRS_FIELDS_FAMOUS_BRANDS_LLC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/93676--9-22-2006--STARRETT_L_S_CO.html'">93676--9/22/2006--STARRETT_L_S_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/912888--3-16-2006--VITAL_IMAGES_INC.html'">912888--3/16/2006--VITAL_IMAGES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1001288--2-27-2009--LEXMARK_INTERNATIONAL_INC_-KY-.html'">1001288--2/27/2009--LEXMARK_INTERNATIONAL_INC_/KY/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1114200--3-1-2010--AMERICAN_MEDICAL_SYSTEMS_HOLDINGS_INC.html'">1114200--3/1/2010--AMERICAN_MEDICAL_SYSTEMS_HOLDINGS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/225628--1-29-2008--MEGADATA_CORP.html'">225628--1/29/2008--MEGADATA_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/7431--2-26-2009--ARMSTRONG_WORLD_INDUSTRIES_INC.html'">7431--2/26/2009--ARMSTRONG_WORLD_INDUSTRIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/703604--3-16-2006--LAWSON_PRODUCTS_INC-NEW-DE-.html'">703604--3/16/2006--LAWSON_PRODUCTS_INC/NEW/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/758004--5-25-2007--NOVELL_INC.html'">758004--5/25/2007--NOVELL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/703604--3-15-2007--LAWSON_PRODUCTS_INC-NEW-DE-.html'">703604--3/15/2007--LAWSON_PRODUCTS_INC/NEW/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/57497--2-24-2006--LAMSON_&_SESSIONS_CO.html'">57497--2/24/2006--LAMSON_&_SESSIONS_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1056358--3-16-2007--MANNATECH_INC.html'">1056358--3/16/2007--MANNATECH_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/350077--9-11-2006--WMS_INDUSTRIES_INC_-DE-.html'">350077--9/11/2006--WMS_INDUSTRIES_INC_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/14177--1-31-2008--BRIDGFORD_FOODS_CORP.html'">14177--1/31/2008--BRIDGFORD_FOODS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1042173--3-8-2007--SCIENTIFIC_LEARNING_CORP.html'">1042173--3/8/2007--SCIENTIFIC_LEARNING_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/813621--3-16-2006--AMCOL_INTERNATIONAL_CORP.html'">813621--3/16/2006--AMCOL_INTERNATIONAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/918946--2-23-2007--BRIGHTPOINT_INC.html'">918946--2/23/2007--BRIGHTPOINT_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/20--3-23-2006--K_TRON_INTERNATIONAL_INC.html'">20--3/23/2006--K_TRON_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1087216--12-29-2008--ALLIANCE_HEALTHCARD_INC.html'">1087216--12/29/2008--ALLIANCE_HEALTHCARD_INC</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

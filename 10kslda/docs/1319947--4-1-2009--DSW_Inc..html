@@ -1,0 +1,197 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[8.6712265444, "../topics/{interest,_director,_officer}.html", "{interest,_director,_officer}"], [3.7612080785, "../topics/{condition,_economic,_financial}.html", "{condition,_economic,_financial}"], [3.6967637944, "../topics/{debt,_indebtedness,_cash}.html", "{debt,_indebtedness,_cash}"], [3.6962261913, "../topics/{provision,_law,_control}.html", "{provision,_law,_control}"], [3.6264260713, "../topics/{investment,_property,_distribution}.html", "{investment,_property,_distribution}"], [2.0172176261, "../topics/{operation,_natural,_condition}.html", "{operation,_natural,_condition}"], [1.7618925834, "../topics/{system,_service,_information}.html", "{system,_service,_information}"], [1.7422608905, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [1.7301963615, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [1.6997788613, "../topics/{stock,_price,_share}.html", "{stock,_price,_share}"], [1.6963737871, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [1.6961356788, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"], [1.6956657188, "../topics/{competitive,_industry,_competition}.html", "{competitive,_industry,_competition}"], [1.1471764036, "../topics/{product,_market,_service}.html", "{product,_market,_service}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>1319947--4/1/2009--DSW_Inc.</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">1319947--4/1/2009--DSW_Inc.</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{interest,_director,_officer}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{interest,_director,_officer}.html'">{interest, director, officer}</td></tr>
+<tr class="list"><td id="{condition,_economic,_financial}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{condition,_economic,_financial}.html'">{condition, economic, financial}</td></tr>
+<tr class="list"><td id="{debt,_indebtedness,_cash}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{debt,_indebtedness,_cash}.html'">{debt, indebtedness, cash}</td></tr>
+<tr class="list"><td id="{provision,_law,_control}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{provision,_law,_control}.html'">{provision, law, control}</td></tr>
+<tr class="list"><td id="{investment,_property,_distribution}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{investment,_property,_distribution}.html'">{investment, property, distribution}</td></tr>
+<tr class="list"><td id="{operation,_natural,_condition}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_natural,_condition}.html'">{operation, natural, condition}</td></tr>
+<tr class="list"><td id="{system,_service,_information}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{system,_service,_information}.html'">{system, service, information}</td></tr>
+<tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{stock,_price,_share}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_share}.html'">{stock, price, share}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(11)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+<tr class="list"><td id="{competitive,_industry,_competition}" onmouseover="highlight(12)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{competitive,_industry,_competition}.html'">{competitive, industry, competition}</td></tr>
+<tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(13)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    We have entered into Supply Agreements with Stein Mart, Gordmans and Filene s Basement. If Stein Mart, Gordmans or Filene s Basement were to terminate our supply agreements, close a significant number of stores, declare bankruptcy or liquidate, it could have a material adverse effect on our business and financial performance.
+Ongoing liquidity risks at Retail Ventures and Filene s Basement could impact the shared service allocations between DSW and RVI and may have a material adverse effect on our future financial performance and financial position.
+We launched dsw.com in the first half of fiscal 2008, which may not be successful and could adversely affect our results of operations or distract management from our core business.
+We rely on our good relationships with vendors to purchase better-branded merchandise at favorable prices. If these relationships were to be impaired, we may not be able to obtain a sufficient selection of merchandise at attractive prices, and we may not be able to respond promptly to changing fashion trends, either of which could have a material adverse effect on our competitive position, our business and financial performance.
+We may be unable to anticipate and respond to fashion trends and consumer preferences in the markets in which we operate, which could have a material adverse effect on our business, financial condition and results of operations.
+Our operations are affected by seasonal variability.
+Our sales and quarterly financial performance may fluctuate for a variety of reasons, which could result in a decline in the price of our Class A Common Shares.
+We are reliant on our information systems and the loss or disruption of services could affect our ability to implement our growth strategy and have a material adverse effect on our business.
+The loss or disruption of our distribution and fulfillment centers could have a material adverse effect on our business and operations.
+Value City Department Stores filed for bankruptcy protection and closed its remaining stores. Value City owes us approximately $6.7 million as of January 31, 2009 and we may not be able to collect this amount from Value City.
+Our failure to retain our existing senior management team and to continue to attract qualified new personnel could adversely affect our business.
+We may be unable to compete favorably in our highly competitive market.
+The current slowdown in the United States economy has adversely affected consumer confidence and consumer spending habits.
+We rely on foreign sources for our merchandise, and our business is therefore subject to risks associated with international trade.
+Restrictions in our secured revolving credit facility could limit our operational flexibility.
+We may be unable to secure additional credit upon the termination of our existing credit facility in July 2010 or the terms of additional credit could be materially different than the terms we have today.
+The liquidity of our investments could fluctuate based on adverse market conditions.
+We are controlled directly by Retail Ventures and indirectly by SSC and its affiliates, whose interests may differ from our other shareholders.
+SSC and Retail Ventures or their affiliates may compete directly against us.
+Some of our directors and officers also serve as directors and officers of Retail Ventures, and may have conflicts of interest because they may own Retail Ventures stock or options to purchase Retail Ventures stock, or they may receive cash- or equity-based awards based on the performance of Retail Ventures.
+We do not expect to pay dividends in the foreseeable future.
+If our existing shareholders or holders of rights to purchase our Common Shares sell the shares they own, or if Retail Ventures distributes our Common Shares to its shareholders, it could adversely affect the price of our Class A Common Shares.
+Our amended articles of incorporation, amended and restated code of regulations and Ohio state law contain provisions that may have the effect of delaying or preventing a change in control of DSW. This could adversely affect the value of our Common Shares.
+Risks Relating to our Relationship with and Separation from Retail Ventures
+The agreements we entered into with Retail Ventures in connection with our initial public offering could restrict our operations and adversely affect our financial condition.
+The PIES (Premium Income Exchangeable Securities) issued by Retail Ventures may adversely affect the market price for DSW Class A Common Shares.
+We may be prevented from issuing stock to raise capital, to effectuate acquisitions or to provide equity incentives to members of our management and board of directors.
+Our prior and continuing relationship with Retail Ventures exposes us to risks attributable to Retail Ventures businesses.
+Possible future sales of Class A Common Shares by Retail Ventures, SSC, Schottenstein RVI, LLC, Cerberus and Millennium could adversely affect prevailing market prices for the Class A Common Shares.
+<p><a href="http://www.sec.gov/Archives/edgar/data/1319947/0000950152-09-003376.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/1319947--4-17-2008--DSW_Inc..html'">1319947--4/17/2008--DSW_Inc.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1187449--5-13-2010--AMERICAN_LIFE_HOLDING_CO_INC.html'">1187449--5/13/2010--AMERICAN_LIFE_HOLDING_CO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1187449--3-31-2009--AMERICAN_LIFE_HOLDING_CO_INC.html'">1187449--3/31/2009--AMERICAN_LIFE_HOLDING_CO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/62362--9-27-2010--MARINE_PETROLEUM_TRUST.html'">62362--9/27/2010--MARINE_PETROLEUM_TRUST</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1338401--3-29-2007--Global_Logistics_Acquisition_CORP.html'">1338401--3/29/2007--Global_Logistics_Acquisition_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/276077--3-25-2009--TIDELANDS_ROYALTY_TRUST_B.html'">276077--3/25/2009--TIDELANDS_ROYALTY_TRUST_B</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/313364--4-2-2007--MESA_ROYALTY_TRUST-TX.html'">313364--4/2/2007--MESA_ROYALTY_TRUST/TX</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/18230--2-22-2006--CATERPILLAR_INC.html'">18230--2/22/2006--CATERPILLAR_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1434994--3-31-2009--SILVER_HILL_MINES_INC.html'">1434994--3/31/2009--SILVER_HILL_MINES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1434994--4-6-2010--SILVER_HILL_MINES_INC.html'">1434994--4/6/2010--SILVER_HILL_MINES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/319654--3-1-2010--PERMIAN_BASIN_ROYALTY_TRUST.html'">319654--3/1/2010--PERMIAN_BASIN_ROYALTY_TRUST</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/895007--3-13-2009--WILLIAMS_COAL_SEAM_GAS_ROYALTY_TRUST.html'">895007--3/13/2009--WILLIAMS_COAL_SEAM_GAS_ROYALTY_TRUST</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/319654--3-15-2006--PERMIAN_BASIN_ROYALTY_TRUST.html'">319654--3/15/2006--PERMIAN_BASIN_ROYALTY_TRUST</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/895007--3-14-2008--WILLIAMS_COAL_SEAM_GAS_ROYALTY_TRUST.html'">895007--3/14/2008--WILLIAMS_COAL_SEAM_GAS_ROYALTY_TRUST</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1057076--12-14-2007--RIDGEWOOD_POWER_GROWTH_FUND_-NJ.html'">1057076--12/14/2007--RIDGEWOOD_POWER_GROWTH_FUND_/NJ</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/276077--3-28-2008--TIDELANDS_ROYALTY_TRUST_B.html'">276077--3/28/2008--TIDELANDS_ROYALTY_TRUST_B</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/895993--12-14-2007--RIDGEWOOD_ELECTRIC_POWER_TRUST_II.html'">895993--12/14/2007--RIDGEWOOD_ELECTRIC_POWER_TRUST_II</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1057076--8-17-2007--RIDGEWOOD_POWER_GROWTH_FUND_-NJ.html'">1057076--8/17/2007--RIDGEWOOD_POWER_GROWTH_FUND_/NJ</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/856984--4-8-2009--AMERICAN_BIOGENETIC_SCIENCES_INC.html'">856984--4/8/2009--AMERICAN_BIOGENETIC_SCIENCES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/924386--10-4-2007--RIDGEWOOD_ELECTRIC_POWER_TRUST_I.html'">924386--10/4/2007--RIDGEWOOD_ELECTRIC_POWER_TRUST_I</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/923680--3-16-2009--DOMINION_RESOURCES_BLACK_WARRIOR_TRUST.html'">923680--3/16/2009--DOMINION_RESOURCES_BLACK_WARRIOR_TRUST</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/923680--3-14-2008--DOMINION_RESOURCES_BLACK_WARRIOR_TRUST.html'">923680--3/14/2008--DOMINION_RESOURCES_BLACK_WARRIOR_TRUST</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/923680--3-16-2010--DOMINION_RESOURCES_BLACK_WARRIOR_TRUST.html'">923680--3/16/2010--DOMINION_RESOURCES_BLACK_WARRIOR_TRUST</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/313364--9-16-2009--MESA_ROYALTY_TRUST-TX.html'">313364--9/16/2009--MESA_ROYALTY_TRUST/TX</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/313364--3-16-2006--MESA_ROYALTY_TRUST-TX.html'">313364--3/16/2006--MESA_ROYALTY_TRUST/TX</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/912030--12-31-2008--TORCH_ENERGY_ROYALTY_TRUST.html'">912030--12/31/2008--TORCH_ENERGY_ROYALTY_TRUST</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/895007--3-15-2007--WILLIAMS_COAL_SEAM_GAS_ROYALTY_TRUST.html'">895007--3/15/2007--WILLIAMS_COAL_SEAM_GAS_ROYALTY_TRUST</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1319947--4-5-2007--DSW_Inc..html'">1319947--4/5/2007--DSW_Inc.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/881787--3-16-2006--CROSS_TIMBERS_ROYALTY_TRUST.html'">881787--3/16/2006--CROSS_TIMBERS_ROYALTY_TRUST</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/862022--3-16-2006--HUGOTON_ROYALTY_TRUST.html'">862022--3/16/2006--HUGOTON_ROYALTY_TRUST</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

@@ -1,0 +1,181 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[3.3724242361, "../topics/{product,_liability,_claim}.html", "{product,_liability,_claim}"], [2.8921826092, "../topics/{product,_candidate,_development}.html", "{product,_candidate,_development}"], [2.7208101359, "../topics/{cost,_operation,_labor}.html", "{cost,_operation,_labor}"], [2.6773096559, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [2.2585784152, "../topics/{competitive,_industry,_competition}.html", "{competitive,_industry,_competition}"], [1.8754879492, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [1.8648827656, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"], [1.7276630877, "../topics/{financial,_litigation,_operation}.html", "{financial,_litigation,_operation}"], [1.7137145519, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [1.7075534921, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>736822--8/1/2006--IMMUCOR_INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">736822--8/1/2006--IMMUCOR_INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{product,_liability,_claim}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_liability,_claim}.html'">{product, liability, claim}</td></tr>
+<tr class="list"><td id="{product,_candidate,_development}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_candidate,_development}.html'">{product, candidate, development}</td></tr>
+<tr class="list"><td id="{cost,_operation,_labor}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_operation,_labor}.html'">{cost, operation, labor}</td></tr>
+<tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{competitive,_industry,_competition}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{competitive,_industry,_competition}.html'">{competitive, industry, competition}</td></tr>
+<tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+<tr class="list"><td id="{financial,_litigation,_operation}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{financial,_litigation,_operation}.html'">{financial, litigation, operation}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    Risks Relating to Our Company
+A catastrophic event at our Norcross, Georgia facility would prevent us from producing many of our reagent products.
+Unforeseen product performance problems could prevent us from selling the affected products or even result in a recall of previously-placed products.
+Any unforeseen delays or costs relating to the planned closure of our Houston facility or difficulties in consolidating our manufacturing facilities could adversely affect our business and operating results.
+We are highly dependent on our senior management team and other key employees, and the loss of one or more of these employees could adversely affect our operations.
+Our customers and potential customers may choose to delay significant capital expenditures, which could have an adverse effect on the sales of our instruments.
+If customers delay integrating our instruments into their blood banking operations, our operating results could be negatively impacted.
+In order to continue to successfully grow our business, we must expand sales of our products into additional foreign markets.
+Because we sell our products internationally, we could be adversely affected by fluctuations in foreign currency exchange rates.
+We cannot predict the outcome of pending governmental investigations and other pending legal matters.
+Our financial performance is highly dependent on the timely and successful introduction of new products and services.
+We are dependent on some single source suppliers.
+We may be unable to adequately protect our proprietary technology.
+Risks Relating to our Industry
+Government regulation may delay or prevent new product introduction.
+The industry and market segments in which we operate are highly competitive, and we may not be able to compete effectively with larger companies with greater financial resources than we have.
+We may be exposed to product liability claims resulting from the use of products we sell and distribute.
+<p><a href="http://www.sec.gov/Archives/edgar/data/736822/0001104659-06-050004.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/736822--7-27-2007--IMMUCOR_INC.html'">736822--7/27/2007--IMMUCOR_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/736822--7-24-2008--IMMUCOR_INC.html'">736822--7/24/2008--IMMUCOR_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/780127--1-12-2006--SYNOVIS_LIFE_TECHNOLOGIES__INC.html'">780127--1/12/2006--SYNOVIS_LIFE_TECHNOLOGIES__INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1006195--3-15-2007--MATRIXX_INITIATIVES_INC.html'">1006195--3/15/2007--MATRIXX_INITIATIVES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/880432--9-26-2008--MISONIX_INC.html'">880432--9/26/2008--MISONIX_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/880432--9-28-2009--MISONIX_INC.html'">880432--9/28/2009--MISONIX_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/780127--1-12-2007--SYNOVIS_LIFE_TECHNOLOGIES__INC.html'">780127--1/12/2007--SYNOVIS_LIFE_TECHNOLOGIES__INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/736822--7-24-2009--IMMUCOR_INC.html'">736822--7/24/2009--IMMUCOR_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/834306--3-16-2006--BIOSITE_INC.html'">834306--3/16/2006--BIOSITE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/911649--4-2-2007--STRATEGIC_DIAGNOSTICS_INC-DE-.html'">911649--4/2/2007--STRATEGIC_DIAGNOSTICS_INC/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/8146--4-16-2008--ASTRO_MED_INC_-NEW-.html'">8146--4/16/2008--ASTRO_MED_INC_/NEW/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/27096--9-13-2006--DATASCOPE_CORP.html'">27096--9/13/2006--DATASCOPE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/885725--3-1-2006--BOSTON_SCIENTIFIC_CORP.html'">885725--3/1/2006--BOSTON_SCIENTIFIC_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/38074--5-30-2008--FOREST_LABORATORIES_INC.html'">38074--5/30/2008--FOREST_LABORATORIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/27096--9-12-2007--DATASCOPE_CORP.html'">27096--9/12/2007--DATASCOPE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1050007--11-30-2006--NUTRACEUTICAL_INTERNATIONAL_CORP.html'">1050007--11/30/2006--NUTRACEUTICAL_INTERNATIONAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1078723--3-31-2010--INTERNATIONAL_FUEL_TECHNOLOGY_INC.html'">1078723--3/31/2010--INTERNATIONAL_FUEL_TECHNOLOGY_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/926763--3-16-2007--ASV_INC_-MN-.html'">926763--3/16/2007--ASV_INC_/MN/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/28626--9-13-2006--LIFECORE_BIOMEDICAL_INC.html'">28626--9/13/2006--LIFECORE_BIOMEDICAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/57725--9-13-2006--LANNETT_CO_INC.html'">57725--9/13/2006--LANNETT_CO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/28626--9-13-2007--LIFECORE_BIOMEDICAL_INC.html'">28626--9/13/2007--LIFECORE_BIOMEDICAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1018952--3-16-2006--KOS_PHARMACEUTICALS_INC.html'">1018952--3/16/2006--KOS_PHARMACEUTICALS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/827156--10-10-2006--ZILA_INC.html'">827156--10/10/2006--ZILA_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/57725--9-29-2008--LANNETT_CO_INC.html'">57725--9/29/2008--LANNETT_CO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/880432--9-28-2007--MISONIX_INC.html'">880432--9/28/2007--MISONIX_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/10456--2-19-2009--BAXTER_INTERNATIONAL_INC.html'">10456--2/19/2009--BAXTER_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1123361--3-6-2007--VIASYS_HEALTHCARE_INC.html'">1123361--3/6/2007--VIASYS_HEALTHCARE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1123361--3-14-2006--VIASYS_HEALTHCARE_INC.html'">1123361--3/14/2006--VIASYS_HEALTHCARE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/739944--3-15-2007--MEDTOX_SCIENTIFIC_INC.html'">739944--3/15/2007--MEDTOX_SCIENTIFIC_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/862668--10-12-2010--ESCALON_MEDICAL_CORP.html'">862668--10/12/2010--ESCALON_MEDICAL_CORP</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

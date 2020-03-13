@@ -1,0 +1,212 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[11.4863123802, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [5.2499683503, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"], [4.0656505387, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [3.995014088, "../topics/{condition,_economic,_financial}.html", "{condition,_economic,_financial}"], [3.9156148233, "../topics/{operation,_natural,_condition}.html", "{operation,_natural,_condition}"], [3.7108336943, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [2.7113371525, "../topics/{control,_financial,_internal}.html", "{control,_financial,_internal}"], [2.0651684155, "../topics/{cost,_regulation,_environmental}.html", "{cost,_regulation,_environmental}"], [1.736669059, "../topics/{investment,_property,_distribution}.html", "{investment,_property,_distribution}"], [1.7186289777, "../topics/{tax,_income,_asset}.html", "{tax,_income,_asset}"], [1.7053556646, "../topics/{provision,_law,_control}.html", "{provision,_law,_control}"], [1.7006186853, "../topics/{stock,_price,_share}.html", "{stock,_price,_share}"], [1.6976019526, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [1.6806761785, "../topics/{product,_liability,_claim}.html", "{product,_liability,_claim}"], [1.4340201669, "../topics/{cost,_operation,_labor}.html", "{cost,_operation,_labor}"], [1.1617155583, "../topics/{financial,_litigation,_operation}.html", "{financial,_litigation,_operation}"], [1.0364739295, "../topics/{regulation,_change,_law}.html", "{regulation,_change,_law}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>1051627--3/22/2010--AXT_INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">1051627--3/22/2010--AXT_INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+<tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{condition,_economic,_financial}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{condition,_economic,_financial}.html'">{condition, economic, financial}</td></tr>
+<tr class="list"><td id="{operation,_natural,_condition}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_natural,_condition}.html'">{operation, natural, condition}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{control,_financial,_internal}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{control,_financial,_internal}.html'">{control, financial, internal}</td></tr>
+<tr class="list"><td id="{cost,_regulation,_environmental}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_regulation,_environmental}.html'">{cost, regulation, environmental}</td></tr>
+<tr class="list"><td id="{investment,_property,_distribution}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{investment,_property,_distribution}.html'">{investment, property, distribution}</td></tr>
+<tr class="list"><td id="{tax,_income,_asset}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{tax,_income,_asset}.html'">{tax, income, asset}</td></tr>
+<tr class="list"><td id="{provision,_law,_control}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{provision,_law,_control}.html'">{provision, law, control}</td></tr>
+<tr class="list"><td id="{stock,_price,_share}" onmouseover="highlight(11)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_share}.html'">{stock, price, share}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(12)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{product,_liability,_claim}" onmouseover="highlight(13)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_liability,_claim}.html'">{product, liability, claim}</td></tr>
+<tr class="list"><td id="{cost,_operation,_labor}" onmouseover="highlight(14)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_operation,_labor}.html'">{cost, operation, labor}</td></tr>
+<tr class="list"><td id="{financial,_litigation,_operation}" onmouseover="highlight(15)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{financial,_litigation,_operation}.html'">{financial, litigation, operation}</td></tr>
+<tr class="list"><td id="{regulation,_change,_law}" onmouseover="highlight(16)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_change,_law}.html'">{regulation, change, law}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    Risks Related to Our General Business
+Current global economic conditions may have an impact on our business and financial condition in ways that we currently cannot predict.
+Ongoing financial market volatility and adverse changes in the domestic and global economic environment could have a significant adverse impact on our business, financial condition and operating results.
+The average selling prices of our products may decline over relatively short periods, which may reduce our gross margins.
+Shifts in our product mix may result in declines in gross margins.
+The cyclical nature of the semiconductor industry may limit our ability to maintain or increase net sales and operating results during industry downturns.
+We depend on high utilization of our manufacturing capacity.
+The Chinese Government has previously imposed manufacturing restrictions that, if imposed again in the future on our facilities, could materially and adversely impact our results of operations and our financial condition.
+Defects in our products could diminish demand for our products.
+The loss of one or more of our key substrate customers would significantly hurt our operating results.
+Our results of operations may suffer if we do not effectively manage our inventory.
+If we have low product yields, the shipment of our products may be delayed and our operating results may be adversely impacted.
+If we do not successfully develop new products to respond to rapidly changing customer requirements, our ability to generate revenue, obtain new customers, and retain existing customers may suffer.
+Intense competition in the markets for our products could prevent us from increasing revenue and sustaining profitability.
+Demand for our products may decrease if our customers experience difficulty manufacturing, marketing or selling their products.
+The financial condition of our customers may affect their ability to pay amounts owed to us.
+We purchase critical raw materials and parts for our equipment from single or limited sources, and could lose sales if these sources fail to fill our needs.
+We have made and may continue to make strategic investments in raw materials suppliers, which may not be successful and may result in the loss of all or part of our investment.
+Our substrate products have a long qualification cycle that makes it difficult to plan our expenses and forecast our results.
+Problems incurred by our joint ventures or venture partners could result in a material adverse impact on our financial condition or results of operations.
+The effect of terrorist threats and actions on the general economy could decrease our revenue.
+If any of our facilities is damaged by occurrences such as fire, explosion, or natural disaster, we might not be able to manufacture our products.
+Risks Related to International Aspects of Our Business
+Changes in tariffs, import restrictions, export restrictions or other trade barriers may reduce gross margins.
+Our operating results depend in large part on continued customer acceptance of our substrate products manufactured in China and continued improvements in product quality.
+We derive a significant portion of our revenue from international sales, and our ability to sustain and increase our international sales involves significant risks.
+If there are power shortages in the PRC, we may have to temporarily close our China operations, which would adversely impact our ability to manufacture our products and meet customer orders, and would result in reduced revenue.
+Changes in China's political, social and economic environment may affect our financial performance.
+An outbreak of contagious disease such as Severe Acute Respiratory Syndrome (SARS) or the Avian Flu may adversely impact our manufacturing operations and some of our key suppliers and customers.
+Risks Related to Our Financial Results and Capital Structure
+Our common stock may be delisted from The Nasdaq Global Market, which could negatively impact the price of our common stock and our ability to access the capital markets.
+If we fail to manage periodic contractions, we may utilize our cash balances, resulting in the decline of our existing cash, cash equivalents and investment balances.
+Unpredictable fluctuations in our operating results could disappoint analysts or our investors, which could cause our stock price to decline.
+We have adopted certain anti-takeover measures that may make it more difficult for a third party to acquire us.
+Risks Related to Our Intellectual Property
+Intellectual property infringement claims may be costly to resolve and could divert management attention.
+If we are unable to protect our intellectual property, we may lose valuable assets or incur costly litigation.
+Risks Related to Compliance and Other Legal Matters
+We need to continue to improve or implement our systems, procedures and controls.
+We are subject to internal control evaluations and attestation requirements of Section 404 of the Sarbanes-Oxley Act.
+If we fail to comply with environmental and safety regulations, we may be subject to significant fines or forced to cease our operations; in addition, we could be subject to suits for personal injuries caused by hazardous materials.
+<p><a href="http://www.sec.gov/Archives/edgar/data/1051627/0001047469-10-002549.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/1051627--3-31-2009--AXT_INC.html'">1051627--3/31/2009--AXT_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/887969--10-8-2009--MRV_COMMUNICATIONS_INC.html'">887969--10/8/2009--MRV_COMMUNICATIONS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/910521--2-29-2008--DECKERS_OUTDOOR_CORP.html'">910521--2/29/2008--DECKERS_OUTDOOR_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1051627--3-14-2008--AXT_INC.html'">1051627--3/14/2008--AXT_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/887969--3-16-2010--MRV_COMMUNICATIONS_INC.html'">887969--3/16/2010--MRV_COMMUNICATIONS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/837465--3-1-2007--CALLAWAY_GOLF_CO_-CA.html'">837465--3/1/2007--CALLAWAY_GOLF_CO_/CA</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/883569--3-9-2006--FOSSIL_INC.html'">883569--3/9/2006--FOSSIL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/883569--8-8-2007--FOSSIL_INC.html'">883569--8/8/2007--FOSSIL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/883569--3-4-2009--FOSSIL_INC.html'">883569--3/4/2009--FOSSIL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/883569--3-3-2010--FOSSIL_INC.html'">883569--3/3/2010--FOSSIL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1051627--3-23-2007--AXT_INC.html'">1051627--3/23/2007--AXT_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/883569--3-5-2008--FOSSIL_INC.html'">883569--3/5/2008--FOSSIL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/855658--3-10-2010--LATTICE_SEMICONDUCTOR_CORP.html'">855658--3/10/2010--LATTICE_SEMICONDUCTOR_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/813619--4-2-2007--SOUTHWALL_TECHNOLOGIES_INC_-DE-.html'">813619--4/2/2007--SOUTHWALL_TECHNOLOGIES_INC_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/813619--3-29-2006--SOUTHWALL_TECHNOLOGIES_INC_-DE-.html'">813619--3/29/2006--SOUTHWALL_TECHNOLOGIES_INC_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1088162--6-28-2006--MAD_CATZ_INTERACTIVE_INC.html'">1088162--6/28/2006--MAD_CATZ_INTERACTIVE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/768251--2-27-2007--ALTERA_CORP.html'">768251--2/27/2007--ALTERA_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/38264--12-16-2008--FORWARD_INDUSTRIES_INC.html'">38264--12/16/2008--FORWARD_INDUSTRIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/771266--3-10-2009--KOPIN_CORP.html'">771266--3/10/2009--KOPIN_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/38264--11-29-2007--FORWARD_INDUSTRIES_INC.html'">38264--11/29/2007--FORWARD_INDUSTRIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1141240--8-20-2010--LIQUIDMETAL_TECHNOLOGIES_INC.html'">1141240--8/20/2010--LIQUIDMETAL_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/767920--3-1-2007--PMC_SIERRA_INC.html'">767920--3/1/2007--PMC_SIERRA_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1141240--4-15-2009--LIQUIDMETAL_TECHNOLOGIES_INC.html'">1141240--4/15/2009--LIQUIDMETAL_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1126741--6-20-2007--GSI_TECHNOLOGY_INC.html'">1126741--6/20/2007--GSI_TECHNOLOGY_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1039399--2-24-2010--FORMFACTOR_INC.html'">1039399--2/24/2010--FORMFACTOR_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1052303--12-29-2006--TERAYON_COMMUNICATION_SYSTEMS.html'">1052303--12/29/2006--TERAYON_COMMUNICATION_SYSTEMS</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1039399--2-27-2009--FORMFACTOR_INC.html'">1039399--2/27/2009--FORMFACTOR_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1118941--3-14-2007--ENDWAVE_CORP.html'">1118941--3/14/2007--ENDWAVE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/923601--7-14-2006--SINGING_MACHINE_CO_INC.html'">923601--7/14/2006--SINGING_MACHINE_CO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1157780--6-14-2010--OPNEXT_INC.html'">1157780--6/14/2010--OPNEXT_INC</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

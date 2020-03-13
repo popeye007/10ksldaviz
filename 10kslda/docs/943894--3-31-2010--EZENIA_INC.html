@@ -1,0 +1,180 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[3.5546294106, "../topics/{product,_liability,_claim}.html", "{product,_liability,_claim}"], [3.1303129132, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [2.8372417095, "../topics/{condition,_economic,_financial}.html", "{condition,_economic,_financial}"], [2.7590394912, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [1.8654994249, "../topics/{stock,_price,_share}.html", "{stock,_price,_share}"], [1.7895427414, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [1.7869889306, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [1.6963408071, "../topics/{provision,_law,_control}.html", "{provision,_law,_control}"], [1.5339092893, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [1.4579177314, "../topics/{system,_service,_information}.html", "{system,_service,_information}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>943894--3/31/2010--EZENIA_INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">943894--3/31/2010--EZENIA_INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{product,_liability,_claim}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_liability,_claim}.html'">{product, liability, claim}</td></tr>
+<tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{condition,_economic,_financial}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{condition,_economic,_financial}.html'">{condition, economic, financial}</td></tr>
+<tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{stock,_price,_share}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_share}.html'">{stock, price, share}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{provision,_law,_control}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{provision,_law,_control}.html'">{provision, law, control}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{system,_service,_information}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{system,_service,_information}.html'">{system, service, information}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    Company Background and Evolution True Collaboration versus Videoconferencing
+Adverse economic and market conditions may result in further budgetary constraints within the defense and intelligence communities, as well as a downturn in spending on real-time collaboration solutions by other users, that could adversely affect our revenues and results of operations.
+The continued redirection of budget funds and increased competition within our Department of Defense customer base would negatively impact our results of operations and financial condition.
+We may be unable to return to profitability
+A significant portion of our revenue is attributable to a small number of major customers,
+none of whom is obligated to continue to use our products and services.
+Loss of access to certain third-party technology utilized in our products could materially harm our business.
+Our success depends upon market acceptance of our collaboration products.
+If we are unable to adapt to the rapid pace of change in our market, our business could be adversely affected.
+Our results of operations would suffer if we are unable to effectively compete in the market for multimedia collaboration products.
+If we release products containing defects or experience delays in releasing new products, our competitive position could be adversely effected.
+We may be unsuccessful in protecting our intellectual property rights which could result in the loss of a competitive advantage.
+The loss of or failure to retain or attract talented directors, officers and personnel could harm our business.
+The trading price of our common stock may continue to be volatile, which may adversely affect our business, and investors in our common stock may experience substantial losses.
+Our common stock is traded on the OTC Bulletin Board, making it a less liquid investment than if it were traded on a national securities exchange.
+Provisions of Delaware law, our charter and by-laws and our shareholder rights plan may make a takeover more difficult.
+<p><a href="http://www.sec.gov/Archives/edgar/data/943894/0001104659-10-017518.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/943894--3-24-2009--EZENIA_INC.html'">943894--3/24/2009--EZENIA_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/943894--3-28-2008--EZENIA_INC.html'">943894--3/28/2008--EZENIA_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1033905--3-16-2006--LUMINEX_CORP.html'">1033905--3/16/2006--LUMINEX_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/810084--4-2-2007--BIOJECT_MEDICAL_TECHNOLOGIES_INC.html'">810084--4/2/2007--BIOJECT_MEDICAL_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1006195--3-15-2007--MATRIXX_INITIATIVES_INC.html'">1006195--3/15/2007--MATRIXX_INITIATIVES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1270597--3-23-2007--MERISANT_CO.html'">1270597--3/23/2007--MERISANT_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/874734--3-8-2010--OSTEOTECH_INC.html'">874734--3/8/2010--OSTEOTECH_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/8146--4-9-2010--ASTRO_MED_INC_-NEW-.html'">8146--4/9/2010--ASTRO_MED_INC_/NEW/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/780127--1-12-2007--SYNOVIS_LIFE_TECHNOLOGIES__INC.html'">780127--1/12/2007--SYNOVIS_LIFE_TECHNOLOGIES__INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1050007--11-30-2006--NUTRACEUTICAL_INTERNATIONAL_CORP.html'">1050007--11/30/2006--NUTRACEUTICAL_INTERNATIONAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/31791--2-28-2008--PERKINELMER_INC.html'">31791--2/28/2008--PERKINELMER_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/739944--3-10-2009--MEDTOX_SCIENTIFIC_INC.html'">739944--3/10/2009--MEDTOX_SCIENTIFIC_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/31791--2-26-2009--PERKINELMER_INC.html'">31791--2/26/2009--PERKINELMER_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/739944--3-11-2008--MEDTOX_SCIENTIFIC_INC.html'">739944--3/11/2008--MEDTOX_SCIENTIFIC_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/739944--3-15-2007--MEDTOX_SCIENTIFIC_INC.html'">739944--3/15/2007--MEDTOX_SCIENTIFIC_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/768408--6-24-2010--CYANOTECH_CORP.html'">768408--6/24/2010--CYANOTECH_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/882873--9-21-2009--UROLOGIX_INC.html'">882873--9/21/2009--UROLOGIX_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/739944--3-17-2006--MEDTOX_SCIENTIFIC_INC.html'">739944--3/17/2006--MEDTOX_SCIENTIFIC_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1324759--3-31-2010--Cereplast_Inc.html'">1324759--3/31/2010--Cereplast_Inc</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1025573--4-2-2007--NATROL_INC.html'">1025573--4/2/2007--NATROL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/827156--10-15-2007--ZILA_INC.html'">827156--10/15/2007--ZILA_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/65759--2-17-2010--MICROPAC_INDUSTRIES_INC.html'">65759--2/17/2010--MICROPAC_INDUSTRIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/880432--9-28-2009--MISONIX_INC.html'">880432--9/28/2009--MISONIX_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/941604--2-27-2006--COINSTAR_INC.html'">941604--2/27/2006--COINSTAR_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1013606--2-29-2008--ENDOLOGIX_INC_-DE-.html'">1013606--2/29/2008--ENDOLOGIX_INC_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1006045--3-30-2007--IRIDEX_CORP.html'">1006045--3/30/2007--IRIDEX_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/8063--3-11-2009--ASTRONICS_CORP.html'">8063--3/11/2009--ASTRONICS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/862668--10-12-2010--ESCALON_MEDICAL_CORP.html'">862668--10/12/2010--ESCALON_MEDICAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/10795--11-24-2010--BECTON_DICKINSON_&_CO.html'">10795--11/24/2010--BECTON_DICKINSON_&_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/882873--9-17-2010--UROLOGIX_INC.html'">882873--9/17/2010--UROLOGIX_INC</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

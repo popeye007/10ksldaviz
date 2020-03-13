@@ -1,0 +1,182 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[4.9570147425, "../topics/{product,_candidate,_development}.html", "{product,_candidate,_development}"], [3.86047809, "../topics/{stock,_price,_share}.html", "{stock,_price,_share}"], [3.0546285873, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [2.709034308, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [2.6658845159, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"], [1.7145598495, "../topics/{interest,_director,_officer}.html", "{interest,_director,_officer}"], [1.7111677457, "../topics/{tax,_income,_asset}.html", "{tax,_income,_asset}"], [1.7080310703, "../topics/{control,_financial,_internal}.html", "{control,_financial,_internal}"], [1.1908100382, "../topics/{capital,_credit,_financial}.html", "{capital,_credit,_financial}"], [1.1349450987, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>838879--3/31/2008--AMDL_INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">838879--3/31/2008--AMDL_INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{product,_candidate,_development}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_candidate,_development}.html'">{product, candidate, development}</td></tr>
+<tr class="list"><td id="{stock,_price,_share}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_share}.html'">{stock, price, share}</td></tr>
+<tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+<tr class="list"><td id="{interest,_director,_officer}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{interest,_director,_officer}.html'">{interest, director, officer}</td></tr>
+<tr class="list"><td id="{tax,_income,_asset}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{tax,_income,_asset}.html'">{tax, income, asset}</td></tr>
+<tr class="list"><td id="{control,_financial,_internal}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{control,_financial,_internal}.html'">{control, financial, internal}</td></tr>
+<tr class="list"><td id="{capital,_credit,_financial}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{capital,_credit,_financial}.html'">{capital, credit, financial}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    Limited product development activities; our product development efforts may not result in commercial products.
+Our operations in China involve significant risk.
+We may not be able to continue to operate our business if we are unable to attract additional operating capital.
+Our independent registered public accounting firm has included a going concern paragraph in their report on our financial statements.
+Our current products cannot be sold in certain countries if we do not obtain and maintain regulatory approval.
+USFDA approval for marketing DR-70
+Our future prospects will be negatively impacted if we are unsuccessful in pending litigation over the combination immunogene therapy technology.
+The value of intangible assets may not be equal to their carrying values.
+If our intellectual property positions are challenged, invalidated or circumvented, or if we fail to prevail in future intellectual property litigation, our business could be adversely affected.
+We face substantial competition, and others may discover, develop, acquire or commercialize products before or more successfully than we do.
+We have limited sales of DR-70
+and are reliant on our distributors for sales of our products.
+JPI is reliant on its distributors for sales of its products.
+We are subject to risks associated with our foreign distributors.
+We do not intend to pay dividends on our common stock in the foreseeable future.
+If we fail to comply with the rules under the Sarbanes-Oxley Act related to accounting controls and procedures or if material weaknesses or other deficiencies are discovered in our internal accounting procedures, our stock price could decline significantly.
+Loss of our listing on the American Stock Exchange could adversely affect the marketability and price of our shares.
+Our stock price is volatile, which could adversely affect your investment.
+<p><a href="http://www.sec.gov/Archives/edgar/data/838879/0000892569-08-000490.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/838879--4-15-2010--RADIENT_PHARMACEUTICALS_Corp.html'">838879--4/15/2010--RADIENT_PHARMACEUTICALS_Corp</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1017491--3-26-2007--NEXMED_INC.html'">1017491--3/26/2007--NEXMED_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/874443--3-22-2007--GENELABS_TECHNOLOGIES_INC_-CA.html'">874443--3/22/2007--GENELABS_TECHNOLOGIES_INC_/CA</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1038133--2-22-2010--HESKA_CORP.html'">1038133--2/22/2010--HESKA_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1038133--3-3-2008--HESKA_CORP.html'">1038133--3/3/2008--HESKA_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1038133--3-16-2009--HESKA_CORP.html'">1038133--3/16/2009--HESKA_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1066833--3-31-2008--DOV_PHARMACEUTICAL_INC.html'">1066833--3/31/2008--DOV_PHARMACEUTICAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1038133--3-30-2007--HESKA_CORP.html'">1038133--3/30/2007--HESKA_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1038133--3-31-2006--HESKA_CORP.html'">1038133--3/31/2006--HESKA_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1017491--3-12-2008--NEXMED_INC.html'">1017491--3/12/2008--NEXMED_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1017491--3-16-2006--NEXMED_INC.html'">1017491--3/16/2006--NEXMED_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1041024--3-12-2010--ROCKWELL_MEDICAL_TECHNOLOGIES_INC.html'">1041024--3/12/2010--ROCKWELL_MEDICAL_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/71478--3-28-2008--LIPID_SCIENCES_INC-.html'">71478--3/28/2008--LIPID_SCIENCES_INC/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1096560--3-12-2008--SULPHCO_INC.html'">1096560--3/12/2008--SULPHCO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/71478--3-15-2006--LIPID_SCIENCES_INC-.html'">71478--3/15/2006--LIPID_SCIENCES_INC/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1298700--4-15-2009--Verdant_Technology_CORP.html'">1298700--4/15/2009--Verdant_Technology_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1041024--3-16-2009--ROCKWELL_MEDICAL_TECHNOLOGIES_INC.html'">1041024--3/16/2009--ROCKWELL_MEDICAL_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1001233--3-1-2007--SANGAMO_BIOSCIENCES_INC.html'">1001233--3/1/2007--SANGAMO_BIOSCIENCES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/876043--1-16-2007--MEDWAVE_INC.html'">876043--1/16/2007--MEDWAVE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/873303--3-16-2007--AVI_BIOPHARMA_INC.html'">873303--3/16/2007--AVI_BIOPHARMA_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/873303--3-16-2006--AVI_BIOPHARMA_INC.html'">873303--3/16/2006--AVI_BIOPHARMA_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1030839--2-13-2007--Synovics_Pharmaceuticals.html'">1030839--2/13/2007--Synovics_Pharmaceuticals</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1063665--9-23-2010--CORGENIX_MEDICAL_CORP-CO.html'">1063665--9/23/2010--CORGENIX_MEDICAL_CORP/CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/849636--3-15-2007--CORTEX_PHARMACEUTICALS_INC-DE-.html'">849636--3/15/2007--CORTEX_PHARMACEUTICALS_INC/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1010086--3-13-2008--SIGA_TECHNOLOGIES_INC.html'">1010086--3/13/2008--SIGA_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/907562--3-13-2007--DYAX_CORP.html'">907562--3/13/2007--DYAX_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/874443--3-31-2006--GENELABS_TECHNOLOGIES_INC_-CA.html'">874443--3/31/2006--GENELABS_TECHNOLOGIES_INC_/CA</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/858803--12-18-2006--AVANIR_PHARMACEUTICALS.html'">858803--12/18/2006--AVANIR_PHARMACEUTICALS</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/926617--4-2-2007--CIPHERGEN_BIOSYSTEMS_INC.html'">926617--4/2/2007--CIPHERGEN_BIOSYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1020214--3-11-2010--CERUS_CORP.html'">1020214--3/11/2010--CERUS_CORP</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

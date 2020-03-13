@@ -1,0 +1,185 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[4.018853465, "../topics/{stock,_price,_share}.html", "{stock,_price,_share}"], [3.8060867629, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"], [2.696644192, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [2.4734387009, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [2.3639490844, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [1.787609062, "../topics/{regulation,_government,_change}.html", "{regulation,_government,_change}"], [1.6968288151, "../topics/{debt,_indebtedness,_cash}.html", "{debt,_indebtedness,_cash}"], [1.6963132592, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [1.6962710884, "../topics/{provision,_law,_control}.html", "{provision,_law,_control}"], [1.6926530398, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [1.6825921908, "../topics/{cost,_operation,_labor}.html", "{cost,_operation,_labor}"], [1.5076521155, "../topics/{capital,_credit,_financial}.html", "{capital,_credit,_financial}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>893816--3/16/2007--INFOCROSSING_INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">893816--3/16/2007--INFOCROSSING_INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{stock,_price,_share}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_share}.html'">{stock, price, share}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{regulation,_government,_change}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_government,_change}.html'">{regulation, government, change}</td></tr>
+<tr class="list"><td id="{debt,_indebtedness,_cash}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{debt,_indebtedness,_cash}.html'">{debt, indebtedness, cash}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{provision,_law,_control}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{provision,_law,_control}.html'">{provision, law, control}</td></tr>
+<tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{cost,_operation,_labor}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_operation,_labor}.html'">{cost, operation, labor}</td></tr>
+<tr class="list"><td id="{capital,_credit,_financial}" onmouseover="highlight(11)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{capital,_credit,_financial}.html'">{capital, credit, financial}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    LOSS OF MAJOR CLIENTS COULD REDUCE OUR REVENUES AND CAUSE LOSSES FOR OUR BUSINESS.
+OUR CONTRACTS CONTAIN TERMINATION PROVISIONS AND PRICING RISKS THAT COULD CAUSE US TO LOSE OUR IT OUTSOURCING CONTRACTS OR LOSE MONEY ON OUR REMAINING IT OUTSOURCING CONTRACTS.
+WE OPERATE IN HIGHLY COMPETITIVE MARKETS IN THE IT OUTSOURCING INDUSTRY THAT COULD CAUSE US TO LOSE EXISTING CLIENTS OR PREVENT US FROM OBTAINING NEW CLIENTS.
+CHANGES IN TECHNOLOGY IN THE IT OUTSOURCING INDUSTRY COULD CAUSE OUR BUSINESS TO LOSE MONEY OR COULD REQUIRE US TO INVEST ADDITIONAL CAPITAL IN NEW TECHNOLOGY.
+OUR SYSTEMS AND PROCESSES ARE NOT PROTECTED BY PATENTS OR BY REGISTERED COPYRIGHTS, TRADEMARKS, TRADE NAMES OR SERVICE MARKS AND AS A RESULT, OUR COMPETITORS MAY BE ABLE TO USE OUR SYSTEMS AND PROCESSES TO COMPETE AGAINST US AND HURT OUR BUSINESS.
+INTELLECTUAL PROPERTY LITIGATION COULD CAUSE US TO LOSE MONEY AND LOWER OUR STANDING IN THE IT OUTSOURCING INDUSTRY.
+FAILURE TO PROPERLY MANAGE GROWTH COULD CAUSE OUR BUSINESS TO LOSE MONEY.
+ACQUISITIONS WE MAKE MAY NOT PROVIDE EXPECTED BENEFITS AND COULD POSSIBLY RESULT IN A LOSS OF MONEY AND RESOURCES.
+LOSS OF KEY PERSONNEL COULD CAUSE OUR BUSINESS TO LOSE MONEY OR CAUSE US TO INVEST CAPITAL TO REPLACE SUCH PERSONNEL.
+OUR BUSINESS DEPENDS ON OUR ABILITY TO RECRUIT, TRAIN, AND RETAIN SKILLED PERSONNEL TO PERFORM IT OUTSOURCING SERVICES; OUR FAILURE TO DO SO COULD INCREASE OUR COSTS AND LIMIT OUR GROWTH.
+WE MAY HAVE DIFFICULTY ACHIEVING AND SUSTAINING PROFITABILITY AND MAY EXPERIENCE ADDITIONAL LOSSES IN THE FUTURE.
+WE MAY NOT BE ABLE TO RAISE ADDITIONAL CAPITAL ON TERMS THAT ARE ACCEPTABLE TO US, WHICH COULD LIMIT OUR GROWTH.
+OUR INDEBTEDNESS COULD LIMIT OUR AVAILABLE CASH FLOW, HARM OUR CREDIT RATING AND PREVENT US FROM FULFILLING OUR OBLIGATIONS UNDER OUR OUTSTANDING INDEBTEDNESS.
+VARIABILITY OF QUARTERLY OPERATING RESULTS.
+OUR STOCK PRICE IS VOLATILE AND COULD DECLINE.
+AVAILABILITY OF SIGNIFICANT AMOUNTS OF OUR COMMON STOCK FOR SALE COULD CAUSE ITS MARKET PRICE TO DECLINE.
+CONVERSION OF OUR OUTSTANDING CONVERTIBLE NOTES WILL DILUTE THE OWNERSHIP INTEREST OF EXISTING STOCKHOLDERS AND FUTURE ISSUANCES OF OUR SECURITIES COULD DILUTE YOUR OWNERSHIP.
+WE HAVE NOT PAID CASH DIVIDENDS ON OUR COMMON STOCK AND DO NOT EXPECT TO DO SO.
+PROVISIONS OF OUR CERTIFICATE OF INCORPORATION AND BYLAWS AND DELAWARE LAW COULD DETER TAKEOVER ATTEMPTS AND PREVENT STOCKHOLDERS FROM OBTAINING A PREMIUM FOR THEIR SHARES.
+<p><a href="http://www.sec.gov/Archives/edgar/data/893816/0000893816-07-000010.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/893816--3-15-2006--INFOCROSSING_INC.html'">893816--3/15/2006--INFOCROSSING_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1065860--3-21-2006--ELECTRIC_CITY_CORP.html'">1065860--3/21/2006--ELECTRIC_CITY_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1370292--10-19-2009--VERIFY_SMART_CORP..html'">1370292--10/19/2009--VERIFY_SMART_CORP.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1327238--5-18-2010--CYPLASIN_BIOMEDICAL_LTD..html'">1327238--5/18/2010--CYPLASIN_BIOMEDICAL_LTD.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1089473--3-16-2006--VENTIV_HEALTH_INC.html'">1089473--3/16/2006--VENTIV_HEALTH_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1089473--2-28-2007--INVENTIV_HEALTH_INC.html'">1089473--2/28/2007--INVENTIV_HEALTH_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/943742--3-24-2006--VCAMPUS_CORP.html'">943742--3/24/2006--VCAMPUS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/713002--7-14-2008--FLOW_INTERNATIONAL_CORP.html'">713002--7/14/2008--FLOW_INTERNATIONAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1310482--1-28-2010--Intelbahn_Inc..html'">1310482--1/28/2010--Intelbahn_Inc.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1092302--3-16-2007--JAVO_BEVERAGE_CO_INC.html'">1092302--3/16/2007--JAVO_BEVERAGE_CO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/357108--1-15-2008--IRVINE_SENSORS_CORP-DE-.html'">357108--1/15/2008--IRVINE_SENSORS_CORP/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1024441--4-20-2007--FACTORY_CARD_&_PARTY_OUTLET_CORP.html'">1024441--4/20/2007--FACTORY_CARD_&_PARTY_OUTLET_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/790071--3-24-2006--ARISTOTLE_CORP.html'">790071--3/24/2006--ARISTOTLE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/829117--4-10-2009--SAFE_TECHNOLOGIES_INTERNATIONAL_INC.html'">829117--4/10/2009--SAFE_TECHNOLOGIES_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/912544--3-17-2008--HOLLYWOOD_MEDIA_CORP.html'">912544--3/17/2008--HOLLYWOOD_MEDIA_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/749251--2-28-2008--GARTNER_INC.html'">749251--2/28/2008--GARTNER_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/899849--4-16-2007--ELEPHANT_&_CASTLE_GROUP_INC.html'">899849--4/16/2007--ELEPHANT_&_CASTLE_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/866535--11-13-2007--ISLAND_PACIFIC_INC.html'">866535--11/13/2007--ISLAND_PACIFIC_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1038773--3-17-2008--CORNERSTONE_BANCSHARES_INC.html'">1038773--3/17/2008--CORNERSTONE_BANCSHARES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1357594--9-30-2009--CLEAN_POWER_CONCEPTS_INC..html'">1357594--9/30/2009--CLEAN_POWER_CONCEPTS_INC.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1038773--3-28-2007--CORNERSTONE_BANCSHARES_INC.html'">1038773--3/28/2007--CORNERSTONE_BANCSHARES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/898437--3-9-2009--ANIKA_THERAPEUTICS_INC.html'">898437--3/9/2009--ANIKA_THERAPEUTICS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1036968--3-18-2009--VAXGEN_INC.html'">1036968--3/18/2009--VAXGEN_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1016100--3-30-2006--DIGITAL_LIGHTWAVE_INC.html'">1016100--3/30/2006--DIGITAL_LIGHTWAVE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1099132--4-9-2010--MANHATTAN_SCIENTIFICS_INC.html'">1099132--4/9/2010--MANHATTAN_SCIENTIFICS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1275548--3-27-2009--MIDWEST_URANIUM_CORP.html'">1275548--3/27/2009--MIDWEST_URANIUM_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/769520--2-27-2008--MIDDLEBY_CORP.html'">769520--2/27/2008--MIDDLEBY_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1103977--3-31-2008--RUBICON_FINANCIAL_INC.html'">1103977--3/31/2008--RUBICON_FINANCIAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1366823--3-27-2009--SPRING_CREEK_CAPITAL_CORP..html'">1366823--3/27/2009--SPRING_CREEK_CAPITAL_CORP.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/99302--6-24-2009--TRANSCAT_INC.html'">99302--6/24/2009--TRANSCAT_INC</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

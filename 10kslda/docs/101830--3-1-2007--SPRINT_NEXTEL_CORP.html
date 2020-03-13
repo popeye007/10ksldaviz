@@ -1,0 +1,182 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[6.2237581553, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [3.1900127551, "../topics/{system,_service,_information}.html", "{system,_service,_information}"], [2.8712826227, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"], [1.9025900597, "../topics/{regulation,_government,_change}.html", "{regulation,_government,_change}"], [1.8623473252, "../topics/{investment,_property,_distribution}.html", "{investment,_property,_distribution}"], [1.799957221, "../topics/{capital,_credit,_financial}.html", "{capital,_credit,_financial}"], [1.7473349429, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [1.7197624937, "../topics/{competitive,_industry,_competition}.html", "{competitive,_industry,_competition}"], [1.7174338523, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [1.5811852702, "../topics/{tax,_income,_asset}.html", "{tax,_income,_asset}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>101830--3/1/2007--SPRINT_NEXTEL_CORP</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">101830--3/1/2007--SPRINT_NEXTEL_CORP</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{system,_service,_information}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{system,_service,_information}.html'">{system, service, information}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+<tr class="list"><td id="{regulation,_government,_change}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_government,_change}.html'">{regulation, government, change}</td></tr>
+<tr class="list"><td id="{investment,_property,_distribution}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{investment,_property,_distribution}.html'">{investment, property, distribution}</td></tr>
+<tr class="list"><td id="{capital,_credit,_financial}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{capital,_credit,_financial}.html'">{capital, credit, financial}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{competitive,_industry,_competition}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{competitive,_industry,_competition}.html'">{competitive, industry, competition}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{tax,_income,_asset}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{tax,_income,_asset}.html'">{tax, income, asset}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    We are subject to restrictions on acquisitions involving our stock and other stock issuances and possibly other corporate opportunities in order to enable the spin-off of Embarq to qualify for tax-free treatment.
+If the spin-off of Embarq does not qualify as a tax-free transaction, tax could be imposed on both our shareholders and us.
+Risks Related to our Business and Operations
+We face intense competition that may reduce our market share and harm our financial performance.
+If we are not able to attract and retain customers, our financial performance could be impaired.
+As the wireless market matures, we must increasingly seek to attract customers from competitors and face increased credit risk from first time wireless subscribers.
+Competition and technological changes in the market for wireless services could negatively affect our average revenue per user, subscriber churn, our ability to attract new subscribers and operating costs, which would adversely affect our revenues, growth and profitability.
+Failure to improve wireless subscriber service and failure to continue to enhance the quality and features of our wireless networks and meet capacity requirements of our subscriber growth could impair our financial performance and adversely affect our results of operations.
+Consolidation and competition in the wholesale market for wireline services could adversely affect our revenues and profitability.
+Failure to complete development, testing and deployment of new technology that supports new services could affect our ability to compete in the industry. In addition, the technology we use may place us at a competitive disadvantage.
+The blurring of the traditional dividing lines between long distance, local, wireless, video and Internet services contribute to increased competition.
+If we are unable to meet our future capital needs relating to investment in our networks and other obligations, it may be necessary for us to curtail, delay or abandon our business growth plans. If we incur significant additional indebtedness to fund our plans, it could cause a decline in our credit rating and could increase our borrowing costs or limit our ability to raise additional capital.
+We have entered into outsourcing agreements related to certain business operations. Any difficulties experienced in these arrangements could result in additional expense, loss of customers and revenue, interruption of our services or a delay in the roll-out of new technology.
+The intellectual property rights utilized by us and our suppliers and service providers may infringe on intellectual property rights owned by others.
+If Motorola is unable or unwilling to provide us with equipment and handsets in support of our iDEN based services, as well as anticipated handset and infrastructure improvements for those services, our operations will be adversely affected.
+The reconfiguration process contemplated by the FCC s Report and Order may adversely affect our business and operations, which could adversely affect our future growth and operating results.
+Government regulation could adversely affect our prospects and results of operations; the FCC and state regulatory commissions may adopt new regulations or take other actions that could adversely affect our business prospects or results of operations.
+Concerns about health risks associated with wireless equipment may reduce the demand for our services.
+<p><a href="http://www.sec.gov/Archives/edgar/data/101830/0000950133-07-000866.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/948708--3-2-2010--SMITH_MICRO_SOFTWARE_INC.html'">948708--3/2/2010--SMITH_MICRO_SOFTWARE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1139822--4-2-2008--AMARU_INC.html'">1139822--4/2/2008--AMARU_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1305168--3-16-2006--American_Reprographics_CO.html'">1305168--3/16/2006--American_Reprographics_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1078075--6-4-2007--NETSCOUT_SYSTEMS_INC.html'">1078075--6/4/2007--NETSCOUT_SYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1089525--3-30-2007--SMART_VIDEO_TECHNOLOGIES_INC.html'">1089525--3/30/2007--SMART_VIDEO_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/835729--6-14-2006--BMC_SOFTWARE_INC.html'">835729--6/14/2006--BMC_SOFTWARE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1080034--3-2-2009--VALUECLICK_INC-CA.html'">1080034--3/2/2009--VALUECLICK_INC/CA</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/33185--2-28-2007--EQUIFAX_INC.html'">33185--2/28/2007--EQUIFAX_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/836690--12-11-2008--INNOVATIVE_SOLUTIONS_&_SUPPORT_INC.html'">836690--12/11/2008--INNOVATIVE_SOLUTIONS_&_SUPPORT_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/850429--3-6-2009--TREDEGAR_CORP.html'">850429--3/6/2009--TREDEGAR_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/836690--12-12-2006--INNOVATIVE_SOLUTIONS_&_SUPPORT_INC.html'">836690--12/12/2006--INNOVATIVE_SOLUTIONS_&_SUPPORT_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/836690--12-14-2007--INNOVATIVE_SOLUTIONS_&_SUPPORT_INC.html'">836690--12/14/2007--INNOVATIVE_SOLUTIONS_&_SUPPORT_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1091801--3-7-2006--MARTHA_STEWART_LIVING_OMNIMEDIA_INC.html'">1091801--3/7/2006--MARTHA_STEWART_LIVING_OMNIMEDIA_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1268671--3-16-2006--TNS_INC.html'">1268671--3/16/2006--TNS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1268671--3-16-2007--TNS_INC.html'">1268671--3/16/2007--TNS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1078075--6-1-2009--NETSCOUT_SYSTEMS_INC.html'">1078075--6/1/2009--NETSCOUT_SYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/106040--8-13-2010--WESTERN_DIGITAL_CORP.html'">106040--8/13/2010--WESTERN_DIGITAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1268671--3-17-2008--TNS_INC.html'">1268671--3/17/2008--TNS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/868689--6-29-2010--T_BAY_HOLDINGS_INC.html'">868689--6/29/2010--T_BAY_HOLDINGS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/106040--8-28-2007--WESTERN_DIGITAL_CORP.html'">106040--8/28/2007--WESTERN_DIGITAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/276283--4-2-2007--EVANS_&_SUTHERLAND_COMPUTER_CORP.html'">276283--4/2/2007--EVANS_&_SUTHERLAND_COMPUTER_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1133311--3-15-2007--TRAVELZOO_INC.html'">1133311--3/15/2007--TRAVELZOO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1133311--3-16-2006--TRAVELZOO_INC.html'">1133311--3/16/2006--TRAVELZOO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1268671--3-16-2009--TNS_INC.html'">1268671--3/16/2009--TNS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/850429--3-5-2008--TREDEGAR_CORP.html'">850429--3/5/2008--TREDEGAR_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1094348--3-23-2006--ELOYALTY_CORP.html'">1094348--3/23/2006--ELOYALTY_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1016470--3-13-2008--SRS_LABS_INC.html'">1016470--3/13/2008--SRS_LABS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1016470--3-22-2007--SRS_LABS_INC.html'">1016470--3/22/2007--SRS_LABS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/850429--3-2-2007--TREDEGAR_CORP.html'">850429--3/2/2007--TREDEGAR_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/859014--5-27-2010--COMPUWARE_CORP.html'">859014--5/27/2010--COMPUWARE_CORP</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

@@ -1,0 +1,188 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[6.1183669105, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [5.6347177249, "../topics/{system,_service,_information}.html", "{system,_service,_information}"], [3.5662624893, "../topics/{regulation,_government,_change}.html", "{regulation,_government,_change}"], [3.3117898725, "../topics/{financial,_litigation,_operation}.html", "{financial,_litigation,_operation}"], [2.447864541, "../topics/{stock,_price,_share}.html", "{stock,_price,_share}"], [2.2849663391, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [1.978557338, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [1.7348246995, "../topics/{debt,_indebtedness,_cash}.html", "{debt,_indebtedness,_cash}"], [1.7075280712, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [1.6901447602, "../topics/{tax,_income,_asset}.html", "{tax,_income,_asset}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>855612--3/14/2006--ZIX_CORP</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">855612--3/14/2006--ZIX_CORP</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{system,_service,_information}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{system,_service,_information}.html'">{system, service, information}</td></tr>
+<tr class="list"><td id="{regulation,_government,_change}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_government,_change}.html'">{regulation, government, change}</td></tr>
+<tr class="list"><td id="{financial,_litigation,_operation}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{financial,_litigation,_operation}.html'">{financial, litigation, operation}</td></tr>
+<tr class="list"><td id="{stock,_price,_share}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_share}.html'">{stock, price, share}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{debt,_indebtedness,_cash}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{debt,_indebtedness,_cash}.html'">{debt, indebtedness, cash}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{tax,_income,_asset}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{tax,_income,_asset}.html'">{tax, income, asset}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    The market may not broadly accept our secure e-messaging and e-prescribing solutions and services, which would prevent us from operating profitably.
+Failure to enter into additional or to maintain existing sponsorship agreements for our PocketScript e-prescribing service and generate other revenue opportunities from PocketScript could harm our business.
+Healthcare providers may fail to adopt our PocketScript service.
+Failure to significantly increase our base of PocketScript users or obtain significant prescription transaction fees may result in failure to achieve the critical mass of physicians and revenue to build a successful business.
+Competition in our businesses is expected to increase, which could cause our business to fail.
+Our inability to successfully and timely develop and introduce new e-messaging and e-prescribing services and related services and to implement technological changes could harm our business.
+If the market for secure e-messaging and e-prescribing services and related services does not continue to grow, demand for our solutions and services will be adversely affected.
+Future asset impairments could affect our financial results.
+Capacity limits on our technology and network hardware and software may be difficult to project, and we may not be able to expand and/or upgrade our systems to meet increased use, which would result in reduced revenues.
+Security interruptions to our data centers could disrupt our business, and any security breaches could expose us to liability and negatively impact customer demand for our solutions and services.
+Pending litigation could have a material impact on our operating results and financial condition.
+We may have to defend our rights in intellectual property that we use in our services, which could be disruptive and expensive to our business.
+Defects or errors in our services could harm our business.
+Public key cryptography technology is subject to risks.
+We depend on key personnel.
+We rely on third parties.
+We could be affected by government regulation.
+Our stock price may be volatile.
+One investor owns a large percentage of our outstanding stock and could significantly influence the outcome of actions.
+We have a certain amount of debt and may be unable to service or refinance this debt, or servicing this debt may restrict cash available for our business operations, or complying with the covenants of the debt could restrict certain desired business actions.
+We have a significant amount of convertible securities and related warrants outstanding and may issue additional equity securities in the future. Conversion or redemption of our outstanding convertible note into our common stock, exercise of the outstanding warrants, and future issuances or conversion of other securities will dilute the ownership interests of existing shareholders.
+We may have liability for indemnification claims arising from the sale of our Web Inspector
+We may encounter other risks.
+NOTE ON FORWARD-LOOKING STATEMENTS AND RISK FACTORS
+<p><a href="http://www.sec.gov/Archives/edgar/data/855612/0000950134-06-005061.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/855612--3-14-2008--ZIX_CORP.html'">855612--3/14/2008--ZIX_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/855612--3-21-2007--ZIX_CORP.html'">855612--3/21/2007--ZIX_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1017172--3-24-2006--LIGHTBRIDGE_INC.html'">1017172--3/24/2006--LIGHTBRIDGE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/832767--11-19-2008--PHOENIX_TECHNOLOGIES_LTD.html'">832767--11/19/2008--PHOENIX_TECHNOLOGIES_LTD</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/706015--3-10-2006--FILENET_CORP.html'">706015--3/10/2006--FILENET_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1272830--3-17-2008--VONAGE_HOLDINGS_CORP.html'">1272830--3/17/2008--VONAGE_HOLDINGS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1265888--3-1-2007--NEUSTAR_INC.html'">1265888--3/1/2007--NEUSTAR_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1102541--2-28-2008--EARTHLINK_INC.html'">1102541--2/28/2008--EARTHLINK_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1272830--4-17-2007--VONAGE_HOLDINGS_CORP.html'">1272830--4/17/2007--VONAGE_HOLDINGS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1285551--3-13-2008--CLEARWIRE_CORP.html'">1285551--3/13/2008--CLEARWIRE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1017172--3-15-2007--LIGHTBRIDGE_INC.html'">1017172--3/15/2007--LIGHTBRIDGE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/835729--5-21-2008--BMC_SOFTWARE_INC.html'">835729--5/21/2008--BMC_SOFTWARE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1142701--3-1-2007--UNITED_ONLINE_INC.html'">1142701--3/1/2007--UNITED_ONLINE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1265888--2-28-2008--NEUSTAR_INC.html'">1265888--2/28/2008--NEUSTAR_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1287258--3-4-2009--PLANETOUT_INC.html'">1287258--3/4/2009--PLANETOUT_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1268671--3-16-2010--TNS_INC.html'">1268671--3/16/2010--TNS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/708818--6-8-2007--QUALITY_SYSTEMS_INC.html'">708818--6/8/2007--QUALITY_SYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/888953--3-16-2006--ONLINE_RESOURCES_CORP.html'">888953--3/16/2006--ONLINE_RESOURCES_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/869561--3-16-2006--RURAL_CELLULAR_CORP.html'">869561--3/16/2006--RURAL_CELLULAR_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1074909--3-17-2008--WIZZARD_SOFTWARE_CORP_-CO.html'">1074909--3/17/2008--WIZZARD_SOFTWARE_CORP_/CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/835729--5-30-2007--BMC_SOFTWARE_INC.html'">835729--5/30/2007--BMC_SOFTWARE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1066194--9-27-2006--EGAIN_COMMUNICATIONS_CORP.html'">1066194--9/27/2006--EGAIN_COMMUNICATIONS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/708818--6-13-2006--QUALITY_SYSTEMS_INC.html'">708818--6/13/2006--QUALITY_SYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1080866--3-16-2007--BANKRATE_INC.html'">1080866--3/16/2007--BANKRATE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/855612--3-4-2009--ZIX_CORP.html'">855612--3/4/2009--ZIX_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1077866--3-16-2009--LOOKSMART_LTD.html'">1077866--3/16/2009--LOOKSMART_LTD</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1091158--3-13-2007--WEBSIDESTORY_INC.html'">1091158--3/13/2007--WEBSIDESTORY_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1108487--3-15-2006--UBIQUITEL_INC.html'">1108487--3/15/2006--UBIQUITEL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/33185--2-28-2007--EQUIFAX_INC.html'">33185--2/28/2007--EQUIFAX_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1085866--3-31-2006--DSL_NET_INC.html'">1085866--3/31/2006--DSL_NET_INC</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

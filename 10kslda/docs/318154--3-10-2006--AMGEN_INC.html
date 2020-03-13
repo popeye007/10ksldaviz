@@ -1,0 +1,186 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[7.7929968335, "../topics/{product,_candidate,_development}.html", "{product,_candidate,_development}"], [3.6851057434, "../topics/{product,_liability,_claim}.html", "{product,_liability,_claim}"], [3.47298725, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [2.6947778864, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"], [2.4875117863, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [1.8255263353, "../topics/{regulation,_government,_change}.html", "{regulation,_government,_change}"], [1.7141101384, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [1.7004524623, "../topics/{regulation,_change,_law}.html", "{regulation,_change,_law}"], [1.6979186627, "../topics/{cost,_contract,_operation}.html", "{cost,_contract,_operation}"], [1.6801381505, "../topics/{financial,_litigation,_operation}.html", "{financial,_litigation,_operation}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>318154--3/10/2006--AMGEN_INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">318154--3/10/2006--AMGEN_INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{product,_candidate,_development}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_candidate,_development}.html'">{product, candidate, development}</td></tr>
+<tr class="list"><td id="{product,_liability,_claim}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_liability,_claim}.html'">{product, liability, claim}</td></tr>
+<tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{regulation,_government,_change}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_government,_change}.html'">{regulation, government, change}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{regulation,_change,_law}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_change,_law}.html'">{regulation, change, law}</td></tr>
+<tr class="list"><td id="{cost,_contract,_operation}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_contract,_operation}.html'">{cost, contract, operation}</td></tr>
+<tr class="list"><td id="{financial,_litigation,_operation}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{financial,_litigation,_operation}.html'">{financial, litigation, operation}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    If our intellectual property positions are challenged, invalidated, circumvented or expire, or if we fail to prevail in present and future intellectual property litigation, our business could be adversely affected.
+Before we commercialize and sell any of our product candidates, we must conduct clinical trials in humans; if we fail to adequately manage these trials we may not be able to sell future products and our sales could be adversely affected.
+Our product development efforts may not result in commercial products.
+Our sales depend on payment and reimbursement from third-party payers, and, to the extent that reimbursement for our products is reduced, this could negatively impact the utilization of our products.
+Certain of our raw materials, medical devices and components are single-sourced from third parties; third-party supply failures could adversely affect our ability to supply our products.
+Our current products and products in development cannot be sold if we do not maintain regulatory approval and comply with manufacturing regulations.
+We formulate, fill, and finish substantially all our products at our Puerto Rico manufacturing facility; if significant natural disasters or production failures occur at this facility, we may not be able to supply these products.
+Difficulties, disruptions or delays in manufacturing may limit supply of our products and limit our product sales.
+We are dependent on third parties for a significant portion of our bulk supply and the formulation, fill, and finish of ENBREL.
+We have grown rapidly, and if we fail to adequately manage that growth our business could be adversely impacted.
+Our marketed products face substantial competition and other companies may discover, develop, acquire or commercialize products before or more successfully than we do.
+Concentration of sales at certain of our wholesaler distributors and consolidation of freestanding dialysis clinic businesses may negatively impact our bargaining power and profit margins.
+Our marketing of ENBREL will be dependent in part upon Wyeth.
+Our business may be impacted by government investigations or litigation.
+We may be required to defend lawsuits or pay damages for product liability claims.
+We may be required to perform additional clinical trials or change the labeling of our products if we or others identify side effects after our products are on the market.
+Guidelines and recommendations published by various organizations can reduce the use of our products.
+Our stock price is volatile, which could adversely affect your investment.
+Our corporate compliance program cannot guarantee that we are in compliance with all potentially applicable U.S. federal and state regulations and all potentially applicable foreign regulations.
+Our revenues may fluctuate, and this fluctuation could cause financial results to be below expectations.
+We may not realize all of the anticipated benefits of our merger with Abgenix, Inc.
+Continual manufacturing process improvement efforts may result in the carrying value of certain existing manufacturing facilities or other assets becoming impaired.
+<p><a href="http://www.sec.gov/Archives/edgar/data/318154/0001104659-06-015851.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/792977--12-1-2006--ADVANCED_MAGNETICS_INC.html'">792977--12/1/2006--ADVANCED_MAGNETICS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/907562--3-4-2009--DYAX_CORP.html'">907562--3/4/2009--DYAX_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/819050--3-3-2008--VICAL_INC.html'">819050--3/3/2008--VICAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/819050--3-3-2009--VICAL_INC.html'">819050--3/3/2009--VICAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/819050--2-25-2010--VICAL_INC.html'">819050--2/25/2010--VICAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/849043--3-14-2006--NEUROGEN_CORP.html'">849043--3/14/2006--NEUROGEN_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1160308--3-16-2006--ADVENTRX_PHARMACEUTICALS_INC.html'">1160308--3/16/2006--ADVENTRX_PHARMACEUTICALS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/819050--2-23-2007--VICAL_INC.html'">819050--2/23/2007--VICAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/949858--3-14-2008--SONUS_PHARMACEUTICALS_INC.html'">949858--3/14/2008--SONUS_PHARMACEUTICALS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/918112--9-13-2007--NEUROBIOLOGICAL_TECHNOLOGIES_INC_-CA-.html'">918112--9/13/2007--NEUROBIOLOGICAL_TECHNOLOGIES_INC_/CA/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/936402--3-1-2006--Shire_plc.html'">936402--3/1/2006--Shire_plc</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/356591--3-26-2010--NEUROLOGIX_INC-DE.html'">356591--3/26/2010--NEUROLOGIX_INC/DE</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/887151--3-13-2006--ORTHOLOGIC_CORP.html'">887151--3/13/2006--ORTHOLOGIC_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/799698--4-3-2006--CYTRX_CORP.html'">799698--4/3/2006--CYTRX_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1012270--3-16-2007--COLLAGENEX_PHARMACEUTICALS_INC.html'">1012270--3/16/2007--COLLAGENEX_PHARMACEUTICALS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1037760--3-15-2007--CEPHEID.html'">1037760--3/15/2007--CEPHEID</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/821616--3-16-2006--BENTLEY_PHARMACEUTICALS_INC.html'">821616--3/16/2006--BENTLEY_PHARMACEUTICALS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/72444--3-10-2010--NABI__BIOPHARMACEUTICALS.html'">72444--3/10/2010--NABI__BIOPHARMACEUTICALS</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/907562--2-29-2008--DYAX_CORP.html'">907562--2/29/2008--DYAX_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/765258--3-16-2006--IMCLONE_SYSTEMS_INC.html'">765258--3/16/2006--IMCLONE_SYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1013238--3-27-2008--ARADIGM_CORP.html'">1013238--3/27/2008--ARADIGM_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1029142--3-17-2008--DYNAVAX_TECHNOLOGIES_CORP.html'">1029142--3/17/2008--DYNAVAX_TECHNOLOGIES_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/72444--3-11-2009--NABI__BIOPHARMACEUTICALS.html'">72444--3/11/2009--NABI__BIOPHARMACEUTICALS</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1396238--3-31-2010--IRIS_BIOTECHNOLOGIES_INC.html'">1396238--3/31/2010--IRIS_BIOTECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1396238--3-31-2009--IRIS_BIOTECHNOLOGIES_INC.html'">1396238--3/31/2009--IRIS_BIOTECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/72444--2-28-2008--NABI__BIOPHARMACEUTICALS.html'">72444--2/28/2008--NABI__BIOPHARMACEUTICALS</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/912183--2-26-2010--CUBIST_PHARMACEUTICALS_INC.html'">912183--2/26/2010--CUBIST_PHARMACEUTICALS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/824068--3-14-2008--ATS_MEDICAL_INC.html'">824068--3/14/2008--ATS_MEDICAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1005201--3-16-2006--DEPOMED_INC.html'">1005201--3/16/2006--DEPOMED_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/882796--3-6-2009--BIOCRYST_PHARMACEUTICALS_INC.html'">882796--3/6/2009--BIOCRYST_PHARMACEUTICALS_INC</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

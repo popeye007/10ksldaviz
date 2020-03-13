@@ -1,0 +1,186 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[5.6521255886, "../topics/{tax,_income,_asset}.html", "{tax,_income,_asset}"], [4.4691418765, "../topics/{stock,_price,_share}.html", "{stock,_price,_share}"], [3.8385426735, "../topics/{regulation,_change,_law}.html", "{regulation,_change,_law}"], [2.869448914, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"], [2.7552472762, "../topics/{interest,_director,_officer}.html", "{interest,_director,_officer}"], [2.7314225844, "../topics/{control,_financial,_internal}.html", "{control,_financial,_internal}"], [1.7607401528, "../topics/{provision,_law,_control}.html", "{provision,_law,_control}"], [1.7288898295, "../topics/{investment,_property,_distribution}.html", "{investment,_property,_distribution}"], [1.6957316181, "../topics/{condition,_economic,_financial}.html", "{condition,_economic,_financial}"], [1.3632198459, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>913277--3/7/2008--CLARUS_CORP</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">913277--3/7/2008--CLARUS_CORP</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{tax,_income,_asset}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{tax,_income,_asset}.html'">{tax, income, asset}</td></tr>
+<tr class="list"><td id="{stock,_price,_share}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_share}.html'">{stock, price, share}</td></tr>
+<tr class="list"><td id="{regulation,_change,_law}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_change,_law}.html'">{regulation, change, law}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+<tr class="list"><td id="{interest,_director,_officer}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{interest,_director,_officer}.html'">{interest, director, officer}</td></tr>
+<tr class="list"><td id="{control,_financial,_internal}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{control,_financial,_internal}.html'">{control, financial, internal}</td></tr>
+<tr class="list"><td id="{provision,_law,_control}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{provision,_law,_control}.html'">{provision, law, control}</td></tr>
+<tr class="list"><td id="{investment,_property,_distribution}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{investment,_property,_distribution}.html'">{investment, property, distribution}</td></tr>
+<tr class="list"><td id="{condition,_economic,_financial}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{condition,_economic,_financial}.html'">{condition, economic, financial}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    RISKS RELATED TO CLARUS CORPORATION
+WE CONTINUE TO INCUR OPERATING LOSSES.
+WE MAY BE UNABLE TO REDEPLOY OUR ASSETS SUCCESSFULLY.
+OUR EFFORTS TO REDEPLOY OUR ASSETS COULD BE MATERIALLY ADVERSELY AFFECTED BY THE LOSS OF KEY MANAGEMENT OR THE DIVERSION OF OUR MANAGEMENT TO OUTSIDE INTERESTS.
+WE WILL INCUR SIGNIFICANT COSTS IN CONNECTION WITH OUR EVALUATION OF SUITABLE MERGER PARTNERS AND ACQUISITION CANDIDATES.
+SINCE WE HAVE NOT YET SELECTED A PARTICULAR INDUSTRY OR TARGET BUSINESS WITH WHICH TO REDEPLOY OUR ASSETS, YOU WILL BE UNABLE TO CURRENTLY ASCERTAIN THE MERITS OR RISKS OF THE INDUSTRY OR BUSINESS IN WHICH WE MAY ULTIMATELY OPERATE.
+WE WILL LIKELY HAVE NO OPERATING HISTORY IN OUR NEW LINE OF BUSINESS, WHICH IS YET TO BE DETERMINED, AND THEREFORE WE WILL BE SUBJECT TO THE RISKS INHERENT IN ESTABLISHING A NEW BUSINESS.
+OUR ABILITY TO BE SUCCESSFUL AFTER A REDEPLOYMENT OF OUR ASSETS MAY BE DEPENDENT UPON THE CONTINUED EFFORTS OF OUR MANAGEMENT TEAM AND KEY PERSONNEL WHO MAY JOIN US FOLLOWING A REDEPLOYMENT OF OUR ASSETS.
+AS A RESULT OF AN ASSET REDEPLOYMENT WE MAY BE REQUIRED TO SUBSEQUENTLY TAKE WRITE-DOWNS OR WRITE-OFFS, RESTRUCTURING, AND IMPAIRMENT OR OTHER CHARGES THAT COULD HAVE A SIGNIFICANT NEGATIVE EFFECT ON OUR FINANCIAL CONDITION, RESULTS OF OPERATIONS AND OUR STOCK PRICE, WHICH COULD CAUSE YOU TO LOSE SOME OR ALL OF YOUR INVESTMENT.
+THE REPORTING REQUIREMENTS UNDER RULES ADOPTED BY THE SECURITIES AND EXCHANGE COMMISSION RELATING TO SHELL COMPANIES MAY DELAY OR PREVENT US FROM MAKING CERTAIN ACQUISITIONS.
+WE MAY BE UNABLE TO REALIZE THE BENEFITS OF OUR NET OPERATING LOSS ("NOL") AND TAX CREDIT CARRYFORWARDS.
+CERTAIN PROTECTIVE MEASURES IMPLEMENTED BY US TO PRESERVE OUR NOL MAY NOT BE EFFECTIVE OR MAY HAVE SOME UNINTENDED NEGATIVE EFFECTS.
+IF WE EFFECT AN ACQUISITION OR MERGER WITH A COMPANY LOCATED OUTSIDE OF THE UNITED STATES, WE WOULD BE SUBJECT TO A VARIETY OF ADDITIONAL RISKS THAT MAY NEGATIVELY IMPACT OUR OPERATIONS.
+IF WE EFFECT AN ACQUISITION OR MERGER WITH A COMPANY LOCATED OUTSIDE OF THE UNITED STATES, THE LAWS APPLICABLE TO SUCH COMPANY WILL LIKELY GOVERN ALL OF OUR MATERIAL AGREEMENTS AND WE MAY NOT BE ABLE TO ENFORCE OUR LEGAL RIGHTS.
+COMPLIANCE WITH THE SARBANES-OXLEY ACT OF 2002 WILL REQUIRE SUBSTANTIAL FINANCIAL AND MANAGEMENT RESOURCES AND MAY INCREASE THE TIME AND COSTS OF COMPLETING AN ACQUISITION.
+WE COULD BE REQUIRED TO REGISTER AS AN INVESTMENT COMPANY UNDER THE INVESTMENT COMPANY ACT OF 1940, WHICH COULD SIGNIFICANTLY LIMIT OUR ABILITY TO OPERATE AND ACQUIRE AN ESTABLISHED BUSINESS.
+RISKS RELATED TO OUR COMMON STOCK
+OUR COMMON STOCK IS NO LONGER LISTED ON THE NASDAQ NATIONAL MARKET.
+WE ARE VULNERABLE TO VOLATILE MARKET CONDITIONS.
+WE DO NOT EXPECT TO PAY DIVIDENDS ON OUR COMMON STOCK IN THE FORESEEABLE FUTURE.
+OUR AMENDED AND RESTATED CERTIFICATE OF INCORPORATION AUTHORIZES THE ISSUANCE OF SHARES OF PREFERRED STOCK.
+WE MAY ISSUE A SUBSTANTIAL AMOUNT OF OUR COMMON STOCK IN THE FUTURE, WHICH COULD CAUSE DILUTION TO CURRENT INVESTORS AND OTHERWISE ADVERSELY AFFECT OUR STOCK PRICE.
+<p><a href="http://www.sec.gov/Archives/edgar/data/913277/0001144204-08-014061.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/913277--3-15-2007--CLARUS_CORP.html'">913277--3/15/2007--CLARUS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/854398--12-18-2009--XATA_CORP_-MN-.html'">854398--12/18/2009--XATA_CORP_/MN/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1064015--9-29-2008--AMERITRANS_CAPITAL_CORP.html'">1064015--9/29/2008--AMERITRANS_CAPITAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1115055--2-26-2010--PINNACLE_FINANCIAL_PARTNERS_INC.html'">1115055--2/26/2010--PINNACLE_FINANCIAL_PARTNERS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1027884--2-23-2010--CHICAGO_BRIDGE_&_IRON_CO_N_V.html'">1027884--2/23/2010--CHICAGO_BRIDGE_&_IRON_CO_N_V</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1027884--2-25-2009--CHICAGO_BRIDGE_&_IRON_CO_N_V.html'">1027884--2/25/2009--CHICAGO_BRIDGE_&_IRON_CO_N_V</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1064015--9-28-2010--AMERITRANS_CAPITAL_CORP.html'">1064015--9/28/2010--AMERITRANS_CAPITAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1127442--4-15-2009--CITIZENS_FIRST_BANCORP_INC.html'">1127442--4/15/2009--CITIZENS_FIRST_BANCORP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1073149--3-17-2008--CORNERSTONE_REALTY_FUND_LLC.html'">1073149--3/17/2008--CORNERSTONE_REALTY_FUND_LLC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1123270--3-5-2010--BANK_MUTUAL_CORP.html'">1123270--3/5/2010--BANK_MUTUAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1043325--3-12-2007--CHARTERMAC.html'">1043325--3/12/2007--CHARTERMAC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/17313--5-29-2009--CAPITAL_SOUTHWEST_CORP.html'">17313--5/29/2009--CAPITAL_SOUTHWEST_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/3906--2-29-2008--ALLIED_CAPITAL_CORP.html'">3906--2/29/2008--ALLIED_CAPITAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1046788--3-31-2008--HARRIS_PREFERRED_CAPITAL_CORP.html'">1046788--3/31/2008--HARRIS_PREFERRED_CAPITAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1064015--9-28-2009--AMERITRANS_CAPITAL_CORP.html'">1064015--9/28/2009--AMERITRANS_CAPITAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/878522--12-16-2010--STEWART_ENTERPRISES_INC.html'">878522--12/16/2010--STEWART_ENTERPRISES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1129633--3-1-2007--PHOENIX_COMPANIES_INC-DE.html'">1129633--3/1/2007--PHOENIX_COMPANIES_INC/DE</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/19612--2-27-2009--CHEMICAL_FINANCIAL_CORP.html'">19612--2/27/2009--CHEMICAL_FINANCIAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1278384--3-31-2009--NTS_REALTY_HOLDINGS_LP.html'">1278384--3/31/2009--NTS_REALTY_HOLDINGS_LP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1278384--3-25-2008--NTS_REALTY_HOLDINGS_LP.html'">1278384--3/25/2008--NTS_REALTY_HOLDINGS_LP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/878522--12-17-2009--STEWART_ENTERPRISES_INC.html'">878522--12/17/2009--STEWART_ENTERPRISES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/830159--7-10-2008--AMERICAN_TAX_CREDIT_PROPERTIES_LP.html'">830159--7/10/2008--AMERICAN_TAX_CREDIT_PROPERTIES_LP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1006637--2-25-2010--TICKETMASTER_ENTERTAINMENT_LLC.html'">1006637--2/25/2010--TICKETMASTER_ENTERTAINMENT_LLC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/769874--5-1-2009--REMEC_INC.html'">769874--5/1/2009--REMEC_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/881790--9-26-2008--HF_FINANCIAL_CORP.html'">881790--9/26/2008--HF_FINANCIAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/854398--12-17-2008--XATA_CORP_-MN-.html'">854398--12/17/2008--XATA_CORP_/MN/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/3906--3-13-2006--ALLIED_CAPITAL_CORP.html'">3906--3/13/2006--ALLIED_CAPITAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/783603--3-17-2008--AMERICAN_SAFETY_INSURANCE_HOLDINGS_LTD.html'">783603--3/17/2008--AMERICAN_SAFETY_INSURANCE_HOLDINGS_LTD</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/857728--3-10-2009--I_FLOW_CORP_-DE-.html'">857728--3/10/2009--I_FLOW_CORP_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1492915--12-23-2010--Standard_Financial_Corp..html'">1492915--12/23/2010--Standard_Financial_Corp.</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

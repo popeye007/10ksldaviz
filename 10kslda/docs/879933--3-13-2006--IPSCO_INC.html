@@ -1,0 +1,181 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[3.4567666722, "../topics/{gas,_price,_oil}.html", "{gas,_price,_oil}"], [3.1279107211, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"], [2.7912986756, "../topics/{cost,_regulation,_environmental}.html", "{cost,_regulation,_environmental}"], [1.9617040384, "../topics/{condition,_economic,_financial}.html", "{condition,_economic,_financial}"], [1.7439634589, "../topics/{operation,_natural,_condition}.html", "{operation,_natural,_condition}"], [1.7247069925, "../topics/{cost,_contract,_operation}.html", "{cost,_contract,_operation}"], [1.7070598282, "../topics/{stock,_price,_share}.html", "{stock,_price,_share}"], [1.6878219559, "../topics/{product,_liability,_claim}.html", "{product,_liability,_claim}"], [1.6794439833, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"], [1.6700121916, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [1.6226932429, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>879933--3/13/2006--IPSCO_INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">879933--3/13/2006--IPSCO_INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{gas,_price,_oil}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{gas,_price,_oil}.html'">{gas, price, oil}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+<tr class="list"><td id="{cost,_regulation,_environmental}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_regulation,_environmental}.html'">{cost, regulation, environmental}</td></tr>
+<tr class="list"><td id="{condition,_economic,_financial}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{condition,_economic,_financial}.html'">{condition, economic, financial}</td></tr>
+<tr class="list"><td id="{operation,_natural,_condition}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_natural,_condition}.html'">{operation, natural, condition}</td></tr>
+<tr class="list"><td id="{cost,_contract,_operation}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_contract,_operation}.html'">{cost, contract, operation}</td></tr>
+<tr class="list"><td id="{stock,_price,_share}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_share}.html'">{stock, price, share}</td></tr>
+<tr class="list"><td id="{product,_liability,_claim}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_liability,_claim}.html'">{product, liability, claim}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+<tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    RISK FACTORS RELATED TO OUR INDUSTRY
+Our level of production and our sales and earnings are subject to significant fluctuations as a result of the cyclical nature of the steel industry and the industries we serve
+Imports of steel into North America have, in recent years, adversely affected, and may yet again adversely affect, North American steel prices, which would impact the level of our sales, margins and profitability
+A reduction or slowdown in China s steel consumption could have a material adverse effect on global steel pricing and could result in increased steel exports into North America
+Excess global capacity in the steel industry and the availability of competitive substitute materials has resulted in intense competition and may continue to exert downward pressure on our pricing
+We may be unable to continue to pass on increases in the cost of scrap and other raw materials to our customers, which would reduce our earnings
+Fluctuations in inventory levels of oilfield products and service center products could adversely affect our sales
+Fluctuations in the value of the United States dollar relative to other currencies may adversely affect our business
+Unexpected equipment failures may lead to production curtailments or shutdowns
+Potential product liability claims relating
+to the products we manufacture and sell to the oil and gas industry could harm our business
+We may face risks associated with the implementation of our growth strategy
+Environmental regulation imposes substantial costs and limitations on our operations
+Our business requires substantial capital investment and maintenance expenditures, which we may be unable to provide
+Our stock price may be volatile and could decline substantially
+We may not continue to pay cash dividends in the future
+<p><a href="http://www.sec.gov/Archives/edgar/data/879933/0001104659-06-016082.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/1021860--3-2-2009--NATIONAL_OILWELL_VARCO_INC.html'">1021860--3/2/2009--NATIONAL_OILWELL_VARCO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/6769--2-29-2008--APACHE_CORP.html'">6769--2/29/2008--APACHE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/858655--11-23-2009--HAYNES_INTERNATIONAL_INC.html'">858655--11/23/2009--HAYNES_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/926423--4-14-2008--MITCHAM_INDUSTRIES_INC.html'">926423--4/14/2008--MITCHAM_INDUSTRIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/16160--8-16-2007--CAL_MAINE_FOODS_INC.html'">16160--8/16/2007--CAL_MAINE_FOODS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/795665--5-24-2007--METAL_MANAGEMENT_INC.html'">795665--5/24/2007--METAL_MANAGEMENT_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/858655--11-24-2008--HAYNES_INTERNATIONAL_INC.html'">858655--11/24/2008--HAYNES_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/60849--3-1-2007--LUFKIN_INDUSTRIES_INC.html'">60849--3/1/2007--LUFKIN_INDUSTRIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/8411--12-13-2006--ATWOOD_OCEANICS_INC.html'">8411--12/13/2006--ATWOOD_OCEANICS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/50104--3-2-2009--TESORO_CORP_-NEW-.html'">50104--3/2/2009--TESORO_CORP_/NEW/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1021860--2-27-2007--NATIONAL_OILWELL_VARCO_INC.html'">1021860--2/27/2007--NATIONAL_OILWELL_VARCO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1022671--2-27-2008--STEEL_DYNAMICS_INC.html'">1022671--2/27/2008--STEEL_DYNAMICS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/727538--3-2-2009--APACHE_OFFSHORE_INVESTMENT_PARTNERSHIP.html'">727538--3/2/2009--APACHE_OFFSHORE_INVESTMENT_PARTNERSHIP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/32689--3-3-2008--EMPIRE_DISTRICT_ELECTRIC_CO.html'">32689--3/3/2008--EMPIRE_DISTRICT_ELECTRIC_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1122976--2-29-2008--POLYONE_CORP.html'">1122976--2/29/2008--POLYONE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/926423--4-16-2007--MITCHAM_INDUSTRIES_INC.html'">926423--4/16/2007--MITCHAM_INDUSTRIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/350403--3-11-2008--PHI_INC.html'">350403--3/11/2008--PHI_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/915840--12-8-2006--BEAZER_HOMES_USA_INC.html'">915840--12/8/2006--BEAZER_HOMES_USA_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/275053--3-16-2010--NATURES_SUNSHINE_PRODUCTS_INC.html'">275053--3/16/2010--NATURES_SUNSHINE_PRODUCTS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1120434--4-15-2009--FRIENDLY_ENERGY_EXPLORATION.html'">1120434--4/15/2009--FRIENDLY_ENERGY_EXPLORATION</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1090012--2-25-2010--DEVON_ENERGY_CORP-DE.html'">1090012--2/25/2010--DEVON_ENERGY_CORP/DE</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1035002--3-1-2006--VALERO_ENERGY_CORP-TX.html'">1035002--3/1/2006--VALERO_ENERGY_CORP/TX</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1035002--2-27-2009--VALERO_ENERGY_CORP-TX.html'">1035002--2/27/2009--VALERO_ENERGY_CORP/TX</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1035002--2-29-2008--VALERO_ENERGY_CORP-TX.html'">1035002--2/29/2008--VALERO_ENERGY_CORP/TX</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1103982--2-25-2010--KRAFT_FOODS_INC.html'">1103982--2/25/2010--KRAFT_FOODS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1084230--2-27-2008--PEPSIAMERICAS_INC-IL-.html'">1084230--2/27/2008--PEPSIAMERICAS_INC/IL/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/887426--4-16-2007--SOUTHWEST_ROYALTIES_INSTITUTIONAL_INCOME_FUND_X-C_LP.html'">887426--4/16/2007--SOUTHWEST_ROYALTIES_INSTITUTIONAL_INCOME_FUND_X-C_LP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/858655--12-12-2007--HAYNES_INTERNATIONAL_INC.html'">858655--12/12/2007--HAYNES_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/66649--3-12-2007--MINES_MANAGEMENT_INC.html'">66649--3/12/2007--MINES_MANAGEMENT_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/808362--2-26-2010--BAKER_HUGHES_INC.html'">808362--2/26/2010--BAKER_HUGHES_INC</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

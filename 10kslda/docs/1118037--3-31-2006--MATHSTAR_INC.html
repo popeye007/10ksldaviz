@@ -1,0 +1,196 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[5.6966333671, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [5.6958597282, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [3.6966412185, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [3.6962616404, "../topics/{provision,_law,_control}.html", "{provision,_law,_control}"], [2.7418214306, "../topics/{control,_financial,_internal}.html", "{control,_financial,_internal}"], [2.6970024524, "../topics/{system,_service,_information}.html", "{system,_service,_information}"], [2.6024515237, "../topics/{regulation,_change,_law}.html", "{regulation,_change,_law}"], [2.1211809627, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"], [1.6963094565, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [1.6962616513, "../topics/{interest,_director,_officer}.html", "{interest,_director,_officer}"], [1.696237476, "../topics/{stock,_price,_share}.html", "{stock,_price,_share}"], [1.6958870154, "../topics/{competitive,_industry,_competition}.html", "{competitive,_industry,_competition}"], [1.280725633, "../topics/{cost,_operation,_labor}.html", "{cost,_operation,_labor}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>1118037--3/31/2006--MATHSTAR_INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">1118037--3/31/2006--MATHSTAR_INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{provision,_law,_control}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{provision,_law,_control}.html'">{provision, law, control}</td></tr>
+<tr class="list"><td id="{control,_financial,_internal}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{control,_financial,_internal}.html'">{control, financial, internal}</td></tr>
+<tr class="list"><td id="{system,_service,_information}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{system,_service,_information}.html'">{system, service, information}</td></tr>
+<tr class="list"><td id="{regulation,_change,_law}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_change,_law}.html'">{regulation, change, law}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{interest,_director,_officer}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{interest,_director,_officer}.html'">{interest, director, officer}</td></tr>
+<tr class="list"><td id="{stock,_price,_share}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_share}.html'">{stock, price, share}</td></tr>
+<tr class="list"><td id="{competitive,_industry,_competition}" onmouseover="highlight(11)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{competitive,_industry,_competition}.html'">{competitive, industry, competition}</td></tr>
+<tr class="list"><td id="{cost,_operation,_labor}" onmouseover="highlight(12)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_operation,_labor}.html'">{cost, operation, labor}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    Risks Relating to Our Business
+Our operations and business are subject to the risks of a development stage company with little or no revenue and a history of operating losses. The report of our independent registered public accounting firm included in this Annual Report on Form 10-K contains an explanatory paragraph expressing substantial doubt about our ability to continue as a going concern. We have incurred losses since inception, and we have had only nominal revenue.
+We will need additional financing in the future, which may not be available to us on favorable terms or at all. If we do not obtain additional financing when we need it or on terms that are favorable to us, our business would be adversely and materially affected.
+If we do not produce our new version of our FPOA chip and begin selling it to customers in the first half of 2006, our business, revenue, financial condition and results of operations could be adversely affected and the market price of our stock could decrease.
+Because our current and planned FPOA chips are highly complex, they may contain defects or errors that are detected only after deployment in commercial applications, which would harm our reputation and result in increased liability and expense.
+Our FPOA chips are new and have not yet achieved commercial acceptance. Our success depends on effectively introducing our FPOA chips to the market and have them gain market acceptance. The failure of our FPOA chips to achieve commercial acceptance would have a material adverse effect on our business, revenue, financial condition and results of operations.
+Our future success will depend on our ability to develop new FPOA chips, introduce them to the market and have them gain market acceptance. There is no assurance that we can do so successfully or on a timely basis. Our failure to do so would have a material adverse effect on our business, revenue, financial condition and results of operations.
+Our success depends on our ability to develop effective FPOA design tools, either alone or in alliances with independent electronic design automation companies, and to have the design tools gain market acceptance. Our failure to do so would delay or prevent the commercialization of our FPOA chips, which would materially harm our business, revenue, financial condition and results of operations.
+We presently rely on Summit Design, Inc. for the design tools that are used to map our customers algorithms to our FPOAs. If Summit Design could not or would not provide these design tools and related support services for any reason, further design tool development would be delayed, which would delay the introduction of our FPOAs to the marketplace.
+We use a third-party contractor to fabricate the silicon wafers used in our FPOA chips. If our supply of silicon wafers from the contractor was interrupted, delayed or terminated for any reason, our business, revenue, financial condition and results of operations would be adversely affected.
+The production of silicon wafers is a complex process, and production yields can be adversely affected by many factors over which we have no control. A shortage or delay in producing the silicon wafers used in our FPOA chips could have an adverse effect on our business, revenue, financial condition and results of operations.
+We rely on a single source independent contractor for our packaging. The disruption or termination of our relationship with this contractor could result in a material adverse effect on our business, revenue, financial condition and results of operations.
+The semiconductor industry is intensely competitive. Most of our competitors have substantially greater resources than we do, and there can be no assurance that we will be able to successfully compete in the industry.
+Rapid technological change could cause our FPOA chips and technology to become obsolete or require us to redesign our FPOA chips, which could have a material adverse effect on our business, revenue, financial condition and results of operations.
+Our ability to compete depends on our ability to protect our intellectual property, which may not be adequately protected.
+Our technology has no patent protection outside of the United States because we have no non-United States patents. This could result in the appropriation of our technology outside of the United States, which could have an adverse effect on our business, revenue, financial condition and results of operations.
+We are at risk of intellectual property infringement claims.
+The market for semiconductor chips has been characterized by periods of significant fluctuations in demand. Our revenue and financial performance will depend on demand for semiconductor chips overall and particularly those with the performance characteristics of our FPOA chip.
+We currently rely and we may rely in the future on contracts, relationships and arrangements between our strategic partners and the United States government, and we may enter into contracts with the United States government. Contracts with the United States government involve risks in addition to normal business risks. If our contracts or our strategic partners contracts with the United States government were altered or terminated for any reason, our business, revenue, financial condition and results of operations could be adversely affected.
+Our success depends on the services of our existing management and upon our ability to attract qualified engineers and other technical, management, sales, marketing and financial personnel.
+Douglas M. Pihl owned 8.7% of our outstanding shares of common stock as of February 28, 2006, which allows him to exert substantial influence over our business and management.
+We may encounter difficulties in managing our growth and expanding our operations successfully.
+Changes in accounting principles, including recent changes in employee stock option accounting rules, may adversely affect our reported operating results and our efforts and success in recruiting and retaining employees.
+We are incurring and will incur increased costs as a result of being a public company.
+If we are unable to successfully address the material weakness in our internal controls, our ability to report our financial results on a timely and accurate basis may be adversely affected.
+We will be exposed to risks relating to evaluations of controls required by Section 404 of the Sarbanes-Oxley Act of 2002.
+Our board of directors may issue and fix the terms of shares of our preferred stock without stockholder approval, which could adversely affect the voting power of holders of our common stock or any change in control of MathStar.
+We will not pay cash dividends on our common stock in the foreseeable future.
+The anti-takeover provisions of the Delaware General Corporation Law, or DGCL, may delay or prevent transactions that are favorable to our stockholders.
+<p><a href="http://www.sec.gov/Archives/edgar/data/1118037/0001104659-06-021344.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/915866--3-16-2007--NMS_COMMUNICATIONS_CORP.html'">915866--3/16/2007--NMS_COMMUNICATIONS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1078271--8-20-2010--EXTREME_NETWORKS_INC.html'">1078271--8/20/2010--EXTREME_NETWORKS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1100813--4-14-2006--OPSWARE_INC.html'">1100813--4/14/2006--OPSWARE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1009626--1-19-2006--BROCADE_COMMUNICATIONS_SYSTEMS_INC.html'">1009626--1/19/2006--BROCADE_COMMUNICATIONS_SYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/350917--8-24-2009--EMULEX_CORP_-DE-.html'">350917--8/24/2009--EMULEX_CORP_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1054374--2-14-2006--BROADCOM_CORP.html'">1054374--2/14/2006--BROADCOM_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/944075--3-21-2007--SOCKET_COMMUNICATIONS_INC.html'">944075--3/21/2007--SOCKET_COMMUNICATIONS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1120295--3-13-2006--IXIA.html'">1120295--3/13/2006--IXIA</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1050446--2-24-2010--MICROSTRATEGY_INC.html'">1050446--2/24/2010--MICROSTRATEGY_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/915866--4-1-2008--NMS_COMMUNICATIONS_CORP.html'">915866--4/1/2008--NMS_COMMUNICATIONS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/918386--5-25-2007--QLOGIC_CORP.html'">918386--5/25/2007--QLOGIC_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1057083--3-16-2006--PC_TEL_INC.html'">1057083--3/16/2006--PC_TEL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1090071--6-14-2007--FOUNDRY_NETWORKS_INC.html'">1090071--6/14/2007--FOUNDRY_NETWORKS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/103379--2-26-2008--V_F_CORP.html'">103379--2/26/2008--V_F_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/915866--3-16-2006--NMS_COMMUNICATIONS_CORP.html'">915866--3/16/2006--NMS_COMMUNICATIONS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1009759--6-14-2010--CAPSTONE_TURBINE_Corp.html'">1009759--6/14/2010--CAPSTONE_TURBINE_Corp</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/317771--3-14-2006--TELLABS_INC.html'">317771--3/14/2006--TELLABS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1009759--6-15-2009--CAPSTONE_TURBINE_CORP.html'">1009759--6/15/2009--CAPSTONE_TURBINE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/718877--6-9-2006--ACTIVISION_INC_-NY.html'">718877--6/9/2006--ACTIVISION_INC_/NY</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1050446--3-10-2006--MICROSTRATEGY_INC.html'">1050446--3/10/2006--MICROSTRATEGY_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1054374--2-20-2007--BROADCOM_CORP.html'">1054374--2/20/2007--BROADCOM_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1001426--9-11-2008--PERICOM_SEMICONDUCTOR_CORP.html'">1001426--9/11/2008--PERICOM_SEMICONDUCTOR_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1023362--3-17-2006--POWERWAVE_TECHNOLOGIES_INC.html'">1023362--3/17/2006--POWERWAVE_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1115463--3-29-2007--Alliance_Distributors_Holding_Inc..html'">1115463--3/29/2007--Alliance_Distributors_Holding_Inc.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1054374--1-28-2008--BROADCOM_CORP.html'">1054374--1/28/2008--BROADCOM_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/869498--10-13-2006--RONCO_CORP.html'">869498--10/13/2006--RONCO_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1054374--2-4-2009--BROADCOM_CORP.html'">1054374--2/4/2009--BROADCOM_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/944075--3-10-2006--SOCKET_COMMUNICATIONS_INC.html'">944075--3/10/2006--SOCKET_COMMUNICATIONS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/4127--11-27-2007--SKYWORKS_SOLUTIONS_INC.html'">4127--11/27/2007--SKYWORKS_SOLUTIONS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/103379--3-3-2009--V_F_CORP.html'">103379--3/3/2009--V_F_CORP</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

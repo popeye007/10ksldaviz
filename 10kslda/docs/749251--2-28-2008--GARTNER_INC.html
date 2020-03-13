@@ -1,0 +1,182 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[3.3465968218, "../topics/{stock,_price,_share}.html", "{stock,_price,_share}"], [3.1866239531, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [3.0371472089, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [2.7737115949, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"], [2.7072032875, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"], [2.6774308505, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [1.7093330372, "../topics/{debt,_indebtedness,_cash}.html", "{debt,_indebtedness,_cash}"], [1.7013804157, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [1.6968107682, "../topics/{regulation,_government,_change}.html", "{regulation,_government,_change}"], [1.3617066485, "../topics/{tax,_income,_asset}.html", "{tax,_income,_asset}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>749251--2/28/2008--GARTNER_INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">749251--2/28/2008--GARTNER_INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{stock,_price,_share}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_share}.html'">{stock, price, share}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+<tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{debt,_indebtedness,_cash}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{debt,_indebtedness,_cash}.html'">{debt, indebtedness, cash}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{regulation,_government,_change}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_government,_change}.html'">{regulation, government, change}</td></tr>
+<tr class="list"><td id="{tax,_income,_asset}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{tax,_income,_asset}.html'">{tax, income, asset}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    We depend on non-recurring consulting engagements and our failure to secure new engagements could lead to a decrease in our revenues.
+The profitability and success of our conferences, symposia and events could be adversely affected if we are unable to obtain desirable dates and locations.
+Our sales to governments are subject to appropriations and may be terminated.
+We may not be able to attract and retain qualified personnel which could jeopardize the quality of our products and services.
+We may not be able to maintain the equity in our brand name.
+Our international operations expose us to a variety of operational risks which could negatively impact our future revenue and growth.
+Our international operations expose us to changes in foreign currency exchange rates.
+The costs of servicing our outstanding debt obligations could impair our future operating results.
+We may require additional cash resources which may not be available on favorable terms or at all.
+If we are unable to enforce and protect our intellectual property rights our competitive position may be harmed.
+We have grown, and may continue to grow, through acquisitions and strategic investments, which could involve substantial risks.
+We face risks related to litigation.
+We face risks related to taxation.
+Risks related to our common stock
+Our operating results may fluctuate from period to period and may not meet the expectations of securities analysts or investors or guidance we have given, which may cause the price of our common stock to decline.
+Interests of certain of our significant stockholders may conflict with yours.
+Our stock price may be volatile, and you may not be able to resell shares of our common stock at or above the price you paid.
+Future sales of our common stock in the public market could lower our stock price.
+<p><a href="http://www.sec.gov/Archives/edgar/data/749251/0000950123-08-002262.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/749251--2-20-2009--GARTNER_INC.html'">749251--2/20/2009--GARTNER_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/749251--3-1-2007--GARTNER_INC.html'">749251--3/1/2007--GARTNER_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1314183--3-14-2008--Jingwei_International_LTD.html'">1314183--3/14/2008--Jingwei_International_LTD</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/830741--4-14-2009--VIRTUALHEALTH_TECHNOLOGIES_INC..html'">830741--4/14/2009--VIRTUALHEALTH_TECHNOLOGIES_INC.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1052489--3-31-2006--AMERICAN_BANK_NOTE_HOLOGRAPHICS_INC.html'">1052489--3/31/2006--AMERICAN_BANK_NOTE_HOLOGRAPHICS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1063254--3-5-2009--S1_CORP_-DE-.html'">1063254--3/5/2009--S1_CORP_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/5768--6-9-2006--AMERICAN_SCIENCE_&_ENGINEERING_INC.html'">5768--6/9/2006--AMERICAN_SCIENCE_&_ENGINEERING_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/713002--7-14-2008--FLOW_INTERNATIONAL_CORP.html'">713002--7/14/2008--FLOW_INTERNATIONAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/893816--3-16-2007--INFOCROSSING_INC.html'">893816--3/16/2007--INFOCROSSING_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1005286--8-8-2008--LANDEC_CORP_\CA\.html'">1005286--8/8/2008--LANDEC_CORP_\CA\</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/949158--3-13-2009--CRAY_INC.html'">949158--3/13/2009--CRAY_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/893816--3-15-2006--INFOCROSSING_INC.html'">893816--3/15/2006--INFOCROSSING_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1016100--3-30-2006--DIGITAL_LIGHTWAVE_INC.html'">1016100--3/30/2006--DIGITAL_LIGHTWAVE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1005286--8-4-2009--LANDEC_CORP_\CA\.html'">1005286--8/4/2009--LANDEC_CORP_\CA\</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1276531--4-8-2010--SCIENTIFIC_ENERGY_INC.html'">1276531--4/8/2010--SCIENTIFIC_ENERGY_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1094139--3-31-2010--OURPETS_CO.html'">1094139--3/31/2010--OURPETS_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1092796--7-14-2006--SMITH_&_WESSON_HOLDING_CORP.html'">1092796--7/14/2006--SMITH_&_WESSON_HOLDING_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/26820--4-17-2006--PHOENIX_FOOTWEAR_GROUP_INC.html'">26820--4/17/2006--PHOENIX_FOOTWEAR_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1183941--12-14-2009--ACTIVIDENTITY_CORP.html'">1183941--12/14/2009--ACTIVIDENTITY_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1001193--3-17-2008--TRANSMETA_CORP.html'">1001193--3/17/2008--TRANSMETA_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/715073--11-26-2008--WEGENER_CORP.html'">715073--11/26/2008--WEGENER_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/920371--3-3-2006--SIMPSON_MANUFACTURING_CO_INC_-CA-.html'">920371--3/3/2006--SIMPSON_MANUFACTURING_CO_INC_/CA/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/5768--6-13-2008--AMERICAN_SCIENCE_&_ENGINEERING_INC.html'">5768--6/13/2008--AMERICAN_SCIENCE_&_ENGINEERING_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1316360--1-24-2008--IHS_Inc..html'">1316360--1/24/2008--IHS_Inc.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/769520--3-15-2007--MIDDLEBY_CORP.html'">769520--3/15/2007--MIDDLEBY_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/769520--2-27-2008--MIDDLEBY_CORP.html'">769520--2/27/2008--MIDDLEBY_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/932696--2-27-2008--INSIGHT_ENTERPRISES_INC.html'">932696--2/27/2008--INSIGHT_ENTERPRISES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/5768--6-15-2009--AMERICAN_SCIENCE_&_ENGINEERING_INC.html'">5768--6/15/2009--AMERICAN_SCIENCE_&_ENGINEERING_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/99302--6-24-2009--TRANSCAT_INC.html'">99302--6/24/2009--TRANSCAT_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1001902--3-17-2008--INTEVAC_INC.html'">1001902--3/17/2008--INTEVAC_INC</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

@@ -1,0 +1,191 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[5.7959559134, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [5.0573718449, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [3.6985799891, "../topics/{system,_service,_information}.html", "{system,_service,_information}"], [2.9699522385, "../topics/{tax,_income,_asset}.html", "{tax,_income,_asset}"], [2.6931132924, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"], [2.603242067, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [1.8276752144, "../topics/{cost,_operation,_labor}.html", "{cost,_operation,_labor}"], [1.733469139, "../topics/{gas,_price,_oil}.html", "{gas,_price,_oil}"], [1.7295676804, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"], [1.7070827542, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [1.7002019193, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [1.3997297841, "../topics/{loan,_real,_estate}.html", "{loan,_real,_estate}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>1042431--3/13/2009--INTERWOVEN_INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">1042431--3/13/2009--INTERWOVEN_INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{system,_service,_information}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{system,_service,_information}.html'">{system, service, information}</td></tr>
+<tr class="list"><td id="{tax,_income,_asset}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{tax,_income,_asset}.html'">{tax, income, asset}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{cost,_operation,_labor}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_operation,_labor}.html'">{cost, operation, labor}</td></tr>
+<tr class="list"><td id="{gas,_price,_oil}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{gas,_price,_oil}.html'">{gas, price, oil}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{loan,_real,_estate}" onmouseover="highlight(11)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{loan,_real,_estate}.html'">{loan, real, estate}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    Sales cycles for our products are generally long, complex and unpredictable, so it is difficult to forecast our future results.
+Many factors can cause our operating results to fluctuate and if we fail to satisfy the expectations of investors or securities analysts, our stock price may decline.
+We may not be able to sustain profitability.
+Support and service revenues have represented a large percentage of our total revenues. Our support and service revenues are vulnerable to reduced demand and increased competition.
+Our stock price may be volatile, and your investment in our common stock could suffer a decline in value.
+The timing of large customer orders may have a significant impact on our consolidated financial results from period to period.
+Fluctuations in the exchange rates of foreign currency, particularly in Euro, British Pound and Australian Dollar and the various other local currencies of Europe and Asia, may harm our business.
+Our international operations have a significant impact on our overall operating results.
+Contractual terms or issues that arise during the negotiation process may delay anticipated transactions and revenues.
+Increasing competition could cause us to reduce our prices and result in lower gross margins or loss of market share.
+Impairment charges related to our goodwill or long-lived assets could adversely affect our future operating results.
+We may not realize the anticipated benefits of past or future acquisitions, and integration of these acquisitions may disrupt our business and management.
+Our cash and investments are subject to risks which may cause losses and affect the liquidity of these investments.
+Our revenues depend on a small number of products and markets, so our results are vulnerable to shifts in demand.
+Our future revenues depend in part on our installed customer base continuing to license additional products, renew customer support agreements and purchase additional services.
+Our future revenues may depend in part on how successful we are at addressing the needs of the markets we enter.
+Because a significant portion of our revenues are influenced by referrals from strategic partners and, in some cases, sold through resellers, our future success depends in part on those partners, but their interests may differ from ours.
+We must attract and retain qualified personnel to be successful and competition for qualified personnel is increasing in our market.
+Our failure to deliver defect-free software could result in losses and harmful publicity.
+If our products cannot scale to meet the demands of thousands of concurrent users, our targeted customers may not license our software, which will cause our revenues to decline.
+If our products do not operate with a wide variety of hardware, software and operating systems used by our customers, our revenues would be harmed.
+Our products may lack essential functionality if we are unable to obtain and maintain licenses to third-party software and applications.
+Our ability to use net operating losses to offset future taxable income may be subject to certain limitations.
+Difficulties in introducing new products and product upgrades and integrating new products with our existing products in a timely manner will make market acceptance of our products less likely.
+We might not be able to protect and enforce our intellectual property rights, a loss of which could harm our business.
+<p><a href="http://www.sec.gov/Archives/edgar/data/1042431/0000950134-09-005316.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/1050446--2-24-2010--MICROSTRATEGY_INC.html'">1050446--2/24/2010--MICROSTRATEGY_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1032346--3-14-2008--IONA_TECHNOLOGIES_PLC.html'">1032346--3/14/2008--IONA_TECHNOLOGIES_PLC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1114925--9-11-2007--LANTRONIX_INC.html'">1114925--9/11/2007--LANTRONIX_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1050446--3-10-2006--MICROSTRATEGY_INC.html'">1050446--3/10/2006--MICROSTRATEGY_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1042431--3-14-2008--INTERWOVEN_INC.html'">1042431--3/14/2008--INTERWOVEN_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/21510--12-15-2009--COHERENT_INC.html'">21510--12/15/2009--COHERENT_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1007800--8-17-2006--SIPEX_CORP.html'">1007800--8/17/2006--SIPEX_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/790705--5-30-2006--TEKELEC.html'">790705--5/30/2006--TEKELEC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1106942--2-17-2010--BLACKBOARD_INC.html'">1106942--2/17/2010--BLACKBOARD_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1007800--8-17-2006--SIPEX_CORP.html'">1007800--8/17/2006--SIPEX_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1042431--12-14-2007--INTERWOVEN_INC.html'">1042431--12/14/2007--INTERWOVEN_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1111928--3-12-2009--IPG_PHOTONICS_CORP.html'">1111928--3/12/2009--IPG_PHOTONICS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/936395--1-12-2006--CIENA_CORP.html'">936395--1/12/2006--CIENA_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1042431--3-13-2006--INTERWOVEN_INC.html'">1042431--3/13/2006--INTERWOVEN_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1054374--2-4-2009--BROADCOM_CORP.html'">1054374--2/4/2009--BROADCOM_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1002663--12-14-2006--PHOTON_DYNAMICS_INC.html'">1002663--12/14/2006--PHOTON_DYNAMICS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/915866--3-16-2007--NMS_COMMUNICATIONS_CORP.html'">915866--3/16/2007--NMS_COMMUNICATIONS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/918386--5-25-2007--QLOGIC_CORP.html'">918386--5/25/2007--QLOGIC_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1054374--2-20-2007--BROADCOM_CORP.html'">1054374--2/20/2007--BROADCOM_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/317771--3-14-2006--TELLABS_INC.html'">317771--3/14/2006--TELLABS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1054374--1-28-2008--BROADCOM_CORP.html'">1054374--1/28/2008--BROADCOM_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/936395--12-27-2007--CIENA_CORP.html'">936395--12/27/2007--CIENA_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1115463--3-29-2007--Alliance_Distributors_Holding_Inc..html'">1115463--3/29/2007--Alliance_Distributors_Holding_Inc.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1052054--3-13-2008--EVOLVING_SYSTEMS_INC.html'">1052054--3/13/2008--EVOLVING_SYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1106942--2-15-2006--BLACKBOARD_INC.html'">1106942--2/15/2006--BLACKBOARD_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1111928--3-15-2010--IPG_PHOTONICS_CORP.html'">1111928--3/15/2010--IPG_PHOTONICS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1129446--12-1-2006--AGERE_SYSTEMS_INC.html'">1129446--12/1/2006--AGERE_SYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/800458--6-14-2010--RENTRAK_CORP.html'">800458--6/14/2010--RENTRAK_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/936395--1-10-2007--CIENA_CORP.html'">936395--1/10/2007--CIENA_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1090071--2-26-2008--FOUNDRY_NETWORKS_INC.html'">1090071--2/26/2008--FOUNDRY_NETWORKS_INC</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

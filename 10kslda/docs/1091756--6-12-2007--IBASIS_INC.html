@@ -1,0 +1,217 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[9.4610105158, "../topics/{system,_service,_information}.html", "{system,_service,_information}"], [8.1254196629, "../topics/{financial,_litigation,_operation}.html", "{financial,_litigation,_operation}"], [5.7751078105, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [5.2979995381, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"], [4.1139546879, "../topics/{stock,_price,_share}.html", "{stock,_price,_share}"], [3.8409889427, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [3.8147169337, "../topics/{regulation,_change,_law}.html", "{regulation,_change,_law}"], [2.7197732712, "../topics/{investment,_property,_distribution}.html", "{investment,_property,_distribution}"], [2.6997341942, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [2.6594638486, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [1.7570985445, "../topics/{interest,_director,_officer}.html", "{interest,_director,_officer}"], [1.7463831031, "../topics/{loss,_insurance,_financial}.html", "{loss,_insurance,_financial}"], [1.7231315942, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"], [1.7003418075, "../topics/{tax,_income,_asset}.html", "{tax,_income,_asset}"], [1.696927436, "../topics/{provision,_law,_control}.html", "{provision,_law,_control}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>1091756--6/12/2007--IBASIS_INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">1091756--6/12/2007--IBASIS_INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{system,_service,_information}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{system,_service,_information}.html'">{system, service, information}</td></tr>
+<tr class="list"><td id="{financial,_litigation,_operation}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{financial,_litigation,_operation}.html'">{financial, litigation, operation}</td></tr>
+<tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+<tr class="list"><td id="{stock,_price,_share}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_share}.html'">{stock, price, share}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{regulation,_change,_law}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_change,_law}.html'">{regulation, change, law}</td></tr>
+<tr class="list"><td id="{investment,_property,_distribution}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{investment,_property,_distribution}.html'">{investment, property, distribution}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{interest,_director,_officer}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{interest,_director,_officer}.html'">{interest, director, officer}</td></tr>
+<tr class="list"><td id="{loss,_insurance,_financial}" onmouseover="highlight(11)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{loss,_insurance,_financial}.html'">{loss, insurance, financial}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(12)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+<tr class="list"><td id="{tax,_income,_asset}" onmouseover="highlight(13)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{tax,_income,_asset}.html'">{tax, income, asset}</td></tr>
+<tr class="list"><td id="{provision,_law,_control}" onmouseover="highlight(14)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{provision,_law,_control}.html'">{provision, law, control}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    Factors That May Affect Future Results and Financial Condition
+Risk Related to the Restatement of Our Prior Financial Results
+Our Special Committee investigation, our internal review of our historical financial statements, the restatement of our consolidated financial statements, investigation by the SEC, review by The Nasdaq Stock Market and related events have had, and will continue to have, a material adverse effect on us.
+We cannot predict the outcome of the SEC s formal investigation of our past stock option practices. The investigation has required, and may continue to require, significant management time and attention, as well as additional accounting and legal expense, and could result in civil and/or criminal actions seeking, among other things, injunctive and monetary relief from us.
+Following the Special Committee investigation, two derivative civil action lawsuits have been brought, purportedly on our behalf, which could require significant management time and attention and result in significant legal expenses and may result in an unfavorable outcome against our management, which could require us to pay substantial judgments or settlements pursuant to any indemnification obligations that we may have with them, which could have a material adverse effect on our business, financial condition and results of operations.
+We have incurred and our option holders have incurred tax liability which has caused us to, and may continue to cause us to, pay penalties and interest for the late payment of our withholding tax obligations and payments to our affected option holders to offset against their additional tax liabilities. In addition, we may incur significant accounting and legal expense in connection with the implementation of a program to assist our affected employees.
+We have been unable to remain current with the filing of our periodic reports with the SEC, and our efforts to become current may require substantial management time and attention as well as additional accounting and legal expense.
+Our common stock may become delisted from The Nasdaq Stock Market as a result of the restatement and delayed filing of our periodic reports, and if delisted, we may be unable to obtain listing of our common stock on another national securities exchange.
+Risks Related to Our Business
+Our results of operations may fluctuate and the market price of our common stock may fall.
+We may not be able to generate sufficient revenue and gross profit that will enable us to be profitable in the long term if telecommunications carriers and other communications service providers are reluctant to use our services in sufficient volume.
+We may not be able to collect amounts due to us from our customers and we may have to disgorge amounts already paid.
+We may increase costs and risks in our business to the extent we rely on third parties.
+We may not be able to succeed in the intensely competitive market for our Trading services or for Prepaid Calling Services .
+We are subject to downward pricing pressures and a continuing need to renegotiate overseas rates.
+A variety of risks associated with our international operations could materially adversely affect our business.
+In addition to the proposed transaction with KPN, we may undertake strategic acquisitions or dispositions, or may be the target of similar strategic initiatives, that could be difficult to integrate or could damage our business.
+If we are not able to keep up with rapid technological change in a cost-effective way, the relative quality of our services could suffer.
+We may not be able to expand and upgrade our network adequately and cost-effectively to accommodate any future growth.
+We may not be able to maintain our routing, reporting, and billing systems and related databases adequately and cost-effectively to accommodate our continuing needs.
+Single points of failure on our network may make our business vulnerable.
+We depend on our current personnel and may have difficulty attracting and retaining the skilled employees we need to execute our business plan.
+We will need to retain skilled personnel to execute our plans.
+We cannot ensure that our existing capital will be sufficient to meet our requirements for the future and a failure to obtain necessary additional capital in the future could jeopardize our operations.
+Risks Related to Regulatory Matters
+The telecommunications industry is subject to domestic governmental regulation and legal uncertainties and other laws that could materially increase our costs and prevent us from executing our business plan.
+Foreign government telecommunications regulation could also affect our costs.
+Other international governmental regulation and legal uncertainties and other laws could limit our ability to provide our services, make them more expensive, or subject us or our employees to legal or criminal liability.
+Risks Related to Our Intellectual Property
+If we are unable to protect our intellectual property, our competitive position would be adversely affected.
+Our services might be found to infringe the intellectual property rights of others.
+We rely on a variety of technologies, primarily software, which is licensed from third parties or is freely available.
+Risks Related to the Internet and Internet Telephony Industry
+If the Internet infrastructure is not adequately maintained, we may be unable to maintain the quality of our services and provide them in a timely and consistent manner.
+Network security breaches could adversely affect our operations.
+Undetected defects in our technology could adversely affect our operations.
+Our ability to provide our services using the Internet may be adversely affected by computer vandalism.
+Risks Related to the Proposed Transaction with KPN
+We may not be able to timely and successfully integrate KPN s international wholesale voice business with our operations, and thus we may fail to realize all of the anticipated benefits of the proposed transaction.
+We may not be able to obtain approval from our shareholders to issue shares constituting 51% of our common stock to KPN, which is required by the Markeplace Rules of The Nasdaq Stock Market.
+The transactions contemplated by the Share Purchase and Sale Agreement may not be consummated even if shareholder approval for the proposed transaction is obtained.
+While the Share Purchase and Sale Agreement is in effect, we may be limited in our ability to pursue other attractive business opportunities.
+Regulatory agencies may delay approval of the proposed transaction, which may diminish the anticipated benefits of the proposed transaction.
+Following the closing of the proposed transaction with KPN, KPN will own a majority of the shares of our common stock, and we will be a controlled company within the meaning of Nasdaq Marketplace Rules.
+KPN may sell all or a substantial portion of the shares it acquires in this potential transaction at any time in the future, which could cause the market price of our common stock to decline.
+Following the closing of the transaction, we will have less available cash and our liquidity may be adversely affected.
+Provisions of our governing documents and Delaware law could also discourage acquisition proposals or delay a change in control.
+SPECIAL NOTE REGARDING FORWARD-LOOKING STATEMENTS
+<p><a href="http://www.sec.gov/Archives/edgar/data/1091756/0001104659-07-046966.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/1091756--3-17-2008--IBASIS_INC.html'">1091756--3/17/2008--IBASIS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1091756--3-13-2009--IBASIS_INC.html'">1091756--3/13/2009--IBASIS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1074767--3-16-2006--IVILLAGE_INC.html'">1074767--3/16/2006--IVILLAGE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1142701--3-6-2006--UNITED_ONLINE_INC.html'">1142701--3/6/2006--UNITED_ONLINE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1097338--4-2-2007--WITNESS_SYSTEMS_INC.html'">1097338--4/2/2007--WITNESS_SYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1062530--3-1-2007--DIGITAL_RIVER_INC_-DE.html'">1062530--3/1/2007--DIGITAL_RIVER_INC_/DE</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/832767--11-19-2009--PHOENIX_TECHNOLOGIES_LTD.html'">832767--11/19/2009--PHOENIX_TECHNOLOGIES_LTD</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1091756--3-16-2006--IBASIS_INC.html'">1091756--3/16/2006--IBASIS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1084750--10-27-2009--NAVISITE_INC.html'">1084750--10/27/2009--NAVISITE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1084750--11-6-2008--NAVISITE_INC.html'">1084750--11/6/2008--NAVISITE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1084750--11-9-2007--NAVISITE_INC.html'">1084750--11/9/2007--NAVISITE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1084750--10-22-2010--NAVISITE_INC.html'">1084750--10/22/2010--NAVISITE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1142512--3-16-2007--ZIPREALTY_INC.html'">1142512--3/16/2007--ZIPREALTY_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1071411--4-2-2007--FUSION_TELECOMMUNICATIONS_INTERNATIONAL_INC.html'">1071411--4/2/2007--FUSION_TELECOMMUNICATIONS_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1062530--2-29-2008--DIGITAL_RIVER_INC_-DE.html'">1062530--2/29/2008--DIGITAL_RIVER_INC_/DE</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1469433--2-26-2010--Ancestry.com_Inc..html'">1469433--2/26/2010--Ancestry.com_Inc.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1104358--3-31-2008--BROADVIEW_NETWORKS_HOLDINGS_INC.html'">1104358--3/31/2008--BROADVIEW_NETWORKS_HOLDINGS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/894738--10-23-2007--EASYLINK_SERVICES_INTERNATIONAL_CORP.html'">894738--10/23/2007--EASYLINK_SERVICES_INTERNATIONAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1035185--3-17-2008--GEVITY_HR_INC.html'">1035185--3/17/2008--GEVITY_HR_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1062530--3-16-2006--DIGITAL_RIVER_INC_-DE.html'">1062530--3/16/2006--DIGITAL_RIVER_INC_/DE</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1105018--3-3-2008--NYMEX_HOLDINGS_INC.html'">1105018--3/3/2008--NYMEX_HOLDINGS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1117119--3-18-2008--KINTERA_INC.html'">1117119--3/18/2008--KINTERA_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/896878--9-12-2008--INTUIT_INC.html'">896878--9/12/2008--INTUIT_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1145124--3-16-2009--THINKORSWIM_GROUP_INC..html'">1145124--3/16/2009--THINKORSWIM_GROUP_INC.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1104358--3-25-2009--BROADVIEW_NETWORKS_HOLDINGS_INC.html'">1104358--3/25/2009--BROADVIEW_NETWORKS_HOLDINGS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1396838--3-12-2009--Dolan_Media_CO.html'">1396838--3/12/2009--Dolan_Media_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1053374--3-16-2006--IPASS_INC.html'">1053374--3/16/2006--IPASS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/855612--3-15-2010--ZIX_CORP.html'">855612--3/15/2010--ZIX_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1066684--3-30-2007--THEGLOBE_COM_INC.html'">1066684--3/30/2007--THEGLOBE_COM_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/99047--8-6-2007--NYFIX_INC.html'">99047--8/6/2007--NYFIX_INC</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

@@ -1,0 +1,177 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[3.6961545278, "../topics/{stock,_price,_share}.html", "{stock,_price,_share}"], [2.8913281576, "../topics/{product,_liability,_claim}.html", "{product,_liability,_claim}"], [1.7013334389, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [1.7001531837, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [1.6974099206, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [1.6962618548, "../topics/{tax,_income,_asset}.html", "{tax,_income,_asset}"], [1.6962616407, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [1.6958821183, "../topics/{competitive,_industry,_competition}.html", "{competitive,_industry,_competition}"], [1.6915652242, "../topics/{cost,_contract,_operation}.html", "{cost,_contract,_operation}"], [1.4762354837, "../topics/{product,_candidate,_development}.html", "{product,_candidate,_development}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>857953--4/11/2006--JMAR_TECHNOLOGIES_INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">857953--4/11/2006--JMAR_TECHNOLOGIES_INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{stock,_price,_share}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_share}.html'">{stock, price, share}</td></tr>
+<tr class="list"><td id="{product,_liability,_claim}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_liability,_claim}.html'">{product, liability, claim}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{tax,_income,_asset}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{tax,_income,_asset}.html'">{tax, income, asset}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{competitive,_industry,_competition}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{competitive,_industry,_competition}.html'">{competitive, industry, competition}</td></tr>
+<tr class="list"><td id="{cost,_contract,_operation}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_contract,_operation}.html'">{cost, contract, operation}</td></tr>
+<tr class="list"><td id="{product,_candidate,_development}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_candidate,_development}.html'">{product, candidate, development}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    Our outstanding preferred stock has a liquidation preference of $7,850,000, which is in excess of our total stockholders equity.
+If our product development programs are not successful, it will harm our business.
+We depend on third party suppliers of various components for our equipment business and our business will be harmed if the supply of key components is interrupted or discontinued.
+The success of our business is dependent on our ability to compete effectively, particularly against larger, more established companies with greater resources.
+A substantial portion of our current revenue depends on sales to a few customers. We have relied on funding from the U.S. Department of Defense for a significant portion of our research and development activities in the past and expect significantly less funding of our new product developments from the government in the future.
+Declines in our operating performance and other factors adversely affecting the valuation of our business units could ultimately result in an impairment of our goodwill.
+Our BioSentry product may be subject to various governmental approvals that may limit our ability to market and sell our product.
+Our quarterly operating results may fluctuate significantly. As a result, we may fail to meet or exceed the expectations of securities analysts and investors, which could cause our stock price to decline.
+If we lose key personnel or are unable to attract and retain additional, highly skilled personnel required for the expansion of our activities, our business will suffer.
+Asserting, defending and maintaining intellectual property rights is difficult and costly and the failure to do so could harm our ability to compete and the results of our operations.
+If our outstanding options and warrants are exercised and if our preferred stock is converted it will result in substantial dilution.
+If product liability claims are brought which exceed our liability insurance limits our business would be harmed.
+We do not presently intend to pay cash dividends to our shareholders.
+<p><a href="http://www.sec.gov/Archives/edgar/data/857953/0000950134-06-007069.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/1036968--3-18-2009--VAXGEN_INC.html'">1036968--3/18/2009--VAXGEN_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1353406--4-28-2010--Independence_Energy_Corp..html'">1353406--4/28/2010--Independence_Energy_Corp.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1353406--5-1-2009--Independence_Energy_Corp..html'">1353406--5/1/2009--Independence_Energy_Corp.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/882873--9-17-2010--UROLOGIX_INC.html'">882873--9/17/2010--UROLOGIX_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1088000--3-28-2006--ESSENTIAL_GROUP_INC.html'">1088000--3/28/2006--ESSENTIAL_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1396633--4-15-2009--Castwell_Precast_CORP.html'">1396633--4/15/2009--Castwell_Precast_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/786623--3-31-2006--ADVANCED_VIRAL_RESEARCH_CORP.html'">786623--3/31/2006--ADVANCED_VIRAL_RESEARCH_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1398702--3-29-2010--TECKMINE_INDUSTRIES_INC..html'">1398702--3/29/2010--TECKMINE_INDUSTRIES_INC.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1005286--8-8-2008--LANDEC_CORP_\CA\.html'">1005286--8/8/2008--LANDEC_CORP_\CA\</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1387341--3-31-2008--Boatatopia.html'">1387341--3/31/2008--Boatatopia</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1005286--8-4-2009--LANDEC_CORP_\CA\.html'">1005286--8/4/2009--LANDEC_CORP_\CA\</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/727273--3-16-2007--CADIZ_INC.html'">727273--3/16/2007--CADIZ_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1078383--3-19-2007--IPARTY_CORP.html'">1078383--3/19/2007--IPARTY_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/710597--4-14-2010--AXCESS_INTERNATIONAL_INC-TX.html'">710597--4/14/2010--AXCESS_INTERNATIONAL_INC/TX</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/700721--4-2-2007--AMERICAN_MEDICAL_ALERT_CORP.html'">700721--4/2/2007--AMERICAN_MEDICAL_ALERT_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1083243--3-4-2009--ZAP_COM_CORP.html'">1083243--3/4/2009--ZAP_COM_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1083243--3-7-2008--ZAP_COM_CORP.html'">1083243--3/7/2008--ZAP_COM_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/844161--4-15-2010--CHEROKEE_INC.html'">844161--4/15/2010--CHEROKEE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1440819--11-25-2009--PAPERWORKS_INC..html'">1440819--11/25/2009--PAPERWORKS_INC.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1072725--3-31-2010--GOLD_RESERVE_INC.html'">1072725--3/31/2010--GOLD_RESERVE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1267612--4-2-2009--MELT_INC.html'">1267612--4/2/2009--MELT_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1358099--3-25-2009--ROYAL_EQUINE_ALLIANCE_CORP.html'">1358099--3/25/2009--ROYAL_EQUINE_ALLIANCE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/874495--3-17-2008--JEFFERSONVILLE_BANCORP.html'">874495--3/17/2008--JEFFERSONVILLE_BANCORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/759153--12-14-2006--PARTICLE_DRILLING_TECHNOLOGIES_INC-NV.html'">759153--12/14/2006--PARTICLE_DRILLING_TECHNOLOGIES_INC/NV</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/753772--3-15-2010--MEDIZONE_INTERNATIONAL_INC.html'">753772--3/15/2010--MEDIZONE_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/799097--4-11-2006--SAN_HOLDINGS_INC.html'">799097--4/11/2006--SAN_HOLDINGS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1136463--1-29-2010--FIRST_CORP_-CN-.html'">1136463--1/29/2010--FIRST_CORP_/CN/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1175416--8-28-2009--STERLING_GROUP_VENTURES_INC.html'">1175416--8/28/2009--STERLING_GROUP_VENTURES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/754811--9-10-2009--U_S_GLOBAL_INVESTORS_INC.html'">754811--9/10/2009--U_S_GLOBAL_INVESTORS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/829117--4-10-2009--SAFE_TECHNOLOGIES_INTERNATIONAL_INC.html'">829117--4/10/2009--SAFE_TECHNOLOGIES_INTERNATIONAL_INC</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

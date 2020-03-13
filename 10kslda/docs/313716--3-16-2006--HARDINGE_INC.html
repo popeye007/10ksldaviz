@@ -1,0 +1,179 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[3.5991147238, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [2.6963792229, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [2.6359264561, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [2.5922849091, "../topics/{condition,_economic,_financial}.html", "{condition,_economic,_financial}"], [1.8469761741, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"], [1.7325928101, "../topics/{capital,_credit,_financial}.html", "{capital,_credit,_financial}"], [1.6964871596, "../topics/{competitive,_industry,_competition}.html", "{competitive,_industry,_competition}"], [1.6691696577, "../topics/{cost,_contract,_operation}.html", "{cost,_contract,_operation}"], [1.6673025206, "../topics/{cost,_regulation,_environmental}.html", "{cost,_regulation,_environmental}"], [1.6487768951, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>313716--3/16/2006--HARDINGE_INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">313716--3/16/2006--HARDINGE_INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{condition,_economic,_financial}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{condition,_economic,_financial}.html'">{condition, economic, financial}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+<tr class="list"><td id="{capital,_credit,_financial}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{capital,_credit,_financial}.html'">{capital, credit, financial}</td></tr>
+<tr class="list"><td id="{competitive,_industry,_competition}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{competitive,_industry,_competition}.html'">{competitive, industry, competition}</td></tr>
+<tr class="list"><td id="{cost,_contract,_operation}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_contract,_operation}.html'">{cost, contract, operation}</td></tr>
+<tr class="list"><td id="{cost,_regulation,_environmental}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_regulation,_environmental}.html'">{cost, regulation, environmental}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    The cyclical nature of our business could cause fluctuations in our operating results.
+Our competitive position and prospects for growth may be diminished if we are unable to develop and introduce new and enhanced products on a timely basis that are accepted in the market.
+We may face trade barriers that could have a material adverse effect on our results of operations and result in a loss of customers or suppliers.
+We compete with larger companies that have greater financial resources, and our business could be harmed by competitive inroads.
+If we were unable to access financial markets on favorable terms, our liquidity, businesses and results of operations could be adversely affected.
+Our operations and growth prospects would be adversely impacted if we are unable to attract and retain skilled employees to work at our manufacturing facilities.
+Prices of some raw materials, especially steel and iron products, fluctuate which can adversely affect our sales, costs, and profitability.
+Due to future technological changes, changes in market demand, or changes in market expectations, portions of our inventory may become obsolete or excess.
+We have made and expect to continue to make acquisitions that could disrupt our operations and harm our operating results.
+Fluctuations in the exchange rates between the U.S. dollar and any of several foreign currencies could increase our costs or decrease our revenue.
+Major changes in the economic situation of our customer base could require us to write-off significant parts of our receivables from customers.
+Some components and products are purchased from a single supplier or a limited number of suppliers. The loss of any of these suppliers may cause us to incur additional costs, result in delays in manufacturing and delivering our products or cause us to carry excess or obsolete inventory.
+Our quarterly results are seasonal and fluctuate based on customer delivery requirements.
+The unplanned loss of current members of our senior management team and other key personnel may adversely affect our operating results.
+Our expenditures for post-retirement pension obligations could be materially higher than we have predicted if our underlying assumptions prove to be incorrect or we are required to use different assumptions.
+<p><a href="http://www.sec.gov/Archives/edgar/data/313716/0001104659-06-017193.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/313716--3-16-2007--HARDINGE_INC.html'">313716--3/16/2007--HARDINGE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/795212--4-17-2008--TRANS_WORLD_ENTERTAINMENT_CORP.html'">795212--4/17/2008--TRANS_WORLD_ENTERTAINMENT_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/915358--7-16-2010--SIGMATRON_INTERNATIONAL_INC.html'">915358--7/16/2010--SIGMATRON_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/795212--4-19-2007--TRANS_WORLD_ENTERTAINMENT_CORP.html'">795212--4/19/2007--TRANS_WORLD_ENTERTAINMENT_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1034670--2-28-2006--AUTOLIV_INC.html'">1034670--2/28/2006--AUTOLIV_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1034670--2-23-2007--AUTOLIV_INC.html'">1034670--2/23/2007--AUTOLIV_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1003950--3-11-2010--PERFORMANCE_TECHNOLOGIES_INC_\DE\.html'">1003950--3/11/2010--PERFORMANCE_TECHNOLOGIES_INC_\DE\</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/351231--11-23-2010--DAWSON_GEOPHYSICAL_CO.html'">351231--11/23/2010--DAWSON_GEOPHYSICAL_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/732026--9-17-2007--TRIO_TECH_INTERNATIONAL.html'">732026--9/17/2007--TRIO_TECH_INTERNATIONAL</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1090069--4-18-2006--CHEROKEE_INTERNATIONAL_CORP.html'">1090069--4/18/2006--CHEROKEE_INTERNATIONAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/8146--4-13-2009--ASTRO_MED_INC_-NEW-.html'">8146--4/13/2009--ASTRO_MED_INC_/NEW/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/24741--2-15-2008--CORNING_INC_-NY.html'">24741--2/15/2008--CORNING_INC_/NY</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/720671--6-30-2009--HALIFAX_CORP_OF_VIRGINIA.html'">720671--6/30/2009--HALIFAX_CORP_OF_VIRGINIA</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/720500--12-21-2006--AMTECH_SYSTEMS_INC.html'">720500--12/21/2006--AMTECH_SYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/716643--8-29-2008--REGIS_CORP.html'">716643--8/29/2008--REGIS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1141107--3-16-2006--ARRIS_GROUP_INC.html'">1141107--3/16/2006--ARRIS_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/351231--12-1-2009--DAWSON_GEOPHYSICAL_CO.html'">351231--12/1/2009--DAWSON_GEOPHYSICAL_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/795212--4-13-2006--TRANS_WORLD_ENTERTAINMENT_CORP.html'">795212--4/13/2006--TRANS_WORLD_ENTERTAINMENT_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1003950--3-5-2009--PERFORMANCE_TECHNOLOGIES_INC_\DE\.html'">1003950--3/5/2009--PERFORMANCE_TECHNOLOGIES_INC_\DE\</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/911583--3-16-2009--STEINWAY_MUSICAL_INSTRUMENTS_INC.html'">911583--3/16/2009--STEINWAY_MUSICAL_INSTRUMENTS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/945489--4-17-2006--BELL_INDUSTRIES_INC_-NEW-.html'">945489--4/17/2006--BELL_INDUSTRIES_INC_/NEW/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/855109--3-15-2006--EXABYTE_CORP_-DE-.html'">855109--3/15/2006--EXABYTE_CORP_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/914478--5-16-2006--SAMSONITE_CORP-FL.html'">914478--5/16/2006--SAMSONITE_CORP/FL</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1014111--2-26-2010--IMATION_CORP.html'">1014111--2/26/2010--IMATION_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/918581--3-6-2008--CIBER_INC.html'">918581--3/6/2008--CIBER_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1129155--3-2-2007--MARINE_PRODUCTS_CORP.html'">1129155--3/2/2007--MARINE_PRODUCTS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/884269--3-10-2010--ALPHA_PRO_TECH_LTD.html'">884269--3/10/2010--ALPHA_PRO_TECH_LTD</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/701985--4-3-2007--LIMITED_BRANDS_INC.html'">701985--4/3/2007--LIMITED_BRANDS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/26780--3-20-2007--DANA_CORP.html'">26780--3/20/2007--DANA_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/46080--2-22-2006--HASBRO_INC.html'">46080--2/22/2006--HASBRO_INC</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

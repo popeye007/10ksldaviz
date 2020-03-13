@@ -1,0 +1,185 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[3.6933349442, "../topics/{gas,_price,_oil}.html", "{gas,_price,_oil}"], [3.5856052106, "../topics/{competitive,_industry,_competition}.html", "{competitive,_industry,_competition}"], [3.4727744392, "../topics/{regulation,_change,_law}.html", "{regulation,_change,_law}"], [2.8128769493, "../topics/{cost,_regulation,_environmental}.html", "{cost,_regulation,_environmental}"], [2.6967983374, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [2.6140153544, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"], [1.7716113652, "../topics/{cost,_contract,_operation}.html", "{cost,_contract,_operation}"], [1.7535686549, "../topics/{operation,_natural,_condition}.html", "{operation,_natural,_condition}"], [1.6972576339, "../topics/{stock,_price,_share}.html", "{stock,_price,_share}"], [1.6970710343, "../topics/{cost,_operation,_labor}.html", "{cost,_operation,_labor}"], [1.3259216815, "../topics/{financial,_litigation,_operation}.html", "{financial,_litigation,_operation}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>1210697--3/1/2007--TODCO</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">1210697--3/1/2007--TODCO</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{gas,_price,_oil}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{gas,_price,_oil}.html'">{gas, price, oil}</td></tr>
+<tr class="list"><td id="{competitive,_industry,_competition}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{competitive,_industry,_competition}.html'">{competitive, industry, competition}</td></tr>
+<tr class="list"><td id="{regulation,_change,_law}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_change,_law}.html'">{regulation, change, law}</td></tr>
+<tr class="list"><td id="{cost,_regulation,_environmental}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_regulation,_environmental}.html'">{cost, regulation, environmental}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+<tr class="list"><td id="{cost,_contract,_operation}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_contract,_operation}.html'">{cost, contract, operation}</td></tr>
+<tr class="list"><td id="{operation,_natural,_condition}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_natural,_condition}.html'">{operation, natural, condition}</td></tr>
+<tr class="list"><td id="{stock,_price,_share}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_share}.html'">{stock, price, share}</td></tr>
+<tr class="list"><td id="{cost,_operation,_labor}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_operation,_labor}.html'">{cost, operation, labor}</td></tr>
+<tr class="list"><td id="{financial,_litigation,_operation}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{financial,_litigation,_operation}.html'">{financial, litigation, operation}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    Our industry is highly cyclical, and our results of operations may be volatile.
+Our industry is highly competitive, with intense price competition.
+The increase in the number of rigs in the Gulf of Mexico could create an excess supply of jackup rigs in this area and adversely affect utilization rates and dayrates for our rigs.
+Rig upgrade, refurbishment, repair and reactivation projects are subject to risks, including delays and cost overruns, which could have an adverse impact on our available cash resources and results of operations.
+Our ability to move our rigs to other regions is limited.
+Our jackup rigs are at a relative disadvantage to higher specification rigs.
+Our business involves numerous operating hazards, and we are not fully insured against all of them.
+We are subject to litigation.
+Failure to retain key personnel could hurt our operations.
+Loss of key members of our management team could hurt our operations.
+Unionization efforts could increase our costs or limit our flexibility.
+Governmental laws and regulations may add to our costs or limit drilling activity.
+Compliance with or a breach of environmental laws can be costly and could limit our operations.
+Our non-U.S. operations involve additional risks not associated with our U.S. operations.
+Our Venezuela operations are subject to adverse political and economic conditions.
+Risks Related to Our Tax Sharing Agreement
+Our tax sharing agreement with Transocean could require substantial payments by us if an event occurs that accelerates the utilization or deemed utilization of pre-IPO tax benefits or an event could occur that may delay the utilization of the pre-IPO tax benefits.
+Our tax sharing agreement with Transocean could delay or preclude us from realizing post-IPO tax benefits.
+We could incur substantial losses during industry downturns and may need additional financing to withstand industry downturns.
+We have no plans to pay regular dividends on our common stock, so stockholders may not receive funds without selling their common stock.
+<p><a href="http://www.sec.gov/Archives/edgar/data/1210697/0000950129-07-001087.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/1210697--2-28-2006--TODCO.html'">1210697--2/28/2006--TODCO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/98222--5-14-2009--TIDEWATER_INC.html'">98222--5/14/2009--TIDEWATER_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/98222--5-20-2010--TIDEWATER_INC.html'">98222--5/20/2010--TIDEWATER_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/916076--2-26-2010--MARTIN_MARIETTA_MATERIALS_INC.html'">916076--2/26/2010--MARTIN_MARIETTA_MATERIALS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/106170--3-1-2007--CONNECTICUT_LIGHT_&_POWER_CO.html'">106170--3/1/2007--CONNECTICUT_LIGHT_&_POWER_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/106170--2-29-2008--NORTHEAST_UTILITIES.html'">106170--2/29/2008--NORTHEAST_UTILITIES</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1043186--3-31-2008--American_Electric_Technologies_Inc.html'">1043186--3/31/2008--American_Electric_Technologies_Inc</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/916076--2-25-2008--MARTIN_MARIETTA_MATERIALS_INC.html'">916076--2/25/2008--MARTIN_MARIETTA_MATERIALS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/842635--3-15-2006--LYONDELL_CHEMICAL_CO.html'">842635--3/15/2006--LYONDELL_CHEMICAL_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/921549--2-25-2008--TRICO_MARINE_SERVICES_INC.html'">921549--2/25/2008--TRICO_MARINE_SERVICES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1043186--3-27-2009--American_Electric_Technologies_Inc.html'">1043186--3/27/2009--American_Electric_Technologies_Inc</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1090012--2-25-2010--DEVON_ENERGY_CORP-DE.html'">1090012--2/25/2010--DEVON_ENERGY_CORP/DE</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/16160--8-16-2007--CAL_MAINE_FOODS_INC.html'">16160--8/16/2007--CAL_MAINE_FOODS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/350403--3-11-2008--PHI_INC.html'">350403--3/11/2008--PHI_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1361658--3-7-2007--WYNDHAM_WORLDWIDE_CORP.html'">1361658--3/7/2007--WYNDHAM_WORLDWIDE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1035002--2-29-2008--VALERO_ENERGY_CORP-TX.html'">1035002--2/29/2008--VALERO_ENERGY_CORP/TX</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/887426--4-16-2007--SOUTHWEST_ROYALTIES_INSTITUTIONAL_INCOME_FUND_X-C_LP.html'">887426--4/16/2007--SOUTHWEST_ROYALTIES_INSTITUTIONAL_INCOME_FUND_X-C_LP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1035002--2-26-2010--VALERO_ENERGY_CORP-TX.html'">1035002--2/26/2010--VALERO_ENERGY_CORP/TX</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1022671--2-27-2008--STEEL_DYNAMICS_INC.html'">1022671--2/27/2008--STEEL_DYNAMICS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/32689--3-3-2008--EMPIRE_DISTRICT_ELECTRIC_CO.html'">32689--3/3/2008--EMPIRE_DISTRICT_ELECTRIC_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1021860--3-2-2009--NATIONAL_OILWELL_VARCO_INC.html'">1021860--3/2/2009--NATIONAL_OILWELL_VARCO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1016178--6-29-2007--CARVER_BANCORP_INC.html'">1016178--6/29/2007--CARVER_BANCORP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/68270--8-3-2007--RUBY_TUESDAY_INC.html'">68270--8/3/2007--RUBY_TUESDAY_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/73887--6-8-2006--Bristow_Group_Inc.html'">73887--6/8/2006--Bristow_Group_Inc</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/788816--3-22-2010--OGLETHORPE_POWER_CORP.html'">788816--3/22/2010--OGLETHORPE_POWER_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/795665--5-24-2007--METAL_MANAGEMENT_INC.html'">795665--5/24/2007--METAL_MANAGEMENT_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1340792--7-19-2007--Ashton_Woods_USA_L.L.C..html'">1340792--7/19/2007--Ashton_Woods_USA_L.L.C.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/889900--2-19-2009--PATTERSON_UTI_ENERGY_INC.html'">889900--2/19/2009--PATTERSON_UTI_ENERGY_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/886835--2-27-2009--SUPERIOR_ENERGY_SERVICES_INC.html'">886835--2/27/2009--SUPERIOR_ENERGY_SERVICES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1163739--2-26-2010--NABORS_INDUSTRIES_LTD.html'">1163739--2/26/2010--NABORS_INDUSTRIES_LTD</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

@@ -1,0 +1,196 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[7.027937296, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [4.7405552857, "../topics/{cost,_contract,_operation}.html", "{cost,_contract,_operation}"], [4.2381921218, "../topics/{cost,_regulation,_environmental}.html", "{cost,_regulation,_environmental}"], [3.0499180338, "../topics/{financial,_litigation,_operation}.html", "{financial,_litigation,_operation}"], [2.881205474, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"], [2.7171917855, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [2.6980569463, "../topics/{debt,_indebtedness,_cash}.html", "{debt,_indebtedness,_cash}"], [2.6963886401, "../topics/{stock,_price,_share}.html", "{stock,_price,_share}"], [2.6963544399, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [2.0128955799, "../topics/{product,_candidate,_development}.html", "{product,_candidate,_development}"], [1.985333816, "../topics/{operation,_natural,_condition}.html", "{operation,_natural,_condition}"], [1.1907995364, "../topics/{regulation,_change,_law}.html", "{regulation,_change,_law}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>92679--9/15/2009--SPARTON_CORP</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">92679--9/15/2009--SPARTON_CORP</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{cost,_contract,_operation}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_contract,_operation}.html'">{cost, contract, operation}</td></tr>
+<tr class="list"><td id="{cost,_regulation,_environmental}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_regulation,_environmental}.html'">{cost, regulation, environmental}</td></tr>
+<tr class="list"><td id="{financial,_litigation,_operation}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{financial,_litigation,_operation}.html'">{financial, litigation, operation}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{debt,_indebtedness,_cash}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{debt,_indebtedness,_cash}.html'">{debt, indebtedness, cash}</td></tr>
+<tr class="list"><td id="{stock,_price,_share}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_share}.html'">{stock, price, share}</td></tr>
+<tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{product,_candidate,_development}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_candidate,_development}.html'">{product, candidate, development}</td></tr>
+<tr class="list"><td id="{operation,_natural,_condition}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_natural,_condition}.html'">{operation, natural, condition}</td></tr>
+<tr class="list"><td id="{regulation,_change,_law}" onmouseover="highlight(11)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_change,_law}.html'">{regulation, change, law}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    Start-up costs and inefficiencies related to new or transferred programs can adversely affect our operating results and may not be recoverable.
+We depend on limited or sole source suppliers for some critical components; the inability to obtain components as required, with favorable purchase terms, could harm our business.
+We are dependent on a few large customers; the loss of such customers or reduction in their demand could substantially harm our business and operating results.
+Start-up costs and inefficiencies related to new or transferred programs can adversely affect our operating results and may not be recoverable.
+We depend on limited or sole source suppliers for some critical components; the inability to obtain components as required, with favorable purchase terms, could harm our business.
+We are dependent on a few large customers; the loss of such customers or reduction in their demand could substantially harm our business and operating results.
+Customer cancellations, reductions, or delays could adversely affect our operating results.
+The Company and its customers may be unable to keep current with technological changes.
+Fluctuations in foreign currency exchange rates could increase operating costs.
+Failure to attract and retain key personnel and skilled associates could hurt operations.
+Customer cancellations, reductions, or delays could adversely affect our operating results.
+The Company and its customers may be unable to keep current with technological changes.
+Fluctuations in foreign currency exchange rates could increase operating costs.
+Failure to attract and retain key personnel and skilled associates could hurt operations.
+We are involved in legal proceedings and unfavorable decisions could materially affect us.
+Adverse regulatory developments could harm our business.
+Business disruptions could seriously harm our business and results of operations.
+Changes in the securities laws and regulations have increased, and are likely to continue to increase, our costs.
+We are involved in legal proceedings and unfavorable decisions could materially affect us.
+Adverse regulatory developments could harm our business.
+Business disruptions could seriously harm our business and results of operations.
+Changes in the securities laws and regulations have increased, and are likely to continue to increase, our costs.
+We are subject to a variety of environmental laws, which expose us to potential liability.
+Certain shareowners have significant control and shares eligible for public sale could adversely affect the share price.
+The tightened credit market, both nationally and globally, may adversely affect the availability of funds to us for working capital, liquidity requirements, and other purposes, which may adversely affect our cash flows and financial condition.
+Current market volatility may have an adverse impact on our pension costs associated with the defined benefit plan.
+We are subject to a variety of environmental laws, which expose us to potential liability.
+Certain shareowners have significant control and shares eligible for public sale could adversely affect the share price.
+The tightened credit market, both nationally and globally, may adversely affect the availability of funds to us for working capital, liquidity requirements, and other purposes, which may adversely affect our cash flows and financial condition.
+Current market volatility may have an adverse impact on our pension costs associated with the defined benefit plan.
+<p><a href="http://www.sec.gov/Archives/edgar/data/92679/0000950123-09-043303.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/92679--9-15-2008--SPARTON_CORP.html'">92679--9/15/2008--SPARTON_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/29806--3-24-2010--CONSTAR_INTERNATIONAL_INC.html'">29806--3/24/2010--CONSTAR_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1156295--11-19-2009--SERACARE_LIFE_SCIENCES_INC.html'">1156295--11/19/2009--SERACARE_LIFE_SCIENCES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/103341--3-31-2006--QUAKER_FABRIC_CORP_-DE-.html'">103341--3/31/2006--QUAKER_FABRIC_CORP_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/886128--1-14-2010--FUELCELL_ENERGY_INC.html'">886128--1/14/2010--FUELCELL_ENERGY_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/4127--11-30-2009--SKYWORKS_SOLUTIONS_INC.html'">4127--11/30/2009--SKYWORKS_SOLUTIONS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/919443--3-5-2010--LACROSSE_FOOTWEAR_INC.html'">919443--3/5/2010--LACROSSE_FOOTWEAR_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/919443--3-6-2009--LACROSSE_FOOTWEAR_INC.html'">919443--3/6/2009--LACROSSE_FOOTWEAR_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/4127--11-29-2010--SKYWORKS_SOLUTIONS_INC.html'">4127--11/29/2010--SKYWORKS_SOLUTIONS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/56701--9-20-2010--KOSS_CORP.html'">56701--9/20/2010--KOSS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/897723--11-24-2008--SANMINA-SCI_CORP.html'">897723--11/24/2008--SANMINA-SCI_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1118941--3-19-2009--ENDWAVE_CORP.html'">1118941--3/19/2009--ENDWAVE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1357227--3-13-2009--FGX_International_Holdings_LTD.html'">1357227--3/13/2009--FGX_International_Holdings_LTD</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/814055--3-15-2010--YOUBET_COM_INC.html'">814055--3/15/2010--YOUBET_COM_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/814055--3-6-2009--YOUBET_COM_INC.html'">814055--3/6/2009--YOUBET_COM_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1003607--12-28-2009--ALTIGEN_COMMUNICATIONS_INC.html'">1003607--12/28/2009--ALTIGEN_COMMUNICATIONS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/933974--11-23-2010--BROOKS_AUTOMATION_INC.html'">933974--11/23/2010--BROOKS_AUTOMATION_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/880446--12-14-2009--VITESSE_SEMICONDUCTOR_CORP.html'">880446--12/14/2009--VITESSE_SEMICONDUCTOR_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/61004--3-31-2009--LGL_GROUP_INC.html'">61004--3/31/2009--LGL_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1317577--9-13-2010--Pike_Electric_CORP.html'">1317577--9/13/2010--Pike_Electric_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1361709--3-19-2010--Susser_Holdings_CORP.html'">1361709--3/19/2010--Susser_Holdings_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/13606--12-11-2009--WHITE_ELECTRONIC_DESIGNS_CORP.html'">13606--12/11/2009--WHITE_ELECTRONIC_DESIGNS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/915324--12-14-2009--TELULAR_CORP.html'">915324--12/14/2009--TELULAR_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/801351--3-2-2010--WARNACO_GROUP_INC_-DE-.html'">801351--3/2/2010--WARNACO_GROUP_INC_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1357227--3-8-2010--FGX_International_Holdings_LTD.html'">1357227--3/8/2010--FGX_International_Holdings_LTD</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/897429--3-24-2010--CHICOS_FAS_INC.html'">897429--3/24/2010--CHICOS_FAS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/103379--3-3-2010--V_F_CORP.html'">103379--3/3/2010--V_F_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/730716--9-13-2010--ZYGO_CORP.html'">730716--9/13/2010--ZYGO_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/78239--3-31-2010--PHILLIPS_VAN_HEUSEN_CORP_-DE-.html'">78239--3/31/2010--PHILLIPS_VAN_HEUSEN_CORP_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/7032--12-15-2009--ARAMARK_CORP.html'">7032--12/15/2009--ARAMARK_CORP</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

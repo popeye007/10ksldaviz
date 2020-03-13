@@ -1,0 +1,186 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[4.4091924563, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [2.8374484727, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [2.7501255872, "../topics/{product,_liability,_claim}.html", "{product,_liability,_claim}"], [2.6895658055, "../topics/{regulation,_change,_law}.html", "{regulation,_change,_law}"], [2.6653889747, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [2.6182603789, "../topics/{product,_candidate,_development}.html", "{product,_candidate,_development}"], [1.7409693734, "../topics/{cost,_regulation,_environmental}.html", "{cost,_regulation,_environmental}"], [1.7294192237, "../topics/{financial,_litigation,_operation}.html", "{financial,_litigation,_operation}"], [1.72888715, "../topics/{control,_financial,_internal}.html", "{control,_financial,_internal}"], [1.7036734348, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [1.6972974233, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [1.6967354721, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>887227--6/13/2007--CHOLESTECH_CORPORATION</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">887227--6/13/2007--CHOLESTECH_CORPORATION</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{product,_liability,_claim}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_liability,_claim}.html'">{product, liability, claim}</td></tr>
+<tr class="list"><td id="{regulation,_change,_law}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_change,_law}.html'">{regulation, change, law}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{product,_candidate,_development}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_candidate,_development}.html'">{product, candidate, development}</td></tr>
+<tr class="list"><td id="{cost,_regulation,_environmental}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_regulation,_environmental}.html'">{cost, regulation, environmental}</td></tr>
+<tr class="list"><td id="{financial,_litigation,_operation}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{financial,_litigation,_operation}.html'">{financial, litigation, operation}</td></tr>
+<tr class="list"><td id="{control,_financial,_internal}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{control,_financial,_internal}.html'">{control, financial, internal}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(11)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    Risks related to the pending merger between Inverness and the Company.
+We have a history of fluctuating operating results, which may result in the market price of our common stock declining
+Our business depends on our ability to protect our proprietary technology through patents and other means and to operate without infringing the proprietary rights of others
+We depend on technology that we license from others, which may not be available to us in the future and would prevent us from introducing new products and harm our business
+If third-party reimbursement for use of our products is eliminated or reduced, our sales will be greatly reduced and our business may fail
+If the healthcare system in the United States undergoes fundamental change, these changes may harm our business
+We depend on distributors to sell our products and failure to successfully maintain these relationships could adversely affect our ability to generate revenue
+We may be unable to accurately predict future sales through our distributors, which could harm our ability to efficiently manage our internal resources to match market demand
+We may be unable to effectively compete against other providers of diagnostic products, which could cause our sales to decline
+If we do not successfully develop, acquire or form alliances to introduce and market new tests and products, our future business will be harmed
+We face risks from failures in our manufacturing processes
+Our future results could be harmed by economic, political, regulatory and other risks associated with international sales
+We depend on single source suppliers for certain materials used in our manufacturing process and failure of our suppliers to provide materials to us could harm our business
+We rely on a limited number of customers for a substantial part of our revenue
+While we believe that we currently have adequate internal control over financial reporting, we are exposed to risks from recent legislation requiring companies to evaluate internal control over financial reporting
+Our products are subject to multiple levels of government regulation and any regulatory changes are difficult to predict and may be damaging to our business
+We may face fines or our manufacturing facilities could be closed if we fail to comply with manufacturing and environmental regulations
+Our business could be negatively affected by the loss of key personnel or our inability to hire qualified personnel
+Product liability and professional liability suits against us could result in expensive and time consuming litigation, payment of substantial damages and an increase in our insurance rates
+Our stock price has been highly volatile and is likely to continue to be volatile, which could result in substantial losses for investors
+<p><a href="http://www.sec.gov/Archives/edgar/data/887227/0001104659-07-047527.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/891288--3-29-2007--QUESTCOR_PHARMACEUTICALS_INC.html'">891288--3/29/2007--QUESTCOR_PHARMACEUTICALS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/924717--12-14-2006--SURMODICS_INC.html'">924717--12/14/2006--SURMODICS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1005387--3-24-2006--GENSYM_CORP.html'">1005387--3/24/2006--GENSYM_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/18937--2-26-2008--CERADYNE_INC.html'">18937--2/26/2008--CERADYNE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1034239--2-28-2007--RC2_CORP.html'">1034239--2/28/2007--RC2_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/723889--3-29-2007--MFIC_CORP.html'">723889--3/29/2007--MFIC_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/723889--3-30-2006--MFIC_CORP.html'">723889--3/30/2006--MFIC_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/910406--9-13-2006--HAIN_CELESTIAL_GROUP_INC.html'">910406--9/13/2006--HAIN_CELESTIAL_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/851205--2-14-2008--COGNEX_CORP.html'">851205--2/14/2008--COGNEX_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/790715--5-8-2006--SIGMA_DESIGNS_INC.html'">790715--5/8/2006--SIGMA_DESIGNS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/909791--3-8-2006--ULTRATECH_INC.html'">909791--3/8/2006--ULTRATECH_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/833640--2-26-2010--POWER_INTEGRATIONS_INC.html'">833640--2/26/2010--POWER_INTEGRATIONS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1311538--6-29-2009--Castle_Brands_Inc.html'">1311538--6/29/2009--Castle_Brands_Inc</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/941604--2-27-2006--COINSTAR_INC.html'">941604--2/27/2006--COINSTAR_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/891288--3-30-2006--QUESTCOR_PHARMACEUTICALS_INC.html'">891288--3/30/2006--QUESTCOR_PHARMACEUTICALS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/909326--10-13-2006--ASYST_TECHNOLOGIES_INC.html'">909326--10/13/2006--ASYST_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/877212--2-28-2006--ZEBRA_TECHNOLOGIES_CORP-DE.html'">877212--2/28/2006--ZEBRA_TECHNOLOGIES_CORP/DE</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/24741--2-15-2008--CORNING_INC_-NY.html'">24741--2/15/2008--CORNING_INC_/NY</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/855109--3-15-2006--EXABYTE_CORP_-DE-.html'">855109--3/15/2006--EXABYTE_CORP_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1057083--3-21-2008--PC_TEL_INC.html'">1057083--3/21/2008--PC_TEL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1048695--12-14-2006--F5_NETWORKS_INC.html'">1048695--12/14/2006--F5_NETWORKS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1003950--3-11-2010--PERFORMANCE_TECHNOLOGIES_INC_\DE\.html'">1003950--3/11/2010--PERFORMANCE_TECHNOLOGIES_INC_\DE\</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1003607--12-29-2006--ALTIGEN_COMMUNICATIONS_INC.html'">1003607--12/29/2006--ALTIGEN_COMMUNICATIONS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/46080--2-27-2008--HASBRO_INC.html'">46080--2/27/2008--HASBRO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1003950--3-17-2008--PERFORMANCE_TECHNOLOGIES_INC_\DE\.html'">1003950--3/17/2008--PERFORMANCE_TECHNOLOGIES_INC_\DE\</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/883984--3-1-2007--ICU_MEDICAL_INC-DE.html'">883984--3/1/2007--ICU_MEDICAL_INC/DE</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/786620--3-31-2009--CIMETRIX_INC.html'">786620--3/31/2009--CIMETRIX_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1048695--11-19-2007--F5_NETWORKS_INC.html'">1048695--11/19/2007--F5_NETWORKS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/887227--6-14-2006--CHOLESTECH_CORPORATION.html'">887227--6/14/2006--CHOLESTECH_CORPORATION</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/22701--3-24-2009--COMMUNICATIONS_SYSTEMS_INC.html'">22701--3/24/2009--COMMUNICATIONS_SYSTEMS_INC</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

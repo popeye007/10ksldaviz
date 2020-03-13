@@ -1,0 +1,192 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[8.0904568398, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [3.6953135513, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"], [2.6962603535, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [2.6637031024, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"], [2.507331676, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [2.2923393349, "../topics/{condition,_economic,_financial}.html", "{condition,_economic,_financial}"], [1.8526866111, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [1.7171386512, "../topics/{operation,_natural,_condition}.html", "{operation,_natural,_condition}"], [1.7091987019, "../topics/{gas,_price,_oil}.html", "{gas,_price,_oil}"], [1.6986507466, "../topics/{system,_service,_information}.html", "{system,_service,_information}"], [1.6962838949, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [1.6962718742, "../topics/{regulation,_change,_law}.html", "{regulation,_change,_law}"], [1.5699789457, "../topics/{competitive,_industry,_competition}.html", "{competitive,_industry,_competition}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>753568--6/12/2006--EXAR_CORP</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">753568--6/12/2006--EXAR_CORP</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{condition,_economic,_financial}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{condition,_economic,_financial}.html'">{condition, economic, financial}</td></tr>
+<tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{operation,_natural,_condition}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_natural,_condition}.html'">{operation, natural, condition}</td></tr>
+<tr class="list"><td id="{gas,_price,_oil}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{gas,_price,_oil}.html'">{gas, price, oil}</td></tr>
+<tr class="list"><td id="{system,_service,_information}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{system,_service,_information}.html'">{system, service, information}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{regulation,_change,_law}" onmouseover="highlight(11)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_change,_law}.html'">{regulation, change, law}</td></tr>
+<tr class="list"><td id="{competitive,_industry,_competition}" onmouseover="highlight(12)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{competitive,_industry,_competition}.html'">{competitive, industry, competition}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    IF WE ARE UNABLE TO GENERATE REVENUE ABOVE CURRENT LEVELS FROM THE SALE OF OUR COMMUNICATIONS PRODUCTS, OR OUR REVENUE FROM THESE PRODUCTS DECLINES, OUR BUSINESS, FINANCIAL CONDITION AND RESULTS OF OPERATIONS WILL BE MATERIALLY AND ADVERSELY IMPACTED.
+THE UNCERTAINTY IN THE U.S. AND GLOBAL ECONOMIES, AS WELL AS THE COMMUNICATIONS EQUIPMENT MARKET, MAY CONTINUE TO MATERIALLY AND ADVERSELY AFFECT OUR BUSINESS, FINANCIAL CONDITION AND RESULTS OF OPERATIONS.
+IF WE FAIL TO DEVELOP AND INTRODUCE NEW PRODUCTS IN OUR CORE OR NEW MARKETS THAT MEET EVOLVING MARKET NEEDS, OUR BUSINESS, FINANCIAL CONDITION AND RESULTS OF OPERATIONS COULD BE MATERIALLY AND ADVERSELY IMPACTED.
+IF WE ARE UNABLE TO CONVERT A SIGNIFICANT PORTION OF OUR DESIGN WINS INTO ACTUAL REVENUE, OUR BUSINESS, FINANCIAL CONDITION AND RESULTS OF OPERATIONS COULD BE MATERIALLY AND ADVERSELY IMPACTED.
+OUR FINANCIAL RESULTS MAY FLUCTUATE SIGNIFICANTLY BECAUSE OF A NUMBER OF FACTORS, MANY OF WHICH ARE BEYOND OUR CONTROL.
+WE HAVE MADE AND MAY IN THE FUTURE MAKE ACQUISITIONS AND SIGNIFICANT STRATEGIC EQUITY INVESTMENTS, WHICH MAY INVOLVE A NUMBER OF RISKS. IF WE ARE UNABLE TO ADDRESS THESE RISKS SUCCESSFULLY, SUCH ACQUISITIONS AND INVESTMENTS COULD HAVE A MATERIALLY ADVERSE IMPACT ON OUR BUSINESS, FINANCIAL CONDITION AND RESULTS OF OPERATIONS.
+WE MAY NOT INTEGRATE ACQUIRED TECHNOLOGY SUCCESSFULLY.
+COMPETITION IN THE MARKETS IN WHICH WE PARTICIPATE, OR MAY PARTICIPATE, MAY MAKE IT MORE DIFFICULT FOR US TO BE SUCCESSFUL.
+WE DEPEND ON THIRD-PARTY FOUNDRIES TO MANUFACTURE OUR INTEGRATED CIRCUITS. ANY DISRUPTION IN OR LOSS OF THE FOUNDRIES CAPACITY TO MANUFACTURE OUR PRODUCTS SUBJECTS US TO A NUMBER OF RISKS, INCLUDING THE POTENTIAL FOR AN INADEQUATE SUPPLY OF PRODUCTS AND HIGHER MATERIALS COSTS. THESE RISKS MAY LEAD TO DELAYED PRODUCT DELIVERY OR INCREASED COSTS, WHICH COULD MATERIALLY AND ADVERSELY AFFECT OUR BUSINESS, FINANCIAL CONDITION AND RESULTS OF OPERATIONS.
+IF OUR FOUNDRIES DISCONTINUE OR LIMIT THE AVAILABILITY OF THE MANUFACTURING PROCESSES NEEDED TO MEET OUR DEMANDS OR ARE UNABLE TO PROVIDE THE TECHNOLOGIES NEEDED TO MANUFACTURE OUR PRODUCTS, WE MAY FACE PRODUCTION DELAYS, WHICH COULD MATERIALLY AND ADVERSELY IMPACT OUR BUSINESS, FINANCIAL CONDITION AND RESULTS OF OPERATIONS.
+TO SECURE FOUNDRY CAPACITY, WE MAY BE REQUIRED TO ENTER INTO FINANCIAL AND OTHER ARRANGEMENTS WITH FOUNDRIES, WHICH COULD RESULT IN THE DILUTION OF OUR EARNINGS OR OTHERWISE HARM OUR OPERATING RESULTS.
+OUR DEPENDENCE ON THIRD-PARTY SUBCONTRACTORS TO ASSEMBLE AND TEST OUR PRODUCTS SUBJECTS US TO A NUMBER OF RISKS, INCLUDING THE POTENTIAL FOR AN INADEQUATE SUPPLY OF PRODUCTS AND HIGHER MATERIALS COSTS. THESE RISKS MAY LEAD TO DELAYED PRODUCT DELIVERY OR INCREASED COSTS, WHICH COULD MATERIALLY AND ADVERSELY AFFECT OUR BUSINESS, FINANCIAL CONDITION AND RESULTS OF OPERATIONS.
+OUR RELIANCE ON FOREIGN SUPPLIERS EXPOSES US TO RISKS ASSOCIATED WITH INTERNATIONAL OPERATIONS, ANY OF WHICH COULD MATERIALLY AND ADVERSELY IMPACT OUR BUSINESS, FINANCIAL CONDITION AND RESULTS OF OPERATIONS.
+WE DEPEND IN PART ON THE CONTINUED SERVICE OF OUR KEY ENGINEERING AND MANAGEMENT PERSONNEL AND OUR ABILITY TO IDENTIFY, HIRE, INCENT AND RETAIN QUALIFIED PERSONNEL. IF WE LOST KEY EMPLOYEES OR FAILED TO IDENTIFY, HIRE, INCENT AND RETAIN THESE INDIVIDUALS, OUR BUSINESS, FINANCIAL CONDITION AND RESULTS OF OPERATIONS COULD BE MATERIALLY AND ADVERSELY IMPACTED.
+RECENT RULEMAKING BY THE FINANCIAL ACCOUNTING STANDARDS BOARD WILL REQUIRE US TO EXPENSE EQUITY COMPENSATION GIVEN TO EMPLOYEES AND NON-EMPLOYEE DIRECTORS THAT WILL SIGNIFICANTLY HARM OPERATING RESULTS.
+OUR RELIANCE ON FOREIGN CUSTOMERS COULD CAUSE FLUCTUATIONS IN OUR OPERATING RESULTS, WHICH COULD MATERIALLY AND ADVERSELY IMPACT OUR BUSINESS, FINANCIAL CONDITION AND RESULTS OF OPERATIONS.
+THE COMPLEXITY OF OUR PRODUCTS MAY LEAD TO ERRORS, DEFECTS AND BUGS, WHICH COULD SUBJECT US TO SIGNIFICANT COSTS OR DAMAGES AND ADVERSELY AFFECT MARKET ACCEPTANCE OF OUR PRODUCTS.
+IF OUR DISTRIBUTORS OR SALES REPRESENTATIVES STOP SELLING OR FAIL TO SUCCESSFULLY PROMOTE OUR PRODUCTS, OUR BUSINESS, FINANCIAL CONDITION, AND RESULTS OF OPERATIONS COULD BE ADVERSELY AFFECTED.
+BECAUSE OUR COMMUNICATIONS INTEGRATED CIRCUITS TYPICALLY HAVE LENGTHY SALES CYCLES, WE MAY EXPERIENCE SUBSTANTIAL DELAYS BETWEEN INCURRING EXPENSES RELATED TO RESEARCH AND DEVELOPMENT AND THE GENERATION OF REVENUE DERIVED FROM THESE PRODUCTS.
+OUR BACKLOG MAY NOT RESULT IN FUTURE REVENUE.
+FIXED OPERATING EXPENSES AND OUR PRACTICE OF ORDERING MATERIALS IN ANTICIPATION OF FUTURE CUSTOMER DEMAND COULD MAKE IT DIFFICULT FOR US TO RESPOND EFFECTIVELY TO SUDDEN SWINGS IN DEMAND AND RESULT IN HIGHER THAN EXPECTED COSTS AND EXCESS INVENTORY. SUCH SUDDEN SWINGS IN DEMAND COULD THEREFORE HAVE A MATERIAL ADVERSE IMPACT ON OUR BUSINESS, FINANCIAL CONDITION AND RESULTS OF OPERATIONS.
+WE MAY BE UNABLE TO PROTECT OUR INTELLECTUAL PROPERTY RIGHTS, WHICH COULD HARM OUR COMPETITIVE POSITION.
+WE COULD BE REQUIRED TO PAY SUBSTANTIAL DAMAGES OR COULD BE SUBJECT TO VARIOUS EQUITABLE REMEDIES IF IT WERE PROVEN THAT WE INFRINGED THE INTELLECTUAL PROPERTY RIGHTS OF OTHERS.
+OUR STOCK PRICE IS VOLATILE.
+EARTHQUAKES AND OTHER NATURAL DISASTERS MAY DAMAGE OUR FACILITIES OR THOSE OF OUR SUPPLIERS.
+<p><a href="http://www.sec.gov/Archives/edgar/data/753568/0001193125-06-128271.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/741696--1-12-2010--APPLIED_SIGNAL_TECHNOLOGY_INC.html'">741696--1/12/2010--APPLIED_SIGNAL_TECHNOLOGY_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/72573--3-30-2007--MOVADO_GROUP_INC.html'">72573--3/30/2007--MOVADO_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1357227--3-13-2009--FGX_International_Holdings_LTD.html'">1357227--3/13/2009--FGX_International_Holdings_LTD</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1357227--3-8-2010--FGX_International_Holdings_LTD.html'">1357227--3/8/2010--FGX_International_Holdings_LTD</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/752431--5-29-2008--NETWORK_EQUIPMENT_TECHNOLOGIES_INC.html'">752431--5/29/2008--NETWORK_EQUIPMENT_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1048611--3-16-2007--COLOR_KINETICS_INC.html'">1048611--3/16/2007--COLOR_KINETICS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1275014--3-29-2007--ULTRA_CLEAN_HOLDINGS_INC.html'">1275014--3/29/2007--ULTRA_CLEAN_HOLDINGS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1161396--6-14-2006--GENESIS_MICROCHIP_INC_-DE.html'">1161396--6/14/2006--GENESIS_MICROCHIP_INC_/DE</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/872448--2-29-2008--ATMEL_CORP.html'">872448--2/29/2008--ATMEL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/918946--2-25-2009--BRIGHTPOINT_INC.html'">918946--2/25/2009--BRIGHTPOINT_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/752431--5-25-2007--NETWORK_EQUIPMENT_TECHNOLOGIES_INC.html'">752431--5/25/2007--NETWORK_EQUIPMENT_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/78239--3-31-2010--PHILLIPS_VAN_HEUSEN_CORP_-DE-.html'">78239--3/31/2010--PHILLIPS_VAN_HEUSEN_CORP_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/752431--6-13-2006--NETWORK_EQUIPMENT_TECHNOLOGIES_INC.html'">752431--6/13/2006--NETWORK_EQUIPMENT_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/855658--3-13-2008--LATTICE_SEMICONDUCTOR_CORP.html'">855658--3/13/2008--LATTICE_SEMICONDUCTOR_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1118941--3-19-2009--ENDWAVE_CORP.html'">1118941--3/19/2009--ENDWAVE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1050550--3-3-2006--VOLTERRA_SEMICONDUCTOR_CORP.html'">1050550--3/3/2006--VOLTERRA_SEMICONDUCTOR_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/927355--5-27-2010--TESSCO_TECHNOLOGIES_INC.html'">927355--5/27/2010--TESSCO_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/741696--1-12-2009--APPLIED_SIGNAL_TECHNOLOGY_INC.html'">741696--1/12/2009--APPLIED_SIGNAL_TECHNOLOGY_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/907410--3-16-2006--ESS_TECHNOLOGY_INC.html'">907410--3/16/2006--ESS_TECHNOLOGY_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/854701--12-13-2010--INTEGRATED_SILICON_SOLUTION_INC.html'">854701--12/13/2010--INTEGRATED_SILICON_SOLUTION_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/61004--3-31-2009--LGL_GROUP_INC.html'">61004--3/31/2009--LGL_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/927355--5-27-2009--TESSCO_TECHNOLOGIES_INC.html'">927355--5/27/2009--TESSCO_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/52971--9-28-2007--JACO_ELECTRONICS_INC.html'">52971--9/28/2007--JACO_ELECTRONICS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1104042--3-4-2008--ADVANCED_ANALOGIC_TECHNOLOGIES_INC.html'">1104042--3/4/2008--ADVANCED_ANALOGIC_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/845434--6-26-2006--INFOCUS_CORP.html'">845434--6/26/2006--INFOCUS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/855658--3-9-2007--LATTICE_SEMICONDUCTOR_CORP.html'">855658--3/9/2007--LATTICE_SEMICONDUCTOR_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1035884--3-1-2007--COMMSCOPE_INC.html'">1035884--3/1/2007--COMMSCOPE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/845434--3-12-2007--INFOCUS_CORP.html'">845434--3/12/2007--INFOCUS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1050550--3-8-2007--VOLTERRA_SEMICONDUCTOR_CORP.html'">1050550--3/8/2007--VOLTERRA_SEMICONDUCTOR_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/718096--6-30-2008--COSMO_COMMUNICATIONS_CORP.html'">718096--6/30/2008--COSMO_COMMUNICATIONS_CORP</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

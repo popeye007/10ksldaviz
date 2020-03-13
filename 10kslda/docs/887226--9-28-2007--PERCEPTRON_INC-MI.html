@@ -1,0 +1,187 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[3.696242604, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [3.5042984878, "../topics/{stock,_price,_share}.html", "{stock,_price,_share}"], [2.6962702176, "../topics/{provision,_law,_control}.html", "{provision,_law,_control}"], [2.6962613232, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"], [2.6962484366, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [2.6958727802, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [2.6957575348, "../topics/{control,_financial,_internal}.html", "{control,_financial,_internal}"], [1.6972152783, "../topics/{cost,_operation,_labor}.html", "{cost,_operation,_labor}"], [1.6964566753, "../topics/{product,_liability,_claim}.html", "{product,_liability,_claim}"], [1.6962961101, "../topics/{interest,_director,_officer}.html", "{interest,_director,_officer}"], [1.6962613328, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [1.6944010768, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>887226--9/28/2007--PERCEPTRON_INC/MI</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">887226--9/28/2007--PERCEPTRON_INC/MI</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{stock,_price,_share}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_share}.html'">{stock, price, share}</td></tr>
+<tr class="list"><td id="{provision,_law,_control}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{provision,_law,_control}.html'">{provision, law, control}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{control,_financial,_internal}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{control,_financial,_internal}.html'">{control, financial, internal}</td></tr>
+<tr class="list"><td id="{cost,_operation,_labor}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_operation,_labor}.html'">{cost, operation, labor}</td></tr>
+<tr class="list"><td id="{product,_liability,_claim}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_liability,_claim}.html'">{product, liability, claim}</td></tr>
+<tr class="list"><td id="{interest,_director,_officer}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{interest,_director,_officer}.html'">{interest, director, officer}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(11)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    We have recently introduced a new line of products for sale in a new market. We could experience unanticipated difficulties in bringing these products to market that would adversely affect our financial results of operation and divert the attention of our management.
+A significant percentage of our revenues are derived from a small number of customers concentrated in the automotive industry, so that the loss of any one of these customers could result in a reduction in our revenues and profits.
+Our future commercial success depends upon our ability to maintain a competitive technological position in our markets, which are characterized by continual technological change.
+We are dependent on proprietary technology. If our competitors develop competing products that do not violate our intellectual property rights or successfully challenge those rights, our revenues and profits may be adversely affected.
+We could become involved in costly litigation alleging patent infringement.
+A number of new competitors have recently entered our markets, or are developing products to compete with our products, which could result in a reduction in our revenues through lost sales or a reduction in prices.
+Our business depends on our ability to attract and retain key personnel.
+We may not be able to complete business opportunities and acquisitions and our profits could be negatively affected if we do not successfully operate those that we do complete.
+We are expanding our foreign operations, increasing the possibility that our business could be adversely affected by risks of doing business in foreign countries.
+Because of our significant foreign operations, our revenues and profits can vary significantly as a result of fluctuations in the value of the United States dollar against foreign currencies.
+Because a large portion of our revenues are generated from a limited number of sizeable orders, our revenues and profits may vary widely from quarter to quarter and year to year.
+The trading price of our stock has been volatile.
+Because of the limited trading in our Common Stock, it may be difficult for shareholders to dispose of a large number of shares of our Common Stock in a short period of time or at then current prices.
+We do not plan on paying dividends and are restricted under our loan agreement from paying dividends.
+As permitted under Michigan law, our directors are not liable to Perceptron for monetary damages resulting from their actions or inactions.
+We are required to indemnify our officers and directors if they are involved in litigation as a result of their serving as officers or directors of Perceptron, which could reduce our profits and cash available to operate our business.
+Our profits will be reduced as a result of our compliance with new SEC rules relating to our internal controls over financial reporting.
+If management is not able to provide a positive report on our internal controls over financial reporting, and our independent registered public accounting firm is not able to provide an unqualified opinion regarding our internal controls, shareholders and others may lose confidence in our financial statements, which could cause our stock price to drop.
+If the subcontractors we rely on for component parts or products delay deliveries or fail to deliver parts or products meeting our requirements, we may not be able to deliver products to our customers in a timely fashion and our revenues and profits could be reduced.
+The Board of Directors has the right to issue up to 1,000,000 shares of preferred stock without further action by shareholders. The issuance of those shares could cause the market price of our Common Stock to drop significantly and could be used to prevent or frustrate shareholders attempts to replace or remove current management.
+Our common stock rights plan could be used to discourage hostile tender offers.
+<p><a href="http://www.sec.gov/Archives/edgar/data/887226/0000950124-07-004958.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/887226--9-15-2008--PERCEPTRON_INC-MI.html'">887226--9/15/2008--PERCEPTRON_INC/MI</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/887226--9-27-2010--PERCEPTRON_INC-MI.html'">887226--9/27/2010--PERCEPTRON_INC/MI</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/910638--2-24-2010--3D_SYSTEMS_CORP.html'">910638--2/24/2010--3D_SYSTEMS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/5768--6-9-2006--AMERICAN_SCIENCE_&_ENGINEERING_INC.html'">5768--6/9/2006--AMERICAN_SCIENCE_&_ENGINEERING_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/87050--1-29-2007--SBE_INC.html'">87050--1/29/2007--SBE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1009463--3-16-2010--GLOBAL_MED_TECHNOLOGIES_INC.html'">1009463--3/16/2010--GLOBAL_MED_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/849502--2-27-2008--RAMTRON_INTERNATIONAL_CORP.html'">849502--2/27/2008--RAMTRON_INTERNATIONAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/932696--2-27-2008--INSIGHT_ENTERPRISES_INC.html'">932696--2/27/2008--INSIGHT_ENTERPRISES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1177845--6-27-2007--XPLORE_TECHNOLOGIES_CORP.html'">1177845--6/27/2007--XPLORE_TECHNOLOGIES_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/749251--2-20-2009--GARTNER_INC.html'">749251--2/20/2009--GARTNER_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1177845--8-14-2009--XPLORE_TECHNOLOGIES_CORP.html'">1177845--8/14/2009--XPLORE_TECHNOLOGIES_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1409565--9-25-2009--Puramed_Bioscience_Inc..html'">1409565--9/25/2009--Puramed_Bioscience_Inc.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/887226--9-25-2009--PERCEPTRON_INC-MI.html'">887226--9/25/2009--PERCEPTRON_INC/MI</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/853273--3-6-2009--BORLAND_SOFTWARE_CORP.html'">853273--3/6/2009--BORLAND_SOFTWARE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/885307--11-24-2006--JEWETT_CAMERON_TRADING_CO_LTD.html'">885307--11/24/2006--JEWETT_CAMERON_TRADING_CO_LTD</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/885307--11-3-2010--JEWETT_CAMERON_TRADING_CO_LTD.html'">885307--11/3/2010--JEWETT_CAMERON_TRADING_CO_LTD</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/5768--6-13-2008--AMERICAN_SCIENCE_&_ENGINEERING_INC.html'">5768--6/13/2008--AMERICAN_SCIENCE_&_ENGINEERING_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/912093--8-29-2007--JDS_UNIPHASE_CORP_-CA-.html'">912093--8/29/2007--JDS_UNIPHASE_CORP_/CA/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/5768--6-15-2009--AMERICAN_SCIENCE_&_ENGINEERING_INC.html'">5768--6/15/2009--AMERICAN_SCIENCE_&_ENGINEERING_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1103345--3-17-2008--BEACON_POWER_CORP.html'">1103345--3/17/2008--BEACON_POWER_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1019787--4-13-2009--PURADYN_FILTER_TECHNOLOGIES_INC.html'">1019787--4/13/2009--PURADYN_FILTER_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/869986--6-29-2006--ADVANCED_PHOTONIX_INC.html'">869986--6/29/2006--ADVANCED_PHOTONIX_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/857728--3-10-2009--I_FLOW_CORP_-DE-.html'">857728--3/10/2009--I_FLOW_CORP_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/720671--7-16-2008--HALIFAX_CORP_OF_VIRGINIA.html'">720671--7/16/2008--HALIFAX_CORP_OF_VIRGINIA</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/352998--3-31-2010--IGI_INC.html'">352998--3/31/2010--IGI_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/911583--3-10-2010--STEINWAY_MUSICAL_INSTRUMENTS_INC.html'">911583--3/10/2010--STEINWAY_MUSICAL_INSTRUMENTS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/932696--5-12-2009--INSIGHT_ENTERPRISES_INC.html'">932696--5/12/2009--INSIGHT_ENTERPRISES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/949158--3-13-2009--CRAY_INC.html'">949158--3/13/2009--CRAY_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/56978--12-11-2008--KULICKE_&_SOFFA_INDUSTRIES_INC.html'">56978--12/11/2008--KULICKE_&_SOFFA_INDUSTRIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1047919--3-11-2009--AMBIENT_CORP_-NY.html'">1047919--3/11/2009--AMBIENT_CORP_/NY</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

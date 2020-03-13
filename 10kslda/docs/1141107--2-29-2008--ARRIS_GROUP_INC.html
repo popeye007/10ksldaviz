@@ -1,0 +1,186 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[4.5624791102, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [3.9066001674, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [3.5924197015, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"], [2.818226404, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"], [1.796031895, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [1.7028979014, "../topics/{stock,_price,_share}.html", "{stock,_price,_share}"], [1.701167297, "../topics/{regulation,_change,_law}.html", "{regulation,_change,_law}"], [1.6963809227, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [1.6962758378, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [1.6780834674, "../topics/{tax,_income,_asset}.html", "{tax,_income,_asset}"], [1.5438739859, "../topics/{interest,_director,_officer}.html", "{interest,_director,_officer}"], [1.3040101682, "../topics/{system,_service,_information}.html", "{system,_service,_information}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>1141107--2/29/2008--ARRIS_GROUP_INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">1141107--2/29/2008--ARRIS_GROUP_INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{stock,_price,_share}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_share}.html'">{stock, price, share}</td></tr>
+<tr class="list"><td id="{regulation,_change,_law}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_change,_law}.html'">{regulation, change, law}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{tax,_income,_asset}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{tax,_income,_asset}.html'">{tax, income, asset}</td></tr>
+<tr class="list"><td id="{interest,_director,_officer}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{interest,_director,_officer}.html'">{interest, director, officer}</td></tr>
+<tr class="list"><td id="{system,_service,_information}" onmouseover="highlight(11)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{system,_service,_information}.html'">{system, service, information}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    Consolidations in the telecommunications industry could result in delays or reductions in purchases of products, which would have a material adverse effect on our business.
+We may pursue acquisitions and investments that could adversely affect our business.
+We may fail to realize the anticipated revenue and earnings growth and other benefits expected from our recently completed acquisition of C-COR, which could adversely affect the value of our shares.
+Purchase accounting adjustments required under GAAP with respect to our acquisition of C-COR will have a significant impact on our GAAP earnings, which could impact the trading price of our common stock.
+Our results of operations after the proposed C-COR acquisition could be adversely affected as a result of goodwill impairment.
+Our business has primarily come from several key customers. The loss of one of these customers or a significant reduction in sales to one of these customers would have a material adverse effect on our business.
+The broadband products that we develop and sell are subject to technological change and a trend toward open standards, which may impact our future sales and margins.
+Failure to increase our Media Communications Systems revenue would adversely affect our financial results.
+Fluctuations in our Media Communications Systems sales result in greater volatility in our operating results.
+Products currently under development may fail to realize anticipated benefits.
+Our success depends in large part on our ability to attract and retain qualified personnel in all facets of our operations.
+We are substantially dependent on contract manufacturers, and an inability to obtain adequate and timely delivery of supplies could adversely affect our business.
+Our international operations may be adversely affected by any decline in the demand for broadband systems designs and equipment in international markets.
+Our international operations may be adversely affected by changes in the foreign laws in the countries in which we and our manufacturers and assemblers have plants.
+We face risks relating to currency fluctuations and currency exchange.
+We depend on channel partners to sell our products in certain regions and are subject to risks associated with these arrangements.
+Our profitability has been, and may continue to be, volatile, which could adversely affect the price of our stock.
+We may face higher costs associated with protecting our intellectual property or obtaining access necessary to intellectual property of others.
+Changes in accounting pronouncements can impact our business.
+We do not intend to pay cash dividends in the foreseeable future.
+<p><a href="http://www.sec.gov/Archives/edgar/data/1141107/0000950144-08-001551.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/1141107--2-27-2009--ARRIS_GROUP_INC.html'">1141107--2/27/2009--ARRIS_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1057083--3-16-2010--PC_TEL_INC.html'">1057083--3/16/2010--PC_TEL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1323115--3-17-2008--Cardiac_Science_CORP.html'">1323115--3/17/2008--Cardiac_Science_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1057083--3-16-2009--PC_TEL_INC.html'">1057083--3/16/2009--PC_TEL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/909326--10-13-2006--ASYST_TECHNOLOGIES_INC.html'">909326--10/13/2006--ASYST_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/927355--6-19-2006--TESSCO_TECHNOLOGIES_INC.html'">927355--6/19/2006--TESSCO_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/785786--11-18-2008--PLEXUS_CORP.html'">785786--11/18/2008--PLEXUS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1113232--3-14-2006--AXCELIS_TECHNOLOGIES_INC.html'">1113232--3/14/2006--AXCELIS_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1077688--2-28-2007--HOOKER_FURNITURE_CORP.html'">1077688--2/28/2007--HOOKER_FURNITURE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/878436--2-23-2006--TUT_SYSTEMS_INC.html'">878436--2/23/2006--TUT_SYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/822663--3-16-2007--INTER_PARFUMS_INC.html'">822663--3/16/2007--INTER_PARFUMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1141107--3-1-2007--ARRIS_GROUP_INC.html'">1141107--3/1/2007--ARRIS_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/909791--3-1-2010--ULTRATECH_INC.html'">909791--3/1/2010--ULTRATECH_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1048695--11-21-2008--F5_NETWORKS_INC.html'">1048695--11/21/2008--F5_NETWORKS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1423221--12-18-2009--Quanex_Building_Products_CORP.html'">1423221--12/18/2009--Quanex_Building_Products_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1095600--6-7-2010--BLUE_COAT_SYSTEMS_INC.html'">1095600--6/7/2010--BLUE_COAT_SYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1034239--3-1-2006--RC2_CORP.html'">1034239--3/1/2006--RC2_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1034239--2-28-2007--RC2_CORP.html'">1034239--2/28/2007--RC2_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1048695--11-20-2009--F5_NETWORKS_INC.html'">1048695--11/20/2009--F5_NETWORKS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1423221--12-18-2008--Quanex_Building_Products_CORP.html'">1423221--12/18/2008--Quanex_Building_Products_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1104252--3-12-2007--DDI_CORP.html'">1104252--3/12/2007--DDI_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/910406--9-13-2006--HAIN_CELESTIAL_GROUP_INC.html'">910406--9/13/2006--HAIN_CELESTIAL_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1022225--9-15-2006--OPLINK_COMMUNICATIONS_INC.html'">1022225--9/15/2006--OPLINK_COMMUNICATIONS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/909791--3-8-2006--ULTRATECH_INC.html'">909791--3/8/2006--ULTRATECH_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1048695--11-23-2010--F5_NETWORKS_INC.html'">1048695--11/23/2010--F5_NETWORKS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/785786--12-1-2006--PLEXUS_CORP.html'">785786--12/1/2006--PLEXUS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1042825--3-16-2007--POWER_ONE_INC.html'">1042825--3/16/2007--POWER_ONE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/772406--5-29-2008--CIRRUS_LOGIC_INC.html'">772406--5/29/2008--CIRRUS_LOGIC_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1141107--2-26-2010--ARRIS_GROUP_INC.html'">1141107--2/26/2010--ARRIS_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1423221--12-20-2010--Quanex_Building_Products_CORP.html'">1423221--12/20/2010--Quanex_Building_Products_CORP</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

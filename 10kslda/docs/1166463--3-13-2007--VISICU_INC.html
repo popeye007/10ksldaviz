@@ -1,0 +1,201 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[7.1531559742, "../topics/{product,_liability,_claim}.html", "{product,_liability,_claim}"], [5.6611201199, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [3.7119839428, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [3.6966475918, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [3.6332274052, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"], [3.2909195077, "../topics/{system,_service,_information}.html", "{system,_service,_information}"], [2.7389809109, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [2.6963253348, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"], [2.6961078082, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [2.6925394439, "../topics/{cost,_regulation,_environmental}.html", "{cost,_regulation,_environmental}"], [1.6990852339, "../topics/{regulation,_change,_law}.html", "{regulation,_change,_law}"], [1.696157037, "../topics/{control,_financial,_internal}.html", "{control,_financial,_internal}"], [1.643766528, "../topics/{cost,_contract,_operation}.html", "{cost,_contract,_operation}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>1166463--3/13/2007--VISICU_INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">1166463--3/13/2007--VISICU_INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{product,_liability,_claim}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_liability,_claim}.html'">{product, liability, claim}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+<tr class="list"><td id="{system,_service,_information}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{system,_service,_information}.html'">{system, service, information}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{cost,_regulation,_environmental}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_regulation,_environmental}.html'">{cost, regulation, environmental}</td></tr>
+<tr class="list"><td id="{regulation,_change,_law}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_change,_law}.html'">{regulation, change, law}</td></tr>
+<tr class="list"><td id="{control,_financial,_internal}" onmouseover="highlight(11)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{control,_financial,_internal}.html'">{control, financial, internal}</td></tr>
+<tr class="list"><td id="{cost,_contract,_operation}" onmouseover="highlight(12)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_contract,_operation}.html'">{cost, contract, operation}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    If our products are alleged or found to infringe the intellectual property rights of others, we could be involved in costly disputes or disruptions and be required to redesign our products or methods, pay royalties or enter into license agreements with third parties.
+Any failure to protect our intellectual property rights could materially and adversely affect our business and financial condition.
+We have been sued by Cerner Corporation over our U.S. patent. A ruling by the court in favor of Cerner on one or more of its claims could materially and adversely affect our business and financial condition.
+Increasing competition for our products and services could make it harder for us to sell our eICU Program.
+If we are required to change the way in which we recognize revenue in the future, our financial results could fluctuate significantly, which may result in volatility in the price of our common stock.
+We have a relatively short operating history and a limited number of customers. We are unable to predict whether our customers will renew their support agreements after the initial term, and low renewal rates could adversely affect our revenues and our business.
+A downturn or upturn in our sales may not be immediately reflected in our operating results because we recognize revenues from license fees and implementation fees ratably over the term of our agreements.
+Our revenues from existing customers may decrease and we may be required to provide refunds to existing customers if we offer lower pricing terms for comparable purchases to another customer.
+We have incurred significant operating losses in the past and may incur significant operating losses in the future.
+Defects in or performance problems with our eICU Program could diminish demand for our products and services and harm our reputation.
+Product liability claims may require us to pay damages, reduce the demand for our eICU Program and harm our reputation.
+Our inability to effectively manage our growth could adversely affect our business and our operating results.
+Our inability to successfully introduce new, enhanced and competitive products that keep pace with rapidly changing technology, industry standards and customer requirements could adversely affect our ability to compete effectively.
+Any loss of the third-party intellectual property and technology licenses on which we rely in providing our eICU Program could result in additional costs or interruptions in the functionality of our products and services.
+We are dependent on our senior executive management, and the loss of any member of our senior executive management may prevent us from managing and growing our business effectively.
+We depend on highly specialized personnel, and the loss or failure to identify, hire, develop, motivate and retain these personnel could adversely affect our ability to grow our business.
+Any efforts we may make in the future to expand our eICU Program beyond the adult ICU market may not yield a sufficient return on our investment.
+We intend to increase sales of our eICU Program to government agencies, which subjects us to risks inherent in government contracts.
+We intend to expand our international sales efforts, which exposes us to risks inherent in international operations, and we do not have substantial experience in international markets.
+The long sales cycles for our eICU Program may cause our operating results to fluctuate significantly, which may result in volatility in the price of our common stock.
+Acquisitions and investments could result in integration difficulties, dilution or other adverse financial consequences.
+The requirements related to being a public company will subject us to increased costs and may strain our resources and distract our management. If we do not comply with these requirements, we may be subject to penalties and investors may lose confidence in us.
+Because our operating results may fluctuate significantly and may be below the expectations of analysts and investors, the market price for our stock may be volatile.
+We might require additional capital to support our business growth, and this capital might not be available.
+If we fail to obtain and maintain necessary U.S. FDA clearances for our products and indications or if clearances for future products and indications are delayed or not issued, our business would be harmed.
+After clearance or approval of our products, we are subject to continuing regulation by the FDA. If we fail to comply with these FDA regulations, our business could suffer.
+The FDA could retroactively determine that modifications that we have made to our eICU Program following FDA clearance were improper and require us to stop marketing and recall the modified products.
+Federal regulatory reforms may adversely affect our ability to sell our products profitably.
+If we fail to comply with the FDA s Quality System Regulation, our manufacturing operations could be halted and our business would suffer.
+We may face additional compliance costs and liability risks under HIPAA.
+We may face compliance costs and liability risks under other privacy protection laws and regulations.
+If our security measures are breached and unauthorized access is obtained to patient data, we may face liabilities and our program may be perceived as not being secure, causing customers to curtail or stop using our program, which may lead to a decline in revenues.
+Our stock price may be volatile, and your investment in our common stock could suffer a decline in value.
+If securities analysts downgrade our stock or discontinue coverage of our company, our stock price could decline.
+<p><a href="http://www.sec.gov/Archives/edgar/data/1166463/0000950133-07-001074.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/1040666--3-30-2007--VNUS_MEDICAL_TECHNOLOGIES_INC.html'">1040666--3/30/2007--VNUS_MEDICAL_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1138723--9-10-2008--ACCURAY_INC.html'">1138723--9/10/2008--ACCURAY_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1040666--3-14-2006--VNUS_MEDICAL_TECHNOLOGIES_INC.html'">1040666--3/14/2006--VNUS_MEDICAL_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1040666--3-16-2009--VNUS_MEDICAL_TECHNOLOGIES_INC.html'">1040666--3/16/2009--VNUS_MEDICAL_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1028318--6-7-2007--MICRUS_ENDOVASCULAR_CORP.html'">1028318--6/7/2007--MICRUS_ENDOVASCULAR_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1028318--6-16-2006--MICRUS_ENDOVASCULAR_CORP.html'">1028318--6/16/2006--MICRUS_ENDOVASCULAR_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1040666--3-14-2008--VNUS_MEDICAL_TECHNOLOGIES_INC.html'">1040666--3/14/2008--VNUS_MEDICAL_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1028318--6-12-2008--MICRUS_ENDOVASCULAR_CORP.html'">1028318--6/12/2008--MICRUS_ENDOVASCULAR_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1106773--2-28-2006--FIRST_HORIZON_PHARMACEUTICAL_CORP.html'">1106773--2/28/2006--FIRST_HORIZON_PHARMACEUTICAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1138723--9-9-2009--ACCURAY_INC.html'">1138723--9/9/2009--ACCURAY_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/886235--3-15-2007--ASPECT_MEDICAL_SYSTEMS_INC.html'">886235--3/15/2007--ASPECT_MEDICAL_SYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1318310--2-27-2009--ev3_Inc..html'">1318310--2/27/2009--ev3_Inc.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/811240--3-16-2009--BIOLASE_TECHNOLOGY_INC.html'">811240--3/16/2009--BIOLASE_TECHNOLOGY_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1002811--9-13-2006--KENSEY_NASH_CORP.html'">1002811--9/13/2006--KENSEY_NASH_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1116463--3-12-2008--ORASURE_TECHNOLOGIES_INC.html'">1116463--3/12/2008--ORASURE_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/949876--1-29-2008--NORTH_AMERICAN_SCIENTIFIC_INC.html'">949876--1/29/2008--NORTH_AMERICAN_SCIENTIFIC_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1142596--3-2-2009--NUVASIVE_INC.html'">1142596--3/2/2009--NUVASIVE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/776008--3-16-2010--STAR_SCIENTIFIC_INC.html'">776008--3/16/2010--STAR_SCIENTIFIC_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/319240--3-16-2010--IRIS_INTERNATIONAL_INC.html'">319240--3/16/2010--IRIS_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/776008--3-16-2009--STAR_SCIENTIFIC_INC.html'">776008--3/16/2009--STAR_SCIENTIFIC_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/886235--3-15-2006--ASPECT_MEDICAL_SYSTEMS_INC.html'">886235--3/15/2006--ASPECT_MEDICAL_SYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/863680--3-31-2009--CARDIOGENESIS_CORP_-CA.html'">863680--3/31/2009--CARDIOGENESIS_CORP_/CA</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/881464--2-26-2010--AMYLIN_PHARMACEUTICALS_INC.html'">881464--2/26/2010--AMYLIN_PHARMACEUTICALS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/919015--3-26-2010--BIOSPHERE_MEDICAL_INC.html'">919015--3/26/2010--BIOSPHERE_MEDICAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1137861--2-27-2007--WRIGHT_MEDICAL_GROUP_INC.html'">1137861--2/27/2007--WRIGHT_MEDICAL_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/919015--3-27-2007--BIOSPHERE_MEDICAL_INC.html'">919015--3/27/2007--BIOSPHERE_MEDICAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/884909--3-12-2009--HOME_DIAGNOSTICS_INC.html'">884909--3/12/2009--HOME_DIAGNOSTICS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/919015--3-21-2006--BIOSPHERE_MEDICAL_INC.html'">919015--3/21/2006--BIOSPHERE_MEDICAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/884629--3-1-2007--WATSON_PHARMACEUTICALS_INC.html'">884629--3/1/2007--WATSON_PHARMACEUTICALS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/884909--3-17-2008--HOME_DIAGNOSTICS_INC.html'">884909--3/17/2008--HOME_DIAGNOSTICS_INC</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

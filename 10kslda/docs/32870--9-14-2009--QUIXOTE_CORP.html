@@ -1,0 +1,186 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[2.8758616303, "../topics/{condition,_economic,_financial}.html", "{condition,_economic,_financial}"], [2.8351184556, "../topics/{operation,_natural,_condition}.html", "{operation,_natural,_condition}"], [2.7263458104, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [2.6617927035, "../topics/{loss,_insurance,_financial}.html", "{loss,_insurance,_financial}"], [1.7992853101, "../topics/{cost,_contract,_operation}.html", "{cost,_contract,_operation}"], [1.7410777002, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [1.7333057286, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [1.710563753, "../topics/{debt,_indebtedness,_cash}.html", "{debt,_indebtedness,_cash}"], [1.6988435666, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"], [1.697460826, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"], [1.6467252707, "../topics/{product,_candidate,_development}.html", "{product,_candidate,_development}"], [1.5705760324, "../topics/{competitive,_industry,_competition}.html", "{competitive,_industry,_competition}"], [1.5667900686, "../topics/{regulation,_government,_change}.html", "{regulation,_government,_change}"], [1.1216193038, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>32870--9/14/2009--QUIXOTE_CORP</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">32870--9/14/2009--QUIXOTE_CORP</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{condition,_economic,_financial}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{condition,_economic,_financial}.html'">{condition, economic, financial}</td></tr>
+<tr class="list"><td id="{operation,_natural,_condition}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_natural,_condition}.html'">{operation, natural, condition}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{loss,_insurance,_financial}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{loss,_insurance,_financial}.html'">{loss, insurance, financial}</td></tr>
+<tr class="list"><td id="{cost,_contract,_operation}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_contract,_operation}.html'">{cost, contract, operation}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{debt,_indebtedness,_cash}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{debt,_indebtedness,_cash}.html'">{debt, indebtedness, cash}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+<tr class="list"><td id="{product,_candidate,_development}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_candidate,_development}.html'">{product, candidate, development}</td></tr>
+<tr class="list"><td id="{competitive,_industry,_competition}" onmouseover="highlight(11)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{competitive,_industry,_competition}.html'">{competitive, industry, competition}</td></tr>
+<tr class="list"><td id="{regulation,_government,_change}" onmouseover="highlight(12)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_government,_change}.html'">{regulation, government, change}</td></tr>
+<tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(13)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    Our business could be adversely affected by reduced levels of cash, whether from operations or pursuant to the terms of our debt, as well as our ability to refinance our existing debt.
+The effects of the weak global economic conditions and the distressed financial markets may continue to adversely affect our sales, capital structure and liquidity.
+The downturn in the global economy and the transportation safety and highway construction industries may continue to adversely affect our operating results.
+A decrease or delay in federal government funding of transportation safety and highway construction and maintenance may cause our revenues, profits and cash flow to decrease.
+Constraints on state and local government budgets and decreases in state highway funding adversely affect our financial performance.
+We depend on principal customers.
+We are in a competitive marketplace.
+Our products often are subject to government testing, inspection and approval.
+Global economic conditions, as well as difficulties in managing and expanding in international markets, could affect future growth in these markets.
+If we are unable to protect our proprietary technology from infringement or if our technology infringes technology owned by others, then the demand for our products may decrease or we may be forced to modify our products which could increase our costs.
+Past and future acquisitions involve risks that could adversely affect our future financial results.
+Management's estimates and assumptions affect reported amounts of expenses and changes in those estimates could impact operating results.
+Our success depends on our management and other employees.
+Our facilities or facilities of our customers and suppliers could be susceptible to natural disasters.
+Our insurance coverage could be inadequate.
+Our quarterly operating results are likely to fluctuate, which may affect our stock price.
+We may experience volatility in our stock price.
+Acts of war or terrorism could adversely impact our business and operating results.
+<p><a href="http://www.sec.gov/Archives/edgar/data/32870/0001047469-09-008322.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/32870--9-12-2007--QUIXOTE_CORP.html'">32870--9/12/2007--QUIXOTE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/32870--9-15-2008--QUIXOTE_CORP.html'">32870--9/15/2008--QUIXOTE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/32870--9-13-2006--QUIXOTE_CORP.html'">32870--9/13/2006--QUIXOTE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/18255--3-30-2010--CATO_CORP.html'">18255--3/30/2010--CATO_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/845091--3-29-2006--MERRILL_LYNCH_LIFE_INSURANCE_CO.html'">845091--3/29/2006--MERRILL_LYNCH_LIFE_INSURANCE_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/108385--5-30-2008--WORLD_ACCEPTANCE_CORP.html'">108385--5/30/2008--WORLD_ACCEPTANCE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1137411--11-23-2010--ROCKWELL_COLLINS_INC.html'">1137411--11/23/2010--ROCKWELL_COLLINS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/863015--6-25-2009--ISLE_OF_CAPRI_CASINOS_INC.html'">863015--6/25/2009--ISLE_OF_CAPRI_CASINOS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/20171--2-26-2010--CHUBB_CORP.html'">20171--2/26/2010--CHUBB_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1381668--11-27-2009--TFS_Financial_CORP.html'">1381668--11/27/2009--TFS_Financial_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/739608--11-12-2010--PENFORD_CORP.html'">739608--11/12/2010--PENFORD_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/764401--11-9-2009--INSTEEL_INDUSTRIES_INC.html'">764401--11/9/2009--INSTEEL_INDUSTRIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/830141--3-15-2007--PIONEER_COMPANIES_INC.html'">830141--3/15/2007--PIONEER_COMPANIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/91741--3-26-2007--SONESTA_INTERNATIONAL_HOTELS_CORP.html'">91741--3/26/2007--SONESTA_INTERNATIONAL_HOTELS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1084580--2-26-2010--JEFFERIES_GROUP_INC_-DE-.html'">1084580--2/26/2010--JEFFERIES_GROUP_INC_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/108385--5-25-2007--WORLD_ACCEPTANCE_CORP.html'">108385--5/25/2007--WORLD_ACCEPTANCE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1392562--3-26-2008--LOUISIANA_BANCORP_INC.html'">1392562--3/26/2008--LOUISIANA_BANCORP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/48898--2-19-2010--HUBBELL_INC.html'">48898--2/19/2010--HUBBELL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/4828--11-4-2009--AMERICAN_CRYSTAL_SUGAR_CO_-MN-.html'">4828--11/4/2009--AMERICAN_CRYSTAL_SUGAR_CO_/MN/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1263074--3-15-2010--PORTEC_RAIL_PRODUCTS_INC.html'">1263074--3/15/2010--PORTEC_RAIL_PRODUCTS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/912382--3-13-2009--NATIONAL_BANK_OF_INDIANAPOLIS_CORP.html'">912382--3/13/2009--NATIONAL_BANK_OF_INDIANAPOLIS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/862923--3-25-2010--ML_LIFE_INSURANCE_CO_OF_NEW_YORK.html'">862923--3/25/2010--ML_LIFE_INSURANCE_CO_OF_NEW_YORK</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/85961--2-12-2010--RYDER_SYSTEM_INC.html'">85961--2/12/2010--RYDER_SYSTEM_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/896622--2-26-2010--APTARGROUP_INC.html'">896622--2/26/2010--APTARGROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1169055--2-27-2009--NOBLE_CORP.html'">1169055--2/27/2009--NOBLE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/80420--12-8-2010--POWELL_INDUSTRIES_INC.html'">80420--12/8/2010--POWELL_INDUSTRIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1458891--2-26-2010--NOBLE_CORP.html'">1458891--2/26/2010--NOBLE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/764401--11-30-2010--INSTEEL_INDUSTRIES_INC.html'">764401--11/30/2010--INSTEEL_INDUSTRIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/830524--11-15-2010--CHASE_CORP.html'">830524--11/15/2010--CHASE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/84581--3-31-2009--ROCK_OF_AGES_CORP.html'">84581--3/31/2009--ROCK_OF_AGES_CORP</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

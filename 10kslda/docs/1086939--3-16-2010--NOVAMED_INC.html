@@ -1,0 +1,192 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[4.4198870848, "../topics/{stock,_price,_share}.html", "{stock,_price,_share}"], [3.6197070682, "../topics/{cost,_contract,_operation}.html", "{cost,_contract,_operation}"], [2.7257700926, "../topics/{regulation,_government,_change}.html", "{regulation,_government,_change}"], [2.7188003358, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [2.7073688032, "../topics/{debt,_indebtedness,_cash}.html", "{debt,_indebtedness,_cash}"], [2.4903318557, "../topics/{regulation,_change,_law}.html", "{regulation,_change,_law}"], [1.8959880909, "../topics/{cost,_regulation,_environmental}.html", "{cost,_regulation,_environmental}"], [1.853905706, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [1.7594127574, "../topics/{provision,_law,_control}.html", "{provision,_law,_control}"], [1.7023007888, "../topics/{tax,_income,_asset}.html", "{tax,_income,_asset}"], [1.6987687413, "../topics/{competitive,_industry,_competition}.html", "{competitive,_industry,_competition}"], [1.6977697153, "../topics/{product,_liability,_claim}.html", "{product,_liability,_claim}"], [1.6972100676, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [1.6902276108, "../topics/{condition,_economic,_financial}.html", "{condition,_economic,_financial}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>1086939--3/16/2010--NOVAMED_INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">1086939--3/16/2010--NOVAMED_INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{stock,_price,_share}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_share}.html'">{stock, price, share}</td></tr>
+<tr class="list"><td id="{cost,_contract,_operation}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_contract,_operation}.html'">{cost, contract, operation}</td></tr>
+<tr class="list"><td id="{regulation,_government,_change}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_government,_change}.html'">{regulation, government, change}</td></tr>
+<tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{debt,_indebtedness,_cash}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{debt,_indebtedness,_cash}.html'">{debt, indebtedness, cash}</td></tr>
+<tr class="list"><td id="{regulation,_change,_law}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_change,_law}.html'">{regulation, change, law}</td></tr>
+<tr class="list"><td id="{cost,_regulation,_environmental}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_regulation,_environmental}.html'">{cost, regulation, environmental}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{provision,_law,_control}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{provision,_law,_control}.html'">{provision, law, control}</td></tr>
+<tr class="list"><td id="{tax,_income,_asset}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{tax,_income,_asset}.html'">{tax, income, asset}</td></tr>
+<tr class="list"><td id="{competitive,_industry,_competition}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{competitive,_industry,_competition}.html'">{competitive, industry, competition}</td></tr>
+<tr class="list"><td id="{product,_liability,_claim}" onmouseover="highlight(11)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_liability,_claim}.html'">{product, liability, claim}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(12)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{condition,_economic,_financial}" onmouseover="highlight(13)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{condition,_economic,_financial}.html'">{condition, economic, financial}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    Risks Relating to Our Business
+Current economic conditions may adversely affect our business
+The level of our current and future debt could adversely impact our business, financial condition and growth strategy, and could also dilute our current equity holders and limit our flexibility
+Reduced prices and reimbursement rates for surgical procedures as a result of competition or Medicare and other governmental and private third party payor cost containment efforts could reduce our revenue, profitability and cash flow
+Our revenue and profitability could decrease if we are unable to maintain positive relationships with the physicians who perform surgical procedures at our ASCs
+Our failure to operate, acquire or develop a sufficient number of profitable surgical facilities could limit our profitability and revenue growth
+We will need cash to pay the principal portion of the conversion value of the Convertible Notes (as defined below), as required by the indenture governing the notes
+Our operating margins and profitability could suffer if we are unable to manage effectively, and grow the revenue of, our increasing number of ASCs
+We may not compete effectively with other companies that have greater resources and experience than us or that may make it more difficult to maintain our licensure
+Changes in the interpretation of existing laws and regulations, or adoption of new laws or regulations, governing our business operations, including physician use and/or ownership of ASCs, could result in penalties to us, require us to incur significant expenditures, or force us to make changes to our business operations
+Adoption of new laws or regulations governing our business could significantly add to our cost of doing business.
+Regulation of the construction, acquisition or expansion of ASCs could prevent us from developing, acquiring, expanding or relocating facilities
+The nature of being actively involved in acquiring ASCs could subject us to potential claims and material liabilities relating to these businesses
+Rapid technological advances may reduce our sources of revenue and our profitability
+Loss of the services of key management personnel could adversely affect our business
+The nature of our business could subject us to potential malpractice, product liability and other claims
+If a change in events or circumstances causes us to write-off a portion of our intangible assets, our total assets could be reduced significantly and we could incur a substantial charge to earnings
+Becoming and remaining compliant with federal regulations enacted under the Health Insurance Portability and Accountability Act and the Health Information Technology for Economic and Clinical Health Act could require us to expend significant resources and capital, and could impair our profitability and limit our ability to grow our business
+Risks Relating to our Common Stock
+Future sales of shares of our common stock could depress our stock price
+The convertible note hedge and warrant transactions that we entered into in connection with the sale of the Convertible Notes may affect the trading price of our common stock
+The fundamental change purchase feature of the Convertible Notes may delay or prevent an otherwise beneficial attempt to take over our company
+Fluctuations in our quarterly operating results may make it difficult to predict our future results of operations and may cause volatility in our stock price
+Any return on your investment in our stock will depend on your ability to sell our stock at a profit
+<p><a href="http://www.sec.gov/Archives/edgar/data/1086939/0001047469-10-002284.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/1086939--3-16-2009--NOVAMED_INC.html'">1086939--3/16/2009--NOVAMED_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1086939--3-17-2008--NOVAMED_INC.html'">1086939--3/17/2008--NOVAMED_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1086939--3-16-2007--NOVAMED_INC.html'">1086939--3/16/2007--NOVAMED_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1017526--9-28-2007--ACE_COMM_CORP.html'">1017526--9/28/2007--ACE_COMM_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/788206--6-4-2010--EMPIRE_ENERGY_CORP.html'">788206--6/4/2010--EMPIRE_ENERGY_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1346685--4-17-2006--Sterling_Mining_CO.html'">1346685--4/17/2006--Sterling_Mining_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/769592--6-27-2008--MOBILEPRO_CORP.html'">769592--6/27/2008--MOBILEPRO_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1182011--12-15-2010--FORCE_FUELS_INC..html'">1182011--12/15/2010--FORCE_FUELS_INC.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/95366--1-13-2009--SUNAIR_SERVICES_CORP.html'">95366--1/13/2009--SUNAIR_SERVICES_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/788206--4-16-2009--EMPIRE_ENERGY_CORP.html'">788206--4/16/2009--EMPIRE_ENERGY_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1070680--3-29-2010--CENTRAL_FEDERAL_CORP.html'">1070680--3/29/2010--CENTRAL_FEDERAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/786765--10-11-2007--BUTLER_INTERNATIONAL_INC_-MD-.html'">786765--10/11/2007--BUTLER_INTERNATIONAL_INC_/MD/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/786765--1-18-2008--BUTLER_INTERNATIONAL_INC_-MD-.html'">786765--1/18/2008--BUTLER_INTERNATIONAL_INC_/MD/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/75439--3-31-2009--CytoCore_Inc.html'">75439--3/31/2009--CytoCore_Inc</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1292026--3-31-2009--Odimo_INC.html'">1292026--3/31/2009--Odimo_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1292026--3-31-2010--Odimo_INC.html'">1292026--3/31/2010--Odimo_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1390778--4-15-2010--Avro_Energy_Inc..html'">1390778--4/15/2010--Avro_Energy_Inc.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1372020--3-9-2010--Great_Lakes_Dredge_&_Dock_CORP.html'">1372020--3/9/2010--Great_Lakes_Dredge_&_Dock_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/771485--5-15-2009--PDG_ENVIRONMENTAL_INC.html'">771485--5/15/2009--PDG_ENVIRONMENTAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/822418--3-5-2009--BIO_IMAGING_TECHNOLOGIES_INC.html'">822418--3/5/2009--BIO_IMAGING_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1179500--3-31-2010--COMMUNITY_FIRST_INC.html'">1179500--3/31/2010--COMMUNITY_FIRST_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/822418--3-5-2008--BIO_IMAGING_TECHNOLOGIES_INC.html'">822418--3/5/2008--BIO_IMAGING_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1419260--1-6-2010--Andina_Group_Inc..html'">1419260--1/6/2010--Andina_Group_Inc.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1099132--5-6-2009--MANHATTAN_SCIENTIFICS_INC.html'">1099132--5/6/2009--MANHATTAN_SCIENTIFICS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1099132--4-9-2010--MANHATTAN_SCIENTIFICS_INC.html'">1099132--4/9/2010--MANHATTAN_SCIENTIFICS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/822418--3-29-2007--BIO_IMAGING_TECHNOLOGIES_INC.html'">822418--3/29/2007--BIO_IMAGING_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1341327--7-14-2010--SMARTLINX_INC..html'">1341327--7/14/2010--SMARTLINX_INC.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/900017--3-30-2009--THOMAS_GROUP_INC.html'">900017--3/30/2009--THOMAS_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1265572--3-17-2009--KONA_GRILL_INC.html'">1265572--3/17/2009--KONA_GRILL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1157758--5-20-2010--CYCLE_COUNTRY_ACCESSORIES_CORP.html'">1157758--5/20/2010--CYCLE_COUNTRY_ACCESSORIES_CORP</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

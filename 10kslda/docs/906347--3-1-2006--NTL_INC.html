@@ -1,0 +1,202 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[5.7589864011, "../topics/{cost,_operation,_labor}.html", "{cost,_operation,_labor}"], [4.7192110739, "../topics/{debt,_indebtedness,_cash}.html", "{debt,_indebtedness,_cash}"], [3.7625061028, "../topics/{investment,_property,_distribution}.html", "{investment,_property,_distribution}"], [3.6127241561, "../topics/{stock,_price,_share}.html", "{stock,_price,_share}"], [3.4955369183, "../topics/{system,_service,_information}.html", "{system,_service,_information}"], [3.3552788838, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [2.859698536, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [2.6147778504, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"], [2.1246116191, "../topics/{regulation,_government,_change}.html", "{regulation,_government,_change}"], [1.7794807164, "../topics/{provision,_law,_control}.html", "{provision,_law,_control}"], [1.7321886335, "../topics/{control,_financial,_internal}.html", "{control,_financial,_internal}"], [1.7232954643, "../topics/{capital,_credit,_financial}.html", "{capital,_credit,_financial}"], [1.7199533075, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"], [1.5049210956, "../topics/{condition,_economic,_financial}.html", "{condition,_economic,_financial}"], [1.2676298106, "../topics/{competitive,_industry,_competition}.html", "{competitive,_industry,_competition}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>906347--3/1/2006--NTL_INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">906347--3/1/2006--NTL_INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{cost,_operation,_labor}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_operation,_labor}.html'">{cost, operation, labor}</td></tr>
+<tr class="list"><td id="{debt,_indebtedness,_cash}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{debt,_indebtedness,_cash}.html'">{debt, indebtedness, cash}</td></tr>
+<tr class="list"><td id="{investment,_property,_distribution}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{investment,_property,_distribution}.html'">{investment, property, distribution}</td></tr>
+<tr class="list"><td id="{stock,_price,_share}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_share}.html'">{stock, price, share}</td></tr>
+<tr class="list"><td id="{system,_service,_information}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{system,_service,_information}.html'">{system, service, information}</td></tr>
+<tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+<tr class="list"><td id="{regulation,_government,_change}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_government,_change}.html'">{regulation, government, change}</td></tr>
+<tr class="list"><td id="{provision,_law,_control}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{provision,_law,_control}.html'">{provision, law, control}</td></tr>
+<tr class="list"><td id="{control,_financial,_internal}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{control,_financial,_internal}.html'">{control, financial, internal}</td></tr>
+<tr class="list"><td id="{capital,_credit,_financial}" onmouseover="highlight(11)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{capital,_credit,_financial}.html'">{capital, credit, financial}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(12)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+<tr class="list"><td id="{condition,_economic,_financial}" onmouseover="highlight(13)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{condition,_economic,_financial}.html'">{condition, economic, financial}</td></tr>
+<tr class="list"><td id="{competitive,_industry,_competition}" onmouseover="highlight(14)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{competitive,_industry,_competition}.html'">{competitive, industry, competition}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    Risks Related to Our Company
+Factors Relating to the Merger with Telewest and its Implementation
+The combined company may be unable to successfully integrate operations and realize the full anticipated synergies of the merger, which may harm the value of its common stock.
+The combined company will incur significant transaction and merger-related costs in connection with the merger.
+Certain significant stockholders of both NTL and Telewest could have an influence over the business and affairs of the combined company after the merger.
+Whether or not the merger is completed, the announcement and pendency of the transaction could cause disruptions in our business, which could have an adverse effect on its business and financial results.
+The merger could affect the combined company's relationship with BBC Worldwide.
+In certain instances, the merger agreement requires payment of a termination fee of $175 million by NTL to Telewest. These terms could materially and adversely affect our financial condition and operations or prevent another party from proposing an alternative transaction to the merger.
+If the conditions under the commitment letter are not satisfied, the financing to be provided thereunder will not be available to satisfy the cash portion of the consideration to be paid to Telewest stockholders in the merger.
+Factors Relating to the Business of the Company and its Regulation
+Neither we, nor the combined company, may be able to fund our debt service obligations through operating cash flow in the future.
+Our current leverage is substantial, and, following the completion of the merger, the leverage of the combined company will be substantial, which may have an adverse effect on our available cash flow, our ability to obtain additional financing if necessary in the future, our flexibility in reacting to competitive and technological changes and our operations.
+We have incurred losses in the past and may not be profitable in the future.
+The restrictive covenants under our debt agreements, as well as that of the combined company after the merger, may limit our ability to operate our business.
+We are a holding company dependent upon cash flow from subsidiaries to meet our obligations.
+We are, and the combined company will be, subject to currency and interest rate risks.
+We or the combined company may engage in a transaction with Virgin Mobile that could have a significant impact on the combined company.
+Failure to control customer churn may adversely affect our financial performance, as well as the financial performance of the combined company following the merger.
+We are subject to significant competition and we expect that competition will intensify.
+The sectors in which we compete are subject to rapid and significant changes in technology, and the effect of technological changes on our businesses cannot be predicted.
+There is no assurance that new products that we may introduce will achieve full functionality or market acceptance.
+Systems failures may result in lost revenue.
+If we do not maintain and upgrade our networks in a cost-effective and timely manner, we could lose customers.
+Our inability to obtain popular programming, or to obtain it at a reasonable cost, could potentially materially adversely affect the number of subscribers to our consumer television service or reduce margins.
+A failure in our critical systems could significantly disrupt our operations, which could reduce our customer base and result in lost revenues.
+We may be subject to taxation in multiple jurisdictions, and our U.S. holding company structure may make it difficult to repatriate cash from our U.K. operating subsidiaries for purposes of paying dividends, repurchasing shares or repaying debt incurred in the U.S. without incurring U.S. tax on such cash repatriations.
+Regulation of the markets in which we provide our services has been changing rapidly; unpredictable changes in U.K. and EU regulations affecting the conduct of our business, including price regulations, may have an adverse impact on our ability to set prices, enter new markets or control our costs.
+Provisions of our debt agreements, our stockholder rights plan, our certificate of incorporation, Delaware law and our contracts, as well as those of the combined company following the completion of the merger, could prevent or delay a change of control.
+Factors Relating to our Common Stock
+The market price of our common stock is subject to volatility, as well as to trends in the telecommunications industry in general, which will continue.
+We may in the future seek to raise funds through equity offerings, which could have a dilutive effect on our common stock.
+We have not historically paid cash dividends on our common stock, we may not be able to pay or maintain dividends, and the failure to do so could adversely affect our stock price.
+Sales of stock by stockholders in the combined company may decrease the price of the combined company's common stock following the merger.
+<p><a href="http://www.sec.gov/Archives/edgar/data/906347/0001047469-06-002629.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/1270400--2-28-2006--TELEWEST_GLOBAL_INC.html'">1270400--2/28/2006--TELEWEST_GLOBAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/908937--2-29-2008--SIRIUS_SATELLITE_RADIO_INC.html'">908937--2/29/2008--SIRIUS_SATELLITE_RADIO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1317630--3-8-2007--ITC_Holdings_Corp..html'">1317630--3/8/2007--ITC_Holdings_Corp.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1281774--2-29-2008--TOWN_SPORTS_INTERNATIONAL_HOLDINGS_INC.html'">1281774--2/29/2008--TOWN_SPORTS_INTERNATIONAL_HOLDINGS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/29534--3-31-2010--DOLLAR_GENERAL_CORP.html'">29534--3/31/2010--DOLLAR_GENERAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1281774--3-5-2009--TOWN_SPORTS_INTERNATIONAL_HOLDINGS_INC.html'">1281774--3/5/2009--TOWN_SPORTS_INTERNATIONAL_HOLDINGS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1026655--4-7-2010--CORE_MOLDING_TECHNOLOGIES_INC.html'">1026655--4/7/2010--CORE_MOLDING_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/817979--3-13-2009--ACCURIDE_CORP.html'">817979--3/13/2009--ACCURIDE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1116317--2-28-2008--XM_SATELLITE_RADIO_HOLDINGS_INC.html'">1116317--2/28/2008--XM_SATELLITE_RADIO_HOLDINGS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1041858--3-11-2008--RCN_CORP_-DE-.html'">1041858--3/11/2008--RCN_CORP_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1391390--2-24-2009--BOISE_INC..html'">1391390--2/24/2009--BOISE_INC.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1026655--4-1-2009--CORE_MOLDING_TECHNOLOGIES_INC.html'">1026655--4/1/2009--CORE_MOLDING_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1324479--2-27-2008--AMERICAN_COMMERCIAL_LINES_INC..html'">1324479--2/27/2008--AMERICAN_COMMERCIAL_LINES_INC.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/817979--3-17-2008--ACCURIDE_CORP.html'">817979--3/17/2008--ACCURIDE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/918944--9-28-2006--MEDIANEWS_GROUP_INC.html'">918944--9/28/2006--MEDIANEWS_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1076195--2-28-2007--LIFE_TIME_FITNESS_INC.html'">1076195--2/28/2007--LIFE_TIME_FITNESS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1257296--5-1-2006--HLI_OPERATING_CO_INC.html'">1257296--5/1/2006--HLI_OPERATING_CO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/817366--3-1-2007--VCA_ANTECH_INC.html'">817366--3/1/2007--VCA_ANTECH_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/722079--2-25-2010--TERRA_INDUSTRIES_INC.html'">722079--2/25/2010--TERRA_INDUSTRIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1273784--11-14-2007--NATIONAL_BEEF_PACKING_CO_LLC.html'">1273784--11/14/2007--NATIONAL_BEEF_PACKING_CO_LLC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/801622--12-7-2006--ADVO_INC.html'">801622--12/7/2006--ADVO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/941738--3-20-2007--WHEELING_PITTSBURGH_CORP_-DE-.html'">941738--3/20/2007--WHEELING_PITTSBURGH_CORP_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1102643--3-1-2007--USI_HOLDINGS_CORP.html'">1102643--3/1/2007--USI_HOLDINGS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1237941--4-21-2006--HAYES_LEMMERZ_INTERNATIONAL_INC.html'">1237941--4/21/2006--HAYES_LEMMERZ_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1281774--3-13-2007--TOWN_SPORTS_INTERNATIONAL_HOLDINGS_INC.html'">1281774--3/13/2007--TOWN_SPORTS_INTERNATIONAL_HOLDINGS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1378453--3-31-2008--TRAVELCENTERS_OF_AMERICA_LLC.html'">1378453--3/31/2008--TRAVELCENTERS_OF_AMERICA_LLC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1281774--3-16-2010--TOWN_SPORTS_INTERNATIONAL_HOLDINGS_INC.html'">1281774--3/16/2010--TOWN_SPORTS_INTERNATIONAL_HOLDINGS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/712034--2-29-2008--ACCO_BRANDS_CORP.html'">712034--2/29/2008--ACCO_BRANDS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1076195--2-29-2008--LIFE_TIME_FITNESS_INC.html'">1076195--2/29/2008--LIFE_TIME_FITNESS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/94845--2-13-2007--LEVI_STRAUSS_&_CO.html'">94845--2/13/2007--LEVI_STRAUSS_&_CO</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

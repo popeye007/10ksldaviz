@@ -1,0 +1,191 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[5.5232758188, "../topics/{cost,_operation,_labor}.html", "{cost,_operation,_labor}"], [5.0124651403, "../topics/{competitive,_industry,_competition}.html", "{competitive,_industry,_competition}"], [4.9423418742, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"], [4.332763921, "../topics/{condition,_economic,_financial}.html", "{condition,_economic,_financial}"], [2.5265305471, "../topics/{product,_liability,_claim}.html", "{product,_liability,_claim}"], [2.3845523034, "../topics/{financial,_litigation,_operation}.html", "{financial,_litigation,_operation}"], [1.7740689677, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [1.7323494271, "../topics/{regulation,_change,_law}.html", "{regulation,_change,_law}"], [1.3562845298, "../topics/{operation,_natural,_condition}.html", "{operation,_natural,_condition}"], [1.2378044515, "../topics/{cost,_regulation,_environmental}.html", "{cost,_regulation,_environmental}"], [1.1619550991, "../topics/{loan,_real,_estate}.html", "{loan,_real,_estate}"], [1.0769833482, "../topics/{cost,_contract,_operation}.html", "{cost,_contract,_operation}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>864233--3/14/2007--O_CHARLEYS_INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">864233--3/14/2007--O_CHARLEYS_INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{cost,_operation,_labor}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_operation,_labor}.html'">{cost, operation, labor}</td></tr>
+<tr class="list"><td id="{competitive,_industry,_competition}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{competitive,_industry,_competition}.html'">{competitive, industry, competition}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+<tr class="list"><td id="{condition,_economic,_financial}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{condition,_economic,_financial}.html'">{condition, economic, financial}</td></tr>
+<tr class="list"><td id="{product,_liability,_claim}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_liability,_claim}.html'">{product, liability, claim}</td></tr>
+<tr class="list"><td id="{financial,_litigation,_operation}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{financial,_litigation,_operation}.html'">{financial, litigation, operation}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{regulation,_change,_law}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_change,_law}.html'">{regulation, change, law}</td></tr>
+<tr class="list"><td id="{operation,_natural,_condition}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_natural,_condition}.html'">{operation, natural, condition}</td></tr>
+<tr class="list"><td id="{cost,_regulation,_environmental}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_regulation,_environmental}.html'">{cost, regulation, environmental}</td></tr>
+<tr class="list"><td id="{loan,_real,_estate}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{loan,_real,_estate}.html'">{loan, real, estate}</td></tr>
+<tr class="list"><td id="{cost,_contract,_operation}" onmouseover="highlight(11)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_contract,_operation}.html'">{cost, contract, operation}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    Our success depends on our ability to execute our turnaround strategy, including our rebranding initiatives.
+Changing consumer preferences and discretionary spending patterns could force
+us to modify our concepts and menus and could result in a reduction in our
+We may experience higher operating costs, which would adversely affect our
+operating results, if we cannot increase menu prices to cover them.
+Our continued growth depends on our ability to open new restaurants and operate
+our new restaurants profitably, which in turn depends upon our continued access
+Our growth may strain our management and infrastructure, which could slow our
+development of new restaurants and adversely affect our ability to manage
+Unanticipated expenses and market acceptance could affect the results of
+restaurants we open in new and existing markets.
+We could face labor shortages that could adversely affect our results of
+Our restaurants are concentrated geographically; if any one of the regions in
+which our restaurants are located experiences an economic downturn, adverse
+weather or other material change, our business results may suffer.
+Our restaurants may not be able to compete successfully with other restaurants,
+which could adversely affect our results of operations.
+Any disruption in our manufacturing and distribution operations could adversely affect our
+ability to operate our restaurants.
+We may incur costs or liabilities and lose revenue as the result of government
+We may incur costs or liabilities as a result of litigation and publicity
+concerning food quality, health and other issues that can also cause guests to
+Compliance with and any failure to comply with current regulatory requirements
+will result in additional expenses and may adversely affect us.
+We are dependent upon our senior management team to execute our business
+<p><a href="http://www.sec.gov/Archives/edgar/data/864233/0001169232-07-001412.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/864233--3-12-2008--O_CHARLEYS_INC.html'">864233--3/12/2008--O_CHARLEYS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1144215--10-30-2009--ACUITY_BRANDS_INC.html'">1144215--10/30/2009--ACUITY_BRANDS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1144215--10-27-2008--ACUITY_BRANDS_INC.html'">1144215--10/27/2008--ACUITY_BRANDS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/864233--3-12-2009--O_CHARLEYS_INC.html'">864233--3/12/2009--O_CHARLEYS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/863157--3-26-2009--PETSMART_INC.html'">863157--3/26/2009--PETSMART_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1267130--2-27-2008--CABELAS_INC.html'">1267130--2/27/2008--CABELAS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1267130--2-28-2007--CABELAS_INC.html'">1267130--2/28/2007--CABELAS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1750--7-11-2008--AAR_CORP.html'">1750--7/11/2008--AAR_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1750--7-16-2009--AAR_CORP.html'">1750--7/16/2009--AAR_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/9984--2-25-2008--BARNES_GROUP_INC.html'">9984--2/25/2008--BARNES_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/724606--3-1-2010--PANERA_BREAD_CO.html'">724606--3/1/2010--PANERA_BREAD_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/351834--3-11-2009--SunOpta_Inc..html'">351834--3/11/2009--SunOpta_Inc.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/724606--2-27-2009--PANERA_BREAD_CO.html'">724606--2/27/2009--PANERA_BREAD_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1750--7-16-2010--AAR_CORP.html'">1750--7/16/2010--AAR_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/810332--12-14-2006--MESA_AIR_GROUP_INC.html'">810332--12/14/2006--MESA_AIR_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1750--7-20-2007--AAR_CORP.html'">1750--7/20/2007--AAR_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/883976--3-1-2007--RARE_HOSPITALITY_INTERNATIONAL_INC.html'">883976--3/1/2007--RARE_HOSPITALITY_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1103017--4-15-2009--DENTAL_PATIENT_CARE_AMERICA_INC.html'">1103017--4/15/2009--DENTAL_PATIENT_CARE_AMERICA_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1159297--2-24-2009--MEADWESTVACO_Corp.html'">1159297--2/24/2009--MEADWESTVACO_Corp</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1048268--12-15-2008--INTEGRATED_ELECTRICAL_SERVICES_INC.html'">1048268--12/15/2008--INTEGRATED_ELECTRICAL_SERVICES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/829224--11-24-2008--STARBUCKS_CORP.html'">829224--11/24/2008--STARBUCKS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/53669--11-23-2010--JOHNSON_CONTROLS_INC.html'">53669--11/23/2010--JOHNSON_CONTROLS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/88205--3-2-2009--SPX_CORP.html'">88205--3/2/2009--SPX_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/913142--2-29-2008--BELDEN_INC..html'">913142--2/29/2008--BELDEN_INC.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/935226--6-13-2008--BENIHANA_INC.html'">935226--6/13/2008--BENIHANA_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/863157--3-28-2007--PETSMART_INC.html'">863157--3/28/2007--PETSMART_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/913142--2-27-2009--BELDEN_INC..html'">913142--2/27/2009--BELDEN_INC.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/900075--9-23-2010--COPART_INC.html'">900075--9/23/2010--COPART_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1144215--10-29-2010--ACUITY_BRANDS_INC.html'">1144215--10/29/2010--ACUITY_BRANDS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1102643--3-1-2007--USI_HOLDINGS_CORP.html'">1102643--3/1/2007--USI_HOLDINGS_CORP</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

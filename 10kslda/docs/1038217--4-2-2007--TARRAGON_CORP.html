@@ -1,0 +1,213 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[7.2577729509, "../topics/{interest,_director,_officer}.html", "{interest,_director,_officer}"], [6.0174683146, "../topics/{loan,_real,_estate}.html", "{loan,_real,_estate}"], [5.4502184257, "../topics/{cost,_contract,_operation}.html", "{cost,_contract,_operation}"], [5.0255995107, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"], [3.715930059, "../topics/{debt,_indebtedness,_cash}.html", "{debt,_indebtedness,_cash}"], [3.5604000679, "../topics/{stock,_price,_share}.html", "{stock,_price,_share}"], [2.6528459897, "../topics/{investment,_property,_distribution}.html", "{investment,_property,_distribution}"], [2.5943179302, "../topics/{cost,_regulation,_environmental}.html", "{cost,_regulation,_environmental}"], [2.2619446252, "../topics/{competitive,_industry,_competition}.html", "{competitive,_industry,_competition}"], [2.0756141142, "../topics/{loss,_insurance,_financial}.html", "{loss,_insurance,_financial}"], [2.0399092609, "../topics/{tax,_income,_asset}.html", "{tax,_income,_asset}"], [1.7961666283, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [1.7181936204, "../topics/{provision,_law,_control}.html", "{provision,_law,_control}"], [1.7157778597, "../topics/{operation,_natural,_condition}.html", "{operation,_natural,_condition}"], [1.7009028967, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [1.5702772824, "../topics/{regulation,_change,_law}.html", "{regulation,_change,_law}"], [1.2418091065, "../topics/{financial,_litigation,_operation}.html", "{financial,_litigation,_operation}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>1038217--4/2/2007--TARRAGON_CORP</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">1038217--4/2/2007--TARRAGON_CORP</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{interest,_director,_officer}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{interest,_director,_officer}.html'">{interest, director, officer}</td></tr>
+<tr class="list"><td id="{loan,_real,_estate}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{loan,_real,_estate}.html'">{loan, real, estate}</td></tr>
+<tr class="list"><td id="{cost,_contract,_operation}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_contract,_operation}.html'">{cost, contract, operation}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+<tr class="list"><td id="{debt,_indebtedness,_cash}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{debt,_indebtedness,_cash}.html'">{debt, indebtedness, cash}</td></tr>
+<tr class="list"><td id="{stock,_price,_share}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_share}.html'">{stock, price, share}</td></tr>
+<tr class="list"><td id="{investment,_property,_distribution}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{investment,_property,_distribution}.html'">{investment, property, distribution}</td></tr>
+<tr class="list"><td id="{cost,_regulation,_environmental}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_regulation,_environmental}.html'">{cost, regulation, environmental}</td></tr>
+<tr class="list"><td id="{competitive,_industry,_competition}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{competitive,_industry,_competition}.html'">{competitive, industry, competition}</td></tr>
+<tr class="list"><td id="{loss,_insurance,_financial}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{loss,_insurance,_financial}.html'">{loss, insurance, financial}</td></tr>
+<tr class="list"><td id="{tax,_income,_asset}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{tax,_income,_asset}.html'">{tax, income, asset}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(11)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{provision,_law,_control}" onmouseover="highlight(12)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{provision,_law,_control}.html'">{provision, law, control}</td></tr>
+<tr class="list"><td id="{operation,_natural,_condition}" onmouseover="highlight(13)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_natural,_condition}.html'">{operation, natural, condition}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(14)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{regulation,_change,_law}" onmouseover="highlight(15)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_change,_law}.html'">{regulation, change, law}</td></tr>
+<tr class="list"><td id="{financial,_litigation,_operation}" onmouseover="highlight(16)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{financial,_litigation,_operation}.html'">{financial, litigation, operation}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    We have a substantial number of stock options, stock appreciation rights, grants of restricted stock, and notes convertible into our common stock and may have the ability to grant a substantial number of stock options in the future under currently effective or proposed incentive plans.
+Our governing documents contain anti-takeover provisions that may make it more difficult for a third party to acquire control of us.
+Risks Related to Our Businesses Generally
+Our substantial indebtedness and high leverage could materially and adversely affect our financial health and prevent us from fulfilling our obligations.
+We may not be able to generate sufficient cash flow to fulfill our debt service obligations.
+The restrictive covenants associated with our outstanding indebtedness may limit our ability to operate.
+Our net income may fluctuate.
+Increases in interest rates could materially increase our interest expense or could reduce our revenues.
+The regional concentration of our assets may increase the effects of adverse trends in those markets.
+Our success depends on key executive officers and personnel.
+Fluctuations in real estate values may require us to write down the book value of our real estate assets.
+Our principal stockholders effectively control corporate actions, and their interests may differ from yours.
+Our businesses are subject to all of the risks that affect real estate businesses generally.
+Property ownership through partnerships and joint ventures generally limits control of those investments and entails other risks.
+Increased insurance costs and reduced insurance coverage may affect our results of operations and increase our potential exposure to liability.
+We have in the past, and will continue to, engage in transactions with related parties, which may cause a conflict of interest and negatively affect our business.
+Risks Related to the Homebuilding Business
+Our Homebuilding Business is subject to risks associated with construction and development.
+The homebuilding industry is highly competitive.
+Future cash flows from our Homebuilding Business may be lower than expected.
+Governmental laws and regulations may increase our expenses, limit the number of homes that we can build or delay completion of our projects.
+Our sales activities may expose us to risks generally associated with homebuilding.
+We may acquire additional rental properties for conversion to condominiums, which could expose us to additional risks.
+We may expand our homebuilding operations to new markets.
+Our Homebuilding Business may require significant additional financing that may not be available on commercially favorable terms, if at all.
+Our Homebuilding Business is subject to environmental laws and regulations, and our properties may have environmental or other contamination.
+Risks Related to the Real Estate Services Business
+Our Real Estate Services Business may require significant additional financing that may not be available on commercially favorable terms, if at all.
+Our Real Estate Services Business growth strategy is dependent on our ability to identify, acquire and integrate suitable acquisition candidates into the Real Estate Services Business.
+We may not be able to sell our apartment communities at the desired time or price.
+Our Real Estate Services Business is subject to environmental laws and regulations, and our properties may have environmental or other contamination.
+Risks Related to the Proposed Spin-off
+The proposed spin-off of our Homebuilding Business is subject to inherent risks, which may affect our results of operations or financial condition.
+If the proposed spin-off is consummated, it will be difficult to accurately forecast our future revenues and other results of operations based on our historical financial statements
+which could result in lower prices for our common stock following the proposed spin-off.
+If the proposed spin-off is consummated, we may not enjoy all of the benefits of scale that we currently enjoy with our businesses held in one corporate structure.
+There are tax risks relating to the proposed spin-off, which could harm our financial condition, results of operations and cash flows and cause our stockholders to incur tax liabilities.
+If the proposed spin-off is consummated, we will continue to rely on the performance of our Homebuilding Business under various agreements between us and Tarragon Homes.
+If the proposed spin-off is consummated, Tarragon Homes may not be able to satisfy its indemnification obligations related to the proposed spin-off, or we may be required to indemnify Tarragon Homes, either of which could result in us incurring additional costs and could materially and adversely affect our financial condition, results of operations and cash flows.
+If the proposed spin-off is consummated, certain members of our management and our directors and our stockholders may face actual or potential conflicts of interest.
+If the proposed spin-off is consummated, we will be a smaller, less diversified company than we currently are.
+If the proposed spin-off is consummated, the market price of our common stock may experience fluctuations and volatility following the proposed spin-off.
+<p><a href="http://www.sec.gov/Archives/edgar/data/1038217/0000950134-07-007301.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/1425919--3-31-2009--One_e_Commerce_CORP.html'">1425919--3/31/2009--One_e_Commerce_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1045309--3-2-2009--W_R_GRACE_&_CO.html'">1045309--3/2/2009--W_R_GRACE_&_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1420915--3-31-2010--Smart_Ventures_Inc..html'">1420915--3/31/2010--Smart_Ventures_Inc.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1057076--12-14-2007--RIDGEWOOD_POWER_GROWTH_FUND_-NJ.html'">1057076--12/14/2007--RIDGEWOOD_POWER_GROWTH_FUND_/NJ</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/835662--8-26-2009--MERCARI_COMMUNICATIONS_GROUP_LTD.html'">835662--8/26/2009--MERCARI_COMMUNICATIONS_GROUP_LTD</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1170593--3-16-2009--PRIMUS_GUARANTY_LTD.html'">1170593--3/16/2009--PRIMUS_GUARANTY_LTD</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/276077--3-28-2008--TIDELANDS_ROYALTY_TRUST_B.html'">276077--3/28/2008--TIDELANDS_ROYALTY_TRUST_B</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/313364--9-16-2009--MESA_ROYALTY_TRUST-TX.html'">313364--9/16/2009--MESA_ROYALTY_TRUST/TX</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1074871--9-19-2008--BEAR_LAKE_RECREATION_INC.html'">1074871--9/19/2008--BEAR_LAKE_RECREATION_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/711303--3-31-2009--MESA_OFFSHORE_TRUST.html'">711303--3/31/2009--MESA_OFFSHORE_TRUST</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/850261--3-30-2009--QUIKBYTE_SOFTWARE_INC.html'">850261--3/30/2009--QUIKBYTE_SOFTWARE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/912030--8-25-2010--TORCH_ENERGY_ROYALTY_TRUST.html'">912030--8/25/2010--TORCH_ENERGY_ROYALTY_TRUST</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/319654--3-14-2008--PERMIAN_BASIN_ROYALTY_TRUST.html'">319654--3/14/2008--PERMIAN_BASIN_ROYALTY_TRUST</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/97148--3-31-2009--TEL_OFFSHORE_TRUST.html'">97148--3/31/2009--TEL_OFFSHORE_TRUST</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/313364--3-16-2010--MESA_ROYALTY_TRUST-TX.html'">313364--3/16/2010--MESA_ROYALTY_TRUST/TX</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/923680--3-16-2010--DOMINION_RESOURCES_BLACK_WARRIOR_TRUST.html'">923680--3/16/2010--DOMINION_RESOURCES_BLACK_WARRIOR_TRUST</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/912030--12-31-2008--TORCH_ENERGY_ROYALTY_TRUST.html'">912030--12/31/2008--TORCH_ENERGY_ROYALTY_TRUST</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/62362--9-25-2008--MARINE_PETROLEUM_TRUST.html'">62362--9/25/2008--MARINE_PETROLEUM_TRUST</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1434994--4-6-2010--SILVER_HILL_MINES_INC.html'">1434994--4/6/2010--SILVER_HILL_MINES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/912030--11-25-2009--TORCH_ENERGY_ROYALTY_TRUST.html'">912030--11/25/2009--TORCH_ENERGY_ROYALTY_TRUST</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1366121--4-10-2009--MCA_Holdings_CORP.html'">1366121--4/10/2009--MCA_Holdings_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/97148--3-31-2010--TEL_OFFSHORE_TRUST.html'">97148--3/31/2010--TEL_OFFSHORE_TRUST</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1281845--9-10-2007--INNOCAP_INC.html'">1281845--9/10/2007--INNOCAP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1279740--12-26-2007--DEVELOCAP_INC.html'">1279740--12/26/2007--DEVELOCAP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1045309--2-25-2010--W_R_GRACE_&_CO.html'">1045309--2/25/2010--W_R_GRACE_&_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/904918--3-28-2008--BLACK_ROCK_GLOBAL_HORIZONS_LP.html'">904918--3/28/2008--BLACK_ROCK_GLOBAL_HORIZONS_LP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/797542--4-15-2010--ZAXIS_INTERNATIONAL_INC.html'">797542--4/15/2010--ZAXIS_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/895007--3-31-2010--WILLIAMS_COAL_SEAM_GAS_ROYALTY_TRUST.html'">895007--3/31/2010--WILLIAMS_COAL_SEAM_GAS_ROYALTY_TRUST</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1180145--2-24-2009--REPLIDYNE_INC.html'">1180145--2/24/2009--REPLIDYNE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/62362--9-27-2010--MARINE_PETROLEUM_TRUST.html'">62362--9/27/2010--MARINE_PETROLEUM_TRUST</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

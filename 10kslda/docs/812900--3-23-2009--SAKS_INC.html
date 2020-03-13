@@ -1,0 +1,178 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[3.9470880364, "../topics/{condition,_economic,_financial}.html", "{condition,_economic,_financial}"], [2.9363063375, "../topics/{operation,_natural,_condition}.html", "{operation,_natural,_condition}"], [1.80052935, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [1.7742991216, "../topics/{loan,_real,_estate}.html", "{loan,_real,_estate}"], [1.7340072962, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"], [1.7217055569, "../topics/{system,_service,_information}.html", "{system,_service,_information}"], [1.7185844215, "../topics/{competitive,_industry,_competition}.html", "{competitive,_industry,_competition}"], [1.695283066, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [1.6756927291, "../topics/{debt,_indebtedness,_cash}.html", "{debt,_indebtedness,_cash}"], [1.5285788201, "../topics/{product,_market,_service}.html", "{product,_market,_service}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>812900--3/23/2009--SAKS_INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">812900--3/23/2009--SAKS_INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{condition,_economic,_financial}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{condition,_economic,_financial}.html'">{condition, economic, financial}</td></tr>
+<tr class="list"><td id="{operation,_natural,_condition}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_natural,_condition}.html'">{operation, natural, condition}</td></tr>
+<tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{loan,_real,_estate}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{loan,_real,_estate}.html'">{loan, real, estate}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+<tr class="list"><td id="{system,_service,_information}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{system,_service,_information}.html'">{system, service, information}</td></tr>
+<tr class="list"><td id="{competitive,_industry,_competition}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{competitive,_industry,_competition}.html'">{competitive, industry, competition}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{debt,_indebtedness,_cash}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{debt,_indebtedness,_cash}.html'">{debt, indebtedness, cash}</td></tr>
+<tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    A decline in the demand for luxury goods due to deteriorating macroeconomic conditions has had and could continue to have an adverse impact on the Company s results of operations.
+Poor economic conditions have affected and may continue to affect consumer spending which has harmed and may continue to significantly harm the Company s business.
+The Company is restricted in its ability to incur additional debt which may affect its ability to adequately finance its operations.
+We are unable to predict the impact of the recent downturn in the credit markets and the resulting costs or constraints in obtaining financing on our business and financial results.
+The Company is dependent on its relationships with certain designers, vendors and other sources of merchandise.
+The Company s business and results of operations may be adversely affected by weather conditions and natural disasters.
+The Company s business is intensely competitive and increased or new competition could have a material adverse effect on the Company.
+The Company faces risks associated with consumer preferences, demand and fashion trends.
+The Company faces a number of risks in opening new stores.
+The loss of, or disruption in, the Company s centralized distribution centers would have a material adverse effect on the Company s business and operations.
+Loss of the Company s trademarks and service marks or damage to the Company s brand could have a material adverse effect on the Company s results of operations.
+Fluctuations in foreign currency could have an adverse impact on the Company s business.
+A privacy breach could adversely affect the Company s business.
+Ownership and leasing of significant amounts of real estate exposes the Company to possible liabilities and losses.
+<p><a href="http://www.sec.gov/Archives/edgar/data/812900/0001193125-09-061056.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/812900--3-18-2010--SAKS_INC.html'">812900--3/18/2010--SAKS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/862923--3-25-2010--ML_LIFE_INSURANCE_CO_OF_NEW_YORK.html'">862923--3/25/2010--ML_LIFE_INSURANCE_CO_OF_NEW_YORK</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/4828--11-29-2007--AMERICAN_CRYSTAL_SUGAR_CO_-MN-.html'">4828--11/29/2007--AMERICAN_CRYSTAL_SUGAR_CO_/MN/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/764401--11-30-2010--INSTEEL_INDUSTRIES_INC.html'">764401--11/30/2010--INSTEEL_INDUSTRIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/4828--11-29-2006--AMERICAN_CRYSTAL_SUGAR_CO_-MN-.html'">4828--11/29/2006--AMERICAN_CRYSTAL_SUGAR_CO_/MN/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/8855--3-31-2010--AMERICAN_LOCKER_GROUP_INC.html'">8855--3/31/2010--AMERICAN_LOCKER_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/85974--2-28-2008--RYLAND_GROUP_INC.html'">85974--2/28/2008--RYLAND_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/40729--3-28-2006--GENERAL_MOTORS_ACCEPTANCE_CORP.html'">40729--3/28/2006--GENERAL_MOTORS_ACCEPTANCE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/85974--2-25-2009--RYLAND_GROUP_INC.html'">85974--2/25/2009--RYLAND_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1396009--3-2-2009--Vulcan_Materials_CO.html'">1396009--3/2/2009--Vulcan_Materials_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/85974--2-26-2010--RYLAND_GROUP_INC.html'">85974--2/26/2010--RYLAND_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1084242--3-16-2006--YANKEE_CANDLE_CO_INC.html'">1084242--3/16/2006--YANKEE_CANDLE_CO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/85974--2-24-2006--RYLAND_GROUP_INC.html'">85974--2/24/2006--RYLAND_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/22356--2-26-2009--COMMERCE_BANCSHARES_INC_-MO-.html'">22356--2/26/2009--COMMERCE_BANCSHARES_INC_/MO/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/862923--3-27-2008--ML_LIFE_INSURANCE_CO_OF_NEW_YORK.html'">862923--3/27/2008--ML_LIFE_INSURANCE_CO_OF_NEW_YORK</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1024725--3-15-2006--TENNECO_INC.html'">1024725--3/15/2006--TENNECO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1008579--3-31-2009--HIGHLANDS_BANKSHARES_INC_-VA-.html'">1008579--3/31/2009--HIGHLANDS_BANKSHARES_INC_/VA/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1011308--3-13-2008--FOOTSTAR_INC.html'">1011308--3/13/2008--FOOTSTAR_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/85961--2-11-2009--RYDER_SYSTEM_INC.html'">85961--2/11/2009--RYDER_SYSTEM_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/350852--3-15-2006--COMMUNITY_TRUST_BANCORP_INC_-KY-.html'">350852--3/15/2006--COMMUNITY_TRUST_BANCORP_INC_/KY/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/716643--8-28-2009--REGIS_CORP.html'">716643--8/28/2009--REGIS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/830141--3-16-2006--PIONEER_COMPANIES_INC.html'">830141--3/16/2006--PIONEER_COMPANIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1181001--3-16-2007--ALLIANCE_BANKSHARES_CORP.html'">1181001--3/16/2007--ALLIANCE_BANKSHARES_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/18172--3-12-2009--CASTLE_A_M_&_CO.html'">18172--3/12/2009--CASTLE_A_M_&_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1392562--3-26-2008--LOUISIANA_BANCORP_INC.html'">1392562--3/26/2008--LOUISIANA_BANCORP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/919865--3-19-2007--FENTURA_FINANCIAL_INC.html'">919865--3/19/2007--FENTURA_FINANCIAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1302244--4-2-2007--Valley_Commerce_Bancorp.html'">1302244--4/2/2007--Valley_Commerce_Bancorp</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/764858--9-27-2007--FOUNTAIN_POWERBOAT_INDUSTRIES_INC.html'">764858--9/27/2007--FOUNTAIN_POWERBOAT_INDUSTRIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/845091--3-29-2006--MERRILL_LYNCH_LIFE_INSURANCE_CO.html'">845091--3/29/2006--MERRILL_LYNCH_LIFE_INSURANCE_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/862923--3-26-2009--ML_LIFE_INSURANCE_CO_OF_NEW_YORK.html'">862923--3/26/2009--ML_LIFE_INSURANCE_CO_OF_NEW_YORK</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

@@ -1,0 +1,179 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[4.578406108, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"], [3.368396118, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [2.697134329, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [2.0127027814, "../topics/{provision,_law,_control}.html", "{provision,_law,_control}"], [1.7938919288, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [1.6967242169, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [1.6212949338, "../topics/{cost,_regulation,_environmental}.html", "{cost,_regulation,_environmental}"], [1.5767311849, "../topics/{financial,_litigation,_operation}.html", "{financial,_litigation,_operation}"], [1.2240692346, "../topics/{stock,_price,_share}.html", "{stock,_price,_share}"], [1.0669452299, "../topics/{competitive,_industry,_competition}.html", "{competitive,_industry,_competition}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>716314--6/3/2008--GRAHAM_CORP</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">716314--6/3/2008--GRAHAM_CORP</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+<tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{provision,_law,_control}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{provision,_law,_control}.html'">{provision, law, control}</td></tr>
+<tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{cost,_regulation,_environmental}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_regulation,_environmental}.html'">{cost, regulation, environmental}</td></tr>
+<tr class="list"><td id="{financial,_litigation,_operation}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{financial,_litigation,_operation}.html'">{financial, litigation, operation}</td></tr>
+<tr class="list"><td id="{stock,_price,_share}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_share}.html'">{stock, price, share}</td></tr>
+<tr class="list"><td id="{competitive,_industry,_competition}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{competitive,_industry,_competition}.html'">{competitive, industry, competition}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    We are subject to foreign currency fluctuations which may adversely affect our operating results.
+If we fail to introduce enhancements to our existing products or to keep abreast of technological changes in our markets, our business and results of operations could be adversely affected.
+The loss of any key management personnel and our inability to replace them with qualified management personnel could harm our business.
+Our business is highly competitive. If we are unable to successfully implement our business strategy, we risk losing market share to current and future competitors.
+If we are unable to make necessary capital investments or respond to pricing pressures, our business may be harmed.
+If third parties infringe our intellectual property or if we were to infringe the intellectual property of third parties, we may expend significant resources enforcing or defending our rights or suffer competitive injury.
+A decrease in supply or increase in cost of the materials used in our products could harm our profitability.
+If we are unable to effectively outsource a portion of our production during times when we are experiencing strong demand, our results of operations might be adversely affected. In addition, outsourcing may negatively affect our profit margins.
+We face potential liability from asbestos exposure and similar claims.
+Risks related to operating a subsidiary in China
+The operations of our Chinese subsidiary may be adversely affected by China s evolving economic, political and social conditions.
+Intellectual property rights are difficult to enforce in China.
+Uncertainties with respect to the Chinese legal system may adversely affect the operations of our Chinese subsidiary.
+Risks related to the ownership of our common stock
+Provisions contained in our certificate of incorporation, bylaws and our stockholder rights plan could impair or delay stockholders ability to change our management and could discourage takeover transactions that our stockholders might consider to be in their best interests.
+<p><a href="http://www.sec.gov/Archives/edgar/data/716314/0000950134-08-010593.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/716314--6-5-2007--GRAHAM_CORP.html'">716314--6/5/2007--GRAHAM_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/716314--6-8-2006--GRAHAM_CORP.html'">716314--6/8/2006--GRAHAM_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/14693--6-28-2007--BROWN_FORMAN_CORP.html'">14693--6/28/2007--BROWN_FORMAN_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/104169--3-29-2006--WAL_MART_STORES_INC.html'">104169--3/29/2006--WAL_MART_STORES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/708850--8-28-2009--DIONEX_CORP_-DE.html'">708850--8/28/2009--DIONEX_CORP_/DE</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/14693--6-29-2006--BROWN_FORMAN_CORP.html'">14693--6/29/2006--BROWN_FORMAN_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/789933--3-1-2006--NACCO_INDUSTRIES_INC.html'">789933--3/1/2006--NACCO_INDUSTRIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/215419--3-9-2006--CHECKPOINT_SYSTEMS_INC.html'">215419--3/9/2006--CHECKPOINT_SYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/20--3-13-2009--K_TRON_INTERNATIONAL_INC.html'">20--3/13/2009--K_TRON_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/716314--5-25-2010--GRAHAM_CORP.html'">716314--5/25/2010--GRAHAM_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/20--3-15-2010--K_TRON_INTERNATIONAL_INC.html'">20--3/15/2010--K_TRON_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1173489--3-14-2008--CEVA__INC.html'">1173489--3/14/2008--CEVA__INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/932696--2-25-2010--INSIGHT_ENTERPRISES_INC.html'">932696--2/25/2010--INSIGHT_ENTERPRISES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/352363--3-13-2008--CLAIBORNE_LIZ_INC.html'">352363--3/13/2008--CLAIBORNE_LIZ_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/828064--3-28-2007--ROCKFORD_CORP.html'">828064--3/28/2007--ROCKFORD_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/887730--5-25-2010--KEMET_CORP.html'">887730--5/25/2010--KEMET_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1173514--3-1-2006--NMHG_HOLDING_CO.html'">1173514--3/1/2006--NMHG_HOLDING_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/796343--2-5-2007--ADOBE_SYSTEMS_INC.html'">796343--2/5/2007--ADOBE_SYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/790818--3-18-2010--X_RITE_INC.html'">790818--3/18/2010--X_RITE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/796343--1-24-2008--ADOBE_SYSTEMS_INC.html'">796343--1/24/2008--ADOBE_SYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/29905--2-19-2010--DOVER_CORP.html'">29905--2/19/2010--DOVER_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/860543--6-28-2007--ASIA_PREMIUM_TELEVISION_GROUP.html'">860543--6/28/2007--ASIA_PREMIUM_TELEVISION_GROUP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/796343--2-8-2006--ADOBE_SYSTEMS_INC.html'">796343--2/8/2006--ADOBE_SYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/67279--3-31-2009--MOCON_INC.html'">67279--3/31/2009--MOCON_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1160858--3-11-2009--TRUE_RELIGION_APPAREL_INC.html'">1160858--3/11/2009--TRUE_RELIGION_APPAREL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/860543--12-31-2007--ASIA_PREMIUM_TELEVISION_GROUP.html'">860543--12/31/2007--ASIA_PREMIUM_TELEVISION_GROUP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/945989--3-31-2006--ASTEA_INTERNATIONAL_INC.html'">945989--3/31/2006--ASTEA_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1065837--2-29-2008--SKECHERS_USA_INC.html'">1065837--2/29/2008--SKECHERS_USA_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1037115--3-31-2010--ORBIT_FR_INC.html'">1037115--3/31/2010--ORBIT_FR_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/352363--2-23-2010--CLAIBORNE_LIZ_INC.html'">352363--2/23/2010--CLAIBORNE_LIZ_INC</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

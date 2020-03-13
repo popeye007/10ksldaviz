@@ -1,0 +1,187 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[8.6210732265, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [3.7485537093, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"], [3.5683053765, "../topics/{condition,_economic,_financial}.html", "{condition,_economic,_financial}"], [2.6963897589, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [2.5790593147, "../topics/{control,_financial,_internal}.html", "{control,_financial,_internal}"], [1.7362997717, "../topics/{system,_service,_information}.html", "{system,_service,_information}"], [1.7078863656, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [1.7005515175, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [1.6997417505, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [1.6977098388, "../topics/{product,_liability,_claim}.html", "{product,_liability,_claim}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>1324570--3/21/2006--Volcom_Inc</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">1324570--3/21/2006--Volcom_Inc</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+<tr class="list"><td id="{condition,_economic,_financial}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{condition,_economic,_financial}.html'">{condition, economic, financial}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{control,_financial,_internal}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{control,_financial,_internal}.html'">{control, financial, internal}</td></tr>
+<tr class="list"><td id="{system,_service,_information}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{system,_service,_information}.html'">{system, service, information}</td></tr>
+<tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{product,_liability,_claim}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_liability,_claim}.html'">{product, liability, claim}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    Our business could be harmed if we fail to maintain proper inventory levels.
+If we are unable to maintain and expand our endorsements by professional athletes, our ability to market and sell our products may be harmed.
+We may be adversely affected by the discontinuance of our licensing relationship in Europe.
+If we fail to secure or protect our intellectual property rights, counterfeiters may be able to copy and sell imitations of our products and competitors may be able to use our designs, each of which could harm our reputation, reduce our revenues and increase our costs.
+Our current executive officers and management personnel are critical to our success, and the loss of these individuals could harm our business, brand and image.
+Our ability to attract and retain qualified design and sales and marketing personnel is critical to our success, and any inability to attract and retain such personnel could harm our business.
+One retail customer represents a material amount of our revenues, and the loss of this retail customer or reduced purchases from this retail customer may have a material adverse effect on our operating results.
+We do not have long-term contracts with any of our retailers, and the loss of orders for our products from our retailers may have a material adverse effect on our operating results.
+Any inability to receive timely deliveries from our manufacturers could harm our business.
+If the United States continues to impose tariffs and import quota restrictions on products manufactured in China and we are unable to obtain sufficient product from countries other than China or from domestic sources, or if the products we obtain from these other countries or domestic sources are of insufficient quality, it could materially affect our gross margin and financial performance.
+Any shortage of raw materials could impair our ability to ship orders of our products in a cost-efficient manner or could cause us to miss the delivery requirements of our customers, which could harm our business.
+If we are required to establish new manufacturing relationships due to the termination of current key manufacturing relationships with large contractors such as Ningbo Jehson Textiles and China Ningbo CIXI (Dragon Crowd), we would likely experience increased costs, disruptions in the manufacture and shipment of our products and a loss of revenue.
+Our business could suffer if any of our or our licensees key manufacturers fails to use acceptable labor practices.
+We may not be able to compete effectively, which could cause our revenues and market share to decline.
+We may be adversely affected by the financial condition of our retailers.
+Changes in the mix of retailers to whom we distribute our products could impact our gross margin and brand image, which could have a material adverse effect on our results of operations.
+Our revenues and operating income fluctuate on a seasonal basis and decreases in sales or margins during our peak seasons could have a disproportionate effect on our overall financial condition and results of operations.
+Cyclical trends in apparel retailing could have a material adverse effect on our results of operations.
+We face business, political, operational, financial and economic risks because a portion of our revenues are from international customers, substantially all of our products are sourced overseas and our licensees operate outside of the United States.
+Fluctuations in foreign currency exchange rates could harm our results of operations.
+We will continue to incur significant expenses as a result of being a public company, which may negatively impact our financial performance.
+Our internal controls over financial reporting may not be considered effective, which could result in a loss of investor confidence in our financial reports and in turn have an adverse effect on our stock price.
+If the ownership of our common stock continues to be highly concentrated, it may prevent you and other stockholders from influencing significant corporate decisions and may result in conflicts of interest that could cause our stock price to decline.
+<p><a href="http://www.sec.gov/Archives/edgar/data/1324570/0000950134-06-005550.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/52971--9-28-2007--JACO_ELECTRONICS_INC.html'">52971--9/28/2007--JACO_ELECTRONICS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/72573--3-30-2007--MOVADO_GROUP_INC.html'">72573--3/30/2007--MOVADO_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/845434--3-12-2007--INFOCUS_CORP.html'">845434--3/12/2007--INFOCUS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/845434--6-26-2006--INFOCUS_CORP.html'">845434--6/26/2006--INFOCUS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/752431--5-22-2009--NETWORK_EQUIPMENT_TECHNOLOGIES_INC.html'">752431--5/22/2009--NETWORK_EQUIPMENT_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/718096--6-29-2007--COSMO_COMMUNICATIONS_CORP.html'">718096--6/29/2007--COSMO_COMMUNICATIONS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/855658--3-13-2009--LATTICE_SEMICONDUCTOR_CORP.html'">855658--3/13/2009--LATTICE_SEMICONDUCTOR_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/718096--6-30-2008--COSMO_COMMUNICATIONS_CORP.html'">718096--6/30/2008--COSMO_COMMUNICATIONS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/872448--3-1-2010--ATMEL_CORP.html'">872448--3/1/2010--ATMEL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/38264--12-8-2010--FORWARD_INDUSTRIES_INC.html'">38264--12/8/2010--FORWARD_INDUSTRIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/78239--3-31-2010--PHILLIPS_VAN_HEUSEN_CORP_-DE-.html'">78239--3/31/2010--PHILLIPS_VAN_HEUSEN_CORP_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/703361--6-15-2006--INTEGRATED_DEVICE_TECHNOLOGY_INC.html'">703361--6/15/2006--INTEGRATED_DEVICE_TECHNOLOGY_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/820774--1-16-2007--ASHWORTH_INC.html'">820774--1/16/2007--ASHWORTH_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/855658--3-13-2008--LATTICE_SEMICONDUCTOR_CORP.html'">855658--3/13/2008--LATTICE_SEMICONDUCTOR_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1061393--2-13-2008--CH_ENERGY_GROUP_INC.html'">1061393--2/13/2008--CH_ENERGY_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1104042--3-8-2007--ADVANCED_ANALOGIC_TECHNOLOGIES_INC.html'">1104042--3/8/2007--ADVANCED_ANALOGIC_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/872448--2-29-2008--ATMEL_CORP.html'">872448--2/29/2008--ATMEL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/753568--6-12-2006--EXAR_CORP.html'">753568--6/12/2006--EXAR_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1002135--5-27-2010--WESTELL_TECHNOLOGIES_INC.html'">1002135--5/27/2010--WESTELL_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1104042--3-4-2008--ADVANCED_ANALOGIC_TECHNOLOGIES_INC.html'">1104042--3/4/2008--ADVANCED_ANALOGIC_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/741696--1-12-2009--APPLIED_SIGNAL_TECHNOLOGY_INC.html'">741696--1/12/2009--APPLIED_SIGNAL_TECHNOLOGY_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1366246--3-13-2009--GLU_MOBILE_INC.html'">1366246--3/13/2009--GLU_MOBILE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1061393--2-10-2009--CENTRAL_HUDSON_GAS_&_ELECTRIC_CORP.html'">1061393--2/10/2009--CENTRAL_HUDSON_GAS_&_ELECTRIC_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1035884--3-1-2007--COMMSCOPE_INC.html'">1035884--3/1/2007--COMMSCOPE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/61004--3-31-2009--LGL_GROUP_INC.html'">61004--3/31/2009--LGL_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/752431--5-25-2007--NETWORK_EQUIPMENT_TECHNOLOGIES_INC.html'">752431--5/25/2007--NETWORK_EQUIPMENT_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/752431--6-13-2006--NETWORK_EQUIPMENT_TECHNOLOGIES_INC.html'">752431--6/13/2006--NETWORK_EQUIPMENT_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/854701--12-15-2008--INTEGRATED_SILICON_SOLUTION_INC.html'">854701--12/15/2008--INTEGRATED_SILICON_SOLUTION_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/914329--2-19-2010--FEI_CO.html'">914329--2/19/2010--FEI_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1161963--3-15-2006--AMIS_HOLDINGS_INC.html'">1161963--3/15/2006--AMIS_HOLDINGS_INC</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

@@ -1,0 +1,196 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[4.5873750818, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [4.2885186256, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [4.2172953287, "../topics/{stock,_price,_share}.html", "{stock,_price,_share}"], [4.0497527153, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [3.7568524393, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [2.8522069285, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"], [2.8494818043, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"], [2.7497142109, "../topics/{regulation,_change,_law}.html", "{regulation,_change,_law}"], [1.6808387729, "../topics/{tax,_income,_asset}.html", "{tax,_income,_asset}"], [1.5241346011, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [1.4500765854, "../topics/{financial,_litigation,_operation}.html", "{financial,_litigation,_operation}"], [1.2648930745, "../topics/{cost,_operation,_labor}.html", "{cost,_operation,_labor}"], [1.0645656805, "../topics/{condition,_economic,_financial}.html", "{condition,_economic,_financial}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>865917--1/29/2007--VERSANT_CORP</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">865917--1/29/2007--VERSANT_CORP</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{stock,_price,_share}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_share}.html'">{stock, price, share}</td></tr>
+<tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+<tr class="list"><td id="{regulation,_change,_law}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_change,_law}.html'">{regulation, change, law}</td></tr>
+<tr class="list"><td id="{tax,_income,_asset}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{tax,_income,_asset}.html'">{tax, income, asset}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{financial,_litigation,_operation}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{financial,_litigation,_operation}.html'">{financial, litigation, operation}</td></tr>
+<tr class="list"><td id="{cost,_operation,_labor}" onmouseover="highlight(11)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_operation,_labor}.html'">{cost, operation, labor}</td></tr>
+<tr class="list"><td id="{condition,_economic,_financial}" onmouseover="highlight(12)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{condition,_economic,_financial}.html'">{condition, economic, financial}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    Risks Related to Our Business
+We are dependent on a limited number of products, especially Versant Object Database.
+Our quarterly revenue levels are not predictable.
+We may not be able to manage costs effectively given the unpredictability of our revenues.
+Our future revenues are substantially dependent upon our installed customers continuing to license Versant products and renewing maintenance agreements for our products; our future professional services and maintenance revenues are dependent on future sales of our software products.
+Our customer concentration increases the potential volatility of our operating results.
+Reduced demand for our products and services may prevent us from achieving targeted revenues and profitability.
+We have limited working capital and may experience difficulty in obtaining needed funding, which may limit our ability to effectively pursue our business strategies.
+We rely for revenues on the technology, telecommunications and defense industries, and these industries are characterized by complexity, intense competition and changes in purchasing cycles.
+We depend increasingly on our international operations for our revenues as North American revenues have declined.
+International Operations pose unique risks.
+In order to be successful, Versant must attract, retain and motivate key employees and failure to do so could seriously harm the Company.
+Our personnel, management team and operations are located in different countries and as a result, we may experience difficulty in coordinating our activities and successfully implementing Company goals.
+Our products have a lengthy sales cycle.
+We are subject to litigation and the risk of future litigation.
+We will incur increased costs as a result of recently enacted laws and regulations relating to corporate governance matters and public disclosure.
+The requirement to account for stock options we grant as compensation expense reduce our net income and our earnings per share, and may result in or increase losses.
+Adoption and application of accounting regulations and related interpretations and policies regarding revenue recognition could cause us to defer recognition of revenue or recognize lower revenues and profits.
+Charges to earnings resulting from the application of the purchase method of accounting for the merger with Poet and FastObjects may adversely affect the market value of our common stock.
+Risks Related to Our Industry
+Our products face significant competition.
+We depend on successful technology development.
+We depend on our personnel, for whom competition is intense.
+We must protect our intellectual property.
+We may be subject to claims of intellectual property infringement.
+Risks Related to our Stock
+Our common stock is listed on the NASDAQ Capital Market.
+We may engage in future acquisitions that dilute our shareholders and cause us to incur debt or assume contingent liabilities.
+Our stock price is volatile.
+<p><a href="http://www.sec.gov/Archives/edgar/data/865917/0001104659-07-005441.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/865917--1-29-2008--VERSANT_CORP.html'">865917--1/29/2008--VERSANT_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/865917--1-14-2009--VERSANT_CORP.html'">865917--1/14/2009--VERSANT_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/32198--4-3-2006--EMS_TECHNOLOGIES_INC.html'">32198--4/3/2006--EMS_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/865917--1-29-2010--VERSANT_CORP.html'">865917--1/29/2010--VERSANT_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/32198--3-17-2008--EMS_TECHNOLOGIES_INC.html'">32198--3/17/2008--EMS_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/32198--3-16-2009--EMS_TECHNOLOGIES_INC.html'">32198--3/16/2009--EMS_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/32198--3-31-2010--EMS_TECHNOLOGIES_INC.html'">32198--3/31/2010--EMS_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1371489--3-8-2010--Information_Services_Group_Inc..html'">1371489--3/8/2010--Information_Services_Group_Inc.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/56978--12-11-2008--KULICKE_&_SOFFA_INDUSTRIES_INC.html'">56978--12/11/2008--KULICKE_&_SOFFA_INDUSTRIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1118037--3-14-2007--MATHSTAR_INC.html'">1118037--3/14/2007--MATHSTAR_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1173489--3-16-2007--CEVA__INC.html'">1173489--3/16/2007--CEVA__INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1173489--3-14-2006--CEVA__INC.html'">1173489--3/14/2006--CEVA__INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/869986--6-29-2009--ADVANCED_PHOTONIX_INC.html'">869986--6/29/2009--ADVANCED_PHOTONIX_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1050180--3-17-2008--PHASE_FORWARD_INC.html'">1050180--3/17/2008--PHASE_FORWARD_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/56978--12-11-2007--KULICKE_&_SOFFA_INDUSTRIES_INC.html'">56978--12/11/2007--KULICKE_&_SOFFA_INDUSTRIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/897067--3-15-2006--CYMER_INC.html'">897067--3/15/2006--CYMER_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/932372--4-15-2009--Orange_21_Inc..html'">932372--4/15/2009--Orange_21_Inc.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1054374--2-3-2010--BROADCOM_CORP.html'">1054374--2/3/2010--BROADCOM_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1050180--2-26-2010--Phase_Forward_Inc.html'">1050180--2/26/2010--Phase_Forward_Inc</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1031028--9-14-2009--GLOBECOMM_SYSTEMS_INC.html'">1031028--9/14/2009--GLOBECOMM_SYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1050180--2-27-2009--Phase_Forward_Inc.html'">1050180--2/27/2009--Phase_Forward_Inc</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/932372--3-26-2010--Orange_21_Inc..html'">932372--3/26/2010--Orange_21_Inc.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/712515--5-30-2007--ELECTRONIC_ARTS_INC.html'">712515--5/30/2007--ELECTRONIC_ARTS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/830916--12-9-2008--MULTI_FINELINE_ELECTRONIX_INC.html'">830916--12/9/2008--MULTI_FINELINE_ELECTRONIX_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1050180--3-1-2007--PHASE_FORWARD_INC.html'">1050180--3/1/2007--PHASE_FORWARD_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1057709--5-2-2006--CARREKER_CORP.html'">1057709--5/2/2006--CARREKER_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/712515--5-23-2008--ELECTRONIC_ARTS_INC..html'">712515--5/23/2008--ELECTRONIC_ARTS_INC.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1095600--6-7-2010--BLUE_COAT_SYSTEMS_INC.html'">1095600--6/7/2010--BLUE_COAT_SYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1065860--3-21-2006--ELECTRIC_CITY_CORP.html'">1065860--3/21/2006--ELECTRIC_CITY_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1031028--9-15-2008--GLOBECOMM_SYSTEMS_INC.html'">1031028--9/15/2008--GLOBECOMM_SYSTEMS_INC</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

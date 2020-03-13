@@ -1,0 +1,232 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[15.1471497403, "../topics/{stock,_price,_share}.html", "{stock,_price,_share}"], [12.1552698432, "../topics/{investment,_property,_distribution}.html", "{investment,_property,_distribution}"], [7.7291687927, "../topics/{loan,_real,_estate}.html", "{loan,_real,_estate}"], [4.4334714662, "../topics/{financial,_litigation,_operation}.html", "{financial,_litigation,_operation}"], [2.7568526548, "../topics/{provision,_law,_control}.html", "{provision,_law,_control}"], [2.7224940721, "../topics/{condition,_economic,_financial}.html", "{condition,_economic,_financial}"], [2.6597726262, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [2.4326113156, "../topics/{interest,_director,_officer}.html", "{interest,_director,_officer}"], [2.4090148784, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [2.3563225546, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"], [2.262744101, "../topics/{system,_service,_information}.html", "{system,_service,_information}"], [1.9145249212, "../topics/{regulation,_government,_change}.html", "{regulation,_government,_change}"], [1.7528464428, "../topics/{debt,_indebtedness,_cash}.html", "{debt,_indebtedness,_cash}"], [1.738835373, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"], [1.7227723187, "../topics/{loss,_insurance,_financial}.html", "{loss,_insurance,_financial}"], [1.7170162901, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [1.7068983941, "../topics/{competitive,_industry,_competition}.html", "{competitive,_industry,_competition}"], [1.6974549053, "../topics/{cost,_regulation,_environmental}.html", "{cost,_regulation,_environmental}"], [1.5733816145, "../topics/{capital,_credit,_financial}.html", "{capital,_credit,_financial}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>216039--3/16/2010--GRUBB_&_ELLIS_CO</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">216039--3/16/2010--GRUBB_&_ELLIS_CO</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{stock,_price,_share}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_share}.html'">{stock, price, share}</td></tr>
+<tr class="list"><td id="{investment,_property,_distribution}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{investment,_property,_distribution}.html'">{investment, property, distribution}</td></tr>
+<tr class="list"><td id="{loan,_real,_estate}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{loan,_real,_estate}.html'">{loan, real, estate}</td></tr>
+<tr class="list"><td id="{financial,_litigation,_operation}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{financial,_litigation,_operation}.html'">{financial, litigation, operation}</td></tr>
+<tr class="list"><td id="{provision,_law,_control}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{provision,_law,_control}.html'">{provision, law, control}</td></tr>
+<tr class="list"><td id="{condition,_economic,_financial}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{condition,_economic,_financial}.html'">{condition, economic, financial}</td></tr>
+<tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{interest,_director,_officer}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{interest,_director,_officer}.html'">{interest, director, officer}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+<tr class="list"><td id="{system,_service,_information}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{system,_service,_information}.html'">{system, service, information}</td></tr>
+<tr class="list"><td id="{regulation,_government,_change}" onmouseover="highlight(11)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_government,_change}.html'">{regulation, government, change}</td></tr>
+<tr class="list"><td id="{debt,_indebtedness,_cash}" onmouseover="highlight(12)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{debt,_indebtedness,_cash}.html'">{debt, indebtedness, cash}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(13)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+<tr class="list"><td id="{loss,_insurance,_financial}" onmouseover="highlight(14)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{loss,_insurance,_financial}.html'">{loss, insurance, financial}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(15)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{competitive,_industry,_competition}" onmouseover="highlight(16)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{competitive,_industry,_competition}.html'">{competitive, industry, competition}</td></tr>
+<tr class="list"><td id="{cost,_regulation,_environmental}" onmouseover="highlight(17)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_regulation,_environmental}.html'">{cost, regulation, environmental}</td></tr>
+<tr class="list"><td id="{capital,_credit,_financial}" onmouseover="highlight(18)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{capital,_credit,_financial}.html'">{capital, credit, financial}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    The ongoing adverse conditions in the credit markets and the risk of continued market deterioration have adversely affected the Company s revenues, expenses and operating results and may continue to do so.
+We experienced additional, unanticipated costs and may have additional risk and further costs as a result of the restatement of our financial statements.
+The Company s ability to access credit and capital markets may be adversely affected by factors beyond its control, including turmoil in the financial services industry, volatility in financial markets and general economic downturns.
+We have received a notice from the NYSE that we did not meet its continued listing requirements. If we are unable to rectify this non-compliance in accordance with NYSE rules, our common stock will be delisted from trading on the NYSE, which could have a material adverse effect on the liquidity and value of our common stock.
+The TIC business in general, from which the Company has historically generated significant revenues, materially contracted in 2009.
+The decline in value of many of the properties purchased by TIC and real estate fund investors in the Company s sponsored programs as a result of the downturn in the real estate market, and the potential loss of investor equity in these programs, may negatively affect the Company s reputation and ability to sell future sponsored programs.
+The Company is in a highly competitive business with numerous competitors, some of which may have greater financial and operational resources than it does.
+As a service-oriented company, the Company depends upon the retention of senior management and key personnel, and the loss of its current personnel or its failure to hire and retain additional personnel could harm its business.
+The Company may expand its business to include international operations so that it may be more competitive, but in doing so it could subject the Company to social, political and economic risks of doing business in foreign countries.
+Failure to manage any future growth effectively may have a material adverse effect on the Company s financial condition and results of operations.
+Risks Related to the Company s Transaction Services and Management Services Business
+The Company s quarterly operating results are likely to fluctuate due to the seasonal nature of its business and may fail to meet expectations, which may cause the price of its securities to decline.
+If the properties that the Company manages fail to perform, then its business and results of operations could be harmed.
+If the Company fails to comply with laws and regulations applicable to real estate brokerage and mortgage transactions and other business lines, then it may incur significant financial penalties.
+The Company may have liabilities in connection with real estate brokerage and property and facilities management activities.
+Environmental regulations may adversely impact the Company s business and/or cause the Company to incur costs for cleanup of hazardous substances or wastes or other environmental liabilities.
+Risks Related to the Company s Investment Management and Broker-Dealer Business
+Declines in asset value, reductions in distributions in investment programs or loss of properties to foreclosure could adversely affect the Company business, as it could cause harm to the Company s reputation, cause the loss of management contracts and third-party broker-dealer selling agreements, limit the Company s ability to sign future third-party broker-dealer selling agreements and potentially expose the Company to legal liability.
+The Company currently provides its Investment Management services primarily to its investment programs. Its revenue depends on the number of its programs, on the price of the properties acquired or disposed, and on the revenue generated by the properties under its management.
+The Company may be required to repay loans the Company guaranteed that were used to finance properties acquired by the Company s programs.
+The Company may be unable to grow its investment programs, which would cause it to fail to satisfy its business strategy.
+The revenue streams from the Company s management services for sponsored programs are subject to limitation or cancellation.
+The inability to access investors for the Company s programs through broker-dealers or other intermediaries could have a material adverse effect on its business.
+The termination of any of the Company s broker-dealer relationships, especially given the limited number of key broker-dealers, could have a material adverse effect on its business.
+Misconduct by third-party selling broker-dealers or the Company s sales force, could have a material adverse effect on its business.
+A significant amount of the Company s programs are structured to provide favorable tax treatment to investors or REITs. If a program fails to satisfy the requirements necessary to permit this favorable tax treatment, the Company could be subject to claims by investors and its reputation for structuring these transactions would be negatively affected, which would have an adverse effect on its financial condition and results of operations.
+Any future co-investment activities the Company undertakes could subject it to real estate investment risks which could lead to the need for substantial capital contributions, which may impact its cash flows and financial condition and, if it is unable to make them, could damage its reputation and result in adverse consequences to its holdings.
+Geographic concentration of program properties may expose the Company s programs to regional economic downturns that could adversely impact their operations and, as a result, the fees the Company is able to generate from them, including fees on disposition of the properties as the Company may be limited in its ability to dispose of properties in a challenging real estate market.
+If third-party managers providing property management services for the Company s programs office, medical office and healthcare related facilities, retail and multi-family properties are negligent in their performance of, or default on, their management obligations, the tenants may not renew their leases or the Company may become subject to unforeseen liabilities. If this occurs, it could have an adverse effect on the Company s financial condition and operating results.
+The Company or its new programs may be required to incur future indebtedness to raise sufficient funds to purchase properties.
+Future pressures to lower, waive or credit back the Company s fees could reduce the Company s revenue and profitability.
+Regulatory uncertainties related to the Company s broker-dealer services could harm the Company s business.
+The Company depends upon its programs tenants to pay rent, and their inability to pay rent may substantially reduce certain fees the Company receives which are based on gross rental amounts.
+Conflicts of interest inherent in transactions between the Company s programs and the Company, and among its programs, could create liability for the Company that could have a material adverse effect on its results of operations and financial condition.
+The offerings conducted to raise capital for the Company s TIC Programs are done in reliance on exemptions from the registration requirements of the Securities Act. A failure to satisfy the requirements for the appropriate exemption could void the offering or, if it is already completed, provide the investors with rescission rights, either of which would have a material adverse effect on the Company s reputation and as a result its business and results of operations.
+The inability to identify suitable refinance options may negatively impact investment program performance and cause harm to the Company s reputation, cause the loss of management contracts and third-party broker-dealer selling agreements, limit the Company s ability to sign future third-party broker-dealer selling agreements and potentially expose the Company to legal liability.
+An increase in interest rates may negatively affect the equity value of the Company s programs or cause the Company to lose potential investors to alternative investments, causing the fees the Company receives for transaction and management services to be reduced.
+Increasing competition for the acquisition of real estate may impede the Company s ability to make future acquisitions which would reduce the fees the Company generates from these programs and could adversely affect the Company s operating results and financial condition.
+Illiquidity of real estate investments could significantly impede the Company s ability to respond to adverse changes in the performance of the Company s programs properties and harm the Company s financial condition.
+Risks Related to the Company in General
+Delaware law and provisions of the Company s amended and restated certificate of incorporation and restated bylaws contain provisions that could delay, deter or prevent a change of control.
+The Company has the ability to issue blank check preferred stock, which could adversely affect the voting power and other rights of the holders of its common stock.
+The Company has registration rights outstanding, which could have a negative impact on its share price if exercised.
+Future sales of the Company s common stock could adversely affect its stock price.
+The Company is obligated to pay quarterly dividends with respect to its Preferred Stock.
+The 12% Preferred Stock will rank senior to the Company s common stock but junior to all of the Company s liabilities and the Company s subsidiaries liabilities, in the event of a bankruptcy, liquidation or winding-up.
+The market price of the 12% Preferred Stock will be directly affected by the market price of the Company s common stock, which may be volatile.
+There may be future sales or other dilution of our equity, which may adversely affect the market price of the Company s common stock or the 12% Preferred Stock and may negatively impact the holders investment.
+An active trading market for the 12% Preferred Stock does not exist and may not develop.
+The 12% Preferred Stock has not been rated.
+Holders of the 12% Preferred Stock do not have identical rights as holders of common stock until they acquire the common stock, but will be subject to all changes made with respect to the Company s common stock.
+The 12% Preferred Stock is perpetual in nature.
+The conversion rate of the 12% Preferred Stock may not be adjusted for all dilutive events that may adversely affect the market price of the 12% Preferred Stock or the common stock issuable upon conversion of the 12% Preferred Stock.
+A change in control with respect to the Company may not constitute a merger, consolidation or sale of assets or a fundamental change for the purpose of the 12% Preferred Stock.
+The Company may not have the funds necessary to repurchase the 12% Preferred Stock following a fundamental change.
+The adjustment to conversion rate in respect of conversions following certain change in control events may not adequately compensate the holder.
+If the Company s common stock is delisted, the holder s ability to transfer or sell the 12% Preferred Stock, or common stock upon conversion, may be limited and the market value of the 12% Preferred Stock will be adversely affected.
+Holders of the 12% Preferred Stock may be unable to use the dividends-received deduction.
+Uninsured and underinsured losses may adversely affect operations.
+<p><a href="http://www.sec.gov/Archives/edgar/data/216039/0000950123-10-025295.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/764038--3-16-2009--SCBT_FINANCIAL_CORP.html'">764038--3/16/2009--SCBT_FINANCIAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1130166--3-23-2006--XCYTE_THERAPIES_INC.html'">1130166--3/23/2006--XCYTE_THERAPIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/91576--3-1-2010--KEYCORP_-NEW-.html'">91576--3/1/2010--KEYCORP_/NEW/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/756502--2-26-2010--SKYTERRA_COMMUNICATIONS_INC.html'">756502--2/26/2010--SKYTERRA_COMMUNICATIONS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1331520--3-5-2010--HOME_BANCSHARES_INC.html'">1331520--3/5/2010--HOME_BANCSHARES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1053352--3-17-2010--HERITAGE_COMMERCE_CORP.html'">1053352--3/17/2010--HERITAGE_COMMERCE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/889423--3-12-2010--SATCON_TECHNOLOGY_CORP.html'">889423--3/12/2010--SATCON_TECHNOLOGY_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1169770--3-10-2010--FIRST_PACTRUST_BANCORP_INC.html'">1169770--3/10/2010--FIRST_PACTRUST_BANCORP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/315858--4-13-2010--BFC_FINANCIAL_CORP.html'">315858--4/13/2010--BFC_FINANCIAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1418730--3-17-2010--Industry_Concept_Holdings_Inc.html'">1418730--3/17/2010--Industry_Concept_Holdings_Inc</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/75439--5-17-2010--CytoCore_Inc.html'">75439--5/17/2010--CytoCore_Inc</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1456772--2-22-2010--Government_Properties_Income_Trust.html'">1456772--2/22/2010--Government_Properties_Income_Trust</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1222840--2-26-2010--INLAND_WESTERN_RETAIL_REAL_ESTATE_TRUST_INC.html'">1222840--2/26/2010--INLAND_WESTERN_RETAIL_REAL_ESTATE_TRUST_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1406251--2-8-2010--WESTERN_LIBERTY_BANCORP.html'">1406251--2/8/2010--WESTERN_LIBERTY_BANCORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1376231--4-14-2010--Soleil_Capital_L.P..html'">1376231--4/14/2010--Soleil_Capital_L.P.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/945394--2-24-2010--HOSPITALITY_PROPERTIES_TRUST.html'">945394--2/24/2010--HOSPITALITY_PROPERTIES_TRUST</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/740942--3-16-2010--TOWER_BANCORP_INC.html'">740942--3/16/2010--TOWER_BANCORP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/797167--4-17-2007--NATURADE_INC.html'">797167--4/17/2007--NATURADE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/106926--3-1-2010--WHITNEY_HOLDING_CORP.html'">106926--3/1/2010--WHITNEY_HOLDING_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1271073--3-15-2010--MODENA_I_INC.html'">1271073--3/15/2010--MODENA_I_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1046788--3-31-2010--HARRIS_PREFERRED_CAPITAL_CORP.html'">1046788--3/31/2010--HARRIS_PREFERRED_CAPITAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/93451--2-25-2010--STERLING_BANCORP.html'">93451--2/25/2010--STERLING_BANCORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/780053--2-18-2010--NATIONWIDE_HEALTH_PROPERTIES_INC.html'">780053--2/18/2010--NATIONWIDE_HEALTH_PROPERTIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1172852--3-15-2010--VCG_HOLDING_CORP.html'">1172852--3/15/2010--VCG_HOLDING_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/744126--7-27-2010--FIRST_CHESTER_COUNTY_CORP.html'">744126--7/27/2010--FIRST_CHESTER_COUNTY_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1259429--3-15-2010--TICC_Capital_Corp..html'">1259429--3/15/2010--TICC_Capital_Corp.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1331931--3-31-2010--Pet_DRx_CORP.html'">1331931--3/31/2010--Pet_DRx_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1088005--1-13-2010--NextMart_Inc..html'">1088005--1/13/2010--NextMart_Inc.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1411460--2-10-2010--UBIQUITECH_SOFTWARE_CORP.html'">1411460--2/10/2010--UBIQUITECH_SOFTWARE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1460290--5-3-2010--Alaska_Pacific_Energy_Corp.html'">1460290--5/3/2010--Alaska_Pacific_Energy_Corp</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

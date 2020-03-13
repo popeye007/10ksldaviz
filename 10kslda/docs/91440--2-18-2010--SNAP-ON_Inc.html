@@ -1,0 +1,192 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[4.5600213093, "../topics/{financial,_litigation,_operation}.html", "{financial,_litigation,_operation}"], [4.5029911667, "../topics/{condition,_economic,_financial}.html", "{condition,_economic,_financial}"], [4.2416611603, "../topics/{cost,_operation,_labor}.html", "{cost,_operation,_labor}"], [3.665752785, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [2.5030936316, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [2.1371168097, "../topics/{tax,_income,_asset}.html", "{tax,_income,_asset}"], [1.9804561969, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"], [1.9763452865, "../topics/{cost,_regulation,_environmental}.html", "{cost,_regulation,_environmental}"], [1.7619726789, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"], [1.6999544518, "../topics/{system,_service,_information}.html", "{system,_service,_information}"], [1.6964552217, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [1.6962358655, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [1.2601314306, "../topics/{cost,_contract,_operation}.html", "{cost,_contract,_operation}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>91440--2/18/2010--SNAP-ON_Inc</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">91440--2/18/2010--SNAP-ON_Inc</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{financial,_litigation,_operation}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{financial,_litigation,_operation}.html'">{financial, litigation, operation}</td></tr>
+<tr class="list"><td id="{condition,_economic,_financial}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{condition,_economic,_financial}.html'">{condition, economic, financial}</td></tr>
+<tr class="list"><td id="{cost,_operation,_labor}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_operation,_labor}.html'">{cost, operation, labor}</td></tr>
+<tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{tax,_income,_asset}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{tax,_income,_asset}.html'">{tax, income, asset}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+<tr class="list"><td id="{cost,_regulation,_environmental}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_regulation,_environmental}.html'">{cost, regulation, environmental}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+<tr class="list"><td id="{system,_service,_information}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{system,_service,_information}.html'">{system, service, information}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(11)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{cost,_contract,_operation}" onmouseover="highlight(12)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_contract,_operation}.html'">{cost, contract, operation}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    Economic conditions and world events could affect our operating results.
+Foreign operations are subject to currency exchange, political, economic and other risks that could adversely affect our business, financial condition, results of operations and cash flow.
+The performance of Snap-on s mobile van tool distribution business depends on the success of its franchisees.
+The effects of brand rationalization, dealership closures and/or financial difficulties in the automotive industry could impact our business and operating results.
+Raw material and energy price fluctuations and shortages (including steel and various fuel sources) could adversely affect the ability to obtain needed manufacturing materials and could adversely affect our results of operations.
+Our inability to provide acceptable financing alternatives to end-user customers and franchisees could adversely impact our operating results.
+Exposure to credit risks of customers and resellers may make it difficult to collect receivables and could adversely affect operating results and financial condition.
+Regulatory changes related to financial services operations could adversely affect operating results and financial condition.
+Instability and uncertainty in the credit and financial markets could adversely impact the availability of credit that we and our customers need to operate our businesses.
+We have increased our financial leverage, which could affect our operations and profitability.
+Failure to achieve expected investment returns on pension plan assets, as well as changes in interest rates, could adversely impact our results of operations, financial position and cash flow.
+The steps taken to restructure operations, rationalize operating footprint, lower operating expenses, and achieve greater efficiencies in the supply chain could disrupt business.
+Failure to maintain effective distribution of products and services could adversely impact revenue, gross margin and profitability.
+Risks associated with the disruption of manufacturing operations could adversely affect profitability or competitive position.
+The inability to continue to introduce new products that respond to customer needs and achieve market acceptance could result in lower revenues and reduced profitability.
+The global tool, equipment, and diagnostics and repair information industries are competitive.
+Product liability claims and litigation could affect our business, financial condition, results of operations and cash flow.
+Legal disputes could adversely affect our business, financial condition, results of operations and cash flow.
+Information technology infrastructure is critical to supporting business objectives; failure of our information technology infrastructure to operate effectively could adversely affect our business.
+The recognition of impairment charges on goodwill or other intangible assets would adversely impact future financial position and results of operations.
+Failure to adequately protect intellectual property could adversely affect our business.
+Our operations expose us to the risk of environmental liabilities, costs, litigation and violations that could adversely affect our financial condition, results of operations and reputation.
+The inability to successfully defend claims from taxing authorities could adversely affect our financial condition, results of operations and cash flow.
+Failure to attract and retain qualified personnel could lead to a loss of revenue and/or profitability.
+We may not successfully integrate businesses we acquire, which could have an adverse impact on our business, financial condition, results of operations and cash flow.
+<p><a href="http://www.sec.gov/Archives/edgar/data/91440/0001193125-10-033916.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/33769--6-26-2007--EVANS_BOB_FARMS_INC.html'">33769--6/26/2007--EVANS_BOB_FARMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/33769--6-24-2008--EVANS_BOB_FARMS_INC.html'">33769--6/24/2008--EVANS_BOB_FARMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/33769--7-12-2006--EVANS_BOB_FARMS_INC.html'">33769--7/12/2006--EVANS_BOB_FARMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/53669--11-23-2010--JOHNSON_CONTROLS_INC.html'">53669--11/23/2010--JOHNSON_CONTROLS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1091862--3-31-2006--Chemtura_CORP.html'">1091862--3/31/2006--Chemtura_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/315293--2-26-2010--AON_CORP.html'">315293--2/26/2010--AON_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/33769--6-29-2010--EVANS_BOB_FARMS_INC.html'">33769--6/29/2010--EVANS_BOB_FARMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/33769--6-23-2009--EVANS_BOB_FARMS_INC.html'">33769--6/23/2009--EVANS_BOB_FARMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/864233--3-12-2009--O_CHARLEYS_INC.html'">864233--3/12/2009--O_CHARLEYS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1024478--11-21-2008--ROCKWELL_AUTOMATION_INC.html'">1024478--11/21/2008--ROCKWELL_AUTOMATION_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/880266--2-27-2009--AGCO_CORP_-DE.html'">880266--2/27/2009--AGCO_CORP_/DE</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/68622--2-19-2009--QWEST_CORP.html'">68622--2/19/2009--QWEST_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/880266--2-26-2010--AGCO_CORP_-DE.html'">880266--2/26/2010--AGCO_CORP_/DE</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/18172--3-12-2010--CASTLE_A_M_&_CO.html'">18172--3/12/2010--CASTLE_A_M_&_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/53669--12-5-2006--JOHNSON_CONTROLS_INC.html'">53669--12/5/2006--JOHNSON_CONTROLS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1091862--3-17-2008--Chemtura_CORP.html'">1091862--3/17/2008--Chemtura_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/886206--11-14-2007--FRANKLIN_COVEY_CO.html'">886206--11/14/2007--FRANKLIN_COVEY_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/53669--11-25-2008--JOHNSON_CONTROLS_INC.html'">53669--11/25/2008--JOHNSON_CONTROLS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1183186--2-12-2010--NATIONAL_FINANCIAL_PARTNERS_CORP.html'">1183186--2/12/2010--NATIONAL_FINANCIAL_PARTNERS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/764478--4-29-2009--BEST_BUY_CO_INC.html'">764478--4/29/2009--BEST_BUY_CO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/887596--2-26-2010--CHEESECAKE_FACTORY_INC.html'">887596--2/26/2010--CHEESECAKE_FACTORY_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/89800--2-28-2007--SHERWIN_WILLIAMS_CO.html'">89800--2/28/2007--SHERWIN_WILLIAMS_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/829499--10-6-2006--INTERSTATE_BAKERIES_CORP-DE-.html'">829499--10/6/2006--INTERSTATE_BAKERIES_CORP/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/96638--2-28-2008--ADVANTA_CORP.html'">96638--2/28/2008--ADVANTA_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/100493--11-22-2010--TYSON_FOODS_INC.html'">100493--11/22/2010--TYSON_FOODS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/896156--8-19-2010--ETHAN_ALLEN_INTERIORS_INC.html'">896156--8/19/2010--ETHAN_ALLEN_INTERIORS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1102643--3-1-2007--USI_HOLDINGS_CORP.html'">1102643--3/1/2007--USI_HOLDINGS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/37472--9-15-2008--FLEXSTEEL_INDUSTRIES_INC.html'">37472--9/15/2008--FLEXSTEEL_INDUSTRIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/215419--2-26-2009--CHECKPOINT_SYSTEMS_INC.html'">215419--2/26/2009--CHECKPOINT_SYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/808450--12-30-2008--NAVISTAR_INTERNATIONAL_CORP.html'">808450--12/30/2008--NAVISTAR_INTERNATIONAL_CORP</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

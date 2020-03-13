@@ -1,0 +1,176 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[3.5292384488, "../topics/{operation,_natural,_condition}.html", "{operation,_natural,_condition}"], [1.8541586703, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"], [1.6990892793, "../topics/{condition,_economic,_financial}.html", "{condition,_economic,_financial}"], [1.6976014365, "../topics/{cost,_operation,_labor}.html", "{cost,_operation,_labor}"], [1.696715043, "../topics/{debt,_indebtedness,_cash}.html", "{debt,_indebtedness,_cash}"], [1.6962753202, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [1.695338629, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"], [1.6951798405, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [1.6918612785, "../topics/{system,_service,_information}.html", "{system,_service,_information}"], [1.3569639192, "../topics/{regulation,_change,_law}.html", "{regulation,_change,_law}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>6885--4/3/2007--STAGE_STORES_INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">6885--4/3/2007--STAGE_STORES_INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{operation,_natural,_condition}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_natural,_condition}.html'">{operation, natural, condition}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+<tr class="list"><td id="{condition,_economic,_financial}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{condition,_economic,_financial}.html'">{condition, economic, financial}</td></tr>
+<tr class="list"><td id="{cost,_operation,_labor}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_operation,_labor}.html'">{cost, operation, labor}</td></tr>
+<tr class="list"><td id="{debt,_indebtedness,_cash}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{debt,_indebtedness,_cash}.html'">{debt, indebtedness, cash}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+<tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{system,_service,_information}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{system,_service,_information}.html'">{system, service, information}</td></tr>
+<tr class="list"><td id="{regulation,_change,_law}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_change,_law}.html'">{regulation, change, law}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    The Company faces the risk of a highly competitive retail apparel industry, which may result in the loss of customers, increased spending on marketing and advertising and reduced revenues
+An economic downturn, decline in consumer confidence or unusual weather patterns could negatively impact the Company's business and financial condition
+War, acts of terrorism, public health issues and natural disasters may create uncertainty and may result in reduced revenues
+Government laws and regulations could adversely impact the Company s business, financial condition and cash flows.
+The Company cannot guarantee that it will reach its targets for opening new stores or that the new stores, including those opened through acquisition, will operate profitably when opened
+If the Company is not able to obtain merchandise product on normal trade terms, its business, financial condition, and cash flows could be adversely impacted
+A catastrophic event affecting any of the Company's buying, distribution or other corporate operations could adversely impact the use of those facilities and could result in reduced revenues and loss of customers
+A disruption of the Company s information technology systems could have a material adverse impact on the Company s business and financial condition
+Covenants in the Company s Revolving Credit Facility agreement may impose operating restrictions, impede or adversely affect the Company s ability to pay dividends or repurchase common shares and raise capital through the sale of stock and other securities.
+If the Company's trademarks are successfully challenged, the outcome of those disputes could require the Company to abandon one or more of its trademarks
+A work slowdown, stoppage or other disruption by employees of carriers, shippers and other providers of merchandise transportation services could have a material adverse effect on the Company s business and financial condition.
+Any devaluation of the Mexican peso, or imposition of restrictions on the access of citizens of Mexico to the Company s stores, could adversely impact the Company s business and financial condition.
+<p><a href="http://www.sec.gov/Archives/edgar/data/6885/0000006885-07-000046.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/812900--4-10-2006--SAKS_INC.html'">812900--4/10/2006--SAKS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/837465--2-27-2006--CALLAWAY_GOLF_CO_-CA.html'">837465--2/27/2006--CALLAWAY_GOLF_CO_/CA</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/918580--5-15-2007--Gaming_Partners_International_CORP.html'">918580--5/15/2007--Gaming_Partners_International_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/84792--2-27-2009--ROHM_&_HAAS_CO.html'">84792--2/27/2009--ROHM_&_HAAS_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/812900--4-3-2007--SAKS_INC.html'">812900--4/3/2007--SAKS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1006402--2-8-2007--CE_CASECNAN_WATER_&_ENERGY_CO_INC.html'">1006402--2/8/2007--CE_CASECNAN_WATER_&_ENERGY_CO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/850209--4-2-2007--FOOT_LOCKER_INC.html'">850209--4/2/2007--FOOT_LOCKER_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/60751--2-28-2008--LUBRIZOL_CORP.html'">60751--2/28/2008--LUBRIZOL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/60751--2-27-2009--LUBRIZOL_CORP.html'">60751--2/27/2009--LUBRIZOL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/91741--3-26-2007--SONESTA_INTERNATIONAL_HOTELS_CORP.html'">91741--3/26/2007--SONESTA_INTERNATIONAL_HOTELS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1169055--3-14-2006--NOBLE_CORP.html'">1169055--3/14/2006--NOBLE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/4828--11-4-2009--AMERICAN_CRYSTAL_SUGAR_CO_-MN-.html'">4828--11/4/2009--AMERICAN_CRYSTAL_SUGAR_CO_/MN/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/850209--3-31-2008--FOOT_LOCKER_INC.html'">850209--3/31/2008--FOOT_LOCKER_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/858339--3-14-2006--HARRAHS_ENTERTAINMENT_INC.html'">858339--3/14/2006--HARRAHS_ENTERTAINMENT_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/949039--2-25-2008--DIAMOND_OFFSHORE_DRILLING_INC.html'">949039--2/25/2008--DIAMOND_OFFSHORE_DRILLING_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1030749--3-10-2006--GULFMARK_OFFSHORE_INC.html'">1030749--3/10/2006--GULFMARK_OFFSHORE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/69671--3-3-2008--NASH_FINCH_CO.html'">69671--3/3/2008--NASH_FINCH_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/884219--2-29-2008--VIAD_CORP.html'">884219--2/29/2008--VIAD_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/69488--3-12-2010--MYERS_INDUSTRIES_INC.html'">69488--3/12/2010--MYERS_INDUSTRIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/764401--11-9-2009--INSTEEL_INDUSTRIES_INC.html'">764401--11/9/2009--INSTEEL_INDUSTRIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/949039--2-24-2009--DIAMOND_OFFSHORE_DRILLING_INC.html'">949039--2/24/2009--DIAMOND_OFFSHORE_DRILLING_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/812128--12-14-2010--SANDERSON_FARMS_INC.html'">812128--12/14/2010--SANDERSON_FARMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1158463--2-5-2010--JETBLUE_AIRWAYS_CORP.html'">1158463--2/5/2010--JETBLUE_AIRWAYS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/50493--11-28-2007--INGLES_MARKETS_INC.html'">50493--11/28/2007--INGLES_MARKETS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/764044--3-20-2007--QUESTAR_PIPELINE_CO.html'">764044--3/20/2007--QUESTAR_PIPELINE_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1282607--3-30-2007--COLONY_RESORTS_LVH_ACQUISITIONS_LLC.html'">1282607--3/30/2007--COLONY_RESORTS_LVH_ACQUISITIONS_LLC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1282607--3-13-2008--COLONY_RESORTS_LVH_ACQUISITIONS_LLC.html'">1282607--3/13/2008--COLONY_RESORTS_LVH_ACQUISITIONS_LLC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/812900--3-26-2008--SAKS_INC.html'">812900--3/26/2008--SAKS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1169055--2-27-2009--NOBLE_CORP.html'">1169055--2/27/2009--NOBLE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1381455--4-29-2008--Stewart_&_Stevenson_LLC.html'">1381455--4/29/2008--Stewart_&_Stevenson_LLC</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

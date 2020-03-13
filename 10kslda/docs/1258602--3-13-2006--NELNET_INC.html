@@ -1,0 +1,187 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[6.6765265245, "../topics/{regulation,_government,_change}.html", "{regulation,_government,_change}"], [4.7926518825, "../topics/{loss,_insurance,_financial}.html", "{loss,_insurance,_financial}"], [4.5684215386, "../topics/{loan,_real,_estate}.html", "{loan,_real,_estate}"], [2.7206597438, "../topics/{tax,_income,_asset}.html", "{tax,_income,_asset}"], [2.0039033834, "../topics/{debt,_indebtedness,_cash}.html", "{debt,_indebtedness,_cash}"], [1.731944459, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"], [1.727626834, "../topics/{financial,_litigation,_operation}.html", "{financial,_litigation,_operation}"], [1.7131491332, "../topics/{system,_service,_information}.html", "{system,_service,_information}"], [1.7107298367, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [1.7099175673, "../topics/{interest,_director,_officer}.html", "{interest,_director,_officer}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>1258602--3/13/2006--NELNET_INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">1258602--3/13/2006--NELNET_INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{regulation,_government,_change}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_government,_change}.html'">{regulation, government, change}</td></tr>
+<tr class="list"><td id="{loss,_insurance,_financial}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{loss,_insurance,_financial}.html'">{loss, insurance, financial}</td></tr>
+<tr class="list"><td id="{loan,_real,_estate}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{loan,_real,_estate}.html'">{loan, real, estate}</td></tr>
+<tr class="list"><td id="{tax,_income,_asset}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{tax,_income,_asset}.html'">{tax, income, asset}</td></tr>
+<tr class="list"><td id="{debt,_indebtedness,_cash}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{debt,_indebtedness,_cash}.html'">{debt, indebtedness, cash}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+<tr class="list"><td id="{financial,_litigation,_operation}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{financial,_litigation,_operation}.html'">{financial, litigation, operation}</td></tr>
+<tr class="list"><td id="{system,_service,_information}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{system,_service,_information}.html'">{system, service, information}</td></tr>
+<tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{interest,_director,_officer}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{interest,_director,_officer}.html'">{interest, director, officer}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    The Company cannot predict with certainty the outcome of the OIG audit.
+Failure to comply with governmental regulations or guaranty agency rules could harm the Company s business.
+The Company must satisfy certain requirements necessary to maintain the federal guarantees of its federally insured loans, and the Company may incur penalties or lose its guarantees if it fails to meet these requirements.
+Failure to comply with restrictions on inducements under the Higher Education Act could harm the Company s business.
+Changes in legislation and regulations could have a negative impact upon the Company s business.
+Variation in the maturities, timing of rate reset, and variation of indices of the Company s assets and liabilities may pose risks to the Company.
+Market risks to which the Company is subject may have an adverse impact upon its business and operations.
+The Company s derivative instruments may not be successful in managing its interest rate risks.
+The Company faces liquidity risks due to the fact that its operating and warehouse financing needs are substantially provided by third-party sources.
+Characteristics unique to asset-backed securitization pose risks to the Company s continued liquidity.
+Future losses due to defaults on loans held by the Company present credit risk which could adversely affect the Company s earnings.
+The Company could experience cash flow problems if a guaranty agency defaults on its guarantee obligation.
+Competition created by the FDL Program and from other lenders and servicers may adversely impact the Company s business.
+Higher rates of prepayments of student loans could reduce the Company s profits.
+Increases in consolidation loan activity by the Company and its competitors present a risk to the Company s loan portfolio and profitability.
+The volume of available student loans may decrease in the future and may adversely affect the Company s income.
+Special allowance payments on student loans originated or acquired with the proceeds of certain tax-exempt obligations may limit the interest rate on certain student loans to the Company s detriment.
+Failures in the Company s information technology system could materially disrupt its business.
+Transactions with affiliates and potential conflicts of interest of certain of the Company s officers and directors, including one of its Co-Chief Executive Officers, pose risks to the Company s shareholders.
+Imposition of personal holding company tax would decrease the Company s net income.
+Do not call registries limit the Company s ability to market its products and services.
+The Company s inability to maintain its relationships with significant branding and forward flow partners and/or customers could have an adverse impact on its business.
+The Company s failure to successfully manage business and certain asset acquisitions could have a material adverse effect on the Company s business, financial condition, and/or results of operations.
+<p><a href="http://www.sec.gov/Archives/edgar/data/1258602/0001193805-06-000702.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/1258602--3-1-2007--NELNET_INC.html'">1258602--3/1/2007--NELNET_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/916085--3-1-2007--HEALTH_NET_INC.html'">916085--3/1/2007--HEALTH_NET_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/33619--12-21-2007--ESTERLINE_TECHNOLOGIES_CORP.html'">33619--12/21/2007--ESTERLINE_TECHNOLOGIES_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1320414--3-30-2007--SELECT_MEDICAL_HOLDINGS_CORP.html'">1320414--3/30/2007--SELECT_MEDICAL_HOLDINGS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1035688--3-20-2006--SELECT_MEDICAL_CORP.html'">1035688--3/20/2006--SELECT_MEDICAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/893430--12-12-2006--PEDIATRIC_SERVICES_OF_AMERICA_INC.html'">893430--12/12/2006--PEDIATRIC_SERVICES_OF_AMERICA_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/916085--2-28-2008--HEALTH_NET_INC.html'">916085--2/28/2008--HEALTH_NET_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/803352--9-9-2008--CONTINUCARE_CORP.html'">803352--9/9/2008--CONTINUCARE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/33619--1-8-2007--ESTERLINE_TECHNOLOGIES_CORP.html'">33619--1/8/2007--ESTERLINE_TECHNOLOGIES_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1101215--3-3-2006--ALLIANCE_DATA_SYSTEMS_CORP.html'">1101215--3/3/2006--ALLIANCE_DATA_SYSTEMS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1101215--2-26-2007--ALLIANCE_DATA_SYSTEMS_CORP.html'">1101215--2/26/2007--ALLIANCE_DATA_SYSTEMS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1007330--3-23-2007--PRG_SCHULTZ_INTERNATIONAL_INC.html'">1007330--3/23/2007--PRG_SCHULTZ_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/907471--12-12-2008--META_FINANCIAL_GROUP_INC.html'">907471--12/12/2008--META_FINANCIAL_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1170650--2-23-2010--MEDCO_HEALTH_SOLUTIONS_INC.html'">1170650--2/23/2010--MEDCO_HEALTH_SOLUTIONS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/33619--12-24-2008--ESTERLINE_TECHNOLOGIES_CORP.html'">33619--12/24/2008--ESTERLINE_TECHNOLOGIES_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/936468--2-28-2008--LOCKHEED_MARTIN_CORP.html'">936468--2/28/2008--LOCKHEED_MARTIN_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/829608--2-25-2010--PSYCHIATRIC_SOLUTIONS_INC.html'">829608--2/25/2010--PSYCHIATRIC_SOLUTIONS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1170650--2-24-2009--MEDCO_HEALTH_SOLUTIONS_INC.html'">1170650--2/24/2009--MEDCO_HEALTH_SOLUTIONS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/907471--1-11-2008--META_FINANCIAL_GROUP_INC.html'">907471--1/11/2008--META_FINANCIAL_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/920148--2-26-2009--LABORATORY_CORP_OF_AMERICA_HOLDINGS.html'">920148--2/26/2009--LABORATORY_CORP_OF_AMERICA_HOLDINGS</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1139463--12-15-2008--MEDCATH_CORP.html'">1139463--12/15/2008--MEDCATH_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1139463--12-14-2006--MEDCATH_CORP.html'">1139463--12/14/2006--MEDCATH_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/26076--12-9-2010--CUBIC_CORP_-DE-.html'">26076--12/9/2010--CUBIC_CORP_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/916085--2-13-2006--HEALTH_NET_INC.html'">916085--2/13/2006--HEALTH_NET_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/19584--2-26-2010--CHEMED_CORP.html'">19584--2/26/2010--CHEMED_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/26076--12-9-2009--CUBIC_CORP_-DE-.html'">26076--12/9/2009--CUBIC_CORP_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1101215--2-28-2008--ALLIANCE_DATA_SYSTEMS_CORP.html'">1101215--2/28/2008--ALLIANCE_DATA_SYSTEMS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1047335--3-16-2007--NATIONAL_HEALTHCARE_CORP.html'">1047335--3/16/2007--NATIONAL_HEALTHCARE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/730464--8-25-2010--DEVRY_INC.html'">730464--8/25/2010--DEVRY_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/803352--9-9-2010--CONTINUCARE_CORP.html'">803352--9/9/2010--CONTINUCARE_CORP</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

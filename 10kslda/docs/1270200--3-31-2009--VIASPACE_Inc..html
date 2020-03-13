@@ -1,0 +1,187 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[7.7789067156, "../topics/{stock,_price,_share}.html", "{stock,_price,_share}"], [5.0250399842, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [3.2187516361, "../topics/{competitive,_industry,_competition}.html", "{competitive,_industry,_competition}"], [2.7095956732, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [2.379669889, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"], [1.7989511933, "../topics/{debt,_indebtedness,_cash}.html", "{debt,_indebtedness,_cash}"], [1.7676771655, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [1.7062591031, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [1.6990446622, "../topics/{system,_service,_information}.html", "{system,_service,_information}"], [1.6950704839, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>1270200--3/31/2009--VIASPACE_Inc.</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">1270200--3/31/2009--VIASPACE_Inc.</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{stock,_price,_share}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_share}.html'">{stock, price, share}</td></tr>
+<tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{competitive,_industry,_competition}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{competitive,_industry,_competition}.html'">{competitive, industry, competition}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+<tr class="list"><td id="{debt,_indebtedness,_cash}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{debt,_indebtedness,_cash}.html'">{debt, indebtedness, cash}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{system,_service,_information}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{system,_service,_information}.html'">{system, service, information}</td></tr>
+<tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    Our ability to continue as a going concern is dependent on achieving profitability or future financing.
+We operate in a changing and unpredictable regulatory environment.
+Our success depends upon market acceptance of our technologies and product development.
+We operate in a competitive market against companies that have significantly greater resources than we have.
+Due to uncertainties in our business, the capital on hand may not be sufficient to fund our operations until we achieve positive cash flow.
+If we lose key personnel or are unable to hire additional qualified personnel, it could impact our ability to grow our business.
+Our revenues to date have been to a few customers, the loss of which could result in a material decline in revenues.
+Our products and services could infringe on the intellectual property rights of others, which may lead to costly litigation, lead to payment of substantial damages or royalties and/or prevent us from manufacturing and selling our current and future products and services.
+Risks Related To the Industry
+If we fail to successfully introduce new products and services, our future growth may suffer. Our areas of anticipated future growth are certain products and services at an early stage of development.
+If we do not update and enhance our technologies, they will become obsolete or noncompetitive. Our competitors may succeed in developing products and services faster than we do.
+Our success depends, in part, on attracting customers who will embrace the new technologies offered by our products and services.
+If we fail to comply with our obligations in our intellectual property licenses with Caltech and USC, we could lose license rights that are important to our business.
+Our success depends, in part, on our ability to protect our intellectual property rights.
+Risks Related To An Investment In Our Stock
+Any future sale of a substantial number of shares of our common stock could depress the trading price of our common stock, lower our value and make it more difficult for us to raise capital.
+Our stock price is likely to be highly volatile because of several factors, including a limited public float.
+Our executive officers, directors and principal shareholders own 48.0% of our voting stock, which may allow them to control substantially all matters requiring shareholder approval, and their interests may not align with the interests of our other stockholders.
+Because our common stock is considered a penny stock any investment in our common stock is considered to be a high-risk investment and is subject to restrictions on marketability.
+We have additional securities available for issuance, including preferred stock, which if issued could adversely affect the rights of the holders of our common stock.
+Warrants issued by the Company may have an adverse impact on the market value of our common stock.
+The warrants may adversely affect our operational flexibility.
+Certain events could result in adjustments in the exercise price of our warrants.
+<p><a href="http://www.sec.gov/Archives/edgar/data/1270200/0001362310-09-004647.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/1019034--3-11-2009--BIO_KEY_INTERNATIONAL_INC.html'">1019034--3/11/2009--BIO_KEY_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/75439--5-17-2010--CytoCore_Inc.html'">75439--5/17/2010--CytoCore_Inc</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1097718--12-29-2010--ICEWEB_INC.html'">1097718--12/29/2010--ICEWEB_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1121785--3-31-2006--SLS_INTERNATIONAL_INC.html'">1121785--3/31/2006--SLS_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1297203--9-29-2010--HS3_TECHNOLOGIES_INC..html'">1297203--9/29/2010--HS3_TECHNOLOGIES_INC.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1377720--4-15-2008--CYBERDEFENDER_CORP.html'">1377720--4/15/2008--CYBERDEFENDER_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/813747--1-4-2006--SPESCOM_SOFTWARE_INC.html'">813747--1/4/2006--SPESCOM_SOFTWARE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1095691--3-23-2009--DigitalFX_International_Inc.html'">1095691--3/23/2009--DigitalFX_International_Inc</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1176193--9-15-2008--OPEN_ENERGY_CORP.html'">1176193--9/15/2008--OPEN_ENERGY_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1052054--3-15-2007--EVOLVING_SYSTEMS_INC.html'">1052054--3/15/2007--EVOLVING_SYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1094816--7-6-2010--VOICE_MOBILITY_INTERNATIONAL_INC.html'">1094816--7/6/2010--VOICE_MOBILITY_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1405350--4-10-2009--RxBids.html'">1405350--4/10/2009--RxBids</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/885317--3-31-2009--OPHTHALMIC_IMAGING_SYSTEMS.html'">885317--3/31/2009--OPHTHALMIC_IMAGING_SYSTEMS</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1030058--4-17-2008--WORLDGATE_COMMUNICATIONS_INC.html'">1030058--4/17/2008--WORLDGATE_COMMUNICATIONS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1418730--3-17-2010--Industry_Concept_Holdings_Inc.html'">1418730--3/17/2010--Industry_Concept_Holdings_Inc</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/802257--9-28-2009--BRAIN_TREE_INTERNATIONAL_INC.html'">802257--9/28/2009--BRAIN_TREE_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1374976--3-31-2008--Northport_Capital_Inc..html'">1374976--3/31/2008--Northport_Capital_Inc.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1119190--4-2-2007--IWT_TESORO_CORP.html'">1119190--4/2/2007--IWT_TESORO_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1137031--3-29-2007--UNITED_FUEL_&_ENERGY_CORP.html'">1137031--3/29/2007--UNITED_FUEL_&_ENERGY_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1137031--4-3-2006--UNITED_FUEL_&_ENERGY_CORP.html'">1137031--4/3/2006--UNITED_FUEL_&_ENERGY_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/746210--3-27-2008--GLOWPOINT_INC.html'">746210--3/27/2008--GLOWPOINT_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1419583--3-24-2010--Cellteck_Inc..html'">1419583--3/24/2010--Cellteck_Inc.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/927472--3-31-2009--PetroAlgae_Inc..html'">927472--3/31/2009--PetroAlgae_Inc.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1137031--4-6-2009--UNITED_FUEL_&_ENERGY_CORP.html'">1137031--4/6/2009--UNITED_FUEL_&_ENERGY_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1376231--4-14-2010--Soleil_Capital_L.P..html'">1376231--4/14/2010--Soleil_Capital_L.P.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/941685--4-17-2007--IMAGEWARE_SYSTEMS_INC.html'">941685--4/17/2007--IMAGEWARE_SYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1084557--3-31-2008--TASKER_PRODUCTS_CORP.html'">1084557--3/31/2008--TASKER_PRODUCTS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/913072--3-13-2006--MERRILL_MERCHANTS_BANCSHARES_INC.html'">913072--3/13/2006--MERRILL_MERCHANTS_BANCSHARES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/746210--6-6-2007--GLOWPOINT_INC.html'">746210--6/6/2007--GLOWPOINT_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/821536--3-31-2006--HEARUSA_INC.html'">821536--3/31/2006--HEARUSA_INC</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

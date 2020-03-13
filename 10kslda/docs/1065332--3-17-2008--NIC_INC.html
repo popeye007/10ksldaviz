@@ -1,0 +1,198 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[9.3913386974, "../topics/{system,_service,_information}.html", "{system,_service,_information}"], [5.2887832124, "../topics/{regulation,_government,_change}.html", "{regulation,_government,_change}"], [4.9393744334, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [2.6977023461, "../topics/{tax,_income,_asset}.html", "{tax,_income,_asset}"], [2.696384317, "../topics/{regulation,_change,_law}.html", "{regulation,_change,_law}"], [2.6963184453, "../topics/{financial,_litigation,_operation}.html", "{financial,_litigation,_operation}"], [2.6962616404, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [2.6962616386, "../topics/{provision,_law,_control}.html", "{provision,_law,_control}"], [1.8136257121, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [1.7010157009, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [1.6976777118, "../topics/{cost,_contract,_operation}.html", "{cost,_contract,_operation}"], [1.6963095061, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>1065332--3/17/2008--NIC_INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">1065332--3/17/2008--NIC_INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{system,_service,_information}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{system,_service,_information}.html'">{system, service, information}</td></tr>
+<tr class="list"><td id="{regulation,_government,_change}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_government,_change}.html'">{regulation, government, change}</td></tr>
+<tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{tax,_income,_asset}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{tax,_income,_asset}.html'">{tax, income, asset}</td></tr>
+<tr class="list"><td id="{regulation,_change,_law}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_change,_law}.html'">{regulation, change, law}</td></tr>
+<tr class="list"><td id="{financial,_litigation,_operation}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{financial,_litigation,_operation}.html'">{financial, litigation, operation}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{provision,_law,_control}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{provision,_law,_control}.html'">{provision, law, control}</td></tr>
+<tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{cost,_contract,_operation}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_contract,_operation}.html'">{cost, contract, operation}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(11)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    The principal associated with certain of our auction-rate debt securities may not be accessible for in excess of 12 months, which could negatively impact our short-term liquidity needs. In addition, our auction-rate debt securities may experience an other-than-temporary decline in value, which would adversely affect our results of operations.
+If our competitors are more successful in attracting and retaining customers and users, then our revenues and profits could decline.
+Because we have portal outsourcing contracts with a limited number of governments, the termination of certain of these contracts may harm our business.
+Because we have certain portal outsourcing contracts that contain performance bond requirements and/or indemnification provisions against claims arising from our performance, we may suffer monetary or reputational damages if we fail to meet our contractual obligations.
+We may be unable to sustain the usage levels of current services that provide a significant percentage of our revenues.
+If our potential customers are not willing to switch to or adopt our online government portals and other electronic services, our growth and revenues will be limited.
+The fees we collect for many of our services are subject to regulation that could limit growth of our revenues and profitability.
+Because a major portion of our current revenues is generated from a small number of users, the loss of any of these users may harm our business and financial condition.
+We may lose the right to the content distributed through our outsourced portals, which is provided to us entirely by government entities.
+The growth in our revenues may be limited by the number of governments that choose to provide eGovernment services and to adopt our business model and by the finite number of governments with which we may contract for our eGovernment services.
+Our business with various government entities sometimes requires specific government legislation to be passed for us to initiate and maintain our government contracts.
+Because a large portion of our business relies on a contractual bidding process whose parameters are established by governments, the length of our sales cycles is uncertain and can lead to shortfalls in revenues.
+The seasonality of use for some of our eGovernment services may harm our fourth quarter results of each calendar year.
+Our quarterly results of operations may be volatile and difficult to predict. If our quarterly results of operations fail to meet the expectations of public market analysts or investors, the market price of our common stock may decrease significantly.
+We may be subject to intellectual property infringement claims, which are costly to defend and could limit our ability to use certain technologies in the future.
+We generally grant our customers fully paid licenses to use the software and applications we develop for use in their portals. If customers elect to terminate our contracts and manage portal operations internally, our revenues and profits could decline.
+We depend on technology licensed to us by third parties, and the loss of this technology could delay implementation of our services or force us to pay higher license fees.
+If we fail to coordinate or expand our operational procedures and controls, we may not effectively manage our growth.
+To be successful, we must develop and market comprehensive, efficient, cost-effective and secure electronic access to public information and new services.
+We are subject to independent audits by our government customers. Deficiencies in our performance under a government contract could result in contract termination, reputational damage or financial penalties.
+We depend on the increasing use of the Internet and on the growth of online government information systems. If the use of the Internet and eGovernment information systems does not grow as anticipated, our business will be seriously harmed.
+If the Internet infrastructure fails to develop or be adequately maintained, our business would be harmed because users may not be able to access our government portals.
+We may become subject to liability under NACHA rules and standards for processing electronic direct debit payments from bank accounts.
+We may become liable for violations of the Driver Privacy Protection Act as adopted federally or in each state.
+Compliance with changing regulation of corporate governance and public disclosure may result in additional expenses.
+An informal SEC inquiry involving us has resulted in significant costs to us, may result in future costs to us, and could adversely affect us.
+Increases in credit card association fees may result in the loss of customers or a reduction in our earnings.
+Our UCC and corporate filings software development business has incurred losses under its fixed-fee contracts in the past, and our results of operations could be harmed if the costs that this business incurs to meet contractual commitments exceed our current estimates.
+We depend on other contractors and subcontractors in connection with our performance under our UCC and corporate filings software development engagement with the California Secretary of State. If these parties fail to satisfy their obligations to us or the California Secretary of State, or if we are unable to maintain these relationships, our operating results and business prospects could be adversely affected.
+We may be unable to generate sufficient taxable income from future operations to fully utilize our significant tax net operating loss carryforwards.
+The National Information Consortium Voting Trust owns a significant amount of our common stock, which may impede attempts to replace or remove our board or management.
+The resale of shares owned by the National Information Consortium Voting Trust might adversely affect our stock price.
+<p><a href="http://www.sec.gov/Archives/edgar/data/1065332/0001206774-08-000530.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/1277856--3-4-2010--CARDTRONICS_INC.html'">1277856--3/4/2010--CARDTRONICS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1326583--3-2-2010--WebMD_Health_Corp..html'">1326583--3/2/2010--WebMD_Health_Corp.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/936395--12-22-2009--CIENA_CORP.html'">936395--12/22/2009--CIENA_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/749254--3-31-2008--TRM_CORP.html'">749254--3/31/2008--TRM_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/936395--12-22-2010--CIENA_CORP.html'">936395--12/22/2010--CIENA_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1068875--2-23-2007--INFOSPACE_INC.html'">1068875--2/23/2007--INFOSPACE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1157377--6-14-2010--ADVISORY_BOARD_CO.html'">1157377--6/14/2010--ADVISORY_BOARD_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1277856--4-2-2007--CARDTRONICS_INC.html'">1277856--4/2/2007--CARDTRONICS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1277856--3-31-2008--CARDTRONICS_INC.html'">1277856--3/31/2008--CARDTRONICS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1035185--3-17-2008--GEVITY_HR_INC.html'">1035185--3/17/2008--GEVITY_HR_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1095565--3-30-2007--HEALTHSTREAM_INC.html'">1095565--3/30/2007--HEALTHSTREAM_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1235468--12-8-2008--LIQUIDITY_SERVICES_INC.html'">1235468--12/8/2008--LIQUIDITY_SERVICES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1158324--3-2-2009--COGENT_COMMUNICATIONS_GROUP_INC.html'">1158324--3/2/2009--COGENT_COMMUNICATIONS_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1158324--2-27-2008--COGENT_COMMUNICATIONS_GROUP_INC.html'">1158324--2/27/2008--COGENT_COMMUNICATIONS_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1254419--3-24-2008--MEDASSETS_INC.html'">1254419--3/24/2008--MEDASSETS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1008586--4-16-2010--STREAMLINE_HEALTH_SOLUTIONS_INC..html'">1008586--4/16/2010--STREAMLINE_HEALTH_SOLUTIONS_INC.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1062530--3-1-2007--DIGITAL_RIVER_INC_-DE.html'">1062530--3/1/2007--DIGITAL_RIVER_INC_/DE</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1062530--3-16-2006--DIGITAL_RIVER_INC_-DE.html'">1062530--3/16/2006--DIGITAL_RIVER_INC_/DE</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1235468--12-10-2010--LIQUIDITY_SERVICES_INC.html'">1235468--12/10/2010--LIQUIDITY_SERVICES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1008586--4-17-2009--STREAMLINE_HEALTH_SOLUTIONS_INC..html'">1008586--4/17/2009--STREAMLINE_HEALTH_SOLUTIONS_INC.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1157377--6-15-2009--ADVISORY_BOARD_CO.html'">1157377--6/15/2009--ADVISORY_BOARD_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/894738--10-23-2007--EASYLINK_SERVICES_INTERNATIONAL_CORP.html'">894738--10/23/2007--EASYLINK_SERVICES_INTERNATIONAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1254419--3-1-2010--MEDASSETS_INC.html'">1254419--3/1/2010--MEDASSETS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1142512--3-16-2007--ZIPREALTY_INC.html'">1142512--3/16/2007--ZIPREALTY_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1092458--2-15-2008--TRIZETTO_GROUP_INC.html'">1092458--2/15/2008--TRIZETTO_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1235468--12-7-2007--LIQUIDITY_SERVICES_INC.html'">1235468--12/7/2007--LIQUIDITY_SERVICES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/855612--3-15-2010--ZIX_CORP.html'">855612--3/15/2010--ZIX_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1259550--3-16-2007--LOCAL.COM.html'">1259550--3/16/2007--LOCAL.COM</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1326583--2-27-2009--WebMD_Health_Corp..html'">1326583--2/27/2009--WebMD_Health_Corp.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/936395--12-23-2008--CIENA_CORP.html'">936395--12/23/2008--CIENA_CORP</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

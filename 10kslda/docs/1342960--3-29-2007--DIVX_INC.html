@@ -1,0 +1,230 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[11.3069584231, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [9.992920532, "../topics/{system,_service,_information}.html", "{system,_service,_information}"], [8.2174332394, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [5.2275956101, "../topics/{stock,_price,_share}.html", "{stock,_price,_share}"], [3.8627319588, "../topics/{control,_financial,_internal}.html", "{control,_financial,_internal}"], [3.7317405788, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [3.41792238, "../topics/{regulation,_change,_law}.html", "{regulation,_change,_law}"], [3.2197688133, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [2.9643692237, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"], [2.0207661365, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"], [1.9798540725, "../topics/{capital,_credit,_financial}.html", "{capital,_credit,_financial}"], [1.763983135, "../topics/{cost,_contract,_operation}.html", "{cost,_contract,_operation}"], [1.7184571845, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [1.7109688664, "../topics/{product,_liability,_claim}.html", "{product,_liability,_claim}"], [1.7029606161, "../topics/{cost,_operation,_labor}.html", "{cost,_operation,_labor}"], [1.7004815386, "../topics/{gas,_price,_oil}.html", "{gas,_price,_oil}"], [1.6963169414, "../topics/{provision,_law,_control}.html", "{provision,_law,_control}"], [1.6542171963, "../topics/{condition,_economic,_financial}.html", "{condition,_economic,_financial}"], [1.121347388, "../topics/{regulation,_government,_change}.html", "{regulation,_government,_change}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>1342960--3/29/2007--DIVX_INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">1342960--3/29/2007--DIVX_INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{system,_service,_information}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{system,_service,_information}.html'">{system, service, information}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{stock,_price,_share}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_share}.html'">{stock, price, share}</td></tr>
+<tr class="list"><td id="{control,_financial,_internal}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{control,_financial,_internal}.html'">{control, financial, internal}</td></tr>
+<tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{regulation,_change,_law}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_change,_law}.html'">{regulation, change, law}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+<tr class="list"><td id="{capital,_credit,_financial}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{capital,_credit,_financial}.html'">{capital, credit, financial}</td></tr>
+<tr class="list"><td id="{cost,_contract,_operation}" onmouseover="highlight(11)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_contract,_operation}.html'">{cost, contract, operation}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(12)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{product,_liability,_claim}" onmouseover="highlight(13)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_liability,_claim}.html'">{product, liability, claim}</td></tr>
+<tr class="list"><td id="{cost,_operation,_labor}" onmouseover="highlight(14)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_operation,_labor}.html'">{cost, operation, labor}</td></tr>
+<tr class="list"><td id="{gas,_price,_oil}" onmouseover="highlight(15)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{gas,_price,_oil}.html'">{gas, price, oil}</td></tr>
+<tr class="list"><td id="{provision,_law,_control}" onmouseover="highlight(16)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{provision,_law,_control}.html'">{provision, law, control}</td></tr>
+<tr class="list"><td id="{condition,_economic,_financial}" onmouseover="highlight(17)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{condition,_economic,_financial}.html'">{condition, economic, financial}</td></tr>
+<tr class="list"><td id="{regulation,_government,_change}" onmouseover="highlight(18)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_government,_change}.html'">{regulation, government, change}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    Risks related to our business
+Our business and prospects depend on the strength of our brand, and if we do not maintain and strengthen our brand, we may be unable to maintain or expand our business.
+If we are unable to penetrate existing markets or adapt or develop technologies and products for new markets, our business prospects could be limited.
+We face significant competition in various markets, and if we are unable to compete successfully, our ability to generate revenues from our business will suffer.
+We are dependent on the sale by our licensees of consumer hardware and software products that incorporate our technologies. Our top 10 licensees by revenue accounted for approximately 50% of our total net revenues during 2006, and a reduction in revenues from those licensees or a loss of one or more of our key licensees would adversely affect our licensing revenue.
+Revenues under our software distribution and promotion agreement with Google represented approximately 15% and 18% of our total net revenues in the fiscal years 2005 and 2006, respectively. A termination of our software distribution and promotion agreement with Google or our failure to renew or replace this agreement would significantly decrease our revenues.
+The success of our business depends on the interoperability of our technologies with consumer hardware devices.
+If we fail to develop and deliver innovative technologies and products in response to changes in our industry, including changes in consumer tastes or trends, our revenues could decline.
+Our licensing revenue depends in large part upon integrated circuit manufacturers incorporating our technologies into their products for sale to our consumer hardware device manufacturer licensees and if our technologies are not incorporated in these integrated circuits or fewer integrated circuits are sold that incorporate our technologies, our revenues will be adversely affected.
+Our business is dependent in part on technologies we license from third parties, and these license rights may be inadequate for our business.
+We rely on our licensees to accurately prepare royalty reports for our determination of licensing revenues, and if these reports are inaccurate, our revenues may be under- or over-stated and our forecasts and budgets may be incorrect.
+Any development delays or cost overruns may affect our ability to respond to technological changes, competitive developments or customer requirements and expose us to other adverse consequences.
+We conduct a substantial portion of our business outside North America and, as a result, we face diverse risks related to engaging in international business.
+We face risks with respect to conducting business in China due to China s historically limited recognition and enforcement of intellectual property and contractual rights.
+Pricing pressures on the consumer hardware device manufacturers and software vendors who incorporate our technologies into their products could limit the licensing fees we charge for our technologies and adversely affect our revenues.
+We do not expect sales of DVD players to continue to grow as quickly as they have in the past. To the extent that sales of DVD players level off or decline, or alternative technologies in which we do not participate replace DVDs as a dominant medium for consumer video entertainment, our licensing revenue will be adversely affected.
+Digital video technologies could be treated as a commodity in the future, which could expose us to significant pricing pressure.
+Current and future government standards or standards-setting organizations may limit our business opportunities.
+Our business may depend in part upon our ability to provide effective digital rights management technology.
+We have offered and we expect to continue to offer some of our products and technologies for reduced prices or free of charge, and we may not realize the benefits of this marketing strategy.
+Stage6.com, our online video community website, is new and rapidly evolving and may not prove to be a viable business model.
+The success of Stage6.com will depend on our ability to license compelling content on commercially reasonable terms or enter into successful partnering relationships with content providers.
+We may be unable to attract advertisers to Stage6.com.
+We will need to increase the size of our organization, and we may experience difficulties in managing growth.
+Our business, in particular Stage6.com and our content distribution offerings, will suffer if our systems or networks fail, become unavailable or perform poorly so that current or potential users do not have adequate access to our online products and websites.
+Any failure or interruption of the services provided by bandwidth providers, data centers or other key third parties could subject our business to disruption and additional costs and damage our reputation.
+Our network is subject to security risks that could harm our reputation and expose us to litigation or liability.
+It is not yet clear how laws designed to protect children that use the Internet may be interpreted and enforced, and whether new similar laws will be enacted in the future which may apply to our business in ways that may subject us to potential liability.
+We may be subject to market risk and legal liability in connection with the data collection capabilities of Stage6.com.
+Improper conduct by users of our websites could subject us to claims and compliance costs.
+We may be subject to legal liability for the provision of third-party products, services, content or advertising.
+We may be subject to assessment of sales taxes and other taxes for our licensing of technology or sale of products.
+Inflation and other unfavorable economic conditions may adversely affect our revenues, margins and profitability.
+Failure to comply with applicable current and future government regulations could limit our ability to license our technologies, sell our products or distribute content, and expose us to additional costs and liabilities.
+If we lose the services of our co-founder, CEO and Chairman R. Jordan Greenhall or other key members of our senior management team, we may not be able to execute our business strategy.
+We rely on highly skilled personnel, and if we are unable to retain or motivate key personnel or hire qualified personnel, we may not be able to maintain our operations or grow effectively.
+We have limited experience in identifying, completing and integrating acquisitions, and if we do not successfully integrate any future acquisitions, we may incur unexpected costs and disruptions to our business.
+Our corporate culture has contributed to our success, and if we cannot maintain this culture as we grow, we could lose the innovation, creativity and teamwork fostered by our culture.
+Risks related to our finances
+Our quarterly operating results and stock price may fluctuate significantly.
+We have a history of net losses and only recently achieved profitability on a quarterly basis, and we may not be able to sustain our profitability.
+We may require additional capital, and raising additional funds by issuing securities, debt financing or through strategic alliances or licensing arrangements may cause dilution to existing stockholders, restrict our operations or require us to relinquish proprietary rights.
+Risks related to our intellectual property
+We are, and may in the future be, subject to intellectual property rights claims, which are costly to defend, could require us to pay damages and could limit our ability to use certain technologies or content in the future.
+We may be unable to adequately protect the proprietary rights in our technologies and products.
+We may be forced to litigate to defend our intellectual property rights or to defend against claims by third parties against us relating to intellectual property rights.
+Our ability to maintain and enforce our trademark rights has a large impact on our ability to prevent third party infringement of our brand and technologies.
+Some software we provide may be subject to open source licenses, which may restrict how we use or distribute our software or require that we release the source code of certain products subject to those licenses.
+Risks related to the securities markets and investment in our common stock
+Market volatility may affect our stock price and the value of your investment.
+Shares of our common stock are relatively illiquid.
+Anti-takeover provisions in our charter documents and under Delaware law could make an acquisition of us, which may be beneficial to our stockholders, more difficult and may prevent attempts by our stockholders to replace or remove our current management.
+We do not intend to pay dividends on our common stock.
+We will incur increased costs as a result of changes in laws and regulations relating to corporate governance matters.
+If we fail to maintain proper and effective internal controls, our ability to produce accurate financial statements could be impaired, which could adversely affect our ability to operate our business and our stock price.
+If our executive officers, directors and their affiliates choose to act together, they may be able to control our operations and act in a manner that advances their best interests and not necessarily those of other stockholders.
+Future sales of our common stock may cause our stock price to decline.
+<p><a href="http://www.sec.gov/Archives/edgar/data/1342960/0001104659-07-023500.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/1342960--3-15-2010--DIVX_INC.html'">1342960--3/15/2010--DIVX_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1342960--3-11-2009--DIVX_INC.html'">1342960--3/11/2009--DIVX_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1342960--3-17-2008--DIVX_INC.html'">1342960--3/17/2008--DIVX_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1365295--6-28-2007--Hostopia.com_Inc..html'">1365295--6/28/2007--Hostopia.com_Inc.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1365295--6-27-2008--Hostopia.com_Inc..html'">1365295--6/27/2008--Hostopia.com_Inc.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1109935--2-27-2007--WEBEX_COMMUNICATIONS_INC.html'">1109935--2/27/2007--WEBEX_COMMUNICATIONS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1109935--3-15-2006--WEBEX_COMMUNICATIONS_INC.html'">1109935--3/15/2006--WEBEX_COMMUNICATIONS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1086740--4-2-2007--DELTATHREE_INC.html'">1086740--4/2/2007--DELTATHREE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1096199--10-17-2006--VA_SOFTWARE_CORP.html'">1096199--10/17/2006--VA_SOFTWARE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1115091--9-12-2007--CALLWAVE_INC.html'">1115091--9/12/2007--CALLWAVE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1469433--2-26-2010--Ancestry.com_Inc..html'">1469433--2/26/2010--Ancestry.com_Inc.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1142701--2-20-2008--UNITED_ONLINE_INC.html'">1142701--2/20/2008--UNITED_ONLINE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1031029--3-3-2009--STARTEK_INC.html'">1031029--3/3/2009--STARTEK_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1031029--2-25-2010--STARTEK_INC.html'">1031029--2/25/2010--STARTEK_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1100917--3-30-2007--ONVIA_INC.html'">1100917--3/30/2007--ONVIA_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1065280--2-28-2008--NETFLIX_INC.html'">1065280--2/28/2008--NETFLIX_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1089907--3-17-2008--KANA_SOFTWARE_INC.html'">1089907--3/17/2008--KANA_SOFTWARE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1134203--3-14-2008--TALEO_CORP.html'">1134203--3/14/2008--TALEO_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1166220--9-26-2007--JL_HALSEY_CORP.html'">1166220--9/26/2007--JL_HALSEY_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1045742--12-29-2006--YP_CORP.html'">1045742--12/29/2006--YP_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1036188--4-15-2008--QAD_INC.html'">1036188--4/15/2008--QAD_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1011006--3-3-2006--YAHOO_INC.html'">1011006--3/3/2006--YAHOO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1087277--4-2-2007--APTIMUS_INC.html'">1087277--4/2/2007--APTIMUS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1087277--3-16-2006--APTIMUS_INC.html'">1087277--3/16/2006--APTIMUS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/897893--4-13-2007--PEERLESS_SYSTEMS_CORP.html'">897893--4/13/2007--PEERLESS_SYSTEMS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1095480--3-16-2007--NETRATINGS_INC.html'">1095480--3/16/2007--NETRATINGS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1115091--9-26-2008--CALLWAVE_INC.html'">1115091--9/26/2008--CALLWAVE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/832767--11-19-2009--PHOENIX_TECHNOLOGIES_LTD.html'">832767--11/19/2009--PHOENIX_TECHNOLOGIES_LTD</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/946581--12-18-2009--TAKE_TWO_INTERACTIVE_SOFTWARE_INC.html'">946581--12/18/2009--TAKE_TWO_INTERACTIVE_SOFTWARE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1062292--3-13-2007--KNOT_INC.html'">1062292--3/13/2007--KNOT_INC</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

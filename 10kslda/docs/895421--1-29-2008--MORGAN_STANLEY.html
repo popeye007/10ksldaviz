@@ -1,0 +1,191 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[4.549793031, "../topics/{capital,_credit,_financial}.html", "{capital,_credit,_financial}"], [2.733742948, "../topics/{loan,_real,_estate}.html", "{loan,_real,_estate}"], [2.6897168328, "../topics/{competitive,_industry,_competition}.html", "{competitive,_industry,_competition}"], [2.6694496476, "../topics/{loss,_insurance,_financial}.html", "{loss,_insurance,_financial}"], [2.4958219696, "../topics/{condition,_economic,_financial}.html", "{condition,_economic,_financial}"], [1.9520713541, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"], [1.8178217431, "../topics/{cost,_regulation,_environmental}.html", "{cost,_regulation,_environmental}"], [1.7499811995, "../topics/{system,_service,_information}.html", "{system,_service,_information}"], [1.7082221661, "../topics/{financial,_litigation,_operation}.html", "{financial,_litigation,_operation}"], [1.6991891569, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"], [1.6976442264, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [1.6964072251, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [1.6893462047, "../topics/{debt,_indebtedness,_cash}.html", "{debt,_indebtedness,_cash}"], [1.5712932729, "../topics/{operation,_natural,_condition}.html", "{operation,_natural,_condition}"], [1.5687160622, "../topics/{regulation,_change,_law}.html", "{regulation,_change,_law}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>895421--1/29/2008--MORGAN_STANLEY</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">895421--1/29/2008--MORGAN_STANLEY</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{capital,_credit,_financial}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{capital,_credit,_financial}.html'">{capital, credit, financial}</td></tr>
+<tr class="list"><td id="{loan,_real,_estate}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{loan,_real,_estate}.html'">{loan, real, estate}</td></tr>
+<tr class="list"><td id="{competitive,_industry,_competition}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{competitive,_industry,_competition}.html'">{competitive, industry, competition}</td></tr>
+<tr class="list"><td id="{loss,_insurance,_financial}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{loss,_insurance,_financial}.html'">{loss, insurance, financial}</td></tr>
+<tr class="list"><td id="{condition,_economic,_financial}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{condition,_economic,_financial}.html'">{condition, economic, financial}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+<tr class="list"><td id="{cost,_regulation,_environmental}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_regulation,_environmental}.html'">{cost, regulation, environmental}</td></tr>
+<tr class="list"><td id="{system,_service,_information}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{system,_service,_information}.html'">{system, service, information}</td></tr>
+<tr class="list"><td id="{financial,_litigation,_operation}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{financial,_litigation,_operation}.html'">{financial, litigation, operation}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(11)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{debt,_indebtedness,_cash}" onmouseover="highlight(12)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{debt,_indebtedness,_cash}.html'">{debt, indebtedness, cash}</td></tr>
+<tr class="list"><td id="{operation,_natural,_condition}" onmouseover="highlight(13)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_natural,_condition}.html'">{operation, natural, condition}</td></tr>
+<tr class="list"><td id="{regulation,_change,_law}" onmouseover="highlight(14)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_change,_law}.html'">{regulation, change, law}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    Liquidity is essential to our businesses and we rely on external sources to finance a significant portion of our operations.
+Our borrowing costs and access to the debt capital markets depend significantly on our credit ratings.
+We are a holding company and depend on payments from our subsidiaries.
+If our liquidity and funding policies are not adequate, we may be unable to access sufficient financing.
+Our results of operations may be materially affected by market fluctuations and by economic and other factors.
+We may experience further writedowns of our financial instruments and other losses related to volatile and illiquid market conditions
+Holding large and concentrated positions may expose us to losses.
+Markets may experience periods of high volatility accompanied by reduced liquidity.
+We may incur significant losses in the real estate sector.
+We are exposed to the risk that third parties that are indebted to us will not perform their obligations.
+Defaults by another larger financial institution could adversely affect financial markets generally.
+We are subject to operational risk and an operational event could adversely affect our businesses.
+The financial services industry faces substantial litigation and regulatory risks, and we may face damage to our reputation and legal liability.
+We are subject to extensive regulation in the jurisdictions in which we conduct our businesses.
+Our commodities activities subject us to extensive regulation, potential catastrophic events and environmental risks and regulation that may expose us to significant costs and liabilities.
+Potential conflicts of interest are increasing and a failure to appropriately deal with conflicts of interest could adversely affect our businesses.
+We face strong competition from other financial services firms, which could lead to pricing pressures that could materially adversely affect our revenue and profitability.
+Our ability to retain and attract qualified employees is critical to the success of our business and the failure to do so may materially adversely affect our performance.
+Automated trading markets may adversely affect our business and may increase competition.
+We are subject to numerous political, economic, legal, operational, franchise and other risks as a result of our international operations which could adversely impact our businesses in many ways.
+We may be unable to fully capture the expected value from acquisitions, joint ventures and minority stakes.
+Our hedging strategies and other risk management techniques may not be fully effective in mitigating our risk exposure in all market environments or against all types of risk.
+<p><a href="http://www.sec.gov/Archives/edgar/data/895421/0001193125-08-013719.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/895421--2-13-2007--MORGAN_STANLEY.html'">895421--2/13/2007--MORGAN_STANLEY</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/895421--2-26-2010--MORGAN_STANLEY.html'">895421--2/26/2010--MORGAN_STANLEY</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/723458--3-16-2009--STATE_BANCORP_INC.html'">723458--3/16/2009--STATE_BANCORP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/872821--3-2-2009--WILMINGTON_TRUST_CORP.html'">872821--3/2/2009--WILMINGTON_TRUST_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/870826--4-16-2009--VALUEVISION_MEDIA_INC.html'">870826--4/16/2009--VALUEVISION_MEDIA_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/778946--3-31-2010--BLUEGREEN_CORP.html'">778946--3/31/2010--BLUEGREEN_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/798528--3-14-2006--ODYSSEY_MARINE_EXPLORATION_INC.html'">798528--3/14/2006--ODYSSEY_MARINE_EXPLORATION_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1331463--3-23-2007--Federal_Home_Loan_Bank_of_Boston.html'">1331463--3/23/2007--Federal_Home_Loan_Bank_of_Boston</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/885568--3-21-2006--OLD_DOMINION_ELECTRIC_COOPERATIVE.html'">885568--3/21/2006--OLD_DOMINION_ELECTRIC_COOPERATIVE</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/4969--3-30-2009--AMERICAN_EXPRESS_CREDIT_CORP.html'">4969--3/30/2009--AMERICAN_EXPRESS_CREDIT_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1091907--3-2-2007--WORLD_WRESTLING_ENTERTAINMENTINC.html'">1091907--3/2/2007--WORLD_WRESTLING_ENTERTAINMENTINC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1331463--3-30-2006--Federal_Home_Loan_Bank_of_Boston.html'">1331463--3/30/2006--Federal_Home_Loan_Bank_of_Boston</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/889570--3-22-2010--UNITED_ARTISTS_THEATRE_CIRCUIT_INC_-MD-.html'">889570--3/22/2010--UNITED_ARTISTS_THEATRE_CIRCUIT_INC_/MD/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/889570--3-24-2009--UNITED_ARTISTS_THEATRE_CIRCUIT_INC_-MD-.html'">889570--3/24/2009--UNITED_ARTISTS_THEATRE_CIRCUIT_INC_/MD/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1166041--3-21-2007--WHEELING_ISLAND_GAMING_INC.html'">1166041--3/21/2007--WHEELING_ISLAND_GAMING_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/889570--3-29-2006--UNITED_ARTISTS_THEATRE_CIRCUIT_INC_-MD-.html'">889570--3/29/2006--UNITED_ARTISTS_THEATRE_CIRCUIT_INC_/MD/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/870826--4-15-2010--VALUEVISION_MEDIA_INC.html'">870826--4/15/2010--VALUEVISION_MEDIA_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1059262--3-14-2008--STANDARD_PARKING_CORP.html'">1059262--3/14/2008--STANDARD_PARKING_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1264707--3-13-2008--ASSET_ACCEPTANCE_CAPITAL_CORP.html'">1264707--3/13/2008--ASSET_ACCEPTANCE_CAPITAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/778946--3-16-2009--BLUEGREEN_CORP.html'">778946--3/16/2009--BLUEGREEN_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/895421--1-29-2009--MORGAN_STANLEY.html'">895421--1/29/2009--MORGAN_STANLEY</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1082114--3-25-2008--LIBERTY_MEDIA_LLC.html'">1082114--3/25/2008--LIBERTY_MEDIA_LLC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1361025--3-25-2008--DCP_Holding_CO.html'">1361025--3/25/2008--DCP_Holding_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/832428--3-2-2009--SCRIPPS_E_W_CO_-DE.html'">832428--3/2/2009--SCRIPPS_E_W_CO_/DE</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1059262--3-9-2007--STANDARD_PARKING_CORP.html'">1059262--3/9/2007--STANDARD_PARKING_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1025536--3-29-2010--TAYLOR_CAPITAL_GROUP_INC.html'">1025536--3/29/2010--TAYLOR_CAPITAL_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1059262--3-13-2009--STANDARD_PARKING_CORP.html'">1059262--3/13/2009--STANDARD_PARKING_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/886136--3-14-2008--SAGA_COMMUNICATIONS_INC.html'">886136--3/14/2008--SAGA_COMMUNICATIONS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1166041--3-31-2006--WHEELING_ISLAND_GAMING_INC.html'">1166041--3/31/2006--WHEELING_ISLAND_GAMING_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1329701--3-30-2007--Federal_Home_Loan_Bank_of_Seattle.html'">1329701--3/30/2007--Federal_Home_Loan_Bank_of_Seattle</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

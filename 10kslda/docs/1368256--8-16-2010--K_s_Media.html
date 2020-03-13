@@ -1,0 +1,206 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[8.4117891952, "../topics/{capital,_credit,_financial}.html", "{capital,_credit,_financial}"], [5.7069319188, "../topics/{product,_liability,_claim}.html", "{product,_liability,_claim}"], [4.9937050026, "../topics/{regulation,_change,_law}.html", "{regulation,_change,_law}"], [4.6576694963, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"], [3.8951048451, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [3.8199967583, "../topics/{control,_financial,_internal}.html", "{control,_financial,_internal}"], [3.3087391626, "../topics/{stock,_price,_share}.html", "{stock,_price,_share}"], [1.8213863747, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"], [1.7328482308, "../topics/{interest,_director,_officer}.html", "{interest,_director,_officer}"], [1.7062865141, "../topics/{tax,_income,_asset}.html", "{tax,_income,_asset}"], [1.6997301854, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [1.6993222362, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [1.4567001003, "../topics/{investment,_property,_distribution}.html", "{investment,_property,_distribution}"], [1.4295017871, "../topics/{financial,_litigation,_operation}.html", "{financial,_litigation,_operation}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>1368256--8/16/2010--K's_Media</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">1368256--8/16/2010--K's_Media</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{capital,_credit,_financial}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{capital,_credit,_financial}.html'">{capital, credit, financial}</td></tr>
+<tr class="list"><td id="{product,_liability,_claim}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_liability,_claim}.html'">{product, liability, claim}</td></tr>
+<tr class="list"><td id="{regulation,_change,_law}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_change,_law}.html'">{regulation, change, law}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+<tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{control,_financial,_internal}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{control,_financial,_internal}.html'">{control, financial, internal}</td></tr>
+<tr class="list"><td id="{stock,_price,_share}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_share}.html'">{stock, price, share}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+<tr class="list"><td id="{interest,_director,_officer}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{interest,_director,_officer}.html'">{interest, director, officer}</td></tr>
+<tr class="list"><td id="{tax,_income,_asset}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{tax,_income,_asset}.html'">{tax, income, asset}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(11)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{investment,_property,_distribution}" onmouseover="highlight(12)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{investment,_property,_distribution}.html'">{investment, property, distribution}</td></tr>
+<tr class="list"><td id="{financial,_litigation,_operation}" onmouseover="highlight(13)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{financial,_litigation,_operation}.html'">{financial, litigation, operation}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    Risks Related to Our Business
+We are an early stage company, we have a history of operating losses and we expect to continue to realize significant net losses for the foreseeable future.
+We have no operating history to provide you with an adequate basis to judge our future prospects and results of operations.
+If advertisers or the viewing public do not accept, or lose interest in our KTV media network, we may be unable to generate sufficient cash flow from our operating activities and our prospects and results of operations could be negatively affected.
+We derive substantially all of our revenues from the provision of KTV advertising services. If there is a downturn in the KTV advertising industry, we may not be able to diversify our revenue sources and our ability to generate revenues and our results of operations could be materially and adversely affected.
+Our ability to conduct our operations is contingent upon our obtaining and continuing in effect advertising licensing rights contract
+A substantial majority of our revenues is concentrated on mid to high-end KTV clubs in major cities in China. If a material number of these KTV clubs experiences a material business disruption, we would likely incur substantial losses of revenues.
+If we are unable to attract advertisers to purchase advertising time on our network, we will be unable to maintain or increase our advertising fees, which could negatively affect our ability to grow our profits.
+When our advertising network of KTV screens reaches saturation in the mid-high end KTV clubs in major cities, we may be unable to offer additional time slots to satisfy all of our advertisers needs, which could hamper our ability to generate higher levels of revenues and profitability over time.
+If advertising registration certificates are not obtained for our KTV advertising operations where such registration certificates are deemed to be required, we may be subject to administrative sanctions, including the discontinuation of our advertisements at KTV clubs where the required advertising registration is not obtained.
+Because we rely on third-party agencies to help source advertising clients, our failure to retain key third-party agencies or attract additional agencies on favorable terms could materially and adversely affect our revenue growth.
+If we are unable to adapt to changing advertising trends and the technology needs of advertisers and consumers, we will not be able to compete effectively and we will
+be unable to increase or maintain our revenues, which may materially and adversely affect our business prospects and revenues.
+We face significant competition in the Chinese advertising industry, and if we do not compete successfully against new and existing competitors, we may lose our market share, and our profitability may be adversely affected.
+Our results of operations are subject to fluctuations in the demand for entertaining in KTV clubs, which is affected by, among other things, general economic conditions, and a decrease in the demand for entertaining in KTV clubs may make it difficult for us to sell our advertising time slots.
+If we fail to manage our growth effectively, we may not be able to take advantage of market opportunities, execute our expansion strategies or meet the demands of our advertising clients.
+Future acquisitions may have an adverse effect on our ability to manage our business.
+Our business depends substantially on the continuing efforts of our senior executives, and our business may be severely disrupted if we lose their services.
+Our internal controls over financial reporting and our controls and procedures may in the future be inadequate.
+We may need additional capital, which, if obtained, could result in dilution or significant debt service obligations. We may not be able to obtain additional capital on commercially reasonable terms, which could adversely affect our liquidity and financial position.
+We may be subject to intellectual property infringement claims, which may force us to incur substantial legal expenses and, if determined adversely against us, may materially disrupt our business.
+We do not have any business liability, disruption, or litigation insurance, and any business disruption or litigation we experience might result in our incurring substantial costs and the diversion of our limited resources.
+Risks Related to Regulation of Our Business and Our Structure
+Compliance with China s advertising laws and regulations may be difficult and could be costly, and failure to comply could subject us to government sanctions.
+If the Chinese government finds that the agreements that establish the structure for operating our China business do not comply with Chinese governmental restrictions on foreign investment in the advertising industry and in the operating of non-advertising content, we could be subject to severe penalties.
+We rely on contractual arrangements with the Chinese Advertisement Company and shareholders of the Chinese Advertisement Company for a substantial portion of our China operations, which may not be as effective as direct ownership in providing operational control.
+Contractual arrangements we have entered into among our subsidiaries and the Chinese Advertisement Company may be subject to scrutiny by Chinese tax authorities and a finding that we owe additional taxes or are ineligible for our preferential tax treatment, or both, could substantially increase our taxes owed, and reduce our net income and the value of your investment.
+Certain of the agreements pursuant to which we operate our business, and which are necessary to such operation, are subject to termination in certain events.
+Risks Related to Doing Business in China
+Adverse changes in the political and economic policies of the Chinese government could have a material adverse effect on the overall economic growth of China, which could reduce the demand for our services and have a material adverse effect on our competitive position.
+Uncertainties with respect to the Chinese legal system could limit the legal protections available to us or result in substantial costs and the diversion of resources and management attention.
+Fluctuations in exchange rates may have a material adverse effect on your investment.
+Recent Chinese regulations relating to the establishment of offshore special purpose companies by Chinese residents and registration requirements for employee stock ownership plans or share option plans may subject our Chinese resident beneficial owners or the plan participants to personal liability, limit our ability to inject capital into our Chinese subsidiaries, limit our subsidiaries ability to increase their registered capital or distribute profits to us, or may otherwise adversely affect us.
+The Chinese government exerts substantial influence over the manner in which we must conduct our business activities.
+We may have difficulty establishing adequate management, legal and financial controls in the People's Republic of China.
+Risks Related to the Common Stock
+There may not be sufficient liquidity in the market for our securities in order for investors to sell their securities.
+The market price of our common stock may be volatile.
+<p><a href="http://www.sec.gov/Archives/edgar/data/1368256/0001062993-10-002679.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/1084961--2-8-2010--ENCORE_CAPITAL_GROUP_INC.html'">1084961--2/8/2010--ENCORE_CAPITAL_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/944868--3-1-2007--DIRECTV_GROUP_INC.html'">944868--3/1/2007--DIRECTV_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1339947--2-28-2008--Viacom_Inc..html'">1339947--2/28/2008--Viacom_Inc.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/944868--2-27-2009--DIRECTV_GROUP_INC.html'">944868--2/27/2009--DIRECTV_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/944868--2-25-2008--DIRECTV_GROUP_INC.html'">944868--2/25/2008--DIRECTV_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1234308--3-1-2007--DIRECTV_HOLDINGS_LLC.html'">1234308--3/1/2007--DIRECTV_HOLDINGS_LLC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/847383--6-13-2006--NEW_FRONTIER_MEDIA_INC.html'">847383--6/13/2006--NEW_FRONTIER_MEDIA_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/944868--3-10-2006--DIRECTV_GROUP_INC.html'">944868--3/10/2006--DIRECTV_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1339947--2-12-2009--Viacom_Inc..html'">1339947--2/12/2009--Viacom_Inc.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1234308--2-27-2008--DIRECTV_FINANCING_CO_INC.html'">1234308--2/27/2008--DIRECTV_FINANCING_CO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1084961--2-19-2008--ENCORE_CAPITAL_GROUP_INC.html'">1084961--2/19/2008--ENCORE_CAPITAL_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1034669--3-14-2007--FISHER_COMMUNICATIONS_INC.html'">1034669--3/14/2007--FISHER_COMMUNICATIONS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1234308--3-10-2006--DIRECTV_HOLDINGS_LLC.html'">1234308--3/10/2006--DIRECTV_HOLDINGS_LLC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1109116--3-16-2006--ENTRAVISION_COMMUNICATIONS_CORP.html'">1109116--3/16/2006--ENTRAVISION_COMMUNICATIONS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1109116--3-15-2007--ENTRAVISION_COMMUNICATIONS_CORP.html'">1109116--3/15/2007--ENTRAVISION_COMMUNICATIONS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/847383--6-14-2007--NEW_FRONTIER_MEDIA_INC.html'">847383--6/14/2007--NEW_FRONTIER_MEDIA_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1034669--3-14-2008--FISHER_COMMUNICATIONS_INC.html'">1034669--3/14/2008--FISHER_COMMUNICATIONS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1234308--2-27-2009--DIRECTV_FINANCING_CO_INC.html'">1234308--2/27/2009--DIRECTV_FINANCING_CO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1465112--2-26-2010--DIRECTV.html'">1465112--2/26/2010--DIRECTV</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1234308--2-26-2010--DIRECTV_FINANCING_CO_INC.html'">1234308--2/26/2010--DIRECTV_FINANCING_CO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1192503--3-30-2007--LBI_MEDIA_INC.html'">1192503--3/30/2007--LBI_MEDIA_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1001258--12-28-2007--ASTA_FUNDING_INC.html'">1001258--12/28/2007--ASTA_FUNDING_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/949536--2-27-2009--HEARST_ARGYLE_TELEVISION_INC.html'">949536--2/27/2009--HEARST_ARGYLE_TELEVISION_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1001258--12-14-2010--ASTA_FUNDING_INC.html'">1001258--12/14/2010--ASTA_FUNDING_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/929351--6-1-2009--LIONS_GATE_ENTERTAINMENT_CORP_-CN-.html'">929351--6/1/2009--LIONS_GATE_ENTERTAINMENT_CORP_/CN/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/923877--3-22-2006--PAXSON_COMMUNICATIONS_CORP.html'">923877--3/22/2006--PAXSON_COMMUNICATIONS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/889156--12-15-2010--ALLBRITTON_COMMUNICATIONS_CO.html'">889156--12/15/2010--ALLBRITTON_COMMUNICATIONS_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/813828--2-28-2008--CBS_CORP.html'">813828--2/28/2008--CBS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/921582--3-13-2009--IMAX_CORP.html'">921582--3/13/2009--IMAX_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/923877--4-2-2007--ION_MEDIA_NETWORKS_INC..html'">923877--4/2/2007--ION_MEDIA_NETWORKS_INC.</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

@@ -1,0 +1,182 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[7.6354665525, "../topics/{condition,_economic,_financial}.html", "{condition,_economic,_financial}"], [2.6715302681, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [2.6519595868, "../topics/{cost,_contract,_operation}.html", "{cost,_contract,_operation}"], [1.766593741, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"], [1.7504633711, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [1.7020938742, "../topics/{financial,_litigation,_operation}.html", "{financial,_litigation,_operation}"], [1.7011568261, "../topics/{cost,_operation,_labor}.html", "{cost,_operation,_labor}"], [1.7010614865, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [1.6911168917, "../topics/{loss,_insurance,_financial}.html", "{loss,_insurance,_financial}"], [1.6829579522, "../topics/{regulation,_change,_law}.html", "{regulation,_change,_law}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>823094--3/1/2010--SOTHEBYS</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">823094--3/1/2010--SOTHEBYS</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{condition,_economic,_financial}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{condition,_economic,_financial}.html'">{condition, economic, financial}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{cost,_contract,_operation}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_contract,_operation}.html'">{cost, contract, operation}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+<tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{financial,_litigation,_operation}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{financial,_litigation,_operation}.html'">{financial, litigation, operation}</td></tr>
+<tr class="list"><td id="{cost,_operation,_labor}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_operation,_labor}.html'">{cost, operation, labor}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{loss,_insurance,_financial}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{loss,_insurance,_financial}.html'">{loss, insurance, financial}</td></tr>
+<tr class="list"><td id="{regulation,_change,_law}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_change,_law}.html'">{regulation, change, law}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    The supply of and demand for works of art can be adversely impacted by weakness in the global economy and the financial markets of various countries.
+Fluctuations in benchmark interest rates may increase the cost of credit facility borrowings.
+Government laws and regulations may restrict or limit Sotheby s business.
+Global political conditions and world events may negatively affect Sotheby s business and customers.
+Foreign currency exchange rate movements can significantly increase or decrease Sotheby s results of operations.
+Competition in the international art market is intense and may adversely impact Sotheby s results of operations.
+Sotheby s cannot be assured of the amount and quality of property consigned for sale at auction, which may cause significant variability in its financial results.
+The demand for art is unpredictable, which may cause significant variability in Sotheby s financial results.
+The loss of key personnel could adversely impact Sotheby s ability to compete.
+Sotheby s relies on a small number of clients who make a significant contribution to its revenues and profitability.
+Demand for art-related financing is unpredictable, which may cause significant variability in the financial results of Sotheby s Finance segment.
+The strategic initiatives and restructuring plans being implemented by Sotheby s may not succeed.
+The value of art is subjective and often fluctuates, exposing Sotheby s to losses in the value of its inventory and loan collateral and significant variability in its financial results.
+Auction guarantees create the risk of loss resulting from the potential inaccurate valuation of art.
+Sotheby s could be exposed to credit-related losses in the event of nonperformance by its counterparties in auction guarantee risk and reward sharing arrangements.
+Future costs and obligations related to the Sotheby s U.K. Pension Plan are dependent on unpredictable factors, which may cause significant variability in employee benefit costs.
+Tax matters may cause significant variability in Sotheby s financial results.
+Insurance coverage for artwork may become more difficult to obtain, exposing Sotheby s to losses for artwork in Sotheby s possession.
+<p><a href="http://www.sec.gov/Archives/edgar/data/823094/0000930413-10-001151.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/789073--2-24-2010--FORTUNE_BRANDS_INC.html'">789073--2/24/2010--FORTUNE_BRANDS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/6951--12-12-2008--APPLIED_MATERIALS_INC_-DE.html'">6951--12/12/2008--APPLIED_MATERIALS_INC_/DE</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/789073--2-27-2009--FORTUNE_BRANDS_INC.html'">789073--2/27/2009--FORTUNE_BRANDS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/314132--7-12-2007--FLEETWOOD_ENTERPRISES_INC-DE-.html'">314132--7/12/2007--FLEETWOOD_ENTERPRISES_INC/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1409171--4-16-2009--Titan_Machinery_Inc..html'">1409171--4/16/2009--Titan_Machinery_Inc.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1409171--4-15-2010--Titan_Machinery_Inc..html'">1409171--4/15/2010--Titan_Machinery_Inc.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/898660--3-31-2010--STATION_CASINOS_INC.html'">898660--3/31/2010--STATION_CASINOS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/314132--7-13-2006--FLEETWOOD_ENTERPRISES_INC-DE-.html'">314132--7/13/2006--FLEETWOOD_ENTERPRISES_INC/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/45876--3-13-2006--HARSCO_CORP.html'">45876--3/13/2006--HARSCO_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/922487--3-30-2010--ROYAL_BANCSHARES_OF_PENNSYLVANIA_INC.html'">922487--3/30/2010--ROYAL_BANCSHARES_OF_PENNSYLVANIA_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/945489--3-27-2009--BELL_INDUSTRIES_INC_-NEW-.html'">945489--3/27/2009--BELL_INDUSTRIES_INC_/NEW/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/26172--2-27-2009--CUMMINS_INC.html'">26172--2/27/2009--CUMMINS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/833079--2-27-2009--Meritage_Homes_CORP.html'">833079--2/27/2009--Meritage_Homes_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/40211--2-25-2009--GATX_CORP.html'">40211--2/25/2009--GATX_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/835012--3-31-2010--COMMONWEALTH_BANKSHARES_INC.html'">835012--3/31/2010--COMMONWEALTH_BANKSHARES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/6951--12-10-2010--APPLIED_MATERIALS_INC_-DE.html'">6951--12/10/2010--APPLIED_MATERIALS_INC_/DE</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/46195--2-25-2009--BANK_OF_HAWAII_CORP.html'">46195--2/25/2009--BANK_OF_HAWAII_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/916365--3-16-2006--TRACTOR_SUPPLY_CO_-DE-.html'">916365--3/16/2006--TRACTOR_SUPPLY_CO_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/887596--2-27-2009--CHEESECAKE_FACTORY_INC.html'">887596--2/27/2009--CHEESECAKE_FACTORY_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/46195--2-22-2010--BANK_OF_HAWAII_CORP.html'">46195--2/22/2010--BANK_OF_HAWAII_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/945489--3-31-2010--BELL_INDUSTRIES_INC_-NEW-.html'">945489--3/31/2010--BELL_INDUSTRIES_INC_/NEW/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/918646--5-27-2009--EAGLE_MATERIALS_INC.html'">918646--5/27/2009--EAGLE_MATERIALS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/311094--2-26-2010--WESTAMERICA_BANCORPORATION.html'">311094--2/26/2010--WESTAMERICA_BANCORPORATION</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/91882--3-1-2007--SOUTH_CAROLINA_ELECTRIC_&_GAS_CO.html'">91882--3/1/2007--SOUTH_CAROLINA_ELECTRIC_&_GAS_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/754737--3-1-2007--SOUTH_CAROLINA_ELECTRIC_&_GAS_CO.html'">754737--3/1/2007--SOUTH_CAROLINA_ELECTRIC_&_GAS_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1011659--3-10-2010--UNIONBANCAL_CORP.html'">1011659--3/10/2010--UNIONBANCAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/737210--3-12-2010--LNB_BANCORP_INC.html'">737210--3/12/2010--LNB_BANCORP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/833079--3-5-2010--Meritage_Homes_CORP.html'">833079--3/5/2010--Meritage_Homes_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/40211--2-25-2010--GATX_CORP.html'">40211--2/25/2010--GATX_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/84129--4-17-2009--RITE_AID_CORP.html'">84129--4/17/2009--RITE_AID_CORP</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

@@ -1,0 +1,189 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[4.8756319733, "../topics/{loss,_insurance,_financial}.html", "{loss,_insurance,_financial}"], [4.8225092345, "../topics/{operation,_natural,_condition}.html", "{operation,_natural,_condition}"], [3.796404779, "../topics/{regulation,_change,_law}.html", "{regulation,_change,_law}"], [2.7020247453, "../topics/{tax,_income,_asset}.html", "{tax,_income,_asset}"], [2.3674600824, "../topics/{condition,_economic,_financial}.html", "{condition,_economic,_financial}"], [1.8999023379, "../topics/{financial,_litigation,_operation}.html", "{financial,_litigation,_operation}"], [1.8948318117, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"], [1.7860384376, "../topics/{capital,_credit,_financial}.html", "{capital,_credit,_financial}"], [1.7316433271, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"], [1.7152648696, "../topics/{debt,_indebtedness,_cash}.html", "{debt,_indebtedness,_cash}"], [1.697642317, "../topics/{cost,_contract,_operation}.html", "{cost,_contract,_operation}"], [1.6954607392, "../topics/{competitive,_industry,_competition}.html", "{competitive,_industry,_competition}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>5513--2/26/2010--Unum_Group</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">5513--2/26/2010--Unum_Group</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{loss,_insurance,_financial}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{loss,_insurance,_financial}.html'">{loss, insurance, financial}</td></tr>
+<tr class="list"><td id="{operation,_natural,_condition}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_natural,_condition}.html'">{operation, natural, condition}</td></tr>
+<tr class="list"><td id="{regulation,_change,_law}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_change,_law}.html'">{regulation, change, law}</td></tr>
+<tr class="list"><td id="{tax,_income,_asset}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{tax,_income,_asset}.html'">{tax, income, asset}</td></tr>
+<tr class="list"><td id="{condition,_economic,_financial}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{condition,_economic,_financial}.html'">{condition, economic, financial}</td></tr>
+<tr class="list"><td id="{financial,_litigation,_operation}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{financial,_litigation,_operation}.html'">{financial, litigation, operation}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+<tr class="list"><td id="{capital,_credit,_financial}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{capital,_credit,_financial}.html'">{capital, credit, financial}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+<tr class="list"><td id="{debt,_indebtedness,_cash}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{debt,_indebtedness,_cash}.html'">{debt, indebtedness, cash}</td></tr>
+<tr class="list"><td id="{cost,_contract,_operation}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_contract,_operation}.html'">{cost, contract, operation}</td></tr>
+<tr class="list"><td id="{competitive,_industry,_competition}" onmouseover="highlight(11)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{competitive,_industry,_competition}.html'">{competitive, industry, competition}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    Unfavorable economic conditions may result in lower premium growth, higher disability claims incidence, or longer claims duration.
+We and our insurance subsidiaries are subject to extensive supervision and regulation, which may affect the cost or demand for our products, may increase capital requirements for our insurance subsidiaries, or may impact our profitability or growth.
+Sustained periods of low interest rates in the long-term investment market may adversely affect our reported net investment income and our ability to purchase securities at rates of return assumed in the pricing and reserving for our insurance products, which may have a material adverse effect on our results of operations or financial condition.
+Changes in the risk results of our segments or lines of businesses may materially adversely affect our results or operations or financial condition.
+In addition to interest rate risk as previously discussed, we are exposed to other risks related to our investment portfolio which may adversely affect our results of operations, financial condition, or liquidity. These risks include default risk, credit spread fluctuations, the contractual terms of derivative contracts, the accuracy of valuations of securities, and the possibility that we might need to sell securities at disadvantageous times.
+Competition may adversely affect our market share or profitability.
+A decrease in our financial strength or issuer credit ratings may have an adverse effect on our competitive position, results of operations, or financial condition.
+Events that damage our reputation may adversely affect our business, results of operations, or financial condition.
+Volatility in long-term interest rates or the rate of return on pension plan assets may have a negative effect on the funded status of our pension plans and/or increase our pension costs.
+Our insurance products may be affected by many factors, and changes in any of those factors may adversely affect our profitability.
+Changes in accounting standards issued by the Financial Accounting Standards Board (FASB), the International Accounting Standards Board (IASB), the U.K. Accounting Standards Board (ASB), or other standard-setting bodies may adversely affect our financial statements.
+An assessment by a governing tax authority may have a material adverse effect on our results of operations or financial condition.
+We may be required to establish a valuation allowance against our deferred income tax asset.
+Our overall risk management program may leave us exposed to unidentified or unanticipated risk, which could negatively affect our business.
+Litigation is common in our businesses and may result in significant financial losses and/or harm to our reputation.
+United Kingdom currency translation risk could materially impact reported operating results.
+We are subject to various operational risks resulting from inadequate or failed internal processes or from external events which may damage our market position and reputation and/or adversely affect our results of operations or financial condition.
+We need to finance our ongoing operations, and this may not always be possible solely from internal sources of capital and liquidity. If we need to seek external capital, there is the risk that adverse market conditions may significantly affect our access to capital or our cost of capital.
+Our subsidiaries may be restricted from paying dividends to our holding companies.
+Reinsurance may not be available or affordable, or reinsurers may be unwilling or unable to meet their obligations under our reinsurance contracts, which may adversely affect our results of operations or financial condition.
+We have intangible assets such as deferred acquisition costs (DAC), value of business acquired (VOBA), and goodwill. We may be required to accelerate amortization or recognize an impairment, which may adversely affect our results of operations or financial condition.
+Extreme events, including terrorism, can affect the economy in general, our industry, and us specifically.
+We also face other risks that may adversely affect our business, results of operations, or financial condition, including but not limited to:
+<p><a href="http://www.sec.gov/Archives/edgar/data/5513/0001193125-10-042716.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/5513--2-24-2009--Unum_Group.html'">5513--2/24/2009--Unum_Group</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/874766--2-23-2010--HARTFORD_FINANCIAL_SERVICES_GROUP_INC-DE.html'">874766--2/23/2010--HARTFORD_FINANCIAL_SERVICES_GROUP_INC/DE</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/54507--2-25-2010--WESTAR_ENERGY_INC_-KS.html'">54507--2/25/2010--WESTAR_ENERGY_INC_/KS</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/8177--3-31-2008--ATLANTIC_AMERICAN_CORP.html'">8177--3/31/2008--ATLANTIC_AMERICAN_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1271245--3-24-2008--FREMONT_MICHIGAN_INSURACORP_INC.html'">1271245--3/24/2008--FREMONT_MICHIGAN_INSURACORP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/8177--3-31-2009--ATLANTIC_AMERICAN_CORP.html'">8177--3/31/2009--ATLANTIC_AMERICAN_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/8177--3-30-2007--ATLANTIC_AMERICAN_CORP.html'">8177--3/30/2007--ATLANTIC_AMERICAN_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1138258--3-10-2008--MIRANT_MID_ATLANTIC_LLC.html'">1138258--3/10/2008--MIRANT_MID_ATLANTIC_LLC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/720858--3-9-2007--INVESTORS_TITLE_CO.html'">720858--3/9/2007--INVESTORS_TITLE_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/835357--3-15-2007--MONY_LIFE_INSURANCE_CO_OF_AMERICA.html'">835357--3/15/2007--MONY_LIFE_INSURANCE_CO_OF_AMERICA</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/230557--2-27-2009--SELECTIVE_INSURANCE_GROUP_INC.html'">230557--2/27/2009--SELECTIVE_INSURANCE_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/776867--3-7-2006--WHITE_MOUNTAINS_INSURANCE_GROUP_LTD.html'">776867--3/7/2006--WHITE_MOUNTAINS_INSURANCE_GROUP_LTD</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/948368--3-15-2010--PSB_HOLDINGS_INC_-WI-.html'">948368--3/15/2010--PSB_HOLDINGS_INC_/WI/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/845091--3-29-2006--MERRILL_LYNCH_LIFE_INSURANCE_CO.html'">845091--3/29/2006--MERRILL_LYNCH_LIFE_INSURANCE_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/874766--2-12-2009--HARTFORD_FINANCIAL_SERVICES_GROUP_INC-DE.html'">874766--2/12/2009--HARTFORD_FINANCIAL_SERVICES_GROUP_INC/DE</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/776867--2-29-2008--WHITE_MOUNTAINS_INSURANCE_GROUP_LTD.html'">776867--2/29/2008--WHITE_MOUNTAINS_INSURANCE_GROUP_LTD</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/80661--3-1-2010--PROGRESSIVE_CORP-OH-.html'">80661--3/1/2010--PROGRESSIVE_CORP/OH/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/720858--3-21-2006--INVESTORS_TITLE_CO.html'">720858--3/21/2006--INVESTORS_TITLE_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1162000--3-26-2008--FUND_AMERICAN_CO_INC-NEW.html'">1162000--3/26/2008--FUND_AMERICAN_CO_INC/NEW</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/948368--3-13-2008--PSB_HOLDINGS_INC_-WI-.html'">948368--3/13/2008--PSB_HOLDINGS_INC_/WI/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/11544--3-1-2007--BERKLEY_W_R_CORP.html'">11544--3/1/2007--BERKLEY_W_R_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/35733--10-30-2006--FINANCIAL_INDUSTRIES_CORP.html'">35733--10/30/2006--FINANCIAL_INDUSTRIES_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1053352--3-16-2007--HERITAGE_COMMERCE_CORP.html'">1053352--3/16/2007--HERITAGE_COMMERCE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/881453--3-24-2006--AMERICAN_SKANDIA_LIFE_ASSURANCE_CORP-CT.html'">881453--3/24/2006--AMERICAN_SKANDIA_LIFE_ASSURANCE_CORP/CT</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/881453--3-14-2008--PRUDENTIAL_ANNUITIES_LIFE_ASSURANCE_CORP-CT.html'">881453--3/14/2008--PRUDENTIAL_ANNUITIES_LIFE_ASSURANCE_CORP/CT</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/836658--3-30-2007--ING_USA_ANNUITY_&_LIFE_INSURANCE_CO.html'">836658--3/30/2007--ING_USA_ANNUITY_&_LIFE_INSURANCE_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1038509--3-24-2006--PRUCO_LIFE_INSURANCE_OF_NEW_JERSEY.html'">1038509--3/24/2006--PRUCO_LIFE_INSURANCE_OF_NEW_JERSEY</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/777917--3-14-2008--PRUCO_LIFE_INSURANCE_CO.html'">777917--3/14/2008--PRUCO_LIFE_INSURANCE_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1163710--3-29-2006--RELIASTAR_LIFE_INSURANCE_CO_OF_NEW_YORK.html'">1163710--3/29/2006--RELIASTAR_LIFE_INSURANCE_CO_OF_NEW_YORK</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/764044--3-17-2008--QUESTAR_PIPELINE_CO.html'">764044--3/17/2008--QUESTAR_PIPELINE_CO</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

@@ -1,0 +1,216 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[22.7837983175, "../topics/{product,_candidate,_development}.html", "{product,_candidate,_development}"], [4.8555151987, "../topics/{product,_liability,_claim}.html", "{product,_liability,_claim}"], [4.7817967634, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [3.3200408946, "../topics/{stock,_price,_share}.html", "{stock,_price,_share}"], [2.7035277689, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"], [2.3975582799, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [1.7349886958, "../topics/{cost,_contract,_operation}.html", "{cost,_contract,_operation}"], [1.7315545069, "../topics/{regulation,_change,_law}.html", "{regulation,_change,_law}"], [1.7215898306, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [1.7163291608, "../topics/{cost,_operation,_labor}.html", "{cost,_operation,_labor}"], [1.7034149465, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"], [1.6967611362, "../topics/{control,_financial,_internal}.html", "{control,_financial,_internal}"], [1.6962699953, "../topics/{provision,_law,_control}.html", "{provision,_law,_control}"], [1.6337167781, "../topics/{cost,_regulation,_environmental}.html", "{cost,_regulation,_environmental}"], [1.4126313935, "../topics/{investment,_property,_distribution}.html", "{investment,_property,_distribution}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>1178711--3/17/2008--NOVACEA_INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">1178711--3/17/2008--NOVACEA_INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{product,_candidate,_development}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_candidate,_development}.html'">{product, candidate, development}</td></tr>
+<tr class="list"><td id="{product,_liability,_claim}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_liability,_claim}.html'">{product, liability, claim}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{stock,_price,_share}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_share}.html'">{stock, price, share}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{cost,_contract,_operation}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_contract,_operation}.html'">{cost, contract, operation}</td></tr>
+<tr class="list"><td id="{regulation,_change,_law}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_change,_law}.html'">{regulation, change, law}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{cost,_operation,_labor}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_operation,_labor}.html'">{cost, operation, labor}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+<tr class="list"><td id="{control,_financial,_internal}" onmouseover="highlight(11)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{control,_financial,_internal}.html'">{control, financial, internal}</td></tr>
+<tr class="list"><td id="{provision,_law,_control}" onmouseover="highlight(12)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{provision,_law,_control}.html'">{provision, law, control}</td></tr>
+<tr class="list"><td id="{cost,_regulation,_environmental}" onmouseover="highlight(13)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_regulation,_environmental}.html'">{cost, regulation, environmental}</td></tr>
+<tr class="list"><td id="{investment,_property,_distribution}" onmouseover="highlight(14)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{investment,_property,_distribution}.html'">{investment, property, distribution}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    Risks Related to Our Business
+We have incurred losses since inception and anticipate that we will continue to incur losses for the foreseeable future. We may never achieve or sustain profitability.
+We ended and have suspended enrollment in clinical trials for our lead product candidate, Asentar , and we cannot give any assurance that it will receive regulatory approval or be successfully developed or commercialized.
+We ended the ASCENT-2 Phase 3 clinical confirmatory trial without confirming the previously observed safety and efficacy trends of Asentar .
+While the FDA regards our ASCENT clinical trial of Asentar as completed, patients remained on study following the protocol specified analysis that had been previously reported. We cannot assure you that these patients have not subsequently experienced safety or efficacy issues that might alter the reported data.
+Non-U.S. regulatory authorities may request that we update our analysis from our ASCENT clinical trial, and we cannot guarantee that the results of the analysis will be the same.
+We have tested the efficacy of Asentar in combination with Taxotere in AIPC patients at a single dosing level. We do not currently know the minimum efficacious dose of Asentar or whether alternative formulations of calcitriol, the active ingredient in Asentar , could be substituted.
+We do not hold and cannot license composition of matter patents covering the active ingredient in Asentar , calcitriol, and our competitors may be able to develop cancer therapies that are similar to Asentar using calcitriol.
+There are currently clinical trials ongoing which seek to use other agents with Taxotere for the treatment of AIPC. If these clinical trials are completed before we are able to enroll and complete another clinical confirmatory trial establishing the safety and efficacy of Asentar , our ability to commercialize Asentar may suffer.
+We and our collaborator will be required to expend significant additional resources to fully develop and commercialize Asentar for any other indications with other chemotherapies or as a monotherapy.
+Our drug development activities could be delayed or stopped.
+There is a high risk that our drug development activities will not result in commercial products.
+The results of previous clinical trials may not be predictive of future results, and our current and planned clinical trials may not satisfy the requirements of the FDA or other non-U.S. regulatory authorities.
+Our product candidates may cause undesirable side effects during clinical trials that could delay or prevent their regulatory approval or commercialization.
+We depend on our collaborator, Schering-Plough Corporation, to work with us to develop, manufacture and commercialize Asentar .
+Our existing collaboration and any collaborations we enter into in the future may not be successful.
+We will require substantial additional funding which may not be available to us on acceptable terms, or at all.
+If our competitors develop and market products that are more effective, safer or less expensive than our current and future product candidates, our commercial opportunities will be negatively impacted.
+If we fail to attract and retain key management and scientific personnel, we may be unable to successfully develop or commercialize our product candidates.
+As we evolve from a company primarily involved in development to a company also involved in commercialization, we may encounter difficulties in managing our growth and expanding our operations successfully.
+If we fail to acquire and develop other products or product candidates at all or on commercially reasonable terms, we may be unable to grow our business.
+We rely on third parties to conduct clinical trials for our product candidates and plan to rely on third parties to conduct future clinical trials. If these third parties do not successfully carry out their contractual duties or meet expected deadlines, we may be unable to obtain regulatory approval for or commercialize our current and future product candidates.
+We rely on third parties to manufacture and supply our product candidates.
+We currently have limited marketing staff and no sales or distribution organization. If we are unable to develop our sales and marketing and distribution capability on our own or through collaborations with marketing partners, we will not be successful in commercializing our product candidates.
+Our proprietary rights may not adequately protect our technologies and product candidates.
+The intellectual property protection for our product candidates is dependent on third parties.
+If we breach any of the agreements under which we license commercialization rights to our product candidates or technology from third parties, we could lose license rights that are important to our business.
+If conflicts of interest arise between our licensing partners and us, any of them may act in their self-interest, which may be adverse to our interests.
+The patent protection for our product candidates or products may expire before we are able to maximize their commercial value which may subject us to increased competition and reduce or eliminate our opportunity to generate product revenue.
+We may not be able to protect our intellectual property rights throughout the world.
+If we are sued for infringing intellectual property rights of third parties, litigation will be costly and time consuming and could prevent us from developing or commercializing our future product candidates.
+We may be subject to damages resulting from claims that we, or our employees, have wrongfully used or disclosed alleged trade secrets of our employees former employers.
+We expect that the price of our common stock may be volatile.
+The ownership of our common stock may continue to be highly concentrated.
+Provisions of our charter documents or Delaware law could delay or prevent an acquisition of our company, even if the acquisition would be beneficial to our stockholders, and could make it more difficult for our stockholders to change management.
+We may incur increased costs as a result of changes in laws and regulations relating to corporate governance matters.
+A significant portion of our outstanding common stock may be sold into the market. Substantial sales of our common stock, or the perception such sales are likely to occur, could cause the price of our common stock to decline.
+Risks Related to Our Industry
+The regulatory approval process is expensive, time consuming and uncertain and may prevent us or our collaboration partners from obtaining approvals for the commercialization of some or all of our product candidates.
+Even if we obtain regulatory approvals for our product candidates, the terms of approvals and ongoing regulation of our products may limit how we manufacture and market our product candidates, which could materially impair our ability to commercialize and generate revenue.
+Even if we receive regulatory approval to market our product candidates, the market may not be receptive to our products.
+The coverage and reimbursement status of newly approved drugs is uncertain, and failure to obtain adequate coverage and adequate reimbursement could limit our ability to market any future product candidates we may develop and decrease our ability to generate revenue from any of our existing and future product candidates that may be approved.
+Current health care laws and regulations and future legislative or regulatory changes to the health care system may affect our ability to sell our future product candidates profitably.
+Failure to obtain regulatory approval outside the United States will prevent us from marketing our product candidates abroad.
+Non-U.S. governments often impose strict price controls, which may adversely affect our future profitability.
+We may be subject to costly claims related to our clinical trials and may not be able to obtain adequate insurance.
+Our business may become subject to economic, political, regulatory and other risks associated with international operations.
+<p><a href="http://www.sec.gov/Archives/edgar/data/1178711/0001193125-08-058927.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/1180145--3-14-2008--REPLIDYNE_INC.html'">1180145--3/14/2008--REPLIDYNE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1142576--3-12-2009--OPTIMER_PHARMACEUTICALS_INC.html'">1142576--3/12/2009--OPTIMER_PHARMACEUTICALS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1180145--3-27-2007--REPLIDYNE_INC.html'">1180145--3/27/2007--REPLIDYNE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1340744--3-11-2009--Altus_Pharmaceuticals_Inc..html'">1340744--3/11/2009--Altus_Pharmaceuticals_Inc.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1208261--3-15-2010--EPICEPT_CORP.html'">1208261--3/15/2010--EPICEPT_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1322505--12-11-2008--Biodel_Inc.html'">1322505--12/11/2008--Biodel_Inc</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1001233--3-5-2010--SANGAMO_BIOSCIENCES_INC.html'">1001233--3/5/2010--SANGAMO_BIOSCIENCES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1093649--3-4-2009--IDENIX_PHARMACEUTICALS_INC.html'">1093649--3/4/2009--IDENIX_PHARMACEUTICALS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/874015--3-13-2008--ISIS_PHARMACEUTICALS_INC.html'">874015--3/13/2008--ISIS_PHARMACEUTICALS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1322505--12-21-2007--Biodel_Inc.html'">1322505--12/21/2007--Biodel_Inc</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/872589--2-26-2009--REGENERON_PHARMACEUTICALS_INC.html'">872589--2/26/2009--REGENERON_PHARMACEUTICALS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1142576--3-11-2010--OPTIMER_PHARMACEUTICALS_INC.html'">1142576--3/11/2010--OPTIMER_PHARMACEUTICALS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1212235--3-17-2008--XTENT_INC.html'">1212235--3/17/2008--XTENT_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1157601--3-20-2008--SYNTA_PHARMACEUTICALS_CORP.html'">1157601--3/20/2008--SYNTA_PHARMACEUTICALS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1128495--3-15-2007--ANADYS_PHARMACEUTICALS_INC.html'">1128495--3/15/2007--ANADYS_PHARMACEUTICALS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1157601--3-28-2007--SYNTA_PHARMACEUTICALS_CORP.html'">1157601--3/28/2007--SYNTA_PHARMACEUTICALS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1333248--3-13-2008--CADENCE_PHARMACEUTICALS_INC.html'">1333248--3/13/2008--CADENCE_PHARMACEUTICALS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1093649--3-14-2008--IDENIX_PHARMACEUTICALS_INC.html'">1093649--3/14/2008--IDENIX_PHARMACEUTICALS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1157601--3-26-2009--SYNTA_PHARMACEUTICALS_CORP.html'">1157601--3/26/2009--SYNTA_PHARMACEUTICALS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1107332--2-22-2010--DENDREON_CORP.html'">1107332--2/22/2010--DENDREON_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1107332--3-15-2006--DENDREON_CORP.html'">1107332--3/15/2006--DENDREON_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/899923--9-7-2006--MYRIAD_GENETICS_INC.html'">899923--9/7/2006--MYRIAD_GENETICS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1322505--12-14-2009--Biodel_Inc.html'">1322505--12/14/2009--Biodel_Inc</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1208261--3-13-2009--EPICEPT_CORP.html'">1208261--3/13/2009--EPICEPT_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/884731--3-16-2006--ARIAD_PHARMACEUTICALS_INC.html'">884731--3/16/2006--ARIAD_PHARMACEUTICALS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1087432--3-15-2010--INTERMUNE_INC.html'">1087432--3/15/2010--INTERMUNE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1178879--2-8-2008--AMICUS_THERAPEUTICS_INC.html'">1178879--2/8/2008--AMICUS_THERAPEUTICS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1310094--8-16-2010--ACCENTIA_BIOPHARMACEUTICALS_INC.html'">1310094--8/16/2010--ACCENTIA_BIOPHARMACEUTICALS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/722104--3-2-2009--SAVIENT_PHARMACEUTICALS_INC.html'">722104--3/2/2009--SAVIENT_PHARMACEUTICALS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1340744--3-11-2008--Altus_Pharmaceuticals_Inc..html'">1340744--3/11/2008--Altus_Pharmaceuticals_Inc.</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

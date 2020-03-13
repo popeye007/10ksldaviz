@@ -1,0 +1,189 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[6.5136245137, "../topics/{stock,_price,_share}.html", "{stock,_price,_share}"], [3.6295666309, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [2.7740083924, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"], [2.7433924159, "../topics/{product,_liability,_claim}.html", "{product,_liability,_claim}"], [2.7081821734, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [2.6967311559, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [2.6895403996, "../topics/{interest,_director,_officer}.html", "{interest,_director,_officer}"], [1.7118684061, "../topics/{regulation,_change,_law}.html", "{regulation,_change,_law}"], [1.701177456, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [1.6989547098, "../topics/{cost,_operation,_labor}.html", "{cost,_operation,_labor}"], [1.6963363073, "../topics/{system,_service,_information}.html", "{system,_service,_information}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>1405350--4/10/2009--RxBids</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">1405350--4/10/2009--RxBids</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{stock,_price,_share}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_share}.html'">{stock, price, share}</td></tr>
+<tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+<tr class="list"><td id="{product,_liability,_claim}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_liability,_claim}.html'">{product, liability, claim}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{interest,_director,_officer}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{interest,_director,_officer}.html'">{interest, director, officer}</td></tr>
+<tr class="list"><td id="{regulation,_change,_law}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_change,_law}.html'">{regulation, change, law}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{cost,_operation,_labor}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_operation,_labor}.html'">{cost, operation, labor}</td></tr>
+<tr class="list"><td id="{system,_service,_information}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{system,_service,_information}.html'">{system, service, information}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    Risk Factors Related to Our Business
+We have a limited operating history and have not recorded revenues or profits since inception. Continuing losses may exhaust capital resources and force us to discontinue operations.
+The success of future operations depends on our ability to generate revenues from consumers using our website to purchase their prescriptions, which may be subject to many factors.
+We have not made an independent market analysis for the services offered by RxBids and there can be no assurance that the business will be successful.
+Future operating results are difficult to predict.
+There are many forms of competition that we must recognize and successfully address if we are to succeed. If we are unable to compete with other companies offering the same or similar services, our business could fail.
+Government regulations and stringent controls may be costly and time consuming as we develop our website and business.
+Our business is highly dependent on computers and the Internet and any sustained interruption due to technical difficulties would be costly and have a negative affect on results of operations.
+We may be unable to protect our software or intellectual property adequately or cost effectively.
+Our intellectual property may infringe on the rights of others, resulting in costly litigation.
+We do not carry liability insurance and any action or suit against our company could result in substantial expense and loss.
+Our future success depends on retaining existing key employees and hiring and assimilating new key employees.
+Management will devote only minimal time to company business.
+We may not be able to manage future growth effectively, which could adversely affect our operations and financial performance.
+If we are unable to raise additional capital in the future, we may not be able to achieve our desired operating objectives and our business could fail.
+As a reporting company under the Securities Exchange Act of 1934, our cost of doing business will increase significantly because of necessary expenses, including compliance with SEC reporting requirements.
+Our auditors have expressed a going concern opinion.
+Risks Relating to Ownership of Our Common Stock
+There is not currently, nor has there ever been, a public trading market for our common stock
+In the event our shares are quoted in a public market, the stock price may be volatile and subject to numerous factors.
+Effective voting control of our company is held by directors and certain principal stockholders.
+We do not expect to pay dividends in the foreseeable future, which could make our stock less attractive to potential investors.
+If our shares eventually trade on the OTC Bulletin Board, transactions may be subject to certain "penny stock regulation which could have a negative effect on the price of our shares in the public market.
+Future sales or the potential for sale of a substantial number of shares of our common stock, could cause our market value to decline.
+<p><a href="http://www.sec.gov/Archives/edgar/data/1405350/0000931731-09-000107.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/802257--9-28-2009--BRAIN_TREE_INTERNATIONAL_INC.html'">802257--9/28/2009--BRAIN_TREE_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1419583--3-24-2010--Cellteck_Inc..html'">1419583--3/24/2010--Cellteck_Inc.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1121785--3-31-2006--SLS_INTERNATIONAL_INC.html'">1121785--3/31/2006--SLS_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1419583--3-31-2009--Cellteck_Inc..html'">1419583--3/31/2009--Cellteck_Inc.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1094816--7-6-2010--VOICE_MOBILITY_INTERNATIONAL_INC.html'">1094816--7/6/2010--VOICE_MOBILITY_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1438672--9-7-2010--Orofino_Gold_Corp.html'">1438672--9/7/2010--Orofino_Gold_Corp</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/813747--1-4-2006--SPESCOM_SOFTWARE_INC.html'">813747--1/4/2006--SPESCOM_SOFTWARE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1032863--4-13-2006--FORCE_PROTECTION_INC.html'">1032863--4/13/2006--FORCE_PROTECTION_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1095691--3-23-2009--DigitalFX_International_Inc.html'">1095691--3/23/2009--DigitalFX_International_Inc</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1307425--4-24-2009--CARBIZ_INC.html'">1307425--4/24/2009--CARBIZ_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/941685--4-15-2008--IMAGEWARE_SYSTEMS_INC.html'">941685--4/15/2008--IMAGEWARE_SYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1438672--2-16-2010--Orofino_Gold_Corp.html'">1438672--2/16/2010--Orofino_Gold_Corp</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1120193--2-28-2007--NASDAQ_STOCK_MARKET_INC.html'">1120193--2/28/2007--NASDAQ_STOCK_MARKET_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1097718--12-29-2010--ICEWEB_INC.html'">1097718--12/29/2010--ICEWEB_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/826253--3-25-2008--AURA_SYSTEMS_INC.html'">826253--3/25/2008--AURA_SYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1445625--11-18-2009--NEXAIRA_WIRELESS_INC..html'">1445625--11/18/2009--NEXAIRA_WIRELESS_INC.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1445625--1-29-2010--NEXAIRA_WIRELESS_INC..html'">1445625--1/29/2010--NEXAIRA_WIRELESS_INC.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1332445--8-31-2009--Keewatin_Windpower_Corp..html'">1332445--8/31/2009--Keewatin_Windpower_Corp.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/826253--3-25-2008--AURA_SYSTEMS_INC.html'">826253--3/25/2008--AURA_SYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1097792--3-27-2009--MEDIANET_GROUP_TECHNOLOGIES_INC.html'">1097792--3/27/2009--MEDIANET_GROUP_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/75439--3-31-2009--CytoCore_Inc.html'">75439--3/31/2009--CytoCore_Inc</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1036478--4-10-2008--WWA_GROUP_INC.html'">1036478--4/10/2008--WWA_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1036968--3-29-2010--VAXGEN_INC.html'">1036968--3/29/2010--VAXGEN_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1269022--4-15-2010--ATOMIC_PAINTBALL_INC.html'">1269022--4/15/2010--ATOMIC_PAINTBALL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1078383--3-13-2008--IPARTY_CORP.html'">1078383--3/13/2008--IPARTY_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1413754--7-14-2009--Swav_Enterprises_Ltd..html'">1413754--7/14/2009--Swav_Enterprises_Ltd.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/769592--6-29-2007--MOBILEPRO_CORP.html'">769592--6/29/2007--MOBILEPRO_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1371128--3-25-2008--BioSolar_Inc.html'">1371128--3/25/2008--BioSolar_Inc</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1042610--10-13-2010--TRB_SYSTEMS_INTERNATIONAL_INC.html'">1042610--10/13/2010--TRB_SYSTEMS_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/724910--5-25-2007--NVE_CORP_-NEW-.html'">724910--5/25/2007--NVE_CORP_/NEW/</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

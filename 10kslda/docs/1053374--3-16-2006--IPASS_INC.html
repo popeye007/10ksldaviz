@@ -1,0 +1,187 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[7.6333976459, "../topics/{system,_service,_information}.html", "{system,_service,_information}"], [6.1996337486, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [2.7528551449, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"], [2.7147287491, "../topics/{regulation,_change,_law}.html", "{regulation,_change,_law}"], [2.4818141581, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [2.1281402289, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"], [1.8735736105, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [1.6873842805, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [1.2219110956, "../topics/{condition,_economic,_financial}.html", "{condition,_economic,_financial}"], [1.064087193, "../topics/{competitive,_industry,_competition}.html", "{competitive,_industry,_competition}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>1053374--3/16/2006--IPASS_INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">1053374--3/16/2006--IPASS_INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{system,_service,_information}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{system,_service,_information}.html'">{system, service, information}</td></tr>
+<tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+<tr class="list"><td id="{regulation,_change,_law}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_change,_law}.html'">{regulation, change, law}</td></tr>
+<tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{condition,_economic,_financial}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{condition,_economic,_financial}.html'">{condition, economic, financial}</td></tr>
+<tr class="list"><td id="{competitive,_industry,_competition}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{competitive,_industry,_competition}.html'">{competitive, industry, competition}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    Our customers require a high degree of reliability in our services, and if we cannot meet their expectations, demand for our services will decline.
+We face strong competition in our market, which could make it difficult for us to succeed.
+The telecommunications industry has experienced a dramatic decline, which may cause consolidation among network service providers and impair our ability to provide reliable, redundant service coverage and negotiate favorable network access terms.
+If our security measures are breached and unauthorized access is obtained to a customer s internal network, our virtual network may be perceived as not being secure and enterprises may curtail or stop using our services.
+If enterprise connectivity demand does not continue to expand, we may experience a shortfall in revenues or earnings or otherwise fail to meet public market expectations.
+If we are unable to meet the challenges related to the market acceptance and provision of our policy management services, our ability to grow the business may be harmed.
+Our long sales and service deployment cycles require us to incur substantial sales costs that may not result in related revenues.
+There are approximately 24 countries in which we provide dial-up access only through Equant. The loss of Equant as a dial-up network service provider would substantially diminish our ability to deliver global network access.
+If our channel partners do not successfully market our services to their customers or corporate end users, then our revenues and business may be adversely affected.
+If we fail to address evolving standards and technological changes in the enterprise connectivity and policy management services industry, our business could be harmed.
+Our software is complex and may contain errors that could damage our reputation and decrease usage of our services.
+Because much of our business is international, we encounter additional risks, which may reduce our profitability.
+Completed or future acquisitions or investments could dilute the ownership of our existing stockholders, cause us to incur significant expenses or harm our operating results.
+If we are unable to effectively manage future expansion, our business may be adversely impacted.
+We currently are, and in the future may be, subject to securities class action lawsuits due to decreases in our stock price.
+Litigation arising from disputes involving third parties could disrupt the conduct of our business.
+If licenses to third party technologies, including our license with RSA Security, do not continue to be available to us at a reasonable cost, or at all, our business and operations may be adversely affected.
+Litigation arising out of intellectual property infringement could be expensive and disrupt our business.
+New accounting pronouncements may impact our future financial position and results of operations.
+Risks Relating to Our Industry
+Security concerns may delay the widespread adoption of the Internet for enterprise communications, or limit usage of Internet-based services, which would reduce demand for our products and services.
+Financial, political or economic conditions could adversely affect our revenues.
+Government regulation of, and legal uncertainties regarding, the Internet could harm our business.
+<p><a href="http://www.sec.gov/Archives/edgar/data/1053374/0000950134-06-005212.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/949341--8-24-2007--CHECKFREE_CORP_\GA\.html'">949341--8/24/2007--CHECKFREE_CORP_\GA\</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1077866--3-16-2009--LOOKSMART_LTD.html'">1077866--3/16/2009--LOOKSMART_LTD</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1041403--3-16-2006--CORILLIAN_CORP.html'">1041403--3/16/2006--CORILLIAN_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1077866--3-17-2008--LOOKSMART_LTD.html'">1077866--3/17/2008--LOOKSMART_LTD</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1071411--4-2-2007--FUSION_TELECOMMUNICATIONS_INTERNATIONAL_INC.html'">1071411--4/2/2007--FUSION_TELECOMMUNICATIONS_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1142701--3-1-2007--UNITED_ONLINE_INC.html'">1142701--3/1/2007--UNITED_ONLINE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1097338--3-17-2006--WITNESS_SYSTEMS_INC.html'">1097338--3/17/2006--WITNESS_SYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1134203--3-14-2008--TALEO_CORP.html'">1134203--3/14/2008--TALEO_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1268671--3-16-2010--TNS_INC.html'">1268671--3/16/2010--TNS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/832767--11-19-2008--PHOENIX_TECHNOLOGIES_LTD.html'">832767--11/19/2008--PHOENIX_TECHNOLOGIES_LTD</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1272830--4-17-2007--VONAGE_HOLDINGS_CORP.html'">1272830--4/17/2007--VONAGE_HOLDINGS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1087934--3-28-2007--UCN_INC.html'">1087934--3/28/2007--UCN_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1097338--4-2-2007--WITNESS_SYSTEMS_INC.html'">1097338--4/2/2007--WITNESS_SYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1114714--3-16-2007--KENEXA_CORP.html'">1114714--3/16/2007--KENEXA_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1259550--3-16-2007--LOCAL.COM.html'">1259550--3/16/2007--LOCAL.COM</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1131554--3-16-2007--SYNCHRONOSS_TECHNOLOGIES_INC.html'">1131554--3/16/2007--SYNCHRONOSS_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1259550--3-30-2009--LOCAL.COM.html'">1259550--3/30/2009--LOCAL.COM</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1272830--2-26-2010--VONAGE_HOLDINGS_CORP.html'">1272830--2/26/2010--VONAGE_HOLDINGS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1056386--3-10-2006--INTERNAP_NETWORK_SERVICES_CORP.html'">1056386--3/10/2006--INTERNAP_NETWORK_SERVICES_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1272830--3-17-2008--VONAGE_HOLDINGS_CORP.html'">1272830--3/17/2008--VONAGE_HOLDINGS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1265888--3-1-2007--NEUSTAR_INC.html'">1265888--3/1/2007--NEUSTAR_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1068875--2-25-2008--INFOSPACE_INC.html'">1068875--2/25/2008--INFOSPACE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1077866--3-16-2007--LOOKSMART_LTD.html'">1077866--3/16/2007--LOOKSMART_LTD</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/874866--6-30-2006--CORVEL_CORP.html'">874866--6/30/2006--CORVEL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1056696--2-19-2010--MANHATTAN_ASSOCIATES_INC.html'">1056696--2/19/2010--MANHATTAN_ASSOCIATES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/888953--3-16-2006--ONLINE_RESOURCES_CORP.html'">888953--3/16/2006--ONLINE_RESOURCES_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/891178--3-12-2007--EPICOR_SOFTWARE_CORP.html'">891178--3/12/2007--EPICOR_SOFTWARE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1114714--2-22-2006--KENEXA_CORP.html'">1114714--2/22/2006--KENEXA_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1131554--3-9-2010--SYNCHRONOSS_TECHNOLOGIES_INC.html'">1131554--3/9/2010--SYNCHRONOSS_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1134203--3-16-2007--TALEO_CORP.html'">1134203--3/16/2007--TALEO_CORP</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

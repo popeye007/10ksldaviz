@@ -1,0 +1,182 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[2.9346257768, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [2.579112366, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [2.4576641771, "../topics/{system,_service,_information}.html", "{system,_service,_information}"], [1.9872690416, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"], [1.7033660618, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [1.6991673067, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [1.697025253, "../topics/{operation,_natural,_condition}.html", "{operation,_natural,_condition}"], [1.6907599857, "../topics/{gas,_price,_oil}.html", "{gas,_price,_oil}"], [1.6358891569, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [1.4928395216, "../topics/{cost,_operation,_labor}.html", "{cost,_operation,_labor}"], [1.3894385031, "../topics/{competitive,_industry,_competition}.html", "{competitive,_industry,_competition}"], [1.2471244412, "../topics/{regulation,_government,_change}.html", "{regulation,_government,_change}"], [1.05667774, "../topics/{regulation,_change,_law}.html", "{regulation,_change,_law}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>1085653--4/2/2007--ECOLLEGE_COM</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">1085653--4/2/2007--ECOLLEGE_COM</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{system,_service,_information}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{system,_service,_information}.html'">{system, service, information}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{operation,_natural,_condition}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_natural,_condition}.html'">{operation, natural, condition}</td></tr>
+<tr class="list"><td id="{gas,_price,_oil}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{gas,_price,_oil}.html'">{gas, price, oil}</td></tr>
+<tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{cost,_operation,_labor}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_operation,_labor}.html'">{cost, operation, labor}</td></tr>
+<tr class="list"><td id="{competitive,_industry,_competition}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{competitive,_industry,_competition}.html'">{competitive, industry, competition}</td></tr>
+<tr class="list"><td id="{regulation,_government,_change}" onmouseover="highlight(11)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_government,_change}.html'">{regulation, government, change}</td></tr>
+<tr class="list"><td id="{regulation,_change,_law}" onmouseover="highlight(12)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_change,_law}.html'">{regulation, change, law}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    A Significant Portion of Our Revenue Is Generated From a Relatively Small Number of Customers.
+Our Stock Price Is Likely to be Volatile.
+We Depend On Our Customers and Third Parties to Market Student Enrollments for Online Courses.
+Our Operating Results May Fluctuate Significantly and May Be Below the Expectations of Analysts and Investors.
+We Depend on Our Key Personnel.
+We Face Significant Competition in our Markets
+Recent Rapid Growth in Our Markets May Not Continue and our Ability to Grow May be Adversely Affected.
+Our Network Infrastructure and Computer Systems May Fail.
+We May be Unable to Successfully Divest Datamark
+We May Not be Able to Protect Our Intellectual Property and Proprietary Rights and We May be Subject to Claims of Infringement by Third Parties.
+Government Regulation May Adversely Affect Our Future Operating Results.
+Datamark Does Not Have Long-Term Agreements With Its Customers and May Be Unable to Retain Customers, Attract New Customers or Replace Departing Customers With Customers that Can Provide Comparable Revenues.
+If We are Unable to Continue to Receive our Current Level of Access to and Costs for Mailing Lists, Our Competitive Advantage Could Be Materially Affected.
+Increases in Costs of Revenue Could Harm Datamark s Business.
+Continued Terrorist Attacks or War Could Lead to Further Economic Instability and Adversely Affect Our Stock Price, Operations, and Profitability.
+<p><a href="http://www.sec.gov/Archives/edgar/data/1085653/0001104659-07-024777.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/1085653--3-16-2006--ECOLLEGE_COM.html'">1085653--3/16/2006--ECOLLEGE_COM</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/768408--6-26-2008--CYANOTECH_CORP.html'">768408--6/26/2008--CYANOTECH_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1040130--6-3-2008--PETMED_EXPRESS_INC.html'">1040130--6/3/2008--PETMED_EXPRESS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/18498--4-13-2006--GENESCO_INC.html'">18498--4/13/2006--GENESCO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/18498--4-4-2007--GENESCO_INC.html'">18498--4/4/2007--GENESCO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/703604--2-25-2010--LAWSON_PRODUCTS_INC-NEW-DE-.html'">703604--2/25/2010--LAWSON_PRODUCTS_INC/NEW/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/933405--3-1-2007--AFTERMARKET_TECHNOLOGY_CORP.html'">933405--3/1/2007--AFTERMARKET_TECHNOLOGY_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/70487--3-31-2009--NATIONAL_RESEARCH_CORP.html'">70487--3/31/2009--NATIONAL_RESEARCH_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/18498--4-2-2008--GENESCO_INC.html'">18498--4/2/2008--GENESCO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/933405--3-2-2006--AFTERMARKET_TECHNOLOGY_CORP.html'">933405--3/2/2006--AFTERMARKET_TECHNOLOGY_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/18498--4-1-2009--GENESCO_INC.html'">18498--4/1/2009--GENESCO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/703604--3-15-2007--LAWSON_PRODUCTS_INC-NEW-DE-.html'">703604--3/15/2007--LAWSON_PRODUCTS_INC/NEW/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/703604--3-16-2006--LAWSON_PRODUCTS_INC-NEW-DE-.html'">703604--3/16/2006--LAWSON_PRODUCTS_INC/NEW/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/350199--3-21-2006--CACHE_INC.html'">350199--3/21/2006--CACHE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/885245--4-19-2007--BUCKLE_INC.html'">885245--4/19/2007--BUCKLE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1008586--4-10-2006--LANVISION_SYSTEMS_INC.html'">1008586--4/10/2006--LANVISION_SYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/883943--5-2-2007--CHRISTOPHER_&_BANKS_CORP.html'">883943--5/2/2007--CHRISTOPHER_&_BANKS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/768408--6-25-2009--CYANOTECH_CORP.html'">768408--6/25/2009--CYANOTECH_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/864559--3-16-2007--CASCADE_MICROTECH_INC.html'">864559--3/16/2007--CASCADE_MICROTECH_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/768408--8-16-2007--CYANOTECH_CORP.html'">768408--8/16/2007--CYANOTECH_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1040130--6-1-2009--PETMED_EXPRESS_INC.html'">1040130--6/1/2009--PETMED_EXPRESS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1040130--6-1-2010--PETMED_EXPRESS_INC.html'">1040130--6/1/2010--PETMED_EXPRESS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1041379--3-12-2008--AFC_ENTERPRISES_INC.html'">1041379--3/12/2008--AFC_ENTERPRISES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/18498--3-31-2010--GENESCO_INC.html'">18498--3/31/2010--GENESCO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/225628--1-29-2008--MEGADATA_CORP.html'">225628--1/29/2008--MEGADATA_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1183941--12-29-2006--ACTIVIDENTITY_CORP.html'">1183941--12/29/2006--ACTIVIDENTITY_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/99313--9-28-2007--TRANSNET_CORP.html'">99313--9/28/2007--TRANSNET_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/57497--3-14-2007--LAMSON_&_SESSIONS_CO.html'">57497--3/14/2007--LAMSON_&_SESSIONS_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1202273--3-30-2007--GOLFSMITH_INTERNATIONAL_HOLDINGS_INC.html'">1202273--3/30/2007--GOLFSMITH_INTERNATIONAL_HOLDINGS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1042173--3-8-2007--SCIENTIFIC_LEARNING_CORP.html'">1042173--3/8/2007--SCIENTIFIC_LEARNING_CORP</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

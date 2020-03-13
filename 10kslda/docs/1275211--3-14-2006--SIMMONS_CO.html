@@ -1,0 +1,179 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[3.0721906898, "../topics/{cost,_regulation,_environmental}.html", "{cost,_regulation,_environmental}"], [2.7306249722, "../topics/{cost,_operation,_labor}.html", "{cost,_operation,_labor}"], [2.6500224098, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [2.6244406241, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [1.8505473175, "../topics/{product,_liability,_claim}.html", "{product,_liability,_claim}"], [1.6963172196, "../topics/{loss,_insurance,_financial}.html", "{loss,_insurance,_financial}"], [1.6962698917, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [1.6962616248, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [1.6625736494, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [1.4662808343, "../topics/{debt,_indebtedness,_cash}.html", "{debt,_indebtedness,_cash}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>1275211--3/14/2006--SIMMONS_CO</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">1275211--3/14/2006--SIMMONS_CO</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{cost,_regulation,_environmental}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_regulation,_environmental}.html'">{cost, regulation, environmental}</td></tr>
+<tr class="list"><td id="{cost,_operation,_labor}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_operation,_labor}.html'">{cost, operation, labor}</td></tr>
+<tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{product,_liability,_claim}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_liability,_claim}.html'">{product, liability, claim}</td></tr>
+<tr class="list"><td id="{loss,_insurance,_financial}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{loss,_insurance,_financial}.html'">{loss, insurance, financial}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{debt,_indebtedness,_cash}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{debt,_indebtedness,_cash}.html'">{debt, indebtedness, cash}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    Regulatory requirements relating to our products may increase our costs, alter our manufacturing processes and impair our product performance.
+Legal and regulatory requirements may impose costs or charges on us that impair our business and reduce our profitability
+Our new product launches may not be successful, which could cause a decline in our market share and our level of profitability.
+We may experience fluctuations in our operating results due to seasonality, which could make sequential quarter to quarter comparison an unreliable indication of our performance.
+We rely on a relatively small number of suppliers and if we experience difficulty with a major supplier, we may have difficulty finding alternative sources. This could disrupt our business.
+We are subject to fluctuations in the cost and availability of raw materials, which fluctuations could increase our costs or disrupt our production.
+Because we depend on our significant customers, a decrease or interruption in their business with us could reduce our sales and profits.
+A change or deterioration in labor relations or the inability to renew our collective bargaining agreements could disrupt our business operations and increase our costs, which could negatively impact sales and decrease our profitability.
+The loss of the services of any member of our executive leadership team could impair our ability to execute our business strategy and negatively impact our business, financial condition and results of operations.
+We may not realize the expected benefits from our sales force effectiveness strategy, people realignment plan and other cost-cutting operational improvements.
+The actions of our controlling stockholder could conflict with the interests of the holders of our debt.
+If we are not able to protect our trade secrets or maintain our trademarks, patents and other intellectual property, we may not be able to prevent competitors from developing similar products or from marketing in a manner that capitalizes on our trademarks, patents and other intellectual property.
+We may face exposure to product liability claims, which could reduce our liquidity and profitability and reduce consumer confidence in our products.
+We are vulnerable to interest rate risk with respect to our debt, which could lead to an increase in interest expense.
+An increase in our return rates or an inadequacy in our warranty reserves could reduce our liquidity and profitability.
+<p><a href="http://www.sec.gov/Archives/edgar/data/1275211/0000950144-06-002181.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/1068148--3-28-2008--PARK_OHIO_INDUSTRIES_INC-OH.html'">1068148--3/28/2008--PARK_OHIO_INDUSTRIES_INC/OH</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/12570--4-16-2007--LEXINGTON_PRECISION_CORP.html'">12570--4/16/2007--LEXINGTON_PRECISION_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1041379--3-10-2010--AFC_ENTERPRISES_INC.html'">1041379--3/10/2010--AFC_ENTERPRISES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1041379--3-11-2009--AFC_ENTERPRISES_INC.html'">1041379--3/11/2009--AFC_ENTERPRISES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1301787--2-28-2007--BlueLinx_Holdings_Inc..html'">1301787--2/28/2007--BlueLinx_Holdings_Inc.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/864559--3-16-2007--CASCADE_MICROTECH_INC.html'">864559--3/16/2007--CASCADE_MICROTECH_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/879884--3-12-2008--T-3_ENERGY_SERVICES_INC.html'">879884--3/12/2008--T-3_ENERGY_SERVICES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/931336--2-28-2008--DEAN_FOODS_CO.html'">931336--2/28/2008--DEAN_FOODS_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1009672--2-26-2010--CARBO_CERAMICS_INC.html'">1009672--2/26/2010--CARBO_CERAMICS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/933405--3-1-2007--AFTERMARKET_TECHNOLOGY_CORP.html'">933405--3/1/2007--AFTERMARKET_TECHNOLOGY_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1297014--4-17-2007--Wise_Metals_Group_LLC.html'">1297014--4/17/2007--Wise_Metals_Group_LLC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1011570--3-16-2006--KNOLL_INC.html'">1011570--3/16/2006--KNOLL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/743238--3-16-2007--SPARTAN_MOTORS_INC.html'">743238--3/16/2007--SPARTAN_MOTORS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1069394--3-30-2010--FLEXIBLE_SOLUTIONS_INTERNATIONAL_INC.html'">1069394--3/30/2010--FLEXIBLE_SOLUTIONS_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1320947--10-12-2007--Diamond_Foods_Inc.html'">1320947--10/12/2007--Diamond_Foods_Inc</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/801898--12-21-2007--JOY_GLOBAL_INC.html'">801898--12/21/2007--JOY_GLOBAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/798287--3-15-2007--PAM_TRANSPORTATION_SERVICES_INC.html'">798287--3/15/2007--PAM_TRANSPORTATION_SERVICES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1199114--8-18-2006--S&C_HOLDCO_3_INC.html'">1199114--8/18/2006--S&C_HOLDCO_3_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/921500--5-27-2009--CONSOLIDATED_GRAPHICS_INC_-TX-.html'">921500--5/27/2009--CONSOLIDATED_GRAPHICS_INC_/TX/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/743238--3-14-2008--SPARTAN_MOTORS_INC.html'">743238--3/14/2008--SPARTAN_MOTORS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1113256--11-20-2006--ARVINMERITOR_INC.html'">1113256--11/20/2006--ARVINMERITOR_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/878927--3-1-2007--OLD_DOMINION_FREIGHT_LINE_INC-VA.html'">878927--3/1/2007--OLD_DOMINION_FREIGHT_LINE_INC/VA</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/878927--3-16-2006--OLD_DOMINION_FREIGHT_LINE_INC-VA.html'">878927--3/16/2006--OLD_DOMINION_FREIGHT_LINE_INC/VA</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/928373--4-2-2007--ADUDDELL_INDUSTRIES_INC.html'">928373--4/2/2007--ADUDDELL_INDUSTRIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1011570--2-29-2008--KNOLL_INC.html'">1011570--2/29/2008--KNOLL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1011570--3-16-2007--KNOLL_INC.html'">1011570--3/16/2007--KNOLL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1043337--3-17-2008--STONERIDGE_INC.html'">1043337--3/17/2008--STONERIDGE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1068148--3-27-2006--PARK_OHIO_INDUSTRIES_INC-OH.html'">1068148--3/27/2006--PARK_OHIO_INDUSTRIES_INC/OH</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/723254--7-30-2007--CINTAS_CORP.html'">723254--7/30/2007--CINTAS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/766421--2-20-2008--ALASKA_AIR_GROUP_INC.html'">766421--2/20/2008--ALASKA_AIR_GROUP_INC</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

@@ -1,0 +1,184 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[3.7044816212, "../topics/{control,_financial,_internal}.html", "{control,_financial,_internal}"], [3.7029806095, "../topics/{system,_service,_information}.html", "{system,_service,_information}"], [2.6964158191, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [2.6935850808, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"], [2.1340924976, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [1.8382415901, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [1.7026849967, "../topics/{product,_candidate,_development}.html", "{product,_candidate,_development}"], [1.6974253341, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [1.6965735233, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [1.6188964296, "../topics/{cost,_operation,_labor}.html", "{cost,_operation,_labor}"], [1.3557574943, "../topics/{condition,_economic,_financial}.html", "{condition,_economic,_financial}"], [1.1464410039, "../topics/{competitive,_industry,_competition}.html", "{competitive,_industry,_competition}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>1302177--3/16/2006--POKERTEK_INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">1302177--3/16/2006--POKERTEK_INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{control,_financial,_internal}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{control,_financial,_internal}.html'">{control, financial, internal}</td></tr>
+<tr class="list"><td id="{system,_service,_information}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{system,_service,_information}.html'">{system, service, information}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+<tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{product,_candidate,_development}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_candidate,_development}.html'">{product, candidate, development}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{cost,_operation,_labor}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_operation,_labor}.html'">{cost, operation, labor}</td></tr>
+<tr class="list"><td id="{condition,_economic,_financial}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{condition,_economic,_financial}.html'">{condition, economic, financial}</td></tr>
+<tr class="list"><td id="{competitive,_industry,_competition}" onmouseover="highlight(11)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{competitive,_industry,_competition}.html'">{competitive, industry, competition}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    We have a limited operating history on which to evaluate our business.
+We have no significant operating revenue to date and a history of losses. We may be unable to generate sufficient net revenue in the future to achieve or sustain profitability.
+Our success depends on the PokerPro system achieving and maintaining widespread acceptance by casinos and poker players.
+If we fail to obtain or maintain gaming licenses and regulatory approvals, we will be unable to operate our business and license or sell our products.
+Gaming authorities have not determined that any of our officers, key employees, directors or significant shareholders, other than our Chairman, are suitable and the inability of an officer, key employee, director or significant shareholder to obtain a determination of suitability in a jurisdiction may adversely affect the introduction of PokerPro in that jurisdiction.
+Because there are few significant barriers to entry to the market for our products, we could face substantial competition, which could reduce our market share and negatively impact our net revenue.
+We compete in a single industry, and our business would suffer if demand for gaming in general, or poker in particular, decreases.
+If we fail to protect our intellectual property rights, competitors may be able to use our technology, which could weaken our competitive position, reduce our net revenue and increase our costs.
+Third party claims of infringement against us could adversely affect our ability to market our products and require us to redesign our products or seek licenses from third parties.
+Defects in, and fraudulent manipulation of, the PokerPro system could reduce our revenue, increase our costs, burden our engineering and marketing resources, involve us in litigation and adversely affect our gaming licenses.
+The use of the PokerPro system could result in product liability claims that could be expensive and that could damage our reputation and harm our business.
+The loss of the services of our Chairman, Chief Executive Officer, President or other key employees, or the failure to attract additional key individuals, would materially adversely affect our business.
+Our management team s limited experience in this market could increase costs, hamper our marketing strategies and delay our expansion.
+If we fail to manage our expected growth, our business and operating results could be harmed.
+Our success will depend on the reliability and performance of third-party distributors, manufacturers and suppliers.
+Our failure to obtain any necessary additional financing would have a material adverse effect on our business.
+A decline in general economic conditions would have a greater material adverse effect on our business than on other businesses.
+If the network infrastructure of certain of the casinos in which the PokerPro system is or will be installed proves unreliable, market acceptance of the PokerPro system would be materially and adversely affected.
+<p><a href="http://www.sec.gov/Archives/edgar/data/1302177/0001144204-06-010309.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/1022509--3-16-2006--TUMBLEWEED_COMMUNICATIONS_CORP.html'">1022509--3/16/2006--TUMBLEWEED_COMMUNICATIONS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/878828--4-15-2010--WIRELESS_TELECOM_GROUP_INC.html'">878828--4/15/2010--WIRELESS_TELECOM_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1287258--3-11-2008--PLANETOUT_INC.html'">1287258--3/11/2008--PLANETOUT_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1040896--4-2-2007--INTELLI_CHECK_INC.html'">1040896--4/2/2007--INTELLI_CHECK_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1042173--3-11-2008--SCIENTIFIC_LEARNING_CORP.html'">1042173--3/11/2008--SCIENTIFIC_LEARNING_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1140414--3-31-2009--SIN_HOLDINGS_INC.html'">1140414--3/31/2009--SIN_HOLDINGS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1042173--3-5-2009--SCIENTIFIC_LEARNING_CORP.html'">1042173--3/5/2009--SCIENTIFIC_LEARNING_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/13610--3-12-2008--BOWNE_&_CO_INC.html'">13610--3/12/2008--BOWNE_&_CO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/13610--4-10-2006--BOWNE_&_CO_INC.html'">13610--4/10/2006--BOWNE_&_CO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/13610--3-14-2007--BOWNE_&_CO_INC.html'">13610--3/14/2007--BOWNE_&_CO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1042173--3-14-2006--SCIENTIFIC_LEARNING_CORP.html'">1042173--3/14/2006--SCIENTIFIC_LEARNING_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/850483--3-5-2010--GTSI_CORP.html'">850483--3/5/2010--GTSI_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1002225--3-16-2007--ADVENT_SOFTWARE_INC_-DE-.html'">1002225--3/16/2007--ADVENT_SOFTWARE_INC_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/949158--3-13-2009--CRAY_INC.html'">949158--3/13/2009--CRAY_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1316360--1-24-2008--IHS_Inc..html'">1316360--1/24/2008--IHS_Inc.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1086222--3-1-2007--AKAMAI_TECHNOLOGIES_INC.html'">1086222--3/1/2007--AKAMAI_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1069502--4-23-2008--VARSITY_GROUP_INC.html'">1069502--4/23/2008--VARSITY_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/58592--3-17-2008--4_KIDS_ENTERTAINMENT_INC.html'">58592--3/17/2008--4_KIDS_ENTERTAINMENT_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1125536--5-1-2007--CONVERA_CORP.html'">1125536--5/1/2007--CONVERA_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/837342--3-31-2008--CORDIA_CORP.html'">837342--3/31/2008--CORDIA_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/878828--3-31-2009--WIRELESS_TELECOM_GROUP_INC.html'">878828--3/31/2009--WIRELESS_TELECOM_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/764478--5-10-2006--BEST_BUY_CO_INC.html'">764478--5/10/2006--BEST_BUY_CO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1010612--3-13-2008--SYKES_ENTERPRISES_INC.html'">1010612--3/13/2008--SYKES_ENTERPRISES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1382430--3-28-2008--LEGENDS_BUSINESS_GROUP_INC.html'">1382430--3/28/2008--LEGENDS_BUSINESS_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/764478--5-2-2007--BEST_BUY_CO_INC.html'">764478--5/2/2007--BEST_BUY_CO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/708818--6-1-2010--QUALITY_SYSTEMS_INC.html'">708818--6/1/2010--QUALITY_SYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1024452--9-28-2007--SMF_ENERGY_CORP.html'">1024452--9/28/2007--SMF_ENERGY_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/843006--4-1-2008--ISSUER_DIRECT_CORP.html'">843006--4/1/2008--ISSUER_DIRECT_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1008586--4-10-2006--LANVISION_SYSTEMS_INC.html'">1008586--4/10/2006--LANVISION_SYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1026650--3-2-2009--ERESEARCHTECHNOLOGY_INC_-DE-.html'">1026650--3/2/2009--ERESEARCHTECHNOLOGY_INC_/DE/</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

@@ -1,0 +1,208 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[7.1358672131, "../topics/{system,_service,_information}.html", "{system,_service,_information}"], [5.3626317863, "../topics/{debt,_indebtedness,_cash}.html", "{debt,_indebtedness,_cash}"], [4.0785694297, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [4.0091135601, "../topics/{stock,_price,_share}.html", "{stock,_price,_share}"], [3.9125452943, "../topics/{investment,_property,_distribution}.html", "{investment,_property,_distribution}"], [3.5522817535, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [3.3763981663, "../topics/{cost,_regulation,_environmental}.html", "{cost,_regulation,_environmental}"], [3.2164144997, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [2.7361904217, "../topics/{financial,_litigation,_operation}.html", "{financial,_litigation,_operation}"], [2.3229540691, "../topics/{condition,_economic,_financial}.html", "{condition,_economic,_financial}"], [1.8215980375, "../topics/{capital,_credit,_financial}.html", "{capital,_credit,_financial}"], [1.7697843587, "../topics/{provision,_law,_control}.html", "{provision,_law,_control}"], [1.7532035913, "../topics/{tax,_income,_asset}.html", "{tax,_income,_asset}"], [1.7295701616, "../topics/{control,_financial,_internal}.html", "{control,_financial,_internal}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>1367396--3/8/2007--IDEARC_INC.</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">1367396--3/8/2007--IDEARC_INC.</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{system,_service,_information}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{system,_service,_information}.html'">{system, service, information}</td></tr>
+<tr class="list"><td id="{debt,_indebtedness,_cash}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{debt,_indebtedness,_cash}.html'">{debt, indebtedness, cash}</td></tr>
+<tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{stock,_price,_share}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_share}.html'">{stock, price, share}</td></tr>
+<tr class="list"><td id="{investment,_property,_distribution}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{investment,_property,_distribution}.html'">{investment, property, distribution}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{cost,_regulation,_environmental}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_regulation,_environmental}.html'">{cost, regulation, environmental}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{financial,_litigation,_operation}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{financial,_litigation,_operation}.html'">{financial, litigation, operation}</td></tr>
+<tr class="list"><td id="{condition,_economic,_financial}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{condition,_economic,_financial}.html'">{condition, economic, financial}</td></tr>
+<tr class="list"><td id="{capital,_credit,_financial}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{capital,_credit,_financial}.html'">{capital, credit, financial}</td></tr>
+<tr class="list"><td id="{provision,_law,_control}" onmouseover="highlight(11)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{provision,_law,_control}.html'">{provision, law, control}</td></tr>
+<tr class="list"><td id="{tax,_income,_asset}" onmouseover="highlight(12)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{tax,_income,_asset}.html'">{tax, income, asset}</td></tr>
+<tr class="list"><td id="{control,_financial,_internal}" onmouseover="highlight(13)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{control,_financial,_internal}.html'">{control, financial, internal}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    Risks Related to Our Business
+Our substantial indebtedness could have a negative impact on our financing options and liquidity position.
+Changes in interest rates may affect our cash flow and results of operations.
+Restrictions in our financing arrangements could limit our operating and strategic flexibility.
+We face widespread competition from other print directory publishers that may reduce our market share or materially adversely affect our financial performance.
+If we fail to anticipate or respond adequately to changes in technology and user preferences, our competitive position could be materially adversely affected.
+Declining usage of print yellow pages directories may adversely affect our business.
+Our credit ratings are below investment grade, which could completely or adversely restrict our access to capital.
+Idearc Inc. is a holding company and relies on dividends, interest and other payments, advances and transfers of funds from its subsidiaries to meet debt service and other obligations.
+Our dependence on third-party providers of printing and distribution services could materially affect us.
+Increased competition in local telephone markets could reduce the benefits of using the Verizon brand name.
+Fluctuations in the price or availability of paper could materially affect our costs and, as a result, our profitability.
+Additional regulation regarding information technology could lead to increased costs.
+Our advertising sales to national accounts is dependent upon third parties that we do not control.
+We have agreements with several major search engines and portals, the discontinuance of which may adversely affect our business.
+Our reliance on small- and medium-sized businesses exposes us to increased credit risks.
+Loss of key personnel or our inability to attract and retain highly qualified individuals in the directories publishing business could materially adversely affect our business.
+Turnover among sales representatives could materially adversely affect our business.
+We could be affected by certain changes in labor matters.
+A prolonged economic downturn could adversely materially affect our business.
+The loss of important intellectual property rights could adversely affect our prospects and results of operations.
+Environmental compliance costs and liabilities could adversely affect our operating results, including our cash available for operations.
+Our exposure to legal proceedings could have a material adverse effect on our operating results or financial condition.
+Our reliance on technology could have a material adverse effect on our business.
+Risks Related to Our Spin-Off
+Our historical financial information may not be indicative of our future results.
+We have a limited history operating as an independent company and we may incur increased costs as a result of the spin-off that may cause our profitability to decline.
+Limitations on our use of the Verizon brand could adversely affect our business and profitability.
+We may be required to indemnify Verizon if the spin-off fails to qualify for tax-free treatment as a result of our actions after the spin-off
+The terms of our tax sharing agreement with Verizon may reduce our strategic and operating flexibility.
+The loss of any of our key agreements with Verizon could have a material adverse effect on our business.
+Our inability to enforce the non-competition agreement with Verizon may impair the value of our business.
+If Verizon prematurely halts its obligations under the transition services agreement or if we are unable to replicate the transition services internally, our business would be materially adversely affected.
+Verizon s regulatory obligation to publish white pages directories in its incumbent markets may change over time, which may result in an increase in our future operating costs.
+Risks Related to Our Common Stock
+The trading price of our common stock may decline.
+Our capital raising may adversely affect holders of our common stock through the issuance of more senior securities or through dilution.
+Our financing arrangements contain significant limitations on our ability to pay dividends on our common stock.
+There is no assurance that we will declare dividends or cash available to make dividend payments.
+Anti-takeover provisions in our certificate of incorporation and bylaws, the terms of our spin-off from Verizon and certain provisions of Delaware law could delay or prevent a change of control that you may favor.
+<p><a href="http://www.sec.gov/Archives/edgar/data/1367396/0001193125-07-048926.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/1367396--2-29-2008--IDEARC_INC..html'">1367396--2/29/2008--IDEARC_INC.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1350031--3-9-2007--Embarq_CORP.html'">1350031--3/9/2007--Embarq_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1104358--3-25-2009--BROADVIEW_NETWORKS_HOLDINGS_INC.html'">1104358--3/25/2009--BROADVIEW_NETWORKS_HOLDINGS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1140184--3-31-2009--IPAYMENT_INC.html'">1140184--3/31/2009--IPAYMENT_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/912890--6-16-2008--TERREMARK_WORLDWIDE_INC.html'">912890--6/16/2008--TERREMARK_WORLDWIDE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1056386--3-10-2006--INTERNAP_NETWORK_SERVICES_CORP.html'">1056386--3/10/2006--INTERNAP_NETWORK_SERVICES_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/912890--6-15-2007--TERREMARK_WORLDWIDE_INC.html'">912890--6/15/2007--TERREMARK_WORLDWIDE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1272830--2-26-2010--VONAGE_HOLDINGS_CORP.html'">1272830--2/26/2010--VONAGE_HOLDINGS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1104358--3-31-2008--BROADVIEW_NETWORKS_HOLDINGS_INC.html'">1104358--3/31/2008--BROADVIEW_NETWORKS_HOLDINGS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1272830--3-3-2009--VONAGE_HOLDINGS_CORP.html'">1272830--3/3/2009--VONAGE_HOLDINGS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1062613--3-5-2009--FAIRPOINT_COMMUNICATIONS_INC.html'">1062613--3/5/2009--FAIRPOINT_COMMUNICATIONS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1367396--3-12-2009--IDEARC_INC..html'">1367396--3/12/2009--IDEARC_INC.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1062613--2-29-2008--FAIRPOINT_COMMUNICATIONS_INC.html'">1062613--2/29/2008--FAIRPOINT_COMMUNICATIONS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1059103--12-21-2007--ACTIVANT_SOLUTIONS_INC_-DE-.html'">1059103--12/21/2007--ACTIVANT_SOLUTIONS_INC_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1104358--3-29-2010--BROADVIEW_NETWORKS_HOLDINGS_INC.html'">1104358--3/29/2010--BROADVIEW_NETWORKS_HOLDINGS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1102541--2-27-2009--EARTHLINK_INC.html'">1102541--2/27/2009--EARTHLINK_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1386355--3-12-2009--Travelport_LTD.html'">1386355--3/12/2009--Travelport_LTD</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1396838--3-8-2010--Dolan_Media_CO.html'">1396838--3/8/2010--Dolan_Media_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/716133--2-26-2010--CINCINNATI_BELL_INC.html'">716133--2/26/2010--CINCINNATI_BELL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1140184--3-8-2007--IPAYMENT_INC.html'">1140184--3/8/2007--IPAYMENT_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1259550--3-30-2009--LOCAL.COM.html'">1259550--3/30/2009--LOCAL.COM</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1087934--3-28-2007--UCN_INC.html'">1087934--3/28/2007--UCN_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1259550--3-16-2007--LOCAL.COM.html'">1259550--3/16/2007--LOCAL.COM</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/749254--5-23-2007--TRM_CORP.html'">749254--5/23/2007--TRM_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1089872--3-17-2008--GAIAM_INC.html'">1089872--3/17/2008--GAIAM_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/879573--7-30-2009--CENTENNIAL_COMMUNICATIONS_CORP_-DE.html'">879573--7/30/2009--CENTENNIAL_COMMUNICATIONS_CORP_/DE</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1009304--3-17-2008--I2_TECHNOLOGIES_INC.html'">1009304--3/17/2008--I2_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1068875--2-25-2008--INFOSPACE_INC.html'">1068875--2/25/2008--INFOSPACE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1120462--2-29-2008--IOWA_TELECOMMUNICATIONS_SERVICES_INC.html'">1120462--2/29/2008--IOWA_TELECOMMUNICATIONS_SERVICES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/30419--3-27-2009--R_H_DONNELLEY_CORP.html'">30419--3/27/2009--R_H_DONNELLEY_CORP</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

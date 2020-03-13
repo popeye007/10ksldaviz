@@ -1,0 +1,178 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[3.7139530594, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [2.6962942785, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [2.4012122642, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [1.9639187321, "../topics/{stock,_price,_share}.html", "{stock,_price,_share}"], [1.8711246207, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [1.6965781534, "../topics/{loss,_insurance,_financial}.html", "{loss,_insurance,_financial}"], [1.6963027362, "../topics/{product,_candidate,_development}.html", "{product,_candidate,_development}"], [1.696268161, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"], [1.696182991, "../topics/{capital,_credit,_financial}.html", "{capital,_credit,_financial}"], [1.5217787579, "../topics/{competitive,_industry,_competition}.html", "{competitive,_industry,_competition}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>715073--11/29/2007--WEGENER_CORP</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">715073--11/29/2007--WEGENER_CORP</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{stock,_price,_share}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_share}.html'">{stock, price, share}</td></tr>
+<tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{loss,_insurance,_financial}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{loss,_insurance,_financial}.html'">{loss, insurance, financial}</td></tr>
+<tr class="list"><td id="{product,_candidate,_development}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_candidate,_development}.html'">{product, candidate, development}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+<tr class="list"><td id="{capital,_credit,_financial}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{capital,_credit,_financial}.html'">{capital, credit, financial}</td></tr>
+<tr class="list"><td id="{competitive,_industry,_competition}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{competitive,_industry,_competition}.html'">{competitive, industry, competition}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    We have a limited history of profitability and may need additional capital in the future, which we may not be able to secure on terms acceptable to us. In addition, our line of credit has borrowing availability limits as well as a maximum credit limit.
+We are in the process of examining various strategic alternatives to enhance shareholder value, which is ongoing, but such process may not result in the achievement of the desired goal of enhancing shareholder value.
+Our future operating results are difficult to predict and may fluctuate materially.
+Our fluctuations in bookings and revenues affect our ability to borrow due to collateral advance formulas on our credit facilities. In addition, our credit facility imposes debt covenants and maximum borrowing limits.
+We have in the past experienced delays in product development and introduction, and there can be no assurance that we will not experience further delays in connection with our current product development or future development activities.
+Our lengthy and variable qualification and sales cycles make it difficult to predict the timing of a sale or whether a sale will be made.
+Our customer base is concentrated and the loss of one or more of our key customers would harm our business.
+We rely on third-party subcontractors, certain suppliers and offshore manufacturers.
+Our intellectual property rights may be insufficient to protect our competitive position. In addition, our pending or future intellectual property applications may not be issued.
+We may not be able to license necessary third-party technology or it may be expensive to do so. In addition, claims that we infringe third-party intellectual property rights could result in significant expenses and restrictions on our ability to sell our products in particular markets.
+Competition in our industry is intense and can result in reduced sales and market share.
+Our business is subject to rapid changes in technology and new product introductions.
+There is no assurance of a continued trading market in our stock.
+Our stock price is subject to volatility.
+<p><a href="http://www.sec.gov/Archives/edgar/data/715073/0001193125-07-256172.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/715073--11-30-2006--WEGENER_CORP.html'">715073--11/30/2006--WEGENER_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/715073--11-26-2008--WEGENER_CORP.html'">715073--11/26/2008--WEGENER_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/769397--3-30-2006--AUTODESK_INC.html'">769397--3/30/2006--AUTODESK_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1004960--3-13-2006--CONNETICS_CORP.html'">1004960--3/13/2006--CONNETICS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1019787--4-13-2009--PURADYN_FILTER_TECHNOLOGIES_INC.html'">1019787--4/13/2009--PURADYN_FILTER_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1202273--3-30-2007--GOLFSMITH_INTERNATIONAL_HOLDINGS_INC.html'">1202273--3/30/2007--GOLFSMITH_INTERNATIONAL_HOLDINGS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/728303--3-31-2008--COAST_DISTRIBUTION_SYSTEM_INC.html'">728303--3/31/2008--COAST_DISTRIBUTION_SYSTEM_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/851205--3-1-2006--COGNEX_CORP.html'">851205--3/1/2006--COGNEX_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/836106--2-29-2008--NOVELLUS_SYSTEMS_INC.html'">836106--2/29/2008--NOVELLUS_SYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/723889--3-30-2006--MFIC_CORP.html'">723889--3/30/2006--MFIC_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1102934--11-27-2007--CABOT_MICROELECTRONICS_CORP.html'">1102934--11/27/2007--CABOT_MICROELECTRONICS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/5768--6-13-2008--AMERICAN_SCIENCE_&_ENGINEERING_INC.html'">5768--6/13/2008--AMERICAN_SCIENCE_&_ENGINEERING_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/5768--6-13-2007--AMERICAN_SCIENCE_&_ENGINEERING_INC.html'">5768--6/13/2007--AMERICAN_SCIENCE_&_ENGINEERING_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1057083--3-21-2008--PC_TEL_INC.html'">1057083--3/21/2008--PC_TEL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/5768--6-15-2009--AMERICAN_SCIENCE_&_ENGINEERING_INC.html'">5768--6/15/2009--AMERICAN_SCIENCE_&_ENGINEERING_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/46080--2-22-2006--HASBRO_INC.html'">46080--2/22/2006--HASBRO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1005387--3-24-2006--GENSYM_CORP.html'">1005387--3/24/2006--GENSYM_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1003950--3-11-2010--PERFORMANCE_TECHNOLOGIES_INC_\DE\.html'">1003950--3/11/2010--PERFORMANCE_TECHNOLOGIES_INC_\DE\</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1090069--4-18-2006--CHEROKEE_INTERNATIONAL_CORP.html'">1090069--4/18/2006--CHEROKEE_INTERNATIONAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/949491--3-30-2006--VODAVI_TECHNOLOGY_INC.html'">949491--3/30/2006--VODAVI_TECHNOLOGY_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/885245--4-16-2008--BUCKLE_INC.html'">885245--4/16/2008--BUCKLE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/772406--5-25-2006--CIRRUS_LOGIC_INC.html'">772406--5/25/2006--CIRRUS_LOGIC_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1006240--12-14-2006--LUCENT_TECHNOLOGIES_INC.html'">1006240--12/14/2006--LUCENT_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/703360--3-16-2006--LSI_LOGIC_CORP.html'">703360--3/16/2006--LSI_LOGIC_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/874716--3-10-2006--IDEXX_LABORATORIES_INC_-DE.html'">874716--3/10/2006--IDEXX_LABORATORIES_INC_/DE</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/720671--7-16-2008--HALIFAX_CORP_OF_VIRGINIA.html'">720671--7/16/2008--HALIFAX_CORP_OF_VIRGINIA</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/833140--3-20-2006--ENPATH_MEDICAL_INC.html'">833140--3/20/2006--ENPATH_MEDICAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/918541--3-16-2007--NN_INC.html'">918541--3/16/2007--NN_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1000180--2-28-2007--SANDISK_CORP.html'">1000180--2/28/2007--SANDISK_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/109156--10-13-2006--ZALE_CORP.html'">109156--10/13/2006--ZALE_CORP</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

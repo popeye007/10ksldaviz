@@ -1,0 +1,185 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[5.7822780131, "../topics/{product,_candidate,_development}.html", "{product,_candidate,_development}"], [5.699431189, "../topics/{product,_liability,_claim}.html", "{product,_liability,_claim}"], [2.8554785875, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"], [2.7112823645, "../topics/{cost,_contract,_operation}.html", "{cost,_contract,_operation}"], [2.6962544469, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [1.7008524254, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [1.6966111563, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [1.6963333311, "../topics/{cost,_regulation,_environmental}.html", "{cost,_regulation,_environmental}"], [1.6106197412, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [1.4992882614, "../topics/{cost,_operation,_labor}.html", "{cost,_operation,_labor}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>1114529--3/31/2006--VIACELL_INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">1114529--3/31/2006--VIACELL_INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{product,_candidate,_development}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_candidate,_development}.html'">{product, candidate, development}</td></tr>
+<tr class="list"><td id="{product,_liability,_claim}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_liability,_claim}.html'">{product, liability, claim}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+<tr class="list"><td id="{cost,_contract,_operation}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_contract,_operation}.html'">{cost, contract, operation}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{cost,_regulation,_environmental}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_regulation,_environmental}.html'">{cost, regulation, environmental}</td></tr>
+<tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{cost,_operation,_labor}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_operation,_labor}.html'">{cost, operation, labor}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    If we do not prevail in the PharmaStem litigation, we may be prevented from selling our ViaCord product, or may have to incur significant expenses.
+If we are not able to successfully develop and commercialize new products, we may not generate sufficient revenues to continue our business operations.
+We may not be able to successfully develop our ViaCyte oocyte cryopreservation product candidate.
+We may not be able to raise additional funds necessary to fund our operations.
+We depend on patents and other proprietary rights that may fail to protect our business.
+Third parties may own or control patents or patent applications that are infringed by our technologies or product candidates.
+Our success will depend in part on establishing and maintaining effective strategic partnerships and collaborations.
+Our cell preservation activities are subject to regulations that may impose significant costs and restrictions on us.
+We have only limited experience manufacturing cell therapy product candidates, and we may not be able to manufacture our product candidates in quantities sufficient for clinical studies or for commercial scale.
+We are dependent on our existing suppliers and establishing relationships with certain other suppliers for certain components of our product candidates. The loss of such suppliers or our inability to establish such relationships may delay development or limit our ability to manufacture our stem cell therapy products.
+If our cord blood processing and storage facility or our clinical manufacturing facilities are damaged or destroyed, our business and prospects would be negatively affected.
+Our competitors may have greater resources or capabilities or better technologies than we have, or may succeed in developing better products or develop products more quickly than we do, and we may not be successful in competing with them.
+Due to the nature of our cell preservation activities, harm to our reputation could have a significant negative impact on our financial condition, and damage to or loss of our customers property held in our custody could potentially result in significant legal liability.
+The manufacture and sale of products may expose us to product liability claims for which we could have substantial liability.
+If we are not able to recruit and retain qualified management and other personnel, we may fail in developing our technologies and product candidates.
+We may face difficulties in managing and maintaining the growth of our business.
+If we acquire other businesses or technologies the transactions may be dilutive and we may be unable to integrate them successfully with our business, our financial performance could suffer.
+The successful commercialization of our other potential cell therapy products will depend on obtaining reimbursement for use of this product candidate from third party payers.
+We face potential liability related to the privacy of health information we obtain from research collaborators or from providers who enroll patients and collect cord blood or human oocytes.
+Ethical and other concerns surrounding the use of stem cell therapy may negatively affect regulatory approval or public perception of our products and product candidates, thereby reducing demand for our products and product candidates.
+Our business involves the use of hazardous materials that could expose us to environmental and other liability.
+<p><a href="http://www.sec.gov/Archives/edgar/data/1114529/0000950135-06-002061.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/883975--3-14-2008--STEMCELLS_INC.html'">883975--3/14/2008--STEMCELLS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/883975--3-11-2010--STEMCELLS_INC.html'">883975--3/11/2010--STEMCELLS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1114529--3-16-2007--VIACELL_INC.html'">1114529--3/16/2007--VIACELL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/883975--3-16-2009--STEMCELLS_INC.html'">883975--3/16/2009--STEMCELLS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1203866--3-16-2006--PHARMION_CORP.html'">1203866--3/16/2006--PHARMION_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1009356--3-11-2009--SALIX_PHARMACEUTICALS_LTD.html'">1009356--3/11/2009--SALIX_PHARMACEUTICALS_LTD</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/765258--3-1-2007--IMCLONE_SYSTEMS_INC.html'">765258--3/1/2007--IMCLONE_SYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/789132--3-16-2007--SPECTRANETICS_CORP.html'">789132--3/16/2007--SPECTRANETICS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1012140--2-23-2010--ONYX_PHARMACEUTICALS_INC.html'">1012140--2/23/2010--ONYX_PHARMACEUTICALS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/890465--3-14-2007--NPS_PHARMACEUTICALS_INC.html'">890465--3/14/2007--NPS_PHARMACEUTICALS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/896778--3-14-2008--CONCEPTUS_INC.html'">896778--3/14/2008--CONCEPTUS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/879682--3-28-2008--PLC_SYSTEMS_INC.html'">879682--3/28/2008--PLC_SYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/3116--3-30-2009--AKORN_INC.html'">3116--3/30/2009--AKORN_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/873591--3-13-2006--MEDIMMUNE_INC_-DE.html'">873591--3/13/2006--MEDIMMUNE_INC_/DE</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1023024--3-17-2008--BIOSANTE_PHARMACEUTICALS_INC.html'">1023024--3/17/2008--BIOSANTE_PHARMACEUTICALS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/72444--3-11-2009--NABI__BIOPHARMACEUTICALS.html'">72444--3/11/2009--NABI__BIOPHARMACEUTICALS</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1120438--3-7-2008--THIRD_WAVE_TECHNOLOGIES_INC_-WI.html'">1120438--3/7/2008--THIRD_WAVE_TECHNOLOGIES_INC_/WI</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1009356--3-10-2010--SALIX_PHARMACEUTICALS_LTD.html'">1009356--3/10/2010--SALIX_PHARMACEUTICALS_LTD</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/72444--2-28-2008--NABI__BIOPHARMACEUTICALS.html'">72444--2/28/2008--NABI__BIOPHARMACEUTICALS</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/883975--3-16-2006--STEMCELLS_INC.html'">883975--3/16/2006--STEMCELLS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/942788--3-16-2007--NEOPHARM_INC.html'">942788--3/16/2007--NEOPHARM_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/34956--8-14-2007--SYNTHETIC_BLOOD_INTERNATIONAL_INC.html'">34956--8/14/2007--SYNTHETIC_BLOOD_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/34956--7-28-2006--SYNTHETIC_BLOOD_INTERNATIONAL_INC.html'">34956--7/28/2006--SYNTHETIC_BLOOD_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/887247--3-20-2008--CELLEGY_PHARMACEUTICALS_INC.html'">887247--3/20/2008--CELLEGY_PHARMACEUTICALS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/887708--5-14-2007--CARACO_PHARMACEUTICAL_LABORATORIES_LTD.html'">887708--5/14/2007--CARACO_PHARMACEUTICAL_LABORATORIES_LTD</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1131907--3-16-2006--CANCERVAX_CORP.html'">1131907--3/16/2006--CANCERVAX_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/884847--3-21-2006--MATRITECH_INC-DE-.html'">884847--3/21/2006--MATRITECH_INC/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1124140--3-12-2010--EXACT_SCIENCES_CORP.html'">1124140--3/12/2010--EXACT_SCIENCES_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/887247--4-2-2007--CELLEGY_PHARMACEUTICALS_INC.html'">887247--4/2/2007--CELLEGY_PHARMACEUTICALS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1116463--3-16-2007--ORASURE_TECHNOLOGIES_INC.html'">1116463--3/16/2007--ORASURE_TECHNOLOGIES_INC</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

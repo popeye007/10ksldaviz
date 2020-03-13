@@ -1,0 +1,182 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[3.5679509121, "../topics/{system,_service,_information}.html", "{system,_service,_information}"], [3.1423560932, "../topics/{cost,_operation,_labor}.html", "{cost,_operation,_labor}"], [3.0499349768, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"], [2.7910787898, "../topics/{cost,_regulation,_environmental}.html", "{cost,_regulation,_environmental}"], [2.6991429194, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [2.6573475818, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"], [1.8827262072, "../topics/{condition,_economic,_financial}.html", "{condition,_economic,_financial}"], [1.8378447129, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [1.7144851122, "../topics/{competitive,_industry,_competition}.html", "{competitive,_industry,_competition}"], [1.4446942486, "../topics/{debt,_indebtedness,_cash}.html", "{debt,_indebtedness,_cash}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>1289308--6/14/2006--EnerSys</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">1289308--6/14/2006--EnerSys</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{system,_service,_information}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{system,_service,_information}.html'">{system, service, information}</td></tr>
+<tr class="list"><td id="{cost,_operation,_labor}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_operation,_labor}.html'">{cost, operation, labor}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+<tr class="list"><td id="{cost,_regulation,_environmental}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_regulation,_environmental}.html'">{cost, regulation, environmental}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+<tr class="list"><td id="{condition,_economic,_financial}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{condition,_economic,_financial}.html'">{condition, economic, financial}</td></tr>
+<tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{competitive,_industry,_competition}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{competitive,_industry,_competition}.html'">{competitive, industry, competition}</td></tr>
+<tr class="list"><td id="{debt,_indebtedness,_cash}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{debt,_indebtedness,_cash}.html'">{debt, indebtedness, cash}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    We operate in an extremely competitive industry and are subject to continual pricing pressure.
+Cyclical industry conditions of our customers have adversely affected and may continue to adversely affect our results of operations.
+Our raw materials costs are volatile and expose us to significant movements in our product costs.
+Our operations expose us to the risk of material environmental, health and safety liabilities, costs, and litigation.
+Recent legislation in the European Union could adversely affect our results of operations.
+We are exposed to exchange rate risks, and our net income and financial condition may suffer due to currency translations.
+Our international operations may be adversely affected by actions taken by foreign governments or other forces or events over which we may have no control.
+Our failure to introduce new products and product enhancements and broad market acceptance of new technologies introduced by our competitors could adversely affect our business.
+We may not be able adequately to protect our proprietary intellectual property and technology.
+We may lose our right to use the Exide trademark.
+Relocation of our customers operations could adversely affect our business.
+We may fail to implement our cost reduction initiatives successfully and improve our profitability.
+Quality problems with our products could harm our reputation and erode our competitive position.
+We offer our products under a variety of brand names, the protection of which is important to our reputation for quality in the consumer marketplace.
+We may fail to implement our plans to make acquisitions.
+Any acquisitions that we complete may dilute your ownership interest in EnerSys, may have adverse effects on our financial condition and results of operations and may cause unanticipated liabilities.
+The failure of critical computer systems could seriously affect our sales and operations.
+Our significant indebtedness could adversely affect our financial condition.
+<p><a href="http://www.sec.gov/Archives/edgar/data/1289308/0001193125-06-129843.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/1289308--6-13-2007--EnerSys.html'">1289308--6/13/2007--EnerSys</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1289308--6-11-2008--EnerSys.html'">1289308--6/11/2008--EnerSys</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/61986--3-1-2010--MANITOWOC_CO_INC.html'">61986--3/1/2010--MANITOWOC_CO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1289308--6-1-2010--EnerSys.html'">1289308--6/1/2010--EnerSys</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/88205--3-2-2009--SPX_CORP.html'">88205--3/2/2009--SPX_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/88205--3-4-2008--SPX_CORP.html'">88205--3/4/2008--SPX_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/851368--3-29-2006--COST_U_LESS_INC.html'">851368--3/29/2006--COST_U_LESS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/876167--1-29-2010--PROGRESS_SOFTWARE_CORP_-MA.html'">876167--1/29/2010--PROGRESS_SOFTWARE_CORP_/MA</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/20629--6-1-2010--CSS_INDUSTRIES_INC.html'">20629--6/1/2010--CSS_INDUSTRIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/889930--9-15-2006--OVERLAND_STORAGE_INC.html'">889930--9/15/2006--OVERLAND_STORAGE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/12978--2-25-2009--OFFICEMAX_INC.html'">12978--2/25/2009--OFFICEMAX_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/215419--2-26-2009--CHECKPOINT_SYSTEMS_INC.html'">215419--2/26/2009--CHECKPOINT_SYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/76334--8-26-2010--PARKER_HANNIFIN_CORP.html'">76334--8/26/2010--PARKER_HANNIFIN_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1316656--2-26-2008--Dresser-Rand_Group_Inc..html'">1316656--2/26/2008--Dresser-Rand_Group_Inc.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/39911--3-26-2010--GAP_INC.html'">39911--3/26/2010--GAP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/75829--9-29-2009--PALL_CORP.html'">75829--9/29/2009--PALL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1086222--3-1-2007--AKAMAI_TECHNOLOGIES_INC.html'">1086222--3/1/2007--AKAMAI_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/39911--3-28-2008--GAP_INC.html'">39911--3/28/2008--GAP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1316656--2-23-2009--Dresser-Rand_Group_Inc..html'">1316656--2/23/2009--Dresser-Rand_Group_Inc.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/39911--3-27-2009--GAP_INC.html'">39911--3/27/2009--GAP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/775158--11-18-2010--OSHKOSH_CORP.html'">775158--11/18/2010--OSHKOSH_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1140414--3-31-2009--SIN_HOLDINGS_INC.html'">1140414--3/31/2009--SIN_HOLDINGS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1294608--3-30-2006--Solo_Cup_CO.html'">1294608--3/30/2006--Solo_Cup_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1058083--2-26-2007--IMS_HEALTH_INC.html'">1058083--2/26/2007--IMS_HEALTH_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1122976--2-23-2009--POLYONE_CORP.html'">1122976--2/23/2009--POLYONE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/825410--12-11-2009--LANDAUER_INC.html'">825410--12/11/2009--LANDAUER_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/840467--2-23-2009--BECKMAN_COULTER_INC.html'">840467--2/23/2009--BECKMAN_COULTER_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/20629--6-2-2009--CSS_INDUSTRIES_INC.html'">20629--6/2/2009--CSS_INDUSTRIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/16732--9-29-2010--CAMPBELL_SOUP_CO.html'">16732--9/29/2010--CAMPBELL_SOUP_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/723254--7-30-2010--CINTAS_CORP.html'">723254--7/30/2010--CINTAS_CORP</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

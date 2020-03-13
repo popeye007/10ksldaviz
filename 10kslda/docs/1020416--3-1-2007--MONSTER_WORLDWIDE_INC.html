@@ -1,0 +1,188 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[4.176657138, "../topics/{system,_service,_information}.html", "{system,_service,_information}"], [3.6440803904, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [3.6234174879, "../topics/{financial,_litigation,_operation}.html", "{financial,_litigation,_operation}"], [2.7867019894, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [2.5975972608, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"], [2.5224814333, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"], [2.2116045987, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [1.7055708342, "../topics/{tax,_income,_asset}.html", "{tax,_income,_asset}"], [1.7009824997, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [1.696851295, "../topics/{provision,_law,_control}.html", "{provision,_law,_control}"], [1.6588546798, "../topics/{competitive,_industry,_competition}.html", "{competitive,_industry,_competition}"], [1.045246264, "../topics/{regulation,_change,_law}.html", "{regulation,_change,_law}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>1020416--3/1/2007--MONSTER_WORLDWIDE_INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">1020416--3/1/2007--MONSTER_WORLDWIDE_INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{system,_service,_information}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{system,_service,_information}.html'">{system, service, information}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{financial,_litigation,_operation}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{financial,_litigation,_operation}.html'">{financial, litigation, operation}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+<tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{tax,_income,_asset}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{tax,_income,_asset}.html'">{tax, income, asset}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{provision,_law,_control}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{provision,_law,_control}.html'">{provision, law, control}</td></tr>
+<tr class="list"><td id="{competitive,_industry,_competition}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{competitive,_industry,_competition}.html'">{competitive, industry, competition}</td></tr>
+<tr class="list"><td id="{regulation,_change,_law}" onmouseover="highlight(11)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_change,_law}.html'">{regulation, change, law}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    Government investigations and litigation relating to stock option matters are pending, the scope and outcome of which could have a negative effect on the price of our securities, liquidity and business.
+We rely on the value of our brands, particularly Monster, and the costs of maintaining and enhancing our brand awareness are increasing.
+Our operations have been and will be affected by future global economic fluctuations.
+Our operating results fluctuate from quarter to quarter.
+We face risks relating to developing technology, including the Internet.
+We rely heavily on our information systems and if our access to this technology is impaired or interrupted, or we fail to further develop our technology, our business could be harmed.
+Concerns relating to privacy and protection of customer and job seeker data could damage our reputation and deter current and potential customers and job seekers from using our products and services.
+Our markets are highly competitive.
+We are vulnerable to intellectual property infringement claims brought against us by others and we may not have sufficient protection for our own intellectual property.
+If we are unable to protect our proprietary rights or maintain our rights to use key technologies of third parties, our business may be harmed.
+Computer viruses may cause our systems to incur delays or interruptions.
+Acquisitions could result in operating difficulties and unanticipated liabilities.
+We have had and may face future difficulties managing growth.
+Our divested businesses have agreed to indemnify us of liabilities that are related to their operations. If one or more of those businesses fails to meet its obligations, our financial condition and results of operations may be harmed.
+We face risks relating to our foreign operations.
+We depend on our key management personnel.
+We are influenced by a principal stockholder.
+We may be required to record a significant charge to earnings if our goodwill or amortizable intangible assets become impaired.
+Effects of anti-takeover provisions could inhibit the acquisition of Monster Worldwide by others.
+There is volatility in our stock price.
+We face risks associated with government regulation.
+Other legal proceedings may significantly harm our business.
+<p><a href="http://www.sec.gov/Archives/edgar/data/1020416/0001047469-07-001534.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/1020416--2-16-2006--MONSTER_WORLDWIDE_INC.html'">1020416--2/16/2006--MONSTER_WORLDWIDE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1020416--2-21-2008--MONSTER_WORLDWIDE_INC.html'">1020416--2/21/2008--MONSTER_WORLDWIDE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/884497--3-17-2008--MEDQUIST_INC.html'">884497--3/17/2008--MEDQUIST_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/351145--3-14-2006--INTERGRAPH_CORP.html'">351145--3/14/2006--INTERGRAPH_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/814549--3-30-2009--EBIX_INC.html'">814549--3/30/2009--EBIX_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1027207--3-4-2008--EPIQ_SYSTEMS_INC.html'">1027207--3/4/2008--EPIQ_SYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1047202--6-13-2007--GETTY_IMAGES_INC.html'">1047202--6/13/2007--GETTY_IMAGES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1173431--11-26-2007--TD_AMERITRADE_HOLDING_CORP.html'">1173431--11/26/2007--TD_AMERITRADE_HOLDING_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/849399--5-21-2008--SYMANTEC_CORP.html'">849399--5/21/2008--SYMANTEC_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/849399--6-9-2006--SYMANTEC_CORP.html'">849399--6/9/2006--SYMANTEC_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/849399--5-24-2007--SYMANTEC_CORP.html'">849399--5/24/2007--SYMANTEC_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1100885--3-14-2006--DIGITAS_INC.html'">1100885--3/14/2006--DIGITAS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/891103--3-2-2009--IAC-INTERACTIVECORP.html'">891103--3/2/2009--IAC/INTERACTIVECORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1006892--3-13-2009--JDA_SOFTWARE_GROUP_INC.html'">1006892--3/13/2009--JDA_SOFTWARE_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1287258--3-11-2008--PLANETOUT_INC.html'">1287258--3/11/2008--PLANETOUT_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/920424--3-2-2009--INVESTMENT_TECHNOLOGY_GROUP_INC.html'">920424--3/2/2009--INVESTMENT_TECHNOLOGY_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1173431--11-26-2008--TD_AMERITRADE_HOLDING_CORP.html'">1173431--11/26/2008--TD_AMERITRADE_HOLDING_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/804753--2-27-2008--CERNER_CORP_-MO-.html'">804753--2/27/2008--CERNER_CORP_/MO/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1316360--1-24-2008--IHS_Inc..html'">1316360--1/24/2008--IHS_Inc.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1027207--3-1-2010--EPIQ_SYSTEMS_INC.html'">1027207--3/1/2010--EPIQ_SYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1063254--3-5-2010--S1_CORP_-DE-.html'">1063254--3/5/2010--S1_CORP_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/813920--2-20-2009--CEC_ENTERTAINMENT_INC.html'">813920--2/20/2009--CEC_ENTERTAINMENT_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1010612--3-13-2008--SYKES_ENTERPRISES_INC.html'">1010612--3/13/2008--SYKES_ENTERPRISES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1080056--3-16-2007--THESTREET_COM.html'">1080056--3/16/2007--THESTREET_COM</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1001868--4-2-2007--FIBERNET_TELECOM_GROUP_INC\.html'">1001868--4/2/2007--FIBERNET_TELECOM_GROUP_INC\</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/804753--3-2-2009--CERNER_CORP_-MO-.html'">804753--3/2/2009--CERNER_CORP_/MO/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1080056--3-16-2006--THESTREET_COM.html'">1080056--3/16/2006--THESTREET_COM</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/62741--3-2-2006--MARSHALL_&_ILSLEY_CORP-WI-.html'">62741--3/2/2006--MARSHALL_&_ILSLEY_CORP/WI/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/804753--2-22-2010--CERNER_CORP_-MO-.html'">804753--2/22/2010--CERNER_CORP_/MO/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1085770--3-5-2007--MOVE_INC.html'">1085770--3/5/2007--MOVE_INC</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

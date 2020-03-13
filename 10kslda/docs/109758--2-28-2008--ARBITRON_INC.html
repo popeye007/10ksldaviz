@@ -1,0 +1,186 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[6.7583689093, "../topics/{system,_service,_information}.html", "{system,_service,_information}"], [5.5736700718, "../topics/{capital,_credit,_financial}.html", "{capital,_credit,_financial}"], [3.5065259766, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [2.8550913565, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [2.247209698, "../topics/{stock,_price,_share}.html", "{stock,_price,_share}"], [1.7488472804, "../topics/{provision,_law,_control}.html", "{provision,_law,_control}"], [1.6964019092, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [1.5550889182, "../topics/{debt,_indebtedness,_cash}.html", "{debt,_indebtedness,_cash}"], [1.5470847888, "../topics/{condition,_economic,_financial}.html", "{condition,_economic,_financial}"], [1.0495526218, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>109758--2/28/2008--ARBITRON_INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">109758--2/28/2008--ARBITRON_INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{system,_service,_information}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{system,_service,_information}.html'">{system, service, information}</td></tr>
+<tr class="list"><td id="{capital,_credit,_financial}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{capital,_credit,_financial}.html'">{capital, credit, financial}</td></tr>
+<tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{stock,_price,_share}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_share}.html'">{stock, price, share}</td></tr>
+<tr class="list"><td id="{provision,_law,_control}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{provision,_law,_control}.html'">{provision, law, control}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{debt,_indebtedness,_cash}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{debt,_indebtedness,_cash}.html'">{debt, indebtedness, cash}</td></tr>
+<tr class="list"><td id="{condition,_economic,_financial}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{condition,_economic,_financial}.html'">{condition, economic, financial}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    We have limited experience designing, recruiting and maintaining PPM panels. If we are unable to design, recruit and maintain PPM panels that appropriately balance research quality, panel size and operational cost, our financial results will suffer.
+We expect to invest in the continued development and commercialization of our PPM ratings service, which may not ultimately be successfully commercialized. The costs associated with commercialization of this service will adversely impact our operating results over the commercialization period.
+The success of commercialization of the PPM ratings service is dependent on manufacturers who produce the PPM equipment according to our proprietary design as well as those who manufacture parts.
+Technological change may render our products and services obsolete and it may be difficult for us to develop new products and services or enhance existing ones.
+The loss of a key customer would significantly reduce our revenue and operating results.
+Ownership shifts in the radio broadcasting industry may put pressure on the pricing of our quantitative radio audience measurement service and related software sales, thereby leading to decreased earnings growth.
+Our agreements with our customers are not exclusive and contain no renewal obligations. The failure of our customers to renew all or part of their contracts could have an adverse impact on our business, financial position and operating results.
+Long-term agreements with our customers limit our ability to increase the prices we charge for our services if our costs increase.
+The success of our radio audience measurement business depends on diarykeepers who record their listening habits in diaries and return these diaries to us and panelists who carry our PPM meter. Our failure to collect these diaries and to recruit compliant participants could adversely impact our business.
+Our ability to recruit participants for our surveys could be adversely impacted by governmental regulations.
+The license of enhanced access to our respondent-level data to third-party data processors and customers could adversely impact the sale of some of our existing software products.
+Our success will depend on our ability to protect our intellectual property rights.
+We are dependent on our proprietary software systems for current and future business requirements. Significant delays in the completion of these systems, cost overages and/or inadequate performance of the systems once completed could adversely impact our business, financial position and operating results.
+Our future growth and success will depend on our ability to successfully compete with companies that may have financial, marketing, distribution, technical and other advantages over us.
+An economic downturn generally, and in the advertising and radio industries in particular, could adversely impact our revenue.
+Advertisers are pursuing increased accountability from the media industry for their return on investments made in media.
+We rely on third parties to provide data and services in connection with our current business and we may require additional third-party data and services to expand our business in the future.
+Long-term disruptions in the mail, telecommunication infrastructure and/or air service could adversely impact our business.
+Risk Factors Relating to Our Indebtedness
+Risk Factors Relating to Owning Our Common Stock
+Changes in market conditions, or sales of our common stock, could adversely impact the market price of our common stock.
+It may be difficult for a third party to acquire us, which could depress the stock price of our common stock.
+<p><a href="http://www.sec.gov/Archives/edgar/data/109758/0000950133-08-000865.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/1377013--2-19-2010--TIME_WARNER_CABLE_INC..html'">1377013--2/19/2010--TIME_WARNER_CABLE_INC.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/923282--2-28-2007--GEMSTAR_TV_GUIDE_INTERNATIONAL_INC.html'">923282--2/28/2007--GEMSTAR_TV_GUIDE_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/4962--2-26-2010--AMERICAN_EXPRESS_CO.html'">4962--2/26/2010--AMERICAN_EXPRESS_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1102541--2-27-2009--EARTHLINK_INC.html'">1102541--2/27/2009--EARTHLINK_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/874866--6-16-2008--CORVEL_CORP.html'">874866--6/16/2008--CORVEL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/884497--3-12-2010--MEDQUIST_INC.html'">884497--3/12/2010--MEDQUIST_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1283699--3-2-2009--METROPCS_COMMUNICATIONS_INC.html'">1283699--3/2/2009--METROPCS_COMMUNICATIONS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/4962--2-27-2009--AMERICAN_EXPRESS_CO.html'">4962--2/27/2009--AMERICAN_EXPRESS_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1157377--5-30-2008--ADVISORY_BOARD_CO.html'">1157377--5/30/2008--ADVISORY_BOARD_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/749254--5-23-2007--TRM_CORP.html'">749254--5/23/2007--TRM_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1259550--3-30-2009--LOCAL.COM.html'">1259550--3/30/2009--LOCAL.COM</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1259550--3-16-2007--LOCAL.COM.html'">1259550--3/16/2007--LOCAL.COM</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1008586--4-17-2009--STREAMLINE_HEALTH_SOLUTIONS_INC..html'">1008586--4/17/2009--STREAMLINE_HEALTH_SOLUTIONS_INC.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1014052--10-29-2008--ATSI_COMMUNICATIONS_INC-DE.html'">1014052--10/29/2008--ATSI_COMMUNICATIONS_INC/DE</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1008586--4-7-2008--STREAMLINE_HEALTH_SOLUTIONS_INC..html'">1008586--4/7/2008--STREAMLINE_HEALTH_SOLUTIONS_INC.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1027207--3-4-2009--EPIQ_SYSTEMS_INC.html'">1027207--3/4/2009--EPIQ_SYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1095277--3-16-2010--INTERSECTIONS_INC.html'">1095277--3/16/2010--INTERSECTIONS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/879573--7-30-2009--CENTENNIAL_COMMUNICATIONS_CORP_-DE.html'">879573--7/30/2009--CENTENNIAL_COMMUNICATIONS_CORP_/DE</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1008586--4-16-2010--STREAMLINE_HEALTH_SOLUTIONS_INC..html'">1008586--4/16/2010--STREAMLINE_HEALTH_SOLUTIONS_INC.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1102541--2-26-2010--EARTHLINK_INC.html'">1102541--2/26/2010--EARTHLINK_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/927653--5-4-2010--MCKESSON_CORP.html'">927653--5/4/2010--MCKESSON_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1094238--9-15-2008--HARRIS_INTERACTIVE_INC.html'">1094238--9/15/2008--HARRIS_INTERACTIVE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/919794--3-17-2008--ENLIVEN_MARKETING_TECHNOLOGIES_CORP.html'">919794--3/17/2008--ENLIVEN_MARKETING_TECHNOLOGIES_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/891178--3-11-2008--EPICOR_SOFTWARE_CORP.html'">891178--3/11/2008--EPICOR_SOFTWARE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1071411--3-25-2010--FUSION_TELECOMMUNICATIONS_INTERNATIONAL_INC.html'">1071411--3/25/2010--FUSION_TELECOMMUNICATIONS_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/884497--3-11-2009--MEDQUIST_INC.html'">884497--3/11/2009--MEDQUIST_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1273931--3-25-2008--MONEYGRAM_INTERNATIONAL_INC.html'">1273931--3/25/2008--MONEYGRAM_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/874866--6-12-2009--CORVEL_CORP.html'">874866--6/12/2009--CORVEL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1068875--3-2-2009--INFOSPACE_INC.html'">1068875--3/2/2009--INFOSPACE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/891919--4-16-2009--BOOKS_A_MILLION_INC.html'">891919--4/16/2009--BOOKS_A_MILLION_INC</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

@@ -1,0 +1,208 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[11.0486486116, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [7.6733352057, "../topics/{system,_service,_information}.html", "{system,_service,_information}"], [6.0197792866, "../topics/{regulation,_government,_change}.html", "{regulation,_government,_change}"], [4.1377348015, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [3.7189571698, "../topics/{control,_financial,_internal}.html", "{control,_financial,_internal}"], [3.3572625213, "../topics/{stock,_price,_share}.html", "{stock,_price,_share}"], [2.7851872369, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"], [2.7410275361, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [2.0516031443, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"], [1.9863311987, "../topics/{cost,_contract,_operation}.html", "{cost,_contract,_operation}"], [1.719354515, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [1.5237311069, "../topics/{condition,_economic,_financial}.html", "{condition,_economic,_financial}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>1086740--4/2/2007--DELTATHREE_INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">1086740--4/2/2007--DELTATHREE_INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{system,_service,_information}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{system,_service,_information}.html'">{system, service, information}</td></tr>
+<tr class="list"><td id="{regulation,_government,_change}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_government,_change}.html'">{regulation, government, change}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{control,_financial,_internal}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{control,_financial,_internal}.html'">{control, financial, internal}</td></tr>
+<tr class="list"><td id="{stock,_price,_share}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_share}.html'">{stock, price, share}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+<tr class="list"><td id="{cost,_contract,_operation}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_contract,_operation}.html'">{cost, contract, operation}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{condition,_economic,_financial}" onmouseover="highlight(11)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{condition,_economic,_financial}.html'">{condition, economic, financial}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    Risks Related to our Company
+We have a history of losses and we are uncertain as to our future profitability.
+We may not be able to expand our revenue.
+Decreasing telecommunications prices may cause us to lower our prices to remain competitive, which could prevent our future profitability.
+We have a limited operating history upon which you can evaluate us.
+We may need additional capital to finance our operations and grow our business.
+Our acquisition activity could disrupt our ongoing business and may present risks not contemplated at the time of the transactions.
+The success of our VoIP telephony products and services is dependent on the growth and public acceptance of VoIP telephony.
+Our future success depends on the growth in the use of the internet as a means of communications.
+The success of our VoIP telephony products and services is dependent on the growth and public acceptance of VoIP telephony.
+The success of our VoIP telephony products and services is dependent on the growth and public acceptance of VoIP telephony.
+Our future success depends on the growth in the use of the internet as a means of communications.
+Intense competition could reduce our market share and decrease our revenue.
+Potential fluctuations in our quarterly financial results may make it difficult for investors to predict our future performance.
+Our success depends on our ability to handle a large number of simultaneous calls, which our network may not be able to accommodate.
+We face a risk of failure of computer and communications systems used in our business.
+Substantially all of the VoIP telephony calls made by our iConnectHere customers, and a large percentage of our services provider and reseller customers are connected through local telephone companies and, at least in part, through leased facilities that may become unavailable.
+Our computer systems and operations may be vulnerable to security breaches.
+Operating internationally exposes us to additional and unpredictable risks.
+We have experienced losses as a result of fraud.
+We need to retain key personnel to support our products and ongoing operations.
+Our ability to provide our service is dependent upon third-party facilities and equipment, the failure of which could cause delays or interruptions of our service, damage our reputation, cause us to lose customers and limit our growth.
+Third parties might infringe upon our proprietary technology.
+Our services may infringe on the intellectual property rights of others.
+Risks Related to our Industry
+Government regulation and legal uncertainties relating to IP telephony could harm our business.
+We may not be able to keep pace with rapid technological changes in the communications industry.
+The success of our business is affected by customers' unimpeded access to broadband service. Providers of broadband services may be able to block our services, which could adversely affect our revenue and growth.
+If we fail to comply with new FCC regulations requiring us to provide E-911 emergency calling services, we may be subject to fines or penalties, which could include disconnection of our service for certain customers or prohibitions on marketing of our services and accepting new customers in certain areas.
+Various fees and taxes will increase our costs and our customers' cost of using our services.
+There may be risks associated with our ability to comply with funding requirements of the Universal Service Fund, or USF, and similar state or federal funds, or that our customers will cancel service due to the impact of these or other price increases to their service.
+There may be risks associated with our ability to comply with the requirements of federal law enforcement agencies.
+Risks Related to our relationship with Atarey
+Atarey exercises significant control over all matters submitted to a stockholder vote.
+A third party may be deterred from acquiring our company.
+Risks Related to our Common Stock
+Volatility of our stock price could adversely affect our stockholders.
+The liquidity of our common stock could be adversely affected by changes in our Nasdaq listing.
+We do not intend to pay dividends.
+Risks Related to our Israel-based Office
+We may be negatively impacted by changes in political, military and/or economic conditions.
+We may be negatively impacted by employees being called for army service
+<p><a href="http://www.sec.gov/Archives/edgar/data/1086740/0001144204-07-016212.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/1133324--3-16-2006--INPHONIC_INC.html'">1133324--3/16/2006--INPHONIC_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1133324--6-1-2007--INPHONIC_INC.html'">1133324--6/1/2007--INPHONIC_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1100917--3-30-2007--ONVIA_INC.html'">1100917--3/30/2007--ONVIA_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1109935--2-27-2007--WEBEX_COMMUNICATIONS_INC.html'">1109935--2/27/2007--WEBEX_COMMUNICATIONS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1109935--3-15-2006--WEBEX_COMMUNICATIONS_INC.html'">1109935--3/15/2006--WEBEX_COMMUNICATIONS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1080034--3-31-2006--VALUECLICK_INC-CA.html'">1080034--3/31/2006--VALUECLICK_INC/CA</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1142701--2-20-2008--UNITED_ONLINE_INC.html'">1142701--2/20/2008--UNITED_ONLINE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1080034--3-1-2007--VALUECLICK_INC-CA.html'">1080034--3/1/2007--VALUECLICK_INC/CA</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1166220--9-26-2007--JL_HALSEY_CORP.html'">1166220--9/26/2007--JL_HALSEY_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1365295--6-28-2007--Hostopia.com_Inc..html'">1365295--6/28/2007--Hostopia.com_Inc.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1293282--3-16-2010--TechTarget_Inc.html'">1293282--3/16/2010--TechTarget_Inc</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1365295--6-27-2008--Hostopia.com_Inc..html'">1365295--6/27/2008--Hostopia.com_Inc.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1095480--3-16-2007--NETRATINGS_INC.html'">1095480--3/16/2007--NETRATINGS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1086195--3-16-2006--ART_TECHNOLOGY_GROUP_INC.html'">1086195--3/16/2006--ART_TECHNOLOGY_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1096199--10-17-2006--VA_SOFTWARE_CORP.html'">1096199--10/17/2006--VA_SOFTWARE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/937941--3-17-2008--PC_MALL_INC.html'">937941--3/17/2008--PC_MALL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1031029--3-3-2009--STARTEK_INC.html'">1031029--3/3/2009--STARTEK_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/897893--4-13-2007--PEERLESS_SYSTEMS_CORP.html'">897893--4/13/2007--PEERLESS_SYSTEMS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1328571--3-13-2007--NTELOS_HOLDINGS_CORP.html'">1328571--3/13/2007--NTELOS_HOLDINGS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1097641--3-31-2006--724_SOLUTIONS_INC.html'">1097641--3/31/2006--724_SOLUTIONS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1086195--3-16-2007--ART_TECHNOLOGY_GROUP_INC.html'">1086195--3/16/2007--ART_TECHNOLOGY_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1102541--3-1-2007--EARTHLINK_INC.html'">1102541--3/1/2007--EARTHLINK_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1089907--4-2-2007--KANA_SOFTWARE_INC.html'">1089907--4/2/2007--KANA_SOFTWARE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1089907--3-17-2008--KANA_SOFTWARE_INC.html'">1089907--3/17/2008--KANA_SOFTWARE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/946581--12-19-2008--TAKE_TWO_INTERACTIVE_SOFTWARE_INC.html'">946581--12/19/2008--TAKE_TWO_INTERACTIVE_SOFTWARE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1111665--3-5-2008--TELECOMMUNICATION_SYSTEMS_INC_-FA-.html'">1111665--3/5/2008--TELECOMMUNICATION_SYSTEMS_INC_/FA/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1080034--2-29-2008--VALUECLICK_INC-CA.html'">1080034--2/29/2008--VALUECLICK_INC/CA</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1110903--12-14-2006--NETWORK_ENGINES_INC.html'">1110903--12/14/2006--NETWORK_ENGINES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1111665--3-3-2009--TELECOMMUNICATION_SYSTEMS_INC_-FA-.html'">1111665--3/3/2009--TELECOMMUNICATION_SYSTEMS_INC_/FA/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1108906--3-15-2007--GREENFIELD_ONLINE_INC.html'">1108906--3/15/2007--GREENFIELD_ONLINE_INC</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

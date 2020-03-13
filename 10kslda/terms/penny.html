@@ -1,0 +1,165 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[-5.2190340184, "../topics/{stock,_price,_share}.html", "{stock,_price,_share}"], [-9.6792101403, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [-10.166569945, "../topics/{interest,_director,_officer}.html", "{interest,_director,_officer}"], [-77.9295646419, "../topics/{regulation,_change,_law}.html", "{regulation,_change,_law}"], [-100.0, "../topics/{system,_service,_information}.html", "{system,_service,_information}"], [-114.580072595, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [-203.922667158, "../topics/{financial,_litigation,_operation}.html", "{financial,_litigation,_operation}"], [-312.573733866, "../topics/{provision,_law,_control}.html", "{provision,_law,_control}"], [-391.289509277, "../topics/{control,_financial,_internal}.html", "{control,_financial,_internal}"], [-399.099796028, "../topics/{investment,_property,_distribution}.html", "{investment,_property,_distribution}"], [-465.649280193, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"], [-527.362326429, "../topics/{regulation,_government,_change}.html", "{regulation,_government,_change}"], [-529.700085658, "../topics/{tax,_income,_asset}.html", "{tax,_income,_asset}"], [-533.990886297, "../topics/{product,_liability,_claim}.html", "{product,_liability,_claim}"], [-577.591655519, "../topics/{cost,_regulation,_environmental}.html", "{cost,_regulation,_environmental}"], [-581.07582283, "../topics/{cost,_contract,_operation}.html", "{cost,_contract,_operation}"], [-582.549301837, "../topics/{loss,_insurance,_financial}.html", "{loss,_insurance,_financial}"], [-590.442479508, "../topics/{loan,_real,_estate}.html", "{loan,_real,_estate}"], [-603.979554651, "../topics/{debt,_indebtedness,_cash}.html", "{debt,_indebtedness,_cash}"], [-613.552308828, "../topics/{operation,_natural,_condition}.html", "{operation,_natural,_condition}"], [-619.219404096, "../topics/{condition,_economic,_financial}.html", "{condition,_economic,_financial}"], [-627.579600094, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"], [-629.162880591, "../topics/{competitive,_industry,_competition}.html", "{competitive,_industry,_competition}"], [-636.768144099, "../topics/{product,_candidate,_development}.html", "{product,_candidate,_development}"], [-660.25578198, "../topics/{gas,_price,_oil}.html", "{gas,_price,_oil}"], [-660.757482537, "../topics/{capital,_credit,_financial}.html", "{capital,_credit,_financial}"], [-673.324769905, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [-695.587813353, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [-699.840344941, "../topics/{cost,_operation,_labor}.html", "{cost,_operation,_labor}"], [-716.368584545, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+    }
+    //-->
+    </script>
+
+<title>penny</title>
+<link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+  <body onload="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+<div id="top"></div>
+<h1 id="header">
+<table><tr>
+<td id="title">penny</td>
+</tr></table></span>
+<hr noshade></h1>
+
+<div id="main">
+<table><tr>
+<td width="20.0%">
+<table class="dark">
+<tr class="title">
+<td>related words</td>
+</tr>
+<tr class="list"><td onclick="window.location.href='../terms/delisted.html'">delisted</a></td></tr>
+<tr class="list"><td onclick="window.location.href='../terms/bulletin.html'">bulletin</a></td></tr>
+<tr class="list"><td onclick="window.location.href='../terms/resell.html'">resell</a></td></tr>
+<tr class="list"><td onclick="window.location.href='../terms/nasdaq.html'">nasdaq</a></td></tr>
+<tr class="list"><td onclick="window.location.href='../terms/warrant.html'">warrant</a></td></tr>
+<tr class="list"><td onclick="window.location.href='../terms/listing.html'">listing</a></td></tr>
+<tr class="list"><td onclick="window.location.href='../terms/otc.html'">otc</a></td></tr>
+<tr class="list"><td onclick="window.location.href='../terms/listed.html'">listed</a></td></tr>
+<tr class="list"><td onclick="window.location.href='../terms/quoted.html'">quoted</a></td></tr>
+<tr class="list"><td onclick="window.location.href='../terms/thinly.html'">thinly</a></td></tr>
+<tr class="list"><td onclick="window.location.href='../terms/nyse.html'">nyse</a></td></tr>
+<tr class="list"><td onclick="window.location.href='../terms/series.html'">series</a></td></tr>
+<tr class="list"><td onclick="window.location.href='../terms/eligible.html'">eligible</a></td></tr>
+<tr class="list"><td onclick="window.location.href='../terms/dilutive.html'">dilutive</a></td></tr>
+<tr class="list"><td onclick="window.location.href='../terms/treasury.html'">treasury</a></td></tr>
+<tr class="list"><td onclick="window.location.href='../terms/table.html'">table</a></td></tr>
+<tr class="list"><td onclick="window.location.href='../terms/finra.html'">finra</a></td></tr>
+<tr class="list"><td onclick="window.location.href='../terms/quotation.html'">quotation</a></td></tr>
+<tr class="list"><td onclick="window.location.href='../terms/resale.html'">resale</a></td></tr>
+<tr class="list"><td onclick="window.location.href='../terms/diluted.html'">diluted</a></td></tr>
+
+</table>
+</td>
+
+<td width="50.0%">
+<table class="light">
+<tr class="title">
+<td>related documents</td>
+</tr>
+<tr class="list"><td onclick="window.location.href='../docs/1439264--9-16-2009--Bonanza_Goldfield_Corp..html'">1439264--9/16/2009--Bonanza_Goldfield_Corp.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1471302--1-26-2010--Ecochild_Inc..html'">1471302--1/26/2010--Ecochild_Inc.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/72316--3-31-2009--NORD_RESOURCES_CORP.html'">72316--3/31/2009--NORD_RESOURCES_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1347870--3-19-2009--Monza_Ventures_Inc..html'">1347870--3/19/2009--Monza_Ventures_Inc.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1275548--3-27-2009--MIDWEST_URANIUM_CORP.html'">1275548--3/27/2009--MIDWEST_URANIUM_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1337182--2-13-2009--Breezer_Ventures_Inc..html'">1337182--2/13/2009--Breezer_Ventures_Inc.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1479526--12-2-2010--TRADE_LINK_WHOLESALERS_INC..html'">1479526--12/2/2010--TRADE_LINK_WHOLESALERS_INC.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1419260--1-6-2010--Andina_Group_Inc..html'">1419260--1/6/2010--Andina_Group_Inc.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1424404--10-9-2009--Wolverine_Exploration_Inc..html'">1424404--10/9/2009--Wolverine_Exploration_Inc.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1203944--10-28-2009--RAPTOR_PHARMACEUTICALS_CORP..html'">1203944--10/28/2009--RAPTOR_PHARMACEUTICALS_CORP.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1344394--11-19-2010--COLORADO_GOLDFIELDS_INC..html'">1344394--11/19/2010--COLORADO_GOLDFIELDS_INC.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1445625--11-18-2009--NEXAIRA_WIRELESS_INC..html'">1445625--11/18/2009--NEXAIRA_WIRELESS_INC.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1073362--9-14-2010--Intelligent_Living_Corp.html'">1073362--9/14/2010--Intelligent_Living_Corp</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1344394--11-18-2009--COLORADO_GOLDFIELDS_INC..html'">1344394--11/18/2009--COLORADO_GOLDFIELDS_INC.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1419260--9-2-2010--Andina_Group_Inc..html'">1419260--9/2/2010--Andina_Group_Inc.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1341315--8-31-2009--SOUTHERN_STAR_ENERGY_INC..html'">1341315--8/31/2009--SOUTHERN_STAR_ENERGY_INC.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1333614--8-13-2009--RAZOR_RESOURCES_INC.html'">1333614--8/13/2009--RAZOR_RESOURCES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1376231--4-14-2010--Soleil_Capital_L.P..html'">1376231--4/14/2010--Soleil_Capital_L.P.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1368762--8-10-2009--NEEMA_INC..html'">1368762--8/10/2009--NEEMA_INC.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1357642--6-1-2010--SENTRY_PETROLEUM_LTD..html'">1357642--6/1/2010--SENTRY_PETROLEUM_LTD.</td></tr>
+
+</table>
+</td>
+
+<td width="30.0%">
+<table class="dark">
+<tr class="title">
+<td>related topics</td>
+</tr>
+<tr class="list"><td onclick="window.location.href='../topics/{stock,_price,_share}.html'">{stock, price, share}</td></tr>
+<tr class="list"><td onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td onclick="window.location.href='../topics/{interest,_director,_officer}.html'">{interest, director, officer}</td></tr>
+<tr class="list"><td onclick="window.location.href='../topics/{regulation,_change,_law}.html'">{regulation, change, law}</td></tr>
+<tr class="list"><td onclick="window.location.href='../topics/{system,_service,_information}.html'">{system, service, information}</td></tr>
+<tr class="list"><td onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td onclick="window.location.href='../topics/{financial,_litigation,_operation}.html'">{financial, litigation, operation}</td></tr>
+<tr class="list"><td onclick="window.location.href='../topics/{provision,_law,_control}.html'">{provision, law, control}</td></tr>
+<tr class="list"><td onclick="window.location.href='../topics/{control,_financial,_internal}.html'">{control, financial, internal}</td></tr>
+<tr class="list"><td onclick="window.location.href='../topics/{investment,_property,_distribution}.html'">{investment, property, distribution}</td></tr>
+<tr class="list"><td onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+<tr class="list"><td onclick="window.location.href='../topics/{regulation,_government,_change}.html'">{regulation, government, change}</td></tr>
+<tr class="list"><td onclick="window.location.href='../topics/{tax,_income,_asset}.html'">{tax, income, asset}</td></tr>
+<tr class="list"><td onclick="window.location.href='../topics/{product,_liability,_claim}.html'">{product, liability, claim}</td></tr>
+<tr class="list"><td onclick="window.location.href='../topics/{cost,_regulation,_environmental}.html'">{cost, regulation, environmental}</td></tr>
+<tr class="list"><td onclick="window.location.href='../topics/{cost,_contract,_operation}.html'">{cost, contract, operation}</td></tr>
+<tr class="list"><td onclick="window.location.href='../topics/{loss,_insurance,_financial}.html'">{loss, insurance, financial}</td></tr>
+<tr class="list"><td onclick="window.location.href='../topics/{loan,_real,_estate}.html'">{loan, real, estate}</td></tr>
+<tr class="list"><td onclick="window.location.href='../topics/{debt,_indebtedness,_cash}.html'">{debt, indebtedness, cash}</td></tr>
+<tr class="list"><td onclick="window.location.href='../topics/{operation,_natural,_condition}.html'">{operation, natural, condition}</td></tr>
+
+</table>
+</td>
+</tr></table>
+</div>
+
+<div id="footer">
+<br>
+<hr noshade>
+</tr>
+</table>
+</div>
+  </body>
+</html>

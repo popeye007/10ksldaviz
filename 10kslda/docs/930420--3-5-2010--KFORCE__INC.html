@@ -1,0 +1,208 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[18.8914751319, "../topics/{regulation,_government,_change}.html", "{regulation,_government,_change}"], [5.8131891646, "../topics/{system,_service,_information}.html", "{system,_service,_information}"], [3.956329932, "../topics/{capital,_credit,_financial}.html", "{capital,_credit,_financial}"], [3.2596667532, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"], [2.7218994647, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [2.5708943409, "../topics/{tax,_income,_asset}.html", "{tax,_income,_asset}"], [2.3314740434, "../topics/{financial,_litigation,_operation}.html", "{financial,_litigation,_operation}"], [2.1289858918, "../topics/{condition,_economic,_financial}.html", "{condition,_economic,_financial}"], [1.7123415918, "../topics/{cost,_operation,_labor}.html", "{cost,_operation,_labor}"], [1.7034277377, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [1.6970554519, "../topics/{provision,_law,_control}.html", "{provision,_law,_control}"], [1.6965360362, "../topics/{control,_financial,_internal}.html", "{control,_financial,_internal}"], [1.168105071, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>930420--3/5/2010--KFORCE__INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">930420--3/5/2010--KFORCE__INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{regulation,_government,_change}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_government,_change}.html'">{regulation, government, change}</td></tr>
+<tr class="list"><td id="{system,_service,_information}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{system,_service,_information}.html'">{system, service, information}</td></tr>
+<tr class="list"><td id="{capital,_credit,_financial}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{capital,_credit,_financial}.html'">{capital, credit, financial}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{tax,_income,_asset}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{tax,_income,_asset}.html'">{tax, income, asset}</td></tr>
+<tr class="list"><td id="{financial,_litigation,_operation}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{financial,_litigation,_operation}.html'">{financial, litigation, operation}</td></tr>
+<tr class="list"><td id="{condition,_economic,_financial}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{condition,_economic,_financial}.html'">{condition, economic, financial}</td></tr>
+<tr class="list"><td id="{cost,_operation,_labor}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_operation,_labor}.html'">{cost, operation, labor}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{provision,_law,_control}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{provision,_law,_control}.html'">{provision, law, control}</td></tr>
+<tr class="list"><td id="{control,_financial,_internal}" onmouseover="highlight(11)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{control,_financial,_internal}.html'">{control, financial, internal}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(12)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    The current economic conditions in the U.S. economy continue to affect our business.
+Any failure by our HLS Clinical Research business to comply with certain regulations, policies and procedures specific to that business could harm our operating results and/or reputation.
+We face certain risks in collecting our trade accounts receivable.
+Kforce may be adversely affected by immigration restrictions.
+Kforce may not be able to maintain sufficient cash flow or borrowing capacity to support operations.
+The financial markets have recently experienced significant turmoil which may negatively impact our liquidity and our ability to obtain financing, and may also cause a decrease in demand for our services.
+We are exposed to intangible asset risk which could result in future impairment.
+Inflation may adversely affect our business operations in the future.
+Significant legal actions could subject Kforce to substantial uninsured liabilities.
+Kforce may not be able to recruit and retain qualified personnel.
+Kforce s success depends upon retaining the services of its management team and key operating employees.
+Kforce depends on the proper functioning of its information systems.
+Significant increases in payroll-related costs could adversely affect Kforce s business.
+Kforce faces significant employment-related legal risk.
+Kforce may be adversely affected by government regulation of the staffing business, and of the workplace.
+If Kforce becomes subject to material liabilities under our self-insured programs, our financial results may be adversely affected.
+Adverse results in tax audits could result in significant cash expenditures or exposure to unforeseen liabilities.
+Due to inherent limitations, there can be no assurance that our system of disclosure and internal controls and procedures will be successful in preventing all errors and fraud, or in making all material information known in a timely manner to management.
+The addition of offices and entry into new geographic markets may not occur on a timely basis or achieve anticipated financial results.
+Our business is dependent upon maintaining our reputation, our relationships, and our performance.
+We rely on short-term contracts with most of our clients.
+Our offshore outsourcing solutions are limited.
+We do not provide a Vendor Management System ( VMS ) solution.
+Kforce s current market share may decrease as a result of limited barriers to entry for new competitors and discontinuation of clients outsourcing their staffing needs.
+Competition for acquisition opportunities may restrict Kforce s future growth by limiting our ability to make acquisitions at reasonable valuations.
+Kforce may face significant risk arising from acquisitions.
+Decreases in patient occupancy at healthcare clients facilities may adversely affect the profitability of Kforce s business.
+Future changes in reimbursement trends could hamper our clients ability to pay Kforce.
+Provisions in Kforce s articles and bylaws and under Florida law may have certain anti-takeover effects.
+Kforce s stock price may be volatile.
+RISKS RELATED TO OUR GOVERNMENT BUSINESSES
+Our failure to comply with complex federal procurement laws and regulations could cause us to lose business, incur additional costs, and subject us to a variety of penalties, including suspension and debarment from doing business with the Federal Government.
+Unfavorable government audit results could force us to refund previously recognized revenues and could subject us to a variety of penalties and sanctions.
+Our Federal Agency Business is dependent upon maintaining our reputation, our relationships and our performance.
+Competition is intense in the Federal Agency Business.
+Loss of our General Services Administration ( GSA ) schedule contracts or other contracting vehicles could impair our ability to win new business.
+Our failure to obtain and maintain necessary security clearances may limit our ability to perform classified work for government clients, which could cause us to lose business.
+Our employees may engage in misconduct or other improper activities, which could harm our business.
+Security breaches in sensitive government information systems could result in the loss of our clients and cause negative publicity.
+Changes in the spending policies or budget priorities of the Federal Government could cause us to lose revenue.
+The failure by Congress to approve budgets on a timely basis for the federal agencies we support could delay or reduce spending and cause us to lose revenue.
+<p><a href="http://www.sec.gov/Archives/edgar/data/930420/0001193125-10-048938.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/709878--3-16-2007--UNIVERSAL_AMERICAN_FINANCIAL_CORP.html'">709878--3/16/2007--UNIVERSAL_AMERICAN_FINANCIAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1104349--3-5-2007--CAPELLA_EDUCATION_CO.html'">1104349--3/5/2007--CAPELLA_EDUCATION_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1261654--12-1-2009--UNIVERSAL_TECHNICAL_INSTITUTE_INC.html'">1261654--12/1/2009--UNIVERSAL_TECHNICAL_INSTITUTE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/929887--10-21-2010--APOLLO_GROUP_INC.html'">929887--10/21/2010--APOLLO_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1201792--3-10-2009--AMERICAN_PUBLIC_EDUCATION_INC.html'">1201792--3/10/2009--AMERICAN_PUBLIC_EDUCATION_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/929887--10-28-2008--APOLLO_GROUP_INC.html'">929887--10/28/2008--APOLLO_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/709878--3-16-2006--UNIVERSAL_AMERICAN_FINANCIAL_CORP.html'">709878--3/16/2006--UNIVERSAL_AMERICAN_FINANCIAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1261654--12-1-2010--UNIVERSAL_TECHNICAL_INSTITUTE_INC.html'">1261654--12/1/2010--UNIVERSAL_TECHNICAL_INSTITUTE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1066134--8-26-2009--CORINTHIAN_COLLEGES_INC.html'">1066134--8/26/2009--CORINTHIAN_COLLEGES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1201792--3-28-2008--AMERICAN_PUBLIC_EDUCATION_INC.html'">1201792--3/28/2008--AMERICAN_PUBLIC_EDUCATION_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1063561--12-20-2010--PROSPECT_MEDICAL_HOLDINGS_INC.html'">1063561--12/20/2010--PROSPECT_MEDICAL_HOLDINGS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1261654--12-13-2006--UNIVERSAL_TECHNICAL_INSTITUTE_INC.html'">1261654--12/13/2006--UNIVERSAL_TECHNICAL_INSTITUTE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1375891--9-19-2008--Education_Management_LLC.html'">1375891--9/19/2008--Education_Management_LLC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1261654--11-26-2008--UNIVERSAL_TECHNICAL_INSTITUTE_INC.html'">1261654--11/26/2008--UNIVERSAL_TECHNICAL_INSTITUTE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/929887--10-27-2009--APOLLO_GROUP_INC.html'">929887--10/27/2009--APOLLO_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1063561--12-21-2009--PROSPECT_MEDICAL_HOLDINGS_INC.html'">1063561--12/21/2009--PROSPECT_MEDICAL_HOLDINGS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/880059--9-1-2010--EDUCATION_MANAGEMENT_CORPORATION.html'">880059--9/1/2010--EDUCATION_MANAGEMENT_CORPORATION</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1009379--3-6-2008--METROPOLITAN_HEALTH_NETWORKS_INC.html'">1009379--3/6/2008--METROPOLITAN_HEALTH_NETWORKS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/906337--3-15-2007--PROXYMED_INC_-FT_LAUDERDALE-.html'">906337--3/15/2007--PROXYMED_INC_/FT_LAUDERDALE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1064863--2-24-2009--AMERIGROUP_CORP.html'">1064863--2/24/2009--AMERIGROUP_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1334544--2-19-2010--Emergency_Medical_Services_L.P..html'">1334544--2/19/2010--Emergency_Medical_Services_L.P.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1066134--8-23-2010--CORINTHIAN_COLLEGES_INC.html'">1066134--8/23/2010--CORINTHIAN_COLLEGES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1066134--8-29-2007--CORINTHIAN_COLLEGES_INC.html'">1066134--8/29/2007--CORINTHIAN_COLLEGES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1261654--11-29-2007--UNIVERSAL_TECHNICAL_INSTITUTE_INC.html'">1261654--11/29/2007--UNIVERSAL_TECHNICAL_INSTITUTE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1375891--8-27-2009--Education_Management_LLC.html'">1375891--8/27/2009--Education_Management_LLC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1064863--2-22-2010--AMERIGROUP_CORP.html'">1064863--2/22/2010--AMERIGROUP_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/892537--2-26-2010--MANTECH_INTERNATIONAL_CORP.html'">892537--2/26/2010--MANTECH_INTERNATIONAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/922475--2-21-2008--ITT_EDUCATIONAL_SERVICES_INC.html'">922475--2/21/2008--ITT_EDUCATIONAL_SERVICES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1325460--3-17-2008--ATS_CORP.html'">1325460--3/17/2008--ATS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1388195--2-5-2009--PharMerica_CORP.html'">1388195--2/5/2009--PharMerica_CORP</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

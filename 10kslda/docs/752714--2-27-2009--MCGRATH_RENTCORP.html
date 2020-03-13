@@ -1,0 +1,218 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[7.6173041082, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [6.484469302, "../topics/{cost,_regulation,_environmental}.html", "{cost,_regulation,_environmental}"], [6.4242630498, "../topics/{condition,_economic,_financial}.html", "{condition,_economic,_financial}"], [5.3205818409, "../topics/{gas,_price,_oil}.html", "{gas,_price,_oil}"], [4.5901697488, "../topics/{competitive,_industry,_competition}.html", "{competitive,_industry,_competition}"], [4.4274293681, "../topics/{system,_service,_information}.html", "{system,_service,_information}"], [3.6897981452, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"], [3.6225811629, "../topics/{regulation,_government,_change}.html", "{regulation,_government,_change}"], [2.682415065, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [1.8132397127, "../topics/{regulation,_change,_law}.html", "{regulation,_change,_law}"], [1.7630320828, "../topics/{cost,_operation,_labor}.html", "{cost,_operation,_labor}"], [1.7569799646, "../topics/{debt,_indebtedness,_cash}.html", "{debt,_indebtedness,_cash}"], [1.7200792723, "../topics/{operation,_natural,_condition}.html", "{operation,_natural,_condition}"], [1.6990930182, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"], [1.6963137101, "../topics/{control,_financial,_internal}.html", "{control,_financial,_internal}"], [1.6962642845, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [1.674215365, "../topics/{loss,_insurance,_financial}.html", "{loss,_insurance,_financial}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>752714--2/27/2009--MCGRATH_RENTCORP</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">752714--2/27/2009--MCGRATH_RENTCORP</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{cost,_regulation,_environmental}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_regulation,_environmental}.html'">{cost, regulation, environmental}</td></tr>
+<tr class="list"><td id="{condition,_economic,_financial}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{condition,_economic,_financial}.html'">{condition, economic, financial}</td></tr>
+<tr class="list"><td id="{gas,_price,_oil}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{gas,_price,_oil}.html'">{gas, price, oil}</td></tr>
+<tr class="list"><td id="{competitive,_industry,_competition}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{competitive,_industry,_competition}.html'">{competitive, industry, competition}</td></tr>
+<tr class="list"><td id="{system,_service,_information}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{system,_service,_information}.html'">{system, service, information}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+<tr class="list"><td id="{regulation,_government,_change}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_government,_change}.html'">{regulation, government, change}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{regulation,_change,_law}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_change,_law}.html'">{regulation, change, law}</td></tr>
+<tr class="list"><td id="{cost,_operation,_labor}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_operation,_labor}.html'">{cost, operation, labor}</td></tr>
+<tr class="list"><td id="{debt,_indebtedness,_cash}" onmouseover="highlight(11)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{debt,_indebtedness,_cash}.html'">{debt, indebtedness, cash}</td></tr>
+<tr class="list"><td id="{operation,_natural,_condition}" onmouseover="highlight(12)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_natural,_condition}.html'">{operation, natural, condition}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(13)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+<tr class="list"><td id="{control,_financial,_internal}" onmouseover="highlight(14)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{control,_financial,_internal}.html'">{control, financial, internal}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(15)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{loss,_insurance,_financial}" onmouseover="highlight(16)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{loss,_insurance,_financial}.html'">{loss, insurance, financial}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    The effects of a recession in the United States and other countries and the continuing financial and credit crisis may adversely impact our business and financial condition and may negatively impact our ability to access financing.
+Our stock price is subject to fluctuations and the value of your investment may decline.
+Our future operating results may fluctuate, fail to match past performance or fail to meet expectations.
+Our ability to retain our executive management and to recruit, retain and motivate key employees is critical to the success of our business.
+Failure by third parties to manufacture and deliver our products to our specifications or on a timely basis may harm our reputation and financial condition.
+Disruptions in our information technology systems could limit our ability to effectively monitor and control our operations and adversely affect our operations.
+We have engaged in acquisitions and may engage in future acquisitions that could negatively impact our results of operations, financial condition and business.
+We could have difficulty integrating the operations of Adler Tank Rentals and other businesses that we may acquire, which could adversely affect our results of operations.
+If we do not effectively manage our credit risk, collect on our accounts receivable, or recover our rental equipment from our customers sites, it could have a material adverse effect on our operating results.
+Effective management of our rental assets is vital to our business.
+The nature of our businesses, including the ownership of industrial property, exposes us to the risk of litigation and liability under environmental, health and safety and products liability laws.
+Conducting our routine businesses exposes us to risk of litigation from employees, vendors and other third parties.
+Our debt instruments contain covenants that restrict or prohibit our ability to enter into a variety of transactions and may limit our ability to finance future operations or capital needs.
+The majority of our indebtedness is subject to variable interest rates, which makes us vulnerable to increases in interest rates.
+Our effective tax rate may change and become less predictable as our business expands.
+Changes in financial accounting standards may cause lower than expected operating results and affect our reported results of operations.
+Failure to comply with internal control attestation requirements could lead to loss of public confidence in our financial statements and negatively impact our stock price.
+If we suffer loss to our facilities, equipment or distribution system due to catastrophe, our operations could be seriously harmed.
+SPECIFIC RISKS RELATED TO OUR RELOCATABLE MODULAR BUILDINGS BUSINESS SEGMENT:
+A significant reduction of, or delay in, funding to public schools could cause the demand for our modular classroom units to decline, which could result in a reduction in our revenues and profitability.
+Public policies that create demand for our products and services may change.
+Failure to comply with applicable regulations could harm our business and financial condition, resulting in lower operating results and cash flows.
+Our planned expansions of our modular operations into new markets will affect our operating results.
+We are subject to laws and regulations governing government contracts. These laws and regulations make these government contracts more favorable to government entities than other third parties and any changes in these laws and regulations, or the failure to comply with these laws and regulations could harm our business.
+Seasonality of our educational business may have adverse consequences for our business.
+We face strong competition in our modular building markets.
+We may not be able to quickly redeploy modular buildings returning from leases.
+Significant increases in raw material and labor costs could increase our acquisition cost of new modular rental units and repair and maintenance costs of our fleet, which would increase our operating costs and harm our profitability.
+Failure by third parties to manufacture our products timely or properly may harm our reputation and financial condition.
+Failure to properly design, manufacture, repair and maintain the modular product may result in impairment charges, potential litigation and reduction of our operating results and cash flows.
+Our warranty costs may increase.
+SPECIFIC RISKS RELATED TO OUR ELECTRONIC TEST EQUIPMENT BUSINESS SEGMENT:
+Market risk and cyclical downturns in the industries using test equipment may result in periods of low demand for our product resulting in excess inventory, impairment charges and reduction of our operating results and cash flows.
+Seasonality of our electronic test equipment business may impact quarterly results.
+Our rental test equipment may become obsolete, which could result in an impairment charge or may no longer be supported by a manufacturer.
+If we do not effectively compete in the rental equipment market, our operating results will be materially and adversely affected.
+If we are not able to obtain equipment at favorable rates, there could be a material adverse effect on our operating results.
+If we are not able to anticipate and mitigate the risks associated with operating internationally, there could be a material adverse effect on our operating results.
+Unfavorable currency exchange rates may negatively impact our financial results in U.S. dollar terms.
+SPECIFIC RISKS RELATED TO OUR LIQUID AND SOLID CONTAINMENT TANKS AND BOXES BUSINESS SEGMENT:
+We may be brought into tort or environmental litigation or held responsible for cleanup of spills if an accident occurs in the use of our rental products or the customer fails to perform, which could materially adversely affect our business, future operating results or financial position.
+The liquid and solid storage and containment rental industry is highly competitive, and competitive pressures could lead to a decrease in our market share or in rental rates and our ability to sell equipment at favorable prices.
+Market risk and cyclical downturns in the industries using tanks and boxes may result in periods of low demand for our product resulting in excess inventory, impairment charges and reduction of our operating results and cash flows.
+Significant increases in raw material, the price of fuel, and labor costs could increase our acquisition and operating costs of rental equipment, which would increase operating costs and decrease profitability.
+Failure by third parties to manufacture our products timely or properly may harm our ability to meet customer demand and harm our financial condition
+We derive a significant amount of our revenue in our liquid and solid containment tank and boxes business from a limited number of customers, the loss of one or more of which could have an adverse effect on our business.
+We may not be able to quickly redeploy equipment returning from leases at equivalent prices.
+<p><a href="http://www.sec.gov/Archives/edgar/data/752714/0001193125-09-040552.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/752714--2-26-2010--MCGRATH_RENTCORP.html'">752714--2/26/2010--MCGRATH_RENTCORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/752714--2-27-2008--MCGRATH_RENTCORP.html'">752714--2/27/2008--MCGRATH_RENTCORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/108516--7-30-2010--WORTHINGTON_INDUSTRIES_INC.html'">108516--7/30/2010--WORTHINGTON_INDUSTRIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/789933--3-2-2010--NACCO_INDUSTRIES_INC.html'">789933--3/2/2010--NACCO_INDUSTRIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/789933--3-13-2009--NACCO_INDUSTRIES_INC.html'">789933--3/13/2009--NACCO_INDUSTRIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/927003--2-26-2010--ADVANCED_ENERGY_INDUSTRIES_INC.html'">927003--2/26/2010--ADVANCED_ENERGY_INDUSTRIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/821002--4-16-2009--G_III_APPAREL_GROUP_LTD_-DE-.html'">821002--4/16/2009--G_III_APPAREL_GROUP_LTD_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1361709--3-19-2010--Susser_Holdings_CORP.html'">1361709--3/19/2010--Susser_Holdings_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1156295--11-19-2009--SERACARE_LIFE_SCIENCES_INC.html'">1156295--11/19/2009--SERACARE_LIFE_SCIENCES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1022671--2-22-2010--STEEL_DYNAMICS_INC.html'">1022671--2/22/2010--STEEL_DYNAMICS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/743988--6-1-2010--XILINX_INC.html'">743988--6/1/2010--XILINX_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/886128--1-14-2010--FUELCELL_ENERGY_INC.html'">886128--1/14/2010--FUELCELL_ENERGY_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/872448--3-1-2010--ATMEL_CORP.html'">872448--3/1/2010--ATMEL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/821002--4-15-2010--G_III_APPAREL_GROUP_LTD_-DE-.html'">821002--4/15/2010--G_III_APPAREL_GROUP_LTD_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/814361--3-2-2009--TIMBERLAND_CO.html'">814361--3/2/2009--TIMBERLAND_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/851310--3-1-2010--HARMONIC_INC.html'">851310--3/1/2010--HARMONIC_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1385544--3-16-2010--Horsehead_Holding_Corp.html'">1385544--3/16/2010--Horsehead_Holding_Corp</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/70530--7-29-2009--NATIONAL_SEMICONDUCTOR_CORP.html'">70530--7/29/2009--NATIONAL_SEMICONDUCTOR_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1003607--12-28-2009--ALTIGEN_COMMUNICATIONS_INC.html'">1003607--12/28/2009--ALTIGEN_COMMUNICATIONS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/926282--2-26-2010--ADTRAN_INC.html'">926282--2/26/2010--ADTRAN_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1022225--9-11-2009--OPLINK_COMMUNICATIONS_INC.html'">1022225--9/11/2009--OPLINK_COMMUNICATIONS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1452217--9-17-2010--TPC_Group_Inc..html'">1452217--9/17/2010--TPC_Group_Inc.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1022705--2-27-2009--TESCO_CORP.html'">1022705--2/27/2009--TESCO_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/21510--12-15-2009--COHERENT_INC.html'">21510--12/15/2009--COHERENT_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/927355--5-27-2010--TESSCO_TECHNOLOGIES_INC.html'">927355--5/27/2010--TESSCO_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/743988--6-1-2009--XILINX_INC.html'">743988--6/1/2009--XILINX_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/4127--11-30-2009--SKYWORKS_SOLUTIONS_INC.html'">4127--11/30/2009--SKYWORKS_SOLUTIONS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/800459--8-6-2010--HARMAN_INTERNATIONAL_INDUSTRIES_INC_-DE-.html'">800459--8/6/2010--HARMAN_INTERNATIONAL_INDUSTRIES_INC_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/919443--3-5-2010--LACROSSE_FOOTWEAR_INC.html'">919443--3/5/2010--LACROSSE_FOOTWEAR_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/92679--9-15-2009--SPARTON_CORP.html'">92679--9/15/2009--SPARTON_CORP</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

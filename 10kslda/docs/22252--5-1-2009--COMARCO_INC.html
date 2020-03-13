@@ -1,0 +1,180 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[3.7191389767, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [3.7114844193, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [2.6962616699, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [2.6512801884, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [1.6962616586, "../topics/{product,_liability,_claim}.html", "{product,_liability,_claim}"], [1.6962616405, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [1.6962198005, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"], [1.696068491, "../topics/{condition,_economic,_financial}.html", "{condition,_economic,_financial}"], [1.6903489685, "../topics/{operation,_natural,_condition}.html", "{operation,_natural,_condition}"], [1.6626021909, "../topics/{competitive,_industry,_competition}.html", "{competitive,_industry,_competition}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>22252--5/1/2009--COMARCO_INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">22252--5/1/2009--COMARCO_INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{product,_liability,_claim}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_liability,_claim}.html'">{product, liability, claim}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+<tr class="list"><td id="{condition,_economic,_financial}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{condition,_economic,_financial}.html'">{condition, economic, financial}</td></tr>
+<tr class="list"><td id="{operation,_natural,_condition}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_natural,_condition}.html'">{operation, natural, condition}</td></tr>
+<tr class="list"><td id="{competitive,_industry,_competition}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{competitive,_industry,_competition}.html'">{competitive, industry, competition}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    Our business and operational results are subject to the seasonal demand fluctuations of the consumer product and retail industries, as well as general economic and retail uncertainty.
+Our customers may cancel their orders, change production quantities or delay production, any of which would reduce our sales and adversely affect our operating results.
+Failure to adjust our operations in response to changing market conditions or failure to accurately estimate demand for our products could adversely affect our operating results.
+The products we make are complex and have short life cycles. If we are unable to rapidly and successfully develop and introduce new products, some of our products may become obsolete and our operating results could suffer.
+The consumer electronics industry is highly competitive, and our profitability will be adversely affected if we are not able to compete effectively.
+The average selling prices of our products will likely decrease over their sales cycles, especially upon the introduction of new products, which may negatively affect our revenue and operating results.
+A significant portion of our revenue is derived from a limited number of customers and is dependent upon our relationships with them and upon their performance. Any loss of, reduction, cancellation, or delay in purchases by these customers would negatively impact our revenue, business, prospects, and operating results.
+We may experience quality or safety defects in our products that could cause us to institute product recalls, require us to provide replacement products and harm our reputation.
+Economic, political, and other risks associated with our international sales and operations could adversely affect our results of operations.
+Disruptions in our relationships with our suppliers or in our suppliers operations could result in shortages of necessary components and adversely affect our operations.
+Third parties may claim that we are infringing their intellectual property, and we could suffer significant litigation, settlement or licensing costs and expenses or be prevented from selling certain products.
+Third parties may infringe our intellectual property rights, and we may be required to spend significant resources enforcing these rights or otherwise suffer competitive injury.
+If we suffer the loss of our corporate offices or the loss of one of our contract manufacturer s facilities due to catastrophe, our operations would be adversely affected.
+We depend upon the services of key personnel, and may not be able to attract and retain additional key personnel.
+Our quarterly operating results are subject to significant fluctuations and, if our operating results decline or are worse than expected, our stock price could fall.
+Our stock price has been and will likely remain highly volatile.
+<p><a href="http://www.sec.gov/Archives/edgar/data/22252/0000950134-09-009069.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/1048695--11-19-2007--F5_NETWORKS_INC.html'">1048695--11/19/2007--F5_NETWORKS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1048695--12-14-2006--F5_NETWORKS_INC.html'">1048695--12/14/2006--F5_NETWORKS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/859014--5-30-2007--COMPUWARE_CORP.html'">859014--5/30/2007--COMPUWARE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/225263--3-14-2007--NEWPORT_CORP.html'">225263--3/14/2007--NEWPORT_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1048695--11-21-2008--F5_NETWORKS_INC.html'">1048695--11/21/2008--F5_NETWORKS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/225263--3-16-2006--NEWPORT_CORP.html'">225263--3/16/2006--NEWPORT_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1032975--6-1-2009--LOGITECH_INTERNATIONAL_SA.html'">1032975--6/1/2009--LOGITECH_INTERNATIONAL_SA</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/103379--3-10-2006--V_F_CORP.html'">103379--3/10/2006--V_F_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/931784--3-9-2006--CAPTARIS_INC.html'">931784--3/9/2006--CAPTARIS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1048695--11-20-2009--F5_NETWORKS_INC.html'">1048695--11/20/2009--F5_NETWORKS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/873044--3-3-2006--RADISYS_CORP.html'">873044--3/3/2006--RADISYS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1084752--10-29-2009--EON_COMMUNICATIONS_CORP.html'">1084752--10/29/2009--EON_COMMUNICATIONS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/909791--2-27-2009--ULTRATECH_INC.html'">909791--2/27/2009--ULTRATECH_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/22252--5-3-2010--COMARCO_INC.html'">22252--5/3/2010--COMARCO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/917491--6-29-2006--FARO_TECHNOLOGIES_INC.html'">917491--6/29/2006--FARO_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/851205--2-14-2008--COGNEX_CORP.html'">851205--2/14/2008--COGNEX_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1202273--3-30-2007--GOLFSMITH_INTERNATIONAL_HOLDINGS_INC.html'">1202273--3/30/2007--GOLFSMITH_INTERNATIONAL_HOLDINGS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/855109--3-15-2006--EXABYTE_CORP_-DE-.html'">855109--3/15/2006--EXABYTE_CORP_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1021770--6-28-2006--FIREARMS_TRAINING_SYSTEMS_INC.html'">1021770--6/28/2006--FIREARMS_TRAINING_SYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/909791--3-7-2007--ULTRATECH_INC.html'">909791--3/7/2007--ULTRATECH_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1160858--5-1-2008--TRUE_RELIGION_APPAREL_INC.html'">1160858--5/1/2008--TRUE_RELIGION_APPAREL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/851205--3-1-2006--COGNEX_CORP.html'">851205--3/1/2006--COGNEX_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1003950--3-11-2010--PERFORMANCE_TECHNOLOGIES_INC_\DE\.html'">1003950--3/11/2010--PERFORMANCE_TECHNOLOGIES_INC_\DE\</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/845072--3-31-2009--PECO_II_INC.html'">845072--3/31/2009--PECO_II_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1057083--3-16-2010--PC_TEL_INC.html'">1057083--3/16/2010--PC_TEL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1014111--2-26-2010--IMATION_CORP.html'">1014111--2/26/2010--IMATION_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/317093--12-13-2006--ANDREW_CORP.html'">317093--12/13/2006--ANDREW_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/931059--6-29-2007--TEGAL_CORP_-DE-.html'">931059--6/29/2007--TEGAL_CORP_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/892482--3-14-2008--RIMAGE_CORP.html'">892482--3/14/2008--RIMAGE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/892482--3-16-2007--RIMAGE_CORP.html'">892482--3/16/2007--RIMAGE_CORP</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

@@ -1,0 +1,221 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[9.4911202905, "../topics/{system,_service,_information}.html", "{system,_service,_information}"], [6.8124852695, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [6.0802486295, "../topics/{product,_liability,_claim}.html", "{product,_liability,_claim}"], [5.5066717758, "../topics/{regulation,_government,_change}.html", "{regulation,_government,_change}"], [5.4658186965, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [3.7068374651, "../topics/{capital,_credit,_financial}.html", "{capital,_credit,_financial}"], [3.7017176624, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"], [3.5051963768, "../topics/{cost,_regulation,_environmental}.html", "{cost,_regulation,_environmental}"], [2.8662137661, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"], [2.5500696185, "../topics/{stock,_price,_share}.html", "{stock,_price,_share}"], [1.7329381724, "../topics/{loan,_real,_estate}.html", "{loan,_real,_estate}"], [1.7328813463, "../topics/{cost,_contract,_operation}.html", "{cost,_contract,_operation}"], [1.7200784818, "../topics/{tax,_income,_asset}.html", "{tax,_income,_asset}"], [1.7185732687, "../topics/{financial,_litigation,_operation}.html", "{financial,_litigation,_operation}"], [1.6997952839, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [1.6997943763, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [1.6640895456, "../topics/{control,_financial,_internal}.html", "{control,_financial,_internal}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>1009575--3/2/2009--HLTH_CORP</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">1009575--3/2/2009--HLTH_CORP</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{system,_service,_information}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{system,_service,_information}.html'">{system, service, information}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{product,_liability,_claim}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_liability,_claim}.html'">{product, liability, claim}</td></tr>
+<tr class="list"><td id="{regulation,_government,_change}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_government,_change}.html'">{regulation, government, change}</td></tr>
+<tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{capital,_credit,_financial}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{capital,_credit,_financial}.html'">{capital, credit, financial}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+<tr class="list"><td id="{cost,_regulation,_environmental}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_regulation,_environmental}.html'">{cost, regulation, environmental}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+<tr class="list"><td id="{stock,_price,_share}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_share}.html'">{stock, price, share}</td></tr>
+<tr class="list"><td id="{loan,_real,_estate}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{loan,_real,_estate}.html'">{loan, real, estate}</td></tr>
+<tr class="list"><td id="{cost,_contract,_operation}" onmouseover="highlight(11)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_contract,_operation}.html'">{cost, contract, operation}</td></tr>
+<tr class="list"><td id="{tax,_income,_asset}" onmouseover="highlight(12)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{tax,_income,_asset}.html'">{tax, income, asset}</td></tr>
+<tr class="list"><td id="{financial,_litigation,_operation}" onmouseover="highlight(13)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{financial,_litigation,_operation}.html'">{financial, litigation, operation}</td></tr>
+<tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(14)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(15)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{control,_financial,_internal}" onmouseover="highlight(16)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{control,_financial,_internal}.html'">{control, financial, internal}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    We face significant competition for our healthcare information products and services
+Failure to maintain and enhance the WebMD brand could have a material adverse effect on our business
+Our online businesses have a limited operating history
+Our failure to attract and retain qualified executives and employees may have a material adverse effect on our business
+If we are unable to provide healthcare content for our offline publications that attracts and retains users, our revenue will be reduced
+The timing of our advertising and sponsorship revenue may vary significantly from quarter to quarter and is subject to factors beyond our control, including regulatory changes affecting advertising and promotion of drugs and medical devices and general economic conditions
+We may be unsuccessful in our efforts to increase advertising and sponsorship revenue from consumer products companies
+Lengthy sales and implementation cycles for our private online portals make it difficult to forecast our revenues from these applications and may have an adverse impact on our business
+Our ability to provide comparative information on hospital cost and quality depends on our ability to obtain the required data on a timely basis and, if we are unable to do so, our private portal services would be less attractive to clients
+Our ability to renew existing licenses with employers and health plans will depend, in part, on our ability to continue to increase usage of our private portal services by their employees and plan members
+We may be subject to claims brought against us as a result of content we provide
+Expansion to markets outside the United States will subject us to additional risks
+Risks Related to the Internet and Our Technological Infrastructure
+Any service interruption or failure in the systems that we use to provide online services could harm our business
+Implementation of additions to or changes in hardware and software platforms used to deliver our online services may result in performance problems and may not provide the additional functionality that was expected
+If the systems we use to provide online portals experience security breaches or are otherwise perceived to be insecure, our business could suffer
+Our online services are dependent on the development and maintenance of the Internet infrastructure
+Third parties may challenge the enforceability of our online agreements
+We could be subject to breach of warranty or other claims by clients of our online portals if the software and systems we use to provide them contain errors or experience failures
+We may not be successful in protecting our intellectual property and proprietary rights
+Third parties may claim that we are infringing their intellectual property, and we could suffer significant litigation or licensing expenses or be prevented from providing certain services, which may harm our business
+Risks Related to the Healthcare Industry, Healthcare Regulation and Internet Regulation
+Developments in the healthcare industry could adversely affect our business
+Government regulation of healthcare creates risks and challenges with respect to our compliance efforts and our business strategies
+Government regulation of the Internet could adversely affect our business
+We face potential liability related to the privacy and security of personal health information we collect from or on behalf of users of our services
+Failure to maintain CME accreditation could adversely affect Medscape, LLC s ability to provide online CME offerings
+Government regulation and industry initiatives could adversely affect the volume of sponsored online CME programs implemented through our Web sites or require changes to how Medscape, LLC offers CME
+Porex s success depends upon demand for its products, which in some cases ultimately depends upon end-user demand for the products of Porex s customers
+Porex faces significant competition for its products
+Porex s product offerings must meet changing customer requirements
+Potential new or enhanced Porex products may not achieve sufficient sales to be profitable or justify the cost of their development
+Porex may not be able to source the raw materials it needs or may have to pay more for those raw materials
+Disruptions in Porex s manufacturing operations could have a material adverse effect on its business and financial results
+Porex may not be able to keep third parties from using technology it has developed
+The nature of Porex s products exposes it to product liability claims that may not be adequately covered by indemnity agreements or insurance
+Porex s manufacturing and marketing of medical devices is subject to extensive regulation by the FDA and its failure to meet regulatory requirements could require it to pay fines, incur other costs or close facilities
+Some of the companies to which Porex supplies its products are subject to extensive regulation by the FDA and their failure to meet regulatory requirements could adversely affect Porex s business
+Economic, political and other risks associated with Porex s international sales and geographically diverse operations could adversely affect Porex s operations and financial results
+Environmental regulation could adversely affect Porex s business
+Risks Applicable to Our Entire Company and to Ownership of Our Securities
+Negative conditions in the market for certain auction rate securities may result in us incurring a loss on such investments
+The ongoing investigations by the United States Attorney for the District of South Carolina and the SEC could negatively impact our company and divert management attention from our business operations
+If certain transactions occur with respect to our capital stock, limitations may be imposed on our ability to utilize our net operating loss carryforwards and tax credits to reduce our income taxes
+We may not be successful in protecting our intellectual property and proprietary rights
+Third parties may claim that we are infringing their intellectual property, and we could suffer significant litigation or licensing expenses or be prevented from selling products or services
+Acquisitions, business combinations and other transactions may be difficult to complete and, if completed, may have negative consequences for our business and our securityholders
+Our business will suffer if we fail to successfully integrate acquired businesses and technologies or to assess the risks in particular transactions
+We will incur significant additional non-cash interest expense upon the adoption of FASB Staff Position No. APB 14-1, Accounting for Convertible Debt Instruments that May be Settled in Cash upon Conversion (Including Partial Cash Settlement)
+We may not be able to raise additional funds when needed for our business or to exploit opportunities
+<p><a href="http://www.sec.gov/Archives/edgar/data/1009575/0000950144-09-001728.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/1326583--3-2-2010--WebMD_Health_Corp..html'">1326583--3/2/2010--WebMD_Health_Corp.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/896878--9-15-2009--INTUIT_INC.html'">896878--9/15/2009--INTUIT_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/896878--9-12-2008--INTUIT_INC.html'">896878--9/12/2008--INTUIT_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1142512--3-16-2007--ZIPREALTY_INC.html'">1142512--3/16/2007--ZIPREALTY_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1082324--3-31-2009--VirnetX_Holding_Corp.html'">1082324--3/31/2009--VirnetX_Holding_Corp</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1254419--3-24-2008--MEDASSETS_INC.html'">1254419--3/24/2008--MEDASSETS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1326583--2-27-2009--WebMD_Health_Corp..html'">1326583--2/27/2009--WebMD_Health_Corp.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1254419--3-1-2010--MEDASSETS_INC.html'">1254419--3/1/2010--MEDASSETS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1157377--6-14-2010--ADVISORY_BOARD_CO.html'">1157377--6/14/2010--ADVISORY_BOARD_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/832767--11-19-2009--PHOENIX_TECHNOLOGIES_LTD.html'">832767--11/19/2009--PHOENIX_TECHNOLOGIES_LTD</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1091756--3-17-2008--IBASIS_INC.html'">1091756--3/17/2008--IBASIS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1396838--3-12-2009--Dolan_Media_CO.html'">1396838--3/12/2009--Dolan_Media_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/909494--3-17-2006--TUCOWS_INC_-PA-.html'">909494--3/17/2006--TUCOWS_INC_/PA/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1091756--3-13-2009--IBASIS_INC.html'">1091756--3/13/2009--IBASIS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/855612--3-15-2010--ZIX_CORP.html'">855612--3/15/2010--ZIX_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1008586--4-16-2010--STREAMLINE_HEALTH_SOLUTIONS_INC..html'">1008586--4/16/2010--STREAMLINE_HEALTH_SOLUTIONS_INC.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1157377--6-15-2009--ADVISORY_BOARD_CO.html'">1157377--6/15/2009--ADVISORY_BOARD_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1326583--3-2-2007--WebMD_Health_Corp..html'">1326583--3/2/2007--WebMD_Health_Corp.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1017655--3-16-2009--PAID_INC.html'">1017655--3/16/2009--PAID_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/896878--9-15-2006--INTUIT_INC.html'">896878--9/15/2006--INTUIT_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1158324--3-1-2010--COGENT_COMMUNICATIONS_GROUP_INC.html'">1158324--3/1/2010--COGENT_COMMUNICATIONS_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/936395--12-22-2010--CIENA_CORP.html'">936395--12/22/2010--CIENA_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1259550--3-30-2009--LOCAL.COM.html'">1259550--3/30/2009--LOCAL.COM</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1008586--4-17-2009--STREAMLINE_HEALTH_SOLUTIONS_INC..html'">1008586--4/17/2009--STREAMLINE_HEALTH_SOLUTIONS_INC.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1396838--3-28-2008--Dolan_Media_CO.html'">1396838--3/28/2008--Dolan_Media_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1368582--7-9-2010--ArcSight_Inc.html'">1368582--7/9/2010--ArcSight_Inc</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1254419--3-12-2009--MEDASSETS_INC.html'">1254419--3/12/2009--MEDASSETS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/936395--12-22-2009--CIENA_CORP.html'">936395--12/22/2009--CIENA_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1292653--2-19-2010--Neutral_Tandem_Inc.html'">1292653--2/19/2010--Neutral_Tandem_Inc</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1235468--12-10-2010--LIQUIDITY_SERVICES_INC.html'">1235468--12/10/2010--LIQUIDITY_SERVICES_INC</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

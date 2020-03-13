@@ -1,0 +1,209 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[9.6082951339, "../topics/{gas,_price,_oil}.html", "{gas,_price,_oil}"], [6.7960693132, "../topics/{operation,_natural,_condition}.html", "{operation,_natural,_condition}"], [3.7084233279, "../topics/{regulation,_change,_law}.html", "{regulation,_change,_law}"], [2.9117635623, "../topics/{capital,_credit,_financial}.html", "{capital,_credit,_financial}"], [2.6968918267, "../topics/{tax,_income,_asset}.html", "{tax,_income,_asset}"], [2.550267309, "../topics/{debt,_indebtedness,_cash}.html", "{debt,_indebtedness,_cash}"], [2.5434420706, "../topics/{system,_service,_information}.html", "{system,_service,_information}"], [2.5242450548, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"], [2.2177574834, "../topics/{regulation,_government,_change}.html", "{regulation,_government,_change}"], [1.956614269, "../topics/{cost,_regulation,_environmental}.html", "{cost,_regulation,_environmental}"], [1.841656968, "../topics/{cost,_operation,_labor}.html", "{cost,_operation,_labor}"], [1.7215142966, "../topics/{financial,_litigation,_operation}.html", "{financial,_litigation,_operation}"], [1.7078848588, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [1.7067355463, "../topics/{loss,_insurance,_financial}.html", "{loss,_insurance,_financial}"], [1.6998974539, "../topics/{product,_liability,_claim}.html", "{product,_liability,_claim}"], [1.6389860366, "../topics/{cost,_contract,_operation}.html", "{cost,_contract,_operation}"], [1.592431123, "../topics/{condition,_economic,_financial}.html", "{condition,_economic,_financial}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>110019--2/23/2010--NORTHWEST_PIPELINE_GP</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">110019--2/23/2010--NORTHWEST_PIPELINE_GP</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{gas,_price,_oil}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{gas,_price,_oil}.html'">{gas, price, oil}</td></tr>
+<tr class="list"><td id="{operation,_natural,_condition}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_natural,_condition}.html'">{operation, natural, condition}</td></tr>
+<tr class="list"><td id="{regulation,_change,_law}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_change,_law}.html'">{regulation, change, law}</td></tr>
+<tr class="list"><td id="{capital,_credit,_financial}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{capital,_credit,_financial}.html'">{capital, credit, financial}</td></tr>
+<tr class="list"><td id="{tax,_income,_asset}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{tax,_income,_asset}.html'">{tax, income, asset}</td></tr>
+<tr class="list"><td id="{debt,_indebtedness,_cash}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{debt,_indebtedness,_cash}.html'">{debt, indebtedness, cash}</td></tr>
+<tr class="list"><td id="{system,_service,_information}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{system,_service,_information}.html'">{system, service, information}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+<tr class="list"><td id="{regulation,_government,_change}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_government,_change}.html'">{regulation, government, change}</td></tr>
+<tr class="list"><td id="{cost,_regulation,_environmental}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_regulation,_environmental}.html'">{cost, regulation, environmental}</td></tr>
+<tr class="list"><td id="{cost,_operation,_labor}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_operation,_labor}.html'">{cost, operation, labor}</td></tr>
+<tr class="list"><td id="{financial,_litigation,_operation}" onmouseover="highlight(11)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{financial,_litigation,_operation}.html'">{financial, litigation, operation}</td></tr>
+<tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(12)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{loss,_insurance,_financial}" onmouseover="highlight(13)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{loss,_insurance,_financial}.html'">{loss, insurance, financial}</td></tr>
+<tr class="list"><td id="{product,_liability,_claim}" onmouseover="highlight(14)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_liability,_claim}.html'">{product, liability, claim}</td></tr>
+<tr class="list"><td id="{cost,_contract,_operation}" onmouseover="highlight(15)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_contract,_operation}.html'">{cost, contract, operation}</td></tr>
+<tr class="list"><td id="{condition,_economic,_financial}" onmouseover="highlight(16)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{condition,_economic,_financial}.html'">{condition, economic, financial}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    Risks Inherent to our Industry and Business
+Our natural gas transportation and storage activities involve numerous risks that might result in accidents and other operating risks and hazards
+Increased competition from alternative natural gas transportation and storage options and alternative fuel sources could have a significant financial impact on us.
+We may not be able to maintain or replace expiring natural gas transportation and storage contracts at favorable rates or on a long-term basis.
+Competitive pressures could lead to decreases in the volume of natural gas contracted or transported through our pipeline system.
+Any significant decrease in supplies of natural gas in our areas of operation could adversely affect our business and operating results.
+Decreases in demand for natural gas could adversely affect our business.
+Significant prolonged changes in natural gas prices could affect supply and demand and cause a termination of our transportation and storage contracts or a reduction in throughput on our system.
+Some portions of our current pipeline infrastructure and other assets have been in use for many decades, which may adversely affect our business.
+We are subject to risks associated with climate change.
+Our operations are subject to governmental laws and regulations relating to the protection of the environment, including those relating to climate change, which may expose us to significant costs and liabilities and could exceed our current expectations.
+We may be subject to legislative and regulatory responses to climate change with which compliance may be costly.
+The failure of new sources of natural gas production or LNG import terminals to be successfully developed in North America could increase natural gas prices and reduce the demand for our services.
+We depend on certain key customers for a significant portion of our revenues. The loss of any of these key customers or the loss of any contracted volumes could result in a decline in our business.
+We are exposed to the credit risk of our customers, and our credit risk management may not be adequate to protect against such risk.
+If third-party pipelines and other facilities interconnected to our pipeline and facilities become unavailable to transport natural gas, our revenues could be adversely affected.
+We do not own all of the land on which our pipeline and facilities are located, which could disrupt our operations.
+We do not insure against all potential losses and could be seriously harmed by unexpected liabilities or by the inability of the insurers we do use to satisfy our claims.
+Execution of our capital projects subjects us to construction risks, increases in labor costs and materials, and other risks that may adversely affect financial results.
+Potential changes in accounting standards might cause us to revise our financial results and disclosures in the future, which might change the way analysts measure our business or financial performance.
+Risks Related to Strategy and Financing
+Our debt agreements and Williams and WPZ s public indentures contain financial and operating restrictions that may limit our access to credit and affect our ability to operate our business. In addition, our ability to obtain credit in the future will be affected by Williams and WPZ s credit ratings.
+Future disruptions in the global credit markets may make debt markets less accessible, create a shortage in the availability of credit and lead to credit market volatility.
+Adverse economic conditions could negatively affect our results of operations.
+A downgrade of our credit ratings could impact our liquidity, access to capital and our costs of doing business, and maintaining our credit ratings is under the control of independent third parties.
+Williams can exercise substantial control over our distribution policy and our business and operations and may do so in a manner that is adverse to our interests.
+Risks Related to Regulations that Affect our Industry
+Our natural gas transportation and storage operations are subject to regulation by FERC, which could have an adverse impact on our ability to establish transportation and storage rates that would allow us to recover the full cost of operating our pipeline, including a reasonable rate of return.
+We could be subject to penalties and fines if we fail to comply with FERC regulations.
+The outcome of future rate cases to set the rates we can charge customers on our pipeline might result in rates that lower our return on the capital that we have invested in our pipeline.
+The outcome of future rate cases will determine the amount of income taxes that we will be allowed to recover.
+Legal and regulatory proceedings and investigations relating to the energy industry and capital markets have adversely affected our business and may continue to do so.
+Risks Related to Employees, Outsourcing of Non-Core Support Activities, and Technology.
+Institutional knowledge residing with current employees nearing retirement eligibility might not be adequately preserved.
+Failure of or disruptions to our outsourcing relationships might negatively impact our ability to conduct our business.
+Our allocation from Williams for costs for its defined benefit pension plans and other postretirement benefit plans are affected by factors beyond our and Williams control.
+Risks Related to Weather, Other Natural Phenomena and Business Disruption
+Our assets and operations can be affected by weather and other natural phenomena.
+<p><a href="http://www.sec.gov/Archives/edgar/data/110019/0000950123-10-015826.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/107263--2-26-2010--WILLIAMS_COMPANIES_INC.html'">107263--2/26/2010--WILLIAMS_COMPANIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/751652--2-27-2009--QUESTAR_CORP.html'">751652--2/27/2009--QUESTAR_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1092914--3-10-2006--ATLAS_PIPELINE_PARTNERS_LP.html'">1092914--3/10/2006--ATLAS_PIPELINE_PARTNERS_LP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/821483--3-10-2006--DELTA_PETROLEUM_CORP-CO.html'">821483--3/10/2006--DELTA_PETROLEUM_CORP/CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1209821--3-1-2010--CROSSTEX_ENERGY_INC.html'">1209821--3/1/2010--CROSSTEX_ENERGY_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1405073--3-28-2008--Approach_Resources_Inc.html'">1405073--3/28/2008--Approach_Resources_Inc</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1022646--2-26-2010--ULTRA_PETROLEUM_CORP.html'">1022646--2/26/2010--ULTRA_PETROLEUM_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/904080--2-25-2010--STONE_ENERGY_CORP.html'">904080--2/25/2010--STONE_ENERGY_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1022646--2-23-2009--ULTRA_PETROLEUM_CORP.html'">1022646--2/23/2009--ULTRA_PETROLEUM_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/893813--4-14-2009--PENN_OCTANE_CORP.html'">893813--4/14/2009--PENN_OCTANE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/110019--2-27-2009--NORTHWEST_PIPELINE_GP.html'">110019--2/27/2009--NORTHWEST_PIPELINE_GP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1022646--2-26-2008--ULTRA_PETROLEUM_CORP.html'">1022646--2/26/2008--ULTRA_PETROLEUM_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1022646--2-28-2007--ULTRA_PETROLEUM_CORP.html'">1022646--2/28/2007--ULTRA_PETROLEUM_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1038357--2-26-2010--PIONEER_NATURAL_RESOURCES_CO.html'">1038357--2/26/2010--PIONEER_NATURAL_RESOURCES_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1116927--3-24-2009--GEOPETRO_RESOURCES_CO.html'">1116927--3/24/2009--GEOPETRO_RESOURCES_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1103601--11-25-2009--WASHINGTON_GAS_LIGHT_CO.html'">1103601--11/25/2009--WASHINGTON_GAS_LIGHT_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1125057--2-28-2008--ENCORE_ACQUISITION_CO.html'">1125057--2/28/2008--ENCORE_ACQUISITION_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1405073--3-12-2010--Approach_Resources_Inc.html'">1405073--3/12/2010--Approach_Resources_Inc</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/317187--3-3-2006--PPL_CORP.html'">317187--3/3/2006--PPL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/922224--3-3-2006--PPL_CORP.html'">922224--3/3/2006--PPL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1161976--3-3-2006--PPL_CORP.html'">1161976--3/3/2006--PPL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1125057--2-24-2009--ENCORE_ACQUISITION_CO.html'">1125057--2/24/2009--ENCORE_ACQUISITION_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1021010--3-13-2008--EDGE_PETROLEUM_CORP.html'">1021010--3/13/2008--EDGE_PETROLEUM_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1096339--4-15-2009--SARATOGA_RESOURCES_INC_-TX.html'">1096339--4/15/2009--SARATOGA_RESOURCES_INC_/TX</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1255474--2-28-2007--WHITING_PETROLEUM_CORP.html'">1255474--2/28/2007--WHITING_PETROLEUM_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1066107--2-28-2008--EL_PASO_CORP-DE.html'">1066107--2/28/2008--EL_PASO_CORP/DE</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/23194--2-29-2008--COMSTOCK_RESOURCES_INC.html'">23194--2/29/2008--COMSTOCK_RESOURCES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/38079--3-1-2010--FOREST_OIL_CORP.html'">38079--3/1/2010--FOREST_OIL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1086319--3-4-2009--GASCO_ENERGY_INC.html'">1086319--3/4/2009--GASCO_ENERGY_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/23194--2-26-2010--COMSTOCK_RESOURCES_INC.html'">23194--2/26/2010--COMSTOCK_RESOURCES_INC</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

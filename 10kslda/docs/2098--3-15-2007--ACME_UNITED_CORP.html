@@ -1,0 +1,175 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[2.6945719762, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [2.5077282137, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [1.7037535452, "../topics/{cost,_regulation,_environmental}.html", "{cost,_regulation,_environmental}"], [1.6986632471, "../topics/{cost,_contract,_operation}.html", "{cost,_contract,_operation}"], [1.6974067622, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [1.6960567009, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [1.6683594749, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"], [1.5541089716, "../topics/{condition,_economic,_financial}.html", "{condition,_economic,_financial}"], [1.3849470688, "../topics/{product,_liability,_claim}.html", "{product,_liability,_claim}"], [1.0109906124, "../topics/{financial,_litigation,_operation}.html", "{financial,_litigation,_operation}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>2098--3/15/2007--ACME_UNITED_CORP</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">2098--3/15/2007--ACME_UNITED_CORP</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{cost,_regulation,_environmental}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_regulation,_environmental}.html'">{cost, regulation, environmental}</td></tr>
+<tr class="list"><td id="{cost,_contract,_operation}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_contract,_operation}.html'">{cost, contract, operation}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+<tr class="list"><td id="{condition,_economic,_financial}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{condition,_economic,_financial}.html'">{condition, economic, financial}</td></tr>
+<tr class="list"><td id="{product,_liability,_claim}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_liability,_claim}.html'">{product, liability, claim}</td></tr>
+<tr class="list"><td id="{financial,_litigation,_operation}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{financial,_litigation,_operation}.html'">{financial, litigation, operation}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    LOSS OF A MAJOR CUSTOMER COULD RESULT IN A DECREASE IN THE COMPANY'S FUTURE SALES AND EARNINGS.
+RELIANCE ON FOREIGN SUPPLIERS COULD NEGATIVELY IMPACT OUR BUSINESS.
+THE LOSS OF KEY MANAGEMENT COULD AFFECT THE COMPANY'S ABILITY TO RUN ITS BUSINESS.
+FAILURE TO PROTECT THE COMPANY'S PROPRIETARY RIGHTS OR THE COSTS OF PROTECTING THESE RIGHTS COULD NEGATIVELY IMPACT ITS BUSINESS.
+THE COMPANY MAY NEED TO RAISE ADDITIONAL CAPITAL TO FUND ITS OPERATIONS.
+WE MAY NOT BE ABLE TO MAINTAIN OR TO RAISE PRICES IN RESPONSE TO INFLATION AND INCREASING COSTS.
+THE COMPANY IS SUBJECT TO INTENSE COMPETITION IN THE OFFICE PRODUCTS MARKETPLACE.
+PRODUCT LIABILITY CLAIMS OR REGULATORY ACTIONS COULD ADVERSELY IMPACT THE COMPANY'S FINANCIAL RESULTS AND REPUTATION.
+THE COMPANY'S BUSINESS IS SUBJECT TO RISKS ASSOCIATED WITH SEASONALITY WHICH COULD ADVERSELY IMPACT ITS CASH FLOW, FINANCIAL CONDITION, OR RESULTS OF OPERATIONS.
+TO COMPETE SUCCESSFULLY, THE COMPANY MUST DEVELOP AND COMMERCIALIZE A CONTINUING STREAM OF INNOVATIVE NEW PRODUCTS THAT CREATE CONSUMER DEMAND.
+THE COMPANY IS SUBJECT TO ENVIRONMENTAL REGULATION AND ENVIRONMENTAL RISKS.
+<p><a href="http://www.sec.gov/Archives/edgar/data/2098/0001026608-07-000040.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/2098--3-12-2008--ACME_UNITED_CORP.html'">2098--3/12/2008--ACME_UNITED_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/48039--2-29-2008--HOLLY_CORP.html'">48039--2/29/2008--HOLLY_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/48039--3-1-2007--HOLLY_CORP.html'">48039--3/1/2007--HOLLY_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/352789--3-16-2007--IOMEGA_CORP.html'">352789--3/16/2007--IOMEGA_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/350199--3-21-2006--CACHE_INC.html'">350199--3/21/2006--CACHE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/720896--9-21-2007--MEMRY_CORP.html'">720896--9/21/2007--MEMRY_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/65759--2-17-2010--MICROPAC_INDUSTRIES_INC.html'">65759--2/17/2010--MICROPAC_INDUSTRIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1011657--2-28-2007--TITANIUM_METALS_CORP.html'">1011657--2/28/2007--TITANIUM_METALS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1001288--2-27-2009--LEXMARK_INTERNATIONAL_INC_-KY-.html'">1001288--2/27/2009--LEXMARK_INTERNATIONAL_INC_/KY/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/311505--6-6-2007--PRINTRONIX_INC.html'">311505--6/6/2007--PRINTRONIX_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1087216--12-29-2008--ALLIANCE_HEALTHCARD_INC.html'">1087216--12/29/2008--ALLIANCE_HEALTHCARD_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/884269--3-10-2010--ALPHA_PRO_TECH_LTD.html'">884269--3/10/2010--ALPHA_PRO_TECH_LTD</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/20740--1-28-2008--CLARCOR_INC.html'">20740--1/28/2008--CLARCOR_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/764244--4-24-2008--INTERVOICE_INC.html'">764244--4/24/2008--INTERVOICE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/832101--3-1-2010--IDEX_CORP_-DE-.html'">832101--3/1/2010--IDEX_CORP_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/351231--12-7-2007--DAWSON_GEOPHYSICAL_CO.html'">351231--12/7/2007--DAWSON_GEOPHYSICAL_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/805305--12-31-2007--QUIKSILVER_INC.html'">805305--12/31/2007--QUIKSILVER_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/935703--4-4-2007--DOLLAR_TREE_STORES_INC.html'">935703--4/4/2007--DOLLAR_TREE_STORES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/6951--12-14-2007--APPLIED_MATERIALS_INC_-DE.html'">6951--12/14/2007--APPLIED_MATERIALS_INC_/DE</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/708821--3-17-2008--PAR_TECHNOLOGY_CORP.html'">708821--3/17/2008--PAR_TECHNOLOGY_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/708821--3-16-2006--PAR_TECHNOLOGY_CORP.html'">708821--3/16/2006--PAR_TECHNOLOGY_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/833140--3-20-2006--ENPATH_MEDICAL_INC.html'">833140--3/20/2006--ENPATH_MEDICAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1037417--12-27-2007--INFOTECH_USA_INC.html'">1037417--12/27/2007--INFOTECH_USA_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/85961--2-17-2006--RYDER_SYSTEM_INC.html'">85961--2/17/2006--RYDER_SYSTEM_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/55529--7-18-2007--KEWAUNEE_SCIENTIFIC_CORP_-DE-.html'">55529--7/18/2007--KEWAUNEE_SCIENTIFIC_CORP_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/783412--12-28-2006--DAILY_JOURNAL_CORP.html'">783412--12/28/2006--DAILY_JOURNAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/55529--7-16-2010--KEWAUNEE_SCIENTIFIC_CORP_-DE-.html'">55529--7/16/2010--KEWAUNEE_SCIENTIFIC_CORP_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/55529--7-13-2006--KEWAUNEE_SCIENTIFIC_CORP_-DE-.html'">55529--7/13/2006--KEWAUNEE_SCIENTIFIC_CORP_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/732712--3-1-2007--VERIZON_COMMUNICATIONS_INC.html'">732712--3/1/2007--VERIZON_COMMUNICATIONS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1263074--3-14-2008--PORTEC_RAIL_PRODUCTS_INC.html'">1263074--3/14/2008--PORTEC_RAIL_PRODUCTS_INC</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

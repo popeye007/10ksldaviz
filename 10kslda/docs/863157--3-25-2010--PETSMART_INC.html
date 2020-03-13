@@ -1,0 +1,192 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[5.0178002445, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"], [3.783255444, "../topics/{cost,_operation,_labor}.html", "{cost,_operation,_labor}"], [3.7096048977, "../topics/{regulation,_change,_law}.html", "{regulation,_change,_law}"], [3.3106618106, "../topics/{system,_service,_information}.html", "{system,_service,_information}"], [2.8325026369, "../topics/{product,_liability,_claim}.html", "{product,_liability,_claim}"], [2.7009657388, "../topics/{operation,_natural,_condition}.html", "{operation,_natural,_condition}"], [2.0609403277, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"], [2.0494928324, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [1.805808581, "../topics/{condition,_economic,_financial}.html", "{condition,_economic,_financial}"], [1.7383543391, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [1.696969066, "../topics/{control,_financial,_internal}.html", "{control,_financial,_internal}"], [1.6967188662, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [1.5461894408, "../topics/{cost,_regulation,_environmental}.html", "{cost,_regulation,_environmental}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>863157--3/25/2010--PETSMART_INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">863157--3/25/2010--PETSMART_INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+<tr class="list"><td id="{cost,_operation,_labor}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_operation,_labor}.html'">{cost, operation, labor}</td></tr>
+<tr class="list"><td id="{regulation,_change,_law}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_change,_law}.html'">{regulation, change, law}</td></tr>
+<tr class="list"><td id="{system,_service,_information}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{system,_service,_information}.html'">{system, service, information}</td></tr>
+<tr class="list"><td id="{product,_liability,_claim}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_liability,_claim}.html'">{product, liability, claim}</td></tr>
+<tr class="list"><td id="{operation,_natural,_condition}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_natural,_condition}.html'">{operation, natural, condition}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+<tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{condition,_economic,_financial}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{condition,_economic,_financial}.html'">{condition, economic, financial}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{control,_financial,_internal}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{control,_financial,_internal}.html'">{control, financial, internal}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(11)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{cost,_regulation,_environmental}" onmouseover="highlight(12)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_regulation,_environmental}.html'">{cost, regulation, environmental}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    Comparable store sales growth may decrease as stores grow older. If we are unable to increase sales at our existing stores, our results of operations could be harmed.
+We may be unable to continue to open new stores and enter new markets successfully. If we are unable to successfully reformat existing stores and open new stores, our results of operations could be harmed. Also, store development may place increasing demands on management and operating systems and may erode sales at existing stores.
+Our quarterly operating results may fluctuate due to seasonal changes associated with the pet products and services retail industry and the timing of expenses, new store openings and store closures.
+Failure to successfully manage and execute our marketing initiatives could have a negative impact on our business.
+A disruption, malfunction or increased costs in the operation, expansion or replenishment of our distribution centers or our supply chain would impact our ability to deliver to our stores or increase our expenses, which could harm our sales and results of operations.
+Failure to successfully manage our inventory could harm our business.
+If our information systems fail to perform as designed or are interrupted for a significant period of time, our business could be harmed.
+If we fail to protect the integrity and security of customer and associate information, we could be exposed to litigation and our business could be adversely impacted.
+The disruption of the relationship with or the loss of any of our key vendors, a decision by our vendors to make their products available in supermarkets or through warehouse clubs and other mass and retail merchandisers, the inability of our vendors to provide quality products in a timely or cost-effective manner, or risks associated with the suppliers from whom products are sourced, could harm our business.
+Our expanded offering of proprietary branded products may not improve our financial performance and may expose us to product liability claims.
+Food safety, quality and health concerns could affect our business.
+We depend on key executives, store managers and other personnel and may not be able to retain or replace these employees or recruit additional qualified personnel, which could harm our business.
+Our international operations may result in additional market risks, which may harm our business.
+Our business may be harmed if the operation of veterinary hospitals at our stores is limited or fails to continue.
+We face various risks as an e-commerce retailer.
+Our business could be harmed if we were unable to effectively manage our cash flow and raise any needed additional capital on acceptable terms.
+Failure to successfully integrate any business we acquire could have an adverse impact on our financial results.
+Failure to protect our intellectual property could have a negative impact on our operating results.
+A determination that we are in violation of any contractual obligations or government regulations could result in a disruption to our operations and could impact our financial results.
+Failure of our internal controls over financial reporting could harm our business and financial results.
+Changes in laws, accounting standards and subjective assumptions, estimates, and judgments by management related to complex accounting matters could significantly affect our financial results.
+An unfavorable determination by tax regulators may cause our provision for income and other taxes to be inadequate and may result in a material impact to our financial results.
+Failure to obtain commercial insurance at acceptable prices or failure to adequately reserve for self-insured exposures might have a negative impact on our business.
+Pending legislation, weather, catastrophic events, disease, or other factors, could disrupt our operations, supply chain and the supply of small pets and products we sell, which could harm our reputation and decrease sales.
+Fluctuations in the stock market, as well as general economic and market conditions, may impact our operations, sales, financial results and market price of our common stock.
+<p><a href="http://www.sec.gov/Archives/edgar/data/863157/0000950123-10-028205.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/863157--3-31-2008--PETSMART_INC.html'">863157--3/31/2008--PETSMART_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/863157--3-28-2007--PETSMART_INC.html'">863157--3/28/2007--PETSMART_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/863157--3-26-2009--PETSMART_INC.html'">863157--3/26/2009--PETSMART_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/724606--3-1-2010--PANERA_BREAD_CO.html'">724606--3/1/2010--PANERA_BREAD_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1041859--3-26-2010--CHILDRENS_PLACE_RETAIL_STORES_INC.html'">1041859--3/26/2010--CHILDRENS_PLACE_RETAIL_STORES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/106640--3-1-2006--WHIRLPOOL_CORP_-DE-.html'">106640--3/1/2006--WHIRLPOOL_CORP_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1020859--9-27-2010--UNITED_NATURAL_FOODS_INC.html'">1020859--9/27/2010--UNITED_NATURAL_FOODS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1123494--3-15-2007--HARVARD_BIOSCIENCE_INC.html'">1123494--3/15/2007--HARVARD_BIOSCIENCE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1057758--3-1-2007--TIME_WARNER_TELECOM_INC.html'">1057758--3/1/2007--TIME_WARNER_TELECOM_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1071625--3-31-2010--DOVER_SADDLERY_INC.html'">1071625--3/31/2010--DOVER_SADDLERY_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1071625--3-31-2009--DOVER_SADDLERY_INC.html'">1071625--3/31/2009--DOVER_SADDLERY_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1144215--10-30-2009--ACUITY_BRANDS_INC.html'">1144215--10/30/2009--ACUITY_BRANDS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/88205--2-26-2010--SPX_CORP.html'">88205--2/26/2010--SPX_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1103017--4-15-2009--DENTAL_PATIENT_CARE_AMERICA_INC.html'">1103017--4/15/2009--DENTAL_PATIENT_CARE_AMERICA_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1060391--2-21-2008--REPUBLIC_SERVICES_INC.html'">1060391--2/21/2008--REPUBLIC_SERVICES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1144215--10-29-2010--ACUITY_BRANDS_INC.html'">1144215--10/29/2010--ACUITY_BRANDS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/854399--3-16-2007--PREMIER_COMMUNITY_BANKSHARES_INC.html'">854399--3/16/2007--PREMIER_COMMUNITY_BANKSHARES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1071625--3-31-2008--DOVER_SADDLERY_INC.html'">1071625--3/31/2008--DOVER_SADDLERY_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/93556--2-22-2010--STANLEY_WORKS.html'">93556--2/22/2010--STANLEY_WORKS</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/351903--9-9-2010--EPOCH_HOLDING_CORP.html'">351903--9/9/2010--EPOCH_HOLDING_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/902274--3-15-2010--LIBBEY_INC.html'">902274--3/15/2010--LIBBEY_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/911109--2-29-2008--MOBILE_MINI_INC.html'">911109--2/29/2008--MOBILE_MINI_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1057060--12-14-2009--MARINEMAX_INC.html'">1057060--12/14/2009--MARINEMAX_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/949427--9-15-2006--HARTCOURT_COMPANIES_INC.html'">949427--9/15/2006--HARTCOURT_COMPANIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/724606--2-27-2009--PANERA_BREAD_CO.html'">724606--2/27/2009--PANERA_BREAD_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1271625--8-31-2010--DOLLAR_FINANCIAL_CORP.html'">1271625--8/31/2010--DOLLAR_FINANCIAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1017907--8-31-2010--FIRST_ACCEPTANCE_CORP_-DE-.html'">1017907--8/31/2010--FIRST_ACCEPTANCE_CORP_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1082484--3-26-2008--TEAM_FINANCIAL_INC_-KS.html'">1082484--3/26/2008--TEAM_FINANCIAL_INC_/KS</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1368457--11-23-2010--Alberto-Culver_CO.html'">1368457--11/23/2010--Alberto-Culver_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1065860--3-11-2009--LIME_ENERGY_CO..html'">1065860--3/11/2009--LIME_ENERGY_CO.</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

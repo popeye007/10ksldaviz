@@ -1,0 +1,200 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[5.1456685322, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [4.340507617, "../topics/{debt,_indebtedness,_cash}.html", "{debt,_indebtedness,_cash}"], [4.1374930938, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [4.1358372609, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"], [3.7040877975, "../topics/{financial,_litigation,_operation}.html", "{financial,_litigation,_operation}"], [3.4094530435, "../topics/{stock,_price,_share}.html", "{stock,_price,_share}"], [3.3851136038, "../topics/{cost,_contract,_operation}.html", "{cost,_contract,_operation}"], [2.7463054866, "../topics/{tax,_income,_asset}.html", "{tax,_income,_asset}"], [2.7062721691, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [2.6985791314, "../topics/{control,_financial,_internal}.html", "{control,_financial,_internal}"], [1.84168265, "../topics/{cost,_operation,_labor}.html", "{cost,_operation,_labor}"], [1.7645191191, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [1.7056713001, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>881468--3/16/2007--SPATIALIGHT_INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">881468--3/16/2007--SPATIALIGHT_INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{debt,_indebtedness,_cash}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{debt,_indebtedness,_cash}.html'">{debt, indebtedness, cash}</td></tr>
+<tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+<tr class="list"><td id="{financial,_litigation,_operation}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{financial,_litigation,_operation}.html'">{financial, litigation, operation}</td></tr>
+<tr class="list"><td id="{stock,_price,_share}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_share}.html'">{stock, price, share}</td></tr>
+<tr class="list"><td id="{cost,_contract,_operation}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_contract,_operation}.html'">{cost, contract, operation}</td></tr>
+<tr class="list"><td id="{tax,_income,_asset}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{tax,_income,_asset}.html'">{tax, income, asset}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{control,_financial,_internal}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{control,_financial,_internal}.html'">{control, financial, internal}</td></tr>
+<tr class="list"><td id="{cost,_operation,_labor}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_operation,_labor}.html'">{cost, operation, labor}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(11)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(12)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    We are confronted by serious liquidity concerns.
+Certain of the holders of the Senior Secured Convertible Notes issued by us in November 2004 have made claims of default.
+We have experienced significant manufacturing difficulties during the past year that have resulted in our manufacturing and shipping LCoS Sets in only limited commercial quantities. If we encounter further difficulties in manufacturing our products in larger quantities we may have difficulty meeting customer demands and our operating results could be significantly harmed by such difficulties.
+Although we have commenced producing LCoS Sets in our manufacturing facility in South Korea, which serves as our principal facility for manufacturing our LCoS imagers, we may encounter difficulties in conducting our manufacturing operations and difficulties in maintaining our quality controls over the manufacturing and production processes in a foreign country, any of which would be likely to cause significant harm to our business.
+We have been largely dependent on one customer, LG Electronics Inc., for our future revenues, and failure to expand our customer base or receive additional orders from our existing customer base will make us vulnerable to substantial loss of potential revenues.
+We are the subject of an investigation by the staff of the SEC regarding the circumstances surrounding our filing of certain consents of BDO Seidman, LLP without requisite authorization and transactions in our securities by our former Chief Executive Officer.
+We may be subject to lawsuits relating to our use of a registration statement that did not contain an authorized consent of BDO Seidman LLP.
+We may be subject to lawsuits relating to certain sales of our securities by our former Chief Executive Officer.
+The obligations arising from our Senior Secured Convertible Notes restrict our future financing alternatives and may result in financial difficulties for us in the future.
+We have a history of losses and expect to incur losses in the future and therefore cannot assure you that we will achieve profitability.
+We may be subject to liability if we default on our obligations to raise additional capital as required in the purchase documents related to our private placement of common shares in August 2006.
+We are subject to lengthy development periods and product acceptance cycles, which may significantly harm our business.
+We incur substantial operational and research and development costs in connection with products and technologies that may not be successful.
+Geopolitical conditions or potential military conflicts between the United States or South Korea and North Korea may negatively impact our business.
+If the high definition projection television market does not continue to develop and if other potential markets for our products do not materialize, then our business will likely be significantly harmed.
+If our products do not become widely accepted by our customers or the end-users, our business could be significantly harmed.
+We cannot assure you that we will obtain additional purchase orders from our current or prospective customers, or, if we do, that such orders will generate significant revenues.
+If our customers products are not successful, our business would be materially harmed.
+The high definition television industry is highly competitive, which may result in lost sales or lower gross margins.
+Fluctuations in the exchange rate of the United States dollar and foreign currencies could have a material adverse effect on our financial performance and profitability.
+Our operating results are subject to significant fluctuations.
+The market price of our common stock is highly volatile.
+Future offerings of our common stock, or securities convertible into or exercisable for our common stock, could cause the market price of our common stock to decrease significantly, even if our business operations are performing well.
+Our common stock may not be liquid.
+If we lose our key personnel or are unable to attract and retain additional personnel, our ability to compete could be harmed.
+Our future success depends on our ability to protect our proprietary technology and our registered intellectual property.
+The material weaknesses identified by our management and our independent registered public accounting firm with respect to our internal controls over financial reporting may have a materially negative impact on our business.
+Political, economic and regulatory risks associated with international operations may limit our ability to do business abroad.
+Although we have a 50 year 100% land lease payment exemption from the South Korean government for our South Korean facility, we could lose this land lease payment exemption in the event we lose our high technology certification.
+Although we have a 50 year 100% land lease payment exemption from the South Korean government for our South Korean facility, we could lose this land lease payment exemption in the event we lose our high technology certification.
+We have federal net operating losses which may expire before we can utilize them.
+We have federal net operating losses which may expire before we can utilize them.
+We do not pay cash dividends.
+<p><a href="http://www.sec.gov/Archives/edgar/data/881468/0001144204-07-012995.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/881468--3-16-2006--SPATIALIGHT_INC.html'">881468--3/16/2006--SPATIALIGHT_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1069353--11-26-2008--CONEXANT_SYSTEMS_INC.html'">1069353--11/26/2008--CONEXANT_SYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1042825--3-14-2008--POWER_ONE_INC.html'">1042825--3/14/2008--POWER_ONE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1041380--3-28-2008--VIASYSTEMS_INC.html'">1041380--3/28/2008--VIASYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1274032--3-31-2008--INFOSONICS_CORP.html'">1274032--3/31/2008--INFOSONICS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/910638--3-4-2009--3D_SYSTEMS_CORP.html'">910638--3/4/2009--3D_SYSTEMS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/879585--3-16-2010--ATLANTIC_TELE_NETWORK_INC_-DE.html'">879585--3/16/2010--ATLANTIC_TELE_NETWORK_INC_/DE</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/32621--7-14-2009--EMERSON_RADIO_CORP.html'">32621--7/14/2009--EMERSON_RADIO_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1047127--2-25-2008--AMKOR_TECHNOLOGY_INC.html'">1047127--2/25/2008--AMKOR_TECHNOLOGY_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/910638--3-17-2008--3D_SYSTEMS_CORP.html'">910638--3/17/2008--3D_SYSTEMS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/896985--12-14-2007--MOTHERS_WORK_INC.html'">896985--12/14/2007--MOTHERS_WORK_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1042825--3-13-2009--POWER_ONE_INC.html'">1042825--3/13/2009--POWER_ONE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/879585--3-17-2008--ATLANTIC_TELE_NETWORK_INC_-DE.html'">879585--3/17/2008--ATLANTIC_TELE_NETWORK_INC_/DE</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/879585--3-16-2009--ATLANTIC_TELE_NETWORK_INC_-DE.html'">879585--3/16/2009--ATLANTIC_TELE_NETWORK_INC_/DE</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1319161--11-29-2007--Warner_Music_Group_Corp..html'">1319161--11/29/2007--Warner_Music_Group_Corp.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1036960--2-28-2008--FAIRCHILD_SEMICONDUCTOR_INTERNATIONAL_INC.html'">1036960--2/28/2008--FAIRCHILD_SEMICONDUCTOR_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1036960--2-26-2009--FAIRCHILD_SEMICONDUCTOR_INTERNATIONAL_INC.html'">1036960--2/26/2009--FAIRCHILD_SEMICONDUCTOR_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/896985--12-15-2008--Destination_Maternity_Corp.html'">896985--12/15/2008--Destination_Maternity_Corp</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1052054--3-13-2008--EVOLVING_SYSTEMS_INC.html'">1052054--3/13/2008--EVOLVING_SYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1036960--2-25-2010--FAIRCHILD_SEMICONDUCTOR_INTERNATIONAL_INC.html'">1036960--2/25/2010--FAIRCHILD_SEMICONDUCTOR_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1274032--3-31-2010--INFOSONICS_CORP.html'">1274032--3/31/2010--INFOSONICS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1069353--11-9-2010--CONEXANT_SYSTEMS_INC.html'">1069353--11/9/2010--CONEXANT_SYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/896985--12-14-2009--Destination_Maternity_Corp.html'">896985--12/14/2009--Destination_Maternity_Corp</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/94845--2-12-2008--LEVI_STRAUSS_&_CO.html'">94845--2/12/2008--LEVI_STRAUSS_&_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/26058--5-15-2007--CTS_CORP.html'">26058--5/15/2007--CTS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/943034--3-26-2009--IMAGE_SENSING_SYSTEMS_INC.html'">943034--3/26/2009--IMAGE_SENSING_SYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1389050--2-26-2009--EXTERRAN_HOLDINGS_INC..html'">1389050--2/26/2009--EXTERRAN_HOLDINGS_INC.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/32621--7-11-2008--EMERSON_RADIO_CORP.html'">32621--7/11/2008--EMERSON_RADIO_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/927417--3-12-2008--POLYMER_GROUP_INC.html'">927417--3/12/2008--POLYMER_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/927417--3-23-2010--POLYMER_GROUP_INC.html'">927417--3/23/2010--POLYMER_GROUP_INC</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

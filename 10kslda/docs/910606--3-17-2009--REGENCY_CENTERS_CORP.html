@@ -1,0 +1,190 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[6.792206594, "../topics/{investment,_property,_distribution}.html", "{investment,_property,_distribution}"], [4.6507523235, "../topics/{provision,_law,_control}.html", "{provision,_law,_control}"], [4.5614407487, "../topics/{tax,_income,_asset}.html", "{tax,_income,_asset}"], [4.1045057828, "../topics/{condition,_economic,_financial}.html", "{condition,_economic,_financial}"], [3.8207506934, "../topics/{loan,_real,_estate}.html", "{loan,_real,_estate}"], [1.9307455788, "../topics/{debt,_indebtedness,_cash}.html", "{debt,_indebtedness,_cash}"], [1.7508686529, "../topics/{cost,_contract,_operation}.html", "{cost,_contract,_operation}"], [1.6608123165, "../topics/{cost,_regulation,_environmental}.html", "{cost,_regulation,_environmental}"], [1.5993992495, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"], [1.5004972337, "../topics/{competitive,_industry,_competition}.html", "{competitive,_industry,_competition}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>910606--3/17/2009--REGENCY_CENTERS_CORP</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">910606--3/17/2009--REGENCY_CENTERS_CORP</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{investment,_property,_distribution}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{investment,_property,_distribution}.html'">{investment, property, distribution}</td></tr>
+<tr class="list"><td id="{provision,_law,_control}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{provision,_law,_control}.html'">{provision, law, control}</td></tr>
+<tr class="list"><td id="{tax,_income,_asset}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{tax,_income,_asset}.html'">{tax, income, asset}</td></tr>
+<tr class="list"><td id="{condition,_economic,_financial}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{condition,_economic,_financial}.html'">{condition, economic, financial}</td></tr>
+<tr class="list"><td id="{loan,_real,_estate}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{loan,_real,_estate}.html'">{loan, real, estate}</td></tr>
+<tr class="list"><td id="{debt,_indebtedness,_cash}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{debt,_indebtedness,_cash}.html'">{debt, indebtedness, cash}</td></tr>
+<tr class="list"><td id="{cost,_contract,_operation}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_contract,_operation}.html'">{cost, contract, operation}</td></tr>
+<tr class="list"><td id="{cost,_regulation,_environmental}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_regulation,_environmental}.html'">{cost, regulation, environmental}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+<tr class="list"><td id="{competitive,_industry,_competition}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{competitive,_industry,_competition}.html'">{competitive, industry, competition}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    Risk Factors Related to Our Industry and Real Estate Investments
+Our revenues and cash flow could be adversely affected by poor market conditions where properties are geographically concentrated.
+Loss of revenues from major tenants could reduce distributions to stockholders.
+Downturns in the retailing industry likely will have a direct adverse impact on our revenues and cash flow.
+Unsuccessful development activities or a slowdown in development activities could reduce distributions to stockholders.
+Uninsured loss may adversely affect distributions to stockholders.
+We face competition from numerous sources.
+Costs of environmental remediation could reduce our cash flow available for distribution to stockholders.
+Risk Factors Related to Our Co-investment Partnerships and Acquisition Structure
+We do not have voting control over our joint venture investments, so we are unable to ensure that our objectives will be pursued.
+Our co-investment partnerships account for a significant portion of our revenues and net income in the form of management fees and are an important part of our growth strategy. The termination of our co-investment partnerships could adversely affect distributions to stockholders.
+Our partnership structure may limit our flexibility to manage our assets.
+Risk Factors Related to Our Capital Recycling and Capital Structure
+Lack of available credit could reduce capital available for new developments and other investments and could increase refinancing risks.
+A reduction in the availability of capital, an increase in the cost of capital, and higher market capitalization rates could adversely impact Regency s ability to recycle capital and fund developments and acquisitions, and could dilute earnings.
+Our debt financing may reduce distributions to stockholders.
+Covenants in our debt agreements may restrict our operating activities and adversely affect our financial condition.
+We depend on external sources of capital, which may not be available in the future.
+Risk Factors Related to Interest Rates and the Market for Our Stock
+Increased interest rates may reduce distributions to stockholders.
+Increased market interest rates could reduce our stock prices.
+Risk Factors Related to Federal Income Tax Laws
+If we fail to qualify as a REIT for federal income tax purposes, we would be subject to federal income tax at regular corporate rates.
+Risk Factors Related to Our Ownership Limitations, the Florida Business Corporation Act and Certain Other Matters
+Restrictions on the ownership of our capital stock to preserve our REIT status could delay or prevent a change in control.
+The issuance of our capital stock could delay or prevent a change in control.
+<p><a href="http://www.sec.gov/Archives/edgar/data/910606/0001193125-09-056701.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/1066247--3-1-2007--REGENCY_CENTERS_LP.html'">1066247--3/1/2007--REGENCY_CENTERS_LP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/910606--2-27-2007--REGENCY_CENTERS_CORP.html'">910606--2/27/2007--REGENCY_CENTERS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1066247--2-29-2008--REGENCY_CENTERS_LP.html'">1066247--2/29/2008--REGENCY_CENTERS_LP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1066247--3-17-2009--REGENCY_CENTERS_LP.html'">1066247--3/17/2009--REGENCY_CENTERS_LP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/910606--3-10-2006--REGENCY_CENTERS_CORP.html'">910606--3/10/2006--REGENCY_CENTERS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1066247--3-10-2006--REGENCY_CENTERS_LP.html'">1066247--3/10/2006--REGENCY_CENTERS_LP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/860546--3-16-2006--CORPORATE_OFFICE_PROPERTIES_TRUST.html'">860546--3/16/2006--CORPORATE_OFFICE_PROPERTIES_TRUST</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1040719--3-16-2007--HANOVER_CAPITAL_MORTGAGE_HOLDINGS_INC.html'">1040719--3/16/2007--HANOVER_CAPITAL_MORTGAGE_HOLDINGS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/915912--3-1-2010--AVALONBAY_COMMUNITIES_INC.html'">915912--3/1/2010--AVALONBAY_COMMUNITIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/915912--3-2-2009--AVALONBAY_COMMUNITIES_INC.html'">915912--3/2/2009--AVALONBAY_COMMUNITIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1040719--4-2-2008--HANOVER_CAPITAL_MORTGAGE_HOLDINGS_INC.html'">1040719--4/2/2008--HANOVER_CAPITAL_MORTGAGE_HOLDINGS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/860546--3-1-2007--CORPORATE_OFFICE_PROPERTIES_TRUST.html'">860546--3/1/2007--CORPORATE_OFFICE_PROPERTIES_TRUST</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/910108--3-1-2007--LEXINGTON_REALTY_TRUST.html'">910108--3/1/2007--LEXINGTON_REALTY_TRUST</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/842183--3-7-2006--RAMCO_GERSHENSON_PROPERTIES_TRUST.html'">842183--3/7/2006--RAMCO_GERSHENSON_PROPERTIES_TRUST</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/842183--3-10-2008--RAMCO_GERSHENSON_PROPERTIES_TRUST.html'">842183--3/10/2008--RAMCO_GERSHENSON_PROPERTIES_TRUST</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/842183--3-6-2007--RAMCO_GERSHENSON_PROPERTIES_TRUST.html'">842183--3/6/2007--RAMCO_GERSHENSON_PROPERTIES_TRUST</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/842183--3-12-2010--RAMCO_GERSHENSON_PROPERTIES_TRUST.html'">842183--3/12/2010--RAMCO_GERSHENSON_PROPERTIES_TRUST</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/842183--3-11-2009--RAMCO_GERSHENSON_PROPERTIES_TRUST.html'">842183--3/11/2009--RAMCO_GERSHENSON_PROPERTIES_TRUST</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/915912--3-14-2006--AVALONBAY_COMMUNITIES_INC.html'">915912--3/14/2006--AVALONBAY_COMMUNITIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/915912--3-1-2007--AVALONBAY_COMMUNITIES_INC.html'">915912--3/1/2007--AVALONBAY_COMMUNITIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/915912--2-29-2008--AVALONBAY_COMMUNITIES_INC.html'">915912--2/29/2008--AVALONBAY_COMMUNITIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/912242--2-26-2010--MACERICH_CO.html'">912242--2/26/2010--MACERICH_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/860546--2-29-2008--CORPORATE_OFFICE_PROPERTIES_TRUST.html'">860546--2/29/2008--CORPORATE_OFFICE_PROPERTIES_TRUST</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/912242--2-27-2009--MACERICH_CO.html'">912242--2/27/2009--MACERICH_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/899629--2-29-2008--ACADIA_REALTY_TRUST.html'">899629--2/29/2008--ACADIA_REALTY_TRUST</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1040719--3-16-2006--HANOVER_CAPITAL_MORTGAGE_HOLDINGS_INC.html'">1040719--3/16/2006--HANOVER_CAPITAL_MORTGAGE_HOLDINGS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/798359--7-16-2007--INVESTORS_REAL_ESTATE_TRUST.html'">798359--7/16/2007--INVESTORS_REAL_ESTATE_TRUST</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/798359--7-14-2006--INVESTORS_REAL_ESTATE_TRUST.html'">798359--7/14/2006--INVESTORS_REAL_ESTATE_TRUST</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1286043--3-17-2008--KITE_REALTY_GROUP_TRUST.html'">1286043--3/17/2008--KITE_REALTY_GROUP_TRUST</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1286043--3-16-2009--KITE_REALTY_GROUP_TRUST.html'">1286043--3/16/2009--KITE_REALTY_GROUP_TRUST</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

@@ -1,0 +1,190 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[4.6922754432, "../topics/{debt,_indebtedness,_cash}.html", "{debt,_indebtedness,_cash}"], [3.8761297375, "../topics/{cost,_regulation,_environmental}.html", "{cost,_regulation,_environmental}"], [2.9167989977, "../topics/{condition,_economic,_financial}.html", "{condition,_economic,_financial}"], [2.6691834966, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"], [2.5489299081, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [1.7011574283, "../topics/{competitive,_industry,_competition}.html", "{competitive,_industry,_competition}"], [1.6979975747, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [1.6977655008, "../topics/{operation,_natural,_condition}.html", "{operation,_natural,_condition}"], [1.6969988461, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [1.6967191731, "../topics/{financial,_litigation,_operation}.html", "{financial,_litigation,_operation}"], [1.6940272804, "../topics/{cost,_operation,_labor}.html", "{cost,_operation,_labor}"], [1.6132281611, "../topics/{gas,_price,_oil}.html", "{gas,_price,_oil}"], [1.5661668804, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"], [1.173316866, "../topics/{interest,_director,_officer}.html", "{interest,_director,_officer}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>100726--9/10/2010--UNIFI_INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">100726--9/10/2010--UNIFI_INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{debt,_indebtedness,_cash}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{debt,_indebtedness,_cash}.html'">{debt, indebtedness, cash}</td></tr>
+<tr class="list"><td id="{cost,_regulation,_environmental}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_regulation,_environmental}.html'">{cost, regulation, environmental}</td></tr>
+<tr class="list"><td id="{condition,_economic,_financial}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{condition,_economic,_financial}.html'">{condition, economic, financial}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+<tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{competitive,_industry,_competition}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{competitive,_industry,_competition}.html'">{competitive, industry, competition}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{operation,_natural,_condition}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_natural,_condition}.html'">{operation, natural, condition}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{financial,_litigation,_operation}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{financial,_litigation,_operation}.html'">{financial, litigation, operation}</td></tr>
+<tr class="list"><td id="{cost,_operation,_labor}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_operation,_labor}.html'">{cost, operation, labor}</td></tr>
+<tr class="list"><td id="{gas,_price,_oil}" onmouseover="highlight(11)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{gas,_price,_oil}.html'">{gas, price, oil}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(12)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+<tr class="list"><td id="{interest,_director,_officer}" onmouseover="highlight(13)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{interest,_director,_officer}.html'">{interest, director, officer}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    The significant price volatility of many of the Company s raw materials and rising energy costs may result in increased production costs, which the Company may not be able to pass on to its customers, which could have a material adverse effect on its business, financial condition, results of operations or cash flows.
+The Company faces intense competition from a number of domestic and foreign yarn producers and importers of textile and apparel products.
+An increase of illegal transshipments of textile and apparel goods into the U.S. could have a material adverse effect on the Company s business.
+A decline in general economic or political conditions and changes in consumer spending could cause the Company s sales and profits to decline.
+As product demand flow shifts within a region the Company could lose its cost competitiveness due to the location of its assets.
+The Company s future operating results, deteriorating conditions in the credit markets, declining credit ratings or abnormally high interest rates or other adverse debt instrument terms could make it difficult for the Company to refinance its indebtedness on favorable terms or at all when it comes due.
+The success of the Company depends on the ability of its senior management team, as well as the Company s ability to attract and retain key personnel.
+The Company depends upon limited sources for raw materials, and interruptions in supply could increase its costs of production and cause its operations to suffer.
+Unforeseen or recurring operational problems at any of the Company s facilities may cause significant lost production, which could have a material adverse effect on its business, financial condition, results of operations and cash flows.
+Failure to implement future technological advances in the textile industry or fund capital expenditure requirements could have a material adverse effect on the Company s competitive position and net sales.
+Current economic conditions and uncertain economic outlook could adversely affect the Company s results of operations and financial condition.
+Failure to successfully reduce the Company s production costs may adversely affect its financial results.
+Changes in the trade regulatory environment could weaken the Company s competitive position dramatically and have a material adverse effect on its business, net sales and profitability.
+The Company has significant foreign operations and its results of operations may be adversely affected by the risks associated with doing business in foreign locations.
+The Company is dependent on a relatively small number of customers for a significant portion of its net sales.
+The Company is currently implementing various strategic business initiatives, and the success of the Company s business will depend on its ability to effectively develop and implement these initiatives.
+The Company s substantial level of indebtedness could adversely affect its financial condition.
+Despite its current indebtedness levels, the Company may still be able to incur substantially more debt. This could further exacerbate the risks associated with its substantial leverage.
+The terms of the Company s outstanding indebtedness impose significant operating and financial restrictions, which may prevent the Company from pursuing certain business opportunities and taking certain actions.
+The Company has made and may continue to make investments in entities that it does not control.
+The Parkdale America, LLC joint venture may lose Economic Adjustment Assistance to Users of Upland Cotton which could adversely affect the Company s investment income and cash flows.
+Compliance with environmental and other regulations could require significant expenditures.
+<p><a href="http://www.sec.gov/Archives/edgar/data/100726/0000950123-10-085111.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/1216596--4-2-2007--NORTEK_INC.html'">1216596--4/2/2007--NORTEK_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/850660--3-9-2010--THERMADYNE_HOLDINGS_CORP_-DE.html'">850660--3/9/2010--THERMADYNE_HOLDINGS_CORP_/DE</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1175757--3-21-2006--JOHNSONDIVERSEY_INC.html'">1175757--3/21/2006--JOHNSONDIVERSEY_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/100726--9-12-2008--UNIFI_INC.html'">100726--9/12/2008--UNIFI_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/850660--3-11-2009--THERMADYNE_HOLDINGS_CORP_-DE.html'">850660--3/11/2009--THERMADYNE_HOLDINGS_CORP_/DE</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/748015--1-15-2009--SEALY_CORP.html'">748015--1/15/2009--SEALY_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/748015--1-31-2008--SEALY_CORP.html'">748015--1/31/2008--SEALY_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/712034--3-22-2006--ACCO_BRANDS_CORP.html'">712034--3/22/2006--ACCO_BRANDS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1093082--2-26-2010--HUTTIG_BUILDING_PRODUCTS_INC.html'">1093082--2/26/2010--HUTTIG_BUILDING_PRODUCTS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/849869--3-2-2009--SILGAN_HOLDINGS_INC.html'">849869--3/2/2009--SILGAN_HOLDINGS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1392179--12-11-2009--BWAY_CORP.html'">1392179--12/11/2009--BWAY_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/943897--12-11-2009--BWAY_CORP.html'">943897--12/11/2009--BWAY_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1186362--4-1-2010--EXOPACK_HOLDING_CORP.html'">1186362--4/1/2010--EXOPACK_HOLDING_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1392179--12-12-2008--BWAY_CORP.html'">1392179--12/12/2008--BWAY_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/943897--12-12-2008--BWAY_CORP.html'">943897--12/12/2008--BWAY_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1163675--3-16-2006--HANOVER_COMPRESSION_LP.html'">1163675--3/16/2006--HANOVER_COMPRESSION_LP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/748015--2-23-2007--SEALY_CORP.html'">748015--2/23/2007--SEALY_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/812233--2-10-2010--OWENS-ILLINOIS_GROUP_INC.html'">812233--2/10/2010--OWENS-ILLINOIS_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1086385--3-31-2009--PANOLAM_INDUSTRIES_INTERNATIONAL_INC.html'">1086385--3/31/2009--PANOLAM_INDUSTRIES_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/50725--11-29-2007--GRIFFON_CORP.html'">50725--11/29/2007--GRIFFON_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/50725--12-14-2006--GRIFFON_CORP.html'">50725--12/14/2006--GRIFFON_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1186362--3-27-2009--EXOPACK_HOLDING_CORP.html'">1186362--3/27/2009--EXOPACK_HOLDING_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1056758--6-25-2010--NEBRASKA_BOOK_CO.html'">1056758--6/25/2010--NEBRASKA_BOOK_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/849667--11-24-2009--AMERICAN_ITALIAN_PASTA_CO.html'">849667--11/24/2009--AMERICAN_ITALIAN_PASTA_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/19731--3-10-2006--CHESAPEAKE_CORP_-VA-.html'">19731--3/10/2006--CHESAPEAKE_CORP_/VA/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1329364--4-2-2007--PQ_CORP.html'">1329364--4/2/2007--PQ_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/849869--3-1-2007--SILGAN_HOLDINGS_INC.html'">849869--3/1/2007--SILGAN_HOLDINGS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1316656--3-7-2007--Dresser-Rand_Group_Inc..html'">1316656--3/7/2007--Dresser-Rand_Group_Inc.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/930835--3-7-2006--EDISON_MISSION_ENERGY.html'">930835--3/7/2006--EDISON_MISSION_ENERGY</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1158323--3-7-2006--MISSION_ENERGY_HOLDING_CO.html'">1158323--3/7/2006--MISSION_ENERGY_HOLDING_CO</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

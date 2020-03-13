@@ -1,0 +1,197 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[4.7555725024, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [4.6962785948, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [4.4340749316, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [3.6968536019, "../topics/{regulation,_change,_law}.html", "{regulation,_change,_law}"], [3.6962038253, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [2.6962692262, "../topics/{control,_financial,_internal}.html", "{control,_financial,_internal}"], [2.6962612211, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [2.6960685029, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"], [2.6932813861, "../topics/{system,_service,_information}.html", "{system,_service,_information}"], [1.8806290405, "../topics/{product,_candidate,_development}.html", "{product,_candidate,_development}"], [1.6982597512, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"], [1.6964151524, "../topics/{condition,_economic,_financial}.html", "{condition,_economic,_financial}"], [1.6963856553, "../topics/{stock,_price,_share}.html", "{stock,_price,_share}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>1041418--3/13/2007--LOGICVISION_INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">1041418--3/13/2007--LOGICVISION_INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{regulation,_change,_law}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_change,_law}.html'">{regulation, change, law}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{control,_financial,_internal}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{control,_financial,_internal}.html'">{control, financial, internal}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+<tr class="list"><td id="{system,_service,_information}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{system,_service,_information}.html'">{system, service, information}</td></tr>
+<tr class="list"><td id="{product,_candidate,_development}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_candidate,_development}.html'">{product, candidate, development}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+<tr class="list"><td id="{condition,_economic,_financial}" onmouseover="highlight(11)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{condition,_economic,_financial}.html'">{condition, economic, financial}</td></tr>
+<tr class="list"><td id="{stock,_price,_share}" onmouseover="highlight(12)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_share}.html'">{stock, price, share}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    If the semiconductor industry does not adopt embedded test technology on a widespread basis, our revenues could decline and our stock price could fall.
+If the industries into which we sell our products experience recession or other cyclical effects impacting our customers research and development budgets, our operating results could be negatively impacted.
+We have a history of losses and an accumulated deficit of approximately $96.1 million as of December 31, 2006. If we do not generate sufficient net revenue in the future to achieve or sustain profitability, our stock price could decline.
+The sales and implementation cycles for our products are typically long and unpredictable, taking from three months to one year for sales and an additional one to six months for implementation. As a result, we may have difficulty predicting future revenues and our revenues and operating results may fluctuate significantly, which could cause our stock price to fluctuate.
+If a customer cancels its order or defaults on payment or if we renegotiate an existing order we may be unable to recognize revenue from backlog, which could have a material adverse effect on our financial condition and results of operations.
+Fluctuations in our revenues and operating results could cause the market price of our common stock to decline.
+The accounting rules regarding revenue recognition may cause fluctuations in our revenues independent of our order position.
+Intense competition in the semiconductor and systems industries, particularly in the design and test of semiconductors, could prevent us from increasing or sustaining our revenues and prevent us from achieving or sustaining profitability.
+Our target markets are comprised of a limited number of customers. If we fail to obtain or retain customer relationships, our revenues could decline.
+We have relied and expect to continue to rely on our ETCreate products for a significant portion of our revenues.
+Our products incorporate technology licensed from third parties, including Nortel Networks. If any of these licenses are terminated, our ability to develop and license our products could be delayed or reduced.
+We depend on third parties to provide electronic design automation software that is compatible with our solution. If these third parties do not continue to provide compatible design products, we would need to develop alternatives, which could delay product introductions and cause our revenues and operating results to decline.
+If automated test equipment companies are unwilling to work with us to make our technology compatible with theirs, we may need to pursue alternatives, which could increase the time it takes us to bring our solution to market and decrease customer acceptance of our technology.
+Our future success will depend on our ability to keep pace with rapid technological advancements in the semiconductor industry. If we fail to develop and introduce new products and enhancements on a timely basis, our ability to attract and retain customers could be impaired, which would cause our operating results to decline.
+Future changes in financial accounting standards, including pronouncements and interpretations of accounting pronouncements on software revenue recognition and stock-based compensation, may cause adverse unexpected revenue and expense fluctuations and affect our reported results of operations.
+We are exposed to risks from legislation requiring companies to evaluate their internal control over financial reporting.
+Compliance with changing regulation of corporate governance and public disclosure may result in additional costs.
+Our products may have errors or defects that users identify after deployment, which could harm our reputation and our business.
+We must continually attract and retain engineering personnel, or we will be unable to execute our business strategy.
+We may be unable to replace the technical, sales, marketing and managerial contributions of key individuals.
+If we fail to protect our intellectual property rights, competitors may be able to use our technologies, which could weaken our competitive position, reduce our revenues or increase our costs.
+Any dispute involving our patents or other intellectual property could include our industry partners and customers, which could trigger our indemnification obligations to them and result in substantial expense to us.
+Failure to obtain export licenses could harm our business.
+We have limited control over third-party representatives who market, sell and support our products in foreign markets. Loss of these relationships could decrease our revenues and harm our business.
+We face business, political and economic risks because a portion of our revenues and operations are outside of the United States.
+We may be unable to consummate future potential acquisitions or investments or successfully integrate acquired businesses or investments or foreign operations with our business, which may disrupt our business, divert management s attention and slow our ability to expand the range of our proprietary technologies and products.
+Intellectual property litigation, which is common in our industry, could be costly, harm our reputation, limit our ability to license or sell our proprietary technologies or products and divert the attention of management and technical personnel.
+Our stock price may decline significantly because of stock market fluctuations that affect the prices of technology stocks. A decline in our stock price could result in securities class action litigation against us that could divert management s attention and harm our business.
+Our stock may fail to meet the requirements for continued listing on the NASDAQ Global Market, in which case the price and liquidity of our common stock may decline.
+Our ability to raise capital in the future may be limited and our failure to raise capital when needed could prevent us from growing.
+<p><a href="http://www.sec.gov/Archives/edgar/data/1041418/0001206774-07-000625.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/1041418--3-21-2008--LOGICVISION_INC.html'">1041418--3/21/2008--LOGICVISION_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1041418--3-31-2006--LOGICVISION_INC.html'">1041418--3/31/2006--LOGICVISION_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1095330--2-27-2007--SYMYX_TECHNOLOGIES_INC.html'">1095330--2/27/2007--SYMYX_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1102741--3-31-2006--SIMPLETECH_INC.html'">1102741--3/31/2006--SIMPLETECH_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1070380--8-12-2009--SABA_SOFTWARE_INC.html'">1070380--8/12/2009--SABA_SOFTWARE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/897067--2-27-2008--CYMER_INC.html'">897067--2/27/2008--CYMER_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1057709--5-2-2006--CARREKER_CORP.html'">1057709--5/2/2006--CARREKER_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1054374--2-20-2007--BROADCOM_CORP.html'">1054374--2/20/2007--BROADCOM_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/830916--11-17-2009--MULTI_FINELINE_ELECTRONIX_INC.html'">830916--11/17/2009--MULTI_FINELINE_ELECTRONIX_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/865917--1-29-2010--VERSANT_CORP.html'">865917--1/29/2010--VERSANT_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/865917--1-29-2008--VERSANT_CORP.html'">865917--1/29/2008--VERSANT_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/865917--1-14-2009--VERSANT_CORP.html'">865917--1/14/2009--VERSANT_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/790715--5-8-2006--SIGMA_DESIGNS_INC.html'">790715--5/8/2006--SIGMA_DESIGNS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1080224--3-23-2009--EDGAR_ONLINE_INC.html'">1080224--3/23/2009--EDGAR_ONLINE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/833640--3-10-2008--POWER_INTEGRATIONS_INC.html'">833640--3/10/2008--POWER_INTEGRATIONS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1169561--5-25-2007--COMMVAULT_SYSTEMS_INC.html'">1169561--5/25/2007--COMMVAULT_SYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/897067--3-15-2006--CYMER_INC.html'">897067--3/15/2006--CYMER_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/932372--4-8-2008--Orange_21_Inc..html'">932372--4/8/2008--Orange_21_Inc.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/895419--8-18-2010--CREE_INC.html'">895419--8/18/2010--CREE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1054374--1-28-2008--BROADCOM_CORP.html'">1054374--1/28/2008--BROADCOM_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/49615--3-14-2008--ID_SYSTEMS_INC.html'">49615--3/14/2008--ID_SYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1054374--2-4-2009--BROADCOM_CORP.html'">1054374--2/4/2009--BROADCOM_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/49615--3-16-2007--ID_SYSTEMS_INC.html'">49615--3/16/2007--ID_SYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/833640--3-8-2007--POWER_INTEGRATIONS_INC.html'">833640--3/8/2007--POWER_INTEGRATIONS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1078271--8-20-2010--EXTREME_NETWORKS_INC.html'">1078271--8/20/2010--EXTREME_NETWORKS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/897067--2-28-2007--CYMER_INC.html'">897067--2/28/2007--CYMER_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1057083--3-16-2006--PC_TEL_INC.html'">1057083--3/16/2006--PC_TEL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/712515--5-23-2008--ELECTRONIC_ARTS_INC..html'">712515--5/23/2008--ELECTRONIC_ARTS_INC.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1022225--9-15-2006--OPLINK_COMMUNICATIONS_INC.html'">1022225--9/15/2006--OPLINK_COMMUNICATIONS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1032346--3-14-2008--IONA_TECHNOLOGIES_PLC.html'">1032346--3/14/2008--IONA_TECHNOLOGIES_PLC</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

@@ -1,0 +1,198 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[5.8378711118, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [3.9774908275, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [3.6915874657, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"], [3.466215964, "../topics/{debt,_indebtedness,_cash}.html", "{debt,_indebtedness,_cash}"], [2.6832385363, "../topics/{regulation,_change,_law}.html", "{regulation,_change,_law}"], [2.3657459343, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"], [2.3187702735, "../topics/{system,_service,_information}.html", "{system,_service,_information}"], [1.8905931302, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [1.7759903177, "../topics/{loss,_insurance,_financial}.html", "{loss,_insurance,_financial}"], [1.697253865, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [1.6937189346, "../topics/{control,_financial,_internal}.html", "{control,_financial,_internal}"], [1.693310403, "../topics/{provision,_law,_control}.html", "{provision,_law,_control}"], [1.6878383765, "../topics/{tax,_income,_asset}.html", "{tax,_income,_asset}"], [1.5310569476, "../topics/{competitive,_industry,_competition}.html", "{competitive,_industry,_competition}"], [1.3321041505, "../topics/{stock,_price,_share}.html", "{stock,_price,_share}"], [1.0630350776, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>701811--3/17/2010--MENTOR_GRAPHICS_CORP</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">701811--3/17/2010--MENTOR_GRAPHICS_CORP</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+<tr class="list"><td id="{debt,_indebtedness,_cash}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{debt,_indebtedness,_cash}.html'">{debt, indebtedness, cash}</td></tr>
+<tr class="list"><td id="{regulation,_change,_law}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_change,_law}.html'">{regulation, change, law}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+<tr class="list"><td id="{system,_service,_information}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{system,_service,_information}.html'">{system, service, information}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{loss,_insurance,_financial}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{loss,_insurance,_financial}.html'">{loss, insurance, financial}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{control,_financial,_internal}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{control,_financial,_internal}.html'">{control, financial, internal}</td></tr>
+<tr class="list"><td id="{provision,_law,_control}" onmouseover="highlight(11)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{provision,_law,_control}.html'">{provision, law, control}</td></tr>
+<tr class="list"><td id="{tax,_income,_asset}" onmouseover="highlight(12)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{tax,_income,_asset}.html'">{tax, income, asset}</td></tr>
+<tr class="list"><td id="{competitive,_industry,_competition}" onmouseover="highlight(13)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{competitive,_industry,_competition}.html'">{competitive, industry, competition}</td></tr>
+<tr class="list"><td id="{stock,_price,_share}" onmouseover="highlight(14)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_share}.html'">{stock, price, share}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(15)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    Weakness in the United States (U.S.) and international economies may harm our business.
+Our forecasts of our revenues and earnings outlook may be inaccurate.
+Our business could be impacted by fluctuations in quarterly results of operations due to customer seasonal purchasing patterns, the timing of significant orders, and the mix of licenses and products purchased by our customers.
+We face intense competition in the EDA industry.
+Our international operations and the effects of foreign currency fluctuations expose us to additional risks.
+We derive a substantial portion of our revenues from relatively few product groups.
+We are subject to the cyclical nature of the integrated circuit (IC) and electronics systems industries.
+Customer payment defaults or related issues could adversely affect our financial condition and results of operations.
+Customer payment defaults could adversely affect our timing of revenue recognition.
+IC and printed circuit board (PCB) technology evolves rapidly.
+Errors or defects in our products and services could expose us to liability and harm our reputation.
+Long sales cycles and delay in customer completion of projects make the timing of our revenues difficult to predict.
+Disruptions of our indirect sales channel could affect our future operating results.
+Any loss of our leadership position in certain segments of the EDA market could harm our business.
+Accounting rules governing revenue recognition are complex and may change.
+We may have additional tax liabilities.
+Forecasting our income tax rate is complex and subject to uncertainty.
+There are limitations on the effectiveness of controls.
+We may not realize revenue as a result of our investments in research and development.
+We may acquire other companies and may not successfully integrate them.
+We may not adequately protect our proprietary rights or we may fail to obtain software or other intellectual property licenses.
+Our use of open source software could negatively impact our ability to sell our products and subject us to possible litigation.
+Our failure to attract and retain key employees may harm us.
+We have global sales and research and development offices in parts of the world that are not as politically stable as the United States.
+Oregon law may have anti-takeover effects.
+We have a substantial level of indebtedness.
+Our stock price is volatile, and your investment could lose value.
+Our revolving credit facility has financial and non-financial covenants, and default of any covenant could materially adversely impact us.
+<p><a href="http://www.sec.gov/Archives/edgar/data/701811/0001193125-10-059520.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/856250--9-13-2007--CRAFTMADE_INTERNATIONAL_INC.html'">856250--9/13/2007--CRAFTMADE_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1141107--2-27-2009--ARRIS_GROUP_INC.html'">1141107--2/27/2009--ARRIS_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/801351--3-2-2010--WARNACO_GROUP_INC_-DE-.html'">801351--3/2/2010--WARNACO_GROUP_INC_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1042431--3-14-2008--INTERWOVEN_INC.html'">1042431--3/14/2008--INTERWOVEN_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/866609--3-31-2006--INPUT_OUTPUT_INC.html'">866609--3/31/2006--INPUT_OUTPUT_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1109808--3-6-2006--AVOCENT_CORP.html'">1109808--3/6/2006--AVOCENT_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1002663--12-14-2006--PHOTON_DYNAMICS_INC.html'">1002663--12/14/2006--PHOTON_DYNAMICS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/701811--3-19-2008--MENTOR_GRAPHICS_CORP.html'">701811--3/19/2008--MENTOR_GRAPHICS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1275014--3-19-2009--ULTRA_CLEAN_HOLDINGS_INC.html'">1275014--3/19/2009--ULTRA_CLEAN_HOLDINGS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1111928--3-12-2009--IPG_PHOTONICS_CORP.html'">1111928--3/12/2009--IPG_PHOTONICS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1082506--9-9-2009--OPENWAVE_SYSTEMS_INC.html'">1082506--9/9/2009--OPENWAVE_SYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1082506--9-7-2010--OPENWAVE_SYSTEMS_INC.html'">1082506--9/7/2010--OPENWAVE_SYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/772406--6-1-2009--CIRRUS_LOGIC_INC.html'">772406--6/1/2009--CIRRUS_LOGIC_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1141107--2-26-2010--ARRIS_GROUP_INC.html'">1141107--2/26/2010--ARRIS_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1022225--9-12-2008--OPLINK_COMMUNICATIONS_INC.html'">1022225--9/12/2008--OPLINK_COMMUNICATIONS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/32621--7-11-2008--EMERSON_RADIO_CORP.html'">32621--7/11/2008--EMERSON_RADIO_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/844143--2-9-2006--INNOVO_GROUP_INC.html'">844143--2/9/2006--INNOVO_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/317771--3-14-2006--TELLABS_INC.html'">317771--3/14/2006--TELLABS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/883984--2-19-2010--ICU_MEDICAL_INC-DE.html'">883984--2/19/2010--ICU_MEDICAL_INC/DE</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1090071--3-15-2006--FOUNDRY_NETWORKS_INC.html'">1090071--3/15/2006--FOUNDRY_NETWORKS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1069353--11-26-2008--CONEXANT_SYSTEMS_INC.html'">1069353--11/26/2008--CONEXANT_SYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1042431--3-13-2006--INTERWOVEN_INC.html'">1042431--3/13/2006--INTERWOVEN_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1042431--12-14-2007--INTERWOVEN_INC.html'">1042431--12/14/2007--INTERWOVEN_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/919443--3-9-2006--LACROSSE_FOOTWEAR_INC.html'">919443--3/9/2006--LACROSSE_FOOTWEAR_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1036044--3-17-2006--SCM_MICROSYSTEMS_INC.html'">1036044--3/17/2006--SCM_MICROSYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1325702--3-30-2007--MAGNACHIP_SEMICONDUCTOR_LLC.html'">1325702--3/30/2007--MAGNACHIP_SEMICONDUCTOR_LLC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1047127--2-24-2010--AMKOR_TECHNOLOGY_INC.html'">1047127--2/24/2010--AMKOR_TECHNOLOGY_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/772406--6-1-2010--CIRRUS_LOGIC_INC.html'">772406--6/1/2010--CIRRUS_LOGIC_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/106040--8-20-2008--WESTERN_DIGITAL_CORP.html'">106040--8/20/2008--WESTERN_DIGITAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1042825--3-13-2009--POWER_ONE_INC.html'">1042825--3/13/2009--POWER_ONE_INC</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

@@ -1,0 +1,204 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[12.7808608778, "../topics/{system,_service,_information}.html", "{system,_service,_information}"], [5.732016463, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [3.4009206732, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"], [3.37026908, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [2.716525782, "../topics/{regulation,_change,_law}.html", "{regulation,_change,_law}"], [2.6975466478, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [2.325190401, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"], [2.1514759258, "../topics/{control,_financial,_internal}.html", "{control,_financial,_internal}"], [2.1465969921, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [1.7215731751, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [1.6987233277, "../topics/{tax,_income,_asset}.html", "{tax,_income,_asset}"], [1.6958973419, "../topics/{provision,_law,_control}.html", "{provision,_law,_control}"], [1.6808665163, "../topics/{product,_candidate,_development}.html", "{product,_candidate,_development}"], [1.4264477487, "../topics/{condition,_economic,_financial}.html", "{condition,_economic,_financial}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>1011006--2/23/2007--YAHOO_INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">1011006--2/23/2007--YAHOO_INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{system,_service,_information}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{system,_service,_information}.html'">{system, service, information}</td></tr>
+<tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+<tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{regulation,_change,_law}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_change,_law}.html'">{regulation, change, law}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+<tr class="list"><td id="{control,_financial,_internal}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{control,_financial,_internal}.html'">{control, financial, internal}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{tax,_income,_asset}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{tax,_income,_asset}.html'">{tax, income, asset}</td></tr>
+<tr class="list"><td id="{provision,_law,_control}" onmouseover="highlight(11)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{provision,_law,_control}.html'">{provision, law, control}</td></tr>
+<tr class="list"><td id="{product,_candidate,_development}" onmouseover="highlight(12)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_candidate,_development}.html'">{product, candidate, development}</td></tr>
+<tr class="list"><td id="{condition,_economic,_financial}" onmouseover="highlight(13)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{condition,_economic,_financial}.html'">{condition, economic, financial}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    We face significant competition from traditional media companies which could adversely affect our future operating results.
+If we are unable to provide search technologies and other services which generate significant traffic to our websites, or we are unable to enter into or continue distribution relationships that drive significant traffic to our websites, our business could be harmed, causing our revenues to decline.
+The majority of our revenues are derived from marketing services, and the reduction in spending by or loss of current or potential advertisers would cause our revenues and operating results to decline.
+In certain markets, we depend on a limited number of sources to direct a significant percentage of users and businesses to our service to conduct searches, and a loss of any of these sources could harm our operating results.
+We may not be able to generate substantial revenues from our alliances with Internet access providers.
+Some of our shared revenue arrangements may not generate anticipated revenues.
+Decreases or delays in advertising spending by our advertisers due to general economic conditions could harm our ability to generate advertising revenue.
+Financial results for any particular period do not predict results for future periods.
+We estimate tax liabilities, the final determination of which is subject to review by domestic and international taxation authorities.
+We rely on the value of our brands, and a failure to maintain or enhance the Yahoo! brands in a cost-effective manner could harm our operating results.
+If we are unable to license or acquire compelling content at reasonable costs or if we do not develop or commission compelling content of our own, the number of users of our services may not grow as anticipated, or may decline, or users level of engagement with our services may decline, all or any of which could harm our operating results.
+Our intellectual property rights are valuable, and any inability to protect them could reduce the value of our brand image and harm our business and our operating results.
+We are, and may in the future be, subject to intellectual property infringement claims, which are costly to defend, could result in significant damage awards, and could limit our ability to provide certain content or use certain technologies in the future.
+We are subject to United States and foreign government regulation of Internet, mobile, and Voice over Internet Protocol services which could subject us to claims and remedies including monetary liabilities and limitations on our business practices.
+Changes in regulations or user concerns regarding privacy and protection of user data could adversely affect our business.
+Acquisitions and strategic investments could result in adverse impacts on our operations and in unanticipated liabilities.
+Our failure to manage growth, diversification and changes to our business could harm us.
+We have dedicated considerable resources to provide a variety of premium services, which may not prove to be successful in generating significant revenue for us.
+We expect our operating expenses to continue to increase as we attempt to expand the Yahoo! brand, fund product development, develop media properties and acquire other businesses or technologies, which could harm our operating results.
+If we are unable to retain our existing senior management and key personnel and hire new highly skilled personnel, we may not be able to execute our business plan.
+More individuals are utilizing non-PC devices to access the Internet, and versions of our service developed or optimized for these devices may not gain widespread adoption by users, manufacturers or distributors of such devices.
+We plan to expand operations in international markets in which we may have limited experience or rely on business partners.
+In international markets we compete with local Internet service providers that may have competitive advantages.
+Our international operations are subject to increased risks which could harm our business, operating results and financial condition.
+We may be subject to legal liability for online services.
+We may have difficulty scaling and adapting our existing technology architecture to accommodate increased traffic and technology advances or requirements of our users and advertisers.
+Our business depends on the continued growth and maintenance of the Internet infrastructure.
+New technologies could block our advertisements or our search marketing listings, which would harm our operating results.
+We rely on third party providers for our principal Internet connections and technologies, databases and services critical to our properties and services, and any errors, failures or disruption in the services provided by these third parties could significantly harm our business and operating results.
+We rely on distribution agreements and relationships with various third parties, and any failure to obtain or maintain such distribution relationships on reasonable terms could impair our ability to fully execute our business plan.
+We rely on third party providers of rich media products to provide the technologies required to deliver rich media content to our users, and any change in the licensing terms, costs, availability or user acceptance of these products could adversely affect our business.
+If we fail to prevent click fraud or if we choose to manage undesirable clicks in a way that advertisers find unsatisfactory, we could lose the confidence of our advertisers as well as face potential litigation, which could adversely impact our business and profitability.
+Interruptions, delays or failures in the provision of our services could damage our brand and harm our operating results.
+We may be required to record a significant charge to earnings if our goodwill, amortizable intangible assets or investments in equity interests become impaired.
+Our stock price has been volatile historically and may continue to be volatile regardless of our operating performance.
+Anti-takeover provisions could make it more difficult for a third party to acquire us.
+<p><a href="http://www.sec.gov/Archives/edgar/data/1011006/0000891618-07-000108.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/1011006--2-27-2008--YAHOO_INC.html'">1011006--2/27/2008--YAHOO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/829323--3-31-2008--THINK_PARTNERSHIP_INC.html'">829323--3/31/2008--THINK_PARTNERSHIP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/829323--3-29-2007--THINK_PARTNERSHIP_INC.html'">829323--3/29/2007--THINK_PARTNERSHIP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1259550--3-16-2010--LOCAL.COM.html'">1259550--3/16/2010--LOCAL.COM</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/896878--9-15-2006--INTUIT_INC.html'">896878--9/15/2006--INTUIT_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1326583--3-16-2006--WebMD_Health_Corp..html'">1326583--3/16/2006--WebMD_Health_Corp.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/829323--3-31-2009--KOWABUNGA!_INC..html'">829323--3/31/2009--KOWABUNGA!_INC.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1011006--3-3-2006--YAHOO_INC.html'">1011006--3/3/2006--YAHOO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1045742--12-29-2006--YP_CORP.html'">1045742--12/29/2006--YP_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1131096--3-15-2010--ATHENAHEALTH_INC.html'">1131096--3/15/2010--ATHENAHEALTH_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1326583--3-2-2007--WebMD_Health_Corp..html'">1326583--3/2/2007--WebMD_Health_Corp.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1131096--3-7-2008--ATHENAHEALTH_INC.html'">1131096--3/7/2008--ATHENAHEALTH_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1131096--3-2-2009--ATHENAHEALTH_INC.html'">1131096--3/2/2009--ATHENAHEALTH_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1326583--2-29-2008--WebMD_Health_Corp..html'">1326583--2/29/2008--WebMD_Health_Corp.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1283699--2-29-2008--METROPCS_COMMUNICATIONS_INC.html'">1283699--2/29/2008--METROPCS_COMMUNICATIONS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/896878--9-12-2008--INTUIT_INC.html'">896878--9/12/2008--INTUIT_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1158324--3-1-2010--COGENT_COMMUNICATIONS_GROUP_INC.html'">1158324--3/1/2010--COGENT_COMMUNICATIONS_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1065280--2-28-2008--NETFLIX_INC.html'">1065280--2/28/2008--NETFLIX_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/909494--3-22-2010--TUCOWS_INC_-PA-.html'">909494--3/22/2010--TUCOWS_INC_/PA/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1065332--3-16-2006--NIC_INC.html'">1065332--3/16/2006--NIC_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1326583--2-27-2009--WebMD_Health_Corp..html'">1326583--2/27/2009--WebMD_Health_Corp.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/936395--12-22-2009--CIENA_CORP.html'">936395--12/22/2009--CIENA_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/909494--3-27-2009--TUCOWS_INC_-PA-.html'">909494--3/27/2009--TUCOWS_INC_/PA/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/832767--11-19-2009--PHOENIX_TECHNOLOGIES_LTD.html'">832767--11/19/2009--PHOENIX_TECHNOLOGIES_LTD</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/909494--3-17-2006--TUCOWS_INC_-PA-.html'">909494--3/17/2006--TUCOWS_INC_/PA/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1351285--3-10-2010--ROSETTA_STONE_INC.html'">1351285--3/10/2010--ROSETTA_STONE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1396838--3-12-2009--Dolan_Media_CO.html'">1396838--3/12/2009--Dolan_Media_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1142512--3-16-2007--ZIPREALTY_INC.html'">1142512--3/16/2007--ZIPREALTY_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1396838--3-28-2008--Dolan_Media_CO.html'">1396838--3/28/2008--Dolan_Media_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1326583--3-2-2010--WebMD_Health_Corp..html'">1326583--3/2/2010--WebMD_Health_Corp.</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

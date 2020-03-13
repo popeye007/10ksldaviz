@@ -1,0 +1,185 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[4.6957292576, "../topics/{financial,_litigation,_operation}.html", "{financial,_litigation,_operation}"], [4.6956859332, "../topics/{control,_financial,_internal}.html", "{control,_financial,_internal}"], [4.2341120887, "../topics/{system,_service,_information}.html", "{system,_service,_information}"], [2.684397172, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [1.6968098719, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [1.6963103739, "../topics/{stock,_price,_share}.html", "{stock,_price,_share}"], [1.6962702377, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [1.6962616481, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"], [1.6962616394, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [1.6960349244, "../topics/{cost,_regulation,_environmental}.html", "{cost,_regulation,_environmental}"], [1.160020774, "../topics/{regulation,_government,_change}.html", "{regulation,_government,_change}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>884497--7/5/2007--MEDQUIST_INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">884497--7/5/2007--MEDQUIST_INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{financial,_litigation,_operation}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{financial,_litigation,_operation}.html'">{financial, litigation, operation}</td></tr>
+<tr class="list"><td id="{control,_financial,_internal}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{control,_financial,_internal}.html'">{control, financial, internal}</td></tr>
+<tr class="list"><td id="{system,_service,_information}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{system,_service,_information}.html'">{system, service, information}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{stock,_price,_share}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_share}.html'">{stock, price, share}</td></tr>
+<tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{cost,_regulation,_environmental}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_regulation,_environmental}.html'">{cost, regulation, environmental}</td></tr>
+<tr class="list"><td id="{regulation,_government,_change}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_government,_change}.html'">{regulation, government, change}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    CAUTIONARY STATEMENT REGARDING FORWARD-LOOKING STATEMENTS
+We are subject to ongoing investigations, which could require us to pay substantial fines or other penalties or subject us to sanctions and we cannot predict the timing of developments in these matters.
+Several lawsuits have been filed against us involving our billing practices and other related matters and the outcome of these lawsuits may have a material adverse effect on our business, financial condition, results of operations and cash flows.
+The continuing time, effort, and expense relating to the allegations raised regarding our past billing practices, our efforts to become current in our SEC filings and the development and implementation of improved internal controls and procedures may have an adverse effect on our business.
+Our ability to expand our business and properly service our customers depends on our ability to effectively manage our domestic production capacity, including our ability to recruit, train and retain qualified MTs and maintain high standards of quality service in our operations, which we may not be able to do.
+We have experienced significant management turnover.
+We are not current in our periodic reporting obligations under the Exchange Act.
+We have had material weaknesses in our internal control over financial reporting and cannot assure that additional material weaknesses will not be identified in the future. Our failure to effectively maintain our internal control over financial reporting could result in material misstatements in our financial statements which could require us to restate financial statements, cause investors to lose confidence in our reported financial information or have a negative affect on our stock price.
+We have not complied with Section 404 of the Sarbanes-Oxley Act of 2002 (SOX) for our fiscal year ended December 31, 2004.
+Current and prospective investors, customers and employees may react adversely to the allegations concerning our billing practices and our inability to file in a timely manner all of our SEC filings.
+We compete with many others in the market for medical transcription services which may result in lower prices for our services, reduced operating margins and an inability to maintain or increase our market share and expand our service offerings.
+We may pursue future acquisitions which could require us to incur debt and assume contingent liabilities and expenses, and we may not be able to effectively integrate newly acquired operations.
+Our success will depend on our ability to adopt and integrate new technology into our DEP, to improve our production capabilities and expand the breadth of our service offerings, as well as our ability to address any unanticipated problems with our information technology systems, which we may not be able to do quickly, or at all.
+Due to the critical nature of medical transcription to our customers operations, potential customers may be reluctant to outsource or change service providers as a result of the cost and potential for disruption in services, which may inhibit our ability to attract new customers.
+If our intellectual property is not adequately protected, we may lose our market share to our competitors and be unable to operate our business profitably.
+We are dependent on third party speech recognition software incorporated in certain of our technologies, and impaired relations with such third party or the inability to enhance such third party software over time could harm our business.
+If we fail to comply with extensive contractual obligations and applicable laws and government regulations governing the handling of patient identifiable medical information, including those imposed on our customers in connection with HIPAA, we could suffer material losses or be negatively impacted as a result of our customers being subject to material penalties and liabilities.
+Proposed legislation and possible negative publicity may impede our ability to utilize global service capabilities.
+Philips owns approximately 69.6% of our outstanding common stock, and its interests may conflict with the interests of our other shareholders.
+Our stock trades on the over-the-counter Pink Sheets market, which may decrease the liquidity of our common stock.
+<p><a href="http://www.sec.gov/Archives/edgar/data/884497/0001104659-07-052488.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/884497--3-17-2008--MEDQUIST_INC.html'">884497--3/17/2008--MEDQUIST_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/215219--8-31-2007--Voyager_Learning_CO.html'">215219--8/31/2007--Voyager_Learning_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1088653--3-5-2007--AGILE_SOFTWARE_CORP.html'">1088653--3/5/2007--AGILE_SOFTWARE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1173431--11-26-2007--TD_AMERITRADE_HOLDING_CORP.html'">1173431--11/26/2007--TD_AMERITRADE_HOLDING_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/319201--1-29-2007--KLA_TENCOR_CORP.html'">319201--1/29/2007--KLA_TENCOR_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1365135--2-27-2007--Western_Union_CO.html'">1365135--2/27/2007--Western_Union_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1287258--3-11-2008--PLANETOUT_INC.html'">1287258--3/11/2008--PLANETOUT_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1173431--12-7-2006--TD_AMERITRADE_HOLDING_CORP.html'">1173431--12/7/2006--TD_AMERITRADE_HOLDING_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1043533--9-30-2008--ABOVENET_INC.html'">1043533--9/30/2008--ABOVENET_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/813920--2-20-2009--CEC_ENTERTAINMENT_INC.html'">813920--2/20/2009--CEC_ENTERTAINMENT_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1035096--6-22-2006--WEBMETHODS_INC.html'">1035096--6/22/2006--WEBMETHODS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1173431--11-26-2008--TD_AMERITRADE_HOLDING_CORP.html'">1173431--11/26/2008--TD_AMERITRADE_HOLDING_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/931911--2-1-2008--WESTAFF_INC.html'">931911--2/1/2008--WESTAFF_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1065865--2-28-2008--JANUS_CAPITAL_GROUP_INC.html'">1065865--2/28/2008--JANUS_CAPITAL_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/891103--3-2-2009--IAC-INTERACTIVECORP.html'">891103--3/2/2009--IAC/INTERACTIVECORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/931911--2-13-2009--WESTAFF_INC.html'">931911--2/13/2009--WESTAFF_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/275053--10-7-2008--NATURES_SUNSHINE_PRODUCTS_INC.html'">275053--10/7/2008--NATURES_SUNSHINE_PRODUCTS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1065865--2-26-2009--JANUS_CAPITAL_GROUP_INC.html'">1065865--2/26/2009--JANUS_CAPITAL_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/12659--6-30-2008--H&R_BLOCK_INC.html'">12659--6/30/2008--H&R_BLOCK_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/275053--10-7-2008--NATURES_SUNSHINE_PRODUCTS_INC.html'">275053--10/7/2008--NATURES_SUNSHINE_PRODUCTS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/275053--3-20-2009--NATURES_SUNSHINE_PRODUCTS_INC.html'">275053--3/20/2009--NATURES_SUNSHINE_PRODUCTS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1470215--9-7-2010--Towers_Watson_&_Co..html'">1470215--9/7/2010--Towers_Watson_&_Co.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1065865--2-24-2010--JANUS_CAPITAL_GROUP_INC.html'">1065865--2/24/2010--JANUS_CAPITAL_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/315213--2-19-2009--HALF_ROBERT_INTERNATIONAL_INC_-DE-.html'">315213--2/19/2009--HALF_ROBERT_INTERNATIONAL_INC_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/315213--2-19-2010--HALF_ROBERT_INTERNATIONAL_INC_-DE-.html'">315213--2/19/2010--HALF_ROBERT_INTERNATIONAL_INC_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1365135--2-26-2010--Western_Union_CO.html'">1365135--2/26/2010--Western_Union_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1069502--4-23-2008--VARSITY_GROUP_INC.html'">1069502--4/23/2008--VARSITY_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/12659--6-29-2009--H&R_BLOCK_INC.html'">12659--6/29/2009--H&R_BLOCK_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/929940--9-2-2010--ASPEN_TECHNOLOGY_INC_-DE-.html'">929940--9/2/2010--ASPEN_TECHNOLOGY_INC_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/886206--11-14-2007--FRANKLIN_COVEY_CO.html'">886206--11/14/2007--FRANKLIN_COVEY_CO</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

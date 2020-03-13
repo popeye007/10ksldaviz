@@ -1,0 +1,181 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[4.3774176543, "../topics/{system,_service,_information}.html", "{system,_service,_information}"], [3.8179741862, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"], [2.7018697998, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [2.6908047733, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [1.6966424331, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [1.696280317, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [1.6962644708, "../topics/{tax,_income,_asset}.html", "{tax,_income,_asset}"], [1.6962616404, "../topics/{debt,_indebtedness,_cash}.html", "{debt,_indebtedness,_cash}"], [1.6956756776, "../topics/{regulation,_government,_change}.html", "{regulation,_government,_change}"], [1.6852793447, "../topics/{product,_market,_service}.html", "{product,_market,_service}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>1280058--2/28/2007--BLACKBAUD_INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">1280058--2/28/2007--BLACKBAUD_INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{system,_service,_information}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{system,_service,_information}.html'">{system, service, information}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{tax,_income,_asset}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{tax,_income,_asset}.html'">{tax, income, asset}</td></tr>
+<tr class="list"><td id="{debt,_indebtedness,_cash}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{debt,_indebtedness,_cash}.html'">{debt, indebtedness, cash}</td></tr>
+<tr class="list"><td id="{regulation,_government,_change}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_government,_change}.html'">{regulation, government, change}</td></tr>
+<tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    Our services revenue produces substantially lower gross margins than our license revenue, and an increase in services revenue relative to license revenue would harm our overall gross margins.
+Our quarterly financial results fluctuate and might be difficult to forecast and, if our future results are below either any guidance we might issue or the expectations of public market analysts and investors, the price of our common stock might decline.
+We encounter long sales and implementation cycles, particularly for our largest customers, which could have an adverse effect on the size, timing and predictability of our revenue and sales.
+We have recorded a significant deferred tax asset, and we might never realize the full value of our deferred tax asset, which would result in a charge against our earnings.
+Our failure to compete successfully could cause our revenue or market share to decline.
+Because competition for highly qualified personnel is intense, we might not be able to attract and retain the employees we need to support our planned growth.
+If our products fail to perform properly due to undetected errors or similar problems, our business could suffer.
+Our failure to integrate third-party technologies could harm our business.
+If the security of our software is breached or we fail to securely collect, store and transmit customer information, our business and reputation could suffer.
+If we are unable to detect and prevent unauthorized use of credit cards and bank account numbers and safeguard confidential donor data, we could be subject to financial liability, our reputation could be harmed and customers may be reluctant to use our products and services.
+We currently do not have any issued patents, but we rely upon trademark, copyright, patent and trade secret laws to protect our proprietary rights, which might not provide us with adequate protection.
+If we do not successfully address the risks inherent in the expansion of our international operations, our business could suffer.
+We might face challenges in integrating Target Software and Target Analysis Group and, as a result, might not realize the expected benefits of the recent acquisition.
+If we are unable to retain key personnel of the Target Companies, our business may suffer.
+Future acquisitions could prove difficult to integrate, disrupt our business, dilute stockholder value and strain our resources.
+Restrictions in revolving credit facility may limit our activities, including dividend payments, share repurchases and acquisitions.
+If we were found subject to or in violation of any laws or regulations governing privacy or electronic fund transfers, we could be subject to liability or forced to change our business practices.
+<p><a href="http://www.sec.gov/Archives/edgar/data/1280058/0000950144-07-001722.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/845818--3-2-2006--RADIANT_SYSTEMS_INC.html'">845818--3/2/2006--RADIANT_SYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/764478--5-10-2006--BEST_BUY_CO_INC.html'">764478--5/10/2006--BEST_BUY_CO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/849399--5-21-2008--SYMANTEC_CORP.html'">849399--5/21/2008--SYMANTEC_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/764478--5-2-2007--BEST_BUY_CO_INC.html'">764478--5/2/2007--BEST_BUY_CO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/849399--5-24-2007--SYMANTEC_CORP.html'">849399--5/24/2007--SYMANTEC_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1124887--3-16-2006--CERIDIAN_CORP_-DE-.html'">1124887--3/16/2006--CERIDIAN_CORP_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/837342--3-31-2008--CORDIA_CORP.html'">837342--3/31/2008--CORDIA_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1006892--3-16-2010--JDA_SOFTWARE_GROUP_INC.html'">1006892--3/16/2010--JDA_SOFTWARE_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1045560--3-31-2006--ENHERENT_CORP.html'">1045560--3/31/2006--ENHERENT_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/764478--4-30-2008--BEST_BUY_CO_INC.html'">764478--4/30/2008--BEST_BUY_CO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1006892--3-13-2009--JDA_SOFTWARE_GROUP_INC.html'">1006892--3/13/2009--JDA_SOFTWARE_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/920033--4-17-2007--BANK_JOS_A_CLOTHIERS_INC_-DE-.html'">920033--4/17/2007--BANK_JOS_A_CLOTHIERS_INC_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/768835--4-1-2008--BIG_LOTS_INC.html'">768835--4/1/2008--BIG_LOTS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1140414--3-31-2009--SIN_HOLDINGS_INC.html'">1140414--3/31/2009--SIN_HOLDINGS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1027207--3-9-2007--EPIQ_SYSTEMS_INC.html'">1027207--3/9/2007--EPIQ_SYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1280058--3-13-2006--BLACKBAUD_INC.html'">1280058--3/13/2006--BLACKBAUD_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1058083--2-25-2008--IMS_HEALTH_INC.html'">1058083--2/25/2008--IMS_HEALTH_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1111634--3-16-2009--XO_HOLDINGS_INC.html'">1111634--3/16/2009--XO_HOLDINGS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1287258--3-15-2006--PLANETOUT_INC.html'">1287258--3/15/2006--PLANETOUT_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/787253--9-28-2009--NATURAL_ALTERNATIVES_INTERNATIONAL_INC.html'">787253--9/28/2009--NATURAL_ALTERNATIVES_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/920424--3-2-2009--INVESTMENT_TECHNOLOGY_GROUP_INC.html'">920424--3/2/2009--INVESTMENT_TECHNOLOGY_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1027207--3-4-2008--EPIQ_SYSTEMS_INC.html'">1027207--3/4/2008--EPIQ_SYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1001250--8-20-2010--ESTEE_LAUDER_COMPANIES_INC.html'">1001250--8/20/2010--ESTEE_LAUDER_COMPANIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1010612--3-13-2008--SYKES_ENTERPRISES_INC.html'">1010612--3/13/2008--SYKES_ENTERPRISES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/920033--4-10-2008--BANK_JOS_A_CLOTHIERS_INC_-DE-.html'">920033--4/10/2008--BANK_JOS_A_CLOTHIERS_INC_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/891919--4-17-2008--BOOKS_A_MILLION_INC.html'">891919--4/17/2008--BOOKS_A_MILLION_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/920424--3-1-2010--INVESTMENT_TECHNOLOGY_GROUP_INC.html'">920424--3/1/2010--INVESTMENT_TECHNOLOGY_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1066605--3-15-2007--HEIDRICK_&_STRUGGLES_INTERNATIONAL_INC.html'">1066605--3/15/2007--HEIDRICK_&_STRUGGLES_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/888702--6-24-2010--PSI_CORP.html'">888702--6/24/2010--PSI_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1066605--2-28-2008--HEIDRICK_&_STRUGGLES_INTERNATIONAL_INC.html'">1066605--2/28/2008--HEIDRICK_&_STRUGGLES_INTERNATIONAL_INC</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

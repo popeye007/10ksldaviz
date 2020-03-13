@@ -1,0 +1,222 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[10.4529142642, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [9.9822516711, "../topics/{tax,_income,_asset}.html", "{tax,_income,_asset}"], [7.4858010523, "../topics/{cost,_contract,_operation}.html", "{cost,_contract,_operation}"], [4.873409721, "../topics/{gas,_price,_oil}.html", "{gas,_price,_oil}"], [4.8163893364, "../topics/{cost,_operation,_labor}.html", "{cost,_operation,_labor}"], [4.6989317086, "../topics/{control,_financial,_internal}.html", "{control,_financial,_internal}"], [4.200017743, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [3.6897439911, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [2.796099755, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"], [2.7138632804, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [2.6977573721, "../topics/{cost,_regulation,_environmental}.html", "{cost,_regulation,_environmental}"], [2.6963300654, "../topics/{debt,_indebtedness,_cash}.html", "{debt,_indebtedness,_cash}"], [2.689864899, "../topics/{financial,_litigation,_operation}.html", "{financial,_litigation,_operation}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>849240--3/29/2006--HAWK_CORP</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">849240--3/29/2006--HAWK_CORP</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{tax,_income,_asset}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{tax,_income,_asset}.html'">{tax, income, asset}</td></tr>
+<tr class="list"><td id="{cost,_contract,_operation}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_contract,_operation}.html'">{cost, contract, operation}</td></tr>
+<tr class="list"><td id="{gas,_price,_oil}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{gas,_price,_oil}.html'">{gas, price, oil}</td></tr>
+<tr class="list"><td id="{cost,_operation,_labor}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_operation,_labor}.html'">{cost, operation, labor}</td></tr>
+<tr class="list"><td id="{control,_financial,_internal}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{control,_financial,_internal}.html'">{control, financial, internal}</td></tr>
+<tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{cost,_regulation,_environmental}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_regulation,_environmental}.html'">{cost, regulation, environmental}</td></tr>
+<tr class="list"><td id="{debt,_indebtedness,_cash}" onmouseover="highlight(11)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{debt,_indebtedness,_cash}.html'">{debt, indebtedness, cash}</td></tr>
+<tr class="list"><td id="{financial,_litigation,_operation}" onmouseover="highlight(12)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{financial,_litigation,_operation}.html'">{financial, litigation, operation}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    Cautionary Note Regarding Forward-Looking Statements
+Cautionary Note Regarding Forward-Looking Statements
+We continue to experience manufacturing inefficiencies at our Oklahoma friction products facility
+We continue to experience manufacturing inefficiencies at our Oklahoma friction products facility
+We have incurred losses in the past and may incur losses in future years.
+We may be unable to generate sufficient taxable income from future operations to fully utilize our significant tax net operating loss carryforwards or maintain our deferred tax assets.
+Our China precision component facility and metal injection molding operation have yet to achieve profitability.
+We have incurred losses in the past and may incur losses in future years.
+We have incurred losses in the past and may incur losses in future years.
+We have incurred losses in the past and may incur losses in future years.
+We may be unable to generate sufficient taxable income from future operations to fully utilize our significant tax net operating loss carryforwards or maintain our deferred tax assets.
+Our China precision component facility and metal injection molding operation have yet to achieve profitability.
+We may be unable to generate sufficient taxable income from future operations to fully utilize our significant tax net operating loss carryforwards or maintain our deferred tax assets.
+Our China precision component facility and metal injection molding operation have yet to achieve profitability.
+Our China precision component facility and metal injection molding operation have yet to achieve profitability.
+Our precision components segment may be adversely affected by low-cost production in China.
+Our precision components segment may be adversely affected by low-cost production in China.
+Our net income may be impacted by the sale of our motor segment.
+Our net income may be impacted by the sale of our motor segment.
+Work stoppages by union employees may negatively impact our business.
+Work stoppages by union employees may negatively impact our business.
+Our gross margins are subject to fluctuation because of product mix.
+We operate in a highly competitive industry, which may prevent us from growing and may decrease our business.
+Our gross margins are subject to fluctuation because of product mix.
+Our gross margins are subject to fluctuation because of product mix.
+Our gross margins are subject to fluctuation because of product mix.
+We operate in a highly competitive industry, which may prevent us from growing and may decrease our business.
+We operate in a highly competitive industry, which may prevent us from growing and may decrease our business.
+Our debt could adversely affect our financial condition and prevent us from fulfilling our obligations.
+Our debt could adversely affect our financial condition and prevent us from fulfilling our obligations.
+We may require significant ongoing and recurring additional capital expenditures and investment in research and development, manufacturing and other areas to remain competitive.
+Our goodwill may be subject to asset impairment charges.
+We may require significant ongoing and recurring additional capital expenditures and investment in research and development, manufacturing and other areas to remain competitive.
+Our goodwill may be subject to asset impairment charges.
+We may require significant ongoing and recurring additional capital expenditures and investment in research and development, manufacturing and other areas to remain competitive.
+We may require significant ongoing and recurring additional capital expenditures and investment in research and development, manufacturing and other areas to remain competitive.
+We may require significant ongoing and recurring additional capital expenditures and investment in research and development, manufacturing and other areas to remain competitive.
+Our goodwill may be subject to asset impairment charges.
+Our goodwill may be subject to asset impairment charges.
+Our goodwill may be subject to asset impairment charges.
+We are subject to governmental regulations that may affect our ability to implement our business objectives.
+We are subject to governmental regulations that may affect our ability to implement our business objectives.
+Environmental and health and safety liabilities and requirements could require us to incur material costs.
+Environmental and health and safety liabilities and requirements could require us to incur material costs.
+We are dependent upon the availability of raw materials, and we may not be able to receive favorable prices for, or continued supplies of, raw materials, which may affect our ability to obtain enough supplies to conduct our business.
+We are dependent upon the availability of raw materials, and we may not be able to receive favorable prices for, or continued supplies of, raw materials, which may affect our ability to obtain enough supplies to conduct our business.
+We are dependent upon the availability of raw materials, and we may not be able to receive favorable prices for, or continued supplies of, raw materials, which may affect our ability to obtain enough supplies to conduct our business.
+We are dependent upon the availability of raw materials, and we may not be able to receive favorable prices for, or continued supplies of, raw materials, which may affect our ability to obtain enough supplies to conduct our business.
+We are subject to risks associated with international operations.
+We are subject to risks associated with international operations.
+We depend on our key personnel.
+We depend on our key personnel.
+Our existing preferred shareholders have the ability to exert voting control with respect to the election of directors.
+Our existing preferred shareholders have the ability to exert voting control with respect to the election of directors.
+Our existing preferred shareholders have the ability to exert voting control with respect to the election of directors.
+<p><a href="http://www.sec.gov/Archives/edgar/data/849240/0000849240-06-000004.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/1110805--3-14-2006--VALERO_L_P.html'">1110805--3/14/2006--VALERO_L_P</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/709804--6-14-2006--ADAPTEC_INC.html'">709804--6/14/2006--ADAPTEC_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/771266--3-10-2009--KOPIN_CORP.html'">771266--3/10/2009--KOPIN_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/709283--6-30-2009--QUANTUM_CORP_-DE-.html'">709283--6/30/2009--QUANTUM_CORP_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1157780--6-14-2010--OPNEXT_INC.html'">1157780--6/14/2010--OPNEXT_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/771266--3-31-2008--KOPIN_CORP.html'">771266--3/31/2008--KOPIN_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/887969--3-16-2010--MRV_COMMUNICATIONS_INC.html'">887969--3/16/2010--MRV_COMMUNICATIONS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1035884--2-26-2009--COMMSCOPE_INC.html'">1035884--2/26/2009--COMMSCOPE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1052303--12-29-2006--TERAYON_COMMUNICATION_SYSTEMS.html'">1052303--12/29/2006--TERAYON_COMMUNICATION_SYSTEMS</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/66479--3-15-2006--MILLIPORE_CORP_-MA.html'">66479--3/15/2006--MILLIPORE_CORP_/MA</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/897723--11-24-2008--SANMINA-SCI_CORP.html'">897723--11/24/2008--SANMINA-SCI_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1101302--2-26-2010--ENTEGRIS_INC.html'">1101302--2/26/2010--ENTEGRIS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/771266--3-21-2006--KOPIN_CORP.html'">771266--3/21/2006--KOPIN_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1319229--3-16-2007--TransMontaigne_Partners_L.P..html'">1319229--3/16/2007--TransMontaigne_Partners_L.P.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1035884--2-28-2008--COMMSCOPE_INC.html'">1035884--2/28/2008--COMMSCOPE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1052303--4-2-2007--TERAYON_COMMUNICATION_SYSTEMS.html'">1052303--4/2/2007--TERAYON_COMMUNICATION_SYSTEMS</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1232229--9-13-2006--SYNTAX-BRILLIAN_CORP.html'">1232229--9/13/2006--SYNTAX-BRILLIAN_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1118941--3-14-2007--ENDWAVE_CORP.html'">1118941--3/14/2007--ENDWAVE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1022321--3-15-2007--GENESIS_ENERGY_LP.html'">1022321--3/15/2007--GENESIS_ENERGY_LP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/887969--10-8-2009--MRV_COMMUNICATIONS_INC.html'">887969--10/8/2009--MRV_COMMUNICATIONS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/722392--12-13-2006--PLANAR_SYSTEMS_INC.html'">722392--12/13/2006--PLANAR_SYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1135711--2-28-2006--NETLOGIC_MICROSYSTEMS_INC.html'">1135711--2/28/2006--NETLOGIC_MICROSYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1141240--3-16-2006--LIQUIDMETAL_TECHNOLOGIES_INC.html'">1141240--3/16/2006--LIQUIDMETAL_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/752431--6-9-2010--NETWORK_EQUIPMENT_TECHNOLOGIES_INC.html'">752431--6/9/2010--NETWORK_EQUIPMENT_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1043604--2-26-2010--JUNIPER_NETWORKS_INC.html'">1043604--2/26/2010--JUNIPER_NETWORKS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1022225--9-10-2010--OPLINK_COMMUNICATIONS_INC.html'">1022225--9/10/2010--OPLINK_COMMUNICATIONS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1094243--3-31-2006--SOMERA_COMMUNICATIONS_INC.html'">1094243--3/31/2006--SOMERA_COMMUNICATIONS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1051627--3-14-2008--AXT_INC.html'">1051627--3/14/2008--AXT_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1043604--3-2-2009--JUNIPER_NETWORKS_INC.html'">1043604--3/2/2009--JUNIPER_NETWORKS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/742550--1-8-2010--XETA_TECHNOLOGIES_INC.html'">742550--1/8/2010--XETA_TECHNOLOGIES_INC</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

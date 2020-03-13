@@ -1,0 +1,192 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[3.5440418754, "../topics/{product,_liability,_claim}.html", "{product,_liability,_claim}"], [3.1583990103, "../topics/{system,_service,_information}.html", "{system,_service,_information}"], [3.0397296576, "../topics/{regulation,_government,_change}.html", "{regulation,_government,_change}"], [2.7112684532, "../topics/{operation,_natural,_condition}.html", "{operation,_natural,_condition}"], [2.6974953438, "../topics/{loan,_real,_estate}.html", "{loan,_real,_estate}"], [2.6947223011, "../topics/{debt,_indebtedness,_cash}.html", "{debt,_indebtedness,_cash}"], [2.6106263615, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [1.9792836589, "../topics/{financial,_litigation,_operation}.html", "{financial,_litigation,_operation}"], [1.7797627824, "../topics/{loss,_insurance,_financial}.html", "{loss,_insurance,_financial}"], [1.6996739946, "../topics/{competitive,_industry,_competition}.html", "{competitive,_industry,_competition}"], [1.6962616404, "../topics/{control,_financial,_internal}.html", "{control,_financial,_internal}"], [1.6962425656, "../topics/{regulation,_change,_law}.html", "{regulation,_change,_law}"], [1.6962129447, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"], [1.689426861, "../topics/{product,_market,_service}.html", "{product,_market,_service}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>741815--5/2/2006--HOOPER_HOLMES_INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">741815--5/2/2006--HOOPER_HOLMES_INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{product,_liability,_claim}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_liability,_claim}.html'">{product, liability, claim}</td></tr>
+<tr class="list"><td id="{system,_service,_information}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{system,_service,_information}.html'">{system, service, information}</td></tr>
+<tr class="list"><td id="{regulation,_government,_change}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_government,_change}.html'">{regulation, government, change}</td></tr>
+<tr class="list"><td id="{operation,_natural,_condition}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_natural,_condition}.html'">{operation, natural, condition}</td></tr>
+<tr class="list"><td id="{loan,_real,_estate}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{loan,_real,_estate}.html'">{loan, real, estate}</td></tr>
+<tr class="list"><td id="{debt,_indebtedness,_cash}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{debt,_indebtedness,_cash}.html'">{debt, indebtedness, cash}</td></tr>
+<tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{financial,_litigation,_operation}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{financial,_litigation,_operation}.html'">{financial, litigation, operation}</td></tr>
+<tr class="list"><td id="{loss,_insurance,_financial}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{loss,_insurance,_financial}.html'">{loss, insurance, financial}</td></tr>
+<tr class="list"><td id="{competitive,_industry,_competition}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{competitive,_industry,_competition}.html'">{competitive, industry, competition}</td></tr>
+<tr class="list"><td id="{control,_financial,_internal}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{control,_financial,_internal}.html'">{control, financial, internal}</td></tr>
+<tr class="list"><td id="{regulation,_change,_law}" onmouseover="highlight(11)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_change,_law}.html'">{regulation, change, law}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(12)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+<tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(13)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    Risks Relating to the Health Information Division s Businesses
+We expect that the market for our life insurance risk assessment services will continue to contract.
+Our new senior management team is embarking on a number of initiatives in an effort to restore the operating margins of our core paramedical examination business and return the business to a growth path. The success of these initiatives depends on a number of factors, many of which are outside management s control.
+We have experienced downward pricing pressure from our life insurance carrier customers, which has hurt our operating margins and otherwise adversely affected our operating results.
+Our Health Information Division s ten largest customers represented approximately 32% of division revenues in 2005. The loss of a significant volume of business from any of these customers could be expected to result in a material reduction in our revenues and negatively affect our cash flows from operating activities.
+Improper actions by our paramedical examiners or our physician practitioners could cause us to lose business and result in claims against us or our incurring expenses to indemnify our life insurance carrier customers.
+If life insurance carriers and the agents and brokers who sell life insurance make greater use of tele-interviewing/underwriting, we may experience reduced demand for our paramedical examination services and a lower volume of orders for attending physician statements.
+Heritage Labs failure to provide accurate laboratory test results may result in claims against us.
+Our classification of most of our paramedical examiners outside of the State of California as independent contractors, rather than employees, exposes us to possible litigation and legal liability.
+Risks Related to Our Claims Evaluation Division
+There are signs that the outsourced medical claims management market in the United States may be contracting, which may limit the potential growth of our Claims Evaluation Division s business.
+Our Claims Evaluation Division s business is being affected by increased customer procurement demands, driven primarily by heightened federal laws and regulations, that are increasing operating costs.
+Our Claims Evaluation Division has a significant degree of customer concentration, such that the loss of any one of its larger customers would have a material effect on its operating results.
+The nature of the claims evaluation services we provide exposes us to possible litigation and liability.
+Healthcare providers are becoming increasingly resistant to the application of certain healthcare cost containment techniques. This could indirectly reduce the demand for our claims evaluation services.
+Our Claims Evaluation Division could be negatively affected by changes in what is a fragmented, but highly competitive market.
+If any of the members of our physician panel were to be found to lack proper credentials or be determined to be less than independent, the damage to our reputation and business could be considerable.
+Risks Relating to Our Company Generally
+Our management has determined that there are material weaknesses in our system of internal control over financial reporting, such that we have determined that such internal control was not effective as of December 31, 2005. If we are unable to address these weaknesses in our internal controls, we may not be able to report our future operating results and financial condition in an accurate and timely manner.
+Our senior credit facility is scheduled to expire in January 2007.
+If the Company is unable to meet the terms of its recently amended revolving credit facility dated April 25, 2006, the Company may not have sufficient cash to meet its operating and capital requirement needs.
+If we are not able to maintain and upgrade our information technology platform so that our customers are able to readily access critical data related to their underwriting decisions or processing of claims, the competitiveness of our businesses will suffer.
+Our expensing of stock options will negatively affect our operating results.
+Acquisitions or other investments present many risks, and we may not realize the anticipated financial and strategic goals of any of our acquisitions or other investments.
+<p><a href="http://www.sec.gov/Archives/edgar/data/741815/0001193125-06-095867.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/10795--11-24-2010--BECTON_DICKINSON_&_CO.html'">10795--11/24/2010--BECTON_DICKINSON_&_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/10795--11-25-2009--BECTON_DICKINSON_&_CO.html'">10795--11/25/2009--BECTON_DICKINSON_&_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1000736--3-2-2006--CAREMARK_RX_INC.html'">1000736--3/2/2006--CAREMARK_RX_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/862668--9-29-2008--ESCALON_MEDICAL_CORP.html'">862668--9/29/2008--ESCALON_MEDICAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/10795--11-30-2006--BECTON_DICKINSON_&_CO.html'">10795--11/30/2006--BECTON_DICKINSON_&_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1050007--11-30-2006--NUTRACEUTICAL_INTERNATIONAL_CORP.html'">1050007--11/30/2006--NUTRACEUTICAL_INTERNATIONAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1140859--11-28-2007--AMERISOURCEBERGEN_CORP.html'">1140859--11/28/2007--AMERISOURCEBERGEN_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/862668--10-12-2010--ESCALON_MEDICAL_CORP.html'">862668--10/12/2010--ESCALON_MEDICAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/10795--11-23-2007--BECTON_DICKINSON_&_CO.html'">10795--11/23/2007--BECTON_DICKINSON_&_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/313143--5-27-2008--HAEMONETICS_CORP.html'">313143--5/27/2008--HAEMONETICS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/780127--1-5-2010--SYNOVIS_LIFE_TECHNOLOGIES__INC.html'">780127--1/5/2010--SYNOVIS_LIFE_TECHNOLOGIES__INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/780127--1-12-2007--SYNOVIS_LIFE_TECHNOLOGIES__INC.html'">780127--1/12/2007--SYNOVIS_LIFE_TECHNOLOGIES__INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/862668--10-13-2009--ESCALON_MEDICAL_CORP.html'">862668--10/13/2009--ESCALON_MEDICAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/7536--2-8-2008--ARROW_ELECTRONICS_INC.html'">7536--2/8/2008--ARROW_ELECTRONICS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/949874--3-14-2006--YOUNG_INNOVATIONS_INC.html'">949874--3/14/2006--YOUNG_INNOVATIONS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/949874--3-14-2008--YOUNG_INNOVATIONS_INC.html'">949874--3/14/2008--YOUNG_INNOVATIONS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/949874--3-15-2007--YOUNG_INNOVATIONS_INC.html'">949874--3/15/2007--YOUNG_INNOVATIONS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/949874--3-12-2009--YOUNG_INNOVATIONS_INC.html'">949874--3/12/2009--YOUNG_INNOVATIONS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/879573--8-9-2007--CENTENNIAL_COMMUNICATIONS_CORP_-DE.html'">879573--8/9/2007--CENTENNIAL_COMMUNICATIONS_CORP_/DE</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/320121--4-23-2007--TELOS_CORP.html'">320121--4/23/2007--TELOS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/96287--5-4-2007--BOMBAY_COMPANY_INC.html'">96287--5/4/2007--BOMBAY_COMPANY_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1040130--6-1-2010--PETMED_EXPRESS_INC.html'">1040130--6/1/2010--PETMED_EXPRESS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1040130--6-1-2009--PETMED_EXPRESS_INC.html'">1040130--6/1/2009--PETMED_EXPRESS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/780127--1-12-2006--SYNOVIS_LIFE_TECHNOLOGIES__INC.html'">780127--1/12/2006--SYNOVIS_LIFE_TECHNOLOGIES__INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/12208--3-3-2006--BIO_RAD_LABORATORIES_INC.html'">12208--3/3/2006--BIO_RAD_LABORATORIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/31791--3-1-2010--PERKINELMER_INC.html'">31791--3/1/2010--PERKINELMER_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/57528--2-22-2008--LANCE_INC.html'">57528--2/22/2008--LANCE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/850483--4-2-2007--GTSI_CORP.html'">850483--4/2/2007--GTSI_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/879573--8-10-2006--CENTENNIAL_COMMUNICATIONS_CORP_-DE.html'">879573--8/10/2006--CENTENNIAL_COMMUNICATIONS_CORP_/DE</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/771729--4-16-2007--PEMCO_AVIATION_GROUP_INC.html'">771729--4/16/2007--PEMCO_AVIATION_GROUP_INC</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

@@ -1,0 +1,172 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[3.6957891561, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [3.6600072565, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [1.7032848126, "../topics/{cost,_operation,_labor}.html", "{cost,_operation,_labor}"], [1.6962714698, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"], [1.6962625556, "../topics/{regulation,_change,_law}.html", "{regulation,_change,_law}"], [1.6962616417, "../topics/{tax,_income,_asset}.html", "{tax,_income,_asset}"], [1.6962581101, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>23111--3/7/2007--COMPUTER_TASK_GROUP_INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">23111--3/7/2007--COMPUTER_TASK_GROUP_INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{cost,_operation,_labor}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_operation,_labor}.html'">{cost, operation, labor}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+<tr class="list"><td id="{regulation,_change,_law}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_change,_law}.html'">{regulation, change, law}</td></tr>
+<tr class="list"><td id="{tax,_income,_asset}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{tax,_income,_asset}.html'">{tax, income, asset}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    The recent increase in demand for information technology (IT) services and staffing may only be temporary and another significant decline in demand similar to that experienced from 1999 through 2003 would cause an adverse effect on our revenue and operating results.
+Our business depends on a large number of highly qualified professionals and, if we are not able to recruit and retain a sufficient number of these professionals, we would not be able to provide high quality services to our current and future customers, which would have an adverse effect on our revenue and operating results.
+Increased competition and the bargaining power of a significant customer may cause our billing rates to decline, which would have an adverse effect on our revenue and, if we are unable to control our personnel costs accordingly, our operating results.
+The currency, legislative, tax, regulatory and economic risks associated with international operations could have an adverse effect on our operating results if we are unable to mitigate or hedge these risks.
+We derive a significant portion of our revenue from a single customer and a significant reduction in the amount of IT services requested by this customer would have an adverse effect on our revenue and operating results.
+The IT services industry is highly competitive and fragmented, which means that our customers have a number of choices for providers of IT services and we may not be able to compete effectively.
+Changes in government regulations and laws affecting the IT services industry, including accounting principles and interpretations and the taxation of domestic and foreign operations, could adversely affect our results of operations.
+Our customer contracts generally have a short term or are terminable on short notice and a significant number of failures to renew, early terminations or renegotiations of our existing customer contracts could adversely affect our results of operations.
+The introduction of new IT products or services may render our existing staffing, IT solutions, or outsourcing offerings to be obsolete, which, if we are unable to keep pace with these corresponding changes, could have an adverse effect on our business.
+Existing and potential customers are outsourcing or considering outsourcing their IT requirements to foreign countries in which we may not currently have operations, which could have an adverse effect on our ability to obtain new customers or retain existing customers.
+A significant portion of our total assets consists of goodwill, which is subject to a periodic impairment analysis and a significant impairment determination in any future period could have an adverse effect on our results of operations even without a significant loss of revenue or increase in cash expenses attributable to such period.
+<p><a href="http://www.sec.gov/Archives/edgar/data/23111/0001193125-07-048465.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/23111--3-15-2006--COMPUTER_TASK_GROUP_INC.html'">23111--3/15/2006--COMPUTER_TASK_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/23111--3-10-2008--COMPUTER_TASK_GROUP_INC.html'">23111--3/10/2008--COMPUTER_TASK_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/23111--2-26-2009--COMPUTER_TASK_GROUP_INC.html'">23111--2/26/2009--COMPUTER_TASK_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/23111--2-25-2010--COMPUTER_TASK_GROUP_INC.html'">23111--2/25/2010--COMPUTER_TASK_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/855109--3-15-2006--EXABYTE_CORP_-DE-.html'">855109--3/15/2006--EXABYTE_CORP_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/873044--3-3-2006--RADISYS_CORP.html'">873044--3/3/2006--RADISYS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/352789--3-15-2006--IOMEGA_CORP.html'">352789--3/15/2006--IOMEGA_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/909791--3-7-2007--ULTRATECH_INC.html'">909791--3/7/2007--ULTRATECH_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1068717--2-18-2009--RTI_INTERNATIONAL_METALS_INC.html'">1068717--2/18/2009--RTI_INTERNATIONAL_METALS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/866787--10-27-2008--AUTOZONE_INC.html'">866787--10/27/2008--AUTOZONE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1014111--2-22-2007--IMATION_CORP.html'">1014111--2/22/2007--IMATION_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/37472--9-7-2006--FLEXSTEEL_INDUSTRIES_INC.html'">37472--9/7/2006--FLEXSTEEL_INDUSTRIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/37472--8-26-2010--FLEXSTEEL_INDUSTRIES_INC.html'">37472--8/26/2010--FLEXSTEEL_INDUSTRIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1048695--12-14-2006--F5_NETWORKS_INC.html'">1048695--12/14/2006--F5_NETWORKS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/8063--3-12-2008--ASTRONICS_CORP.html'">8063--3/12/2008--ASTRONICS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/915358--7-16-2010--SIGMATRON_INTERNATIONAL_INC.html'">915358--7/16/2010--SIGMATRON_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1048695--11-19-2007--F5_NETWORKS_INC.html'">1048695--11/19/2007--F5_NETWORKS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1029506--11-29-2010--RALCORP_HOLDINGS_INC_-MO.html'">1029506--11/29/2010--RALCORP_HOLDINGS_INC_/MO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/732026--9-17-2007--TRIO_TECH_INTERNATIONAL.html'">732026--9/17/2007--TRIO_TECH_INTERNATIONAL</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1060822--2-28-2007--CARTERS_INC.html'">1060822--2/28/2007--CARTERS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/851205--2-14-2008--COGNEX_CORP.html'">851205--2/14/2008--COGNEX_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/103379--3-10-2006--V_F_CORP.html'">103379--3/10/2006--V_F_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1032975--6-1-2009--LOGITECH_INTERNATIONAL_SA.html'">1032975--6/1/2009--LOGITECH_INTERNATIONAL_SA</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/106040--11-20-2006--WESTERN_DIGITAL_CORP.html'">106040--11/20/2006--WESTERN_DIGITAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1003950--3-11-2010--PERFORMANCE_TECHNOLOGIES_INC_\DE\.html'">1003950--3/11/2010--PERFORMANCE_TECHNOLOGIES_INC_\DE\</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/276889--12-14-2007--QUANEX_CORP.html'">276889--12/14/2007--QUANEX_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1047127--3-16-2006--AMKOR_TECHNOLOGY_INC.html'">1047127--3/16/2006--AMKOR_TECHNOLOGY_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/24741--2-15-2008--CORNING_INC_-NY.html'">24741--2/15/2008--CORNING_INC_/NY</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/909791--2-27-2009--ULTRATECH_INC.html'">909791--2/27/2009--ULTRATECH_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/24741--2-27-2007--CORNING_INC_-NY.html'">24741--2/27/2007--CORNING_INC_/NY</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

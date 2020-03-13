@@ -1,0 +1,196 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[6.8112851707, "../topics/{gas,_price,_oil}.html", "{gas,_price,_oil}"], [4.1120036843, "../topics/{debt,_indebtedness,_cash}.html", "{debt,_indebtedness,_cash}"], [2.9645216236, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [2.7042931582, "../topics/{operation,_natural,_condition}.html", "{operation,_natural,_condition}"], [2.6966990871, "../topics/{cost,_contract,_operation}.html", "{cost,_contract,_operation}"], [2.6537876414, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"], [2.1296344772, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [1.7656149236, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [1.7651603006, "../topics/{capital,_credit,_financial}.html", "{capital,_credit,_financial}"], [1.7573901914, "../topics/{cost,_regulation,_environmental}.html", "{cost,_regulation,_environmental}"], [1.730289289, "../topics/{tax,_income,_asset}.html", "{tax,_income,_asset}"], [1.6963502786, "../topics/{control,_financial,_internal}.html", "{control,_financial,_internal}"], [1.696145568, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [1.3487364596, "../topics/{product,_liability,_claim}.html", "{product,_liability,_claim}"], [1.2425139602, "../topics/{stock,_price,_share}.html", "{stock,_price,_share}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>48039--2/26/2010--HOLLY_CORP</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">48039--2/26/2010--HOLLY_CORP</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{gas,_price,_oil}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{gas,_price,_oil}.html'">{gas, price, oil}</td></tr>
+<tr class="list"><td id="{debt,_indebtedness,_cash}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{debt,_indebtedness,_cash}.html'">{debt, indebtedness, cash}</td></tr>
+<tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{operation,_natural,_condition}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_natural,_condition}.html'">{operation, natural, condition}</td></tr>
+<tr class="list"><td id="{cost,_contract,_operation}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_contract,_operation}.html'">{cost, contract, operation}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+<tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{capital,_credit,_financial}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{capital,_credit,_financial}.html'">{capital, credit, financial}</td></tr>
+<tr class="list"><td id="{cost,_regulation,_environmental}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_regulation,_environmental}.html'">{cost, regulation, environmental}</td></tr>
+<tr class="list"><td id="{tax,_income,_asset}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{tax,_income,_asset}.html'">{tax, income, asset}</td></tr>
+<tr class="list"><td id="{control,_financial,_internal}" onmouseover="highlight(11)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{control,_financial,_internal}.html'">{control, financial, internal}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(12)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{product,_liability,_claim}" onmouseover="highlight(13)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_liability,_claim}.html'">{product, liability, claim}</td></tr>
+<tr class="list"><td id="{stock,_price,_share}" onmouseover="highlight(14)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_share}.html'">{stock, price, share}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    We may not be able to successfully execute our business strategies to grow our business.
+To successfully operate our petroleum refining facilities, we are required to expend significant amounts for capital outlays and operating expenditures.
+We may incur significant costs to comply with new or changing environmental, energy, health and safety laws and regulations, and face potential exposure for environmental matters.
+The adoption of climate change legislation by Congress could result in increased operating costs and reduced demand for the refined products we produce.
+Insufficient ethanol supplies or disruption in ethanol supply may disrupt our ability to market ethanol blended fuels.
+Competition in the refining and marketing industry is intense, and an increase in competition in the markets in which we sell our products could adversely affect our earnings and profitability.
+We may be unsuccessful in integrating the operations of the assets we have recently acquired or of any future acquisitions with our operations, and in realizing all or any part of the anticipated benefits of any such acquisitions.
+We may not be able to retain existing customers or acquire new customers.
+A material decrease in the supply of crude oil available to our refineries could significantly reduce our production levels.
+The disruption or proration of the refined product distribution systems we utilize could negatively impact our profitability.
+The potential operation of new or expanded refined product transportation pipelines could impact the supply of refined products to our existing markets.
+We depend upon HEP for a substantial portion of the crude supply and distribution network that serve our refineries and we own a significant equity interest in HEP.
+Our operations are subject to operational hazards and unforeseen interruptions for which we may not be adequately insured.
+If we lose any of our key personnel, our ability to manage our business and continue our growth could be negatively impacted.
+We are exposed to the credit risks of our key customers.
+Terrorist attacks, and the threat of terrorist attacks or domestic vandalism, have resulted in increased costs to our business. Continued hostilities in the Middle East or other sustained military campaigns may adversely impact our results of operations.
+Our petroleum business financial results are seasonal and generally lower in the first and fourth quarters of the year, which may cause volatility in the price of our common stock.
+We may be unable to pay future dividends.
+Ongoing maintenance of effective internal controls in accordance with Section 404 of the Sarbanes-Oxley Act could cause us to incur additional expenditures of time and financial resources.
+Product liability claims and litigation could adversely affect our business and results of operations.
+If the market value of our inventory declines to an amount less than our LIFO basis, we would record a write-down of inventory and a non-cash charge to cost of sales, which would adversely affect our earnings.
+From time to time, our cash needs may exceed our internally generated cash flow, and our business could be materially and adversely affected if we are not able to obtain the necessary funds from financing activities.
+Changes in our credit profile may affect our relationship with our suppliers, which could have a material adverse effect on our liquidity and limit our ability to purchase enough crude oil to operate our refineries at desired capacity.
+We may not be able to obtain funding on acceptable terms or at all because of volatility and uncertainty in the credit and capital markets. This may hinder or prevent us from meeting our future capital needs.
+Our leverage may limit our ability to borrow additional funds, comply with the terms of our indebtedness or capitalize on business opportunities.
+Our debt agreements contain operating and financial restrictions that might constrain our business and financing activities.
+We may need to use current cash flow to fund our pension and postretirement health care obligations, which could have a significant adverse effect on our financial position.
+<p><a href="http://www.sec.gov/Archives/edgar/data/48039/0000950123-10-018263.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/1060990--3-1-2007--QUICKSILVER_RESOURCES_INC.html'">1060990--3/1/2007--QUICKSILVER_RESOURCES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1060990--3-1-2006--QUICKSILVER_RESOURCES_INC.html'">1060990--3/1/2006--QUICKSILVER_RESOURCES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/277158--3-13-2007--SEMCO_ENERGY_INC.html'">277158--3/13/2007--SEMCO_ENERGY_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/750561--3-16-2006--PARALLEL_PETROLEUM_CORP.html'">750561--3/16/2006--PARALLEL_PETROLEUM_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1131072--3-5-2009--TETON_ENERGY_CORP.html'">1131072--3/5/2009--TETON_ENERGY_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1123647--3-2-2007--ATP_OIL_&_GAS_CORP.html'">1123647--3/2/2007--ATP_OIL_&_GAS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1123647--3-15-2006--ATP_OIL_&_GAS_CORP.html'">1123647--3/15/2006--ATP_OIL_&_GAS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/43350--3-31-2010--Energy_Inc..html'">43350--3/31/2010--Energy_Inc.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/835011--9-11-2009--MGP_INGREDIENTS_INC.html'">835011--9/11/2009--MGP_INGREDIENTS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/872248--3-5-2007--PETROQUEST_ENERGY_INC.html'">872248--3/5/2007--PETROQUEST_ENERGY_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/872248--3-8-2006--PETROQUEST_ENERGY_INC.html'">872248--3/8/2006--PETROQUEST_ENERGY_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1405073--3-13-2009--Approach_Resources_Inc.html'">1405073--3/13/2009--Approach_Resources_Inc</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/886835--3-10-2006--SUPERIOR_ENERGY_SERVICES_INC.html'">886835--3/10/2006--SUPERIOR_ENERGY_SERVICES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1285720--3-29-2007--VERASUN_ENERGY_CORP.html'">1285720--3/29/2007--VERASUN_ENERGY_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1357568--3-29-2007--VERASUN_ENERGY_CORP.html'">1357568--3/29/2007--VERASUN_ENERGY_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1343202--3-29-2007--VERASUN_ENERGY_CORP.html'">1343202--3/29/2007--VERASUN_ENERGY_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/904080--2-27-2009--STONE_ENERGY_CORP.html'">904080--2/27/2009--STONE_ENERGY_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/72207--3-3-2006--NOBLE_ENERGY_INC.html'">72207--3/3/2006--NOBLE_ENERGY_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/835011--9-12-2008--MGP_INGREDIENTS_INC.html'">835011--9/12/2008--MGP_INGREDIENTS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/912750--3-1-2007--NEWFIELD_EXPLORATION_CO_-DE-.html'">912750--3/1/2007--NEWFIELD_EXPLORATION_CO_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/110430--3-1-2006--FRONTIER_OIL_CORP_-NEW-.html'">110430--3/1/2006--FRONTIER_OIL_CORP_/NEW/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/66418--6-29-2007--MEXCO_ENERGY_CORP.html'">66418--6/29/2007--MEXCO_ENERGY_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/66418--6-23-2008--MEXCO_ENERGY_CORP.html'">66418--6/23/2008--MEXCO_ENERGY_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/277924--1-14-2008--CREDO_PETROLEUM_CORP.html'">277924--1/14/2008--CREDO_PETROLEUM_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/750199--2-27-2006--ENERGY_PARTNERS_LTD.html'">750199--2/27/2006--ENERGY_PARTNERS_LTD</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1108827--2-27-2008--QUESTAR_MARKET_RESOURCES_INC.html'">1108827--2/27/2008--QUESTAR_MARKET_RESOURCES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/110430--2-28-2007--FRONTIER_OIL_CORP_-NEW-.html'">110430--2/28/2007--FRONTIER_OIL_CORP_/NEW/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/856716--3-14-2006--WESTERN_GAS_RESOURCES_INC.html'">856716--3/14/2006--WESTERN_GAS_RESOURCES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/70145--11-26-2008--NATIONAL_FUEL_GAS_CO.html'">70145--11/26/2008--NATIONAL_FUEL_GAS_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/839470--3-30-2007--URANIUM_RESOURCES_INC_-DE-.html'">839470--3/30/2007--URANIUM_RESOURCES_INC_/DE/</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

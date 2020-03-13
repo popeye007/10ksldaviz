@@ -1,0 +1,217 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[12.5829363777, "../topics/{tax,_income,_asset}.html", "{tax,_income,_asset}"], [11.733321715, "../topics/{debt,_indebtedness,_cash}.html", "{debt,_indebtedness,_cash}"], [7.8462141389, "../topics/{gas,_price,_oil}.html", "{gas,_price,_oil}"], [4.0806519028, "../topics/{operation,_natural,_condition}.html", "{operation,_natural,_condition}"], [3.7866069508, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [3.1837739786, "../topics/{cost,_regulation,_environmental}.html", "{cost,_regulation,_environmental}"], [3.1551179546, "../topics/{investment,_property,_distribution}.html", "{investment,_property,_distribution}"], [1.9118834395, "../topics/{loss,_insurance,_financial}.html", "{loss,_insurance,_financial}"], [1.8210491105, "../topics/{cost,_operation,_labor}.html", "{cost,_operation,_labor}"], [1.7751077563, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"], [1.7424693206, "../topics/{financial,_litigation,_operation}.html", "{financial,_litigation,_operation}"], [1.7302534844, "../topics/{interest,_director,_officer}.html", "{interest,_director,_officer}"], [1.6942140394, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [1.0688700535, "../topics/{regulation,_change,_law}.html", "{regulation,_change,_law}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>1323468--3/31/2006--Global_Partners_LP</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">1323468--3/31/2006--Global_Partners_LP</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{tax,_income,_asset}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{tax,_income,_asset}.html'">{tax, income, asset}</td></tr>
+<tr class="list"><td id="{debt,_indebtedness,_cash}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{debt,_indebtedness,_cash}.html'">{debt, indebtedness, cash}</td></tr>
+<tr class="list"><td id="{gas,_price,_oil}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{gas,_price,_oil}.html'">{gas, price, oil}</td></tr>
+<tr class="list"><td id="{operation,_natural,_condition}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_natural,_condition}.html'">{operation, natural, condition}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{cost,_regulation,_environmental}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_regulation,_environmental}.html'">{cost, regulation, environmental}</td></tr>
+<tr class="list"><td id="{investment,_property,_distribution}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{investment,_property,_distribution}.html'">{investment, property, distribution}</td></tr>
+<tr class="list"><td id="{loss,_insurance,_financial}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{loss,_insurance,_financial}.html'">{loss, insurance, financial}</td></tr>
+<tr class="list"><td id="{cost,_operation,_labor}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_operation,_labor}.html'">{cost, operation, labor}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+<tr class="list"><td id="{financial,_litigation,_operation}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{financial,_litigation,_operation}.html'">{financial, litigation, operation}</td></tr>
+<tr class="list"><td id="{interest,_director,_officer}" onmouseover="highlight(11)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{interest,_director,_officer}.html'">{interest, director, officer}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(12)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{regulation,_change,_law}" onmouseover="highlight(13)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_change,_law}.html'">{regulation, change, law}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    Risks Inherent in Our Business
+We may not have sufficient cash from operations to enable us to pay the minimum quarterly distribution following establishment of cash reserves and payment of fees and expenses, including payments to our general partner.
+Warmer weather conditions could adversely affect our results of operations and cash available for distribution to our unitholders.
+Our financial results are seasonal and generally lower in the second and third quarters of the calendar year, which is likely to result in our need to borrow money in order to make distributions to our unitholders during these quarters.
+Our risk management policies cannot eliminate all commodity risk. In addition, any non-compliance with our risk management policies could result in significant financial losses.
+We are exposed to trade credit risk in the ordinary course of our business activities.
+Some of our competitors have capital resources many times greater than ours and control greater supplies of refined petroleum products.
+Some of our residual oil volumes are subject to customers switching to natural gas which could result in loss of customers, which in turn could have an adverse effect on our results of operations and cash available for distribution to our unitholders.
+Energy efficiency and new technology may reduce the demand for our products and adversely affect our operating results and cash available for distribution to our unitholders.
+We are exposed to performance risk in our supply chain.
+If we do not make acquisitions on economically acceptable terms, our future growth may be limited.
+Our acquisition strategy involves risks that could reduce our ability to make distributions to our unitholders.
+We may not be able to renew our leases or our agreements for dedicated storage when they expire.
+A material amount of our terminalling capacity is controlled by one of our affiliates. Loss of that capacity could have an adverse effect on our results of operations and cash available for distribution to our unitholders.
+Our sales are generated under contracts that must be renegotiated or replaced periodically. If we are unable to successfully renegotiate or replace these contracts, then our results of operations and cash available for distribution to our unitholders could be adversely affected.
+Due to our lack of asset and geographic diversification, adverse developments in the terminals that we use or in our operating areas would reduce our ability to make distributions to our unitholders.
+Our operations are subject to operational hazards and unforeseen interruptions for which we may not be adequately insured.
+Our operations are subject to federal, state, and local laws and regulations relating to environmental protection and operational safety that could require us to incur substantial costs.
+Any terrorist attacks aimed at our facilities and any global and domestic economic repercussions from terrorist activities and the government s response could reduce our ability to make distributions to our unitholders.
+We are subject to federal, state and local laws and regulations that govern the product quality specifications of the refined petroleum products that we purchase, store, transport and sell.
+We depend on key personnel for the success of our business and some of those persons face conflicts in the allocation of their time to our business.
+We depend on unionized labor for the operation of our terminal in Chelsea, Massachusetts and at the facility in Revere, Massachusetts which is controlled and operated by one of our affiliates. Any work stoppages or labor disturbances at these facilities could disrupt our business.
+Risks Inherent in an Investment in Us
+Our general partner and its affiliates have conflicts of interest and limited fiduciary duties, which may permit them to favor their own interests to the detriment of our unitholders.
+Please read Item 13. Certain Relationships and Related Transactions Omnibus Agreement.
+Our partnership agreement limits our general partner s fiduciary duties to unitholders and restricts the remedies available to unitholders for actions taken by our general partner that might otherwise constitute breaches of fiduciary duty.
+Unitholders have limited voting rights and are not entitled to elect our general partner or its directors or initially to remove our general partner without its consent, which could lower the trading price of our common units.
+We may issue additional units without unitholder approval, which would dilute unitholders ownership interests.
+Our general partner has a limited call right that may require unitholders to sell their common units at an undesirable time or price.
+Our partnership agreement restricts the voting rights of unitholders owning 20% or more of our common units.
+Our debt levels may limit our flexibility in obtaining additional financing and in pursuing other business opportunities.
+Our credit agreement contains operating and financial restrictions that may restrict our business and financing activities.
+Restrictions in our credit agreement limit our ability to pay distributions upon the occurrence of certain events.
+We can borrow money under our credit agreement to pay distributions, which would reduce the amount of credit available to operate our business.
+Cost reimbursements due our general partner and its affiliates will reduce cash available for distribution to our unitholders.
+Unitholders may not have limited liability if a court finds that unitholder action constitutes control of our business.
+Unitholders may have liability to repay distributions.
+The control of our general partner may be transferred to a third party without unitholder consent.
+Certain members of the Slifka family and their affiliates may engage in activities that compete directly with us.
+We will incur increased costs as a result of being a public company.
+Our tax treatment depends on our status as a partnership for federal income tax purposes, as well as our not being subject to entity-level taxation by individual states. If the IRS were to treat us as a corporation or if we were to become subject to entity-level taxation for state tax purposes, then our cash available for distribution to unitholders would be substantially reduced.
+We have a subsidiary that will be treated as a corporation for federal income tax purposes and subject to corporate-level income taxes.
+If the IRS contests the federal income tax positions we take, the market for our common units may be adversely impacted, and the costs of any contest will reduce our cash available for distribution to unitholders.
+Unitholders may be required to pay taxes on their share of our income even if they do not receive any cash distributions from us.
+Tax gain or loss on the disposition of our common units could be different than expected.
+Tax-exempt entities and foreign persons face unique tax issues from owning common units that may result in adverse tax consequences to them.
+We will treat each purchaser of common units as having the same tax benefits without regard to the actual common units purchased. The IRS may challenge this treatment, which could decrease the value of the common units.
+The sale or exchange of 50% or more of our capital and profits interests during any twelve-month period will result in the termination of our partnership for federal income tax purposes.
+Unitholders will likely be subject to state and local taxes and return filing requirements in jurisdictions where they do not live as a result of investing in our common units.
+<p><a href="http://www.sec.gov/Archives/edgar/data/1323468/0001104659-06-021370.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/1323468--3-16-2007--GLOBAL_PARTNERS_LP.html'">1323468--3/16/2007--GLOBAL_PARTNERS_LP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/909281--2-27-2008--ONEOK_Partners_LP.html'">909281--2/27/2008--ONEOK_Partners_LP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1364541--4-2-2007--EAGLE_ROCK_ENERGY_PARTNERS_L_P.html'">1364541--4/2/2007--EAGLE_ROCK_ENERGY_PARTNERS_L_P</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1260828--4-14-2009--RIO_VISTA_ENERGY_PARTNERS_LP.html'">1260828--4/14/2009--RIO_VISTA_ENERGY_PARTNERS_LP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1260828--4-15-2008--RIO_VISTA_ENERGY_PARTNERS_LP.html'">1260828--4/15/2008--RIO_VISTA_ENERGY_PARTNERS_LP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1338613--3-2-2009--Regency_Energy_Partners_LP.html'">1338613--3/2/2009--Regency_Energy_Partners_LP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1338613--3-31-2006--Regency_Energy_Partners_LP.html'">1338613--3/31/2006--Regency_Energy_Partners_LP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1338613--3-1-2010--Regency_Energy_Partners_LP.html'">1338613--3/1/2010--Regency_Energy_Partners_LP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1379661--4-2-2007--Targa_Resources_Partners_LP.html'">1379661--4/2/2007--Targa_Resources_Partners_LP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1379661--3-31-2008--Targa_Resources_Partners_LP.html'">1379661--3/31/2008--Targa_Resources_Partners_LP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1411583--2-29-2008--WILLIAMS_PIPELINE_PARTNERS_L.P..html'">1411583--2/29/2008--WILLIAMS_PIPELINE_PARTNERS_L.P.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1357371--3-17-2008--BreitBurn_Energy_Partners_L.P..html'">1357371--3/17/2008--BreitBurn_Energy_Partners_L.P.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1338613--3-30-2007--Regency_Energy_Partners_LP.html'">1338613--3/30/2007--Regency_Energy_Partners_LP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1166036--3-2-2009--MARKWEST_ENERGY_PARTNERS_L_P.html'">1166036--3/2/2009--MARKWEST_ENERGY_PARTNERS_L_P</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1299716--3-15-2006--U.S._Shipping_Partners_L.P..html'">1299716--3/15/2006--U.S._Shipping_Partners_L.P.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1070423--2-29-2008--PLAINS_ALL_AMERICAN_PIPELINE_LP.html'">1070423--2/29/2008--PLAINS_ALL_AMERICAN_PIPELINE_LP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1398664--2-28-2008--Encore_Energy_Partners_LP.html'">1398664--2/28/2008--Encore_Energy_Partners_LP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1070423--3-1-2007--PLAINS_ALL_AMERICAN_PIPELINE_LP.html'">1070423--3/1/2007--PLAINS_ALL_AMERICAN_PIPELINE_LP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1070423--2-26-2009--PLAINS_ALL_AMERICAN_PIPELINE_LP.html'">1070423--2/26/2009--PLAINS_ALL_AMERICAN_PIPELINE_LP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1070423--2-26-2010--PLAINS_ALL_AMERICAN_PIPELINE_LP.html'">1070423--2/26/2010--PLAINS_ALL_AMERICAN_PIPELINE_LP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1357371--4-2-2007--BreitBurn_Energy_Partners_L.P..html'">1357371--4/2/2007--BreitBurn_Energy_Partners_L.P.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1398664--2-26-2009--Encore_Energy_Partners_LP.html'">1398664--2/26/2009--Encore_Energy_Partners_LP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1358831--3-6-2009--LEGACY_RESERVES_LP.html'">1358831--3/6/2009--LEGACY_RESERVES_LP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1178575--9-6-2006--K-SEA_TRANSPORTATION_PARTNERS_LP.html'">1178575--9/6/2006--K-SEA_TRANSPORTATION_PARTNERS_LP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1323468--3-14-2008--GLOBAL_PARTNERS_LP.html'">1323468--3/14/2008--GLOBAL_PARTNERS_LP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1166036--2-29-2008--MARKWEST_ENERGY_PARTNERS_L_P.html'">1166036--2/29/2008--MARKWEST_ENERGY_PARTNERS_L_P</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1136352--11-29-2007--INERGY_L_P.html'">1136352--11/29/2007--INERGY_L_P</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1323468--3-13-2009--GLOBAL_PARTNERS_LP.html'">1323468--3/13/2009--GLOBAL_PARTNERS_LP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1178575--9-15-2008--K-SEA_TRANSPORTATION_PARTNERS_LP.html'">1178575--9/15/2008--K-SEA_TRANSPORTATION_PARTNERS_LP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1178575--9-14-2009--K-SEA_TRANSPORTATION_PARTNERS_LP.html'">1178575--9/14/2009--K-SEA_TRANSPORTATION_PARTNERS_LP</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

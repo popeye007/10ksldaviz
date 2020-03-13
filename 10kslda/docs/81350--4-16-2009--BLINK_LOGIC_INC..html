@@ -1,0 +1,188 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[5.2624580829, "../topics/{stock,_price,_share}.html", "{stock,_price,_share}"], [3.1361637732, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [2.7028238306, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [2.6867662775, "../topics/{control,_financial,_internal}.html", "{control,_financial,_internal}"], [2.6765011793, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [1.7019143259, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"], [1.7015305138, "../topics/{debt,_indebtedness,_cash}.html", "{debt,_indebtedness,_cash}"], [1.6993923534, "../topics/{interest,_director,_officer}.html", "{interest,_director,_officer}"], [1.6963909824, "../topics/{provision,_law,_control}.html", "{provision,_law,_control}"], [1.6963422422, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [1.6961782617, "../topics/{competitive,_industry,_competition}.html", "{competitive,_industry,_competition}"], [1.6948587923, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"], [1.59108458, "../topics/{system,_service,_information}.html", "{system,_service,_information}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>81350--4/16/2009--BLINK_LOGIC_INC.</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">81350--4/16/2009--BLINK_LOGIC_INC.</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{stock,_price,_share}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_share}.html'">{stock, price, share}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{control,_financial,_internal}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{control,_financial,_internal}.html'">{control, financial, internal}</td></tr>
+<tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+<tr class="list"><td id="{debt,_indebtedness,_cash}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{debt,_indebtedness,_cash}.html'">{debt, indebtedness, cash}</td></tr>
+<tr class="list"><td id="{interest,_director,_officer}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{interest,_director,_officer}.html'">{interest, director, officer}</td></tr>
+<tr class="list"><td id="{provision,_law,_control}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{provision,_law,_control}.html'">{provision, law, control}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{competitive,_industry,_competition}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{competitive,_industry,_competition}.html'">{competitive, industry, competition}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(11)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+<tr class="list"><td id="{system,_service,_information}" onmouseover="highlight(12)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{system,_service,_information}.html'">{system, service, information}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    Our limited operating history makes evaluating our business and prospects difficult.
+We have a history of operating losses and we anticipate losses and negative cash flow for the foreseeable future. Unless we are able to generate profits and positive cash flow we may not be able to continue operations.
+We have expressed doubt about our ability to continue as a going concern. If we do not continue as a going concern, investors could lose their entire investment.
+If we do not make regular payments on our debentures, the lenders may demand payment of amounts owing under the terms of the debentures.
+We may require additional capital to proceed with our long-term business plan. If we are unable to obtain such capital in future years, we may be unable to proceed with our long-term business plan and we may be forced to cease or curtail our future operations.
+The loss of our President and CEO and other key personnel would likely have an adverse effect on our business.
+The business environment is highly competitive and, if we do not compete effectively, we may experience material adverse effects on our operations.
+If we are unable to develop brand recognition, we may be unable to generate significant revenues and our results of operations may be materially adversely affected.
+If we are unable to respond to rapid technological change and improve our solutions and services, our business could be materially adversely affected.
+We may not be able to protect and enforce our intellectual property rights, which could result in the loss of our rights, loss of business or increased costs.
+Claims by third parties that we infringe upon their proprietary technology could hurt our financial condition.
+If security were breached, our business would be materially adversely affected.
+Our operating results may prove unpredictable and may fluctuate significantly.
+Other risks associated with international operations could adversely affect our business operations and our results of operations.
+Our common stock price may be volatile.
+There is a limited market for our common stock. If a substantial and sustained market for our common stock does not develop, our stockholders' ability to sell their shares may be materially and adversely affected.
+Shares issuable upon the exercise of stock options, exercise of stock purchase warrants and the conversion of convertible debentures or under anti-dilution provisions in certain agreements could dilute stock holdings and adversely affect our stock price.
+A large number of shares will be eligible for future sale and may depress our stock price.
+Our common stock is a penny stock. As a result, trading of our shares may be subject to special requirements that could impede our stockholders' ability to resell their shares.
+Our current and former executive officers, directors and major stockholders own a significant percentage of our voting stock. As a result, they exercise significant control over our business affairs and policy.
+Our articles of incorporation contain provisions that could discourage an acquisition or change of control of our company.
+<p><a href="http://www.sec.gov/Archives/edgar/data/81350/0001052918-09-000169.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/1102542--1-27-2006--SCO_GROUP_INC.html'">1102542--1/27/2006--SCO_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1456453--4-29-2010--WellTek_Inc.html'">1456453--4/29/2010--WellTek_Inc</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1371128--3-25-2008--BioSolar_Inc.html'">1371128--3/25/2008--BioSolar_Inc</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/740726--4-3-2007--BROADCAST_INTERNATIONAL_INC.html'">740726--4/3/2007--BROADCAST_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/352998--3-31-2009--IGI_INC.html'">352998--3/31/2009--IGI_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/75439--3-31-2009--CytoCore_Inc.html'">75439--3/31/2009--CytoCore_Inc</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/740726--3-30-2009--BROADCAST_INTERNATIONAL_INC.html'">740726--3/30/2009--BROADCAST_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/740726--4-4-2008--BROADCAST_INTERNATIONAL_INC.html'">740726--4/4/2008--BROADCAST_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1121827--3-6-2009--BIG_SKY_INDUSTRIES_VI_INC.html'">1121827--3/6/2009--BIG_SKY_INDUSTRIES_VI_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1121827--3-6-2009--BIG_SKY_INDUSTRIES_VI_INC.html'">1121827--3/6/2009--BIG_SKY_INDUSTRIES_VI_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1121827--3-4-2009--BIG_SKY_INDUSTRIES_VI_INC.html'">1121827--3/4/2009--BIG_SKY_INDUSTRIES_VI_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1121827--2-25-2009--BIG_SKY_INDUSTRIES_VI_INC.html'">1121827--2/25/2009--BIG_SKY_INDUSTRIES_VI_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1121827--2-25-2009--BIG_SKY_INDUSTRIES_VI_INC.html'">1121827--2/25/2009--BIG_SKY_INDUSTRIES_VI_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1121816--2-20-2009--BIG_SKY_INDUSTRIES_V_INC.html'">1121816--2/20/2009--BIG_SKY_INDUSTRIES_V_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1121816--2-18-2009--BIG_SKY_INDUSTRIES_V_INC.html'">1121816--2/18/2009--BIG_SKY_INDUSTRIES_V_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1121816--2-18-2009--BIG_SKY_INDUSTRIES_V_INC.html'">1121816--2/18/2009--BIG_SKY_INDUSTRIES_V_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1121816--2-13-2009--BIG_SKY_INDUSTRIES_V_INC.html'">1121816--2/13/2009--BIG_SKY_INDUSTRIES_V_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1121816--2-13-2009--BIG_SKY_INDUSTRIES_V_INC.html'">1121816--2/13/2009--BIG_SKY_INDUSTRIES_V_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1121816--2-13-2009--BIG_SKY_INDUSTRIES_V_INC.html'">1121816--2/13/2009--BIG_SKY_INDUSTRIES_V_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1121814--2-5-2009--BIG_SKY_INDUSTRIES_IV_INC.html'">1121814--2/5/2009--BIG_SKY_INDUSTRIES_IV_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1121814--2-4-2009--BIG_SKY_INDUSTRIES_IV_INC.html'">1121814--2/4/2009--BIG_SKY_INDUSTRIES_IV_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1121814--2-3-2009--BIG_SKY_INDUSTRIES_IV_INC.html'">1121814--2/3/2009--BIG_SKY_INDUSTRIES_IV_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1121814--2-2-2009--BIG_SKY_INDUSTRIES_IV_INC.html'">1121814--2/2/2009--BIG_SKY_INDUSTRIES_IV_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1121814--2-2-2009--BIG_SKY_INDUSTRIES_IV_INC.html'">1121814--2/2/2009--BIG_SKY_INDUSTRIES_IV_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1121813--2-2-2009--BIG_SKY_INDUSTRIES_III_INC.html'">1121813--2/2/2009--BIG_SKY_INDUSTRIES_III_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1121813--2-2-2009--BIG_SKY_INDUSTRIES_III_INC.html'">1121813--2/2/2009--BIG_SKY_INDUSTRIES_III_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1121813--1-27-2009--BIG_SKY_INDUSTRIES_III_INC.html'">1121813--1/27/2009--BIG_SKY_INDUSTRIES_III_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1121813--1-27-2009--BIG_SKY_INDUSTRIES_III_INC.html'">1121813--1/27/2009--BIG_SKY_INDUSTRIES_III_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1121813--1-23-2009--BIG_SKY_INDUSTRIES_III_INC.html'">1121813--1/23/2009--BIG_SKY_INDUSTRIES_III_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1121813--1-20-2009--BIG_SKY_INDUSTRIES_III_INC.html'">1121813--1/20/2009--BIG_SKY_INDUSTRIES_III_INC</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

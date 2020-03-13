@@ -1,0 +1,184 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[4.7051638055, "../topics/{system,_service,_information}.html", "{system,_service,_information}"], [3.8068206596, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [3.2174728354, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [2.8638238977, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [2.4467069637, "../topics/{product,_liability,_claim}.html", "{product,_liability,_claim}"], [2.1847572271, "../topics/{regulation,_government,_change}.html", "{regulation,_government,_change}"], [1.8582705775, "../topics/{investment,_property,_distribution}.html", "{investment,_property,_distribution}"], [1.852208821, "../topics/{condition,_economic,_financial}.html", "{condition,_economic,_financial}"], [1.8440234405, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [1.0259478382, "../topics/{provision,_law,_control}.html", "{provision,_law,_control}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>917524--5/31/2006--TALX_CORP</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">917524--5/31/2006--TALX_CORP</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{system,_service,_information}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{system,_service,_information}.html'">{system, service, information}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{product,_liability,_claim}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_liability,_claim}.html'">{product, liability, claim}</td></tr>
+<tr class="list"><td id="{regulation,_government,_change}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_government,_change}.html'">{regulation, government, change}</td></tr>
+<tr class="list"><td id="{investment,_property,_distribution}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{investment,_property,_distribution}.html'">{investment, property, distribution}</td></tr>
+<tr class="list"><td id="{condition,_economic,_financial}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{condition,_economic,_financial}.html'">{condition, economic, financial}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{provision,_law,_control}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{provision,_law,_control}.html'">{provision, law, control}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    ECONOMIC CONDITIONS SUCH AS INTEREST RATES AND EMPLOYMENT TRENDS.
+WHICH MAY RESULT IN DAMAGE CLAIMS AND LOSS OF CUSTOMERS.
+FACE SIGNIFICANT CLAIMS AND OUR REPUTATION COULD BE HARMED.
+THE SIZE AND RANGE OF APPLICATIONS FOR THE WORK NUMBER DATABASE.
+SIGNIFICANTLY HARM OUR REVENUES AND INDUSTRY REPUTATION.
+PROFITABILITY COULD BE SIGNIFICANTLY HARMED.
+REQUIREMENTS WERE RELAXED OR ELIMINATED.
+COMPENSATION MANAGEMENT AND LIMITING OPPORTUNITIES FOR TAX PLANNING.
+SERVICES, OUR BUSINESS AND REVENUES COULD BE HARMED.
+WHICH COULD CAUSE OUR STOCK PRICE TO DECLINE SIGNIFICANTLY.
+OPERATIONS WOULD BE SIGNIFICANTLY HARMED.
+SUPPORTED OR DEVELOP DEFECTS.
+DEVELOPMENT EFFORTS AND RESULT IN A LOSS OF CUSTOMERS.
+THE LOSS OF KEY MANAGEMENT WOULD ADVERSELY AFFECT OUR BUSINESS.
+TO RECRUIT OR RETAIN NECESSARY PERSONNEL ON A COST-EFFECTIVE BASIS.
+OUR RESULTS OF OPERATIONS AND REPUTATION.
+WE FACE COMPETITION FROM A BROAD RANGE OF COMPANIES.
+POSSIBLE BENEFITS TO OUR SHAREHOLDERS.
+OUR STOCK PRICE IS VOLATILE AND COULD DROP UNEXPECTEDLY.
+LITIGATION, WHICH IS COSTLY AND TIME-CONSUMING TO DEFEND.
+<p><a href="http://www.sec.gov/Archives/edgar/data/917524/0000950137-06-006401.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/1169445--3-16-2007--COMPUTER_PROGRAMS_&_SYSTEMS_INC.html'">1169445--3/16/2007--COMPUTER_PROGRAMS_&_SYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/891919--4-17-2008--BOOKS_A_MILLION_INC.html'">891919--4/17/2008--BOOKS_A_MILLION_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1094238--9-13-2006--HARRIS_INTERACTIVE_INC.html'">1094238--9/13/2006--HARRIS_INTERACTIVE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/891919--4-16-2009--BOOKS_A_MILLION_INC.html'">891919--4/16/2009--BOOKS_A_MILLION_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1006892--3-14-2008--JDA_SOFTWARE_GROUP_INC.html'">1006892--3/14/2008--JDA_SOFTWARE_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/849399--6-9-2006--SYMANTEC_CORP.html'">849399--6/9/2006--SYMANTEC_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/891178--3-11-2008--EPICOR_SOFTWARE_CORP.html'">891178--3/11/2008--EPICOR_SOFTWARE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/888702--6-24-2010--PSI_CORP.html'">888702--6/24/2010--PSI_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1094238--9-12-2007--HARRIS_INTERACTIVE_INC.html'">1094238--9/12/2007--HARRIS_INTERACTIVE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1080056--3-16-2007--THESTREET_COM.html'">1080056--3/16/2007--THESTREET_COM</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1080056--3-16-2006--THESTREET_COM.html'">1080056--3/16/2006--THESTREET_COM</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/352988--9-28-2006--COMTEX_NEWS_NETWORK_INC.html'">352988--9/28/2006--COMTEX_NEWS_NETWORK_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1006892--3-16-2007--JDA_SOFTWARE_GROUP_INC.html'">1006892--3/16/2007--JDA_SOFTWARE_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1069502--4-23-2008--VARSITY_GROUP_INC.html'">1069502--4/23/2008--VARSITY_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1001250--8-20-2010--ESTEE_LAUDER_COMPANIES_INC.html'">1001250--8/20/2010--ESTEE_LAUDER_COMPANIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1006892--3-13-2009--JDA_SOFTWARE_GROUP_INC.html'">1006892--3/13/2009--JDA_SOFTWARE_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1094561--3-8-2006--QUOVADX_INC.html'">1094561--3/8/2006--QUOVADX_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/874866--6-11-2010--CORVEL_CORP.html'">874866--6/11/2010--CORVEL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1111634--3-31-2010--XO_HOLDINGS_INC.html'">1111634--3/31/2010--XO_HOLDINGS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/764478--5-2-2007--BEST_BUY_CO_INC.html'">764478--5/2/2007--BEST_BUY_CO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/78536--3-16-2010--REWARDS_NETWORK_INC.html'">78536--3/16/2010--REWARDS_NETWORK_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1087934--3-29-2006--UCN_INC.html'">1087934--3/29/2006--UCN_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1014052--10-29-2008--ATSI_COMMUNICATIONS_INC-DE.html'">1014052--10/29/2008--ATSI_COMMUNICATIONS_INC/DE</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1010612--3-13-2008--SYKES_ENTERPRISES_INC.html'">1010612--3/13/2008--SYKES_ENTERPRISES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1017172--3-15-2007--LIGHTBRIDGE_INC.html'">1017172--3/15/2007--LIGHTBRIDGE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/78536--3-15-2006--REWARDS_NETWORK_INC.html'">78536--3/15/2006--REWARDS_NETWORK_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/949297--3-17-2006--APAC_CUSTOMER_SERVICE_INC.html'">949297--3/17/2006--APAC_CUSTOMER_SERVICE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1001868--4-2-2007--FIBERNET_TELECOM_GROUP_INC\.html'">1001868--4/2/2007--FIBERNET_TELECOM_GROUP_INC\</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/764478--4-30-2008--BEST_BUY_CO_INC.html'">764478--4/30/2008--BEST_BUY_CO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1144354--3-14-2006--HEARTLAND_PAYMENT_SYSTEMS_INC.html'">1144354--3/14/2006--HEARTLAND_PAYMENT_SYSTEMS_INC</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

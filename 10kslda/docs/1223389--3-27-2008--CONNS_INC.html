@@ -1,0 +1,194 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[5.9170996889, "../topics/{capital,_credit,_financial}.html", "{capital,_credit,_financial}"], [4.0804543476, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [3.1135086653, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [2.8576764955, "../topics/{cost,_operation,_labor}.html", "{cost,_operation,_labor}"], [2.8326934285, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [2.7960842135, "../topics/{condition,_economic,_financial}.html", "{condition,_economic,_financial}"], [2.7897803113, "../topics/{system,_service,_information}.html", "{system,_service,_information}"], [2.660732993, "../topics/{regulation,_change,_law}.html", "{regulation,_change,_law}"], [1.8643538148, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"], [1.7492828359, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"], [1.7208148151, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [1.7148620987, "../topics/{operation,_natural,_condition}.html", "{operation,_natural,_condition}"], [1.5713118295, "../topics/{financial,_litigation,_operation}.html", "{financial,_litigation,_operation}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>1223389--3/27/2008--CONNS_INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">1223389--3/27/2008--CONNS_INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{capital,_credit,_financial}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{capital,_credit,_financial}.html'">{capital, credit, financial}</td></tr>
+<tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{cost,_operation,_labor}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_operation,_labor}.html'">{cost, operation, labor}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{condition,_economic,_financial}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{condition,_economic,_financial}.html'">{condition, economic, financial}</td></tr>
+<tr class="list"><td id="{system,_service,_information}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{system,_service,_information}.html'">{system, service, information}</td></tr>
+<tr class="list"><td id="{regulation,_change,_law}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_change,_law}.html'">{regulation, change, law}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{operation,_natural,_condition}" onmouseover="highlight(11)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_natural,_condition}.html'">{operation, natural, condition}</td></tr>
+<tr class="list"><td id="{financial,_litigation,_operation}" onmouseover="highlight(12)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{financial,_litigation,_operation}.html'">{financial, litigation, operation}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    OUR SUCCESS DEPENDS ON OUR ABILITY TO OPEN AND OPERATE  PROFITABLY NEW STORES IN EXISTING, ADJACENT AND NEW GEOGRAPHIC MARKETS.
+IF WE ARE UNABLE TO MANAGE OUR GROWING  BUSINESS,  OUR REVENUES MAY NOT INCREASE AS  ANTICIPATED,  OUR COST OF  OPERATIONS  MAY RISE  AND OUR  PROFITABILITY  MAY DECLINE.
+THE INABILITY TO OBTAIN FUNDING FOR OUR CREDIT OPERATIONS THROUGH SECURITIZATION FACILITIES  OR OTHER  SOURCES MAY  ADVERSELY  AFFECT OUR BUSINESS AND  EXPANSION PLANS.
+AN INCREASE IN INTEREST RATES MAY ADVERSELY AFFECT OUR PROFITABILITY.
+WE HAVE SIGNIFICANT  FUTURE CAPITAL NEEDS WHICH WE MAY BE UNABLE TO FUND, AND WE MAY NEED ADDITIONAL FUNDING SOONER THAN CURRENTLY ANTICIPATED.
+A DECREASE IN OUR CREDIT  SALES OR A DECLINE IN CREDIT  QUALITY  COULD LEAD TO A DECREASE IN OUR PRODUCT SALES AND PROFITABILITY.
+WHICH COULD REDUCE OUR NET SALES.
+WE FACE SIGNIFICANT  COMPETITION FROM NATIONAL,  REGIONAL AND LOCAL RETAILERS OF HOME APPLIANCES AND CONSUMER ELECTRONICS.
+IF NEW PRODUCTS ARE NOT INTRODUCED OR CONSUMERS DO NOT ACCEPT NEW PRODUCTS,  OUR SALES MAY DECLINE.
+IF WE FAIL TO ANTICIPATE CHANGES IN CONSUMER PREFERENCES, OUR SALES MAY DECLINE.
+A DISRUPTION IN OUR RELATIONSHIPS  WITH, OR IN THE OPERATIONS OF, ANY OF OUR KEY SUPPLIERS COULD CAUSE OUR SALES TO DECLINE.
+YOU SHOULD NOT RELY ON OUR COMPARABLE STORE SALES AS AN INDICATION OF OUR FUTURE RESULTS OF OPERATIONS BECAUSE THEY FLUCTUATE SIGNIFICANTLY.
+BECAUSE WE EXPERIENCE SEASONAL  FLUCTUATIONS IN OUR SALES, OUR QUARTERLY RESULTS WILL FLUCTUATE, WHICH COULD ADVERSELY AFFECT OUR COMMON STOCK PRICE.
+OUR BUSINESS COULD BE ADVERSELY AFFECTED BY CHANGES IN CONSUMER  PROTECTION LAWS AND REGULATIONS.
+PENDING  LITIGATION  RELATING  TO THE SALE OF CREDIT  INSURANCE  AND THE SALE OF SERVICE MAINTENANCE AGREEMENTS IN THE RETAIL INDUSTRY COULD ADVERSELY AFFECT OUR BUSINESS.
+OUR OPERATING RESULTS COULD SUFFER.
+BECAUSE OUR STORES ARE LOCATED IN TEXAS,  LOUISIANA AND OKLAHOMA, WE ARE SUBJECT TO REGIONAL RISKS.
+OUR  INFORMATION  TECHNOLOGY  INFRASTRUCTURE  IS VULNERABLE TO DAMAGE THAT COULD HARM OUR BUSINESS.
+IF WE ARE UNABLE TO MAINTAIN OUR INSURANCE LICENSES IN THE STATES WE OPERATE OUR OPERATING RESULTS COULD SUFFER.
+IF WE ARE UNABLE TO MAINTAIN  OUR  CURRENT  INSURANCE  COVERAGE  FOR OUR SERVICE MAINTENANCE  AGREEMENTS,  OUR  CUSTOMERS  COULD INCUR  ADDITIONAL  COSTS AND OUR REPAIR  EXPENSES  COULD  INCREASE,  WHICH COULD  ADVERSELY  AFFECT OUR FINANCIAL CONDITION AND RESULTS OF OPERATIONS.
+IF WE ARE UNABLE TO MAINTAIN  GROUP CREDIT  INSURANCE  POLICIES  FROM  INSURANCE CARRIERS,  WHICH  ALLOW US TO  OFFER  THEIR  CREDIT  INSURANCE  PRODUCTS  TO OUR CUSTOMERS  PURCHASING  ON CREDIT,  OUR  REVENUES  COULD BE REDUCED AND BAD DEBTS MIGHT INCREASE.
+CHANGES IN PREMIUM AND  COMMISSION  RATES  ALLOWED BY  REGULATORS  ON OUR CREDIT INSURANCE  AND  SERVICE  MAINTENANCE  AGREEMENTS  AS  ALLOWED  BY THE  LAWS  AND REGULATIONS IN THE STATES IN WHICH WE OPERATE COULD AFFECT OUR REVENUES.
+CHANGES IN TRADE REGULATIONS, CURRENCY FLUCTUATIONS AND OTHER FACTORS BEYOND OUR CONTROL COULD AFFECT OUR BUSINESS.
+WE MAY BE UNABLE TO PROTECT OUR INTELLECTUAL PROPERTY RIGHTS, WHICH COULD IMPAIR OUR NAME AND REPUTATION.
+FAILURE TO PROTECT THE SECURITY OF OUR CUSTOMER'S INFORMATION COULD EXPOSE US TO LITIGATION,  JUDGMENTS FOR DAMAGES AND UNDERMINE THE TRUST PLACED WITH US BY OUR CUSTOMERS.
+ANY CHANGES IN THE TAX LAWS OF THE STATES IN WHICH WE OPERATE  COULD  AFFECT OUR STATE TAX LIABILITIES.  ADDITIONALLY,  BEGINNING  OPERATIONS IN NEW STATES COULD ALSO AFFECT OUR STATE TAX LIABILITIES.
+DETERMINATION  TO DRIVE TO OUR  STORES,  AND  CAUSE  US TO  RAISE  OUR  DELIVERY CHARGES.
+<p><a href="http://www.sec.gov/Archives/edgar/data/1223389/0001157523-08-002522.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/832428--3-16-2006--SCRIPPS_E_W_CO_-DE.html'">832428--3/16/2006--SCRIPPS_E_W_CO_/DE</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1116317--3-13-2009--XM_SATELLITE_RADIO_INC.html'">1116317--3/13/2009--XM_SATELLITE_RADIO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1091530--3-13-2009--XM_SATELLITE_RADIO_INC.html'">1091530--3/13/2009--XM_SATELLITE_RADIO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/908937--3-10-2009--SIRIUS_XM_RADIO_INC..html'">908937--3/10/2009--SIRIUS_XM_RADIO_INC.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/870826--4-16-2009--VALUEVISION_MEDIA_INC.html'">870826--4/16/2009--VALUEVISION_MEDIA_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/832428--3-5-2010--SCRIPPS_E_W_CO_-DE.html'">832428--3/5/2010--SCRIPPS_E_W_CO_/DE</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/870826--4-29-2008--VALUEVISION_MEDIA_INC.html'">870826--4/29/2008--VALUEVISION_MEDIA_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1017008--2-9-2007--UNIVISION_COMMUNICATIONS_INC.html'">1017008--2/9/2007--UNIVISION_COMMUNICATIONS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/847383--6-12-2009--NEW_FRONTIER_MEDIA_INC.html'">847383--6/12/2009--NEW_FRONTIER_MEDIA_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/929351--5-30-2007--LIONS_GATE_ENTERTAINMENT_CORP_-CN-.html'">929351--5/30/2007--LIONS_GATE_ENTERTAINMENT_CORP_/CN/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/929351--5-30-2008--LIONS_GATE_ENTERTAINMENT_CORP_-CN-.html'">929351--5/30/2008--LIONS_GATE_ENTERTAINMENT_CORP_/CN/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/949536--2-28-2008--HEARST_ARGYLE_TELEVISION_INC.html'">949536--2/28/2008--HEARST_ARGYLE_TELEVISION_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/949536--2-27-2007--HEARST_ARGYLE_TELEVISION_INC.html'">949536--2/27/2007--HEARST_ARGYLE_TELEVISION_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1103837--3-5-2009--CROWN_MEDIA_HOLDINGS_INC.html'">1103837--3/5/2009--CROWN_MEDIA_HOLDINGS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/834162--3-29-2006--MTR_GAMING_GROUP_INC.html'">834162--3/29/2006--MTR_GAMING_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/834162--4-3-2008--MTR_GAMING_GROUP_INC.html'">834162--4/3/2008--MTR_GAMING_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1084961--3-15-2006--ENCORE_CAPITAL_GROUP_INC.html'">1084961--3/15/2006--ENCORE_CAPITAL_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/847383--6-13-2008--NEW_FRONTIER_MEDIA_INC.html'">847383--6/13/2008--NEW_FRONTIER_MEDIA_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/43196--3-16-2006--GRAY_TELEVISION_INC.html'">43196--3/16/2006--GRAY_TELEVISION_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1103837--3-8-2007--CROWN_MEDIA_HOLDINGS_INC.html'">1103837--3/8/2007--CROWN_MEDIA_HOLDINGS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1318862--4-16-2009--Juniper_Content_Corp.html'">1318862--4/16/2009--Juniper_Content_Corp</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/834162--4-2-2007--MTR_GAMING_GROUP_INC.html'">834162--4/2/2007--MTR_GAMING_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1264707--3-13-2008--ASSET_ACCEPTANCE_CAPITAL_CORP.html'">1264707--3/13/2008--ASSET_ACCEPTANCE_CAPITAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/912061--5-8-2006--NATURAL_HEALTH_TRENDS_CORP.html'">912061--5/8/2006--NATURAL_HEALTH_TRENDS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/43196--3-14-2008--GRAY_TELEVISION_INC.html'">43196--3/14/2008--GRAY_TELEVISION_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/832428--3-2-2009--SCRIPPS_E_W_CO_-DE.html'">832428--3/2/2009--SCRIPPS_E_W_CO_/DE</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/870826--4-15-2010--VALUEVISION_MEDIA_INC.html'">870826--4/15/2010--VALUEVISION_MEDIA_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/764478--4-28-2010--BEST_BUY_CO_INC.html'">764478--4/28/2010--BEST_BUY_CO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/949536--2-27-2006--HEARST_ARGYLE_TELEVISION_INC.html'">949536--2/27/2006--HEARST_ARGYLE_TELEVISION_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1264707--3-12-2010--ASSET_ACCEPTANCE_CAPITAL_CORP.html'">1264707--3/12/2010--ASSET_ACCEPTANCE_CAPITAL_CORP</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

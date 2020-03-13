@@ -1,0 +1,209 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[12.6345730096, "../topics/{product,_candidate,_development}.html", "{product,_candidate,_development}"], [5.8940418486, "../topics/{product,_liability,_claim}.html", "{product,_liability,_claim}"], [5.7159282357, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [4.4142609592, "../topics/{competitive,_industry,_competition}.html", "{competitive,_industry,_competition}"], [4.2439895151, "../topics/{stock,_price,_share}.html", "{stock,_price,_share}"], [3.6971383407, "../topics/{control,_financial,_internal}.html", "{control,_financial,_internal}"], [3.0008139882, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"], [2.377041199, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [2.1148418092, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [1.7107834353, "../topics/{cost,_contract,_operation}.html", "{cost,_contract,_operation}"], [1.705065766, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [1.6991316834, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"], [1.6969151374, "../topics/{tax,_income,_asset}.html", "{tax,_income,_asset}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>716646--6/19/2007--CLINICAL_DATA_INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">716646--6/19/2007--CLINICAL_DATA_INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{product,_candidate,_development}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_candidate,_development}.html'">{product, candidate, development}</td></tr>
+<tr class="list"><td id="{product,_liability,_claim}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_liability,_claim}.html'">{product, liability, claim}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{competitive,_industry,_competition}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{competitive,_industry,_competition}.html'">{competitive, industry, competition}</td></tr>
+<tr class="list"><td id="{stock,_price,_share}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_share}.html'">{stock, price, share}</td></tr>
+<tr class="list"><td id="{control,_financial,_internal}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{control,_financial,_internal}.html'">{control, financial, internal}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+<tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{cost,_contract,_operation}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_contract,_operation}.html'">{cost, contract, operation}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(11)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+<tr class="list"><td id="{tax,_income,_asset}" onmouseover="highlight(12)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{tax,_income,_asset}.html'">{tax, income, asset}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    Given our current product development efforts and our recent acquisitions of both Genaissance Pharmaceuticals, Inc. and Icoria, Inc., each of which has historically incurred significant net losses, we expect to incur net losses for the foreseeable future.
+In previous clinical trials performed by others, Vilazodone failed to demonstrate significant efficacy and we may be unable to develop a commercially viable drug.
+Personalized medicine is an emerging field, and therefore regulatory approval of our drug and related diagnostic tests may take longer and be less predictable than approval for untargeted medicines. Ultimately, personalized medicine may prove to be an unsuccessful industry, which would have a material adverse impact on our business and prospects.
+If our assumption about the role of genes in diseases or drug response is wrong, we may not be able to develop useful products.
+We may not successfully develop or derive revenues from any products.
+We may not derive significant revenues from our diagnostic tests.
+If physicians and patients do not accept and use our drugs, we will not achieve sufficient product revenues and our business will suffer.
+If we are unable to develop new and enhanced products that achieve widespread market acceptance, we may be unable to recoup product development costs, and our revenues and earnings may decline.
+If our products are not granted adequate reimbursement from third-party payors, we may unable to successfully commercialize our products and we may never achieve widespread market acceptance of our products.
+We are entering into new business areas and may not have the expertise, experience and resources to pursue all of our businesses at once.
+If we are unable to develop and/or in-license or otherwise acquire new products and technologies, we may not be able to grow our company successfully.
+Due to recent merger activity, it may be more difficult to obtain additional financing at favorable terms, if at all.
+Because a significant portion of our total assets will be represented by goodwill that are subject to mandatory annual impairment evaluations, we could be required to write-off some or all of this goodwill, which may adversely affect our financial condition and results of operations.
+We may be unable to successfully complete the integration of the businesses of Genaissance, Genome Express and Icoria.
+As of March 31, 2007, we identified a material weakness in internal control over financial reporting, and concluded that our disclosure controls were not effective. If we fail to maintain an effective system of internal and disclosure controls, we may not be able to accurately report our financial results or prevent fraud. As a result, investors may be misled and lose confidence in our financial reporting and disclosures, and the price of our common stock may be negatively affected.
+We may not be able to successfully integrate companies that we acquire in the future.
+We are dependent upon certain key personnel.
+We must implement additional and expensive finance and accounting systems, procedures and controls in order to grow our business and organization and to satisfy new reporting requirements, which will increase our costs and require additional management resources.
+In order to conduct clinical trials and to market our drugs, we will have to develop methods or make arrangements with third parties to produce these drugs using approved methods and at commercially viable rates.
+If we cannot successfully form and maintain suitable arrangements with third parties for the manufacturing of the products we may develop, our ability to develop or deliver products may be impaired.
+New drug and diagnostic development involves a lengthy and complex process, and we may be unable to commercialize any of the products we develop.
+Our operations may be affected by unexpected problems frequently encountered in connection with the development and transition to other technologies and by the competitive environment in which we operate.
+Our international operations and sales expose us to foreign currency exchange rate fluctuation risks.
+Risk Factors Relating to Our Intellectual Property
+If we are unable to protect effectively our intellectual property, we may not be able to operate our business and third parties may use our technology, both of which would impair our ability to compete in our markets.
+If third parties make or file claims of intellectual property infringement against us, or otherwise seek to establish their intellectual property rights, we may have to spend time and money in response and cease some of our operations.
+Any patent protection we obtain for our products may not prevent marketing of similar competing products.
+Any patents we obtain may be challenged by producers of generic drugs.
+Risk Factors Relating to Our Industry
+Our biopharmaceutical or diagnostic product candidates must undergo rigorous clinical trials and regulatory approvals, which could substantially delay or prevent their development or marketing.
+Concerns regarding the use of genetic testing results may limit the commercial viability of any products we develop.
+If we were sued for product liability, we could face substantial liabilities that may exceed our resources.
+We may not be able to compete successfully with other companies and government agencies in the development and marketing of products and services.
+Intense competition could reduce our market share or limit our ability to increase market share, which could harm our financial performance.
+We operate in a very competitive environment.
+Our medical device products require government approval to be marketed.
+Risk factors relating to Clinical Data s common stock
+Future sales of our common stock or other securities may dilute our stockholders.
+If the investors in our private placements sell their shares which have been registered under the Securities Act, the market price of our common stock may decline significantly.
+Our ownership is concentrated among a small number of stockholders.
+The price of our common stock is volatile and could cause investors to lose a substantial part of their investment.
+If the average closing price of our common stock were to decline significantly, we may be required to issue in excess of 20% of our outstanding capital stock upon conversion of the Series A Preferred Stock we issued to the preferred stockholder of Genaissance in our merger with that company.
+<p><a href="http://www.sec.gov/Archives/edgar/data/716646/0000950135-07-003745.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/94784--3-31-2006--BOSTON_LIFE_SCIENCES_INC_-DE.html'">94784--3/31/2006--BOSTON_LIFE_SCIENCES_INC_/DE</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/716054--3-16-2009--CYPRESS_BIOSCIENCE_INC.html'">716054--3/16/2009--CYPRESS_BIOSCIENCE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1125001--3-24-2006--IOMAI_CORP.html'">1125001--3/24/2006--IOMAI_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1008848--3-2-2009--ACORDA_THERAPEUTICS_INC.html'">1008848--3/2/2009--ACORDA_THERAPEUTICS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1008848--3-14-2008--ACORDA_THERAPEUTICS_INC.html'">1008848--3/14/2008--ACORDA_THERAPEUTICS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1003929--3-20-2006--CORAUTUS_GENETICS_INC.html'">1003929--3/20/2006--CORAUTUS_GENETICS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1082038--3-13-2008--DURECT_CORP.html'">1082038--3/13/2008--DURECT_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1347178--3-13-2008--Vanda_Pharmaceuticals_Inc..html'">1347178--3/13/2008--Vanda_Pharmaceuticals_Inc.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/716646--6-16-2008--CLINICAL_DATA_INC.html'">716646--6/16/2008--CLINICAL_DATA_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1347178--3-16-2007--Vanda_Pharmaceuticals_Inc..html'">1347178--3/16/2007--Vanda_Pharmaceuticals_Inc.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1260990--3-2-2006--GTX_INC_-DE-.html'">1260990--3/2/2006--GTX_INC_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/902482--3-15-2007--ADEZA_BIOMEDICAL_CORP.html'">902482--3/15/2007--ADEZA_BIOMEDICAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1062216--4-2-2007--MEMORY_PHARMACEUTICALS_CORP.html'">1062216--4/2/2007--MEMORY_PHARMACEUTICALS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1114220--2-27-2008--KERYX_BIOPHARMACEUTICALS_INC.html'">1114220--2/27/2008--KERYX_BIOPHARMACEUTICALS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/818033--3-15-2010--AP_PHARMA_INC_-DE-.html'">818033--3/15/2010--AP_PHARMA_INC_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1030653--3-10-2009--CURAGEN_CORP.html'">1030653--3/10/2009--CURAGEN_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/94784--4-2-2007--BOSTON_LIFE_SCIENCES_INC_-DE.html'">94784--4/2/2007--BOSTON_LIFE_SCIENCES_INC_/DE</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/879993--3-16-2007--DUSA_PHARMACEUTICALS_INC.html'">879993--3/16/2007--DUSA_PHARMACEUTICALS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1062216--3-28-2008--MEMORY_PHARMACEUTICALS_CORP.html'">1062216--3/28/2008--MEMORY_PHARMACEUTICALS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/94784--3-31-2010--ALSERES_PHARMACEUTICALS_INC_-DE.html'">94784--3/31/2010--ALSERES_PHARMACEUTICALS_INC_/DE</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/94784--3-31-2008--ALSERES_PHARMACEUTICALS_INC_-DE.html'">94784--3/31/2008--ALSERES_PHARMACEUTICALS_INC_/DE</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1040416--3-16-2006--INSPIRE_PHARMACEUTICALS_INC.html'">1040416--3/16/2006--INSPIRE_PHARMACEUTICALS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/872912--3-12-2008--DELCATH_SYSTEMS_INC.html'">872912--3/12/2008--DELCATH_SYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1080014--2-27-2008--THERAVANCE_INC.html'">1080014--2/27/2008--THERAVANCE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/835887--3-15-2006--PROGENICS_PHARMACEUTICALS_INC.html'">835887--3/15/2006--PROGENICS_PHARMACEUTICALS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1125001--3-23-2007--IOMAI_CORP.html'">1125001--3/23/2007--IOMAI_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/906709--2-29-2008--NEKTAR_THERAPEUTICS.html'">906709--2/29/2008--NEKTAR_THERAPEUTICS</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/881524--3-13-2006--VIVUS_INC.html'">881524--3/13/2006--VIVUS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1107601--3-3-2008--ATHEROGENICS_INC.html'">1107601--3/3/2008--ATHEROGENICS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/879993--3-11-2008--DUSA_PHARMACEUTICALS_INC.html'">879993--3/11/2008--DUSA_PHARMACEUTICALS_INC</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

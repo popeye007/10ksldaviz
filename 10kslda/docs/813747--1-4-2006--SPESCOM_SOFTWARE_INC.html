@@ -1,0 +1,191 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[7.0512622731, "../topics/{stock,_price,_share}.html", "{stock,_price,_share}"], [2.7099801653, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [2.7089036942, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [2.4931666057, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [2.3678568513, "../topics/{debt,_indebtedness,_cash}.html", "{debt,_indebtedness,_cash}"], [1.9204515764, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [1.7093261816, "../topics/{system,_service,_information}.html", "{system,_service,_information}"], [1.6962795845, "../topics/{regulation,_change,_law}.html", "{regulation,_change,_law}"], [1.6962635139, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [1.6962083148, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"], [1.6961028114, "../topics/{control,_financial,_internal}.html", "{control,_financial,_internal}"], [1.6777966859, "../topics/{competitive,_industry,_competition}.html", "{competitive,_industry,_competition}"], [1.6619356487, "../topics/{product,_liability,_claim}.html", "{product,_liability,_claim}"], [1.650639388, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>813747--1/4/2006--SPESCOM_SOFTWARE_INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">813747--1/4/2006--SPESCOM_SOFTWARE_INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{stock,_price,_share}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_share}.html'">{stock, price, share}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{debt,_indebtedness,_cash}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{debt,_indebtedness,_cash}.html'">{debt, indebtedness, cash}</td></tr>
+<tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{system,_service,_information}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{system,_service,_information}.html'">{system, service, information}</td></tr>
+<tr class="list"><td id="{regulation,_change,_law}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_change,_law}.html'">{regulation, change, law}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+<tr class="list"><td id="{control,_financial,_internal}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{control,_financial,_internal}.html'">{control, financial, internal}</td></tr>
+<tr class="list"><td id="{competitive,_industry,_competition}" onmouseover="highlight(11)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{competitive,_industry,_competition}.html'">{competitive, industry, competition}</td></tr>
+<tr class="list"><td id="{product,_liability,_claim}" onmouseover="highlight(12)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_liability,_claim}.html'">{product, liability, claim}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(13)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    The Company has a history of significant losses. If we do not sustain profitability, our financial condition and stock price could suffer.
+The Company will be controlled by Spescom Ltd. and its subsidiaries as long as they
+are entitled to a majority of the votes eligible to be cast in the election of directors.
+One or more affiliates of M.A.G. Capital, LLC, as holders of Series H Convertible Preferred Stock, may become entitled to elect a majority of the Board of Directors if certain corporate transactions do not occur on or before April 30, 2006.
+The Company has borrowed funds from Spescom Ltd., which debts are secured by all of the Company s assets, and the Company may become insolvent if repayment of such debt is due prior to the Company s ability to obtain funds to repay such debt or if the Company fails to restructure such debt.
+The Company may not be able to rely on Spescom Ltd. to fund its future capital requirements, and financing from other sources may not be available on favorable terms or at all.
+The Company is dependent on sales to a relatively small number of new customers each quarter, so any failure to close a sale to any customer could have a material adverse effect on its quarterly operating results.
+The Company s operating results are difficult to predict and fluctuate substantially from quarter to quarter and year to year, which may increase the difficulty of financial planning and forecasting and may result in declines in the Company s stock price.
+The Company s market is subject to rapid technological change and if the Company fails to continually enhance its products and services in a timely manner, its revenue and business would be harmed.
+The Company s lack of product diversification means that any decline in price or demand for its products and services would seriously harm its business.
+Significant unauthorized use of the Company s products would result in material loss of potential revenues and the Company s pursuit of protection for its intellectual property rights could result in substantial costs to it.
+The Company relies on third party software products incorporated in its products. Any loss of use to such third party software could result in delays in the Company s product shipments.
+If third parties claim that the Company infringes on their patents, trademarks, or other intellectual property rights, it may result in costly litigation or require the Company to make royalty payments.
+The Company may face product liability claims from its customers.
+If the Company loses key personnel, or is unable to attract and retain additional key personnel, the Company may not be able to successfully grow and manage its business.
+The Company faces intense competition from several competitors and may be unable to compete successfully.
+The Company s common stock is deemed to be penny stock, which may make it more difficult for investors to sell their shares due to suitability requirements.
+The Company s common stock trades sporadically; the market price of the Company s common stock may be volatile.
+Conversion of the Company s preferred stock will result in significant dilution to existing shareholders.
+Future sales of common stock by the Company s shareholders, including investors in future offerings and Spescom Ltd., could adversely affect the Company s stock price.
+The exercise of outstanding options and warrants would result in dilution of the Company s stock.
+The Company is subject to significant foreign currency fluctuations which may have a material adverse effect on the Company s business and financial results.
+Beginning in fiscal 2006 under SFAS 123R the Company will begin recording compensation expense in connection with the incentive stock options provided to its employees and directors which may have a significant negative impact on future operating results.
+<p><a href="http://www.sec.gov/Archives/edgar/data/813747/0001104659-06-000366.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/1094816--7-6-2010--VOICE_MOBILITY_INTERNATIONAL_INC.html'">1094816--7/6/2010--VOICE_MOBILITY_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1078383--3-13-2008--IPARTY_CORP.html'">1078383--3/13/2008--IPARTY_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1032863--4-13-2006--FORCE_PROTECTION_INC.html'">1032863--4/13/2006--FORCE_PROTECTION_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/941685--4-17-2007--IMAGEWARE_SYSTEMS_INC.html'">941685--4/17/2007--IMAGEWARE_SYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/941685--4-15-2008--IMAGEWARE_SYSTEMS_INC.html'">941685--4/15/2008--IMAGEWARE_SYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1438672--9-7-2010--Orofino_Gold_Corp.html'">1438672--9/7/2010--Orofino_Gold_Corp</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1120193--2-28-2007--NASDAQ_STOCK_MARKET_INC.html'">1120193--2/28/2007--NASDAQ_STOCK_MARKET_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/919567--9-22-2006--RENAISSANCE_CAPITAL_GROWTH_&_INCOME_FUND_III_INC.html'">919567--9/22/2006--RENAISSANCE_CAPITAL_GROWTH_&_INCOME_FUND_III_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1036968--3-29-2010--VAXGEN_INC.html'">1036968--3/29/2010--VAXGEN_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1413754--7-14-2009--Swav_Enterprises_Ltd..html'">1413754--7/14/2009--Swav_Enterprises_Ltd.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1405350--4-10-2009--RxBids.html'">1405350--4/10/2009--RxBids</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/802257--9-28-2009--BRAIN_TREE_INTERNATIONAL_INC.html'">802257--9/28/2009--BRAIN_TREE_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1119190--4-2-2007--IWT_TESORO_CORP.html'">1119190--4/2/2007--IWT_TESORO_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1121785--3-31-2006--SLS_INTERNATIONAL_INC.html'">1121785--3/31/2006--SLS_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/833845--3-23-2007--BOOTS_&_COOTS_INTERNATIONAL_WELL_CONTROL_INC.html'">833845--3/23/2007--BOOTS_&_COOTS_INTERNATIONAL_WELL_CONTROL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1036478--4-10-2008--WWA_GROUP_INC.html'">1036478--4/10/2008--WWA_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1104672--4-11-2008--MONTANA_MINING_CORP.html'">1104672--4/11/2008--MONTANA_MINING_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1160164--12-15-2010--Biomass_Secure_Power_Inc.html'">1160164--12/15/2010--Biomass_Secure_Power_Inc</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1307425--4-24-2009--CARBIZ_INC.html'">1307425--4/24/2009--CARBIZ_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1103345--3-16-2009--BEACON_POWER_CORP.html'">1103345--3/16/2009--BEACON_POWER_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1095691--3-23-2009--DigitalFX_International_Inc.html'">1095691--3/23/2009--DigitalFX_International_Inc</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1046788--3-31-2010--HARRIS_PREFERRED_CAPITAL_CORP.html'">1046788--3/31/2010--HARRIS_PREFERRED_CAPITAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1046788--3-31-2009--HARRIS_PREFERRED_CAPITAL_CORP.html'">1046788--3/31/2009--HARRIS_PREFERRED_CAPITAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/826253--3-25-2008--AURA_SYSTEMS_INC.html'">826253--3/25/2008--AURA_SYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/826253--3-25-2008--AURA_SYSTEMS_INC.html'">826253--3/25/2008--AURA_SYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/821536--3-27-2009--HEARUSA_INC.html'">821536--3/27/2009--HEARUSA_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1137031--3-29-2007--UNITED_FUEL_&_ENERGY_CORP.html'">1137031--3/29/2007--UNITED_FUEL_&_ENERGY_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1419583--3-24-2010--Cellteck_Inc..html'">1419583--3/24/2010--Cellteck_Inc.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1137031--4-6-2009--UNITED_FUEL_&_ENERGY_CORP.html'">1137031--4/6/2009--UNITED_FUEL_&_ENERGY_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1419583--3-31-2009--Cellteck_Inc..html'">1419583--3/31/2009--Cellteck_Inc.</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

@@ -1,0 +1,184 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[4.6214482785, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [3.7117828668, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [3.7006543168, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [3.5160352932, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"], [2.6682845425, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [1.7480356829, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"], [1.7124237206, "../topics/{cost,_operation,_labor}.html", "{cost,_operation,_labor}"], [1.7008720965, "../topics/{product,_liability,_claim}.html", "{product,_liability,_claim}"], [1.6967505936, "../topics/{cost,_contract,_operation}.html", "{cost,_contract,_operation}"], [1.696218067, "../topics/{condition,_economic,_financial}.html", "{condition,_economic,_financial}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>1173489--3/16/2007--CEVA__INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">1173489--3/16/2007--CEVA__INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+<tr class="list"><td id="{cost,_operation,_labor}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_operation,_labor}.html'">{cost, operation, labor}</td></tr>
+<tr class="list"><td id="{product,_liability,_claim}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_liability,_claim}.html'">{product, liability, claim}</td></tr>
+<tr class="list"><td id="{cost,_contract,_operation}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_contract,_operation}.html'">{cost, contract, operation}</td></tr>
+<tr class="list"><td id="{condition,_economic,_financial}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{condition,_economic,_financial}.html'">{condition, economic, financial}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    We rely significantly on revenue derived from a limited number of customers.
+We depend on market acceptance of third-party semiconductor intellectual property.
+Because our IP solutions are components of end products, if semiconductor companies and electronic equipment manufacturers do not incorporate our solutions into their end products or if the end products of our customers do not achieve market acceptance, we may not be able to generate adequate sales of our products.
+We depend on a limited number of key personnel who would be difficult to replace.
+The sales cycle for our IP solutions is lengthy, which makes forecasting of our customer orders and revenues difficult.
+We may dispose of or discontinue existing product lines and technology developments, which may adversely impact our future results.
+Our restructuring efforts in 2005 and 2006, as well as the divestment of our GPS technology and related business, could disrupt the operation of our business, distract our management from focusing on revenue-generating efforts, result in the erosion of employee morale, and impair our ability to respond rapidly to growth opportunities in the future.
+Because our IP solutions are complex, the detection of errors in our products may be delayed, and if we deliver products with defects, our credibility will be harmed, the sales and market acceptance of our products may decrease and product liability claims may be made against us.
+Our operating results may fluctuate significantly due to the cyclicality of the semiconductor industry, which could adversely affect the market price of our stock.
+Our success will depend on our ability to successfully manage our geographically dispersed operations.
+Our operations in Israel may be adversely affected by instability in the Middle East region.
+Our research and development expenses may increase if the grants we currently receive from the Israeli and Irish governments are reduced or withheld.
+We are exposed to fluctuations in currency exchange rates.
+Because we have significant international operations, we may be subject to political, economic and other conditions relating to our international operations that could increase our operating expenses and disrupt our revenues and business.
+If we are unable to meet the changing needs of our end-users or to address evolving market demands, our business may be harmed.
+We may seek to expand our business through acquisitions that could result in diversion of resources and extra expenses.
+We may not be able to adequately protect our intellectual property.
+Our business will suffer if we are sued for infringement of the intellectual property rights of third parties or if we cannot obtain licenses to these rights on commercially acceptable terms.
+Our business depends on our customers and their suppliers obtaining required complementary components.
+The future growth of our business depends in part on our ability to license to system OEMs and small-to-medium-sized semiconductor companies directly and to expand our sales geographically.
+<p><a href="http://www.sec.gov/Archives/edgar/data/1173489/0000950134-07-005877.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/1173489--3-13-2009--CEVA__INC.html'">1173489--3/13/2009--CEVA__INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1173489--3-14-2006--CEVA__INC.html'">1173489--3/14/2006--CEVA__INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1173489--3-14-2008--CEVA__INC.html'">1173489--3/14/2008--CEVA__INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/103379--2-27-2007--V_F_CORP.html'">103379--2/27/2007--V_F_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/56978--12-14-2006--KULICKE_&_SOFFA_INDUSTRIES_INC.html'">56978--12/14/2006--KULICKE_&_SOFFA_INDUSTRIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1048695--11-23-2010--F5_NETWORKS_INC.html'">1048695--11/23/2010--F5_NETWORKS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1341439--6-29-2009--ORACLE_CORP.html'">1341439--6/29/2009--ORACLE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1016470--2-24-2009--SRS_LABS_INC.html'">1016470--2/24/2009--SRS_LABS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/225263--3-17-2009--NEWPORT_CORP.html'">225263--3/17/2009--NEWPORT_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1016470--2-23-2010--SRS_LABS_INC.html'">1016470--2/23/2010--SRS_LABS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/790818--3-18-2010--X_RITE_INC.html'">790818--3/18/2010--X_RITE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/790818--3-13-2008--X_RITE_INC.html'">790818--3/13/2008--X_RITE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/712515--5-30-2007--ELECTRONIC_ARTS_INC.html'">712515--5/30/2007--ELECTRONIC_ARTS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1033905--2-25-2010--LUMINEX_CORP.html'">1033905--2/25/2010--LUMINEX_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1033905--2-26-2009--LUMINEX_CORP.html'">1033905--2/26/2009--LUMINEX_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/56978--12-11-2007--KULICKE_&_SOFFA_INDUSTRIES_INC.html'">56978--12/11/2007--KULICKE_&_SOFFA_INDUSTRIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/712515--5-23-2008--ELECTRONIC_ARTS_INC..html'">712515--5/23/2008--ELECTRONIC_ARTS_INC.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/738076--7-27-2009--3COM_CORP.html'">738076--7/27/2009--3COM_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/796343--2-8-2006--ADOBE_SYSTEMS_INC.html'">796343--2/8/2006--ADOBE_SYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/32198--3-17-2008--EMS_TECHNOLOGIES_INC.html'">32198--3/17/2008--EMS_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1063085--12-13-2007--CATAPULT_COMMUNICATIONS_CORP.html'">1063085--12/13/2007--CATAPULT_COMMUNICATIONS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/103379--3-3-2009--V_F_CORP.html'">103379--3/3/2009--V_F_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1113232--3-14-2006--AXCELIS_TECHNOLOGIES_INC.html'">1113232--3/14/2006--AXCELIS_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/32198--3-16-2009--EMS_TECHNOLOGIES_INC.html'">32198--3/16/2009--EMS_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/828064--3-28-2007--ROCKFORD_CORP.html'">828064--3/28/2007--ROCKFORD_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/892482--3-16-2009--RIMAGE_CORP.html'">892482--3/16/2009--RIMAGE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/865917--1-29-2010--VERSANT_CORP.html'">865917--1/29/2010--VERSANT_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/47217--12-22-2006--HEWLETT_PACKARD_CO.html'">47217--12/22/2006--HEWLETT_PACKARD_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/868368--12-10-2010--ROCHESTER_MEDICAL_CORPORATION.html'">868368--12/10/2010--ROCHESTER_MEDICAL_CORPORATION</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1033905--3-14-2008--LUMINEX_CORP.html'">1033905--3/14/2008--LUMINEX_CORP</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

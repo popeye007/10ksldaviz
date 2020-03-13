@@ -1,0 +1,180 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[5.5293619945, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [3.8804543996, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [1.7379978987, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [1.7045006128, "../topics/{tax,_income,_asset}.html", "{tax,_income,_asset}"], [1.701541499, "../topics/{control,_financial,_internal}.html", "{control,_financial,_internal}"], [1.6998892862, "../topics/{regulation,_change,_law}.html", "{regulation,_change,_law}"], [1.6963679329, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [1.6963521465, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [1.69337837, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"], [1.5122897161, "../topics/{condition,_economic,_financial}.html", "{condition,_economic,_financial}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>915735--3/14/2006--STRATASYS_INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">915735--3/14/2006--STRATASYS_INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{tax,_income,_asset}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{tax,_income,_asset}.html'">{tax, income, asset}</td></tr>
+<tr class="list"><td id="{control,_financial,_internal}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{control,_financial,_internal}.html'">{control, financial, internal}</td></tr>
+<tr class="list"><td id="{regulation,_change,_law}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_change,_law}.html'">{regulation, change, law}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+<tr class="list"><td id="{condition,_economic,_financial}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{condition,_economic,_financial}.html'">{condition, economic, financial}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    We may not be able to introduce new RP systems and 3D printing systems and materials acceptable to the market or to improve the technology and software used in our current systems.
+If the 3D printing market does not continue to accept our systems, our revenues may stagnate or decline.
+If we are unable to maintain revenues and gross margins from sales of our existing products, our profitability will be adversely affected.
+If other manufacturers were to successfully develop and market consumables for use in our RP systems, our revenues and profits could be adversely affected.
+If we fail to grow our Paid Parts service as anticipated, our net sales and profitability will be adversely affected.
+Termination of our North American Distributor Agreements with Objet or Arcam would adversely affect our sales and profitability.
+A loss of a significant number of our international distributors or North American resellers would impair our ability to sell our products and services and could result in a reduction of sales and net income.
+We may not be able to adequately protect or enforce our intellectual property rights, which could harm our competitive position.
+If our intangible assets become impaired, we may be required to record a significant charge to earnings.
+We operate a global business that exposes us to additional risks.
+Our operating results and financial condition may fluctuate.
+Changes in accounting treatment of stock-based awards will adversely affect our reported results of operations.
+Default in payment by one or more international distributors or North American resellers that have large account receivable balances could adversely impact our results of operations and financial condition.
+If we are unable to retain our key operating personnel and attract additional skilled operating personnel, our development of new products will be delayed and our personnel costs will increase.
+Our common stock price has been and may continue to be highly volatile.
+If our internal controls over financial reporting do not comply with the requirements of the Sarbanes-Oxley Act, our business and stock price could be adversely affected.
+<p><a href="http://www.sec.gov/Archives/edgar/data/915735/0001206774-06-000431.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/915735--3-11-2009--STRATASYS_INC.html'">915735--3/11/2009--STRATASYS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/836690--12-14-2009--INNOVATIVE_SOLUTIONS_&_SUPPORT_INC.html'">836690--12/14/2009--INNOVATIVE_SOLUTIONS_&_SUPPORT_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/836690--12-14-2010--INNOVATIVE_SOLUTIONS_&_SUPPORT_INC.html'">836690--12/14/2010--INNOVATIVE_SOLUTIONS_&_SUPPORT_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1016470--2-23-2010--SRS_LABS_INC.html'">1016470--2/23/2010--SRS_LABS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1113232--3-15-2010--AXCELIS_TECHNOLOGIES_INC.html'">1113232--3/15/2010--AXCELIS_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/915735--3-17-2008--STRATASYS_INC.html'">915735--3/17/2008--STRATASYS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1113232--3-15-2007--AXCELIS_TECHNOLOGIES_INC.html'">1113232--3/15/2007--AXCELIS_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1016470--2-24-2009--SRS_LABS_INC.html'">1016470--2/24/2009--SRS_LABS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1113232--3-17-2008--AXCELIS_TECHNOLOGIES_INC.html'">1113232--3/17/2008--AXCELIS_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/910721--3-16-2006--J_JILL_GROUP_INC.html'">910721--3/16/2006--J_JILL_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/56978--12-14-2006--KULICKE_&_SOFFA_INDUSTRIES_INC.html'">56978--12/14/2006--KULICKE_&_SOFFA_INDUSTRIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1016470--3-13-2008--SRS_LABS_INC.html'">1016470--3/13/2008--SRS_LABS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/892482--3-12-2010--RIMAGE_CORP.html'">892482--3/12/2010--RIMAGE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/768411--3-12-2007--CYBEROPTICS_CORP.html'">768411--3/12/2007--CYBEROPTICS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1016470--3-24-2006--SRS_LABS_INC.html'">1016470--3/24/2006--SRS_LABS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/922612--7-31-2007--SCHMITT_INDUSTRIES_INC.html'">922612--7/31/2007--SCHMITT_INDUSTRIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/768411--3-10-2008--CYBEROPTICS_CORP.html'">768411--3/10/2008--CYBEROPTICS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/832767--12-14-2006--PHOENIX_TECHNOLOGIES_LTD.html'">832767--12/14/2006--PHOENIX_TECHNOLOGIES_LTD</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/880807--5-29-2008--AMERICAN_SUPERCONDUCTOR_CORP_-DE-.html'">880807--5/29/2008--AMERICAN_SUPERCONDUCTOR_CORP_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/106040--8-28-2007--WESTERN_DIGITAL_CORP.html'">106040--8/28/2007--WESTERN_DIGITAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1048695--11-23-2010--F5_NETWORKS_INC.html'">1048695--11/23/2010--F5_NETWORKS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/892482--3-15-2006--RIMAGE_CORP.html'">892482--3/15/2006--RIMAGE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/96289--2-27-2007--RADIOSHACK_CORP.html'">96289--2/27/2007--RADIOSHACK_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/22252--5-1-2006--COMARCO_INC.html'">22252--5/1/2006--COMARCO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1113232--3-31-2009--AXCELIS_TECHNOLOGIES_INC.html'">1113232--3/31/2009--AXCELIS_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/915735--3-15-2007--STRATASYS_INC.html'">915735--3/15/2007--STRATASYS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/103379--2-27-2007--V_F_CORP.html'">103379--2/27/2007--V_F_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/892482--3-14-2008--RIMAGE_CORP.html'">892482--3/14/2008--RIMAGE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/892482--3-16-2009--RIMAGE_CORP.html'">892482--3/16/2009--RIMAGE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/919013--3-16-2010--WAVE_SYSTEMS_CORP.html'">919013--3/16/2010--WAVE_SYSTEMS_CORP</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

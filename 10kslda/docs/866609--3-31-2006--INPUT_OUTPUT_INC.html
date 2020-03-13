@@ -1,0 +1,187 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[5.8252633306, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [4.0277356902, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [1.997206889, "../topics/{operation,_natural,_condition}.html", "{operation,_natural,_condition}"], [1.7579939299, "../topics/{cost,_operation,_labor}.html", "{cost,_operation,_labor}"], [1.7344088913, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [1.7244845191, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"], [1.7000047694, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [1.6985461727, "../topics/{control,_financial,_internal}.html", "{control,_financial,_internal}"], [1.6965799837, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"], [1.6963346513, "../topics/{debt,_indebtedness,_cash}.html", "{debt,_indebtedness,_cash}"], [1.693942756, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [1.6785049934, "../topics/{cost,_regulation,_environmental}.html", "{cost,_regulation,_environmental}"], [1.4951182232, "../topics/{system,_service,_information}.html", "{system,_service,_information}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>866609--3/31/2006--INPUT_OUTPUT_INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">866609--3/31/2006--INPUT_OUTPUT_INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{operation,_natural,_condition}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_natural,_condition}.html'">{operation, natural, condition}</td></tr>
+<tr class="list"><td id="{cost,_operation,_labor}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_operation,_labor}.html'">{cost, operation, labor}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{control,_financial,_internal}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{control,_financial,_internal}.html'">{control, financial, internal}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+<tr class="list"><td id="{debt,_indebtedness,_cash}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{debt,_indebtedness,_cash}.html'">{debt, indebtedness, cash}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{cost,_regulation,_environmental}" onmouseover="highlight(11)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_regulation,_environmental}.html'">{cost, regulation, environmental}</td></tr>
+<tr class="list"><td id="{system,_service,_information}" onmouseover="highlight(12)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{system,_service,_information}.html'">{system, service, information}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    Our operating results may fluctuate from period to period and we are subject to seasonality factors.
+We may not gain rapid market acceptance for our Full-Wave Digital products, which could materially and adversely affect our results of operations and financial condition.
+We are exposed to risks related to complex, highly technical products.
+Weak demand or technological obsolescence could impair the value of our multi-client data library.
+We derive a substantial amount of our revenues from foreign sales, which pose additional risks.
+The loss of any significant customer could materially and adversely affect our results of operations and financial condition.
+We rely on highly skilled personnel in many of our segments businesses, and if we are unable to retain or motivate key personnel or hire qualified personnel, we may not be able to grow effectively.
+GXT and Concept Systems increase our exposure to the risks experienced by more technology-intensive companies.
+Certain of our facilities could be damaged by hurricanes and other natural disasters, which could have an adverse effect on our results of operations and financial condition.
+We have outsourcing arrangements with third parties to manufacture some of our products. If these third parties fail to deliver quality products or components at reasonable prices on a timely basis, we may alienate some of our customers and our revenues, profitability and cash flow may decline.
+Technological change in the seismic industry requires us to make substantial research and development expenditures.
+Our outsourcing relationships may require us to purchase inventory when demand for products produced by third-party manufacturers is low.
+We may be unable to obtain broad intellectual property protection for our current and future products and we may become involved in intellectual property disputes.
+Future technologies and businesses that we may acquire may be difficult to integrate, disrupt our business, dilute stockholder value or divert management attention.
+Our operations, and the operations of our customers, are subject to numerous government regulations, which could adversely limit our operating flexibility.
+Disruption in vendor supplies may adversely affect our results of operations.
+We may not be able to generate sufficient cash flows to meet our operational, growth and debt service needs.
+Further consolidation among our significant customers could materially and adversely affect us.
+We are exposed to risks relating to the effectiveness of our internal controls.
+The addition of GXT may alienate a number of our traditional seismic contractor customers with whom GXT competes and adversely affect sales to and revenues from those customers.
+<p><a href="http://www.sec.gov/Archives/edgar/data/866609/0000950129-06-003519.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/919443--3-9-2006--LACROSSE_FOOTWEAR_INC.html'">919443--3/9/2006--LACROSSE_FOOTWEAR_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/106040--8-20-2008--WESTERN_DIGITAL_CORP.html'">106040--8/20/2008--WESTERN_DIGITAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1141107--2-26-2010--ARRIS_GROUP_INC.html'">1141107--2/26/2010--ARRIS_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/844143--2-9-2006--INNOVO_GROUP_INC.html'">844143--2/9/2006--INNOVO_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/919443--3-20-2007--LACROSSE_FOOTWEAR_INC.html'">919443--3/20/2007--LACROSSE_FOOTWEAR_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1042825--3-14-2006--POWER_ONE_INC.html'">1042825--3/14/2006--POWER_ONE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1090071--3-15-2006--FOUNDRY_NETWORKS_INC.html'">1090071--3/15/2006--FOUNDRY_NETWORKS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/105132--10-23-2008--WD_40_CO.html'">105132--10/23/2008--WD_40_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/897429--3-24-2010--CHICOS_FAS_INC.html'">897429--3/24/2010--CHICOS_FAS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/915779--6-23-2008--DAKTRONICS_INC_-SD-.html'">915779--6/23/2008--DAKTRONICS_INC_/SD/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/743988--5-28-2008--XILINX_INC.html'">743988--5/28/2008--XILINX_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/105132--10-16-2009--WD_40_CO.html'">105132--10/16/2009--WD_40_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1042825--3-16-2007--POWER_ONE_INC.html'">1042825--3/16/2007--POWER_ONE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/913590--2-12-2007--CELLSTAR_CORP.html'">913590--2/12/2007--CELLSTAR_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/772406--6-1-2009--CIRRUS_LOGIC_INC.html'">772406--6/1/2009--CIRRUS_LOGIC_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/913590--2-14-2006--CELLSTAR_CORP.html'">913590--2/14/2006--CELLSTAR_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/883984--2-19-2010--ICU_MEDICAL_INC-DE.html'">883984--2/19/2010--ICU_MEDICAL_INC/DE</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1090071--2-26-2008--FOUNDRY_NETWORKS_INC.html'">1090071--2/26/2008--FOUNDRY_NETWORKS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/793952--2-27-2007--HARLEY_DAVIDSON_INC.html'">793952--2/27/2007--HARLEY_DAVIDSON_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/919443--3-7-2008--LACROSSE_FOOTWEAR_INC.html'">919443--3/7/2008--LACROSSE_FOOTWEAR_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/317771--3-14-2006--TELLABS_INC.html'">317771--3/14/2006--TELLABS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/875359--4-3-2006--MICRO_LINEAR_CORP_-CA-.html'">875359--4/3/2006--MICRO_LINEAR_CORP_/CA/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/884940--4-6-2006--STEIN_MART_INC.html'">884940--4/6/2006--STEIN_MART_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1129446--12-1-2006--AGERE_SYSTEMS_INC.html'">1129446--12/1/2006--AGERE_SYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1141107--2-27-2009--ARRIS_GROUP_INC.html'">1141107--2/27/2009--ARRIS_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1275014--3-19-2009--ULTRA_CLEAN_HOLDINGS_INC.html'">1275014--3/19/2009--ULTRA_CLEAN_HOLDINGS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/32621--7-11-2008--EMERSON_RADIO_CORP.html'">32621--7/11/2008--EMERSON_RADIO_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/356841--6-29-2007--FRANKLIN_ELECTRONIC_PUBLISHERS_INC.html'">356841--6/29/2007--FRANKLIN_ELECTRONIC_PUBLISHERS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/356841--6-26-2008--FRANKLIN_ELECTRONIC_PUBLISHERS_INC.html'">356841--6/26/2008--FRANKLIN_ELECTRONIC_PUBLISHERS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/909791--3-1-2010--ULTRATECH_INC.html'">909791--3/1/2010--ULTRATECH_INC</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

@@ -1,0 +1,186 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[5.2017568251, "../topics/{investment,_property,_distribution}.html", "{investment,_property,_distribution}"], [4.9723040251, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [4.6852359302, "../topics/{system,_service,_information}.html", "{system,_service,_information}"], [3.5532119583, "../topics/{capital,_credit,_financial}.html", "{capital,_credit,_financial}"], [2.1570349008, "../topics/{tax,_income,_asset}.html", "{tax,_income,_asset}"], [1.8516660635, "../topics/{regulation,_government,_change}.html", "{regulation,_government,_change}"], [1.7111324518, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [1.6963334436, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"], [1.696272725, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [1.3829963371, "../topics/{operation,_natural,_condition}.html", "{operation,_natural,_condition}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>101830--2/27/2009--SPRINT_NEXTEL_CORP</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">101830--2/27/2009--SPRINT_NEXTEL_CORP</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{investment,_property,_distribution}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{investment,_property,_distribution}.html'">{investment, property, distribution}</td></tr>
+<tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{system,_service,_information}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{system,_service,_information}.html'">{system, service, information}</td></tr>
+<tr class="list"><td id="{capital,_credit,_financial}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{capital,_credit,_financial}.html'">{capital, credit, financial}</td></tr>
+<tr class="list"><td id="{tax,_income,_asset}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{tax,_income,_asset}.html'">{tax, income, asset}</td></tr>
+<tr class="list"><td id="{regulation,_government,_change}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_government,_change}.html'">{regulation, government, change}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{operation,_natural,_condition}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_natural,_condition}.html'">{operation, natural, condition}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    If we are not able to attract and retain wireless subscribers, our financial performance will be impaired.
+As the wireless market matures, we must increasingly seek to attract subscribers from competitors and face increased credit risk from first-time wireless subscribers.
+Competition and technological changes in the market for wireless services could negatively affect our average revenue per subscriber, subscriber churn, operating costs and our ability to attract new subscribers, resulting in adverse effects on our revenues, future cash flows, growth and profitability.
+Failure to improve wireless subscriber service and failure to continue to enhance the quality and features of our wireless networks and meet capacity requirements of our subscriber base could impair our financial performance and adversely affect our results of operations.
+Current economic conditions, our recent financial performance and our debt ratings could negatively impact our access to the capital markets resulting in less growth than planned or failure to satisfy financial covenants under our existing debt agreements.
+The trading price of our common stock has been and may continue to be volatile, notwithstanding our actual operations and performance.
+Consolidation and competition in the wholesale market for wireline services, as well as consolidation of our roaming partners and access providers used for wireless services, could adversely affect our revenues and profitability.
+Failure to complete development, testing and deployment of new technology that supports new services could affect our ability to compete in the industry. The deployment of new technology and new service offerings could result in network degradation or the loss of subscribers. In addition, the technology we use may place us at a competitive disadvantage.
+Risks Related to our Investment in Clearwire
+The blurring of the traditional dividing lines among long distance, local, wireless, video and Internet services contribute to increased competition.
+If we are unable to improve our results of operations, we face the possibility of additional charges for impairments of long-lived or indefinite lived assets. In addition, if the fair market value of our investment in Clearwire continues to trade below its book value, it could result in an impairment charge. Also, our future operating results will be impacted by our share of Clearwire s net loss or net income, which during this period of their network build-out will likely negatively affect our results of operations.
+If Motorola is unable or unwilling to provide us with equipment and handsets in support of our iDEN-based services, as well as anticipated handset and infrastructure improvements for those services, our operations will be adversely affected.
+We have entered into agreements with third parties related to certain business operations. Any difficulties experienced in these arrangements could result in additional expense, loss of subscribers and revenue, interruption of our services or a delay in the roll-out of new technology.
+We are subject to exclusivity provisions and other restrictions under our arrangements with our remaining independent PCS Affiliates. Continued compliance with those restrictions may limit our ability to fully integrate the operations of Nextel and Nextel Partners in the geographic areas served by those PCS Affiliates, may impact our ability to offer certain types of wireless products and services, and we could incur significant costs to resolve issues related to these arrangements.
+The intellectual property rights utilized by us and our suppliers and service providers may infringe on intellectual property rights owned by others.
+Government regulation could adversely affect our prospects and results of operations; the FCC and state regulatory commissions may adopt new regulations or take other actions that could adversely affect our business prospects, future growth or results of operations.
+The current economic environment may make it difficult for our business partners and subscribers to meet their contractual obligations, which could negatively affect our results of operations.
+Our business could be negatively impacted by security threats and other disruptions.
+Concerns about health risks associated with wireless equipment may reduce the demand for our services.
+Risks Related to our Investment in Clearwire
+Our investment in Clearwire exposes us to risks because we do not control the board, manage operations or control management, including decisions relating to the build-out and operation of a national 4G network, and the value of our investment in Clearwire or our financial performance may be adversely affected by decisions made by Clearwire or other large investors in Clearwire that are adverse to our interests.
+We may be unable to sell some or all of our investment in Clearwire quickly or at all.
+<p><a href="http://www.sec.gov/Archives/edgar/data/101830/0001193125-09-040575.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/923282--2-28-2007--GEMSTAR_TV_GUIDE_INTERNATIONAL_INC.html'">923282--2/28/2007--GEMSTAR_TV_GUIDE_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/86115--3-16-2010--SAFEGUARD_SCIENTIFICS_INC.html'">86115--3/16/2010--SAFEGUARD_SCIENTIFICS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/101830--3-7-2006--SPRINT_NEXTEL_CORP.html'">101830--3/7/2006--SPRINT_NEXTEL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1350031--3-9-2007--Embarq_CORP.html'">1350031--3/9/2007--Embarq_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/30419--3-12-2010--DEX_ONE_Corp.html'">30419--3/12/2010--DEX_ONE_Corp</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/849399--5-24-2010--SYMANTEC_CORP.html'">849399--5/24/2010--SYMANTEC_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/849399--6-1-2009--SYMANTEC_CORP.html'">849399--6/1/2009--SYMANTEC_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/733269--5-29-2009--ACXIOM_CORP.html'">733269--5/29/2009--ACXIOM_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1102541--2-28-2008--EARTHLINK_INC.html'">1102541--2/28/2008--EARTHLINK_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1111634--3-31-2010--XO_HOLDINGS_INC.html'">1111634--3/31/2010--XO_HOLDINGS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1080034--2-26-2010--VALUECLICK_INC-CA.html'">1080034--2/26/2010--VALUECLICK_INC/CA</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/874866--6-12-2009--CORVEL_CORP.html'">874866--6/12/2009--CORVEL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/949158--3-16-2010--CRAY_INC.html'">949158--3/16/2010--CRAY_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1074909--3-31-2010--WIZZARD_SOFTWARE_CORP_-CO.html'">1074909--3/31/2010--WIZZARD_SOFTWARE_CORP_/CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1268671--3-16-2009--TNS_INC.html'">1268671--3/16/2009--TNS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/78536--3-16-2010--REWARDS_NETWORK_INC.html'">78536--3/16/2010--REWARDS_NETWORK_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/874866--6-11-2010--CORVEL_CORP.html'">874866--6/11/2010--CORVEL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1442505--3-26-2009--Clearwire_Corp_-DE.html'">1442505--3/26/2009--Clearwire_Corp_/DE</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1331757--3-28-2008--Federal_Home_Loan_Bank_of_Dallas.html'">1331757--3/28/2008--Federal_Home_Loan_Bank_of_Dallas</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/943117--3-16-2009--SUREWEST_COMMUNICATIONS.html'">943117--3/16/2009--SUREWEST_COMMUNICATIONS</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1265888--2-26-2010--NEUSTAR_INC.html'">1265888--2/26/2010--NEUSTAR_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1108487--3-15-2006--UBIQUITEL_INC.html'">1108487--3/15/2006--UBIQUITEL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1268671--3-16-2010--TNS_INC.html'">1268671--3/16/2010--TNS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1102541--2-26-2010--EARTHLINK_INC.html'">1102541--2/26/2010--EARTHLINK_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1111634--3-16-2009--XO_HOLDINGS_INC.html'">1111634--3/16/2009--XO_HOLDINGS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/855612--3-14-2008--ZIX_CORP.html'">855612--3/14/2008--ZIX_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/105319--3-3-2010--WEIGHT_WATCHERS_INTERNATIONAL_INC.html'">105319--3/3/2010--WEIGHT_WATCHERS_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/891103--2-26-2010--IAC-INTERACTIVECORP.html'">891103--2/26/2010--IAC/INTERACTIVECORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/949371--4-2-2009--I2_TELECOM_INTERNATIONAL_INC.html'">949371--4/2/2009--I2_TELECOM_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/859014--5-27-2010--COMPUWARE_CORP.html'">859014--5/27/2010--COMPUWARE_CORP</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

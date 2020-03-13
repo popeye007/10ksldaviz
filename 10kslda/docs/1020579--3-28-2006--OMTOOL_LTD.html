@@ -1,0 +1,183 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[5.78930298, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [3.732436415, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [3.4260917438, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"], [2.2479761569, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [2.0296822492, "../topics/{control,_financial,_internal}.html", "{control,_financial,_internal}"], [1.7040233573, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [1.7030524122, "../topics/{stock,_price,_share}.html", "{stock,_price,_share}"], [1.6969208685, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"], [1.6943026378, "../topics/{cost,_operation,_labor}.html", "{cost,_operation,_labor}"], [1.6227837836, "../topics/{operation,_natural,_condition}.html", "{operation,_natural,_condition}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>1020579--3/28/2006--OMTOOL_LTD</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">1020579--3/28/2006--OMTOOL_LTD</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{control,_financial,_internal}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{control,_financial,_internal}.html'">{control, financial, internal}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{stock,_price,_share}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_share}.html'">{stock, price, share}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+<tr class="list"><td id="{cost,_operation,_labor}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_operation,_labor}.html'">{cost, operation, labor}</td></tr>
+<tr class="list"><td id="{operation,_natural,_condition}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_natural,_condition}.html'">{operation, natural, condition}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    Our future operating results are uncertain and difficult to predict.
+All of our products are concentrated in the electronic document exchange market.
+The markets for our products are subject to rapid technological change and we may not be able to keep pace with evolving industry standards or end-user requirements.
+The market for secure business-to-business document exchange solutions is new and evolving rapidly and there can be no assurance that our products will be successful in this market.
+Were we to suffer an unexpectedly large decline in our legacy fax business, our financial condition and results of operations would be significantly impaired.
+We depend on the revenue generated by sales of our AccuRoute product and would be negatively impacted if market interest whether in the legal vertical market that we have already targeted or the financial services and healthcare vertical markets that we are currently targeting were to decline or fail to grow as expected.
+We have historically depended on our sales of fax products to generate revenue and could face a decline in overall revenue if the declines we face in this market are larger than expected.
+Our common stock is listed on the Nasdaq Capital Market and any failure to maintain that listing could significantly impair our stock price and our ability to raise future capital.
+The markets in which we sell our products are characterized by intense and growing competition and our future success is dependent on our ability to distinguish our products from those of our competitors and reach our target customers.
+Our business is subject to seasonality and fluctuations on a quarterly and annual basis due to the long sales cycle for our products and numerous other factors and, therefore, our results may vary from quarter-to-quarter and year-to-year.
+In addition to direct sales, we utilize indirect sales and distribution channels and strategic alliances with compatible partners in order to broaden sales of our products. Any failure on our part to form and leverage relationships with these indirect sales and distribution channel partners could have a material adverse affect on our business and results of operations.
+The success of our business is dependent on our ability to expand our sales internationally, which will subject us to regulatory, exchange rate and other risks that might hinder our ability to meet our targets for international sales and might impair our results of operation.
+Given the nature of our business, we may not be able to obtain sufficient or attractive financing, should that become necessary.
+We may not successfully complete acquisitions or integrate acquisitions we do make, which could impair our ability to compete and could harm our operating results.
+Our future success depends on our ability to manage the growth and expansion of our business.
+The effectiveness of our disclosure controls and procedures and internal control over financial reporting may be limited.
+Our reliance on a sole hardware supplier could adversely impact our business.
+We will face additional expenses and disruption due to the upcoming relocation of our corporate headquarters.
+We are dependent on our key personnel and any inability to retain or hire key personnel could impact our business and results of operations.
+<p><a href="http://www.sec.gov/Archives/edgar/data/1020579/0001104659-06-019820.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/22252--5-1-2006--COMARCO_INC.html'">22252--5/1/2006--COMARCO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1014111--2-29-2008--IMATION_CORP.html'">1014111--2/29/2008--IMATION_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/22252--4-30-2007--COMARCO_INC.html'">22252--4/30/2007--COMARCO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1113232--3-15-2010--AXCELIS_TECHNOLOGIES_INC.html'">1113232--3/15/2010--AXCELIS_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/915735--3-14-2006--STRATASYS_INC.html'">915735--3/14/2006--STRATASYS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1113232--3-15-2007--AXCELIS_TECHNOLOGIES_INC.html'">1113232--3/15/2007--AXCELIS_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/836690--12-14-2009--INNOVATIVE_SOLUTIONS_&_SUPPORT_INC.html'">836690--12/14/2009--INNOVATIVE_SOLUTIONS_&_SUPPORT_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/836690--12-14-2010--INNOVATIVE_SOLUTIONS_&_SUPPORT_INC.html'">836690--12/14/2010--INNOVATIVE_SOLUTIONS_&_SUPPORT_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1113232--3-17-2008--AXCELIS_TECHNOLOGIES_INC.html'">1113232--3/17/2008--AXCELIS_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/106040--8-28-2007--WESTERN_DIGITAL_CORP.html'">106040--8/28/2007--WESTERN_DIGITAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/96289--3-15-2006--RADIOSHACK_CORP.html'">96289--3/15/2006--RADIOSHACK_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/106040--8-13-2010--WESTERN_DIGITAL_CORP.html'">106040--8/13/2010--WESTERN_DIGITAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/910721--3-16-2006--J_JILL_GROUP_INC.html'">910721--3/16/2006--J_JILL_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/880807--5-29-2008--AMERICAN_SUPERCONDUCTOR_CORP_-DE-.html'">880807--5/29/2008--AMERICAN_SUPERCONDUCTOR_CORP_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/915735--3-11-2009--STRATASYS_INC.html'">915735--3/11/2009--STRATASYS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/836690--12-11-2008--INNOVATIVE_SOLUTIONS_&_SUPPORT_INC.html'">836690--12/11/2008--INNOVATIVE_SOLUTIONS_&_SUPPORT_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/768411--3-12-2007--CYBEROPTICS_CORP.html'">768411--3/12/2007--CYBEROPTICS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1016470--3-13-2008--SRS_LABS_INC.html'">1016470--3/13/2008--SRS_LABS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1016470--3-22-2007--SRS_LABS_INC.html'">1016470--3/22/2007--SRS_LABS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/915735--3-15-2007--STRATASYS_INC.html'">915735--3/15/2007--STRATASYS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/880807--5-27-2010--AMERICAN_SUPERCONDUCTOR_CORP_-DE-.html'">880807--5/27/2010--AMERICAN_SUPERCONDUCTOR_CORP_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/768411--3-10-2008--CYBEROPTICS_CORP.html'">768411--3/10/2008--CYBEROPTICS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1016470--3-24-2006--SRS_LABS_INC.html'">1016470--3/24/2006--SRS_LABS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/919013--3-16-2010--WAVE_SYSTEMS_CORP.html'">919013--3/16/2010--WAVE_SYSTEMS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/56978--12-14-2006--KULICKE_&_SOFFA_INDUSTRIES_INC.html'">56978--12/14/2006--KULICKE_&_SOFFA_INDUSTRIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1113232--3-31-2009--AXCELIS_TECHNOLOGIES_INC.html'">1113232--3/31/2009--AXCELIS_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/832767--12-14-2006--PHOENIX_TECHNOLOGIES_LTD.html'">832767--12/14/2006--PHOENIX_TECHNOLOGIES_LTD</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/915735--3-17-2008--STRATASYS_INC.html'">915735--3/17/2008--STRATASYS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/892482--3-12-2010--RIMAGE_CORP.html'">892482--3/12/2010--RIMAGE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/844143--2-28-2008--JOE_S_JEANS_INC..html'">844143--2/28/2008--JOE'S_JEANS_INC.</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

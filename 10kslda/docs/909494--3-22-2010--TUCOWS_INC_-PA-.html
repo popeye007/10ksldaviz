@@ -1,0 +1,226 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[14.2123073779, "../topics/{system,_service,_information}.html", "{system,_service,_information}"], [7.5997508826, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [5.5763245322, "../topics/{regulation,_change,_law}.html", "{regulation,_change,_law}"], [4.7913505974, "../topics/{regulation,_government,_change}.html", "{regulation,_government,_change}"], [4.6245382297, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [4.3150718194, "../topics/{stock,_price,_share}.html", "{stock,_price,_share}"], [3.8277637847, "../topics/{capital,_credit,_financial}.html", "{capital,_credit,_financial}"], [3.3169633533, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [2.8657546661, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [2.7013955061, "../topics/{condition,_economic,_financial}.html", "{condition,_economic,_financial}"], [2.6967868316, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"], [1.9700545209, "../topics/{product,_candidate,_development}.html", "{product,_candidate,_development}"], [1.8767835156, "../topics/{investment,_property,_distribution}.html", "{investment,_property,_distribution}"], [1.7454470017, "../topics/{tax,_income,_asset}.html", "{tax,_income,_asset}"], [1.7068508058, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"], [1.6170804203, "../topics/{loss,_insurance,_financial}.html", "{loss,_insurance,_financial}"], [1.0603292472, "../topics/{loan,_real,_estate}.html", "{loan,_real,_estate}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>909494--3/22/2010--TUCOWS_INC_/PA/</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">909494--3/22/2010--TUCOWS_INC_/PA/</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{system,_service,_information}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{system,_service,_information}.html'">{system, service, information}</td></tr>
+<tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{regulation,_change,_law}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_change,_law}.html'">{regulation, change, law}</td></tr>
+<tr class="list"><td id="{regulation,_government,_change}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_government,_change}.html'">{regulation, government, change}</td></tr>
+<tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{stock,_price,_share}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_share}.html'">{stock, price, share}</td></tr>
+<tr class="list"><td id="{capital,_credit,_financial}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{capital,_credit,_financial}.html'">{capital, credit, financial}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{condition,_economic,_financial}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{condition,_economic,_financial}.html'">{condition, economic, financial}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+<tr class="list"><td id="{product,_candidate,_development}" onmouseover="highlight(11)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_candidate,_development}.html'">{product, candidate, development}</td></tr>
+<tr class="list"><td id="{investment,_property,_distribution}" onmouseover="highlight(12)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{investment,_property,_distribution}.html'">{investment, property, distribution}</td></tr>
+<tr class="list"><td id="{tax,_income,_asset}" onmouseover="highlight(13)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{tax,_income,_asset}.html'">{tax, income, asset}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(14)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+<tr class="list"><td id="{loss,_insurance,_financial}" onmouseover="highlight(15)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{loss,_insurance,_financial}.html'">{loss, insurance, financial}</td></tr>
+<tr class="list"><td id="{loan,_real,_estate}" onmouseover="highlight(16)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{loan,_real,_estate}.html'">{loan, real, estate}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    Risks Related to Our Business and Industry
+We may not be able to maintain or improve our competitive position and may be forced to reduce our prices because of strong competition in the market for Internet services generally and domain name registration, in particular, which we expect will continue to intensify.
+Each registry and the ICANN regulatory body impose a charge upon the registrar for the administration of each domain registration. If these fees increase, this may have an impact upon our profits.
+We rely on our network of resellers to renew their domain registrations through us and to distribute our services, and if we are unable to maintain these relationships or establish new relationships, our revenues will decline.
+We believe that companies operating on the Internet are facing a period of consolidation. In addition, some of our resellers may decide to seek ICANN accreditation. Both of these situations could reduce the number of our active resellers, in which case our revenues may suffer.
+Our failure to secure agreements with country code registries or our subsequent failure to comply with the regulations of the country code registries could cause customers to seek a registrar that offers these services.
+Our standard agreements may not be enforceable, which could subject us to liability.
+Regulation could reduce the value of Internet domain names or negatively impact the Internet domain acquisition process, which could significantly impair the value attributable to our acquisitions of Internet domain names.
+We have presence in the hosted messaging and email market, which is a volatile business.
+If we are unable to maintain our relationships with our customers and replace lost email customers, our revenue may decline.
+The international nature of our business exposes us to certain business risks that could limit the effectiveness of our growth strategy and cause our results of operations to suffer.
+We currently license many third party technologies and may need to license further technologies which could delay and increase the cost of product and service developments
+Our advertising revenues may be subject to fluctuations.
+We may acquire companies or make investments in, or enter into licensing arrangements with, other companies with technologies that are complementary to our business and these acquisitions or arrangements could disrupt our business, cause us to require additional financing and dilute your holdings in our company.
+Our corporate culture has contributed to our success, and if we cannot maintain this culture as we grow, we could lose the innovation, creativity and teamwork fostered by our culture, and our business may be harmed.
+Our business depends on a strong brand. If we are not able to maintain and enhance our brand, our ability to expand our customer base will be impaired and our business and operating results will be harmed.
+If we fail to protect our proprietary rights, the value of those rights could be diminished.
+We may not be able to realize the intended and anticipated benefits from our acquisitions of expiring domain names, which could affect the value of these acquisitions to our business and our ability to meet our financial obligations and targets.
+We do not control the means by which end users access our web sites and material changes to current navigation practices or technologies or marketing practices could result in a material adverse effect on our business.
+If the practice of direct navigation becomes less popular either as a result of evolving technologies or user practices, our ability to generate revenue from the practice of click through advertising may suffer.
+We may experience unforeseen liabilities in connection with our domain name portfolio, which could negatively impact our financial results.
+Once any infringement is detected, disputes concerning the ownership or rights to use intellectual property could be costly and time-consuming to litigate, may distract management from operating the business, and may result in us losing significant rights and our ability to operate all or a portion of our business.
+The law relating to the liability of online services companies for data and content carried on or disseminated through their networks is currently unsettled and could expose us to unforeseen liabilities.
+Privacy concerns relating to our technology could damage our reputation and deter current and potential users from using our services.
+Because we are required to recognize revenue for our services over the term of the applicable customer agreement, changes in our sales may not be immediately reflected in our operating results.
+Currency fluctuations may adversely affect us.
+If we do not maintain a low rate of credit card chargebacks, we will face the prospect of financial penalties and could lose our ability to accept credit card payments from customers, which would have a material adverse affect on our business, financial condition and results of operations.
+Forecasting our tax rate is complex and subject to uncertainty.
+Compliance with regulation of corporate governance, accounting principles and public disclosure may result in additional expenses.
+We may incur substantial costs in order to comply with the requirements of Section 404(b) of the Sarbanes-Oxley act of 2002.
+Impairment of goodwill and other intangible assets would result in a decrease in earnings.
+We could suffer uninsured losses.
+An extended economic recession would likely have a material adverse impact on our business, financial condition and results of operations.
+Our quarterly and annual operating results may fluctuate and our future revenues and profitability are uncertain.
+Risks Related To the Internet and Our Technology
+Our business could be materially harmed if the administration and operation of the Internet no longer rely upon the existing domain system.
+The law relating to the use of and ownership in intellectual property on the Internet is currently unsettled and may expose us to unforeseen liabilities.
+If Internet usage does not grow or if the Internet does not continue to expand as a medium for commerce, our business may suffer.
+We believe that part of our growth will be derived from resellers in international markets and may suffer if Internet usage does not continue to grow globally.
+We may be unable to respond to the rapid technological changes in the industry, and our attempts to respond may require significant capital expenditures.
+We could experience system failures and capacity constraints which could diminish our ability to effectively provide our services and could damage our reputation and harm our operating results.
+Our systems face security risks, and any compromise of the security of these systems could result in liability for damages and in lost customers.
+We may have difficulty scaling and adapting our existing architecture to accommodate increased traffic and technology advances or changing business requirements, which could lead to the loss of customers and cause us to incur additional expenses.
+We rely on bandwidth providers, data centers and other vendors in providing services to our customers, and any failure or interruption in the services provided by these third parties could harm our ability to operate our business and damage our reputation.
+Lack of consumer confidence in the security of on-line financial transactions could negatively impact our business.
+We may be accused of intellectual property infringement of the technology we have employed to support both our back end platform and the products and services we offer to and through our resellers and may be sued for damages caused by actual use of the platforms or products and services and we may be required to pay substantial damage awards.
+Governmental and regulatory policies or claims concerning the domain registration system, and industry reactions to those policies or claims, may cause instability in the industry and disrupt our domain registration business.
+ICANN Oversight of Domain Name Registration System
+Governmental Regulation Affecting the Internet
+We may be subject to government regulation that may be costly and may interfere with our ability to conduct business.
+Risks Related to our Stock
+We do not intend to declare dividends on our common stock in the immediate future.
+We are controlled by a limited number of principal shareholders, which may limit your ability to influence corporate matters.
+Our share price is volatile, which may make it difficult for shareholders to sell their shares of common stock when they want to, at an attractive price.
+Future sales of shares of our common stock by our existing shareholders could cause our share price to fall.
+<p><a href="http://www.sec.gov/Archives/edgar/data/909494/0001047469-10-002531.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/909494--3-27-2009--TUCOWS_INC_-PA-.html'">909494--3/27/2009--TUCOWS_INC_/PA/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/909494--3-28-2008--TUCOWS_INC_-PA-.html'">909494--3/28/2008--TUCOWS_INC_/PA/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/829323--3-29-2007--THINK_PARTNERSHIP_INC.html'">829323--3/29/2007--THINK_PARTNERSHIP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1131096--3-7-2008--ATHENAHEALTH_INC.html'">1131096--3/7/2008--ATHENAHEALTH_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1131096--3-2-2009--ATHENAHEALTH_INC.html'">1131096--3/2/2009--ATHENAHEALTH_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1011006--2-23-2007--YAHOO_INC.html'">1011006--2/23/2007--YAHOO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1011006--2-27-2008--YAHOO_INC.html'">1011006--2/27/2008--YAHOO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1011006--3-3-2006--YAHOO_INC.html'">1011006--3/3/2006--YAHOO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1131096--3-15-2010--ATHENAHEALTH_INC.html'">1131096--3/15/2010--ATHENAHEALTH_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/829323--3-31-2008--THINK_PARTNERSHIP_INC.html'">829323--3/31/2008--THINK_PARTNERSHIP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1065280--2-28-2008--NETFLIX_INC.html'">1065280--2/28/2008--NETFLIX_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1326583--3-16-2006--WebMD_Health_Corp..html'">1326583--3/16/2006--WebMD_Health_Corp.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1283699--2-29-2008--METROPCS_COMMUNICATIONS_INC.html'">1283699--2/29/2008--METROPCS_COMMUNICATIONS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1259550--3-16-2010--LOCAL.COM.html'">1259550--3/16/2010--LOCAL.COM</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1326583--2-29-2008--WebMD_Health_Corp..html'">1326583--2/29/2008--WebMD_Health_Corp.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/909494--3-29-2007--TUCOWS_INC_-PA-.html'">909494--3/29/2007--TUCOWS_INC_/PA/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1045742--12-29-2006--YP_CORP.html'">1045742--12/29/2006--YP_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1065332--3-16-2006--NIC_INC.html'">1065332--3/16/2006--NIC_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/896878--9-15-2006--INTUIT_INC.html'">896878--9/15/2006--INTUIT_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/829323--3-31-2009--KOWABUNGA!_INC..html'">829323--3/31/2009--KOWABUNGA!_INC.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1065088--2-24-2006--EBAY_INC.html'">1065088--2/24/2006--EBAY_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1035185--3-16-2009--GEVITY_HR_INC.html'">1035185--3/16/2009--GEVITY_HR_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1351285--3-10-2010--ROSETTA_STONE_INC.html'">1351285--3/10/2010--ROSETTA_STONE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1326583--3-2-2007--WebMD_Health_Corp..html'">1326583--3/2/2007--WebMD_Health_Corp.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1065088--2-29-2008--EBAY_INC.html'">1065088--2/29/2008--EBAY_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1065088--2-28-2007--EBAY_INC.html'">1065088--2/28/2007--EBAY_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1326583--2-27-2009--WebMD_Health_Corp..html'">1326583--2/27/2009--WebMD_Health_Corp.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1065280--2-22-2010--NETFLIX_INC.html'">1065280--2/22/2010--NETFLIX_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1084332--6-27-2007--SALON_MEDIA_GROUP_INC.html'">1084332--6/27/2007--SALON_MEDIA_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1065088--2-20-2009--EBAY_INC.html'">1065088--2/20/2009--EBAY_INC</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

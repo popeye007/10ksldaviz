@@ -1,0 +1,186 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[5.6349093778, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [4.1057057746, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [3.7054626406, "../topics/{control,_financial,_internal}.html", "{control,_financial,_internal}"], [3.3594580012, "../topics/{system,_service,_information}.html", "{system,_service,_information}"], [2.6961843088, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"], [2.6509623607, "../topics/{operation,_natural,_condition}.html", "{operation,_natural,_condition}"], [1.7078394827, "../topics/{capital,_credit,_financial}.html", "{capital,_credit,_financial}"], [1.7014664726, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [1.6964044049, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [1.6962728821, "../topics/{cost,_regulation,_environmental}.html", "{cost,_regulation,_environmental}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>895812--2/26/2007--GATEWAY_INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">895812--2/26/2007--GATEWAY_INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{control,_financial,_internal}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{control,_financial,_internal}.html'">{control, financial, internal}</td></tr>
+<tr class="list"><td id="{system,_service,_information}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{system,_service,_information}.html'">{system, service, information}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+<tr class="list"><td id="{operation,_natural,_condition}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_natural,_condition}.html'">{operation, natural, condition}</td></tr>
+<tr class="list"><td id="{capital,_credit,_financial}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{capital,_credit,_financial}.html'">{capital, credit, financial}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{cost,_regulation,_environmental}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_regulation,_environmental}.html'">{cost, regulation, environmental}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    The PC industry is extremely competitive and pricing pressures have reduced Gateway s gross profits and challenge its ability to maintain profitability.
+Reliance upon third-party patents and intellectual property licensing could limit Gateway s ability to innovate and exposes it to actual and potential litigation, which could adversely impact operating results.
+Because one customer accounts for a substantial portion of Gateway s revenues, the loss of this customer would cause a significant decline in its revenues.
+Failure to develop and maintain relationships with several key third-party retailers could adversely affect revenues.
+If Gateway fails to attract new customers, retain its existing customers and/or replace revenues associated with its higher-margin service revenues, its operating results will be adversely impacted.
+Information technology systems integration issues could disrupt Gateway s internal operations, which could have significant adverse effects on its profitability and/or may have a material effect on its internal controls over financial reporting.
+Gateway is dependent on manufacturing and services provided by a limited number of third parties and failure to properly manage these relationships could significantly impact its results of operations.
+Gateway is dependent on suppliers for trade credit. If such credit is not available, Gateway s liquidity could be adversely affected.
+Gateway opened a final assembly facility during 2006 which exposes it to additional financial and operational risk.
+Gateway s reliance on original design manufacturers or suppliers of key products and components exposes it to potential product quality issues and unanticipated warranty costs that could affect the on-time delivery and performance of its products and services, which could adversely impact operating results.
+Failure to develop and introduce new and technologically advanced products in an industry characterized by short product life cycles could adversely affect Gateway s growth and efforts to sustain profitability.
+The failure to properly manage inventory could adversely affect operating results.
+The failure to attract, retain and motivate key personnel could have a significant near-term adverse impact on Gateway s operations.
+Gateway has outsourced operations in countries outside of the U.S. and changes in the political environment, economic policies and other factors within those countries or the U.S. could adversely affect its business.
+Environmental laws and regulations and unforeseen costs could impact Gateway s future earnings.
+Gateway is subject to seasonality which can make it difficult to forecast results of operations and anticipate near term developments.
+Expansion into international markets exposes Gateway to increased risks, which could adversely impact operating results.
+War, terrorist acts and other political and economic uncertainties may adversely affect Gateway s operating results.
+If Gateway cannot sustain profitability and Gateway incurs significant net losses or negative cash flows, the business could fail.
+Gateway s failure to protect customer data could adversely affect our sales and reputation.
+If Gateway does not maintain its reputation and expand its name recognition, Gateway may lose customers which would adversely impact its financial results.
+Gateway s internal control over financial reporting could be adversely affected by a material weakness in its internal controls. If not corrected, its operating results and stock price could be adversely affected.
+<p><a href="http://www.sec.gov/Archives/edgar/data/895812/0001193125-07-039596.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/1090071--2-26-2008--FOUNDRY_NETWORKS_INC.html'">1090071--2/26/2008--FOUNDRY_NETWORKS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/866609--3-31-2006--INPUT_OUTPUT_INC.html'">866609--3/31/2006--INPUT_OUTPUT_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1090071--6-14-2007--FOUNDRY_NETWORKS_INC.html'">1090071--6/14/2007--FOUNDRY_NETWORKS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1090071--3-15-2006--FOUNDRY_NETWORKS_INC.html'">1090071--3/15/2006--FOUNDRY_NETWORKS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/743988--5-28-2008--XILINX_INC.html'">743988--5/28/2008--XILINX_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1042431--12-14-2007--INTERWOVEN_INC.html'">1042431--12/14/2007--INTERWOVEN_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1042431--3-14-2008--INTERWOVEN_INC.html'">1042431--3/14/2008--INTERWOVEN_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1003607--12-29-2006--ALTIGEN_COMMUNICATIONS_INC.html'">1003607--12/29/2006--ALTIGEN_COMMUNICATIONS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/790705--5-30-2006--TEKELEC.html'">790705--5/30/2006--TEKELEC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1054374--1-28-2008--BROADCOM_CORP.html'">1054374--1/28/2008--BROADCOM_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/869498--10-13-2006--RONCO_CORP.html'">869498--10/13/2006--RONCO_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1042431--3-13-2006--INTERWOVEN_INC.html'">1042431--3/13/2006--INTERWOVEN_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/919443--3-9-2006--LACROSSE_FOOTWEAR_INC.html'">919443--3/9/2006--LACROSSE_FOOTWEAR_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/889930--10-14-2008--OVERLAND_STORAGE_INC.html'">889930--10/14/2008--OVERLAND_STORAGE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1002663--12-14-2006--PHOTON_DYNAMICS_INC.html'">1002663--12/14/2006--PHOTON_DYNAMICS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/106040--8-20-2008--WESTERN_DIGITAL_CORP.html'">106040--8/20/2008--WESTERN_DIGITAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1002531--3-2-2006--TOLLGRADE_COMMUNICATIONS_INC_\PA\.html'">1002531--3/2/2006--TOLLGRADE_COMMUNICATIONS_INC_\PA\</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1082506--9-9-2009--OPENWAVE_SYSTEMS_INC.html'">1082506--9/9/2009--OPENWAVE_SYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/793952--2-27-2007--HARLEY_DAVIDSON_INC.html'">793952--2/27/2007--HARLEY_DAVIDSON_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1007800--8-17-2006--SIPEX_CORP.html'">1007800--8/17/2006--SIPEX_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1054374--2-4-2009--BROADCOM_CORP.html'">1054374--2/4/2009--BROADCOM_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1054374--2-20-2007--BROADCOM_CORP.html'">1054374--2/20/2007--BROADCOM_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1042825--3-16-2007--POWER_ONE_INC.html'">1042825--3/16/2007--POWER_ONE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/919443--3-20-2007--LACROSSE_FOOTWEAR_INC.html'">919443--3/20/2007--LACROSSE_FOOTWEAR_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/909791--3-1-2010--ULTRATECH_INC.html'">909791--3/1/2010--ULTRATECH_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/785786--11-18-2009--PLEXUS_CORP.html'">785786--11/18/2009--PLEXUS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1141107--2-26-2010--ARRIS_GROUP_INC.html'">1141107--2/26/2010--ARRIS_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/915866--3-16-2007--NMS_COMMUNICATIONS_CORP.html'">915866--3/16/2007--NMS_COMMUNICATIONS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/105132--10-23-2008--WD_40_CO.html'">105132--10/23/2008--WD_40_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1013857--3-10-2008--PEGASYSTEMS_INC.html'">1013857--3/10/2008--PEGASYSTEMS_INC</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

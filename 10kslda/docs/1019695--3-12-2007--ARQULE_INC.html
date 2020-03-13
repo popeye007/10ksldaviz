@@ -1,0 +1,208 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[16.9487806661, "../topics/{product,_candidate,_development}.html", "{product,_candidate,_development}"], [5.8548789329, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [3.2249567165, "../topics/{product,_liability,_claim}.html", "{product,_liability,_claim}"], [2.8748434979, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [2.403122226, "../topics/{system,_service,_information}.html", "{system,_service,_information}"], [2.3299777717, "../topics/{stock,_price,_share}.html", "{stock,_price,_share}"], [2.2381206176, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [1.9517626075, "../topics/{operation,_natural,_condition}.html", "{operation,_natural,_condition}"], [1.862315237, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [1.7872553651, "../topics/{control,_financial,_internal}.html", "{control,_financial,_internal}"], [1.7801562777, "../topics/{provision,_law,_control}.html", "{provision,_law,_control}"], [1.6805441858, "../topics/{regulation,_government,_change}.html", "{regulation,_government,_change}"], [1.5445458942, "../topics/{cost,_operation,_labor}.html", "{cost,_operation,_labor}"], [1.2654346372, "../topics/{condition,_economic,_financial}.html", "{condition,_economic,_financial}"], [1.1515499962, "../topics/{cost,_regulation,_environmental}.html", "{cost,_regulation,_environmental}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>1019695--3/12/2007--ARQULE_INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">1019695--3/12/2007--ARQULE_INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{product,_candidate,_development}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_candidate,_development}.html'">{product, candidate, development}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{product,_liability,_claim}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_liability,_claim}.html'">{product, liability, claim}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{system,_service,_information}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{system,_service,_information}.html'">{system, service, information}</td></tr>
+<tr class="list"><td id="{stock,_price,_share}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_share}.html'">{stock, price, share}</td></tr>
+<tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{operation,_natural,_condition}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_natural,_condition}.html'">{operation, natural, condition}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{control,_financial,_internal}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{control,_financial,_internal}.html'">{control, financial, internal}</td></tr>
+<tr class="list"><td id="{provision,_law,_control}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{provision,_law,_control}.html'">{provision, law, control}</td></tr>
+<tr class="list"><td id="{regulation,_government,_change}" onmouseover="highlight(11)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_government,_change}.html'">{regulation, government, change}</td></tr>
+<tr class="list"><td id="{cost,_operation,_labor}" onmouseover="highlight(12)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_operation,_labor}.html'">{cost, operation, labor}</td></tr>
+<tr class="list"><td id="{condition,_economic,_financial}" onmouseover="highlight(13)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{condition,_economic,_financial}.html'">{condition, economic, financial}</td></tr>
+<tr class="list"><td id="{cost,_regulation,_environmental}" onmouseover="highlight(14)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_regulation,_environmental}.html'">{cost, regulation, environmental}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    RISKS RELATING TO OUR INDUSTRY AND BUSINESS STRATEGY
+Development of our products is at an early stage and is based on scientific platforms that are unproven. We may not successfully develop a drug candidate that becomes a commercially viable drug.
+We must show the safety and efficacy of our product candidates through expensive, time consuming preclinical and clinical trials, the results of which are uncertain and governed by exacting regulations.
+Delays in clinical testing could result in increased costs to us and delay our ability to obtain regulatory approval and commercialize our product candidates.
+We have limited clinical development and commercialization experience.
+If our drug discovery and development programs do not progress as anticipated, our revenue and stock price could be negatively impacted.
+RISKS RELATED TO REGULATORY APPROVAL
+Our product candidates are subject to a lengthy and uncertain regulatory process that may not result in the necessary regulatory approvals, which would adversely affect our ability to commercialize products. We have only limited experience in regulatory affairs.
+Even if our drug candidates obtain regulatory approval, we and our collaborators will be subject to ongoing government regulation.
+Even if we or our collaborators bring products to market, we may be unable to effectively price our products or obtain adequate reimbursement for sales of our products, which would have an adverse effect on our revenues.
+We face potential liability related to the privacy of health information we obtain from research institutions.
+Part of our business strategy involves collaborative out-licensing of our drug candidates while retaining commercialization or co-promotional rights in parts of the world. We may not be able to find collaborators or successfully form suitable collaborations to further our drug development and commercialization efforts.
+Our success depends in part on the efforts of our current and possible future collaborators, who will likely have substantial control and discretion over the continued development and commercialization of drug candidates which are the subjects of our collaborations.
+We may not receive any further milestone, royalty or license payments under our current collaboration.
+RISKS RELATED TO RELATIONSHIPS WITH THIRD PARTY VENDORS
+We rely heavily on third parties such as contract research organizations, to conduct clinical trials and perform research and analysis services for us. If third parties upon which we rely do not perform as contractually required or expected, we may not be able to develop further, obtain regulatory approval for or commercialize our product candidates.
+We have limited manufacturing experience. We primarily rely on third parties to provide sufficient quantities of our product candidates to conduct pre-clinical and clinical studies. We have no control over our manufacturers and suppliers compliance with manufacturing regulations, and their failure to comply could result in an interruption in the supply of our product candidates.
+Materials necessary to manufacture our product candidates currently under development may not be available on commercially reasonable terms, or at all, which may delay our development and commercialization of these drugs.
+RISKS RELATED TO OUR FINANCIAL CONDITION
+We have incurred significant losses since our inception and anticipate that we will incur significant continued losses for the next several years, and our future profitability is uncertain.
+We may need substantial additional funding and may be unable to raise capital when needed, or on terms favorable to us, which could force us to delay, reduce or eliminate our drug discovery, product development and commercialization activities.
+RISKS RELATED TO OUR COMMON STOCK
+Our stock price may be extremely volatile.
+Some of our existing stockholders can exert control over us, and their interests could conflict with the best interests of our other stockholders.
+Anti-takeover provisions in our charter documents and under Delaware law could make an acquisition of us, which may be beneficial to our stockholders, more difficult and may prevent or deter attempts by our stockholders to replace or remove our current management.
+Because we do not intend to pay dividends, stockholders will benefit from an investment in our common stock only if it appreciates in value.
+The drug research and development industry is highly competitive, and we compete with some companies that offer a broader range of capabilities and have better access to resources than we do.
+We may not be able to recruit and retain the scientists and management we need to compete.
+RISKS RELATED TO INTELLECTUAL PROPERTY
+Our patents and other proprietary rights may fail to protect our business. If we are unable to adequately protect our intellectual property, third parties may be able to use our technology, which could adversely affect our ability to compete in the market.
+Agreements we have with our employees, consultants and collaborators may not afford adequate protection for our trade secrets, confidential information and other proprietary information.
+Our success will depend partly on our ability to operate without infringing on or misappropriating the proprietary rights of others.
+The drug research and development industry has a history of patent and other intellectual property litigation, and we may be involved in costly intellectual property lawsuits.
+RISKS RELATED TO EMPLOYEES AND FACILITIES
+Our operations could be interrupted by damage to our laboratory facilities.
+Security Breaches May Disrupt Our Operations And Harm Our Operating Results.
+RISKS RELATED TO PRODUCT LIABILITY
+If our use of chemical
+We may be exposed to potential liability related to the development, testing or manufacturing of compounds we develop.
+<p><a href="http://www.sec.gov/Archives/edgar/data/1019695/0001104659-07-017922.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/716054--3-15-2006--CYPRESS_BIOSCIENCE_INC.html'">716054--3/15/2006--CYPRESS_BIOSCIENCE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1173657--3-14-2006--BARRIER_THERAPEUTICS_INC.html'">1173657--3/14/2006--BARRIER_THERAPEUTICS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1019695--3-17-2008--ARQULE_INC.html'">1019695--3/17/2008--ARQULE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1019695--3-6-2009--ARQULE_INC.html'">1019695--3/6/2009--ARQULE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1285701--3-29-2006--FAVRILLE_INC.html'">1285701--3/29/2006--FAVRILLE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1285819--3-31-2010--OMEROS_CORP.html'">1285819--3/31/2010--OMEROS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1285701--3-28-2007--FAVRILLE_INC.html'">1285701--3/28/2007--FAVRILLE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1285701--2-29-2008--FAVRILLE_INC.html'">1285701--2/29/2008--FAVRILLE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1028358--3-31-2006--GENITOPE_CORP.html'">1028358--3/31/2006--GENITOPE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1129425--3-1-2007--ZYMOGENETICS_INC.html'">1129425--3/1/2007--ZYMOGENETICS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1128495--3-1-2010--ANADYS_PHARMACEUTICALS_INC.html'">1128495--3/1/2010--ANADYS_PHARMACEUTICALS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1053221--3-13-2007--METABASIS_THERAPEUTICS_INC.html'">1053221--3/13/2007--METABASIS_THERAPEUTICS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1158223--4-2-2007--AFFYMAX_INC.html'">1158223--4/2/2007--AFFYMAX_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1053221--3-23-2006--METABASIS_THERAPEUTICS_INC.html'">1053221--3/23/2006--METABASIS_THERAPEUTICS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1061027--3-30-2006--SUNESIS_PHARMACEUTICALS_INC.html'">1061027--3/30/2006--SUNESIS_PHARMACEUTICALS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/919722--3-16-2007--SUPERGEN_INC.html'">919722--3/16/2007--SUPERGEN_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/919722--3-15-2010--SUPERGEN_INC.html'">919722--3/15/2010--SUPERGEN_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1107332--3-14-2007--DENDREON_CORP.html'">1107332--3/14/2007--DENDREON_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/875320--2-11-2008--VERTEX_PHARMACEUTICALS_INC_-_MA.html'">875320--2/11/2008--VERTEX_PHARMACEUTICALS_INC_/_MA</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/855654--8-28-2006--IMMUNOGEN_INC.html'">855654--8/28/2006--IMMUNOGEN_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/901219--2-28-2007--HUMAN_GENOME_SCIENCES_INC.html'">901219--2/28/2007--HUMAN_GENOME_SCIENCES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/901219--2-26-2008--HUMAN_GENOME_SCIENCES_INC.html'">901219--2/26/2008--HUMAN_GENOME_SCIENCES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1128495--3-5-2008--ANADYS_PHARMACEUTICALS_INC.html'">1128495--3/5/2008--ANADYS_PHARMACEUTICALS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1061027--3-15-2007--SUNESIS_PHARMACEUTICALS_INC.html'">1061027--3/15/2007--SUNESIS_PHARMACEUTICALS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1028358--3-16-2007--GENITOPE_CORP.html'">1028358--3/16/2007--GENITOPE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/872589--3-12-2007--REGENERON_PHARMACEUTICALS_INC.html'">872589--3/12/2007--REGENERON_PHARMACEUTICALS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1344413--3-29-2007--Alexza_Pharmaceuticals_Inc..html'">1344413--3/29/2007--Alexza_Pharmaceuticals_Inc.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1162192--3-31-2006--AVALON_PHARMACEUTICALS_INC.html'">1162192--3/31/2006--AVALON_PHARMACEUTICALS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1226616--3-31-2009--MEDICINOVA_INC.html'">1226616--3/31/2009--MEDICINOVA_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1162192--3-30-2007--AVALON_PHARMACEUTICALS_INC.html'">1162192--3/30/2007--AVALON_PHARMACEUTICALS_INC</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

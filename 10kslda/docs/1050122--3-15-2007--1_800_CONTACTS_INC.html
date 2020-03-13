@@ -1,0 +1,207 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[6.0182655174, "../topics/{system,_service,_information}.html", "{system,_service,_information}"], [5.9384368232, "../topics/{cost,_regulation,_environmental}.html", "{cost,_regulation,_environmental}"], [2.934902806, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"], [2.8829629963, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [2.7656695094, "../topics/{capital,_credit,_financial}.html", "{capital,_credit,_financial}"], [2.7170483978, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [2.6991458199, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [2.2769074234, "../topics/{stock,_price,_share}.html", "{stock,_price,_share}"], [1.9772589111, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [1.957423007, "../topics/{product,_liability,_claim}.html", "{product,_liability,_claim}"], [1.8803909584, "../topics/{product,_candidate,_development}.html", "{product,_candidate,_development}"], [1.8366245387, "../topics/{regulation,_change,_law}.html", "{regulation,_change,_law}"], [1.8305097618, "../topics/{financial,_litigation,_operation}.html", "{financial,_litigation,_operation}"], [1.7443765365, "../topics/{competitive,_industry,_competition}.html", "{competitive,_industry,_competition}"], [1.7367239452, "../topics/{tax,_income,_asset}.html", "{tax,_income,_asset}"], [1.7249254017, "../topics/{interest,_director,_officer}.html", "{interest,_director,_officer}"], [1.7188392743, "../topics/{operation,_natural,_condition}.html", "{operation,_natural,_condition}"], [1.7053195401, "../topics/{loss,_insurance,_financial}.html", "{loss,_insurance,_financial}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>1050122--3/15/2007--1_800_CONTACTS_INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">1050122--3/15/2007--1_800_CONTACTS_INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{system,_service,_information}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{system,_service,_information}.html'">{system, service, information}</td></tr>
+<tr class="list"><td id="{cost,_regulation,_environmental}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_regulation,_environmental}.html'">{cost, regulation, environmental}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+<tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{capital,_credit,_financial}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{capital,_credit,_financial}.html'">{capital, credit, financial}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{stock,_price,_share}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_share}.html'">{stock, price, share}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{product,_liability,_claim}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_liability,_claim}.html'">{product, liability, claim}</td></tr>
+<tr class="list"><td id="{product,_candidate,_development}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_candidate,_development}.html'">{product, candidate, development}</td></tr>
+<tr class="list"><td id="{regulation,_change,_law}" onmouseover="highlight(11)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_change,_law}.html'">{regulation, change, law}</td></tr>
+<tr class="list"><td id="{financial,_litigation,_operation}" onmouseover="highlight(12)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{financial,_litigation,_operation}.html'">{financial, litigation, operation}</td></tr>
+<tr class="list"><td id="{competitive,_industry,_competition}" onmouseover="highlight(13)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{competitive,_industry,_competition}.html'">{competitive, industry, competition}</td></tr>
+<tr class="list"><td id="{tax,_income,_asset}" onmouseover="highlight(14)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{tax,_income,_asset}.html'">{tax, income, asset}</td></tr>
+<tr class="list"><td id="{interest,_director,_officer}" onmouseover="highlight(15)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{interest,_director,_officer}.html'">{interest, director, officer}</td></tr>
+<tr class="list"><td id="{operation,_natural,_condition}" onmouseover="highlight(16)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_natural,_condition}.html'">{operation, natural, condition}</td></tr>
+<tr class="list"><td id="{loss,_insurance,_financial}" onmouseover="highlight(17)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{loss,_insurance,_financial}.html'">{loss, insurance, financial}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    Risks Relating to Our Business
+ClearLab continues to incur substantial losses and requires ongoing cash investment from the U.S. Retail business.
+We may not be able to separate ClearLab from the U.S. Retail business on favorable terms.
+We may continue to incur significant additional expense to support ClearLab.
+Our business is dependent upon suppliers of contact lenses.
+We have no control over the manufacturing and quality of the contact lenses we sell in the United States.
+We will continue to experience order cancellations due to the prescription verification requirements of the FCLCA.
+We may continue to incur significant legal and professional fees.
+We are subject to numerous regulatory risks.
+It is possible that the FDA could consider certain of the contact lenses we sell to be misbranded or adulterated.
+A portion of our sales may be found to violate applicable state laws and regulations concerning the delivery and sale of contact lenses.
+Our manufacturing facilities and products are subject to stringent regulation by various foreign jurisdictions in which our products are manufactured and/or sold.
+Consumer acceptance of our manufactured products may not meet our expectations.
+We may not be able to establish a sufficient network of eye care practitioners to provide contact lens eye exams to our customers who have expired contact lens prescriptions.
+Our quarterly results are likely to vary based upon the level of sales and marketing activity in any particular quarter.
+The retail sale of contact lenses is highly competitive and certain of our competitors are large, national optical chains that have greater resources than we do.
+The demand for contact lenses could be substantially reduced if alternative technologies to permanently correct vision gain in popularity.
+Increases in the cost of shipping, postage or credit card processing could harm our business.
+Our business could be harmed if we are required to collect state sales tax on the sale of all products.
+We face an inherent risk of exposure to product liability claims in the event that the products we manufacture or sell allegedly cause personal injury.
+We conduct our retail operations through a single distribution facility.
+We are subject to certain risks associated with our foreign operations that could harm our revenues and profitability.
+Currency exchange rate fluctuations could have an adverse effect on our financial results.
+We may be required to reduce the carrying value of our goodwill, long-lived and definite-lived assets if events and circumstances indicate the remaining balance of these assets may not be recoverable.
+Our intellectual property rights may be challenged, and we do not have any property rights in the 1-800 CONTACTS telephone number or the Internet addresses.
+We may not be able to complete our milestones and obligations in a timely manner under our Japanese license agreement and may not receive the amount of license fees and royalties that we presently anticipate under that agreement.
+Risks Relating to the Internet
+We are dependent on our telephone, Internet and management information systems for the sale and distribution of contact lenses.
+Our success is dependent, in part, on continued use of the Internet.
+Online security breaches could harm our business.
+Government regulation and legal uncertainties relating to the Internet and online commerce could negatively impact our business operations.
+Changing technology could adversely affect the operation of our website.
+Risks Related to Our Common Stock
+The price of our Common Stock has been volatile and could continue to fluctuate in the future.
+The trading activity in our common stock is relatively limited due to the limited size of our public float.
+<p><a href="http://www.sec.gov/Archives/edgar/data/1050122/0001104659-07-019474.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/1050122--3-16-2006--1_800_CONTACTS_INC.html'">1050122--3/16/2006--1_800_CONTACTS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/894405--2-22-2008--ARKANSAS_BEST_CORP_-DE-.html'">894405--2/22/2008--ARKANSAS_BEST_CORP_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/894405--2-23-2007--ARKANSAS_BEST_CORP_-DE-.html'">894405--2/23/2007--ARKANSAS_BEST_CORP_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1289308--6-1-2010--EnerSys.html'">1289308--6/1/2010--EnerSys</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/894405--2-24-2010--ARKANSAS_BEST_CORP_-DE-.html'">894405--2/24/2010--ARKANSAS_BEST_CORP_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/920033--4-10-2008--BANK_JOS_A_CLOTHIERS_INC_-DE-.html'">920033--4/10/2008--BANK_JOS_A_CLOTHIERS_INC_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1305014--11-27-2007--ASHLAND_INC..html'">1305014--11/27/2007--ASHLAND_INC.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1289308--6-13-2007--EnerSys.html'">1289308--6/13/2007--EnerSys</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/894405--2-20-2009--ARKANSAS_BEST_CORP_-DE-.html'">894405--2/20/2009--ARKANSAS_BEST_CORP_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/920033--4-17-2007--BANK_JOS_A_CLOTHIERS_INC_-DE-.html'">920033--4/17/2007--BANK_JOS_A_CLOTHIERS_INC_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/891178--3-12-2007--EPICOR_SOFTWARE_CORP.html'">891178--3/12/2007--EPICOR_SOFTWARE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/920033--3-31-2010--BANK_JOS_A_CLOTHIERS_INC_-DE-.html'">920033--3/31/2010--BANK_JOS_A_CLOTHIERS_INC_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/884497--3-12-2010--MEDQUIST_INC.html'">884497--3/12/2010--MEDQUIST_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1099290--3-31-2008--ABLEAUCTIONS_COM_INC.html'">1099290--3/31/2008--ABLEAUCTIONS_COM_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/350199--3-13-2008--CACHE_INC.html'">350199--3/13/2008--CACHE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/884497--3-11-2009--MEDQUIST_INC.html'">884497--3/11/2009--MEDQUIST_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/879573--7-30-2009--CENTENNIAL_COMMUNICATIONS_CORP_-DE.html'">879573--7/30/2009--CENTENNIAL_COMMUNICATIONS_CORP_/DE</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1068875--3-2-2009--INFOSPACE_INC.html'">1068875--3/2/2009--INFOSPACE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/733269--5-30-2008--ACXIOM_CORP.html'">733269--5/30/2008--ACXIOM_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1068875--2-26-2010--INFOSPACE_INC.html'">1068875--2/26/2010--INFOSPACE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/927653--5-4-2010--MCKESSON_CORP.html'">927653--5/4/2010--MCKESSON_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/899723--2-28-2008--OM_GROUP_INC.html'">899723--2/28/2008--OM_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/733269--5-30-2007--ACXIOM_CORP.html'">733269--5/30/2007--ACXIOM_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1035985--2-28-2007--DOBSON_COMMUNICATIONS_CORP.html'">1035985--2/28/2007--DOBSON_COMMUNICATIONS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1014052--10-29-2008--ATSI_COMMUNICATIONS_INC-DE.html'">1014052--10/29/2008--ATSI_COMMUNICATIONS_INC/DE</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1101396--8-28-2009--DELTA_APPAREL_INC.html'">1101396--8/28/2009--DELTA_APPAREL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1408287--11-29-2007--Zep_Inc..html'">1408287--11/29/2007--Zep_Inc.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/4962--3-1-2007--AMERICAN_EXPRESS_CO.html'">4962--3/1/2007--AMERICAN_EXPRESS_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/941604--3-9-2007--COINSTAR_INC.html'">941604--3/9/2007--COINSTAR_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1058033--2-29-2008--NORTHWEST_AIRLINES_CORP.html'">1058033--2/29/2008--NORTHWEST_AIRLINES_CORP</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

@@ -1,0 +1,176 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[2.7071026058, "../topics/{operation,_natural,_condition}.html", "{operation,_natural,_condition}"], [2.7019140041, "../topics/{cost,_regulation,_environmental}.html", "{cost,_regulation,_environmental}"], [2.091639632, "../topics/{cost,_operation,_labor}.html", "{cost,_operation,_labor}"], [1.7501930631, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [1.7304861834, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [1.7020413796, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [1.6865809987, "../topics/{financial,_litigation,_operation}.html", "{financial,_litigation,_operation}"], [1.6310678855, "../topics/{product,_candidate,_development}.html", "{product,_candidate,_development}"], [1.2050806762, "../topics/{gas,_price,_oil}.html", "{gas,_price,_oil}"], [1.0709368866, "../topics/{tax,_income,_asset}.html", "{tax,_income,_asset}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>32017--9/6/2006--ELKCORP</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">32017--9/6/2006--ELKCORP</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{operation,_natural,_condition}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_natural,_condition}.html'">{operation, natural, condition}</td></tr>
+<tr class="list"><td id="{cost,_regulation,_environmental}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_regulation,_environmental}.html'">{cost, regulation, environmental}</td></tr>
+<tr class="list"><td id="{cost,_operation,_labor}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_operation,_labor}.html'">{cost, operation, labor}</td></tr>
+<tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{financial,_litigation,_operation}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{financial,_litigation,_operation}.html'">{financial, litigation, operation}</td></tr>
+<tr class="list"><td id="{product,_candidate,_development}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_candidate,_development}.html'">{product, candidate, development}</td></tr>
+<tr class="list"><td id="{gas,_price,_oil}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{gas,_price,_oil}.html'">{gas, price, oil}</td></tr>
+<tr class="list"><td id="{tax,_income,_asset}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{tax,_income,_asset}.html'">{tax, income, asset}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    Higher raw material, energy and transportation costs may adversely affect our operating results.
+Shortages or disruptions in the supply of raw materials or the availability of transportation may decrease the efficiency in our plants and negatively impact our operating results.
+Delays in achieving anticipated efficiencies at our new facilities could cause our operating results to be lower than projected.
+Extreme weather conditions can delay or accelerate demand for our products and affect our results of operations.
+The utilization of hazardous materials causes us to incur costs for remediation and could materially affect our results of operations.
+We are involved in ongoing litigation that may adversely affect our operating results.
+Higher interest rates could substantially affect our borrowing costs.
+The failure to attract and retain skilled personnel could impede our operations.
+The loss of one or more of our largest customers could adversely affect our business.
+Our manufacturing facilities are subject to numerous hazards and we are not fully insured against all of these hazards.
+The failure to successfully commercialize our product developments could adversely affect our future operating results.
+The failure to keep up with technological changes in our business may cause our products to become less desirable, resulting in an adverse effect on our business.
+<p><a href="http://www.sec.gov/Archives/edgar/data/32017/0000950134-06-017359.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/1043337--3-17-2008--STONERIDGE_INC.html'">1043337--3/17/2008--STONERIDGE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1097313--2-29-2008--GRANT_PRIDECO_INC.html'">1097313--2/29/2008--GRANT_PRIDECO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/29332--3-6-2008--DIXIE_GROUP_INC.html'">29332--3/6/2008--DIXIE_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/877422--6-8-2009--SPARTAN_STORES_INC.html'">877422--6/8/2009--SPARTAN_STORES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1041379--3-14-2007--AFC_ENTERPRISES_INC.html'">1041379--3/14/2007--AFC_ENTERPRISES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/918646--5-29-2007--EAGLE_MATERIALS_INC.html'">918646--5/29/2007--EAGLE_MATERIALS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/723254--7-30-2007--CINTAS_CORP.html'">723254--7/30/2007--CINTAS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/825542--11-24-2009--SCOTTS_MIRACLE-GRO_CO.html'">825542--11/24/2009--SCOTTS_MIRACLE-GRO_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1041379--3-10-2010--AFC_ENTERPRISES_INC.html'">1041379--3/10/2010--AFC_ENTERPRISES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/92472--7-9-2009--SOUTHWEST_WATER_CO.html'">92472--7/9/2009--SOUTHWEST_WATER_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1158062--6-1-2009--AIRGAS_EAST_INC.html'">1158062--6/1/2009--AIRGAS_EAST_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/764401--12-7-2006--INSTEEL_INDUSTRIES_INC.html'">764401--12/7/2006--INSTEEL_INDUSTRIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/39648--8-27-2008--G&K_SERVICES_INC.html'">39648--8/27/2008--G&K_SERVICES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/84792--2-27-2009--ROHM_&_HAAS_CO.html'">84792--2/27/2009--ROHM_&_HAAS_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/764401--11-9-2009--INSTEEL_INDUSTRIES_INC.html'">764401--11/9/2009--INSTEEL_INDUSTRIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/13372--3-15-2007--NSTAR_ELECTRIC_CO.html'">13372--3/15/2007--NSTAR_ELECTRIC_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/13372--2-15-2008--NSTAR_ELECTRIC_CO.html'">13372--2/15/2008--NSTAR_ELECTRIC_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/863436--3-1-2007--BENCHMARK_ELECTRONICS_INC.html'">863436--3/1/2007--BENCHMARK_ELECTRONICS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/69488--3-12-2010--MYERS_INDUSTRIES_INC.html'">69488--3/12/2010--MYERS_INDUSTRIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/68145--6-1-2010--MORGANS_FOODS_INC.html'">68145--6/1/2010--MORGANS_FOODS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/39648--8-29-2007--G&K_SERVICES_INC.html'">39648--8/29/2007--G&K_SERVICES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/39648--9-14-2006--G&K_SERVICES_INC.html'">39648--9/14/2006--G&K_SERVICES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/949039--2-24-2009--DIAMOND_OFFSHORE_DRILLING_INC.html'">949039--2/24/2009--DIAMOND_OFFSHORE_DRILLING_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/884219--3-1-2007--VIAD_CORP.html'">884219--3/1/2007--VIAD_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/71829--3-10-2009--NEWPARK_RESOURCES_INC.html'">71829--3/10/2009--NEWPARK_RESOURCES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/800240--2-24-2009--OFFICE_DEPOT_INC.html'">800240--2/24/2009--OFFICE_DEPOT_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1012100--3-1-2007--SEALED_AIR_CORP-DE.html'">1012100--3/1/2007--SEALED_AIR_CORP/DE</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1075623--3-12-2007--BERRY_PLASTICS_HOLDING_CORP.html'">1075623--3/12/2007--BERRY_PLASTICS_HOLDING_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/4828--11-4-2009--AMERICAN_CRYSTAL_SUGAR_CO_-MN-.html'">4828--11/4/2009--AMERICAN_CRYSTAL_SUGAR_CO_/MN/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/60519--3-7-2008--LOUISIANA-PACIFIC_CORP.html'">60519--3/7/2008--LOUISIANA-PACIFIC_CORP</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

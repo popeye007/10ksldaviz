@@ -1,0 +1,181 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[3.4825872813, "../topics/{loan,_real,_estate}.html", "{loan,_real,_estate}"], [2.3067233537, "../topics/{condition,_economic,_financial}.html", "{condition,_economic,_financial}"], [2.2830408972, "../topics/{loss,_insurance,_financial}.html", "{loss,_insurance,_financial}"], [1.7773856438, "../topics/{tax,_income,_asset}.html", "{tax,_income,_asset}"], [1.7115430736, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [1.7024406263, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [1.7007942395, "../topics/{cost,_contract,_operation}.html", "{cost,_contract,_operation}"], [1.6988733008, "../topics/{system,_service,_information}.html", "{system,_service,_information}"], [1.6961846656, "../topics/{control,_financial,_internal}.html", "{control,_financial,_internal}"], [1.6580674037, "../topics/{cost,_operation,_labor}.html", "{cost,_operation,_labor}"], [1.5231230233, "../topics/{regulation,_change,_law}.html", "{regulation,_change,_law}"], [1.3956639223, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>1028734--3/15/2006--COBIZ_INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">1028734--3/15/2006--COBIZ_INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{loan,_real,_estate}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{loan,_real,_estate}.html'">{loan, real, estate}</td></tr>
+<tr class="list"><td id="{condition,_economic,_financial}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{condition,_economic,_financial}.html'">{condition, economic, financial}</td></tr>
+<tr class="list"><td id="{loss,_insurance,_financial}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{loss,_insurance,_financial}.html'">{loss, insurance, financial}</td></tr>
+<tr class="list"><td id="{tax,_income,_asset}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{tax,_income,_asset}.html'">{tax, income, asset}</td></tr>
+<tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{cost,_contract,_operation}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_contract,_operation}.html'">{cost, contract, operation}</td></tr>
+<tr class="list"><td id="{system,_service,_information}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{system,_service,_information}.html'">{system, service, information}</td></tr>
+<tr class="list"><td id="{control,_financial,_internal}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{control,_financial,_internal}.html'">{control, financial, internal}</td></tr>
+<tr class="list"><td id="{cost,_operation,_labor}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_operation,_labor}.html'">{cost, operation, labor}</td></tr>
+<tr class="list"><td id="{regulation,_change,_law}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_change,_law}.html'">{regulation, change, law}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(11)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    Changes in economic conditions may cause us to incur loan losses.
+Our allowance for loan losses may not be adequate to cover actual loan losses.
+Our business is subject to various lending risks depending on the nature of the borrower s business, its cash flow and our collateral.
+A downturn in our real estate markets could hurt our business.
+We may experience difficulties in managing our growth.
+We rely heavily on our management, and the loss of any of our senior officers may adversely affect our operations.
+Changes in interest rates may affect our profitability.
+Our business and financial condition may be adversely affected by an increase in competition.
+We continually encounter technological change, and we may have fewer resources than our competitors to continue to invest in technological improvements.
+An interruption in or breach in security of our information systems may result in a loss of customer business.
+We may be required to make capital contributions to the bank if it becomes undercapitalized.
+We are subject to significant government regulation, and any regulatory changes may adversely affect us.
+If our internal controls over financial reporting do not comply with the requirements of the Sarbanes-Oxley Act, our business could be adversely affected.
+We must evaluate whether any portion of our recorded goodwill is impaired. Impairment testing may result in a material, non-cash write-down of our goodwill assets and could have a material adverse impact on our results of operations.
+Our fee based businesses are subject to quarterly and annual volatility in their revenues and earnings.
+<p><a href="http://www.sec.gov/Archives/edgar/data/1028734/0001104659-06-016740.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/1056943--3-16-2007--PEOPLES_FINANCIAL_SERVICES_CORP-.html'">1056943--3/16/2007--PEOPLES_FINANCIAL_SERVICES_CORP/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1243800--3-10-2006--RAINIER_PACIFIC_FINANCIAL_GROUP_INC.html'">1243800--3/10/2006--RAINIER_PACIFIC_FINANCIAL_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/726990--3-15-2007--AMERICANWEST_BANCORPORATION.html'">726990--3/15/2007--AMERICANWEST_BANCORPORATION</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1472093--3-31-2010--Athens_Bancshares_Corp.html'">1472093--3/31/2010--Athens_Bancshares_Corp</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1093728--3-14-2008--PACIFIC_FINANCIAL_CORP.html'">1093728--3/14/2008--PACIFIC_FINANCIAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/706129--3-14-2008--HORIZON_BANCORP_-IN-.html'">706129--3/14/2008--HORIZON_BANCORP_/IN/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/356801--4-2-2007--NATIONAL_CONSUMER_COOPERATIVE_BANK_-DC-.html'">356801--4/2/2007--NATIONAL_CONSUMER_COOPERATIVE_BANK_/DC/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1025835--3-15-2007--ENTERPRISE_FINANCIAL_SERVICES_CORP.html'">1025835--3/15/2007--ENTERPRISE_FINANCIAL_SERVICES_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1253317--3-27-2009--OLD_LINE_BANCSHARES_INC.html'">1253317--3/27/2009--OLD_LINE_BANCSHARES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1163370--3-15-2010--NORTHRIM_BANCORP_INC.html'">1163370--3/15/2010--NORTHRIM_BANCORP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1171017--4-29-2008--SOUTHERN_COMMUNITY_BANCSHARES_INC_-GA.html'">1171017--4/29/2008--SOUTHERN_COMMUNITY_BANCSHARES_INC_/GA</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1123270--3-15-2007--BANK_MUTUAL_CORP.html'">1123270--3/15/2007--BANK_MUTUAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/707179--2-27-2008--OLD_NATIONAL_BANCORP_-IN-.html'">707179--2/27/2008--OLD_NATIONAL_BANCORP_/IN/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/707179--3-8-2006--OLD_NATIONAL_BANCORP_-IN-.html'">707179--3/8/2006--OLD_NATIONAL_BANCORP_/IN/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/706129--3-23-2007--HORIZON_BANCORP_-IN-.html'">706129--3/23/2007--HORIZON_BANCORP_/IN/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1483195--9-13-2010--Oritani_Financial_Corp.html'">1483195--9/13/2010--Oritani_Financial_Corp</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1123270--3-7-2008--BANK_MUTUAL_CORP.html'">1123270--3/7/2008--BANK_MUTUAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1070296--3-30-2010--FIRST_CAPITAL_INC.html'">1070296--3/30/2010--FIRST_CAPITAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1005188--3-28-2008--NORTH_CENTRAL_BANCSHARES_INC.html'">1005188--3/28/2008--NORTH_CENTRAL_BANCSHARES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/771614--3-27-2006--BRUNSWICK_BANCORP.html'">771614--3/27/2006--BRUNSWICK_BANCORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/722256--3-15-2007--HUDSON_VALLEY_HOLDING_CORP.html'">722256--3/15/2007--HUDSON_VALLEY_HOLDING_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1024321--3-16-2007--BEVERLY_HILLS_BANCORP_INC.html'">1024321--3/16/2007--BEVERLY_HILLS_BANCORP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1017793--3-16-2007--SUN_BANCORP_INC_-NJ-.html'">1017793--3/16/2007--SUN_BANCORP_INC_/NJ/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1143566--3-17-2008--EVERGREENBANCORP_INC.html'">1143566--3/17/2008--EVERGREENBANCORP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/913072--2-26-2007--MERRILL_MERCHANTS_BANCSHARES_INC.html'">913072--2/26/2007--MERRILL_MERCHANTS_BANCSHARES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/846931--3-30-2006--NEW_HAMPSHIRE_THRIFT_BANCSHARES_INC.html'">846931--3/30/2006--NEW_HAMPSHIRE_THRIFT_BANCSHARES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/856751--12-23-2008--FIRST_KEYSTONE_FINANCIAL_INC.html'">856751--12/23/2008--FIRST_KEYSTONE_FINANCIAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/859070--3-13-2008--FIRST_COMMUNITY_BANCSHARES_INC_-NV-.html'">859070--3/13/2008--FIRST_COMMUNITY_BANCSHARES_INC_/NV/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/859070--3-12-2007--FIRST_COMMUNITY_BANCSHARES_INC_-NV-.html'">859070--3/12/2007--FIRST_COMMUNITY_BANCSHARES_INC_/NV/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/846931--3-20-2007--NEW_HAMPSHIRE_THRIFT_BANCSHARES_INC.html'">846931--3/20/2007--NEW_HAMPSHIRE_THRIFT_BANCSHARES_INC</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

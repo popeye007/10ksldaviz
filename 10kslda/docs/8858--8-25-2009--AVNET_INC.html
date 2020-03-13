@@ -1,0 +1,174 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[2.3604292675, "../topics/{capital,_credit,_financial}.html", "{capital,_credit,_financial}"], [1.9597868135, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [1.7662650665, "../topics/{system,_service,_information}.html", "{system,_service,_information}"], [1.704690403, "../topics/{debt,_indebtedness,_cash}.html", "{debt,_indebtedness,_cash}"], [1.6967177546, "../topics/{control,_financial,_internal}.html", "{control,_financial,_internal}"], [1.6962963579, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"], [1.6809973871, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [1.5648193643, "../topics/{condition,_economic,_financial}.html", "{condition,_economic,_financial}"], [1.2891748628, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"], [1.1552294766, "../topics/{cost,_operation,_labor}.html", "{cost,_operation,_labor}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>8858--8/25/2009--AVNET_INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">8858--8/25/2009--AVNET_INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{capital,_credit,_financial}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{capital,_credit,_financial}.html'">{capital, credit, financial}</td></tr>
+<tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{system,_service,_information}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{system,_service,_information}.html'">{system, service, information}</td></tr>
+<tr class="list"><td id="{debt,_indebtedness,_cash}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{debt,_indebtedness,_cash}.html'">{debt, indebtedness, cash}</td></tr>
+<tr class="list"><td id="{control,_financial,_internal}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{control,_financial,_internal}.html'">{control, financial, internal}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+<tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{condition,_economic,_financial}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{condition,_economic,_financial}.html'">{condition, economic, financial}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+<tr class="list"><td id="{cost,_operation,_labor}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_operation,_labor}.html'">{cost, operation, labor}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    Declines in the value of the Company s inventory or unexpected order cancellations by the Company s customers could materially, adversely affect its business, results of operations, financial condition or liquidity.
+Substantial defaults by the Company s customers on its accounts receivable or the loss of significant customers could have a significant negative impact on the Company s business, results of operations, financial condition or liquidity.
+The electronics component and computer industries are highly competitive and if the Company cannot effectively compete, its revenues may decline.
+The Company s non-U.S. locations represent a significant and growing portion of its revenue, and consequently, the Company is increasingly exposed to risks associated with operating internationally.
+The Company s acquisition strategy may not produce the expected benefits, which may adversely affect the Company s results of operations.
+If the Company fails to maintain effective internal controls, it may not be able to report its financial results accurately or timely or detect fraud, which could have a material adverse effect on the Company s business or stock price.
+If the Company s internal information systems fail to function properly, or if the Company is unsuccessful in the integration or upgrade of information systems, its business operations could suffer.
+Major disruptions to the Company s logistics capability could have a material adverse impact on the Company s operations.
+The Company may not have adequate or cost-effective liquidity or capital resources.
+The agreements governing some of the Company s financings contain various covenants and restrictions that limit the discretion of management in operating its business and could prevent us from engaging in some activities that may be beneficial to the Company s business.
+<p><a href="http://www.sec.gov/Archives/edgar/data/8858/0000950123-09-037904.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/8858--8-13-2010--AVNET_INC.html'">8858--8/13/2010--AVNET_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/8858--8-27-2008--AVNET_INC.html'">8858--8/27/2008--AVNET_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/8858--8-29-2007--AVNET_INC.html'">8858--8/29/2007--AVNET_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/911002--3-14-2007--LODGENET_ENTERTAINMENT_CORP.html'">911002--3/14/2007--LODGENET_ENTERTAINMENT_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/3370--12-1-2006--IKON_OFFICE_SOLUTIONS_INC.html'">3370--12/1/2006--IKON_OFFICE_SOLUTIONS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1137048--2-25-2010--ODYSSEY_RE_HOLDINGS_CORP.html'">1137048--2/25/2010--ODYSSEY_RE_HOLDINGS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/356080--3-2-2009--BELO_CORP.html'">356080--3/2/2009--BELO_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/277509--2-27-2009--FEDERAL_SIGNAL_CORP_-DE-.html'">277509--2/27/2009--FEDERAL_SIGNAL_CORP_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/877476--3-8-2010--AMERICA_SERVICE_GROUP_INC_-DE.html'">877476--3/8/2010--AMERICA_SERVICE_GROUP_INC_/DE</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/911002--3-14-2008--LODGENET_INTERACTIVE_CORP.html'">911002--3/14/2008--LODGENET_INTERACTIVE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/728303--4-2-2007--COAST_DISTRIBUTION_SYSTEM_INC.html'">728303--4/2/2007--COAST_DISTRIBUTION_SYSTEM_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/52795--2-27-2009--ANIXTER_INTERNATIONAL_INC.html'">52795--2/27/2009--ANIXTER_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/27996--2-19-2010--DELUXE_CORP.html'">27996--2/19/2010--DELUXE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1084230--3-4-2009--PEPSIAMERICAS_INC-IL-.html'">1084230--3/4/2009--PEPSIAMERICAS_INC/IL/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/889570--3-12-2008--UNITED_ARTISTS_THEATRE_CIRCUIT_INC_-MD-.html'">889570--3/12/2008--UNITED_ARTISTS_THEATRE_CIRCUIT_INC_/MD/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/7536--2-26-2009--ARROW_ELECTRONICS_INC.html'">7536--2/26/2009--ARROW_ELECTRONICS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1114200--3-1-2010--AMERICAN_MEDICAL_SYSTEMS_HOLDINGS_INC.html'">1114200--3/1/2010--AMERICAN_MEDICAL_SYSTEMS_HOLDINGS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/728249--3-19-2010--INTERPHASE_CORP.html'">728249--3/19/2010--INTERPHASE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/716643--8-29-2007--REGIS_CORP.html'">716643--8/29/2007--REGIS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/54193--11-22-2006--K_TEL_INTERNATIONAL_INC.html'">54193--11/22/2006--K_TEL_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/4969--3-30-2007--AMERICAN_EXPRESS_CREDIT_CORP.html'">4969--3/30/2007--AMERICAN_EXPRESS_CREDIT_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/54193--9-18-2006--K_TEL_INTERNATIONAL_INC.html'">54193--9/18/2006--K_TEL_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/51143--2-28-2006--INTERNATIONAL_BUSINESS_MACHINES_CORP.html'">51143--2/28/2006--INTERNATIONAL_BUSINESS_MACHINES_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/58822--9-14-2010--LESCARDEN_INC.html'">58822--9/14/2010--LESCARDEN_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1288407--3-28-2008--MRS_FIELDS_FAMOUS_BRANDS_LLC.html'">1288407--3/28/2008--MRS_FIELDS_FAMOUS_BRANDS_LLC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/72331--12-18-2009--NORDSON_CORP.html'">72331--12/18/2009--NORDSON_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/72331--12-17-2010--NORDSON_CORP.html'">72331--12/17/2010--NORDSON_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/742126--3-9-2007--AMERICAN_ECOLOGY_CORP.html'">742126--3/9/2007--AMERICAN_ECOLOGY_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/52795--2-26-2010--ANIXTER_INTERNATIONAL_INC.html'">52795--2/26/2010--ANIXTER_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/935724--3-5-2010--PMI_GROUP_INC.html'">935724--3/5/2010--PMI_GROUP_INC</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

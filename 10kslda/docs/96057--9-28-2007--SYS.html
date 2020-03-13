@@ -1,0 +1,209 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[13.6575525379, "../topics/{regulation,_government,_change}.html", "{regulation,_government,_change}"], [4.5545604881, "../topics/{stock,_price,_share}.html", "{stock,_price,_share}"], [3.9317967983, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [3.452493306, "../topics/{cost,_contract,_operation}.html", "{cost,_contract,_operation}"], [2.9134623585, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [2.8271889855, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [2.708333907, "../topics/{tax,_income,_asset}.html", "{tax,_income,_asset}"], [2.695665543, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"], [2.2747176279, "../topics/{cost,_operation,_labor}.html", "{cost,_operation,_labor}"], [1.8857803312, "../topics/{competitive,_industry,_competition}.html", "{competitive,_industry,_competition}"], [1.7995546894, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [1.7014055293, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [1.7001245462, "../topics/{control,_financial,_internal}.html", "{control,_financial,_internal}"], [1.6977215124, "../topics/{debt,_indebtedness,_cash}.html", "{debt,_indebtedness,_cash}"], [1.470644272, "../topics/{financial,_litigation,_operation}.html", "{financial,_litigation,_operation}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>96057--9/28/2007--SYS</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">96057--9/28/2007--SYS</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{regulation,_government,_change}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_government,_change}.html'">{regulation, government, change}</td></tr>
+<tr class="list"><td id="{stock,_price,_share}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_share}.html'">{stock, price, share}</td></tr>
+<tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{cost,_contract,_operation}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_contract,_operation}.html'">{cost, contract, operation}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{tax,_income,_asset}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{tax,_income,_asset}.html'">{tax, income, asset}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+<tr class="list"><td id="{cost,_operation,_labor}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_operation,_labor}.html'">{cost, operation, labor}</td></tr>
+<tr class="list"><td id="{competitive,_industry,_competition}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{competitive,_industry,_competition}.html'">{competitive, industry, competition}</td></tr>
+<tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(11)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{control,_financial,_internal}" onmouseover="highlight(12)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{control,_financial,_internal}.html'">{control, financial, internal}</td></tr>
+<tr class="list"><td id="{debt,_indebtedness,_cash}" onmouseover="highlight(13)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{debt,_indebtedness,_cash}.html'">{debt, indebtedness, cash}</td></tr>
+<tr class="list"><td id="{financial,_litigation,_operation}" onmouseover="highlight(14)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{financial,_litigation,_operation}.html'">{financial, litigation, operation}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    Risks Related to Our Business
+Our contracts with the Federal Government may be terminated or adversely modified prior to completion, which could adversely affect our business.
+If we fail to establish and maintain important relationships with government entities and agencies, our ability to successfully bid for new business may be adversely affected.
+Failure to maintain strong relationships with other government contractors could result in a decline in our revenue.
+We cannot guarantee that our contracts will result in actual revenue.
+Loss of our GSA contracts or MACs would impair our ability to attract new business.
+If we fail to attract and retain skilled employees or employees with the necessary security clearances, we might not be able to perform under our contracts or win new business.
+Our failure to maintain appropriate staffing levels could adversely affect our business.
+If our subcontractors fail to perform their contractual obligations, our performance and reputation as a prime contractor and our ability to obtain future business could suffer.
+Our employees may engage in misconduct or other improper activities, which could cause us to lose contracts.
+We may not be successful in identifying acquisition candidates and if we undertake acquisitions, they could increase our costs or liabilities and impair our revenue and operating results.
+Our cash flow and profitability could be reduced if expenditures are incurred prior to the receipt of a contract.
+A preference for minority-owned, small and small disadvantaged businesses could impact our ability to be a prime contractor on certain governmental procurements.
+We derive a significant portion of our revenues from a limited number of customers.
+Our business is dependent upon our ability to keep pace with the latest technological changes.
+A significant number of our customers are government agencies which are subject to unique political and budgetary constraints and have special contracting requirements that may affect our ability to obtain other new government customers.
+Our quarterly operating results may fluctuate significantly as a result of factors outside of our control, which could cause the market price of our common stock to decline.
+Our inability to adequately retain or protect our employees, customer relationships and proprietary technology could harm our ability to compete.
+The departure of certain key personnel could affect the financial condition of SYS due to the loss of their expertise and customer relationships.
+We face intense competition from many competitors that have greater resources than we do, which could result in price reductions, reduced profitability or loss of market share.
+Accuracy of indirect billing rates is critical.
+If we are unable to obtain or maintain security clearances, we may not be able to perform certain work.
+There are risks associated with our planned growth, such as a possible inability to manage our growth.
+We may incur impairment charges in our reporting entities which could harm our profitability.
+We may be subject to additional income tax obligations arising from Internal Revenue Service (IRS) examinations
+We have very limited funds upon which to rely for adjusting to business variations and for growing new businesses.
+We may violate financial covenants under our line of credit which could have a material adverse effect on our liquidity and financial condition.
+We are required to evaluate our internal control over financial reporting under section 404 of the Sarbanes Oxley act of 2002, and any adverse results from such evaluation could result in a loss of investor confidence in our financial reports and have an adverse effect on our stock price.
+Risks Related to the Market for Our Stock
+There are a large number of shares that are available for future sale, and the sale of these shares may depress the market price of our common stock.
+There is a limited market for our common stock which could impact your ability to sell your shares.
+Future sales of our common stock by existing shareholders under Rule 144 could decrease the trading price of our common stock.
+Our directors, executive officers and affiliated persons beneficially own a significant amount of our stock, and their interests could conflict with yours.
+Risks Related to Our Industry
+Our revenue and operating profits could be adversely affected by significant changes in the contracting or fiscal policies of the Federal Government.
+Many of our Federal Government clients spend their procurement budgets through multiple award contracts under which we are required to compete for post-award orders or for which we may not be eligible to compete and could limit our ability to win new contracts and grow revenue.
+Our failure to comply with complex procurement laws and regulations could cause us to lose business and subject us to a variety of penalties.
+The Federal Government may revise its procurement or other practices in a manner adverse to us.
+We derive significant revenue from contracts awarded through a competitive procurement process, which may require significant upfront bid and proposal costs that could negatively affect our operating results.
+Unfavorable Federal Government audit results could subject us to a variety of penalties and sanctions, and could harm our reputation and relationships with our clients and impair our ability to win new contracts.
+<p><a href="http://www.sec.gov/Archives/edgar/data/96057/0001259943-07-000019.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/16058--8-25-2010--CACI_INTERNATIONAL_INC_-DE-.html'">16058--8/25/2010--CACI_INTERNATIONAL_INC_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/892537--3-17-2008--MANTECH_INTERNATIONAL_CORP.html'">892537--3/17/2008--MANTECH_INTERNATIONAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/892537--2-27-2009--MANTECH_INTERNATIONAL_CORP.html'">892537--2/27/2009--MANTECH_INTERNATIONAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1388195--2-4-2010--PharMerica_CORP.html'">1388195--2/4/2010--PharMerica_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1101723--2-29-2008--UNITED_SURGICAL_PARTNERS_INTERNATIONAL_INC.html'">1101723--2/29/2008--UNITED_SURGICAL_PARTNERS_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1101723--2-28-2007--UNITED_SURGICAL_PARTNERS_INTERNATIONAL_INC.html'">1101723--2/28/2007--UNITED_SURGICAL_PARTNERS_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1101723--2-24-2010--UNITED_SURGICAL_PARTNERS_INTERNATIONAL_INC.html'">1101723--2/24/2010--UNITED_SURGICAL_PARTNERS_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/892537--2-26-2010--MANTECH_INTERNATIONAL_CORP.html'">892537--2/26/2010--MANTECH_INTERNATIONAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/785557--1-19-2010--TEAMSTAFF_INC.html'">785557--1/19/2010--TEAMSTAFF_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/906192--8-25-2006--SRA_INTERNATIONAL_INC.html'">906192--8/25/2006--SRA_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/906192--8-16-2007--SRA_INTERNATIONAL_INC.html'">906192--8/16/2007--SRA_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1071739--2-24-2006--CENTENE_CORP.html'">1071739--2/24/2006--CENTENE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1388195--2-5-2009--PharMerica_CORP.html'">1388195--2/5/2009--PharMerica_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1046568--2-25-2010--CAREER_EDUCATION_CORP.html'">1046568--2/25/2010--CAREER_EDUCATION_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1013934--2-17-2009--STRAYER_EDUCATION_INC.html'">1013934--2/17/2009--STRAYER_EDUCATION_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/792985--2-25-2010--HEALTH_MANAGEMENT_ASSOCIATES_INC.html'">792985--2/25/2010--HEALTH_MANAGEMENT_ASSOCIATES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1063561--12-29-2008--PROSPECT_MEDICAL_HOLDINGS_INC.html'">1063561--12/29/2008--PROSPECT_MEDICAL_HOLDINGS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/929887--5-22-2007--APOLLO_GROUP_INC.html'">929887--5/22/2007--APOLLO_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1013934--2-26-2010--STRAYER_EDUCATION_INC.html'">1013934--2/26/2010--STRAYER_EDUCATION_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1101723--2-26-2009--UNITED_SURGICAL_PARTNERS_INTERNATIONAL_INC.html'">1101723--2/26/2009--UNITED_SURGICAL_PARTNERS_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1064863--2-22-2010--AMERIGROUP_CORP.html'">1064863--2/22/2010--AMERIGROUP_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1063561--6-2-2008--PROSPECT_MEDICAL_HOLDINGS_INC.html'">1063561--6/2/2008--PROSPECT_MEDICAL_HOLDINGS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/922475--2-18-2009--ITT_EDUCATIONAL_SERVICES_INC.html'">922475--2/18/2009--ITT_EDUCATIONAL_SERVICES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1113784--2-23-2010--CARDIONET_INC.html'">1113784--2/23/2010--CARDIONET_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1334544--2-23-2009--Emergency_Medical_Services_CORP.html'">1334544--2/23/2009--Emergency_Medical_Services_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/922475--2-21-2008--ITT_EDUCATIONAL_SERVICES_INC.html'">922475--2/21/2008--ITT_EDUCATIONAL_SERVICES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1261654--11-29-2007--UNIVERSAL_TECHNICAL_INSTITUTE_INC.html'">1261654--11/29/2007--UNIVERSAL_TECHNICAL_INSTITUTE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1069258--9-11-2007--WIRELESS_FACILITIES_INC.html'">1069258--9/11/2007--WIRELESS_FACILITIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1304901--4-13-2006--TRI-S_SECURITY_CORP.html'">1304901--4/13/2006--TRI-S_SECURITY_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1375891--8-27-2009--Education_Management_LLC.html'">1375891--8/27/2009--Education_Management_LLC</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

@@ -1,0 +1,195 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[5.5215187948, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [4.7044957825, "../topics/{cost,_operation,_labor}.html", "{cost,_operation,_labor}"], [3.7755973926, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [3.7519075436, "../topics/{regulation,_government,_change}.html", "{regulation,_government,_change}"], [2.7185416085, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"], [2.5369025514, "../topics/{condition,_economic,_financial}.html", "{condition,_economic,_financial}"], [1.7004564181, "../topics/{system,_service,_information}.html", "{system,_service,_information}"], [1.6980637163, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [1.6963932711, "../topics/{operation,_natural,_condition}.html", "{operation,_natural,_condition}"], [1.6963224731, "../topics/{tax,_income,_asset}.html", "{tax,_income,_asset}"], [1.6962625275, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [1.6962617152, "../topics/{debt,_indebtedness,_cash}.html", "{debt,_indebtedness,_cash}"], [1.6921278827, "../topics/{product,_liability,_claim}.html", "{product,_liability,_claim}"], [1.6518947823, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>1116942--3/17/2008--TTM_TECHNOLOGIES_INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">1116942--3/17/2008--TTM_TECHNOLOGIES_INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{cost,_operation,_labor}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_operation,_labor}.html'">{cost, operation, labor}</td></tr>
+<tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{regulation,_government,_change}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_government,_change}.html'">{regulation, government, change}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+<tr class="list"><td id="{condition,_economic,_financial}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{condition,_economic,_financial}.html'">{condition, economic, financial}</td></tr>
+<tr class="list"><td id="{system,_service,_information}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{system,_service,_information}.html'">{system, service, information}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{operation,_natural,_condition}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_natural,_condition}.html'">{operation, natural, condition}</td></tr>
+<tr class="list"><td id="{tax,_income,_asset}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{tax,_income,_asset}.html'">{tax, income, asset}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{debt,_indebtedness,_cash}" onmouseover="highlight(11)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{debt,_indebtedness,_cash}.html'">{debt, indebtedness, cash}</td></tr>
+<tr class="list"><td id="{product,_liability,_claim}" onmouseover="highlight(12)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_liability,_claim}.html'">{product, liability, claim}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(13)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    During periods of excess global printed circuit board manufacturing capacity, our gross margins may fall and/or we may have to incur restructuring charges if we choose to reduce the capacity of or close any of our facilities.
+We face a risk that capital needed for our business and to repay our debt obligations will not be available when we need it. Additionally, our leverage and our debt service obligations may adversely affect our cash flow.
+We depend upon a relatively small number of OEM customers for a large portion of our sales, and a decline in sales to major customers could harm our results of operations.
+We compete against manufacturers in Asia, where production costs are lower. These competitors may gain market share in our key market segments, which may have an adverse effect on the pricing of our products.
+A trend toward consolidation among our customers could adversely affect our business.
+Our failure to comply with the requirements of environmental laws could result in litigation, fines and revocation of permits necessary to our manufacturing processes. Failure to operate in conformance with environmental laws could lead to debarment from our participation in federal government contracts.
+We are exposed to the credit risk of some of our customers and to credit exposures in weakened markets.
+We rely on suppliers for the timely delivery of raw materials and components used in manufacturing our printed circuit boards and backplane assemblies, and an increase in industry demand or the presence of a shortage for these raw materials or components may increase the price of these raw materials and reduce our gross margins. If a raw material supplier fails to satisfy our product quality standards, it could harm our customer relationships.
+If we are unable to respond to rapid technological change and process development, we may not be able to compete effectively.
+Competition in the printed circuit board market is intense, and we could lose market share if we are unable to maintain our current competitive position in end markets using our quick-turn, high technology and high-mix manufacturing services.
+Our quarterly results of operations are often subject to demand fluctuations and seasonality. With a high level of fixed operating costs, even small revenue shortfalls would decrease our gross margins and potentially cause the trading price of our common stock to decline.
+Because we sell on a purchase order basis, we are subject to uncertainties and variability in demand by our customers that could decrease revenues and harm our operating results.
+The increasing prominence of EMS providers in the printed circuit board industry could reduce our gross margins, potential sales, and customers.
+If events or circumstances occur in our business that indicate that our goodwill and intangibles may not be recoverable, we could have impairment charges that would negatively affect our earnings.
+Damage to our manufacturing facilities due to fire, natural disaster, or other event could harm our financial results.
+Our manufacturing processes depend on the collective industry experience of our employees. If a significant number of these employees were to leave us, it could limit our ability to compete effectively and could harm our financial results.
+Our profitability is impacted by the global interest rate environment.
+We may be exposed to intellectual property infringement claims by third parties that could be costly to defend, could divert management s attention and resources, and if successful, could result in liability.
+We depend heavily on a single end customer, the U.S. government, for a substantial portion of our business, including programs subject to security classification restrictions on information. Changes affecting the government s capacity to do business with us or our direct customers or the effects of competition in the defense industry could have a material adverse effect on our business.
+Our business may suffer if any of our key senior executives discontinues employment with us or if we are unable to recruit and retain highly skilled engineering and sales staff.
+Increasingly, our larger customers are requesting that we enter into supply agreements with them that have increasingly restrictive terms and conditions. These agreements typically include provisions that increase our financial exposure, which could result in significant costs to us.
+Our backplane assembly operation serves customers and has a manufacturing facility outside the United States and is subject to the risks characteristic of international operations. These risks include significant potential financial damage and potential loss of the business and its assets.
+Our operations in the People s Republic of China subject us to risks and uncertainties relating to the laws and regulations of the People s Republic of China.
+Products we manufacture may contain design or manufacturing defects, which could result in reduced demand for our services and liability claims against us.
+We are subject to risks of currency fluctuations.
+We export defense and commercial products from the United States to other countries. If we fail to comply with export laws, we could be subject to fines and other punitive actions.
+Our business has benefited from OEMs deciding to outsource their PCB manufacturing and backplane assembly needs to us. If OEMs choose to provide these services in-house or select other providers, our business could suffer.
+<p><a href="http://www.sec.gov/Archives/edgar/data/1116942/0000950153-08-000539.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/1116942--3-16-2007--TTM_TECHNOLOGIES_INC.html'">1116942--3/16/2007--TTM_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1116942--3-16-2009--TTM_TECHNOLOGIES_INC.html'">1116942--3/16/2009--TTM_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/47217--12-15-2010--HEWLETT_PACKARD_CO.html'">47217--12/15/2010--HEWLETT_PACKARD_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/47217--12-17-2009--HEWLETT_PACKARD_CO.html'">47217--12/17/2009--HEWLETT_PACKARD_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/47217--12-18-2008--HEWLETT_PACKARD_CO.html'">47217--12/18/2008--HEWLETT_PACKARD_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1106942--2-23-2007--BLACKBOARD_INC.html'">1106942--2/23/2007--BLACKBOARD_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/880807--5-29-2008--AMERICAN_SUPERCONDUCTOR_CORP_-DE-.html'">880807--5/29/2008--AMERICAN_SUPERCONDUCTOR_CORP_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1014111--2-27-2009--IMATION_CORP.html'">1014111--2/27/2009--IMATION_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1262200--3-16-2009--DAYSTAR_TECHNOLOGIES_INC.html'">1262200--3/16/2009--DAYSTAR_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/814547--11-24-2009--FAIR_ISAAC_CORP.html'">814547--11/24/2009--FAIR_ISAAC_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/814547--11-23-2010--FAIR_ISAAC_CORP.html'">814547--11/23/2010--FAIR_ISAAC_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/795551--3-13-2006--THERAGENICS_CORP.html'">795551--3/13/2006--THERAGENICS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/106040--8-14-2009--WESTERN_DIGITAL_CORP.html'">106040--8/14/2009--WESTERN_DIGITAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/5133--4-29-2010--AMERICAN_GREETINGS_CORP.html'">5133--4/29/2010--AMERICAN_GREETINGS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1130866--2-27-2009--HITTITE_MICROWAVE_CORP.html'">1130866--2/27/2009--HITTITE_MICROWAVE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/880807--5-27-2010--AMERICAN_SUPERCONDUCTOR_CORP_-DE-.html'">880807--5/27/2010--AMERICAN_SUPERCONDUCTOR_CORP_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/919013--3-16-2010--WAVE_SYSTEMS_CORP.html'">919013--3/16/2010--WAVE_SYSTEMS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1113232--3-15-2010--AXCELIS_TECHNOLOGIES_INC.html'">1113232--3/15/2010--AXCELIS_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1130866--2-26-2010--HITTITE_MICROWAVE_CORP.html'">1130866--2/26/2010--HITTITE_MICROWAVE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/785786--11-18-2009--PLEXUS_CORP.html'">785786--11/18/2009--PLEXUS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/69499--5-16-2006--MYLAN_LABORATORIES_INC.html'">69499--5/16/2006--MYLAN_LABORATORIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1116317--2-28-2008--XM_SATELLITE_RADIO_HOLDINGS_INC.html'">1116317--2/28/2008--XM_SATELLITE_RADIO_HOLDINGS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1113232--3-31-2009--AXCELIS_TECHNOLOGIES_INC.html'">1113232--3/31/2009--AXCELIS_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1048695--11-23-2010--F5_NETWORKS_INC.html'">1048695--11/23/2010--F5_NETWORKS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/106040--8-13-2010--WESTERN_DIGITAL_CORP.html'">106040--8/13/2010--WESTERN_DIGITAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1033905--2-26-2009--LUMINEX_CORP.html'">1033905--2/26/2009--LUMINEX_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1033905--2-25-2010--LUMINEX_CORP.html'">1033905--2/25/2010--LUMINEX_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1029506--11-29-2010--RALCORP_HOLDINGS_INC_-MO.html'">1029506--11/29/2010--RALCORP_HOLDINGS_INC_/MO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/836690--12-14-2010--INNOVATIVE_SOLUTIONS_&_SUPPORT_INC.html'">836690--12/14/2010--INNOVATIVE_SOLUTIONS_&_SUPPORT_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/836690--12-14-2009--INNOVATIVE_SOLUTIONS_&_SUPPORT_INC.html'">836690--12/14/2009--INNOVATIVE_SOLUTIONS_&_SUPPORT_INC</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

@@ -1,0 +1,206 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[9.7795974011, "../topics/{system,_service,_information}.html", "{system,_service,_information}"], [9.4028736097, "../topics/{capital,_credit,_financial}.html", "{capital,_credit,_financial}"], [3.5206110298, "../topics/{cost,_operation,_labor}.html", "{cost,_operation,_labor}"], [3.3175928825, "../topics/{financial,_litigation,_operation}.html", "{financial,_litigation,_operation}"], [2.75371172, "../topics/{condition,_economic,_financial}.html", "{condition,_economic,_financial}"], [2.7046942579, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [2.6859688664, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [2.5801241763, "../topics/{debt,_indebtedness,_cash}.html", "{debt,_indebtedness,_cash}"], [2.1829645787, "../topics/{stock,_price,_share}.html", "{stock,_price,_share}"], [2.0522584324, "../topics/{tax,_income,_asset}.html", "{tax,_income,_asset}"], [1.7461989424, "../topics/{provision,_law,_control}.html", "{provision,_law,_control}"], [1.7122925778, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [1.6991280879, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [1.0221765589, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>109758--3/2/2009--ARBITRON_INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">109758--3/2/2009--ARBITRON_INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{system,_service,_information}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{system,_service,_information}.html'">{system, service, information}</td></tr>
+<tr class="list"><td id="{capital,_credit,_financial}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{capital,_credit,_financial}.html'">{capital, credit, financial}</td></tr>
+<tr class="list"><td id="{cost,_operation,_labor}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_operation,_labor}.html'">{cost, operation, labor}</td></tr>
+<tr class="list"><td id="{financial,_litigation,_operation}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{financial,_litigation,_operation}.html'">{financial, litigation, operation}</td></tr>
+<tr class="list"><td id="{condition,_economic,_financial}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{condition,_economic,_financial}.html'">{condition, economic, financial}</td></tr>
+<tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{debt,_indebtedness,_cash}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{debt,_indebtedness,_cash}.html'">{debt, indebtedness, cash}</td></tr>
+<tr class="list"><td id="{stock,_price,_share}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_share}.html'">{stock, price, share}</td></tr>
+<tr class="list"><td id="{tax,_income,_asset}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{tax,_income,_asset}.html'">{tax, income, asset}</td></tr>
+<tr class="list"><td id="{provision,_law,_control}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{provision,_law,_control}.html'">{provision, law, control}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(11)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(12)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(13)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    If the domestic and worldwide recession continues or intensifies it could adversely impact demand for our services, our customers revenues or their ability to pay for our services.
+If the domestic and worldwide recession continues or intensifies, potential disruptions in the credit markets may adversely affect our business, including the availability and cost of short-term funds for liquidity requirements and our ability to meet long-term commitments, which could adversely affect our results of operations, cash flows, and financial condition.
+Our business, financial position, and operating results are dependent on the performance of our quantitative radio audience measurement business.
+Costs associated with significant legal proceedings may adversely affect our results of operations.
+We are subject to governmental oversight, which may harm our business.
+We may fail to attract or retain the qualified research, sales, marketing, and managerial personnel, and key executive officers required to operate our business successfully.
+If we do not successfully manage the transitions associated with our new CEO, it could have an adverse impact on our revenues, operations, or results of operations.
+If our PPM ratings service does not generate the revenues that we anticipate, or if our ability to earn such revenues is delayed for any reason, our financial results will suffer.
+We may be unsuccessful in obtaining and maintaining MRC accreditation for our local market radio ratings services, and we may be required to expend significant resources in order to obtain and maintain MRC accreditation for our local market PPM radio ratings services, any of which could adversely impact our business.
+Criticism of our audience measurement service by various governmental entities, industry groups, and market segments could adversely impact our business.
+We have limited experience designing, recruiting and maintaining PPM panels. If we are unable to design, recruit, and maintain PPM panels that appropriately balance research quality, panel size and operational cost, our financial results will suffer.
+We expect to invest in the continued development and commercialization of our PPM ratings service, which may not ultimately be successfully commercialized. The costs associated with commercialization of this service will adversely impact our operating results and operating margins over the commercialization period.
+The success of commercialization of the PPM ratings service is dependent on a single manufacturer who produces the PPM equipment according to our proprietary design as well as on those who manufacture parts.
+Technological change may render our services obsolete and it may be difficult for us to develop new services or enhance existing ones.
+We are dependent on our proprietary software and hardware systems for current and future business requirements. Significant delays in the completion of these systems, cost overages and/or inadequate performance or failure of the systems once completed could adversely impact our business, financial position and operating results.
+Defects or disruptions in our Internet-based software services could diminish demand for our services and subject us to substantial liability.
+Interruptions, delays, or unreliability in the delivery of our services could adversely affect our reputation and reduce our revenues.
+We expect to continue to invest in the improvement of our Diary ratings service. The costs associated with such investment will adversely impact our operating results over the commercialization period.
+The loss of any of our key customers would significantly reduce our revenue and operating results.
+Ownership shifts in the radio broadcasting industry may put pressure on the pricing of our quantitative radio audience measurement service and related software sales, thereby leading to decreased earnings growth.
+Our agreements with our customers are not exclusive and contain no renewal obligations. The failure of our customers to renew all or part of their contracts could have an adverse impact on our business, financial position and operating results.
+Long-term agreements with our customers limit our ability to increase the prices we charge for our services if our costs increase.
+The success of our radio audience measurement business depends on diarykeepers who record their listening habits in diaries and return these diaries to us and panelists who carry our PPM meters. Our failure to collect these diaries and to recruit compliant participants could adversely impact our business.
+Data collection costs are increasing faster than our contracted revenue growth rates and if we are unable to become more efficient in our data collection and our management of associated costs, our operating margins and results of operations could suffer.
+Our ability to recruit participants for our surveys could be adversely impacted by governmental regulations.
+The license of enhanced access to our respondent-level data to third-party data processors and customers could adversely impact the revenue derived from our existing software licenses.
+Our success will depend on our ability to protect our intellectual property rights and we incur substantial expense to enforce our intellectual property rights which could adversely affect our business.
+Advertisers are pursuing increased accountability from the media industry for their return on investments made in media which could reduce demand for our services.
+We rely on third parties to provide data and services in connection with our current business and we may require additional third-party data and services to expand our business in the future, which, if available, could adversely impact our business.
+Long-term disruptions in the mail, telecommunication infrastructure and/or air service could adversely impact our business.
+If our subsidiary in India is not successful, we may incur losses.
+If lump- sum payments made to retiring participants in our defined benefit pension plans exceed the total of the service cost and the interest cost in a calendar year, we would need to recognize the pro rata portion of unrecognized actuarial gain or loss equal to the percentage reduction of the projected benefit obligation, which may result in an adjustment that could materially reduce operating results.
+We intend to begin transitioning operations and production of our RADAR service from our offices in New Jersey to our headquarters in Maryland during 2009.
+Risk Factors Relating to Our Indebtedness
+Our credit facility contains restrictive covenants that limit our financial flexibility, which could adversely affect our ability to conduct our business.
+Risk Factors Relating to Owning Our Common Stock
+Changes in market conditions, or sales of our common stock, could adversely impact the market price of our common stock.
+It may be difficult for a third party to acquire us, which could depress the stock price of our common stock.
+<p><a href="http://www.sec.gov/Archives/edgar/data/109758/0000950133-09-000533.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/109758--2-27-2007--ARBITRON_INC.html'">109758--2/27/2007--ARBITRON_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1322791--2-29-2008--VIRGIN_MEDIA_INVESTMENT_HOLDINGS_LTD.html'">1322791--2/29/2008--VIRGIN_MEDIA_INVESTMENT_HOLDINGS_LTD</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1270400--2-29-2008--VIRGIN_MEDIA_INVESTMENT_HOLDINGS_LTD.html'">1270400--2/29/2008--VIRGIN_MEDIA_INVESTMENT_HOLDINGS_LTD</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1322791--2-26-2010--VIRGIN_MEDIA_INC..html'">1322791--2/26/2010--VIRGIN_MEDIA_INC.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1377013--2-19-2010--TIME_WARNER_CABLE_INC..html'">1377013--2/19/2010--TIME_WARNER_CABLE_INC.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1065280--2-22-2010--NETFLIX_INC.html'">1065280--2/22/2010--NETFLIX_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1283699--3-2-2009--METROPCS_COMMUNICATIONS_INC.html'">1283699--3/2/2009--METROPCS_COMMUNICATIONS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1322791--2-26-2009--VIRGIN_MEDIA_INVESTMENT_HOLDINGS_LTD.html'">1322791--2/26/2009--VIRGIN_MEDIA_INVESTMENT_HOLDINGS_LTD</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1377013--2-20-2009--TIME_WARNER_CABLE_INC..html'">1377013--2/20/2009--TIME_WARNER_CABLE_INC.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/4962--2-26-2010--AMERICAN_EXPRESS_CO.html'">4962--2/26/2010--AMERICAN_EXPRESS_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1326583--3-2-2010--WebMD_Health_Corp..html'">1326583--3/2/2010--WebMD_Health_Corp.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1326583--2-27-2009--WebMD_Health_Corp..html'">1326583--2/27/2009--WebMD_Health_Corp.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1377013--2-22-2008--TIME_WARNER_CABLE_INC..html'">1377013--2/22/2008--TIME_WARNER_CABLE_INC.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1396838--3-12-2009--Dolan_Media_CO.html'">1396838--3/12/2009--Dolan_Media_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/855612--3-15-2010--ZIX_CORP.html'">855612--3/15/2010--ZIX_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/929351--6-1-2009--LIONS_GATE_ENTERTAINMENT_CORP_-CN-.html'">929351--6/1/2009--LIONS_GATE_ENTERTAINMENT_CORP_/CN/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1158324--3-1-2010--COGENT_COMMUNICATIONS_GROUP_INC.html'">1158324--3/1/2010--COGENT_COMMUNICATIONS_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1010286--3-12-2010--FiberTower_CORP.html'">1010286--3/12/2010--FiberTower_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1157377--6-14-2010--ADVISORY_BOARD_CO.html'">1157377--6/14/2010--ADVISORY_BOARD_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1157377--6-15-2009--ADVISORY_BOARD_CO.html'">1157377--6/15/2009--ADVISORY_BOARD_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/109758--2-27-2006--ARBITRON_INC.html'">109758--2/27/2006--ARBITRON_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1008586--4-16-2010--STREAMLINE_HEALTH_SOLUTIONS_INC..html'">1008586--4/16/2010--STREAMLINE_HEALTH_SOLUTIONS_INC.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1158324--3-2-2009--COGENT_COMMUNICATIONS_GROUP_INC.html'">1158324--3/2/2009--COGENT_COMMUNICATIONS_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/936395--12-22-2009--CIENA_CORP.html'">936395--12/22/2009--CIENA_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1277856--3-4-2010--CARDTRONICS_INC.html'">1277856--3/4/2010--CARDTRONICS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1008586--4-17-2009--STREAMLINE_HEALTH_SOLUTIONS_INC..html'">1008586--4/17/2009--STREAMLINE_HEALTH_SOLUTIONS_INC.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1465112--2-26-2010--DIRECTV.html'">1465112--2/26/2010--DIRECTV</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1259550--3-30-2009--LOCAL.COM.html'">1259550--3/30/2009--LOCAL.COM</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1361983--3-16-2010--ORBCOMM_Inc..html'">1361983--3/16/2010--ORBCOMM_Inc.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1234308--2-27-2009--DIRECTV_FINANCING_CO_INC.html'">1234308--2/27/2009--DIRECTV_FINANCING_CO_INC</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

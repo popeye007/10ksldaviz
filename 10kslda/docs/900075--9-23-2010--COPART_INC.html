@@ -1,0 +1,203 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[4.4140983414, "../topics/{cost,_operation,_labor}.html", "{cost,_operation,_labor}"], [3.7465185569, "../topics/{condition,_economic,_financial}.html", "{condition,_economic,_financial}"], [3.6532712589, "../topics/{cost,_regulation,_environmental}.html", "{cost,_regulation,_environmental}"], [3.0216176934, "../topics/{gas,_price,_oil}.html", "{gas,_price,_oil}"], [2.861847542, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [2.7179971846, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [2.6977347047, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [2.3514966803, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"], [1.9832397414, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [1.9566491923, "../topics/{competitive,_industry,_competition}.html", "{competitive,_industry,_competition}"], [1.8845703131, "../topics/{tax,_income,_asset}.html", "{tax,_income,_asset}"], [1.8495505656, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"], [1.7595786382, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [1.7451114774, "../topics/{regulation,_change,_law}.html", "{regulation,_change,_law}"], [1.722749539, "../topics/{loss,_insurance,_financial}.html", "{loss,_insurance,_financial}"], [1.6964782798, "../topics/{provision,_law,_control}.html", "{provision,_law,_control}"], [1.5758089156, "../topics/{capital,_credit,_financial}.html", "{capital,_credit,_financial}"], [1.4969681201, "../topics/{financial,_litigation,_operation}.html", "{financial,_litigation,_operation}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>900075--9/23/2010--COPART_INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">900075--9/23/2010--COPART_INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{cost,_operation,_labor}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_operation,_labor}.html'">{cost, operation, labor}</td></tr>
+<tr class="list"><td id="{condition,_economic,_financial}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{condition,_economic,_financial}.html'">{condition, economic, financial}</td></tr>
+<tr class="list"><td id="{cost,_regulation,_environmental}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_regulation,_environmental}.html'">{cost, regulation, environmental}</td></tr>
+<tr class="list"><td id="{gas,_price,_oil}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{gas,_price,_oil}.html'">{gas, price, oil}</td></tr>
+<tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{competitive,_industry,_competition}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{competitive,_industry,_competition}.html'">{competitive, industry, competition}</td></tr>
+<tr class="list"><td id="{tax,_income,_asset}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{tax,_income,_asset}.html'">{tax, income, asset}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(11)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+<tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(12)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{regulation,_change,_law}" onmouseover="highlight(13)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_change,_law}.html'">{regulation, change, law}</td></tr>
+<tr class="list"><td id="{loss,_insurance,_financial}" onmouseover="highlight(14)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{loss,_insurance,_financial}.html'">{loss, insurance, financial}</td></tr>
+<tr class="list"><td id="{provision,_law,_control}" onmouseover="highlight(15)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{provision,_law,_control}.html'">{provision, law, control}</td></tr>
+<tr class="list"><td id="{capital,_credit,_financial}" onmouseover="highlight(16)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{capital,_credit,_financial}.html'">{capital, credit, financial}</td></tr>
+<tr class="list"><td id="{financial,_litigation,_operation}" onmouseover="highlight(17)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{financial,_litigation,_operation}.html'">{financial, litigation, operation}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    We depend on a limited number of major vehicle sellers for a substantial portion of our revenues. The loss of one or more of these major sellers could adversely affect our results of operations and financial condition, and an inability to increase our sources of vehicle supply could adversely affect our growth rates.
+Our acquisitions in the UK expose us to risks arising from the acquisitions and risks associated with operating in markets outside North America. We may acquire additional companies in the UK or other countries or seek to establish new yards or facilities to complement the acquired companies' operations. Any failure to successfully integrate businesses acquired outside of North America into our operations could have an adverse effect on our financial position, results of operations or cash flows.
+In the UK, a significant portion of our business is conducted on a principal basis, purchasing the salvage vehicle outright from the insurance companies and reselling the vehicle to buyers. Continued operations on a principal basis will have a negative impact on our future consolidated gross margin percentages and exposes us to additional inventory risks.
+Our strategic shift from live sales to an entirely Internet-based sales model presents risks, including substantial technology risks.
+Our results of operations may not continue to benefit from the implementation of VB 2 to the extent we have experienced in recent periods.
+Failure to have sufficient capacity to accept additional cars at one or more of our storage facilities could adversely affect our relationships with insurance companies or other sellers of vehicles.
+Because the growth of our business has been due in large part to acquisitions and development of new facilities, the rate of growth of our business and revenues may decline if we are not able to successfully complete acquisitions and develop new facilities.
+As we continue to expand our operations, our failure to manage growth could harm our business and adversely affect our results of operations and financial condition.
+Our annual and quarterly performance may fluctuate, causing the price of our stock to decline.
+Our strategic shift to an Internet-based sales model has increased the relative importance of intellectual property assets to our business, and any inability to protect those rights could have a material adverse effect on our business, financial condition, or results of operations.
+We have in the past been and may in the future be subject to intellectual property rights claims, which are costly to defend, could require us to pay damages, and could limit our ability to use certain technologies in the future.
+If we experience problems with our trucking fleet operations, our business could be harmed.
+We are partially self-insured for certain losses and if our estimates of the cost of future claims differ from actual trends, our results of our operations could be harmed.
+Our executive officers, directors and their affiliates hold a large percentage of our stock and their interests may differ from other shareholders.
+We have a shareholder rights plan, or poison pill, which could affect the price of our common stock and make it more difficult for a potential acquirer to purchase a large portion of our securities, to initiate a tender offer or a proxy contest, or to acquire us.
+If we lose key management or are unable to attract and retain the talent required for our business, we may not be able to successfully manage our business or achieve our objectives.
+Our cash investments are subject to numerous risks.
+The impairment of capitalized development costs could adversely affect our consolidated results of operations and financial condition.
+Increased investment in advertising and marketing could adversely impact our operating results.
+New member programs could impact our operating results.
+Factors such as mild weather conditions can have an adverse effect on our revenues and operating results as well as our revenue and earnings growth rates by reducing the available supply of salvage vehicles. Conversely, extreme weather conditions can result in an oversupply of salvage vehicles that requires us to incur abnormal expenses to respond to market demands.
+Macroeconomic factors such as high fuel prices, declines in commodity prices, and declines in used car prices may have an adverse effect on our revenues and operating results as well as our earnings growth rates.
+The salvage vehicle sales industry is highly competitive and we may not be able to compete successfully.
+Government regulation of the salvage vehicle sales industry may impair our operations, increase our costs of doing business and create potential liability.
+Changes in laws affecting the importation of salvage vehicles may have an adverse effect on our business and financial condition.
+The operation of our storage facilities poses certain environmental risks, which could adversely affect our financial position, results of operations or cash flows.
+Volatility in the capital and credit markets may negatively affect our business, operating results, or financial condition.
+If we determine that our goodwill has become impaired, we could incur significant charges that would have a material adverse effect on our consolidated results of operations.
+New accounting pronouncements or new interpretations of existing standards could require us to make adjustments to accounting policies that could adversely affect the consolidated financial statements.
+Fluctuations in foreign currency exchange rates could result in declines in our reported revenues and earnings.
+Fluctuations in the US unemployment rates could result in declines in revenue from processing insurance cars.
+<p><a href="http://www.sec.gov/Archives/edgar/data/900075/0001047469-10-008242.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/900075--9-29-2009--COPART_INC.html'">900075--9/29/2009--COPART_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/900075--9-29-2008--COPART_INC.html'">900075--9/29/2008--COPART_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/783284--1-13-2010--PLANGRAPHICS_INC.html'">783284--1/13/2010--PLANGRAPHICS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/53669--11-23-2010--JOHNSON_CONTROLS_INC.html'">53669--11/23/2010--JOHNSON_CONTROLS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/317540--3-13-2008--COCA_COLA_BOTTLING_CO_CONSOLIDATED_-DE-.html'">317540--3/13/2008--COCA_COLA_BOTTLING_CO_CONSOLIDATED_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/351834--3-11-2009--SunOpta_Inc..html'">351834--3/11/2009--SunOpta_Inc.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1113256--11-19-2009--ARVINMERITOR_INC.html'">1113256--11/19/2009--ARVINMERITOR_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/230498--11-18-2009--Rock-Tenn_CO.html'">230498--11/18/2009--Rock-Tenn_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/230498--11-26-2008--Rock-Tenn_CO.html'">230498--11/26/2008--Rock-Tenn_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/912833--3-16-2009--WEST_MARINE_INC.html'">912833--3/16/2009--WEST_MARINE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1177702--2-25-2010--SAIA_INC.html'">1177702--2/25/2010--SAIA_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1144215--10-27-2008--ACUITY_BRANDS_INC.html'">1144215--10/27/2008--ACUITY_BRANDS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/34563--9-13-2010--FARMER_BROTHERS_CO.html'">34563--9/13/2010--FARMER_BROTHERS_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/722079--2-25-2010--TERRA_INDUSTRIES_INC.html'">722079--2/25/2010--TERRA_INDUSTRIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/351834--3-11-2010--SunOpta_Inc..html'">351834--3/11/2010--SunOpta_Inc.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/32878--8-31-2010--ENERGY_CONVERSION_DEVICES_INC.html'">32878--8/31/2010--ENERGY_CONVERSION_DEVICES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/46640--6-17-2010--HEINZ_H_J_CO.html'">46640--6/17/2010--HEINZ_H_J_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/43920--12-29-2006--GREIF_INC.html'">43920--12/29/2006--GREIF_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/723254--7-30-2010--CINTAS_CORP.html'">723254--7/30/2010--CINTAS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/935226--6-13-2008--BENIHANA_INC.html'">935226--6/13/2008--BENIHANA_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/33769--6-23-2009--EVANS_BOB_FARMS_INC.html'">33769--6/23/2009--EVANS_BOB_FARMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1144215--10-29-2010--ACUITY_BRANDS_INC.html'">1144215--10/29/2010--ACUITY_BRANDS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1408287--11-29-2007--Zep_Inc..html'">1408287--11/29/2007--Zep_Inc.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/39648--8-26-2010--G&K_SERVICES_INC.html'">39648--8/26/2010--G&K_SERVICES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/941738--3-20-2007--WHEELING_PITTSBURGH_CORP_-DE-.html'">941738--3/20/2007--WHEELING_PITTSBURGH_CORP_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1378453--3-31-2008--TRAVELCENTERS_OF_AMERICA_LLC.html'">1378453--3/31/2008--TRAVELCENTERS_OF_AMERICA_LLC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1048268--12-15-2008--INTEGRATED_ELECTRICAL_SERVICES_INC.html'">1048268--12/15/2008--INTEGRATED_ELECTRICAL_SERVICES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/795403--2-27-2009--WATTS_WATER_TECHNOLOGIES_INC.html'">795403--2/27/2009--WATTS_WATER_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/740761--3-1-2007--BUCYRUS_INTERNATIONAL_INC.html'">740761--3/1/2007--BUCYRUS_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1452217--9-17-2010--TPC_Group_Inc..html'">1452217--9/17/2010--TPC_Group_Inc.</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

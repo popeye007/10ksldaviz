@@ -1,0 +1,202 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[4.4148040932, "../topics/{stock,_price,_share}.html", "{stock,_price,_share}"], [3.7938463479, "../topics/{gas,_price,_oil}.html", "{gas,_price,_oil}"], [3.5598370715, "../topics/{debt,_indebtedness,_cash}.html", "{debt,_indebtedness,_cash}"], [2.8473445924, "../topics/{financial,_litigation,_operation}.html", "{financial,_litigation,_operation}"], [2.7480184257, "../topics/{interest,_director,_officer}.html", "{interest,_director,_officer}"], [2.7391821621, "../topics/{cost,_regulation,_environmental}.html", "{cost,_regulation,_environmental}"], [2.6980088684, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [1.7472403515, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [1.7321401487, "../topics/{condition,_economic,_financial}.html", "{condition,_economic,_financial}"], [1.7299953514, "../topics/{control,_financial,_internal}.html", "{control,_financial,_internal}"], [1.7208311378, "../topics/{loss,_insurance,_financial}.html", "{loss,_insurance,_financial}"], [1.7148322236, "../topics/{regulation,_change,_law}.html", "{regulation,_change,_law}"], [1.7028997333, "../topics/{cost,_contract,_operation}.html", "{cost,_contract,_operation}"], [1.6977980048, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [1.6961228329, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [1.6945633801, "../topics/{competitive,_industry,_competition}.html", "{competitive,_industry,_competition}"], [1.6677462982, "../topics/{cost,_operation,_labor}.html", "{cost,_operation,_labor}"], [1.2223582636, "../topics/{loan,_real,_estate}.html", "{loan,_real,_estate}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>1223112--3/29/2010--ADA-ES_INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">1223112--3/29/2010--ADA-ES_INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{stock,_price,_share}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_share}.html'">{stock, price, share}</td></tr>
+<tr class="list"><td id="{gas,_price,_oil}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{gas,_price,_oil}.html'">{gas, price, oil}</td></tr>
+<tr class="list"><td id="{debt,_indebtedness,_cash}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{debt,_indebtedness,_cash}.html'">{debt, indebtedness, cash}</td></tr>
+<tr class="list"><td id="{financial,_litigation,_operation}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{financial,_litigation,_operation}.html'">{financial, litigation, operation}</td></tr>
+<tr class="list"><td id="{interest,_director,_officer}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{interest,_director,_officer}.html'">{interest, director, officer}</td></tr>
+<tr class="list"><td id="{cost,_regulation,_environmental}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_regulation,_environmental}.html'">{cost, regulation, environmental}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{condition,_economic,_financial}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{condition,_economic,_financial}.html'">{condition, economic, financial}</td></tr>
+<tr class="list"><td id="{control,_financial,_internal}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{control,_financial,_internal}.html'">{control, financial, internal}</td></tr>
+<tr class="list"><td id="{loss,_insurance,_financial}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{loss,_insurance,_financial}.html'">{loss, insurance, financial}</td></tr>
+<tr class="list"><td id="{regulation,_change,_law}" onmouseover="highlight(11)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_change,_law}.html'">{regulation, change, law}</td></tr>
+<tr class="list"><td id="{cost,_contract,_operation}" onmouseover="highlight(12)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_contract,_operation}.html'">{cost, contract, operation}</td></tr>
+<tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(13)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(14)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{competitive,_industry,_competition}" onmouseover="highlight(15)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{competitive,_industry,_competition}.html'">{competitive, industry, competition}</td></tr>
+<tr class="list"><td id="{cost,_operation,_labor}" onmouseover="highlight(16)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_operation,_labor}.html'">{cost, operation, labor}</td></tr>
+<tr class="list"><td id="{loan,_real,_estate}" onmouseover="highlight(17)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{loan,_real,_estate}.html'">{loan, real, estate}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    RISKS RELATING TO OUR BUSINESS
+DEMAND FOR OUR PRODUCTS AND SERVICES DEPENDS SIGNIFICANTLY ON ENVIRONMENTAL LAWS AND REGULATIONS; UNCERTAINTY AS TO THE FUTURE OF SUCH LAWS AND REGULATIONS, AS WELL AS CHANGES TO SUCH LAWS, HAS HAD AND WILL LIKELY CONTINUE TO HAVE A MATERIAL EFFECT ON OUR BUSINESS.
+WE MAY NOT HAVE SUFFICIENT WORKING CAPITAL TO PURSUE OUR BUSINESSES AND PAY OUTSTANDING OBLIGATIONS, AND WE MAY NOT BE ABLE TO OBTAIN OUTSIDE FINANCING ON ACCEPTABLE TERMS.
+Costs to defend and indemnity obligations related to existing legal actions against us have been and are expected to continue to be significant, and taken together, exceed our working capital, and the outcome of the legal actions and satisfaction of our indemnity obligations may have a material adverse effect on our business and financial condition
+We may not have sufficient working capital to fund the Indemnity Obligations or other indemnity claims or for our refined coal and other businesses.
+The recession has adversely impacted our ability to obtain third party financing for our businesses.
+In addition to the Indemnity Obligations, we have provided guaranties and undertaken other commitments of approximately $120 million as of December 31, 2009 related to Carbon Solutions and do not have sufficient working capital to meet such obligations if they were called upon.
+Although Red River has agreed to reimburse us if we are required to make payments under our guaranties of its obligations, we have assigned our rights to be reimbursed to ECP and would not be reimbursed unless and until ECP s preferred equity in Carbon Solutions is fully redeemed or converted and all of its loans to Red River are paid in full.
+ECP CONTROLS CARBON SOLUTIONS AND MAY DILUTE OUR EQUITY FURTHER SUCH THAT WE WOULD LOSE ADDITIONAL MANAGEMENT RIGHTS, WHICH MAY ADVERSELY AFFECT OUR FINANCIAL CONDITION AND RESULTS OF OPERATIONS.
+WE ARE UNABLE TO PREDICT THE IMPACT OF RECENT (AND CONTINUING) ECONOMIC FACTORS ON OUR BUSINESS.
+IF WE ARE UNABLE TO COMPETE WITH OTHER INDUSTRY PARTICIPANTS, WE WOULD SUFFER ADVERSE EFFECTS TO OUR BUSINESS AND FINANCIAL CONDITION.
+IF THE DOE DISCONTINUES FUNDING OF EXISTING AND PLANNED CLEAN COAL TECHNOLOGY PROGRAMS, OUR BUSINESS WOULD BE HARMED.
+WE HAVE AGREEMENTS TO INDEMNIFY THIRD PARTIES AGAINST INTELLECTUAL PROPERTY CLAIMS CONCERNING LICENSED TECHNOLOGY THAT COULD BE SIGNIFICANT.
+THE ABILITY OF CLEAN COAL TO MONETIZE THE SECTION 45 TAX CREDITS FROM THE SALE OF REFINED COAL IS NOT YET ASSURED, AND THE INABILITY TO DO SO COULD ADVERSELY AFFECT OUR FUTURE GROWTH AND PROFITABILITY.
+FAILURE TO PROTECT OUR INTELLECTUAL PROPERTY OR INFRINGEMENT OF OUR INTELLECTUAL PROPERTY BY A THIRD PARTY COULD HAVE AN ADVERSE IMPACT ON OUR FINANCIAL CONDITION.
+TECHNICAL OR OPERATIONAL PROBLEMS WITH LONG-TERM OPERATION OF ACI SYSTEMS COULD RESULT IN ADDITIONAL COSTS AND DELAYS THAT ADVERSELY AFFECT OUR FINANCIAL CONDITION.
+OUR DEPENDENCE ON THIRD PARTIES FOR MANUFACTURING KEY COMPONENTS MAY CAUSE DELAYS IN ASSEMBLY AND INCREASED COSTS TO US.
+OUR PROFITABILITY COULD BE ADVERSELY AFFECTED BY INCREASES IN THE COST OF RAW MATERIALS AND FREIGHT.
+THE EFFECT OF ISSUING PERFORMANCE GUARANTIES FOR COMMERCIAL ACI SYSTEMS IS UNKNOWN AND COULD ADVERSELY AFFECT OUR FINANCIAL CONDITION.
+WE DEPEND ON KEY PERSONNEL.
+WE DEPEND SUBSTANTIALLY ON A CONSULTANT FOR OUR CLEAN COAL BUSINESS, AND THE LOSS OF HER SERVICES COULD HAVE AN ADVERSE EFFECT ON THAT BUSINESS.
+MATERIAL ADJUSTMENTS PURSUANT TO DOE AUDITS OF OUR PAST PERFORMANCE COULD HAVE A DETRIMENTAL IMPACT ON OUR BUSINESS.
+CHANGES IN TAXATION RULES OR FINANCIAL ACCOUNTING STANDARDS COULD ADVERSELY AFFECT OUR RESULTS OF OPERATIONS OR FINANCIAL CONDITION.
+THE FAILURE OF ANY BANK IN WHICH WE DEPOSIT OUR FUNDS COULD REDUCE THE AMOUNT OF CASH WE HAVE AVAILABLE FOR OPERATIONS AND TO MAKE ADDITIONAL INVESTMENTS IN OUR BUSINESSES.
+RISKS RELATING TO OUR COMMON STOCK
+A SIGNIFICANT PORTION OF OUR OUTSTANDING SHARES OF COMMON STOCK MAY BE SOLD IN THE PUBLIC MARKET, WHICH COULD LOWER THE MARKET PRICE OF OUR STOCK.
+THE ISSUANCE OF ADDITIONAL SECURITIES COULD DECREASE THE VALUE OF THE OUTSTANDING SHARES OF OUR COMMON STOCK.
+THE VOLATILITY OF OUR STOCK PRICE COULD SUBJECT US TO SECURITIES CLASS ACTION LITIGATION.
+LACK OF EXPECTED DIVIDENDS MAY MAKE OUR STOCK LESS ATTRACTIVE AS AN INVESTMENT.
+WE ARE EXPOSED TO RISKS RELATING TO EVALUATIONS OF CONTROLS REQUIRED BY SECTION 404 OF THE SARBANES-OXLEY ACT OF 2002.
+<p><a href="http://www.sec.gov/Archives/edgar/data/1223112/0001193125-10-069789.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/1223112--3-27-2007--ADA-ES_INC.html'">1223112--3/27/2007--ADA-ES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1271285--12-14-2007--GOLDEN_OVAL_EGGS_LLC.html'">1271285--12/14/2007--GOLDEN_OVAL_EGGS_LLC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/746834--3-12-2009--NGAS_Resources_Inc.html'">746834--3/12/2009--NGAS_Resources_Inc</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/788206--4-16-2009--EMPIRE_ENERGY_CORP.html'">788206--4/16/2009--EMPIRE_ENERGY_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1271285--11-29-2006--GOLDEN_OVAL_EGGS_LLC.html'">1271285--11/29/2006--GOLDEN_OVAL_EGGS_LLC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/788206--6-4-2010--EMPIRE_ENERGY_CORP.html'">788206--6/4/2010--EMPIRE_ENERGY_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1407583--10-13-2010--LIBERTY_SILVER_CORP.html'">1407583--10/13/2010--LIBERTY_SILVER_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/908821--3-31-2010--CHEETAH_OIL_&_GAS_LTD..html'">908821--3/31/2010--CHEETAH_OIL_&_GAS_LTD.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/746834--3-11-2010--NGAS_Resources_Inc.html'">746834--3/11/2010--NGAS_Resources_Inc</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/101778--3-1-2007--MARATHON_OIL_CORP.html'">101778--3/1/2007--MARATHON_OIL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1287900--6-30-2006--RANCHER_ENERGY_CORP..html'">1287900--6/30/2006--RANCHER_ENERGY_CORP.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1406588--12-14-2010--YATERRA_VENTURES_CORP..html'">1406588--12/14/2010--YATERRA_VENTURES_CORP.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1333614--8-13-2009--RAZOR_RESOURCES_INC.html'">1333614--8/13/2009--RAZOR_RESOURCES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/867840--9-26-2008--PRECISION_OPTICS_CORPORATION_INC.html'">867840--9/26/2008--PRECISION_OPTICS_CORPORATION_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/867840--9-21-2010--PRECISION_OPTICS_CORPORATION_INC.html'">867840--9/21/2010--PRECISION_OPTICS_CORPORATION_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/867840--9-28-2009--PRECISION_OPTICS_CORPORATION_INC.html'">867840--9/28/2009--PRECISION_OPTICS_CORPORATION_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1136463--12-29-2008--FIRST_CORP_-CN-.html'">1136463--12/29/2008--FIRST_CORP_/CN/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1410012--10-29-2009--Baron_Energy_Inc..html'">1410012--10/29/2009--Baron_Energy_Inc.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1117414--1-29-2007--PBSJ_CORP_-FL-.html'">1117414--1/29/2007--PBSJ_CORP_/FL/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/849145--3-29-2006--C2_Global_Technologies_Inc.html'">849145--3/29/2006--C2_Global_Technologies_Inc</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/912890--6-15-2006--TERREMARK_WORLDWIDE_INC.html'">912890--6/15/2006--TERREMARK_WORLDWIDE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/727273--3-16-2007--CADIZ_INC.html'">727273--3/16/2007--CADIZ_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1396302--2-25-2010--Blackbird_Petroleum_Corp.html'">1396302--2/25/2010--Blackbird_Petroleum_Corp</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1398702--3-29-2010--TECKMINE_INDUSTRIES_INC..html'">1398702--3/29/2010--TECKMINE_INDUSTRIES_INC.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1001606--3-11-2009--BLOUNT_INTERNATIONAL_INC.html'">1001606--3/11/2009--BLOUNT_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/95366--1-13-2009--SUNAIR_SERVICES_CORP.html'">95366--1/13/2009--SUNAIR_SERVICES_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1116616--3-16-2006--HARBOR_GLOBAL_CO_LTD.html'">1116616--3/16/2006--HARBOR_GLOBAL_CO_LTD</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1440821--8-12-2009--QUARTZ_VENTURES_INC..html'">1440821--8/12/2009--QUARTZ_VENTURES_INC.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1048685--3-16-2010--METALICO_INC.html'">1048685--3/16/2010--METALICO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1320338--5-18-2010--Tao_Minerals_Ltd..html'">1320338--5/18/2010--Tao_Minerals_Ltd.</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

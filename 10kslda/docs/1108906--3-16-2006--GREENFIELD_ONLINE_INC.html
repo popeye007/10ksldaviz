@@ -1,0 +1,185 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[7.6512174423, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [3.8260085838, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"], [3.7764944961, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"], [2.7014109703, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [1.9310385468, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [1.7111549903, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [1.6969660845, "../topics/{product,_liability,_claim}.html", "{product,_liability,_claim}"], [1.6962617284, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [1.5955741493, "../topics/{regulation,_government,_change}.html", "{regulation,_government,_change}"], [1.3130296797, "../topics/{stock,_price,_share}.html", "{stock,_price,_share}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>1108906--3/16/2006--GREENFIELD_ONLINE_INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">1108906--3/16/2006--GREENFIELD_ONLINE_INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{product,_liability,_claim}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_liability,_claim}.html'">{product, liability, claim}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{regulation,_government,_change}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_government,_change}.html'">{regulation, government, change}</td></tr>
+<tr class="list"><td id="{stock,_price,_share}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_share}.html'">{stock, price, share}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    If the rate at which our panelists respond to our surveys decreases, we may not be able to meet our clients needs.
+If the rate at which our panelists respond to our surveys decreases, we may be required to expend additional funds to retain our panelists or provide additional incentives to encourage panelist participation.
+We derived approximately 40% of our total net revenue from ten clients in fiscal year 2005. In our reportable segments of North America and Europe, we derived approximately 44% and 51% of net revenue from ten clients in fiscal year 2005, respectively. If we were to lose, or if there were a material reduction in business from, these clients, our net revenue might decline substantially.
+We may not be able to successfully compete with other Internet survey solutions providers, marketing research firms and other potential competitors which may cause us to lose sales or experience lower margins on sales.
+Consolidation in the marketing research industry may result in fewer potential clients for us and a smaller market in general if companies with existing Internet-based panels combine with companies without such panels.
+If our clients develop their own Internet-based panels, we may lose some or all of their business.
+If the marketplace significantly slows its migration from traditional data collection methods to Internet-based marketing research data collection, our growth may slow or cease altogether.
+If we do not keep pace with technological change, we may be unable to implement our business strategy successfully.
+If we are unable to manage and support our growth effectively, we may not be able to execute our business strategy successfully.
+If we are unable to achieve international growth of our Internet panels or to overcome other risks of international operations, we may be unable to conduct business on a global level.
+Currency exchange rate fluctuations could lower our revenue and net income.
+We have significant operations in India that could be limited or prohibited by changes in the political or economic stability of India or government policies in India or the United States.
+Acquisitions or investments in other companies may have a negative impact on our business and our stock price.
+A substantial portion of our comparison shopping portal traffic is derived through optimization of search engine results and changes in these algorithms may cause our comparison shopping revenue to decline.
+Our success depends on our ability to retain the current members of our senior management team and other key personnel.
+If we fail to continue to attract and retain project management professionals and other highly-skilled personnel, we may be unable to successfully execute our business strategy.
+We do not have adequate plans or procedures in place to allow us to rapidly rebuild our operational and technical infrastructure in case of a catastrophic event.
+We may be at a competitive disadvantage if we are unable to protect our proprietary rights or if we infringe on the proprietary rights of others, and related litigation could be time consuming and costly.
+Fluctuations in our quarterly operating results may cause our stock price to decline and limit our stockholders ability to sell our common stock in the public market.
+We might have difficulty obtaining additional capital, which could prevent us from achieving our business objectives. If we are successful in raising additional capital, it may have a dilutive effect on our stockholders.
+Government regulations could limit our Internet activities or result in additional costs of doing business and conducting marketing research on the Internet.
+<p><a href="http://www.sec.gov/Archives/edgar/data/1108906/0000950123-06-003224.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/1086195--2-1-2010--ART_TECHNOLOGY_GROUP_INC.html'">1086195--2/1/2010--ART_TECHNOLOGY_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1096376--3-14-2006--NUTRI_SYSTEM_INC_-DE-.html'">1096376--3/14/2006--NUTRI_SYSTEM_INC_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1278021--3-3-2008--MARKETAXESS_HOLDINGS_INC.html'">1278021--3/3/2008--MARKETAXESS_HOLDINGS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1098277--3-3-2006--WEBSENSE_INC.html'">1098277--3/3/2006--WEBSENSE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1098277--2-28-2008--WEBSENSE_INC.html'">1098277--2/28/2008--WEBSENSE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1086195--3-2-2009--ART_TECHNOLOGY_GROUP_INC.html'">1086195--3/2/2009--ART_TECHNOLOGY_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1014383--3-14-2006--ONYX_SOFTWARE_CORP-WA.html'">1014383--3/14/2006--ONYX_SOFTWARE_CORP/WA</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1111247--3-14-2008--RIGHTNOW_TECHNOLOGIES_INC.html'">1111247--3/14/2008--RIGHTNOW_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1133311--3-15-2007--TRAVELZOO_INC.html'">1133311--3/15/2007--TRAVELZOO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1111247--3-6-2009--RIGHTNOW_TECHNOLOGIES_INC.html'">1111247--3/6/2009--RIGHTNOW_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/948708--3-17-2008--SMITH_MICRO_SOFTWARE_INC.html'">948708--3/17/2008--SMITH_MICRO_SOFTWARE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1133311--3-16-2009--TRAVELZOO_INC.html'">1133311--3/16/2009--TRAVELZOO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1098277--2-28-2007--WEBSENSE_INC.html'">1098277--2/28/2007--WEBSENSE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1133311--3-17-2008--TRAVELZOO_INC.html'">1133311--3/17/2008--TRAVELZOO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1278021--3-3-2009--MARKETAXESS_HOLDINGS_INC.html'">1278021--3/3/2009--MARKETAXESS_HOLDINGS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1005731--10-16-2006--IDT_CORP.html'">1005731--10/16/2006--IDT_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1111247--3-9-2010--RIGHTNOW_TECHNOLOGIES_INC.html'">1111247--3/9/2010--RIGHTNOW_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1022652--3-16-2007--NOVATEL_WIRELESS_INC.html'">1022652--3/16/2007--NOVATEL_WIRELESS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/6845--4-26-2006--APOGEE_ENTERPRISES_INC.html'">6845--4/26/2006--APOGEE_ENTERPRISES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1111247--3-14-2007--RIGHTNOW_TECHNOLOGIES_INC.html'">1111247--3/14/2007--RIGHTNOW_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1042821--9-13-2007--PERVASIVE_SOFTWARE_INC.html'">1042821--9/13/2007--PERVASIVE_SOFTWARE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1043769--3-1-2006--COVAD_COMMUNICATIONS_GROUP_INC.html'">1043769--3/1/2006--COVAD_COMMUNICATIONS_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1088033--2-25-2009--QUEST_SOFTWARE_INC.html'">1088033--2/25/2009--QUEST_SOFTWARE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1043769--2-26-2008--COVAD_COMMUNICATIONS_GROUP_INC.html'">1043769--2/26/2008--COVAD_COMMUNICATIONS_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/948708--3-2-2010--SMITH_MICRO_SOFTWARE_INC.html'">948708--3/2/2010--SMITH_MICRO_SOFTWARE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1022652--3-16-2009--NOVATEL_WIRELESS_INC.html'">1022652--3/16/2009--NOVATEL_WIRELESS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1078075--6-4-2007--NETSCOUT_SYSTEMS_INC.html'">1078075--6/4/2007--NETSCOUT_SYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/19446--10-14-2008--CANTEL_MEDICAL_CORP.html'">19446--10/14/2008--CANTEL_MEDICAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1278021--2-26-2010--MARKETAXESS_HOLDINGS_INC.html'">1278021--2/26/2010--MARKETAXESS_HOLDINGS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/19446--10-14-2009--CANTEL_MEDICAL_CORP.html'">19446--10/14/2009--CANTEL_MEDICAL_CORP</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

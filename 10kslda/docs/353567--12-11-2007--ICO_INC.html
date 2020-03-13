@@ -1,0 +1,184 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[4.2938375563, "../topics/{cost,_regulation,_environmental}.html", "{cost,_regulation,_environmental}"], [3.6860371792, "../topics/{financial,_litigation,_operation}.html", "{financial,_litigation,_operation}"], [3.2763159721, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"], [1.7988578973, "../topics/{tax,_income,_asset}.html", "{tax,_income,_asset}"], [1.7065474239, "../topics/{loan,_real,_estate}.html", "{loan,_real,_estate}"], [1.7048500292, "../topics/{debt,_indebtedness,_cash}.html", "{debt,_indebtedness,_cash}"], [1.6963694506, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [1.6962701244, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [1.6960214824, "../topics/{competitive,_industry,_competition}.html", "{competitive,_industry,_competition}"], [1.6247810204, "../topics/{regulation,_change,_law}.html", "{regulation,_change,_law}"], [1.6138677473, "../topics/{system,_service,_information}.html", "{system,_service,_information}"], [1.0538012482, "../topics/{loss,_insurance,_financial}.html", "{loss,_insurance,_financial}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>353567--12/11/2007--ICO_INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">353567--12/11/2007--ICO_INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{cost,_regulation,_environmental}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_regulation,_environmental}.html'">{cost, regulation, environmental}</td></tr>
+<tr class="list"><td id="{financial,_litigation,_operation}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{financial,_litigation,_operation}.html'">{financial, litigation, operation}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+<tr class="list"><td id="{tax,_income,_asset}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{tax,_income,_asset}.html'">{tax, income, asset}</td></tr>
+<tr class="list"><td id="{loan,_real,_estate}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{loan,_real,_estate}.html'">{loan, real, estate}</td></tr>
+<tr class="list"><td id="{debt,_indebtedness,_cash}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{debt,_indebtedness,_cash}.html'">{debt, indebtedness, cash}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{competitive,_industry,_competition}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{competitive,_industry,_competition}.html'">{competitive, industry, competition}</td></tr>
+<tr class="list"><td id="{regulation,_change,_law}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_change,_law}.html'">{regulation, change, law}</td></tr>
+<tr class="list"><td id="{system,_service,_information}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{system,_service,_information}.html'">{system, service, information}</td></tr>
+<tr class="list"><td id="{loss,_insurance,_financial}" onmouseover="highlight(11)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{loss,_insurance,_financial}.html'">{loss, insurance, financial}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    Our indebtedness subjects our business to restrictive covenants and may limit our ability to borrow additional funds and efficiently operate the business.
+Changes in the cost and availability of polymers could adversely affect the Company.
+Changes in economic activity could adversely affect us.
+The Company s success is partly dependent upon our ability to develop superior proprietary technology, know-how and trade secrets.
+The failure to properly manage inventories could expose the Company to material financial losses.
+There are risks associated with our presence in international markets, including political or economic instability and currency restrictions.
+The results of our operations are subject to market risk from changes in foreign currency exchange rates.
+Due to our lack of asset diversification, adverse developments in our industry could materially adversely impact our operations.
+The Company s success depends on attracting and maintaining key personnel; the failure to do so could disrupt the Company s business operations.
+An impairment of goodwill could reduce our earnings.
+Changes in tax laws could have an adverse impact on our earnings.
+Operational risks and uninsured claims and litigation could adversely affect the Company s business.
+We could be adversely affected if we fail to comply with any of the numerous federal, state and local laws, regulations and policies that govern environmental protection, zoning and other matters applicable to our businesses.
+Our businesses expose us to potential environmental liability.
+We may not have adequate insurance for potential environmental liabilities.
+Future environmental, personal injury, and other claims relating to the Company s former Oilfield Services business could adversely affect the Company s financial condition, results of operations and/or cash flows.
+Competition in our industry is intense, and we are smaller and have a more limited operating history than some of our competitors and potential competitors.
+Certain litigation matters could have a material adverse effect on our financial condition, results of operations and/or cash flows.
+<p><a href="http://www.sec.gov/Archives/edgar/data/353567/0000353567-07-000063.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/1037868--2-25-2010--AMETEK_INC-.html'">1037868--2/25/2010--AMETEK_INC/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1037868--2-26-2009--AMETEK_INC-.html'">1037868--2/26/2009--AMETEK_INC/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/110621--7-28-2009--RPM_INTERNATIONAL_INC-DE-.html'">110621--7/28/2009--RPM_INTERNATIONAL_INC/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/899723--2-28-2007--OM_GROUP_INC.html'">899723--2/28/2007--OM_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/110621--7-30-2008--RPM_INTERNATIONAL_INC-DE-.html'">110621--7/30/2008--RPM_INTERNATIONAL_INC/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1037868--2-27-2008--AMETEK_INC-.html'">1037868--2/27/2008--AMETEK_INC/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/89800--2-24-2010--SHERWIN_WILLIAMS_CO.html'">89800--2/24/2010--SHERWIN_WILLIAMS_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/100790--2-19-2008--UNION_CARBIDE_CORP_-NEW-.html'">100790--2/19/2008--UNION_CARBIDE_CORP_/NEW/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/24491--3-2-2010--COOPER_TIRE_&_RUBBER_CO.html'">24491--3/2/2010--COOPER_TIRE_&_RUBBER_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/868611--10-29-2007--SONIC_CORP.html'">868611--10/29/2007--SONIC_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/110621--7-30-2007--RPM_INTERNATIONAL_INC-DE-.html'">110621--7/30/2007--RPM_INTERNATIONAL_INC/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/2969--11-26-2008--AIR_PRODUCTS_&_CHEMICALS_INC_-DE-.html'">2969--11/26/2008--AIR_PRODUCTS_&_CHEMICALS_INC_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/102729--2-26-2008--VALMONT_INDUSTRIES_INC.html'">102729--2/26/2008--VALMONT_INDUSTRIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/54480--2-27-2007--KANSAS_CITY_SOUTHERN.html'">54480--2/27/2007--KANSAS_CITY_SOUTHERN</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/2969--11-25-2009--AIR_PRODUCTS_&_CHEMICALS_INC_-DE-.html'">2969--11/25/2009--AIR_PRODUCTS_&_CHEMICALS_INC_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/55067--2-26-2010--KELLOGG_CO.html'">55067--2/26/2010--KELLOGG_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/29915--2-19-2008--DOW_CHEMICAL_CO_-DE-.html'">29915--2/19/2008--DOW_CHEMICAL_CO_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1021860--2-26-2010--NATIONAL_OILWELL_VARCO_INC.html'">1021860--2/26/2010--NATIONAL_OILWELL_VARCO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/812708--3-26-2008--WELLMAN_INC.html'">812708--3/26/2008--WELLMAN_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1090727--2-26-2010--UNITED_PARCEL_SERVICE_INC.html'">1090727--2/26/2010--UNITED_PARCEL_SERVICE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/18169--3-11-2008--DOLE_FOOD_CO_INC.html'">18169--3/11/2008--DOLE_FOOD_CO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/912908--4-4-2008--FOAMEX_INTERNATIONAL_INC.html'">912908--4/4/2008--FOAMEX_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/106640--2-17-2010--WHIRLPOOL_CORP_-DE-.html'">106640--2/17/2010--WHIRLPOOL_CORP_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/102729--2-23-2010--VALMONT_INDUSTRIES_INC.html'">102729--2/23/2010--VALMONT_INDUSTRIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/741508--2-27-2008--SIERRA_PACIFIC_RESOURCES_-NV-.html'">741508--2/27/2008--SIERRA_PACIFIC_RESOURCES_/NV/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/77155--4-18-2008--PENN_TRAFFIC_CO.html'">77155--4/18/2008--PENN_TRAFFIC_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1135152--3-1-2010--FMC_TECHNOLOGIES_INC.html'">1135152--3/1/2010--FMC_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1018963--2-25-2010--ALLEGHENY_TECHNOLOGIES_INC.html'">1018963--2/25/2010--ALLEGHENY_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1135152--2-27-2009--FMC_TECHNOLOGIES_INC.html'">1135152--2/27/2009--FMC_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1001718--3-1-2007--EGL_INC.html'">1001718--3/1/2007--EGL_INC</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

@@ -1,0 +1,190 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[4.5938780719, "../topics/{condition,_economic,_financial}.html", "{condition,_economic,_financial}"], [3.6370554905, "../topics/{capital,_credit,_financial}.html", "{capital,_credit,_financial}"], [3.1961996011, "../topics/{gas,_price,_oil}.html", "{gas,_price,_oil}"], [3.0203297477, "../topics/{cost,_contract,_operation}.html", "{cost,_contract,_operation}"], [2.7017729589, "../topics/{debt,_indebtedness,_cash}.html", "{debt,_indebtedness,_cash}"], [2.6617996291, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"], [1.7167861664, "../topics/{regulation,_change,_law}.html", "{regulation,_change,_law}"], [1.6995825436, "../topics/{investment,_property,_distribution}.html", "{investment,_property,_distribution}"], [1.6965281539, "../topics/{financial,_litigation,_operation}.html", "{financial,_litigation,_operation}"], [1.6963498565, "../topics/{tax,_income,_asset}.html", "{tax,_income,_asset}"], [1.6962614202, "../topics/{cost,_operation,_labor}.html", "{cost,_operation,_labor}"], [1.6890574486, "../topics/{competitive,_industry,_competition}.html", "{competitive,_industry,_competition}"], [1.6887316101, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>795266--1/29/2010--KB_HOME</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">795266--1/29/2010--KB_HOME</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{condition,_economic,_financial}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{condition,_economic,_financial}.html'">{condition, economic, financial}</td></tr>
+<tr class="list"><td id="{capital,_credit,_financial}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{capital,_credit,_financial}.html'">{capital, credit, financial}</td></tr>
+<tr class="list"><td id="{gas,_price,_oil}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{gas,_price,_oil}.html'">{gas, price, oil}</td></tr>
+<tr class="list"><td id="{cost,_contract,_operation}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_contract,_operation}.html'">{cost, contract, operation}</td></tr>
+<tr class="list"><td id="{debt,_indebtedness,_cash}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{debt,_indebtedness,_cash}.html'">{debt, indebtedness, cash}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+<tr class="list"><td id="{regulation,_change,_law}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_change,_law}.html'">{regulation, change, law}</td></tr>
+<tr class="list"><td id="{investment,_property,_distribution}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{investment,_property,_distribution}.html'">{investment, property, distribution}</td></tr>
+<tr class="list"><td id="{financial,_litigation,_operation}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{financial,_litigation,_operation}.html'">{financial, litigation, operation}</td></tr>
+<tr class="list"><td id="{tax,_income,_asset}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{tax,_income,_asset}.html'">{tax, income, asset}</td></tr>
+<tr class="list"><td id="{cost,_operation,_labor}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_operation,_labor}.html'">{cost, operation, labor}</td></tr>
+<tr class="list"><td id="{competitive,_industry,_competition}" onmouseover="highlight(11)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{competitive,_industry,_competition}.html'">{competitive, industry, competition}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(12)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    Our strategies in responding to the adverse conditions in the homebuilding industry have had limited success, and the continued implementation of these and other strategies may not be successful.
+Our business is cyclical and is significantly affected by changes in general and local economic conditions.
+Supply shortages and other risks related to demand for building materials and/or skilled labor could increase costs and delay deliveries.
+Inflation may adversely affect us by increasing costs that we may not be able to recover, particularly if sales prices decrease.
+Reduced home sales may impair our ability to recoup development costs or force us to absorb additional costs.
+The value of the land and housing inventory we own or control may fall significantly and our profits may decrease.
+Some homebuyers may cancel their home purchases because the required deposits are small and generally refundable.
+Our long-term success depends on the availability of improved lots and undeveloped land that meet our land investment criteria.
+Home prices and sales activity in the particular markets and regions in which we do business affect our results of operations because our business is concentrated in these markets.
+Interest rate increases or changes in federal lending programs or regulation could lower demand for our homes.
+Tax law changes could make home ownership more expensive or less attractive.
+We are subject to substantial legal and regulatory requirements regarding the development of land, the homebuilding process and protection of the environment, which can cause us to suffer delays and incur costs associated with compliance and which can prohibit or restrict homebuilding activity in some regions or areas.
+Homebuilding and financial services are very competitive, and competitive conditions could adversely affect our business or our financial results.
+Homebuilding is subject to warranty and liability claims in the ordinary course of business that can be significant.
+Because of the seasonal nature of our business, our quarterly operating results fluctuate.
+Failure to comply with the covenants and conditions imposed by the agreements governing our indebtedness could restrict future borrowing or cause our debt to become immediately due and payable.
+We participate in certain unconsolidated joint ventures where we may be adversely impacted by the failure of the unconsolidated joint venture or the other partners in the unconsolidated joint venture to fulfill their obligations.
+The downturn in the housing market and the continuation of the disruptions in the credit markets could limit our ability to access capital and increase our costs of capital or stockholder dilution.
+Our net operating loss carryforwards could be substantially limited if we experience an ownership change as defined in the Internal Revenue Code.
+A decline in our tangible net worth and the resulting increase in our leverage ratio may place burdens on our ability to comply with the terms of our indebtedness, may restrict our ability to operate and may prevent us from fulfilling our obligations.
+Our ability to obtain external financing could be adversely affected by a negative change in our credit rating by a third party rating agency.
+We may have difficulty in continuing to obtain the additional financing required to operate and develop our business.
+Our results of operations could be adversely affected if we are unable to obtain performance bonds.
+<p><a href="http://www.sec.gov/Archives/edgar/data/795266/0000950123-10-006846.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/795266--1-29-2009--KB_HOME.html'">795266--1/29/2009--KB_HOME</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/795266--1-29-2008--KB_HOME.html'">795266--1/29/2008--KB_HOME</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/882184--11-20-2009--HORTON_D_R_INC_-DE-.html'">882184--11/20/2009--HORTON_D_R_INC_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/882184--11-17-2010--HORTON_D_R_INC_-DE-.html'">882184--11/17/2010--HORTON_D_R_INC_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/278166--5-30-2008--CAVCO_INDUSTRIES_INC.html'">278166--5/30/2008--CAVCO_INDUSTRIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/278166--5-21-2009--CAVCO_INDUSTRIES_INC.html'">278166--5/21/2009--CAVCO_INDUSTRIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/278166--5-21-2010--CAVCO_INDUSTRIES_INC.html'">278166--5/21/2010--CAVCO_INDUSTRIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1396009--2-26-2010--Vulcan_Materials_CO.html'">1396009--2/26/2010--Vulcan_Materials_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/278166--5-22-2007--CAVCO_INDUSTRIES_INC.html'">278166--5/22/2007--CAVCO_INDUSTRIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/100548--11-19-2010--UGI_UTILITIES_INC.html'">100548--11/19/2010--UGI_UTILITIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/66004--3-14-2007--MIDDLESEX_WATER_CO.html'">66004--3/14/2007--MIDDLESEX_WATER_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/884614--11-19-2010--UGI_CORP_-PA-.html'">884614--11/19/2010--UGI_CORP_/PA/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/85974--2-26-2010--RYLAND_GROUP_INC.html'">85974--2/26/2010--RYLAND_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/350403--3-8-2010--PHI_INC.html'">350403--3/8/2010--PHI_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1052595--3-13-2008--Red_Lion_Hotels_CORP.html'">1052595--3/13/2008--Red_Lion_Hotels_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1159297--2-23-2010--MEADWESTVACO_Corp.html'">1159297--2/23/2010--MEADWESTVACO_Corp</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1048685--3-14-2008--METALICO_INC.html'">1048685--3/14/2008--METALICO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1267130--2-26-2009--CABELAS_INC.html'">1267130--2/26/2009--CABELAS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1046578--3-10-2006--TECHNICAL_OLYMPIC_USA_INC.html'">1046578--3/10/2006--TECHNICAL_OLYMPIC_USA_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/931015--3-1-2010--POLARIS_INDUSTRIES_INC-MN.html'">931015--3/1/2010--POLARIS_INDUSTRIES_INC/MN</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/840216--3-15-2006--CALIFORNIA_COASTAL_COMMUNITIES_INC.html'">840216--3/15/2006--CALIFORNIA_COASTAL_COMMUNITIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/278166--5-24-2006--CAVCO_INDUSTRIES_INC.html'">278166--5/24/2006--CAVCO_INDUSTRIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/906163--2-26-2010--NVR_INC.html'">906163--2/26/2010--NVR_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/16614--3-31-2010--CAMCO_FINANCIAL_CORP.html'">16614--3/31/2010--CAMCO_FINANCIAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/716643--8-27-2010--REGIS_CORP.html'">716643--8/27/2010--REGIS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/740971--3-12-2010--OLD_POINT_FINANCIAL_CORP.html'">740971--3/12/2010--OLD_POINT_FINANCIAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1052595--3-11-2010--Red_Lion_Hotels_CORP.html'">1052595--3/11/2010--Red_Lion_Hotels_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/862923--3-25-2010--ML_LIFE_INSURANCE_CO_OF_NEW_YORK.html'">862923--3/25/2010--ML_LIFE_INSURANCE_CO_OF_NEW_YORK</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/53669--11-25-2008--JOHNSON_CONTROLS_INC.html'">53669--11/25/2008--JOHNSON_CONTROLS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/790051--2-18-2010--CARLISLE_COMPANIES_INC.html'">790051--2/18/2010--CARLISLE_COMPANIES_INC</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

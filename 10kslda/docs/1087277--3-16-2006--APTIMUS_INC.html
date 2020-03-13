@@ -1,0 +1,204 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[13.5329079032, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [6.4478379283, "../topics/{system,_service,_information}.html", "{system,_service,_information}"], [4.2817893126, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [3.7114782288, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [2.7406019816, "../topics/{regulation,_change,_law}.html", "{regulation,_change,_law}"], [2.7146071594, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"], [2.7110891519, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [2.7065827383, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [1.7207433566, "../topics/{regulation,_government,_change}.html", "{regulation,_government,_change}"], [1.6964130069, "../topics/{control,_financial,_internal}.html", "{control,_financial,_internal}"], [1.6962616404, "../topics/{provision,_law,_control}.html", "{provision,_law,_control}"], [1.2292131846, "../topics/{capital,_credit,_financial}.html", "{capital,_credit,_financial}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>1087277--3/16/2006--APTIMUS_INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">1087277--3/16/2006--APTIMUS_INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{system,_service,_information}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{system,_service,_information}.html'">{system, service, information}</td></tr>
+<tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{regulation,_change,_law}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_change,_law}.html'">{regulation, change, law}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{regulation,_government,_change}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_government,_change}.html'">{regulation, government, change}</td></tr>
+<tr class="list"><td id="{control,_financial,_internal}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{control,_financial,_internal}.html'">{control, financial, internal}</td></tr>
+<tr class="list"><td id="{provision,_law,_control}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{provision,_law,_control}.html'">{provision, law, control}</td></tr>
+<tr class="list"><td id="{capital,_credit,_financial}" onmouseover="highlight(11)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{capital,_credit,_financial}.html'">{capital, credit, financial}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    RISKS RELATED TO OUR BUSINESS
+We generate substantially all of our revenue from advertising, and the reduction in spending by or loss of advertisers or publishers could materially reduce our revenues.
+A limited number of advertisers accounted for a significant percentage of our revenues in 2005 and the loss of one or more of these advertisers could cause our revenues to decline.
+A limited number of publishers accounted for a significant percentage of our user leads in 2005 and the loss of one or more of these publishers could cause our revenues to decline.
+We face intense and growing competition, which could result in price reductions, reduced operating margins and loss of market share.
+Our revenues would decline or stagnate if the market for results-based Internet marketing services fails to grow.
+We depend on interactive publishers for inventory to display our clients advertising, and any decline in the supply of advertising inventory available through our network could cause our revenues to decline.
+We have a short operating history as an advertising network business and a relatively new business model in an emerging and rapidly evolving market. This makes it difficult to evaluate our future prospects and may increase the risk of your investment.
+New technologies could block or filter our ads, which could reduce the effectiveness of our services and lead to a loss of customers.
+We have to keep up with rapid technological change to continue offering our advertising clients competitive services or we may lose clients and be unable to compete.
+Because our advertiser client and publisher contracts generally can be cancelled by the client or publisher with little or no notice or penalty, the termination of one or more large contracts could result in an immediate decline in our revenues.
+If our advertisers, publishers or we fail to comply with regulations governing consumer privacy, we could face substantial liability and incur significant litigation and other costs.
+Changes in government regulation or industry standards applicable to the Internet could decrease the demand for our services and increase our costs of doing business.
+We have a history of losses and we have an accumulated deficit of $59.6 million.
+We may need additional financing at some point in the future, without which we may be required to restrict or discontinue our operations.
+Our quarterly operating results are uncertain and may fluctuate significantly, which could negatively affect the value of our share price.
+We may be liable for content in the advertisements we deliver for our clients resulting in unanticipated legal costs.
+The loss of the services of any of our executive officers or key personnel would likely cause our business to suffer.
+Decreased effectiveness of equity compensation could adversely affect our ability to attract and retain employees and changes in accounting rules will adversely affect our earnings.
+Acquisitions could result in operating difficulties, dilution and other harmful consequences.
+Since our stock price is volatile, your ability to sell shares of our stock held by you at a profit may be impaired, and we may become subject to securities litigation that is expensive and could result in a diversion of resources.
+Our chief executive officer holds a substantial portion of our stock, which could limit your ability to influence the outcome of key transactions, including changes of control.
+Our articles of incorporation, bylaws, change in control agreements and the Washington Business Corporation Act contain anti-takeover provisions that could discourage or prevent a takeover, even if an acquisition would be beneficial to our shareholders.
+An increase in the number of orders on our network may strain our systems or those of our third-party service providers, and we are vulnerable to system malfunctions or failures.
+In the future we may need to increase the capacity of our operating systems and infrastructure to grow our business.
+If our users request products and services directly from our clients instead of requesting the product or service through us, our revenues may decline.
+We may need to incur litigation expenses in order to defend our intellectual property rights, and might nevertheless be unable to adequately protect these rights.
+We could become involved in costly and time-consuming disputes regarding the validity and enforceability of recently issued or pending patents.
+We may face litigation and liability for information displayed on our network or that was formerly delivered in an email.
+Security and privacy breaches could subject us to litigation and liability and deter consumers from using our network.
+Failure to timely collect amounts due pursuant to outstanding accounts receivable would have a negative impact on our cash position.
+Consolidation among Internet publishers may result in a reduction in available inventory for ad placement and may increase the pricing power of publishers resulting in increased operating expenses.
+We may not achieve the levels of revenues anticipated if our Dynamic Revenue Optimization system does not function as anticipated.
+In the event that we suffer a catastrophic data loss, our ability to effectively utilize the Dynamic Revenue Optimization system and provide our advertising clients user information would be compromised resulting in decreased revenue.
+RISKS RELATED TO OUR INDUSTRY
+If the acceptance of online advertising and online direct marketing does not increase, our business will suffer.
+If we are unable to adapt to rapid changes in the online marketing industry, our revenues and profitability will suffer.
+We face risks from potential government regulation and other legal uncertainties relating to the Internet.
+<p><a href="http://www.sec.gov/Archives/edgar/data/1087277/0001144204-06-010241.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/1087277--4-2-2007--APTIMUS_INC.html'">1087277--4/2/2007--APTIMUS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1096199--10-17-2006--VA_SOFTWARE_CORP.html'">1096199--10/17/2006--VA_SOFTWARE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1046327--2-29-2008--REALNETWORKS_INC.html'">1046327--2/29/2008--REALNETWORKS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1110903--12-14-2006--NETWORK_ENGINES_INC.html'">1110903--12/14/2006--NETWORK_ENGINES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1166220--9-26-2007--JL_HALSEY_CORP.html'">1166220--9/26/2007--JL_HALSEY_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/946581--12-18-2009--TAKE_TWO_INTERACTIVE_SOFTWARE_INC.html'">946581--12/18/2009--TAKE_TWO_INTERACTIVE_SOFTWARE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1031029--2-25-2010--STARTEK_INC.html'">1031029--2/25/2010--STARTEK_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1054721--2-19-2008--BSQUARE_CORP_-WA.html'">1054721--2/19/2008--BSQUARE_CORP_/WA</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1109935--3-15-2006--WEBEX_COMMUNICATIONS_INC.html'">1109935--3/15/2006--WEBEX_COMMUNICATIONS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1054721--2-16-2007--BSQUARE_CORP_-WA.html'">1054721--2/16/2007--BSQUARE_CORP_/WA</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/946581--2-28-2007--TAKE_TWO_INTERACTIVE_SOFTWARE_INC.html'">946581--2/28/2007--TAKE_TWO_INTERACTIVE_SOFTWARE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1086195--3-16-2006--ART_TECHNOLOGY_GROUP_INC.html'">1086195--3/16/2006--ART_TECHNOLOGY_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/948708--3-30-2007--SMITH_MICRO_SOFTWARE_INC.html'">948708--3/30/2007--SMITH_MICRO_SOFTWARE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1089907--3-17-2008--KANA_SOFTWARE_INC.html'">1089907--3/17/2008--KANA_SOFTWARE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1031029--3-3-2009--STARTEK_INC.html'">1031029--3/3/2009--STARTEK_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1089907--4-2-2007--KANA_SOFTWARE_INC.html'">1089907--4/2/2007--KANA_SOFTWARE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1097641--3-31-2006--724_SOLUTIONS_INC.html'">1097641--3/31/2006--724_SOLUTIONS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/890640--2-23-2007--COREL_CORP.html'">890640--2/23/2007--COREL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1115091--9-26-2008--CALLWAVE_INC.html'">1115091--9/26/2008--CALLWAVE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1058811--3-10-2006--IMMERSION_CORP.html'">1058811--3/10/2006--IMMERSION_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1104730--3-31-2006--VYYO_INC.html'">1104730--3/31/2006--VYYO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1133324--3-16-2006--INPHONIC_INC.html'">1133324--3/16/2006--INPHONIC_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1110903--12-15-2008--NETWORK_ENGINES_INC.html'">1110903--12/15/2008--NETWORK_ENGINES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/890640--2-9-2009--COREL_CORP.html'">890640--2/9/2009--COREL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1104730--4-2-2007--VYYO_INC.html'">1104730--4/2/2007--VYYO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1115091--9-12-2007--CALLWAVE_INC.html'">1115091--9/12/2007--CALLWAVE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1133324--6-1-2007--INPHONIC_INC.html'">1133324--6/1/2007--INPHONIC_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/718877--5-30-2008--ACTIVISION_INC_-NY.html'">718877--5/30/2008--ACTIVISION_INC_/NY</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/718877--6-14-2007--ACTIVISION_INC_-NY.html'">718877--6/14/2007--ACTIVISION_INC_/NY</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1110903--12-14-2009--NETWORK_ENGINES_INC.html'">1110903--12/14/2009--NETWORK_ENGINES_INC</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

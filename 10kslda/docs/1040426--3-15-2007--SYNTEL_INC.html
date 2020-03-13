@@ -1,0 +1,196 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[4.2964400977, "../topics/{system,_service,_information}.html", "{system,_service,_information}"], [3.8151523437, "../topics/{regulation,_government,_change}.html", "{regulation,_government,_change}"], [3.7677339124, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"], [3.1382949343, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [2.6970113031, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [2.5966936665, "../topics/{regulation,_change,_law}.html", "{regulation,_change,_law}"], [2.557879849, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"], [2.082610524, "../topics/{operation,_natural,_condition}.html", "{operation,_natural,_condition}"], [2.0269414169, "../topics/{cost,_contract,_operation}.html", "{cost,_contract,_operation}"], [1.766660763, "../topics/{capital,_credit,_financial}.html", "{capital,_credit,_financial}"], [1.7072242214, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [1.7007975503, "../topics/{competitive,_industry,_competition}.html", "{competitive,_industry,_competition}"], [1.6965608133, "../topics/{control,_financial,_internal}.html", "{control,_financial,_internal}"], [1.6804738014, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [1.655256049, "../topics/{cost,_operation,_labor}.html", "{cost,_operation,_labor}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>1040426--3/15/2007--SYNTEL_INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">1040426--3/15/2007--SYNTEL_INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{system,_service,_information}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{system,_service,_information}.html'">{system, service, information}</td></tr>
+<tr class="list"><td id="{regulation,_government,_change}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_government,_change}.html'">{regulation, government, change}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+<tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{regulation,_change,_law}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_change,_law}.html'">{regulation, change, law}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+<tr class="list"><td id="{operation,_natural,_condition}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_natural,_condition}.html'">{operation, natural, condition}</td></tr>
+<tr class="list"><td id="{cost,_contract,_operation}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_contract,_operation}.html'">{cost, contract, operation}</td></tr>
+<tr class="list"><td id="{capital,_credit,_financial}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{capital,_credit,_financial}.html'">{capital, credit, financial}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{competitive,_industry,_competition}" onmouseover="highlight(11)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{competitive,_industry,_competition}.html'">{competitive, industry, competition}</td></tr>
+<tr class="list"><td id="{control,_financial,_internal}" onmouseover="highlight(12)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{control,_financial,_internal}.html'">{control, financial, internal}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(13)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{cost,_operation,_labor}" onmouseover="highlight(14)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_operation,_labor}.html'">{cost, operation, labor}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    FAILURE TO HIRE AND RETAIN A SUFFICIENT NUMBER OF QUALIFIED IT PROFESSIONALS COULD HAVE A MATERIAL ADVERSE EFFECT ON THE COMPANY'S BUSINESS, RESULTS OF OPERATIONS AND FINANCIAL CONDITION.
+GOVERNMENT REGULATION OF IMMIGRATION COULD IMPACT THE COMPANY'S ABILITY TO BRING A SUFFICIENT NUMBER OF IT PROFESSIONALS TO THE UNITED STATES OR OTHER JURISDICTIONS.
+THE COMPANY'S BUSINESS COULD BE MATERIALLY ADVERSELY AFFECTED IF ONE OF THE COMPANY'S SIGNIFICANT CLIENTS TERMINATES ITS ENGAGEMENT OF US OR IF THERE IS A DOWNTURN IN ONE OF THE INDUSTRIES THE COMPANY SERVES.
+THE COMPANY MAY BE AFFECTED BY POLITICAL AND REGULATORY CONDITIONS, INCLUDING WAGE INCREASES, IN INDIA.
+WAGE PRESSURES IN INDIA MAY REDUCE THE COMPANY'S PROFIT MARGINS.
+THE COMPANY'S ABILITY TO REPATRIATE EARNINGS FROM ITS FOREIGN OPERATIONS IS LIMITED BY TAX LAWS.
+THE IT SERVICES AND BPO INDUSTRY ARE INTENSELY COMPETITIVE, AND THE COMPANY MAY NOT BE ABLE TO COMPETE SUCCESSFULLY AGAINST CURRENT AND FUTURE COMPETITORS.
+THE COMPANY MAY NOT BE ABLE TO SUCCESSFULLY MANAGE THE RAPID GROWTH OF THE COMPANY'S BUSINESS.
+THE COMPANY'S APPLICATIONS OUTSOURCING SERVICES REQUIRE INCREASED ATTENTION FROM SENIOR MANAGEMENT AND THE COMPANY'S E-BUSINESS AND BPO PRACTICES REQUIRE INCREASED SALES AND MARKETING.
+THE COMPANY'S FIXED-PRICE ENGAGEMENTS MAY COMMIT US TO UNFAVORABLE TERMS.
+THE COMPANY MAY BE LIABLE TO ITS CLIENTS FOR DISCLOSURE OF CONFIDENTIAL INFORMATION OR IF THE COMPANY DOES NOT FULFILL ITS OBLIGATIONS UNDER ITS ENGAGEMENTS.
+THE COMPANY DEPENDS ON THE EFFORTS AND ABILITY OF KEY PERSONNEL, INCLUDING THE COMPANY'S CHIEF EXECUTIVE OFFICER.
+THE COMPANY'S BUSINESS COULD BE MATERIALLY ADVERSELY AFFECTED IF THE COMPANY DOES NOT PROTECT ITS INTELLECTUAL PROPERTY OR IF THE COMPANY'S SERVICES ARE FOUND TO INFRINGE ON THE INTELLECTUAL PROPERTY OF OTHERS.
+FUTURE LEGISLATION IN THE UNITED STATES AND ABROAD COULD SIGNIFICANTLY IMPACT THE ABILITY OF THE COMPANY'S CLIENTS TO UTILIZE THE COMPANY'S SERVICES.
+THE COMPANY'S MARGINS MAY BE ADVERSELY AFFECTED IF DEMAND FOR THE COMPANY'S SERVICES SLOWS.
+INCLUDING END-TO-END BUSINESS SOLUTIONS, TO THE COMPANY'S EXISTING AND NEW CLIENTS.
+THE COMPANY'S BUSINESS COULD BE ADVERSELY AFFECTED IF THE COMPANY DOES NOT ANTICIPATE AND RESPOND TO TECHNOLOGY ADVANCES IN THE COMPANY'S AND THE COMPANY'S CLIENTS' INDUSTRIES.
+THE COMPANY MAY BE REQUIRED TO INCLUDE BENCHMARKING PROVISIONS IN FUTURE ENGAGEMENTS, WHICH COULD HAVE AN ADVERSE EFFECT ON THE COMPANY'S REVENUES AND PROFITABILITY.
+THE COMPANY IS SUBJECT TO CORPORATE GOVERNANCE AND DISCLOSURE REQUIREMENTS THAT HAVE RESULTED AND LIKELY WILL CONTINUE TO RESULT IN INCREASED COSTS AND MANAGEMENT ATTENTION.
+WHILE THE COMPANY BELIEVES IT CURRENTLY HAS ADEQUATE INTERNAL CONTROL OVER FINANCIAL REPORTING, THE COMPANY IS REQUIRED TO ASSESS ITS INTERNAL CONTROLS OVER FINANCIAL REPORTING ON AN ANNUAL BASIS. ANY FUTURE ADVERSE RESULTS FROM SUCH ASSESSMENT COULD RESULT IN A LOSS OF INVESTOR CONFIDENCE IN THE COMPANY'S FINANCIAL REPORTING AND HAVE AN ADVERSE EFFECT ON THE COMPANY'S STOCK PRICE.
+THE COMPANY RELIES ON GLOBAL TELECOMMUNICATIONS INFRASTRUCTURE TO MAINTAIN COMMUNICATION BETWEEN ITS VARIOUS LOCATIONS AND THE COMPANY'S CLIENTS' SITES.
+THERE ARE RISKS ASSOCIATED WITH THE COMPANY'S INVESTMENT IN NEW FACILITIES AND PHYSICAL INFRASTRUCTURE.
+THE COMPANY'S EARNINGS ARE AFFECTED BY APPLICATION OF SFAS NO. 123R.
+TERRORIST ACTIVITY, WAR OR NATURAL DISASTERS COULD MAKE TRAVEL AND COMMUNICATION MORE DIFFICULT AND ADVERSELY AFFECT THE COMPANY'S BUSINESS.
+THE COMPANY IS SUBJECT TO RISKS OF FLUCTUATION IN THE EXCHANGE RATE BETWEEN THE U.S. DOLLAR AND THE INDIAN RUPEE.
+ANY FUTURE BUSINESS COMBINATIONS, ACQUISITIONS OR MERGERS WOULD EXPOSE US TO RISKS, INCLUDING THAT THE COMPANY MAY NOT BE ABLE TO SUCCESSFULLY INTEGRATE ANY ACQUIRED BUSINESSES.
+VARIABILITY OF QUARTERLY OPERATING RESULTS.
+<p><a href="http://www.sec.gov/Archives/edgar/data/1040426/0000950124-07-001521.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/1040426--3-11-2008--SYNTEL_INC.html'">1040426--3/11/2008--SYNTEL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1124887--3-16-2006--CERIDIAN_CORP_-DE-.html'">1124887--3/16/2006--CERIDIAN_CORP_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1058083--2-26-2007--IMS_HEALTH_INC.html'">1058083--2/26/2007--IMS_HEALTH_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1058083--2-25-2008--IMS_HEALTH_INC.html'">1058083--2/25/2008--IMS_HEALTH_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/814549--3-16-2010--EBIX_INC.html'">814549--3/16/2010--EBIX_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1031283--3-3-2006--ENTRUST_INC.html'">1031283--3/3/2006--ENTRUST_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1094238--9-12-2007--HARRIS_INTERACTIVE_INC.html'">1094238--9/12/2007--HARRIS_INTERACTIVE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1018724--2-17-2006--AMAZON_COM_INC.html'">1018724--2/17/2006--AMAZON_COM_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1123360--7-28-2010--GLOBAL_PAYMENTS_INC.html'">1123360--7/28/2010--GLOBAL_PAYMENTS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1158833--3-13-2008--LIFE_SCIENCES_RESEARCH_INC.html'">1158833--3/13/2008--LIFE_SCIENCES_RESEARCH_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/798354--2-27-2009--FISERV_INC.html'">798354--2/27/2009--FISERV_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1099800--2-29-2008--EDWARDS_LIFESCIENCES_CORP.html'">1099800--2/29/2008--EDWARDS_LIFESCIENCES_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/874866--6-11-2010--CORVEL_CORP.html'">874866--6/11/2010--CORVEL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1020265--3-8-2006--SABRE_HOLDINGS_CORP.html'">1020265--3/8/2006--SABRE_HOLDINGS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1141391--3-16-2006--MASTERCARD_INC.html'">1141391--3/16/2006--MASTERCARD_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1066104--3-1-2010--CORPORATE_EXECUTIVE_BOARD_CO.html'">1066104--3/1/2010--CORPORATE_EXECUTIVE_BOARD_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1099800--3-1-2007--EDWARDS_LIFESCIENCES_CORP.html'">1099800--3/1/2007--EDWARDS_LIFESCIENCES_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/721683--3-1-2010--TOTAL_SYSTEM_SERVICES_INC.html'">721683--3/1/2010--TOTAL_SYSTEM_SERVICES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/874866--6-12-2009--CORVEL_CORP.html'">874866--6/12/2009--CORVEL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/798354--3-15-2006--FISERV_INC.html'">798354--3/15/2006--FISERV_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/883980--2-23-2007--FIRST_DATA_CORP.html'">883980--2/23/2007--FIRST_DATA_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1006892--3-13-2009--JDA_SOFTWARE_GROUP_INC.html'">1006892--3/13/2009--JDA_SOFTWARE_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/879437--3-15-2007--INFOUSA_INC.html'">879437--3/15/2007--INFOUSA_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/798354--2-28-2007--FISERV_INC.html'">798354--2/28/2007--FISERV_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/879437--8-8-2008--infoGROUP_Inc..html'">879437--8/8/2008--infoGROUP_Inc.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1022079--2-22-2008--QUEST_DIAGNOSTICS_INC.html'">1022079--2/22/2008--QUEST_DIAGNOSTICS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/721683--2-27-2009--TOTAL_SYSTEM_SERVICES_INC.html'">721683--2/27/2009--TOTAL_SYSTEM_SERVICES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1037016--2-26-2009--NII_HOLDINGS_INC.html'">1037016--2/26/2009--NII_HOLDINGS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1094238--9-13-2006--HARRIS_INTERACTIVE_INC.html'">1094238--9/13/2006--HARRIS_INTERACTIVE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/883980--2-24-2006--FIRST_DATA_CORP.html'">883980--2/24/2006--FIRST_DATA_CORP</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

@@ -1,0 +1,185 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[6.7114451158, "../topics/{product,_liability,_claim}.html", "{product,_liability,_claim}"], [4.7082109474, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"], [3.6857030322, "../topics/{financial,_litigation,_operation}.html", "{financial,_litigation,_operation}"], [2.6962616724, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [2.5504887314, "../topics/{cost,_regulation,_environmental}.html", "{cost,_regulation,_environmental}"], [1.7306956963, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [1.6976040302, "../topics/{operation,_natural,_condition}.html", "{operation,_natural,_condition}"], [1.6425082592, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [1.2471130443, "../topics/{cost,_operation,_labor}.html", "{cost,_operation,_labor}"], [1.1450805935, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>811669--2/22/2008--UST_INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">811669--2/22/2008--UST_INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{product,_liability,_claim}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_liability,_claim}.html'">{product, liability, claim}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+<tr class="list"><td id="{financial,_litigation,_operation}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{financial,_litigation,_operation}.html'">{financial, litigation, operation}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{cost,_regulation,_environmental}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_regulation,_environmental}.html'">{cost, regulation, environmental}</td></tr>
+<tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{operation,_natural,_condition}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_natural,_condition}.html'">{operation, natural, condition}</td></tr>
+<tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{cost,_operation,_labor}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_operation,_labor}.html'">{cost, operation, labor}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    Fire, violent weather conditions and other disasters may adversely affect the Company s operations.
+Company product sales are subject to customer concentration risk.
+Ingredient or product adulteration could harm the integrity and quality of the Company s products, which could negatively impact consumer perception of the Company s brands and have an adverse effect on the sale of the Company s products.
+The Company may not realize the anticipated benefits from acquisitions.
+The smokeless tobacco category is highly competitive and the Company s volumes and profitability may be adversely affected by consumer down-trading from premium brands to price-value brands or by new entrants into the marketplace.
+Fluctuations in the price and availability of tobacco leaf could adversely affect the Company s results of operations.
+The Company s continuing ability to hire and retain qualified employees is important to the future success of the Company.
+The tobacco industry is subject to governmental regulation and other restrictions. In particular, restrictions on tobacco marketing and advertising limit the options available to the Company to market smokeless tobacco products.
+Fluctuations in the price and availability of tobacco leaf could adversely affect the Company s results of operations.
+The Company s continuing ability to hire and retain qualified employees is important to the future success of the Company.
+The tobacco industry is subject to governmental regulation and other restrictions. In particular, restrictions on tobacco marketing and advertising limit the options available to the Company to market smokeless tobacco products.
+The excise taxes on smokeless tobacco products could affect consumer preferences and have an adverse effect on the sale of the Company s products.
+The Company has ongoing payment obligations under the Tobacco Reform Act and other state settlement agreements.
+The Company is subject, from time to time, to smokeless tobacco and health litigation, which, if adversely determined, could subject the Company to substantial charges and liabilities.
+The Company could be subject to additional charges and liabilities as it seeks to resolve the remaining antitrust related lawsuits.
+The Company s wine business is subject to significant competition, including from many large, well-established national and international organizations.
+The Company s wine business may be adversely affected by its ability to grow and/or acquire enough high quality grapes for its wines, which could result in a supply shortage. Conversely, the Company s wine business may also be adversely impacted by grape and bulk wine oversupply.
+The Company is subject, from time to time, to smokeless tobacco and health litigation, which, if adversely determined, could subject the Company to substantial charges and liabilities.
+The Company could be subject to additional charges and liabilities as it seeks to resolve the remaining antitrust related lawsuits.
+The Company s wine business is subject to significant competition, including from many large, well-established national and international organizations.
+The Company s wine business may be adversely affected by its ability to grow and/or acquire enough high quality grapes for its wines, which could result in a supply shortage. Conversely, the Company s wine business may also be adversely impacted by grape and bulk wine oversupply.
+<p><a href="http://www.sec.gov/Archives/edgar/data/811669/0000950123-08-002000.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/203077--2-27-2008--ST_JUDE_MEDICAL_INC.html'">203077--2/27/2008--ST_JUDE_MEDICAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/203077--2-28-2007--ST_JUDE_MEDICAL_INC.html'">203077--2/28/2007--ST_JUDE_MEDICAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/203077--2-27-2009--ST_JUDE_MEDICAL_INC.html'">203077--2/27/2009--ST_JUDE_MEDICAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/930184--3-16-2006--VALEANT_PHARMACEUTICALS_INTERNATIONAL.html'">930184--3/16/2006--VALEANT_PHARMACEUTICALS_INTERNATIONAL</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/885725--2-26-2010--BOSTON_SCIENTIFIC_CORP.html'">885725--2/26/2010--BOSTON_SCIENTIFIC_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/892025--12-29-2008--MARTEK_BIOSCIENCES_CORP.html'">892025--12/29/2008--MARTEK_BIOSCIENCES_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/850693--3-1-2007--ALLERGAN_INC.html'">850693--3/1/2007--ALLERGAN_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/749660--3-31-2006--ICAD_INC.html'">749660--3/31/2006--ICAD_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/892025--12-28-2007--MARTEK_BIOSCIENCES_CORP.html'">892025--12/28/2007--MARTEK_BIOSCIENCES_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/850693--3-6-2006--ALLERGAN_INC.html'">850693--3/6/2006--ALLERGAN_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/711404--12-21-2009--COOPER_COMPANIES_INC.html'">711404--12/21/2009--COOPER_COMPANIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/711404--12-17-2010--COOPER_COMPANIES_INC.html'">711404--12/17/2010--COOPER_COMPANIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/793279--9-11-2008--CANDELA_CORP_-DE-.html'">793279--9/11/2008--CANDELA_CORP_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/949876--1-29-2008--NORTH_AMERICAN_SCIENTIFIC_INC.html'">949876--1/29/2008--NORTH_AMERICAN_SCIENTIFIC_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1106773--2-28-2006--FIRST_HORIZON_PHARMACEUTICAL_CORP.html'">1106773--2/28/2006--FIRST_HORIZON_PHARMACEUTICAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/319240--3-14-2008--IRIS_INTERNATIONAL_INC.html'">319240--3/14/2008--IRIS_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/850693--2-28-2008--ALLERGAN_INC.html'">850693--2/28/2008--ALLERGAN_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/711404--12-19-2008--COOPER_COMPANIES_INC.html'">711404--12/19/2008--COOPER_COMPANIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1096620--10-14-2008--ADVANCED_MEDICAL_INSTITUTE_INC..html'">1096620--10/14/2008--ADVANCED_MEDICAL_INSTITUTE_INC.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/711404--12-26-2006--COOPER_COMPANIES_INC.html'">711404--12/26/2006--COOPER_COMPANIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/319240--3-6-2009--IRIS_INTERNATIONAL_INC.html'">319240--3/6/2009--IRIS_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/319240--3-16-2010--IRIS_INTERNATIONAL_INC.html'">319240--3/16/2010--IRIS_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/776008--3-16-2010--STAR_SCIENTIFIC_INC.html'">776008--3/16/2010--STAR_SCIENTIFIC_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/884909--3-12-2009--HOME_DIAGNOSTICS_INC.html'">884909--3/12/2009--HOME_DIAGNOSTICS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1040666--3-16-2009--VNUS_MEDICAL_TECHNOLOGIES_INC.html'">1040666--3/16/2009--VNUS_MEDICAL_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/793279--10-1-2009--CANDELA_CORP_-DE-.html'">793279--10/1/2009--CANDELA_CORP_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/21665--2-27-2009--COLGATE_PALMOLIVE_CO.html'">21665--2/27/2009--COLGATE_PALMOLIVE_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/776008--3-16-2009--STAR_SCIENTIFIC_INC.html'">776008--3/16/2009--STAR_SCIENTIFIC_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1050007--11-23-2010--NUTRACEUTICAL_INTERNATIONAL_CORP.html'">1050007--11/23/2010--NUTRACEUTICAL_INTERNATIONAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/816284--2-18-2010--CELGENE_CORP_-DE-.html'">816284--2/18/2010--CELGENE_CORP_/DE/</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

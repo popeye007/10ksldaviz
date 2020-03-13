@@ -1,0 +1,187 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[2.8428765207, "../topics/{product,_candidate,_development}.html", "{product,_candidate,_development}"], [2.8381613097, "../topics/{product,_liability,_claim}.html", "{product,_liability,_claim}"], [2.6981382435, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [2.2374709087, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [2.0169379746, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [1.7314837962, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"], [1.7073018255, "../topics/{regulation,_government,_change}.html", "{regulation,_government,_change}"], [1.6973333061, "../topics/{financial,_litigation,_operation}.html", "{financial,_litigation,_operation}"], [1.6971225951, "../topics/{regulation,_change,_law}.html", "{regulation,_change,_law}"], [1.6969696342, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [1.6964593698, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"], [1.6957069414, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [1.6597230108, "../topics/{capital,_credit,_financial}.html", "{capital,_credit,_financial}"], [1.484551106, "../topics/{cost,_operation,_labor}.html", "{cost,_operation,_labor}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>880432--9/26/2008--MISONIX_INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">880432--9/26/2008--MISONIX_INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{product,_candidate,_development}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_candidate,_development}.html'">{product, candidate, development}</td></tr>
+<tr class="list"><td id="{product,_liability,_claim}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_liability,_claim}.html'">{product, liability, claim}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+<tr class="list"><td id="{regulation,_government,_change}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_government,_change}.html'">{regulation, government, change}</td></tr>
+<tr class="list"><td id="{financial,_litigation,_operation}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{financial,_litigation,_operation}.html'">{financial, litigation, operation}</td></tr>
+<tr class="list"><td id="{regulation,_change,_law}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_change,_law}.html'">{regulation, change, law}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(11)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{capital,_credit,_financial}" onmouseover="highlight(12)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{capital,_credit,_financial}.html'">{capital, credit, financial}</td></tr>
+<tr class="list"><td id="{cost,_operation,_labor}" onmouseover="highlight(13)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_operation,_labor}.html'">{cost, operation, labor}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    Risks Related to Our Business
+We are subject to extensive medical device regulation which may impede or hinder the approval process for our products and, in some cases, may not ultimately result in approval or may result in the recall or seizure of previously approved products.
+We may not meet regulatory quality standards applicable to our manufacturing and quality processes, which could have an adverse effect on our business, financial condition or results of operations.
+Future intellectual property litigation could be costly and disruptive to us.
+We may not be able effectively to protect our intellectual property rights which could have an adverse effect on our business, financial condition or results of operations.
+Future product liability claims and other litigation, including private securities litigation and shareholder derivative suits, may adversely affect our business, reputation and ability to attract and retain customers.
+We may not be successful in our strategic initiatives to become primarily a medical device company.
+Our future growth is dependent upon the development of new products, which requires significant research and development, clinical trials and regulatory approvals, all of which are very expensive and time-consuming and may not result in a commercially viable product.
+New products may not be accepted in the market.
+We face intense competition and may not be able to keep pace with the rapid technological changes in the medical devices industry, which could have an adverse effect on our business, financial condition or results of operations.
+Because we derive a significant amount of our revenues from international operations and a significant percentage of our growth is expected to come from international operations, changes in international economic or regulatory conditions could have a material impact on our business, financial condition or results of operations.
+Consolidation in the healthcare industry could lead to demands for price concessions or the exclusion of some suppliers from certain of our significant market segments, which could have an adverse effect on our business, financial condition or results of operations.
+We may experience disruption in supply due to our dependence on our suppliers to continue to ship product requirements and our inability to obtain suppliers of certain components for our products.
+If we fail to manage any expansion or acquisition, our business could be impaired.
+Our agreements and contracts entered into with partners and other third parties may not be successful.
+The current disruptions in the financial markets could affect our ability to obtain debt financing on favorable terms (or at all) and have other adverse effects on us.
+The fluctuation of our quarterly results may adversely affect the trading price of our common stock.
+We may not be able to attract and retain additional key management, sales and marketing and technical personnel, or we may lose existing key management, sales and marketing or technical personnel, which may delay our development and marketing efforts.
+Future changes in financial accounting standards or practices or existing taxation rules or practices may cause adverse or unexpected revenue fluctuations and affect our reported results of operations.
+<p><a href="http://www.sec.gov/Archives/edgar/data/880432/0001144204-08-054834.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/880432--9-28-2009--MISONIX_INC.html'">880432--9/28/2009--MISONIX_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/780127--1-12-2006--SYNOVIS_LIFE_TECHNOLOGIES__INC.html'">780127--1/12/2006--SYNOVIS_LIFE_TECHNOLOGIES__INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/880432--9-28-2006--MISONIX_INC.html'">880432--9/28/2006--MISONIX_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/880432--9-28-2007--MISONIX_INC.html'">880432--9/28/2007--MISONIX_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/911649--4-2-2007--STRATEGIC_DIAGNOSTICS_INC-DE-.html'">911649--4/2/2007--STRATEGIC_DIAGNOSTICS_INC/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/880432--9-28-2010--MISONIX_INC.html'">880432--9/28/2010--MISONIX_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/27096--9-13-2006--DATASCOPE_CORP.html'">27096--9/13/2006--DATASCOPE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/911649--3-31-2006--STRATEGIC_DIAGNOSTICS_INC-DE-.html'">911649--3/31/2006--STRATEGIC_DIAGNOSTICS_INC/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1005010--3-24-2006--ARTHROCARE_CORP.html'">1005010--3/24/2006--ARTHROCARE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/109831--3-22-2006--INAMED_CORP.html'">109831--3/22/2006--INAMED_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/736822--7-24-2008--IMMUCOR_INC.html'">736822--7/24/2008--IMMUCOR_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/28626--9-13-2007--LIFECORE_BIOMEDICAL_INC.html'">28626--9/13/2007--LIFECORE_BIOMEDICAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/834306--3-16-2006--BIOSITE_INC.html'">834306--3/16/2006--BIOSITE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1006195--3-15-2007--MATRIXX_INITIATIVES_INC.html'">1006195--3/15/2007--MATRIXX_INITIATIVES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/38074--5-30-2008--FOREST_LABORATORIES_INC.html'">38074--5/30/2008--FOREST_LABORATORIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/38074--5-30-2007--FOREST_LABORATORIES_INC.html'">38074--5/30/2007--FOREST_LABORATORIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1123361--3-6-2007--VIASYS_HEALTHCARE_INC.html'">1123361--3/6/2007--VIASYS_HEALTHCARE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1123361--3-14-2006--VIASYS_HEALTHCARE_INC.html'">1123361--3/14/2006--VIASYS_HEALTHCARE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/724004--6-30-2008--MESA_LABORATORIES_INC_-CO.html'">724004--6/30/2008--MESA_LABORATORIES_INC_/CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/724004--6-29-2009--MESA_LABORATORIES_INC_-CO.html'">724004--6/29/2009--MESA_LABORATORIES_INC_/CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/724004--6-29-2010--MESA_LABORATORIES_INC_-CO.html'">724004--6/29/2010--MESA_LABORATORIES_INC_/CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1033905--3-16-2006--LUMINEX_CORP.html'">1033905--3/16/2006--LUMINEX_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/202058--8-26-2008--HARRIS_CORP_-DE-.html'">202058--8/26/2008--HARRIS_CORP_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/64978--3-13-2006--MERCK_&_CO_INC.html'">64978--3/13/2006--MERCK_&_CO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/886530--3-17-2008--DATATRAK_INTERNATIONAL_INC.html'">886530--3/17/2008--DATATRAK_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/736822--8-1-2006--IMMUCOR_INC.html'">736822--8/1/2006--IMMUCOR_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/780127--1-5-2010--SYNOVIS_LIFE_TECHNOLOGIES__INC.html'">780127--1/5/2010--SYNOVIS_LIFE_TECHNOLOGIES__INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/929987--2-22-2006--GUIDANT_CORP.html'">929987--2/22/2006--GUIDANT_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/780127--1-7-2009--SYNOVIS_LIFE_TECHNOLOGIES__INC.html'">780127--1/7/2009--SYNOVIS_LIFE_TECHNOLOGIES__INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/780127--1-12-2007--SYNOVIS_LIFE_TECHNOLOGIES__INC.html'">780127--1/12/2007--SYNOVIS_LIFE_TECHNOLOGIES__INC</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

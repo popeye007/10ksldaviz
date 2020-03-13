@@ -1,0 +1,191 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[8.6251532848, "../topics/{debt,_indebtedness,_cash}.html", "{debt,_indebtedness,_cash}"], [6.6507318743, "../topics/{loan,_real,_estate}.html", "{loan,_real,_estate}"], [2.4513535377, "../topics/{regulation,_change,_law}.html", "{regulation,_change,_law}"], [1.9816691776, "../topics/{interest,_director,_officer}.html", "{interest,_director,_officer}"], [1.8693277874, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"], [1.7323804456, "../topics/{cost,_contract,_operation}.html", "{cost,_contract,_operation}"], [1.7071520028, "../topics/{operation,_natural,_condition}.html", "{operation,_natural,_condition}"], [1.7062742425, "../topics/{control,_financial,_internal}.html", "{control,_financial,_internal}"], [1.6783504099, "../topics/{loss,_insurance,_financial}.html", "{loss,_insurance,_financial}"], [1.5377877195, "../topics/{condition,_economic,_financial}.html", "{condition,_economic,_financial}"], [1.5246038138, "../topics/{cost,_regulation,_environmental}.html", "{cost,_regulation,_environmental}"], [1.2646752989, "../topics/{stock,_price,_share}.html", "{stock,_price,_share}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>80737--4/1/2008--ARCHSTONE</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">80737--4/1/2008--ARCHSTONE</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{debt,_indebtedness,_cash}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{debt,_indebtedness,_cash}.html'">{debt, indebtedness, cash}</td></tr>
+<tr class="list"><td id="{loan,_real,_estate}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{loan,_real,_estate}.html'">{loan, real, estate}</td></tr>
+<tr class="list"><td id="{regulation,_change,_law}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_change,_law}.html'">{regulation, change, law}</td></tr>
+<tr class="list"><td id="{interest,_director,_officer}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{interest,_director,_officer}.html'">{interest, director, officer}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+<tr class="list"><td id="{cost,_contract,_operation}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_contract,_operation}.html'">{cost, contract, operation}</td></tr>
+<tr class="list"><td id="{operation,_natural,_condition}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_natural,_condition}.html'">{operation, natural, condition}</td></tr>
+<tr class="list"><td id="{control,_financial,_internal}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{control,_financial,_internal}.html'">{control, financial, internal}</td></tr>
+<tr class="list"><td id="{loss,_insurance,_financial}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{loss,_insurance,_financial}.html'">{loss, insurance, financial}</td></tr>
+<tr class="list"><td id="{condition,_economic,_financial}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{condition,_economic,_financial}.html'">{condition, economic, financial}</td></tr>
+<tr class="list"><td id="{cost,_regulation,_environmental}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_regulation,_environmental}.html'">{cost, regulation, environmental}</td></tr>
+<tr class="list"><td id="{stock,_price,_share}" onmouseover="highlight(11)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_share}.html'">{stock, price, share}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    We have a limited operating history under our current ownership.
+There is no public market for our units.
+There may be limited or no public information available about us or our Unitholders in the future.
+Risks Associated with our Indebtedness and Financing
+Continued volatility in the debt market could make it more difficult or costly for us to borrow money to finance our business.
+Debt financing could adversely affect our performance and our ability to make distributions to our Unitholders.
+We have significant debt, which could have important adverse consequences.
+Our debt agreements include restrictive covenants relating to our operations, which could limit our ability to respond to changing market conditions and our ability to make distributions.
+Variable rate debt is subject to interest rate risk which could adversely affect our ability to pay distributions to our Unitholders.
+Possible increases in interest and other costs in connection with the syndication of some of our debt could adversely affect our results of operation, our ability to satisfy our debt obligations and our ability to pay distributions to our Unitholders.
+A reduction in the value of our assets or an increase in indebtedness could trigger an increased distribution rate and a redemption right of our Series O preferred unitholders, which could adversely effect our cash flows.
+A default by our affiliated entities on intercompany loans could adversely affect our cash flows, ability to satisfy our debt obligations and our ability to make distributions to our Unitholders.
+Risks Associated with Real Estate
+Unfavorable changes in economic conditions could adversely affect our results of operation.
+We are subject to additional risks inherent in ownership of real estate.
+We have a concentration of investments in certain markets.
+We are subject to risks inherent in real estate development.
+Our business is subject to extensive competition.
+Real estate investments are relatively illiquid and we may not be able to recover our investments.
+We could be subject to acts of terrorism.
+Compliance with laws and regulatory requirements may be costly.
+Costs associated with moisture infiltration and resulting mold remediation may be costly.
+Changes in laws may result in increased cost.
+We are subject to losses that may not be covered by insurance.
+Ownership of properties located outside of the United States subjects us to foreign currency risks which may adversely impact our ability to make distributions.
+<p><a href="http://www.sec.gov/Archives/edgar/data/80737/0000950134-08-005787.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/1355001--3-19-2008--REALOGY_CORP.html'">1355001--3/19/2008--REALOGY_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1355001--2-16-2010--REALOGY_CORP.html'">1355001--2/16/2010--REALOGY_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/895648--2-27-2009--GENERAL_GROWTH_PROPERTIES_INC.html'">895648--2/27/2009--GENERAL_GROWTH_PROPERTIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1355001--2-25-2009--REALOGY_CORP.html'">1355001--2/25/2009--REALOGY_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1298675--3-1-2006--U-Store-It_Trust.html'">1298675--3/1/2006--U-Store-It_Trust</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1175535--3-31-2008--Whitestone_REIT.html'">1175535--3/31/2008--Whitestone_REIT</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/852772--3-9-2007--DENNYS_CORP.html'">852772--3/9/2007--DENNYS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1296435--3-10-2010--Neenah_Paper_Inc.html'">1296435--3/10/2010--Neenah_Paper_Inc</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1275211--3-23-2007--SIMMONS_CO.html'">1275211--3/23/2007--SIMMONS_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1296435--3-12-2009--Neenah_Paper_Inc.html'">1296435--3/12/2009--Neenah_Paper_Inc</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1078706--3-28-2008--BUILDING_MATERIALS_CORP_OF_AMERICA.html'">1078706--3/28/2008--BUILDING_MATERIALS_CORP_OF_AMERICA</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/927314--3-28-2008--BUILDING_MATERIALS_CORP_OF_AMERICA.html'">927314--3/28/2008--BUILDING_MATERIALS_CORP_OF_AMERICA</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1078706--3-31-2009--BUILDING_MATERIALS_MANUFACTURING_CORP.html'">1078706--3/31/2009--BUILDING_MATERIALS_MANUFACTURING_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1261068--12-22-2006--FASTENTECH_INC.html'">1261068--12/22/2006--FASTENTECH_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1094738--3-22-2010--M&F_BANCORP_INC_-NC-.html'">1094738--3/22/2010--M&F_BANCORP_INC_/NC/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1015780--2-24-2010--E_TRADE_FINANCIAL_CORP.html'">1015780--2/24/2010--E_TRADE_FINANCIAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/759896--3-27-2006--EYE_CARE_CENTERS_OF_AMERICA_INC.html'">759896--3/27/2006--EYE_CARE_CENTERS_OF_AMERICA_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/890547--2-25-2009--REVLON_CONSUMER_PRODUCTS_CORP.html'">890547--2/25/2009--REVLON_CONSUMER_PRODUCTS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/910560--3-31-2010--AFFINITY_GROUP_INC.html'">910560--3/31/2010--AFFINITY_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1173284--3-26-2008--JACOBS_ENTERTAINMENT_INC.html'">1173284--3/26/2008--JACOBS_ENTERTAINMENT_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1173284--3-27-2007--JACOBS_ENTERTAINMENT_INC.html'">1173284--3/27/2007--JACOBS_ENTERTAINMENT_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1173284--3-30-2010--JACOBS_ENTERTAINMENT_INC.html'">1173284--3/30/2010--JACOBS_ENTERTAINMENT_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1173284--3-18-2009--JACOBS_ENTERTAINMENT_INC.html'">1173284--3/18/2009--JACOBS_ENTERTAINMENT_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1033128--3-2-2009--FIRST_INDUSTRIAL_LP.html'">1033128--3/2/2009--FIRST_INDUSTRIAL_LP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1011661--4-2-2007--SS&C_TECHNOLOGIES_INC.html'">1011661--4/2/2007--SS&C_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/861884--2-26-2010--RELIANCE_STEEL_&_ALUMINUM_CO.html'">861884--2/26/2010--RELIANCE_STEEL_&_ALUMINUM_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1091667--2-28-2006--CHARTER_COMMUNICATIONS_INC_-MO-.html'">1091667--2/28/2006--CHARTER_COMMUNICATIONS_INC_/MO/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/891106--3-16-2010--STERLING_FINANCIAL_CORP_-WA-.html'">891106--3/16/2010--STERLING_FINANCIAL_CORP_/WA/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/895648--3-1-2010--GENERAL_GROWTH_PROPERTIES_INC.html'">895648--3/1/2010--GENERAL_GROWTH_PROPERTIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1052045--3-31-2009--SERVICEMASTER_CO.html'">1052045--3/31/2009--SERVICEMASTER_CO</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

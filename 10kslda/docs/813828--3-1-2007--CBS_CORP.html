@@ -1,0 +1,197 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[9.2513679144, "../topics/{capital,_credit,_financial}.html", "{capital,_credit,_financial}"], [5.3444555059, "../topics/{stock,_price,_operating}.html", "{stock,_price,_operating}"], [3.6956224098, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"], [2.7510227814, "../topics/{tax,_income,_asset}.html", "{tax,_income,_asset}"], [2.7454191337, "../topics/{financial,_litigation,_operation}.html", "{financial,_litigation,_operation}"], [2.7398035829, "../topics/{regulation,_change,_law}.html", "{regulation,_change,_law}"], [2.455126687, "../topics/{investment,_property,_distribution}.html", "{investment,_property,_distribution}"], [1.8861471195, "../topics/{cost,_operation,_labor}.html", "{cost,_operation,_labor}"], [1.8720439869, "../topics/{regulation,_government,_change}.html", "{regulation,_government,_change}"], [1.7127629748, "../topics/{product,_market,_service}.html", "{product,_market,_service}"], [1.6963253155, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [1.6950379942, "../topics/{competitive,_industry,_competition}.html", "{competitive,_industry,_competition}"], [1.1184627496, "../topics/{interest,_director,_officer}.html", "{interest,_director,_officer}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>813828--3/1/2007--CBS_CORP</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">813828--3/1/2007--CBS_CORP</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{capital,_credit,_financial}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{capital,_credit,_financial}.html'">{capital, credit, financial}</td></tr>
+<tr class="list"><td id="{stock,_price,_operating}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_operating}.html'">{stock, price, operating}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+<tr class="list"><td id="{tax,_income,_asset}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{tax,_income,_asset}.html'">{tax, income, asset}</td></tr>
+<tr class="list"><td id="{financial,_litigation,_operation}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{financial,_litigation,_operation}.html'">{financial, litigation, operation}</td></tr>
+<tr class="list"><td id="{regulation,_change,_law}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_change,_law}.html'">{regulation, change, law}</td></tr>
+<tr class="list"><td id="{investment,_property,_distribution}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{investment,_property,_distribution}.html'">{investment, property, distribution}</td></tr>
+<tr class="list"><td id="{cost,_operation,_labor}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_operation,_labor}.html'">{cost, operation, labor}</td></tr>
+<tr class="list"><td id="{regulation,_government,_change}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{regulation,_government,_change}.html'">{regulation, government, change}</td></tr>
+<tr class="list"><td id="{product,_market,_service}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_market,_service}.html'">{product, market, service}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(10)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{competitive,_industry,_competition}" onmouseover="highlight(11)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{competitive,_industry,_competition}.html'">{competitive, industry, competition}</td></tr>
+<tr class="list"><td id="{interest,_director,_officer}" onmouseover="highlight(12)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{interest,_director,_officer}.html'">{interest, director, officer}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    CAUTIONARY STATEMENT CONCERNING FORWARD-LOOKING STATEMENTS
+A Decline in Advertising Expenditures Could Cause the Company's Revenues and Operating Results to Decline Significantly in Any Given Period or in Specific Markets
+The Company's Success Is Dependent upon Audience Acceptance of Its Content, Particularly Its Television and Radio Programs, Which Is Difficult to Predict
+Failure by the Company to Obtain, Create and Retain the Rights in Popular Programming Could Adversely Affect the Company's Revenues
+Any Decrease in Popularity of the Programming for Which the Company Has Incurred Significant Commitments Could Have an Adverse Effect on Its Profitability
+The Company's Operating Results Are Subject to Seasonal Variations
+The Company's Businesses Operate in Highly Competitive Industries
+The Company Must Respond to Rapid Changes in Technology, Content Creation, Services and Standards in Order to Remain Competitive
+Increased Programming and Content Costs May Adversely Affect the Company's Profits
+Piracy of the Company's Programming and Other Content, Including Digital and Internet Piracy, May Decrease Revenue Received from the Exploitation of the Company's Programming and Other Content and Adversely Affect Its Businesses and Profitability
+Changes in U.S. Communications Laws or Other Regulations May Have an Adverse Effect on the Company's Business
+Vigorous Enforcement or Enhancement of FCC Indecency and Other Program Content Rules Against the Broadcast and Cable Industries Could Have an Adverse Effect on the Company's Businesses and Results of Operations
+The Loss of Affiliation Agreements or Retransmission Agreements Could Materially Adversely Affect the Company's Results of Operations
+The Failure or Destruction of Satellites and Transmitter Facilities that the Company Depends Upon to Distribute Its Programming Could Materially Adversely Affect the Company's Businesses and Results of Operations
+The Company Could Suffer Losses Due to Asset Impairment Charges for Goodwill, Intangible Assets, FCC Licenses and Programming
+The Loss of Key Personnel, Including Talent, Could Disrupt the Management or Operations of the Company's Business and Adversely Affect Its Revenues
+Regulation of the Outdoor Advertising Industry Could Materially Adversely Affect the Company's Outdoor Business
+Fluctuations in Foreign Exchange Rates Could Have an Adverse Effect on the Company's Results of Operations
+The Company's Liabilities Related to Discontinued Operations and Former Businesses Could Adversely Impact Its Financial Condition
+The Company Could Be Adversely Affected by Strikes and Other Union Activity
+Political and Economic Risks Associated with the Company's International Businesses Could Harm the Company's Financial Condition or Results of Operations
+NAI, Through Its Voting Control of the Company, Is in a Position to Control Actions that Require Stockholder Approval
+Many Factors May Cause the Stock Price of the Company's Class A Common Stock and Class B Common Stock to Fluctuate
+Risks Related to the Separation
+The Businesses of the Company and Viacom Inc. Will Be Attributable to the Other Company for Certain Regulatory Purposes
+The Separation Agreement Prohibits the Company from Engaging in Certain Types of Businesses
+The Tax Matters Agreement and the Tax Rules Applicable to the Separation May Restrict the Company's Ability to Engage in Certain Corporate Transactions
+If the Merger Is Determined to Be Taxable, the Company and Its Stockholders Could Be Subject to a Material Amount of Taxes
+In Connection with the Separation, Each Company Will Rely on the Other Company's Performance Under Various Agreements Between the Companies
+Certain Members of Management, Directors and Stockholders May Face Actual or Potential Conflicts of Interest
+<p><a href="http://www.sec.gov/Archives/edgar/data/813828/0001047469-07-001525.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/813828--2-25-2009--CBS_CORP.html'">813828--2/25/2009--CBS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/813828--2-25-2010--CBS_CORP.html'">813828--2/25/2010--CBS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1465112--2-26-2010--DIRECTV.html'">1465112--2/26/2010--DIRECTV</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/929351--6-1-2009--LIONS_GATE_ENTERTAINMENT_CORP_-CN-.html'">929351--6/1/2009--LIONS_GATE_ENTERTAINMENT_CORP_/CN/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1001258--12-28-2007--ASTA_FUNDING_INC.html'">1001258--12/28/2007--ASTA_FUNDING_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/944868--2-25-2008--DIRECTV_GROUP_INC.html'">944868--2/25/2008--DIRECTV_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/847383--6-14-2007--NEW_FRONTIER_MEDIA_INC.html'">847383--6/14/2007--NEW_FRONTIER_MEDIA_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/944868--3-1-2007--DIRECTV_GROUP_INC.html'">944868--3/1/2007--DIRECTV_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1234308--2-27-2008--DIRECTV_FINANCING_CO_INC.html'">1234308--2/27/2008--DIRECTV_FINANCING_CO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1234308--3-1-2007--DIRECTV_HOLDINGS_LLC.html'">1234308--3/1/2007--DIRECTV_HOLDINGS_LLC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1034669--3-14-2007--FISHER_COMMUNICATIONS_INC.html'">1034669--3/14/2007--FISHER_COMMUNICATIONS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/944868--2-27-2009--DIRECTV_GROUP_INC.html'">944868--2/27/2009--DIRECTV_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1034669--3-14-2008--FISHER_COMMUNICATIONS_INC.html'">1034669--3/14/2008--FISHER_COMMUNICATIONS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1001258--12-14-2010--ASTA_FUNDING_INC.html'">1001258--12/14/2010--ASTA_FUNDING_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1234308--2-26-2010--DIRECTV_FINANCING_CO_INC.html'">1234308--2/26/2010--DIRECTV_FINANCING_CO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1234308--2-27-2009--DIRECTV_FINANCING_CO_INC.html'">1234308--2/27/2009--DIRECTV_FINANCING_CO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/949536--2-27-2009--HEARST_ARGYLE_TELEVISION_INC.html'">949536--2/27/2009--HEARST_ARGYLE_TELEVISION_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/760326--3-17-2008--OUTDOOR_CHANNEL_HOLDINGS_INC.html'">760326--3/17/2008--OUTDOOR_CHANNEL_HOLDINGS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/923877--4-2-2007--ION_MEDIA_NETWORKS_INC..html'">923877--4/2/2007--ION_MEDIA_NETWORKS_INC.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1084961--2-19-2008--ENCORE_CAPITAL_GROUP_INC.html'">1084961--2/19/2008--ENCORE_CAPITAL_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/912752--3-5-2010--SINCLAIR_BROADCAST_GROUP_INC.html'">912752--3/5/2010--SINCLAIR_BROADCAST_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1001258--2-20-2009--ASTA_FUNDING_INC.html'">1001258--2/20/2009--ASTA_FUNDING_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/949536--2-28-2008--HEARST_ARGYLE_TELEVISION_INC.html'">949536--2/28/2008--HEARST_ARGYLE_TELEVISION_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1160661--2-25-2010--ALABAMA_POWER_CO.html'">1160661--2/25/2010--ALABAMA_POWER_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/921582--3-13-2009--IMAX_CORP.html'">921582--3/13/2009--IMAX_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/929351--6-1-2010--LIONS_GATE_ENTERTAINMENT_CORP_-CN-.html'">929351--6/1/2010--LIONS_GATE_ENTERTAINMENT_CORP_/CN/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1001258--12-29-2009--ASTA_FUNDING_INC.html'">1001258--12/29/2009--ASTA_FUNDING_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1050606--3-12-2010--SALEM_COMMUNICATIONS_CORP_-DE-.html'">1050606--3/12/2010--SALEM_COMMUNICATIONS_CORP_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1001082--3-1-2007--ECHOSTAR_COMMUNICATIONS_CORP.html'">1001082--3/1/2007--ECHOSTAR_COMMUNICATIONS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1042642--3-6-2008--ECHOSTAR_DBS_CORP.html'">1042642--3/6/2008--ECHOSTAR_DBS_CORP</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

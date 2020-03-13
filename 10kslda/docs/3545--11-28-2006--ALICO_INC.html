@@ -1,0 +1,181 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[4.7055903597, "../topics/{interest,_director,_officer}.html", "{interest,_director,_officer}"], [3.6955422505, "../topics/{cost,_regulation,_environmental}.html", "{cost,_regulation,_environmental}"], [2.6964488726, "../topics/{control,_financial,_internal}.html", "{control,_financial,_internal}"], [2.5040002366, "../topics/{product,_liability,_claim}.html", "{product,_liability,_claim}"], [1.7514197077, "../topics/{gas,_price,_oil}.html", "{gas,_price,_oil}"], [1.7021391109, "../topics/{operation,_natural,_condition}.html", "{operation,_natural,_condition}"], [1.6974943901, "../topics/{tax,_income,_asset}.html", "{tax,_income,_asset}"], [1.6965952384, "../topics/{loan,_real,_estate}.html", "{loan,_real,_estate}"], [1.6962511154, "../topics/{provision,_law,_control}.html", "{provision,_law,_control}"], [1.6107465909, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>3545--11/28/2006--ALICO_INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">3545--11/28/2006--ALICO_INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{interest,_director,_officer}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{interest,_director,_officer}.html'">{interest, director, officer}</td></tr>
+<tr class="list"><td id="{cost,_regulation,_environmental}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_regulation,_environmental}.html'">{cost, regulation, environmental}</td></tr>
+<tr class="list"><td id="{control,_financial,_internal}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{control,_financial,_internal}.html'">{control, financial, internal}</td></tr>
+<tr class="list"><td id="{product,_liability,_claim}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_liability,_claim}.html'">{product, liability, claim}</td></tr>
+<tr class="list"><td id="{gas,_price,_oil}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{gas,_price,_oil}.html'">{gas, price, oil}</td></tr>
+<tr class="list"><td id="{operation,_natural,_condition}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_natural,_condition}.html'">{operation, natural, condition}</td></tr>
+<tr class="list"><td id="{tax,_income,_asset}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{tax,_income,_asset}.html'">{tax, income, asset}</td></tr>
+<tr class="list"><td id="{loan,_real,_estate}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{loan,_real,_estate}.html'">{loan, real, estate}</td></tr>
+<tr class="list"><td id="{provision,_law,_control}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{provision,_law,_control}.html'">{provision, law, control}</td></tr>
+<tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    The IRS has proposed significant contested audit tax adjustments which could have a material adverse effect on the Company
+The Company has a 50.5% stockholder and a limited public float which could adversely affect the price of its stock and restrict the ability of the minority shareholders to have a voice in corporate governance
+The Company manages its properties in an attempt to capture its highest and best use and customarily does not sell property until it determines that the property is surplus to its agricultural activities by reason of its potential for industrial, commercial or residential use. The Company has little control over when this occurs.
+The Company carries large receivables from seller financed sales of large tracts of surplus land the collectibility of which is subject to credit risk relating to debtors.
+The Company is subject to environmental liability by virtue of owning significant holdings of real estate assets.
+The Company has two large customers that account for 34% of revenues.
+The Company has Material Weaknesses in its internal accounting controls.
+The Company has Material Weaknesses in its internal accounting controls.
+Agricultural products are subject to supply and demand pricing which is not predictable
+The Company s agricultural assets are concentrated and the effects of adverse weather conditions such as hurricanes can be exaggerated
+Water use regulation restricts the Company s access to water for agricultural use
+The Company s citrus groves are subject to damage and loss from disease including but not limited to citrus canker and citrus greening diseases
+The Company s citrus groves are subject to damage and loss from disease including but not limited to citrus canker and citrus greening diseases
+The Company s citrus groves are subject to damage and loss from disease including but not limited to citrus canker and citrus greening diseases
+Pesticide and herbicide use by the Company or its lessees could create liability for the Company
+Changes in immigration laws or enforcement of such laws could impact the ability of the Company to harvest its crops
+Changing public perceptions regarding the quality, safety or health risks of our agricultural products can affect demand and pricing of such products.
+<p><a href="http://www.sec.gov/Archives/edgar/data/3545/0000003545-06-000072.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/912030--4-16-2007--TORCH_ENERGY_ROYALTY_TRUST.html'">912030--4/16/2007--TORCH_ENERGY_ROYALTY_TRUST</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/3545--11-14-2007--ALICO_INC.html'">3545--11/14/2007--ALICO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1416299--11-12-2009--Avatar_Ventures_Corp..html'">1416299--11/12/2009--Avatar_Ventures_Corp.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1372167--7-27-2009--Nevaeh_Enterprises_Ltd..html'">1372167--7/27/2009--Nevaeh_Enterprises_Ltd.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1168338--3-22-2006--CRUM_&_FORSTER_HOLDINGS_CORP.html'">1168338--3/22/2006--CRUM_&_FORSTER_HOLDINGS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1410708--10-28-2008--Emo_Capital_Corp..html'">1410708--10/28/2008--Emo_Capital_Corp.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/923680--3-15-2007--DOMINION_RESOURCES_BLACK_WARRIOR_TRUST.html'">923680--3/15/2007--DOMINION_RESOURCES_BLACK_WARRIOR_TRUST</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/711303--3-31-2010--MESA_OFFSHORE_TRUST.html'">711303--3/31/2010--MESA_OFFSHORE_TRUST</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1168338--3-9-2007--CRUM_&_FORSTER_HOLDINGS_CORP.html'">1168338--3/9/2007--CRUM_&_FORSTER_HOLDINGS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1087835--2-22-2010--BOTTLING_GROUP_LLC.html'">1087835--2/22/2010--BOTTLING_GROUP_LLC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1045309--2-29-2008--W_R_GRACE_&_CO.html'">1045309--2/29/2008--W_R_GRACE_&_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1045309--3-2-2007--W_R_GRACE_&_CO.html'">1045309--3/2/2007--W_R_GRACE_&_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/710752--3-13-2008--SABINE_ROYALTY_TRUST.html'">710752--3/13/2008--SABINE_ROYALTY_TRUST</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1076405--2-22-2010--PEPSI_BOTTLING_GROUP_INC.html'">1076405--2/22/2010--PEPSI_BOTTLING_GROUP_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1144519--3-1-2007--Bunge_LTD.html'">1144519--3/1/2007--Bunge_LTD</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1372336--10-17-2008--LIBERTY_ENERGY_CORP..html'">1372336--10/17/2008--LIBERTY_ENERGY_CORP.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1144519--3-3-2008--Bunge_LTD.html'">1144519--3/3/2008--Bunge_LTD</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1297587--4-2-2007--CB_RICHARD_ELLIS_REALTY_TRUST.html'">1297587--4/2/2007--CB_RICHARD_ELLIS_REALTY_TRUST</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1372183--5-29-2008--MAXIMUS_EXPLORATION_CORP.html'">1372183--5/29/2008--MAXIMUS_EXPLORATION_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1103092--4-15-2009--BALSAM_VENTURES_INC.html'">1103092--4/15/2009--BALSAM_VENTURES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1025771--3-30-2010--CHASE_PACKAGING_CORP.html'">1025771--3/30/2010--CHASE_PACKAGING_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/721765--5-20-2008--LL&E_ROYALTY_TRUST.html'">721765--5/20/2008--LL&E_ROYALTY_TRUST</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/923680--3-16-2006--DOMINION_RESOURCES_BLACK_WARRIOR_TRUST.html'">923680--3/16/2006--DOMINION_RESOURCES_BLACK_WARRIOR_TRUST</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1175872--3-26-2007--TREASURE_ISLAND_ROYALTY_TRUST.html'">1175872--3/26/2007--TREASURE_ISLAND_ROYALTY_TRUST</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1318060--4-1-2009--American_Media_Systems_Co..html'">1318060--4/1/2009--American_Media_Systems_Co.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/62362--9-28-2007--MARINE_PETROLEUM_TRUST.html'">62362--9/28/2007--MARINE_PETROLEUM_TRUST</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/276077--4-2-2007--TIDELANDS_ROYALTY_TRUST_B.html'">276077--4/2/2007--TIDELANDS_ROYALTY_TRUST_B</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1386019--12-15-2008--getpokerrakeback.com.html'">1386019--12/15/2008--getpokerrakeback.com</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/710752--3-13-2007--SABINE_ROYALTY_TRUST.html'">710752--3/13/2007--SABINE_ROYALTY_TRUST</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/769874--4-27-2007--REMEC_INC.html'">769874--4/27/2007--REMEC_INC</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

@@ -1,0 +1,178 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[4.5906150533, "../topics/{customer,_product,_revenue}.html", "{customer,_product,_revenue}"], [2.6278951646, "../topics/{capital,_credit,_financial}.html", "{capital,_credit,_financial}"], [1.8020708497, "../topics/{condition,_economic,_financial}.html", "{condition,_economic,_financial}"], [1.6962748153, "../topics/{operation,_natural,_condition}.html", "{operation,_natural,_condition}"], [1.6962652563, "../topics/{product,_liability,_claim}.html", "{product,_liability,_claim}"], [1.6962629038, "../topics/{competitive,_industry,_competition}.html", "{competitive,_industry,_competition}"], [1.6962625571, "../topics/{financial,_litigation,_operation}.html", "{financial,_litigation,_operation}"], [1.6962616417, "../topics/{operation,_international,_foreign}.html", "{operation,_international,_foreign}"], [1.695901049, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [1.6689620801, "../topics/{cost,_operation,_labor}.html", "{cost,_operation,_labor}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>46080--2/24/2010--HASBRO_INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">46080--2/24/2010--HASBRO_INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{customer,_product,_revenue}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{customer,_product,_revenue}.html'">{customer, product, revenue}</td></tr>
+<tr class="list"><td id="{capital,_credit,_financial}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{capital,_credit,_financial}.html'">{capital, credit, financial}</td></tr>
+<tr class="list"><td id="{condition,_economic,_financial}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{condition,_economic,_financial}.html'">{condition, economic, financial}</td></tr>
+<tr class="list"><td id="{operation,_natural,_condition}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_natural,_condition}.html'">{operation, natural, condition}</td></tr>
+<tr class="list"><td id="{product,_liability,_claim}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_liability,_claim}.html'">{product, liability, claim}</td></tr>
+<tr class="list"><td id="{competitive,_industry,_competition}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{competitive,_industry,_competition}.html'">{competitive, industry, competition}</td></tr>
+<tr class="list"><td id="{financial,_litigation,_operation}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{financial,_litigation,_operation}.html'">{financial, litigation, operation}</td></tr>
+<tr class="list"><td id="{operation,_international,_foreign}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{operation,_international,_foreign}.html'">{operation, international, foreign}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{cost,_operation,_labor}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_operation,_labor}.html'">{cost, operation, labor}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    Delays or increased costs associated with the development and offering of entertainment media based upon or related to our brands, or lack of sufficient consumer interest in such entertainment media, can harm our business.
+Economic downturns which negatively impact the retail and credit markets, or which otherwise damage the financial health of our retail customers and consumers, can harm our business and financial performance.
+Other economic and public health conditions in the markets in which we operate, including rising commodity and fuel prices, higher labor costs, increased transportation costs, outbreaks of public health pandemics or other diseases, or third party conduct could negatively impact our ability to produce and ship our products, and lower our revenues, margins and profitability.
+We may not realize the full benefit of our licenses if the licensed material has less market appeal than expected or if revenue from the licensed products is not sufficient to earn out the minimum guaranteed royalties.
+Our business is seasonal and therefore our annual operating results will depend, in large part, on our sales during the relatively brief holiday shopping season. This seasonality is exacerbated by retailers quick response inventory management techniques.
+Our substantial sales and manufacturing operations outside the United States subject us to risks associated with international operations. Among these risks is the fact that fluctuations in foreign exchange rates can significantly impact our financial performance.
+The concentration of our retail customer base means that economic difficulties or changes in the purchasing policies of our major customers could have a significant impact on us.
+Our use of third-party manufacturers to produce the majority of our toy products, as well as certain other products, presents risks to our business.
+Part of our strategy for remaining relevant to children is to offer innovative children s toy and game electronic products. The margins on many of these products are lower than more traditional toys and games and such products may have a shorter lifespan than more traditional toys and games. As a result, sales of children s toy and game electronic products may lower our overall operating margins and produce more volatility in our business.
+We rely on external financing, including our credit facilities and accounts receivable securitization facility, to help fund our operations. If we were unable to obtain or service such financing, or if the restrictions imposed by such financing were too burdensome, our business would be harmed.
+As a manufacturer of consumer products and a large multinational corporation, we are subject to various government regulations and may be subject to additional regulations in the future, violation of which could subject us to sanctions or otherwise harm our business. In addition, we could be the subject of future product liability suits or product recalls, which could harm our business.
+Our business is dependent on intellectual property rights and we may not be able to protect such rights successfully. In addition, we have a material amount of acquired product rights which, if impaired, would result in a reduction of our net earnings.
+We may not realize the anticipated benefits of acquisitions or investments in joint ventures, or those benefits may be delayed or reduced in their realization.
+From time to time, we are involved in litigation, arbitration or regulatory matters where the outcome is uncertain and which could entail significant expense.
+<p><a href="http://www.sec.gov/Archives/edgar/data/46080/0000950123-10-016315.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/46080--2-25-2009--HASBRO_INC.html'">46080--2/25/2009--HASBRO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/46080--2-27-2008--HASBRO_INC.html'">46080--2/27/2008--HASBRO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/355999--2-29-2008--UNITED_STATIONERS_INC.html'">355999--2/29/2008--UNITED_STATIONERS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/355999--2-27-2009--UNITED_STATIONERS_INC.html'">355999--2/27/2009--UNITED_STATIONERS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/842162--3-9-2006--LEAR_CORP.html'">842162--3/9/2006--LEAR_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/811641--3-23-2006--IMMUCELL_CORP_-DE-.html'">811641--3/23/2006--IMMUCELL_CORP_/DE/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/56701--8-20-2007--KOSS_CORP.html'">56701--8/20/2007--KOSS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/109156--9-26-2008--ZALE_CORP.html'">109156--9/26/2008--ZALE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/897429--3-27-2009--CHICOS_FAS_INC.html'">897429--3/27/2009--CHICOS_FAS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/46080--2-22-2006--HASBRO_INC.html'">46080--2/22/2006--HASBRO_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/897429--3-28-2008--CHICOS_FAS_INC.html'">897429--3/28/2008--CHICOS_FAS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/21828--3-23-2007--COLONIAL_COMMERCIAL_CORP.html'">21828--3/23/2007--COLONIAL_COMMERCIAL_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/723889--3-30-2006--MFIC_CORP.html'">723889--3/30/2006--MFIC_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1004608--3-30-2007--PINNACLE_DATA_SYSTEMS_INC.html'">1004608--3/30/2007--PINNACLE_DATA_SYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/927003--2-20-2007--ADVANCED_ENERGY_INDUSTRIES_INC.html'">927003--2/20/2007--ADVANCED_ENERGY_INDUSTRIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/856250--9-13-2006--CRAFTMADE_INTERNATIONAL_INC.html'">856250--9/13/2006--CRAFTMADE_INTERNATIONAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/703360--2-26-2010--LSI_CORP.html'">703360--2/26/2010--LSI_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1356949--3-14-2007--Houston_Wire_&_Cable_CO.html'">1356949--3/14/2007--Houston_Wire_&_Cable_CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/2186--3-4-2010--RELM_WIRELESS_CORP.html'">2186--3/4/2010--RELM_WIRELESS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/885245--4-16-2008--BUCKLE_INC.html'">885245--4/16/2008--BUCKLE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/927003--3-18-2008--ADVANCED_ENERGY_INDUSTRIES_INC.html'">927003--3/18/2008--ADVANCED_ENERGY_INDUSTRIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/355999--3-6-2006--UNITED_STATIONERS_INC.html'">355999--3/6/2006--UNITED_STATIONERS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/355999--3-1-2007--UNITED_STATIONERS_INC.html'">355999--3/1/2007--UNITED_STATIONERS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/842162--3-17-2009--LEAR_CORP.html'">842162--3/17/2009--LEAR_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/109156--10-1-2007--ZALE_CORP.html'">109156--10/1/2007--ZALE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/862861--3-28-2008--APPLIANCE_RECYCLING_CENTERS_OF_AMERICA_INC_-MN.html'">862861--3/28/2008--APPLIANCE_RECYCLING_CENTERS_OF_AMERICA_INC_/MN</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/797721--5-28-2009--VIASAT_INC.html'">797721--5/28/2009--VIASAT_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/822663--3-15-2006--INTER_PARFUMS_INC.html'">822663--3/15/2006--INTER_PARFUMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/722313--3-19-2009--NORTECH_SYSTEMS_INC.html'">722313--3/19/2009--NORTECH_SYSTEMS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1068148--3-25-2010--PARK_OHIO_INDUSTRIES_INC-OH.html'">1068148--3/25/2010--PARK_OHIO_INDUSTRIES_INC/OH</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>

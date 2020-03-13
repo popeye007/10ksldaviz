@@ -1,0 +1,182 @@
+<html>
+<head>
+    <script language="JavaScript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+    <script language="JavaScript" src="../js/pie.js"></script>
+    <script language="JavaScript" src="../js/browser_adjust.js"></script>
+    <script language="JavaScript" src="../js/search.js"></script>
+
+
+    <script type="text/JavaScript">
+    <!--
+
+    var array = [[5.7982047393, "../topics/{product,_candidate,_development}.html", "{product,_candidate,_development}"], [3.7264154484, "../topics/{stock,_price,_share}.html", "{stock,_price,_share}"], [1.786202557, "../topics/{control,_financial,_internal}.html", "{control,_financial,_internal}"], [1.7734940609, "../topics/{acquisition,_growth,_future}.html", "{acquisition,_growth,_future}"], [1.7710529176, "../topics/{interest,_director,_officer}.html", "{interest,_director,_officer}"], [1.7326143293, "../topics/{personnel,_key,_retain}.html", "{personnel,_key,_retain}"], [1.7288376845, "../topics/{cost,_regulation,_environmental}.html", "{cost,_regulation,_environmental}"], [1.7280156818, "../topics/{product,_liability,_claim}.html", "{product,_liability,_claim}"], [1.7250455636, "../topics/{property,_intellectual,_protect}.html", "{property,_intellectual,_protect}"], [1.7077678847, "../topics/{condition,_economic,_financial}.html", "{condition,_economic,_financial}"]];
+    var elements = generate_pie_elements(array);
+    var piec = null;
+    function init() {
+        browser_adjust();
+        
+        // create pie chart
+        piec = new PieChart(elements);
+        piec.initialize();
+
+    }
+
+    function highlight(i) {
+        piec.highlight(i);
+    }
+    
+    function unhighlight() {
+        piec.unhighlight();
+    }
+    //-->
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>1017491--3/12/2008--NEXMED_INC</title>
+
+    <link href="../styling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="init()">
+<div id="navigation">
+<hr noshade>
+<table><tr>
+    <td class="navtext">Browse&nbsp;&#x25B8;</td> 
+    <td class="linked"><a>Topics</a>
+      <ul> 
+        <li><a href="../browse/topic-list.html">List of Terms</a></li> 
+        <li><a href="../browse/topic-graph.html">Term Distributions</a></li> 
+        <li><a href="../browse/topic-presence.html">Relative Presence</a></li>
+      </ul> 
+    </td> 
+    <td class="linked"><a>Documents</a>
+      <ul>
+        <li><a href="../browse/doc-graph.html">Topic Distributions</a></li>
+      </ul> 
+    </td>
+    <td class="linked"><a>Terms</a>
+      <ul> 
+        <li><a href="../browse/term-list.html">List by Frequency</a></li> 
+        <li><a href="../browse/term-graph.html">Topic Distributions</a></li> 
+       </ul> 
+    </td>
+    <td class="linked"><a>About</a>
+      <ul>
+        <li><a href="http://www.cs.princeton.edu/~blei/lda-c/">LDA</a></li>
+      </ul> 
+    </td>
+    
+    </td>
+    <td></td>
+    <td class="searchbar"> Search&nbsp;&#x25B8;</td>
+    <td class="searchbar"><input type="text" name="search" size="20" onkeypress="handleKeyPress(event)"><span onclick="doSearch()"></span>
+    </td>
+</tr></table>
+</div>
+
+    <div id="top"></div>
+
+    <h1 id="header">
+        <table><tr>
+            <td id="title">1017491--3/12/2008--NEXMED_INC</td>
+        </tr></table>
+
+        <hr noshade>
+    </h1>
+
+    <div id="main">
+        <table><tr>
+            <td width="210px">
+                <table class="dark">
+                <tr><td><canvas id="canvas" width="200" height="200"></canvas></td></tr>
+                <tr class="title">
+                    <td>related topics</td>
+                </tr>
+                <tr class="list"><td id="{product,_candidate,_development}" onmouseover="highlight(0)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_candidate,_development}.html'">{product, candidate, development}</td></tr>
+<tr class="list"><td id="{stock,_price,_share}" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{stock,_price,_share}.html'">{stock, price, share}</td></tr>
+<tr class="list"><td id="{control,_financial,_internal}" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{control,_financial,_internal}.html'">{control, financial, internal}</td></tr>
+<tr class="list"><td id="{acquisition,_growth,_future}" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{acquisition,_growth,_future}.html'">{acquisition, growth, future}</td></tr>
+<tr class="list"><td id="{interest,_director,_officer}" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{interest,_director,_officer}.html'">{interest, director, officer}</td></tr>
+<tr class="list"><td id="{personnel,_key,_retain}" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{personnel,_key,_retain}.html'">{personnel, key, retain}</td></tr>
+<tr class="list"><td id="{cost,_regulation,_environmental}" onmouseover="highlight(6)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{cost,_regulation,_environmental}.html'">{cost, regulation, environmental}</td></tr>
+<tr class="list"><td id="{product,_liability,_claim}" onmouseover="highlight(7)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{product,_liability,_claim}.html'">{product, liability, claim}</td></tr>
+<tr class="list"><td id="{property,_intellectual,_protect}" onmouseover="highlight(8)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{property,_intellectual,_protect}.html'">{property, intellectual, protect}</td></tr>
+<tr class="list"><td id="{condition,_economic,_financial}" onmouseover="highlight(9)" onmouseout="unhighlight()" onclick="window.location.href='../topics/{condition,_economic,_financial}.html'">{condition, economic, financial}</td></tr>
+
+                </table>
+            </td>
+
+            <td>
+                <table class="light">
+                <tr class="doc"><td>
+                    FACTORS THAT COULD AFFECT OUR FUTURE RESULTS
+RISKS RELATED TO THE COMPANY
+We will need additional funds to continue our operations through 2008.
+We continue to incur operating losses.
+Our independent registered public accounting firm has doubt as to our ability to continue as a going concern.
+We will need partnering agreements and significant funding to continue with our research and development efforts, and they may not be available.
+We currently have no sales force or marketing organization and will need, but may not be able, to attract marketing partners or afford qualified or experienced marketing and sales personnel.
+Pre-clinical and clinical trials are inherently unpredictable. If we or our partners do not successfully conduct these trials, we or our partners may be unable to market our products.
+We depend on Novartis to realize the potential of NM100060, and, if we successfully enter into similar licensing agreements for other products, we will similarly be dependent upon our other partners.
+We depend on Warner Chilcott to realize the potential of our ED Product in the United States.
+Patents and intellectual property rights are important to us but could be challenged.
+We and our licensees depend upon third party manufacturers for chemical manufacturing supplies.
+We may be subject to potential product liability and other claims, creating risks and expense.
+We are vulnerable to volatile market conditions.
+We and our licensees are subject to numerous and complex government regulations which could result in delay and expense.
+RISKS RELATED TO OWNING OUR COMMON STOCK
+We do not expect to pay dividends on our common stock in the foreseeable future.
+We may issue additional shares of our capital stock that could dilute the value of your shares of common stock.
+<p><a href="http://www.sec.gov/Archives/edgar/data/1017491/0001144204-08-014737.txt">Full 10-K form&nbsp;&#x25B8;</a></p>
+                </td></tr>
+                </table>
+            </td>
+
+            <td width="25%">
+                <table class="dark">
+                <tr class="title">
+                    <td>related documents</td>
+                </tr>
+                <tr class="list"><td onclick="window.location.href='../docs/1001233--3-1-2007--SANGAMO_BIOSCIENCES_INC.html'">1001233--3/1/2007--SANGAMO_BIOSCIENCES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/874443--3-31-2006--GENELABS_TECHNOLOGIES_INC_-CA.html'">874443--3/31/2006--GENELABS_TECHNOLOGIES_INC_/CA</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1010086--3-13-2008--SIGA_TECHNOLOGIES_INC.html'">1010086--3/13/2008--SIGA_TECHNOLOGIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1017491--3-26-2007--NEXMED_INC.html'">1017491--3/26/2007--NEXMED_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/873303--3-16-2007--AVI_BIOPHARMA_INC.html'">873303--3/16/2007--AVI_BIOPHARMA_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/873303--3-16-2006--AVI_BIOPHARMA_INC.html'">873303--3/16/2006--AVI_BIOPHARMA_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/817785--4-4-2007--IMMUNE_RESPONSE_CORP.html'">817785--4/4/2007--IMMUNE_RESPONSE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/12239--4-4-2008--SPHERIX_INC.html'">12239--4/4/2008--SPHERIX_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/874443--3-22-2007--GENELABS_TECHNOLOGIES_INC_-CA.html'">874443--3/22/2007--GENELABS_TECHNOLOGIES_INC_/CA</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1038133--3-31-2006--HESKA_CORP.html'">1038133--3/31/2006--HESKA_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1038133--3-30-2007--HESKA_CORP.html'">1038133--3/30/2007--HESKA_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1066833--3-31-2008--DOV_PHARMACEUTICAL_INC.html'">1066833--3/31/2008--DOV_PHARMACEUTICAL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1063665--9-23-2010--CORGENIX_MEDICAL_CORP-CO.html'">1063665--9/23/2010--CORGENIX_MEDICAL_CORP/CO</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1028358--3-31-2008--GENITOPE_CORP.html'">1028358--3/31/2008--GENITOPE_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1038133--3-16-2009--HESKA_CORP.html'">1038133--3/16/2009--HESKA_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1038133--3-3-2008--HESKA_CORP.html'">1038133--3/3/2008--HESKA_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1038133--2-22-2010--HESKA_CORP.html'">1038133--2/22/2010--HESKA_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1114872--3-29-2006--MILLENNIUM_CELL_INC.html'">1114872--3/29/2006--MILLENNIUM_CELL_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/71478--3-28-2008--LIPID_SCIENCES_INC-.html'">71478--3/28/2008--LIPID_SCIENCES_INC/</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/352747--3-16-2007--UNIGENE_LABORATORIES_INC.html'">352747--3/16/2007--UNIGENE_LABORATORIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/873303--3-10-2009--AVI_BIOPHARMA_INC.html'">873303--3/10/2009--AVI_BIOPHARMA_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1013238--3-31-2006--ARADIGM_CORP.html'">1013238--3/31/2006--ARADIGM_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1333248--3-16-2009--CADENCE_PHARMACEUTICALS_INC.html'">1333248--3/16/2009--CADENCE_PHARMACEUTICALS_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1017491--3-16-2006--NEXMED_INC.html'">1017491--3/16/2006--NEXMED_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/908259--3-14-2007--OXIGENE_INC.html'">908259--3/14/2007--OXIGENE_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/907562--3-3-2006--DYAX_CORP.html'">907562--3/3/2006--DYAX_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/1020214--2-27-2006--CERUS_CORP.html'">1020214--2/27/2006--CERUS_CORP</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/352747--3-16-2006--UNIGENE_LABORATORIES_INC.html'">352747--3/16/2006--UNIGENE_LABORATORIES_INC</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/897075--3-14-2007--REPROS_THERAPEUTICS_INC..html'">897075--3/14/2007--REPROS_THERAPEUTICS_INC.</td></tr>
+<tr class="list"><td onclick="window.location.href='../docs/908259--3-14-2008--OXIGENE_INC.html'">908259--3/14/2008--OXIGENE_INC</td></tr>
+
+                </table>
+            </td>
+        </tr></table>
+    </div>
+
+    <div id="footer">
+        <br>
+        <hr noshade>
+    </div>
+</body>
+</html>
